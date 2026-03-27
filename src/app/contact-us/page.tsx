@@ -1,5 +1,6 @@
 import { Metadata } from "next";
-import { Mail, MapPin, Phone, Clock, Send } from "lucide-react";
+import { Mail, MapPin, Phone, Clock } from "lucide-react";
+import ContactForm from "@/components/forms/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact Us | Vogue Technics",
@@ -64,7 +65,10 @@ export default function Contact() {
                   </div>
                   <div>
                     <div className="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-1">Working Hours</div>
-                    <div className="text-lg font-medium text-slate-900">Mon - Fri: 8:00 AM - 6:00 PM<br />Sat: 9:00 AM - 2:00 PM</div>
+                    <div className="text-lg font-medium text-slate-900">
+                      Mon - Fri: 9:00 AM - 6:00 PM<br />
+                      Sat: 9:00 AM - 2:00 PM (only for booking)
+                    </div>
                   </div>
                 </div>
               </div>
@@ -73,43 +77,7 @@ export default function Contact() {
 
           {/* Contact Form */}
           <div className="w-full lg:w-2/3">
-            <div className="bg-white rounded-3xl p-8 md:p-12 border border-slate-200 shadow-[0_20px_50px_rgba(0,0,0,0.05)]">
-              <h3 className="text-2xl font-bold text-slate-900 mb-8">Send a Message</h3>
-              
-              <form className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <label className="text-sm font-semibold text-slate-700">Full Name</label>
-                    <input type="text" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all" placeholder="John Doe" />
-                  </div>
-                  <div className="space-y-2">
-                    <label className="text-sm font-semibold text-slate-700">Email Address</label>
-                    <input type="email" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all" placeholder="john@example.com" />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <label className="text-sm font-semibold text-slate-700">Phone Number</label>
-                    <input type="tel" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all" placeholder="07900 000000" />
-                  </div>
-                  <div className="space-y-2">
-                    <label className="text-sm font-semibold text-slate-700">Vehicle Registration (Optional)</label>
-                    <input type="text" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all uppercase placeholder-normal" placeholder="AB12 CDE" />
-                  </div>
-                </div>
-
-                <div className="space-y-2">
-                  <label className="text-sm font-semibold text-slate-700">Your Message</label>
-                  <textarea rows={5} className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none" placeholder="How can we help you today?"></textarea>
-                </div>
-
-                <button type="button" className="w-full bg-slate-900 hover:bg-primary text-white font-bold text-lg py-4 rounded-xl shadow-lg hover:shadow-[0_10px_20px_rgba(25,135,84,0.3)] transition-all transform hover:-translate-y-1 flex justify-center items-center gap-2">
-                  Send Message
-                  <Send className="w-5 h-5" />
-                </button>
-              </form>
-            </div>
+            <ContactForm />
           </div>
 
         </div>

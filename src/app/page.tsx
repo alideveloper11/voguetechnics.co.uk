@@ -5,6 +5,11 @@ import { Activity, ArrowRight, CheckCircle2, Clock, Phone, Search, ShieldCheck, 
 import Image from "next/image";
 import Link from "next/link";
 import PartnerLogos from "@/components/common/PartnerLogos";
+import WorkshopSection from "@/components/common/WorkshopSection";
+import ReviewsSection from "@/components/common/ReviewsSection";
+import FAQSection from "@/components/common/FAQSection";
+import AreasCovered from "@/components/common/AreasCovered";
+import ServicesSection from "@/components/common/ServicesSection";
 
 export default function Home() {
   const features = [
@@ -190,6 +195,9 @@ export default function Home() {
       </section>
 
       {/* FIND YOUR RANGE ROVER GRID */}
+      <ServicesSection limit={3} />
+
+      {/* FIND YOUR RANGE ROVER GRID */}
       <section className="py-20 bg-slate-50 relative">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -198,7 +206,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {models.map((model, idx) => (
+            {models.slice(0, 4).map((model, idx) => (
               <motion.div
                 key={idx}
                 initial={{ opacity: 0, scale: 0.95 }}
@@ -226,6 +234,12 @@ export default function Home() {
             ))}
           </div>
           
+          <div className="mt-12 text-center">
+            <Link href="/range-rover-engines" className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-xl font-semibold hover:bg-emerald-600 transition-colors shadow-lg group">
+              Explore More <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+          
           {/* POPULAR ENGINE SIZES GRID */}
           <div className="mt-24">
             <div className="text-center max-w-3xl mx-auto mb-12">
@@ -234,7 +248,7 @@ export default function Home() {
             </div>
 
             <div className="flex flex-wrap justify-center gap-3 md:gap-4">
-              {engineSizes.map((engine, idx) => (
+              {engineSizes.slice(0, 5).map((engine, idx) => (
                 <Link 
                   key={idx}
                   href={engine.link}
@@ -245,13 +259,14 @@ export default function Home() {
                 </Link>
               ))}
             </div>
+
+            <div className="mt-12 text-center">
+              <Link href="/range-rover-engines#engine-sizes" className="inline-flex items-center gap-2 bg-white border-2 border-primary text-primary px-8 py-3 rounded-xl font-semibold hover:bg-primary hover:text-white transition-all shadow-md group">
+                View All Sizes <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
           </div>
           
-          <div className="mt-16 text-center">
-            <Link href="/ancillaries" className="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-4 rounded-xl font-semibold hover:bg-slate-800 transition-colors shadow-lg">
-              Browse All Parts & Ancillaries <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
         </div>
       </section>
 
@@ -354,37 +369,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA / OFFERS SECTION */}
-      <section className="py-24 bg-slate-800 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 blur-[100px] rounded-full pointer-events-none"></div>
-        <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/20 blur-[100px] rounded-full pointer-events-none"></div>
-        
-        <div className="container mx-auto px-4 lg:px-8 relative z-10 text-center">
-          <span className="inline-block py-1 px-3 rounded-full bg-emerald-500/20 text-emerald-400 font-semibold tracking-wider text-sm mb-6 border border-emerald-500/30">
-            SPECIAL DEAL
-          </span>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">
-            Exclusive Offers — Up to <span className="text-emerald-400">40% Off</span>
-          </h2>
-          <p className="text-xl text-slate-300 max-w-2xl mx-auto mb-12">
-            Save up to 40% on your range rover engine supply and fit quote when you enquire online. 
-            Whether you need a Defender, Sport, or Evoque engine, we deliver safely and quickly!
-          </p>
-          
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
-            <Link href="/contact-us" className="bg-primary hover:bg-emerald-500 text-white font-bold py-4 px-10 rounded-xl shadow-[0_0_20px_rgba(25,135,84,0.4)] transition-all transform hover:-translate-y-1 text-lg">
-              Book an Appointment
-            </Link>
-            <a href="tel:01375531355" className="bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-10 rounded-xl border border-white/20 transition-all text-lg flex items-center gap-2">
-              <Phone className="w-5 h-5"/> 01375 531355
-            </a>
-          </div>
-          
-          <p className="text-slate-400 text-sm mt-12 max-w-3xl mx-auto">
-            As trusted Range Rover engine specialists, Vogue Technics offers top-quality Range Rover reconditioned engines, Land Rover reconditioned engines, engine rebuilds, and supply & fit services at highly competitive prices. Contact us today for expert solutions.
-          </p>
-        </div>
-      </section>
+      <ReviewsSection />
+      <FAQSection />
+      <AreasCovered />
+      <WorkshopSection />
     </>
   );
 }

@@ -3,6 +3,7 @@ import PartnerLogos from "@/components/common/PartnerLogos";
 import { CheckCircle2, Shield, Users } from "lucide-react";
 import { Metadata } from "next";
 import Image from "next/image";
+import Breadcrumbs from "@/components/common/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "About Us | Vogue Technics",
@@ -24,6 +25,7 @@ export default function About() {
           />
         </div>
         <div className="container mx-auto relative z-10 text-center max-w-3xl">
+          <Breadcrumbs items={[{ name: "About Us", href: "/about-us" }]} />
           <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">Our Story</h1>
           <p className="text-xl text-slate-300 leading-relaxed">
             Pioneers in engine rebuilding, ensuring excellence on the road for over two decades.

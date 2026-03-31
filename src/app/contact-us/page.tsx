@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { Mail, MapPin, Phone, Clock } from "lucide-react";
 import ContactForm from "@/components/forms/ContactForm";
+import Breadcrumbs from "@/components/common/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Contact Us | Vogue Technics",
@@ -11,6 +12,7 @@ export default function Contact() {
   return (
     <div className="pt-32 pb-24 bg-white min-h-screen">
       <div className="container mx-auto px-4 lg:px-8">
+        <Breadcrumbs items={[{ name: "Contact Us", href: "/contact-us" }]} />
         
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">

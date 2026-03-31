@@ -5,6 +5,7 @@ import Link from "next/link";
 import { CheckCircle2, Shield, Search, Phone, Clock, Wrench, Award, Star, Activity, ArrowRight, AlertTriangle, Truck, Settings } from "lucide-react";
 import PartnerLogos from "@/components/common/PartnerLogos";
 import { motion } from "framer-motion";
+import Breadcrumbs from "@/components/common/Breadcrumbs";
 
 const rangeRoverModels = [
   { title: "Range Rover Evoque Engines", link: "/range-rover-evoque-engines" },
@@ -72,43 +73,47 @@ export default function RangeRoverEnginesClient() {
           <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent" />
         </div>
 
-        <div className="container relative z-10 mx-auto px-4 lg:px-8 text-center max-w-4xl">
-          <motion.span 
+        <div className="container relative z-10 mx-auto px-4 lg:px-8">
+          <Breadcrumbs items={[{ name: "Range Rover Engines", href: "/range-rover-engines" }]} />
+          
+          <div className="text-center max-w-4xl mx-auto">
+            <motion.span 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="inline-block py-1 px-3 rounded-full bg-primary/20 text-emerald-400 font-semibold tracking-wider text-sm mb-6 border border-primary/30 shadow-[0_0_15px_rgba(25,135,84,0.3)] uppercase">
             Range Rover & Land Rover Specialist
           </motion.span>
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="text-3xl md:text-5xl lg:text-7xl font-black text-white tracking-tighter mb-8 leading-tight uppercase">
-            Elite <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-400 to-green-500 italic">Range Rover & Land Rover</span> <br />
-            Engine Rebuild Specialists
-          </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="text-xl md:text-2xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed font-medium">
-            Vogue Technics delivers expert engine reconditioning and seamless replacements for all Range Rover and Land Rover models nationwide.
-          </motion.p>
+            <motion.h1 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight mb-8 leading-tight uppercase">
+              Elite <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-400 to-green-500 italic">Range Rover & Land Rover</span> <br />
+              Engine Rebuild Specialists
+            </motion.h1>
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+              Vogue Technics delivers expert engine reconditioning and seamless replacements for all Range Rover and Land Rover models nationwide.
+            </motion.p>
           
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a href="tel:01375 531355" className="bg-primary hover:bg-primary-dark text-white font-black py-4 px-8 md:py-5 md:px-12 rounded-[2rem] shadow-[0_15px_30px_rgba(25,135,84,0.4)] transition-all flex items-center justify-center gap-3 w-full sm:w-auto transform hover:-translate-y-2 uppercase tracking-widest text-lg">
+            <a href="tel:01375 531355" className="bg-primary hover:bg-primary-dark text-white font-bold py-4 px-8 md:py-5 md:px-12 rounded-[2rem] shadow-[0_15px_30px_rgba(25,135,84,0.4)] transition-all flex items-center justify-center gap-3 w-full sm:w-auto transform hover:-translate-y-2 uppercase tracking-widest text-lg">
               <Phone className="w-6 h-6" /> 01375 531355
             </a>
-            <Link href="/contact-us" className="bg-white hover:bg-slate-50 text-slate-900 font-black py-4 px-8 md:py-5 md:px-12 rounded-[2rem] transition-all shadow-xl w-full sm:w-auto transform hover:-translate-y-2 flex items-center justify-center uppercase tracking-widest text-lg">
+            <Link href="/contact-us" className="bg-white hover:bg-slate-50 text-slate-900 font-bold py-4 px-8 md:py-5 md:px-12 rounded-[2rem] transition-all shadow-xl w-full sm:w-auto transform hover:-translate-y-2 flex items-center justify-center uppercase tracking-widest text-lg">
               Get Free Quote
             </Link>
           </motion.div>
         </div>
-      </section>
+      </div>
+    </section>
 
       <PartnerLogos />
 
@@ -117,7 +122,7 @@ export default function RangeRoverEnginesClient() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="w-full lg:w-1/2 space-y-8">
-              <h2 className="text-3xl md:text-5xl font-black text-slate-900 leading-none tracking-tighter uppercase underline decoration-8 underline-offset-[12px] decoration-primary/20">
+              <h2 className="text-2xl md:text-4xl font-extrabold text-slate-900 leading-none tracking-tight uppercase underline decoration-8 underline-offset-[12px] decoration-primary/20">
                 Over 2 Decades of <br/><span className="text-primary italic">Land Rover Expertise</span>
               </h2>
               <div className="space-y-6 text-slate-600 text-lg leading-relaxed">
@@ -134,19 +139,19 @@ export default function RangeRoverEnginesClient() {
             </div>
             <div className="w-full lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6 relative">
               <div className="bg-slate-900 rounded-[3rem] p-12 text-center text-white space-y-3 border-b-4 border-primary transform hover:scale-105 transition-transform duration-500 shadow-2xl">
-                <div className="text-6xl font-black text-primary">20+</div>
+                <div className="text-5xl font-extrabold text-primary">20+</div>
                 <div className="text-[0.7rem] font-bold uppercase tracking-[0.4em] text-slate-400">Years Exp</div>
               </div>
               <div className="bg-primary rounded-[3rem] p-12 text-center text-white space-y-3 sm:mt-12 transform hover:scale-105 transition-transform duration-500 shadow-2xl">
-                <div className="text-6xl font-black italic underline decoration-white/30">UK's</div>
-                <div className="text-[0.7rem] font-black uppercase tracking-[0.4em] text-emerald-100">Leader</div>
+                <div className="text-5xl font-extrabold italic underline decoration-white/30">UK's</div>
+                <div className="text-[0.7rem] font-bold uppercase tracking-[0.4em] text-emerald-100">Leader</div>
               </div>
               <div className="bg-slate-50 border-2 border-slate-100 rounded-[3rem] p-12 text-center space-y-3 transform hover:scale-105 transition-transform duration-500 shadow-xl">
-                <div className="text-6xl font-black text-slate-900 tracking-tighter">OEM</div>
+                <div className="text-5xl font-extrabold text-slate-900 tracking-tight">OEM</div>
                 <div className="text-[0.7rem] font-bold uppercase tracking-[0.4em] text-slate-500">Genuine Parts</div>
               </div>
               <div className="bg-slate-900 rounded-[3rem] p-12 text-center text-white space-y-3 sm:mt-12 border-b-4 border-primary transform hover:scale-105 transition-transform duration-500 shadow-2xl">
-                <div className="text-6xl font-black text-primary">40%</div>
+                <div className="text-5xl font-extrabold text-primary">40%</div>
                 <div className="text-[0.7rem] font-bold uppercase tracking-[0.4em] text-slate-400">Off Deals</div>
               </div>
             </div>
@@ -160,7 +165,7 @@ export default function RangeRoverEnginesClient() {
           <div className="flex flex-col lg:flex-row-reverse gap-16 items-start">
             <div className="w-full lg:w-2/3 space-y-12">
               <div className="space-y-8">
-                <h2 className="text-3xl md:text-5xl font-black text-slate-900 tracking-tighter uppercase leading-none">Superior Engine <span className="text-primary italic">Rebuild & Replacement</span></h2>
+                <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight uppercase leading-none">Superior Engine <span className="text-primary italic">Rebuild & Replacement</span></h2>
                 <div className="text-slate-600 text-xl leading-relaxed space-y-6">
                   <p>
                     Land Rover engines are masterpieces of engineering, but they are prone to specific faults that require expert intervention. Whether it's the notorious crankshaft failure on the 3.0L SDV6 or timing chain stretch on the Ingenium series, we have the fix.
@@ -311,7 +316,7 @@ export default function RangeRoverEnginesClient() {
       </section>
 
       {/* POPULAR ENGINE SIZES */}
-      <section className="py-32 bg-white relative overflow-hidden px-4">
+      <section id="engine-sizes" className="py-32 bg-white relative overflow-hidden px-4">
         <div className="container mx-auto lg:px-8">
           
           {/* Range Rover Sizes */}
@@ -459,19 +464,19 @@ export default function RangeRoverEnginesClient() {
       </section>
 
       {/* FINAL CTA SECTION */}
-      <section className="py-24 md:py-40 bg-slate-900 relative overflow-hidden text-center">
+      <section className="py-20 md:py-32 bg-slate-900 relative overflow-hidden text-center">
         <div className="absolute inset-0 bg-primary/5 opacity-30 animate-pulse pointer-events-none"></div>
-        <div className="container mx-auto px-4 lg:px-8 max-w-5xl space-y-12 md:space-y-16 relative z-10">
-           <h2 className="text-4xl md:text-9xl font-black text-white uppercase tracking-tighter leading-none italic uppercase leading-tight">Revive Your <br/><span className="text-primary underline decoration-white/30 decoration-[10px] underline-offset-[20px]">Land Rover</span></h2>
-           <p className="text-slate-400 text-xl md:text-3xl font-bold uppercase tracking-widest leading-relaxed">
+        <div className="container mx-auto px-4 lg:px-8 max-w-5xl space-y-10 md:space-y-12 relative z-10">
+           <h2 className="text-4xl md:text-7xl font-black text-white uppercase tracking-tighter leading-none italic uppercase leading-tight">Revive Your <br/><span className="text-primary underline decoration-white/30 decoration-[10px] underline-offset-[20px]">Land Rover</span></h2>
+           <p className="text-slate-400 text-lg md:text-xl font-bold uppercase tracking-widest leading-relaxed max-w-3xl mx-auto">
              Get Back On and Off Road Today. Expert Service Guaranteed!
            </p>
-           <div className="flex flex-col md:flex-row gap-8 md:gap-10 justify-center items-center pt-6 md:pt-10">
-             <Link href="/contact-us" className="bg-primary hover:bg-emerald-500 text-white font-black py-6 px-12 md:py-8 md:px-20 rounded-[3rem] shadow-[0_25px_60px_-15px_rgba(25,135,84,0.6)] transition-all transform hover:-translate-y-4 text-xl md:text-3xl flex items-center justify-center gap-6 uppercase tracking-[0.2em] w-full md:w-auto">
-               <Search className="w-8 h-8 md:w-12 md:h-12" /> Instant Quote
+           <div className="flex flex-col md:flex-row gap-6 md:gap-8 justify-center items-center pt-6 md:pt-10">
+             <Link href="/contact-us" className="bg-primary hover:bg-emerald-500 text-white font-black py-5 px-12 md:py-6 md:px-16 rounded-[2rem] shadow-[0_20px_50px_-15px_rgba(25,135,84,0.5)] transition-all transform hover:-translate-y-2 text-lg md:text-xl flex items-center justify-center gap-4 uppercase tracking-[0.2em] w-full md:w-auto">
+               <Search className="w-8 h-8 md:w-10 md:h-10" /> Instant Quote
              </Link>
-             <a href="tel:01375531355" className="bg-white hover:bg-slate-100 text-slate-950 font-black py-6 px-12 md:py-8 md:px-20 rounded-[3rem] shadow-2xl transition-all transform hover:-translate-y-4 text-xl md:text-3xl flex items-center justify-center gap-6 uppercase tracking-[0.2em] w-full md:w-auto">
-               <Phone className="w-8 h-8 md:w-12 md:h-12 text-primary" /> 01375 531355
+             <a href="tel:01375531355" className="bg-white hover:bg-slate-100 text-slate-950 font-black py-5 px-12 md:py-6 md:px-16 rounded-[2rem] shadow-2xl transition-all transform hover:-translate-y-2 text-lg md:text-xl flex items-center justify-center gap-4 uppercase tracking-[0.2em] w-full md:w-auto">
+               <Phone className="w-8 h-8 md:w-10 md:h-10 text-primary" /> 01375 531355
              </a>
           </div>
         </div>

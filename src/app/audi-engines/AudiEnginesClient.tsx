@@ -5,6 +5,7 @@ import Link from "next/link";
 import { CheckCircle2, Shield, Search, Phone, Clock, Wrench, Award, Star, Activity, ArrowRight } from "lucide-react";
 import PartnerLogos from "@/components/common/PartnerLogos";
 import { motion } from "framer-motion";
+import Breadcrumbs from "@/components/common/Breadcrumbs";
 
 const audiModels = [
   { title: "Audi A1 Engines", link: "/audi-a1-engines" },
@@ -73,43 +74,47 @@ export default function AudiEnginesClient() {
           <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent" />
         </div>
 
-        <div className="container relative z-10 mx-auto px-4 lg:px-8 text-center max-w-4xl">
-          <motion.span 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="inline-block py-1 px-3 rounded-full bg-primary/20 text-emerald-400 font-semibold tracking-wider text-sm mb-6 border border-primary/30 shadow-[0_0_15px_rgba(25,135,84,0.3)] uppercase">
-            Audi Specialist
-          </motion.span>
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="text-3xl md:text-5xl lg:text-5xl font-extrabold text-white tracking-tight mb-8 leading-tight uppercase">
-            Save Money at Reliable Used and Reconditioned <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-400 to-green-500 italic">
-              Audi Replacement Engines
-            </span>
-          </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Vogue Technics provides perfect assistance in Audi engine replacements along with offering used and reconditioned Audi engines at affordable prices.
-          </motion.p>
+        <div className="container relative z-10 mx-auto px-4 lg:px-8">
+          <Breadcrumbs items={[{ name: "Audi Engines", href: "/audi-engines" }]} />
           
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a href="tel:01375 531355" className="bg-primary hover:bg-primary-dark text-white font-bold py-4 px-6 md:px-10 rounded-xl shadow-[0_0_20px_rgba(25,135,84,0.4)] transition-all flex items-center justify-center gap-2 w-full sm:w-auto transform hover:-translate-y-1">
-              <Phone className="w-5 h-5" /> 01375 531355
-            </a>
-            <Link href="/contact-us" className="bg-white hover:bg-slate-50 text-slate-900 font-bold py-4 px-6 md:px-10 rounded-xl transition-all shadow-lg w-full sm:w-auto transform hover:-translate-y-1 flex items-center justify-center">
-              Request a Quote
-            </Link>
-          </motion.div>
+          <div className="text-center max-w-4xl mx-auto">
+            <motion.span 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="inline-block py-1 px-3 rounded-full bg-primary/20 text-emerald-400 font-semibold tracking-wider text-sm mb-6 border border-primary/30 shadow-[0_0_15px_rgba(25,135,84,0.3)] uppercase">
+              Audi Specialist
+            </motion.span>
+            <motion.h1 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              className="text-3xl md:text-5xl lg:text-5xl font-bold text-white tracking-tight mb-8 leading-tight uppercase">
+              Save Money at Reliable Used and Reconditioned <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-400 to-green-500 italic text-2xl md:text-4xl lg:text-5xl">
+                Audi Replacement Engines
+              </span>
+            </motion.h1>
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+              Vogue Technics provides perfect assistance in Audi engine replacements along with offering used and reconditioned Audi engines at affordable prices.
+            </motion.p>
+            
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a href="tel:01375 531355" className="bg-primary hover:bg-primary-dark text-white font-bold py-4 px-6 md:px-10 rounded-xl shadow-[0_0_20px_rgba(25,135,84,0.4)] transition-all flex items-center justify-center gap-2 w-full sm:w-auto transform hover:-translate-y-1">
+                <Phone className="w-5 h-5" /> 01375 531355
+              </a>
+              <Link href="/contact-us" className="bg-white hover:bg-slate-50 text-slate-900 font-bold py-4 px-6 md:px-10 rounded-xl transition-all shadow-lg w-full sm:w-auto transform hover:-translate-y-1 flex items-center justify-center">
+                Request a Quote
+              </Link>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -120,8 +125,8 @@ export default function AudiEnginesClient() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="w-full lg:w-1/2 space-y-6">
-              <h2 className="text-2xl md:text-4xl font-bold text-slate-900 leading-tight tracking-tight uppercase underline underline-offset-[12px] decoration-primary decoration-[6px]">
-                Over 2 Decades of Experience in <span className="text-primary italic">Fitting and Servicing Audi Vehicles</span>
+              <h2 className="text-2xl md:text-4xl font-extrabold text-slate-900 leading-tight tracking-tight uppercase underline underline-offset-[12px] decoration-primary decoration-[6px]">
+                Over 2 Decades of Experience in <br/><span className="text-primary italic">Fitting and Servicing Audi Vehicles</span>
               </h2>
               <div className="space-y-4 text-slate-600 text-lg leading-relaxed">
                 <p>
@@ -137,19 +142,19 @@ export default function AudiEnginesClient() {
             </div>
             <div className="w-full lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="bg-slate-900 rounded-[2rem] p-8 text-center text-white space-y-2 transform hover:scale-105 transition-transform border-b-4 border-primary">
-                <div className="text-4xl font-black text-primary">20+</div>
+                <div className="text-3xl font-extrabold text-primary">20+</div>
                 <div className="text-[0.6rem] font-bold uppercase tracking-[0.2em] text-slate-400">Years Expert</div>
               </div>
               <div className="bg-primary rounded-[2rem] p-8 text-center text-white space-y-2 transform hover:scale-105 transition-transform sm:mt-10">
-                <div className="text-4xl font-black">10k+</div>
+                <div className="text-3xl font-extrabold">10k+</div>
                 <div className="text-[0.6rem] font-bold uppercase tracking-[0.2em] text-emerald-100">Engines Fitted</div>
               </div>
               <div className="bg-slate-50 border border-slate-200 rounded-[2rem] p-8 text-center space-y-2 transform hover:scale-105 transition-transform">
-                <div className="text-4xl font-black text-slate-900">100%</div>
+                <div className="text-3xl font-extrabold text-slate-900">100%</div>
                 <div className="text-[0.6rem] font-bold uppercase tracking-[0.2em] text-slate-500">Satisfied</div>
               </div>
               <div className="bg-slate-900 rounded-[2rem] p-8 text-center text-white space-y-2 transform hover:scale-105 transition-transform sm:mt-10 border-b-4 border-primary">
-                <div className="text-4xl font-black text-primary">24/7</div>
+                <div className="text-3xl font-extrabold text-primary">24/7</div>
                 <div className="text-[0.6rem] font-bold uppercase tracking-[0.2em] text-slate-400">Support</div>
               </div>
             </div>
@@ -161,7 +166,7 @@ export default function AudiEnginesClient() {
       <section className="py-24 bg-slate-50">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-4 tracking-tighter uppercase underline underline-offset-8 decoration-primary decoration-4">Find your <span className="text-primary italic italic">Audi</span></h2>
+            <h2 className="text-2xl md:text-4xl font-extrabold text-slate-900 mb-4 tracking-tight uppercase underline underline-offset-8 decoration-primary decoration-4">Find your <span className="text-primary italic italic">Audi</span></h2>
             <p className="text-slate-600 mt-2 font-medium">Explore our extensive range of replacement Audi engines for all major models.</p>
           </div>
 
@@ -194,7 +199,7 @@ export default function AudiEnginesClient() {
           </div>
 
           {/* POPULAR ENGINE SIZES */}
-          <div className="mt-24 pt-20 border-t border-slate-200">
+          <div id="engine-sizes" className="mt-24 pt-20 border-t border-slate-200">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-4 tracking-tighter uppercase underline underline-offset-8 decoration-primary decoration-4">Popular <span className="text-primary italic italic">Engine Sizes</span></h2>
               <p className="text-slate-600 mt-2 font-medium">Quick access to the most common Audi engine displacements we stock.</p>
@@ -432,18 +437,18 @@ export default function AudiEnginesClient() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="py-24 bg-slate-50 border-t-8 border-slate-100">
-        <div className="container mx-auto px-4 lg:px-8 text-center max-w-5xl">
-          <h2 className="text-5xl md:text-8xl font-black text-slate-900 mb-12 uppercase tracking-tighter leading-none italic">Book an <span className="text-primary">Appointment</span></h2>
-          <p className="text-slate-500 text-2xl font-bold leading-relaxed mb-20 max-w-3xl mx-auto uppercase tracking-widest">
+      <section className="py-20 bg-slate-50 border-t-8 border-slate-100">
+        <div className="container mx-auto px-4 lg:px-8 text-center max-w-5xl space-y-10">
+          <h2 className="text-4xl md:text-6xl font-black text-slate-900 uppercase tracking-tighter leading-none italic">Book an <span className="text-primary">Appointment</span></h2>
+          <p className="text-slate-500 text-lg md:text-xl font-bold leading-relaxed max-w-3xl mx-auto uppercase tracking-widest">
             Scheduling is simple. Call us directly to speak with our specialists.
           </p>
-          <div className="flex flex-col md:flex-row gap-8 justify-center">
-             <Link href="/contact-us" className="bg-slate-900 hover:bg-slate-800 text-white font-black py-8 px-20 rounded-[3rem] shadow-3xl transition-all transform hover:-translate-y-4 text-2xl flex items-center justify-center gap-6 uppercase tracking-[0.3em]">
-               <Search className="w-10 h-10 text-primary" /> Book Online
+          <div className="flex flex-col md:flex-row gap-6 justify-center pt-4">
+             <Link href="/contact-us" className="bg-slate-900 hover:bg-slate-800 text-white font-black py-5 px-12 rounded-[2rem] shadow-xl transition-all transform hover:-translate-y-2 text-xl flex items-center justify-center gap-4 uppercase tracking-[0.2em]">
+               <Search className="w-8 h-8 text-primary" /> Book Online
              </Link>
-             <a href="tel:01375531355" className="bg-primary hover:bg-emerald-500 text-white font-black py-8 px-20 rounded-[3rem] shadow-3xl transition-all transform hover:-translate-y-4 text-2xl flex items-center justify-center gap-6 uppercase tracking-[0.3em]">
-               <Phone className="w-10 h-10" /> 01375 531355
+             <a href="tel:01375531355" className="bg-primary hover:bg-emerald-500 text-white font-black py-5 px-12 rounded-[2rem] shadow-xl transition-all transform hover:-translate-y-2 text-xl flex items-center justify-center gap-4 uppercase tracking-[0.2em]">
+               <Phone className="w-8 h-8" /> 01375 531355
              </a>
           </div>
         </div>

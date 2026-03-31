@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Calendar, User, ArrowRight } from "lucide-react";
 import PartnerLogos from "@/components/common/PartnerLogos";
+import Breadcrumbs from "@/components/common/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Blog & News | Vogue Technics",
@@ -64,6 +65,7 @@ export default function Blog() {
   return (
     <div className="pt-32 pb-24 bg-slate-50 min-h-screen">
       <div className="container mx-auto px-4 lg:px-8">
+        <Breadcrumbs items={[{ name: "Blog", href: "/blog" }]} />
         
         {/* Header Section */}
         <div className="mb-16 text-center max-w-3xl mx-auto">

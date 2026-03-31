@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Image from "next/image";
 import LatestVideos from "@/components/common/LatestVideos";
+import Breadcrumbs from "@/components/common/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Gallery | Vogue Technics",
@@ -33,6 +34,7 @@ export default function Gallery() {
     <div className="bg-white flex flex-col">
       <div className="pt-32 pb-24 bg-slate-50 flex-1">
         <div className="container mx-auto px-4 lg:px-8">
+          <Breadcrumbs items={[{ name: "Gallery", href: "/gallery" }]} />
         
         {/* Header Section */}
         <div className="mb-16 text-center max-w-3xl mx-auto">

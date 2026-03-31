@@ -2,8 +2,8 @@ import { Metadata } from "next";
 import JaguarEnginesClient from "./JaguarEnginesClient";
 
 export const metadata: Metadata = {
-  title: "Jaguar Engines - Reconditioned & Used Jaguar Engine Specialists",
-  description: "Expert Jaguar Engine Rebuild, Reconditioned & Used engines. Save up to 40% with Vogue Technics. Nationwide delivery and 6 months warranty across the UK.",
+  title: "Reconditioned & Used Jaguar Engine for Sale | Engine Parts for Sale",
+  description: "Looking for a Jaguar engine? We offer reconditioned and used engines for all models. Get your Jaguar back on the road. Enter your reg now for top deals.",
   alternates: {
     canonical: "/jaguar-engines",
   },

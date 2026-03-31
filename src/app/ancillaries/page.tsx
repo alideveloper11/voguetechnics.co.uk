@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import Breadcrumbs from "@/components/common/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Ancillaries & Car Parts | Vogue Technics",
@@ -22,6 +23,7 @@ export default function Ancillaries() {
   return (
     <div className="pt-32 pb-24 bg-slate-50 min-h-screen">
       <div className="container mx-auto px-4 lg:px-8">
+        <Breadcrumbs items={[{ name: "Ancillaries", href: "/ancillaries" }]} />
         
         {/* Header Section */}
         <div className="mb-16 text-center max-w-3xl mx-auto">

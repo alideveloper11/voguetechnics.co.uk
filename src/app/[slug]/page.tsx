@@ -4,6 +4,7 @@ import Link from "next/link";
 import { CheckCircle2, Shield, Search, Phone } from "lucide-react";
 import PartnerLogos from "@/components/common/PartnerLogos";
 import { notFound } from "next/navigation";
+import Breadcrumbs from "@/components/common/Breadcrumbs";
 
 // Utility to format slug into title ("audi-a1-engines" -> "Audi A1 Engines")
 function formatTitle(slug: string): string {
@@ -18,15 +19,16 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const formattedTitle = formatTitle(slug);
   
+  // Pattern: [Model Name] engine for sale | reconditioned & used | Vogue Technics
   return {
-    title: `${formattedTitle} - Reconditioned & Used`,
-    description: `Get the best deals on ${formattedTitle}. Vogue Technics offers top-quality used and reconditioned ${formattedTitle} with up to 24 months warranty.`,
+    title: `${formattedTitle} engine for sale | reconditioned & used | Vogue Technics`,
+    description: `Buy top quality reconditioned & used engines for your ${formattedTitle}, lowest online rates, fitting or UK wide delivery offered, years of experience, get engine quotes today.`,
     alternates: {
       canonical: `/${slug}`,
     },
     openGraph: {
-      title: `${formattedTitle} - Reconditioned & Used | Vogue Technics`,
-      description: `Get the best deals on ${formattedTitle}. We offer top-quality used and reconditioned parts.`,
+      title: `${formattedTitle} engine for sale | Vogue Technics`,
+      description: `Buy top quality reconditioned & used engines for your ${formattedTitle}. Lowest online rates.`,
       url: `https://www.voguetechnics.co.uk/${slug}`,
     }
   };
@@ -59,6 +61,7 @@ export default async function DynamicServicePage({ params }: { params: Promise<{
           <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent" />
         </div>
         <div className="container mx-auto relative z-10 max-w-4xl text-center">
+          <Breadcrumbs items={[{ name: formattedTitle, href: `/${slug}` }]} />
           <span className="inline-block py-1 px-3 rounded-full bg-primary/20 text-emerald-400 font-semibold tracking-wider text-sm mb-6 border border-primary/30 shadow-[0_0_15px_rgba(25,135,84,0.3)] uppercase">
             Specialist Supply & Fit
           </span>

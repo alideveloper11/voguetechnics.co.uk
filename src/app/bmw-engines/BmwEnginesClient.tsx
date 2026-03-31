@@ -5,6 +5,7 @@ import Link from "next/link";
 import { CheckCircle2, Shield, Search, Phone, Clock, Wrench, Award, Star, Activity, ArrowRight, AlertTriangle, Truck, Settings } from "lucide-react";
 import PartnerLogos from "@/components/common/PartnerLogos";
 import { motion } from "framer-motion";
+import Breadcrumbs from "@/components/common/Breadcrumbs";
 
 const bmwModels = [
   { title: "BMW 1 Series Engines", link: "/bmw-1-series-engines" },
@@ -45,30 +46,33 @@ export default function BmwEnginesClient() {
           <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent" />
         </div>
 
-        <div className="container relative z-10 mx-auto px-4 lg:px-8 text-center max-w-4xl">
-          <motion.span 
+        <div className="container relative z-10 mx-auto px-4 lg:px-8">
+          <Breadcrumbs items={[{ name: "BMW Engines", href: "/bmw-engines" }]} />
+          
+          <div className="text-center max-w-4xl mx-auto">
+            <motion.span 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="inline-block py-1 px-3 rounded-full bg-primary/20 text-emerald-400 font-semibold tracking-wider text-sm mb-6 border border-primary/30 shadow-[0_0_15px_rgba(25,135,84,0.3)] uppercase">
             BMW Specialist
           </motion.span>
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="text-3xl md:text-5xl lg:text-7xl font-extrabold text-white tracking-tight mb-8 leading-tight uppercase">
-            Superior Used & Reconditioned <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-400 to-green-500 italic">
-              BMW Engine Rebuild & Replacement
-            </span>
-          </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Vogue Technics focuses on providing expert BMW engine rebuilds and seamless replacements, ensuring your diesel or petrol vehicle runs to peak performance.
-          </motion.p>
+            <motion.h1 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              className="text-3xl md:text-5xl lg:text-5xl font-bold text-white tracking-tight mb-8 leading-tight uppercase">
+              Superior Used & Reconditioned <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-400 to-green-500 italic text-2xl md:text-4xl lg:text-5xl">
+                BMW Engine Rebuild & Replacement
+              </span>
+            </motion.h1>
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+              Vogue Technics focuses on providing expert BMW engine rebuilds and seamless replacements, ensuring your vehicle runs at peak performance.
+            </motion.p>
           
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -83,7 +87,8 @@ export default function BmwEnginesClient() {
             </Link>
           </motion.div>
         </div>
-      </section>
+      </div>
+    </section>
 
       <PartnerLogos />
 
@@ -92,8 +97,8 @@ export default function BmwEnginesClient() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="w-full lg:w-1/2 space-y-6">
-              <h2 className="text-2xl md:text-4xl font-bold text-slate-900 leading-tight">
-                Over 2 Decades of Experience in <span className="text-primary italic">Fitting and Servicing BMW Vehicles</span>
+              <h2 className="text-2xl md:text-4xl font-bold text-slate-900 leading-tight tracking-tight uppercase underline underline-offset-[12px] decoration-primary decoration-[6px]">
+                Over 2 Decades of Experience in <br/><span className="text-primary italic">Fitting and Servicing BMW Vehicles</span>
               </h2>
               <div className="space-y-4 text-slate-600 text-lg leading-relaxed">
                 <p>
@@ -109,19 +114,19 @@ export default function BmwEnginesClient() {
             </div>
             <div className="w-full lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="bg-slate-900 rounded-[2rem] p-10 text-center text-white space-y-2 border-b-4 border-primary transform hover:scale-105 transition-transform">
-                <div className="text-5xl font-black text-primary">20+</div>
+                <div className="text-4xl font-extrabold text-primary">20+</div>
                 <div className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400">Years Exp</div>
               </div>
               <div className="bg-primary rounded-[2rem] p-10 text-center text-white space-y-2 sm:mt-10 transform hover:scale-105 transition-transform">
-                <div className="text-5xl font-black">UK</div>
+                <div className="text-4xl font-extrabold">UK</div>
                 <div className="text-xs font-bold uppercase tracking-[0.2em] text-emerald-100">Nationwide</div>
               </div>
               <div className="bg-slate-50 border border-slate-200 rounded-[2rem] p-10 text-center space-y-2 transform hover:scale-105 transition-transform">
-                <div className="text-5xl font-black text-slate-900">OEM</div>
+                <div className="text-4xl font-extrabold text-slate-900">OEM</div>
                 <div className="text-xs font-bold uppercase tracking-[0.2em] text-slate-500">Genuine Parts</div>
               </div>
               <div className="bg-slate-900 rounded-[2rem] p-10 text-center text-white space-y-2 sm:mt-10 border-b-4 border-primary transform hover:scale-105 transition-transform">
-                <div className="text-5xl font-black text-primary">40%</div>
+                <div className="text-4xl font-extrabold text-primary">40%</div>
                 <div className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400">Off Deals</div>
               </div>
             </div>
@@ -344,16 +349,16 @@ export default function BmwEnginesClient() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="py-24 bg-primary relative overflow-hidden">
+      <section className="py-20 bg-primary relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 blur-[120px] rounded-full -mr-48 -mt-48"></div>
         <div className="container mx-auto px-4 lg:px-8 text-center max-w-4xl space-y-10 relative z-10">
-           <h2 className="text-3xl md:text-7xl font-black text-white uppercase tracking-tighter italic">Book Your BMW <br/><span className="text-slate-950 underline underline-offset-8 decoration-white/30 decoration-[8px]">Engine Service</span> Today!</h2>
-           <p className="text-emerald-100 text-xl md:text-2xl font-medium max-w-2xl mx-auto uppercase tracking-widest"> Ready to get your BMW back on the road with superior performance?</p>
-           <div className="flex flex-col md:flex-row gap-8 justify-center pt-8">
-             <Link href="/contact-us" className="bg-slate-900 hover:bg-slate-800 text-white font-black py-6 px-10 md:px-16 rounded-[2.5rem] shadow-2xl transition-all transform hover:-translate-y-2 text-lg md:text-xl flex items-center justify-center gap-4 uppercase tracking-[0.2em]">
+           <h2 className="text-3xl md:text-6xl font-black text-white uppercase tracking-tighter italic">Book Your BMW <br/><span className="text-slate-950 underline underline-offset-8 decoration-white/30 decoration-[8px]">Engine Service</span> Today!</h2>
+           <p className="text-emerald-100 text-lg md:text-xl font-medium max-w-2xl mx-auto uppercase tracking-widest leading-relaxed"> Ready to get your BMW back on the road with superior performance?</p>
+           <div className="flex flex-col md:flex-row gap-6 justify-center pt-6">
+             <Link href="/contact-us" className="bg-slate-900 hover:bg-slate-800 text-white font-black py-5 px-10 md:px-12 rounded-[2rem] shadow-2xl transition-all transform hover:-translate-y-2 text-lg md:text-xl flex items-center justify-center gap-4 uppercase tracking-[0.2em]">
                <Search className="w-8 h-8 text-primary" /> Book Appointment
              </Link>
-             <a href="tel:01375531355" className="bg-white text-slate-900 font-black py-6 px-10 md:px-16 rounded-[2.5rem] shadow-2xl transition-all transform hover:-translate-y-2 text-lg md:text-xl flex items-center justify-center gap-4 uppercase tracking-[0.2em] hover:bg-slate-100">
+             <a href="tel:01375531355" className="bg-white text-slate-900 font-black py-5 px-10 md:px-12 rounded-[2rem] shadow-2xl transition-all transform hover:-translate-y-2 text-lg md:text-xl flex items-center justify-center gap-4 uppercase tracking-[0.2em] hover:bg-slate-100">
                <Phone className="w-8 h-8 text-primary" /> 01375 531355
              </a>
           </div>

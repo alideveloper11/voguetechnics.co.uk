@@ -35,6 +35,9 @@ export default function Footer() {
                 <Link href="/blog" className="hover:text-primary transition-colors block">Blog</Link>
               </li>
               <li>
+                <Link href="/areas-we-cover" className="hover:text-primary transition-colors block">Areas We Cover</Link>
+              </li>
+              <li>
                 <Link href="/contact-us" className="hover:text-primary transition-colors block">Contact Us</Link>
               </li>
             </ul>
@@ -59,22 +62,19 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Top Models */}
+          {/* Our Services */}
           <div>
-            <h3 className="text-white font-semibold text-lg mb-4">Top Models</h3>
-            <ul className="space-y-4">
-              <li>
-                <Link href="/range-rover-evoque-engines" className="hover:text-primary transition-colors block leading-snug">Range Rover Evoque Engines</Link>
-              </li>
-              <li>
-                <Link href="/range-rover-sport-engines" className="hover:text-primary transition-colors block leading-snug">Range Rover Sport Engines</Link>
-              </li>
-              <li>
-                <Link href="/range-rover-velar-engines" className="hover:text-primary transition-colors block leading-snug">Range Rover Velar Engines</Link>
-              </li>
-              <li>
-                <Link href="/range-rover-vogue-new-mk-4-engines" className="hover:text-primary transition-colors block leading-snug">Range Rover Vogue New MK 4 Engines</Link>
-              </li>
+            <h3 className="text-white font-semibold text-lg mb-4">Our Services</h3>
+            <ul className="space-y-2">
+              <li><Link href="/services/head-gasket-replacement" className="hover:text-primary transition-colors block">Head Gasket Replacement</Link></li>
+              <li><Link href="/services/timing-chain-replacement" className="hover:text-primary transition-colors block">Timing Chain Replacement</Link></li>
+              <li><Link href="/services/turbo-replacement" className="hover:text-primary transition-colors block">Turbo Replacement</Link></li>
+              <li><Link href="/services/engine-repair" className="hover:text-primary transition-colors block">Engine Repair</Link></li>
+              <li><Link href="/services/engine-replacement" className="hover:text-primary transition-colors block">Engine Replacement</Link></li>
+              <li><Link href="/services/engine-swap" className="hover:text-primary transition-colors block">Engine Swap</Link></li>
+              <li><Link href="/services/engine-rebuild" className="hover:text-primary transition-colors block">Engine Rebuild</Link></li>
+              <li><Link href="/services/timing-belt-replacement" className="hover:text-primary transition-colors block">Timing Belt Replacement</Link></li>
+              <li><Link href="/services/engine-health-check" className="hover:text-primary transition-colors block">Engine Health Check</Link></li>
             </ul>
           </div>
 

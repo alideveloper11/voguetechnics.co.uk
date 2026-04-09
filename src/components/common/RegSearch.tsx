@@ -26,8 +26,8 @@ export default function RegSearch({ className = "" }: RegSearchProps) {
           </div>
           <input
             type="text"
-            placeholder="ENTER VEHICLE REG"
-            className="w-full bg-transparent text-slate-900 font-black text-xl md:text-2xl px-4 py-4 focus:outline-none placeholder:text-slate-600 uppercase tracking-widest"
+            placeholder="ENTER VEHICLE REG NUMBER"
+            className="w-full bg-transparent text-slate-900 font-black text-lg md:text-xl px-2 sm:px-4 py-3 sm:py-4 focus:outline-none placeholder:text-[10px] sm:placeholder:text-xs md:placeholder:text-sm lg:placeholder:text-base placeholder:tracking-normal uppercase lg:tracking-wider placeholder:text-slate-500"
           />
         </div>
         <button className="bg-primary hover:bg-emerald-600 text-white font-black py-4 px-8 rounded-2xl shadow-[0_10px_30px_rgba(25,135,84,0.3)] transition-all transform hover:-translate-y-1 flex items-center justify-center gap-3 whitespace-nowrap uppercase tracking-widest">

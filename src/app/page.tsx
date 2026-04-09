@@ -109,8 +109,8 @@ export default function Home() {
                 </div>
                 <input
                   type="text"
-                  placeholder="ENTER VEHICLE REG"
-                  className="w-full bg-transparent text-slate-800 font-bold text-xl md:text-2xl px-4 py-3 focus:outline-none placeholder:text-slate-600 uppercase tracking-widest"
+                  placeholder="ENTER VEHICLE REG NUMBER"
+                  className="w-full bg-transparent text-slate-800 font-bold text-xl md:text-2xl px-2 sm:px-4 py-3 focus:outline-none placeholder:text-[10px] sm:placeholder:text-xs md:placeholder:text-base placeholder:tracking-normal uppercase tracking-widest placeholder:text-slate-500"
                 />
               </div>
               <button className="bg-primary hover:bg-primary-dark text-white font-bold py-4 px-8 rounded-xl shadow-[0_0_20px_rgba(25,135,84,0.4)] transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2 whitespace-nowrap">
@@ -125,7 +125,7 @@ export default function Home() {
         </div>
       </section>
 
-      <PartnerLogos />
+
 
       {/* WHY CHOOSE US & CONTENT SECTION */}
       <section className="py-20 bg-white relative overflow-hidden">
@@ -369,10 +369,14 @@ export default function Home() {
         </div>
       </section>
 
-      <ReviewsSection />
+      <ReviewsSection 
+        title="What Our Customers Say" 
+        subtitle="Hear from our satisfied customers who have experienced our professional engine services." 
+      />
       <FAQSection />
       <AreasCovered />
       <WorkshopSection />
+      <PartnerLogos />
     </>
   );
 }

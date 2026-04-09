@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, HelpCircle } from "lucide-react";
 
@@ -15,7 +15,7 @@ const faqs = [
   },
   {
     question: "Do you offer a warranty on your reconditioned engines?",
-    answer: "Yes, all of our reconditioned engines come with a comprehensive warranty of up to 12 months or 12,000 miles (whichever comes first), giving you total peace of mind.",
+    answer: "Yes, all of our reconditioned engines come with a comprehensive 6-month warranty, giving you total peace of mind.",
   },
   {
     question: "Can you supply and fit the engine at my location?",
@@ -43,6 +43,17 @@ const faqs = [
   },
 ];
 
+interface FAQItemProps {
+  question: string;
+  answer: string;
+}
+
+interface FAQSectionProps {
+  items?: FAQItemProps[];
+  title?: React.ReactNode;
+  subtitle?: React.ReactNode;
+}
+
 const FAQItem = ({ question, answer, isOpen, onClick }: { question: string, answer: string, isOpen: boolean, onClick: () => void }) => {
   return (
     <div className="border border-slate-100 rounded-[2rem] mb-4 overflow-hidden bg-white shadow-sm hover:shadow-md transition-shadow duration-300">
@@ -66,7 +77,7 @@ const FAQItem = ({ question, answer, isOpen, onClick }: { question: string, answ
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
           >
-            <div className="px-6 md:px-8 pb-8 text-slate-600 leading-relaxed text-lg md:pl-20">
+            <div className="px-6 md:px-8 pb-8 text-slate-600 leading-relaxed text-base md:pl-20">
               {answer}
             </div>
           </motion.div>
@@ -76,8 +87,9 @@ const FAQItem = ({ question, answer, isOpen, onClick }: { question: string, answ
   );
 };
 
-export default function FAQSection() {
+export default function FAQSection({ items, title, subtitle }: FAQSectionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const displayFaqs = items || faqs;
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -87,15 +99,19 @@ export default function FAQSection() {
     <section id="faq" className="pt-12 pb-24 bg-slate-50 relative overflow-hidden">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-3xl md:text-6xl font-black text-slate-900 mb-8 uppercase tracking-tighter leading-none italic">Frequently <span className="text-primary italic italic">Asked Questions</span></h2>
+          <h2 className="text-3xl md:text-6xl font-black text-slate-900 mb-8 uppercase tracking-tighter leading-none italic">
+            {title || (
+              <>Frequently <span className="text-primary italic italic">Asked Questions</span></>
+            )}
+          </h2>
           <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-8"></div>
-          <p className="text-slate-600 font-bold text-lg md:text-xl italic">
-            Find expert answers to common questions about our engine reconditioning and fitting services.
+          <p className="text-slate-600 font-bold text-base md:text-lg italic">
+            {subtitle || "Find expert answers to common questions about our engine reconditioning and fitting services."}
           </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
-          {faqs.map((faq, index) => (
+          {displayFaqs.map((faq, index) => (
             <FAQItem
               key={index}
               question={faq.question}

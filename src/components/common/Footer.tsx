@@ -26,6 +26,9 @@ export default function Footer() {
                 <Link href="/about-us" className="hover:text-primary transition-colors block">About Us</Link>
               </li>
               <li>
+                <Link href="/land-rover-engines" className="hover:text-primary transition-colors block">Land Rover Engines</Link>
+              </li>
+              <li>
                 <Link href="/ancillaries" className="hover:text-primary transition-colors block">Ancillaries</Link>
               </li>
               <li>
@@ -48,7 +51,13 @@ export default function Footer() {
             <h3 className="text-white font-semibold text-lg mb-4">Specialities</h3>
             <ul className="space-y-2">
               <li>
+                <Link href="/engines" className="hover:text-primary transition-colors block font-black text-white decoration-primary underline underline-offset-4 decoration-2">All Engines</Link>
+              </li>
+              <li>
                 <Link href="/range-rover-engines" className="hover:text-primary transition-colors block">Range Rover Engines</Link>
+              </li>
+              <li>
+                <Link href="/land-rover-engines" className="hover:text-primary transition-colors block">Land Rover Engines</Link>
               </li>
               <li>
                 <Link href="/audi-engines" className="hover:text-primary transition-colors block">Audi Engines</Link>
@@ -58,6 +67,9 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/jaguar-engines" className="hover:text-primary transition-colors block">Jaguar Engines</Link>
+              </li>
+              <li>
+                <Link href="/ancillaries" className="hover:text-primary transition-colors block">Ancillaries</Link>
               </li>
             </ul>
           </div>

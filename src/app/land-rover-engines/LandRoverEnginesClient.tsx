@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { CheckCircle2, Shield, Search, Phone, Clock, Wrench, Award, Star, Activity, ArrowRight, AlertTriangle, Truck, Settings } from "lucide-react";
+import { CheckCircle2, Shield, Search, Phone, Clock, Wrench, Award, Star, Activity, ArrowRight, AlertTriangle, Settings } from "lucide-react";
 import PartnerLogos from "@/components/common/PartnerLogos";
 import ReviewsSection from "@/components/common/ReviewsSection";
 import { motion } from "framer-motion";
@@ -10,37 +10,37 @@ import Breadcrumbs from "@/components/common/Breadcrumbs";
 import RegSearch from "@/components/common/RegSearch";
 import FAQSection from "@/components/common/FAQSection";
 
-const rangeRoverModels = [
-  { title: "Range Rover Evoque Engines", link: "/range-rover-evoque-engines" },
-  { title: "Range Rover Sport Engines", link: "/range-rover-sport-engines" },
-  { title: "Range Rover Velar Engines", link: "/range-rover-velar-engines" },
-  { title: "Range Rover Vogue New - MK 4 Engines", link: "/range-rover-vogue-new-engines" },
-  { title: "Range Rover Vogue Old - Mk 3 Engines", link: "/range-rover-vogue-old-engines" },
-  { title: "Range Rover Sport SVR", link: "/range-rover-sport-svr-engines" },
+const landRoverModels = [
+  { title: "Land Rover Defender Engines", link: "/land-rover-defender-engines" },
+  { title: "Land Rover Discovery 3 Engines", link: "/land-rover-discovery-3-engines" },
+  { title: "Land Rover Discovery 4 Engines", link: "/land-rover-discovery-4-engines" },
+  { title: "Land Rover Discovery 5 Engines", link: "/land-rover-discovery-5-engines" },
+  { title: "Land Rover Discovery Sport Engines", link: "/land-rover-discovery-sport-engines" },
+  { title: "Land Rover Freelander 2 Engines", link: "/land-rover-freelander-2-engines" },
 ];
 
-const rangeRoverEngineSizes = [
-  { title: "Range Rover 2.0 Engines", link: "/range-rover-2-0-engines" },
-  { title: "Range Rover 2.2 Engines", link: "/range-rover-2-2-engines" },
-  { title: "Range Rover 2.7 Engines", link: "/range-rover-2-7-engines" },
-  { title: "Range Rover 3.0 Engines", link: "/range-rover-3-0-engines" },
-  { title: "Range Rover 3.6 Engines", link: "/range-rover-3-6-engines" },
-  { title: "Range Rover 4.2 Engines", link: "/range-rover-4-2-engines" },
-  { title: "Range Rover 4.4 Engines", link: "/range-rover-4-4-engines" },
-  { title: "Range Rover 5.0 Engines", link: "/range-rover-5-0-engines" },
+const landRoverEngineSizes = [
+  { title: "Land Rover 2.0 Engines", link: "/land-rover-2-0-engines" },
+  { title: "Land Rover 2.2 Engines", link: "/land-rover-2-2-engines" },
+  { title: "Land Rover 2.7 Engines", link: "/land-rover-2-7-engines" },
+  { title: "Land Rover 3.0 Engines", link: "/land-rover-3-0-engines" },
+  { title: "Land Rover 4.0 Engines", link: "/land-rover-4-0-engines" },
+  { title: "Land Rover 4.4 Engines", link: "/land-rover-4-4-engines" },
+  { title: "Land Rover 5.0 Engines", link: "/land-rover-5-0-engines" },
 ];
 
-const commonRangeRoverProblems = [
+const commonLandRoverProblems = [
   "Crankshaft Failure (3.0 SDV6/TDV6)",
+  "Oil Pump Bolt Issues",
   "Turbocharger Failures",
-  "Oil Pump Issues",
+  "EGR Valve Malfunctions",
   "Timing Chain Stretch",
-  "Suspension Faults",
-  "Coolant Leaks",
-  "DPF Blockage",
+  "Suspension Air Compressor Faults",
+  "Coolant Leaks (Water Pump)",
+  "DPF Blockage (Diesel)",
 ];
 
-export default function RangeRoverEnginesClient() {
+export default function LandRoverEnginesClient() {
   return (
     <div className="bg-white min-h-screen">
       {/* HERO SECTION */}
@@ -48,7 +48,7 @@ export default function RangeRoverEnginesClient() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/car_bgg.jpg"
-            alt="Range Rover Engine Specialist"
+            alt="Land Rover Engine Specialist"
             fill
             className="object-cover opacity-40 mix-blend-overlay"
             priority
@@ -57,21 +57,21 @@ export default function RangeRoverEnginesClient() {
         </div>
 
         <div className="container relative z-10 mx-auto px-4 lg:px-8">
-          <Breadcrumbs items={[{ name: "Range Rover Engines", href: "/range-rover-engines" }]} />
+          <Breadcrumbs items={[{ name: "Land Rover Engines", href: "/land-rover-engines" }]} />
           
           <div className="text-center max-w-4xl mx-auto">
             <motion.span 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="inline-block py-1 px-3 rounded-full bg-primary/20 text-emerald-400 font-semibold tracking-wider text-sm mb-6 border border-primary/30 shadow-[0_0_15px_rgba(25,135,84,0.3)] uppercase">
-            Range Rover Specialist
+            Land Rover Specialist
           </motion.span>
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
               className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight mb-8 leading-tight uppercase">
-              Elite <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-400 to-green-500 italic">Range Rover</span> <br />
+              Elite <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-400 to-green-500 italic">Land Rover</span> <br />
               Engine Rebuild Specialists
             </motion.h1>
             <motion.p 
@@ -79,7 +79,7 @@ export default function RangeRoverEnginesClient() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
               className="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-              Vogue Technics delivers expert engine reconditioning and seamless replacements for all Range Rover models nationwide.
+              Vogue Technics delivers expert engine reconditioning and seamless replacements for all Land Rover models nationwide.
             </motion.p>
           
           <motion.div 
@@ -96,7 +96,7 @@ export default function RangeRoverEnginesClient() {
 
       <ReviewsSection 
         title="What Our Customers Say" 
-        subtitle="Hear from our satisfied customers who have experienced our professional Range Rover engine services." 
+        subtitle="Hear from our satisfied customers who have experienced our professional Land Rover engine services." 
       />
 
       {/* EXPERIENCE SECTION */}
@@ -105,17 +105,17 @@ export default function RangeRoverEnginesClient() {
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="w-full lg:w-1/2 space-y-8">
               <h2 className="text-2xl md:text-4xl font-extrabold text-slate-900 leading-none tracking-tight uppercase underline decoration-8 underline-offset-[12px] decoration-primary/20">
-                Over 2 Decades of <br/><span className="text-primary italic">Range Rover Expertise</span>
+                Over 2 Decades of <br/><span className="text-primary italic">Land Rover Expertise</span>
               </h2>
               <div className="space-y-6 text-slate-600 text-base leading-relaxed">
                 <p>
-                  With more than 20 years of dedicated experience, Vogue Technics has built a reputation as the UK’s leading specialist for Range Rover engine maintenance and rebuilds.
+                  With more than 20 years of dedicated experience, Vogue Technics has built a reputation as the UK’s leading specialist for Land Rover engine maintenance and rebuilds.
                 </p>
                 <p>
-                  From the classic Vogue Mk3 to the high-performance SVR and the latest Velar, we have the state-of-the-art facility and specialized tools to handle the most complex internal engine failures.
+                  From the rugged Discovery 3 to the iconic Defender and the Discovery Sport, we have the state-of-the-art facility and specialized tools to handle the most complex internal engine failures.
                 </p>
                 <div className="font-bold text-slate-900 border-l-8 border-primary pl-8 py-6 bg-slate-50 rounded-r-[3rem] shadow-sm italic text-xl">
-                   "Our team lives and breathes Range Rover engineering. We restore your vehicle to factory performance with absolute precision."
+                   "Our team lives and breathes Land Rover engineering. We restore your vehicle to factory performance with absolute precision."
                 </div>
               </div>
             </div>
@@ -166,7 +166,7 @@ export default function RangeRoverEnginesClient() {
                   </div>
                   <h3 className="text-2xl md:text-3xl font-black text-slate-900 uppercase tracking-tighter italic"><span className="text-red-500">Known Faults</span> & Failures</h3>
                   <div className="grid grid-cols-1 gap-3">
-                    {commonRangeRoverProblems.map((problem, i) => (
+                    {commonLandRoverProblems.map((problem, i) => (
                       <div key={i} className="flex items-center gap-4 text-slate-700 font-bold bg-white p-4 rounded-2xl border border-slate-100 shadow-sm hover:border-red-200 transition-colors">
                         <CheckCircle2 className="w-6 h-6 text-red-500" />
                         {problem}
@@ -225,25 +225,25 @@ export default function RangeRoverEnginesClient() {
         </div>
       </section>
 
-      {/* RANGE ROVER MODELS GRID */}
+      {/* LAND ROVER MODELS GRID */}
       <section className="py-32 bg-white relative overflow-hidden">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center max-w-4xl mx-auto mb-16 md:mb-24 px-4">
-             <h2 className="text-4xl md:text-7xl font-black text-slate-900 tracking-tighter uppercase leading-none underline decoration-primary decoration-[12px] underline-offset-[16px]">Find your <span className="text-primary italic">Range Rover</span></h2>
-             <p className="text-slate-500 mt-8 md:mt-10 text-xl md:text-2xl font-medium tracking-wide uppercase">Replacement Engines for the entire luxury Range Rover range</p>
+             <h2 className="text-4xl md:text-7xl font-black text-slate-900 tracking-tighter uppercase leading-none underline decoration-primary decoration-[12px] underline-offset-[16px]">Find your <span className="text-primary italic">Land Rover</span></h2>
+             <p className="text-slate-500 mt-8 md:mt-10 text-xl md:text-2xl font-medium tracking-wide uppercase">Durable Engines for rugged Defender and Discovery models</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-            {rangeRoverModels.map((model, idx) => (
+            {landRoverModels.map((model, idx) => (
               <motion.div
                 key={idx}
                 whileHover={{ y: -15, scale: 1.02 }}
                 className="group h-full"
               >
                 <Link href={model.link} className="block h-full">
-                  <div className="bg-slate-50 border-4 border-slate-100 rounded-[3rem] p-10 hover:bg-white hover:border-primary hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] transition-all duration-700 flex flex-col items-center text-center space-y-8 relative overflow-hidden h-full group">
-                    <div className="w-full aspect-square bg-white rounded-[2rem] flex flex-col items-center justify-center border-2 border-slate-200 group-hover:border-primary/20 transition-all duration-700 shadow-inner group-hover:scale-105">
-                       <span className="text-[0.6rem] font-black uppercase tracking-[0.4em] text-slate-300">RR Image Space</span>
+                  <div className="bg-white border-4 border-slate-200 rounded-[3rem] p-10 hover:bg-white hover:border-primary hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] transition-all duration-700 flex flex-col items-center text-center space-y-8 relative overflow-hidden h-full group">
+                    <div className="w-full aspect-square bg-slate-50 rounded-[2rem] flex flex-col items-center justify-center border-2 border-slate-200 group-hover:border-primary/20 transition-all duration-700 shadow-inner group-hover:scale-105">
+                       <span className="text-[0.6rem] font-black uppercase tracking-[0.4em] text-slate-300">LR Image Space</span>
                     </div>
                     <div className="flex-grow">
                       <h3 className="text-xl font-black text-slate-900 group-hover:text-primary transition-colors uppercase tracking-tighter leading-tight">
@@ -261,30 +261,27 @@ export default function RangeRoverEnginesClient() {
         </div>
       </section>
 
-
       {/* POPULAR ENGINE SIZES */}
-      <section id="engine-sizes" className="py-32 bg-white relative overflow-hidden px-4">
+      <section id="engine-sizes" className="py-32 bg-slate-50 relative overflow-hidden px-4">
         <div className="container mx-auto lg:px-8">
           
-          {/* Range Rover Sizes */}
-          <div className="mb-24">
+          <div className="mb-16">
             <div className="text-center max-w-4xl mx-auto mb-16 text-center">
-              <h2 className="text-3xl md:text-6xl font-black text-slate-900 tracking-tighter uppercase leading-none underline decoration-primary decoration-[10px] underline-offset-[12px]">Range Rover <span className="text-primary italic">Popular Sizes</span></h2>
+              <h2 className="text-3xl md:text-6xl font-black text-slate-900 tracking-tighter uppercase leading-none underline decoration-primary decoration-[10px] underline-offset-[12px]">Land Rover <span className="text-primary italic">Popular Sizes</span></h2>
             </div>
             <div className="flex flex-wrap justify-center gap-4 lg:gap-8">
-              {rangeRoverEngineSizes.map((engine, idx) => (
+              {landRoverEngineSizes.map((engine, idx) => (
                 <Link 
                   key={idx}
                   href={engine.link}
-                  className="bg-white border-4 border-slate-100 text-slate-950 hover:text-white hover:bg-primary hover:border-primary px-6 py-4 md:px-10 md:py-6 rounded-[2rem] font-black transition-all shadow-xl flex items-center gap-4 text-lg md:text-xl group hover:-translate-y-3 transform duration-500 uppercase tracking-widest italic"
+                  className="bg-slate-900 border-4 border-slate-800 text-white hover:bg-primary hover:border-primary px-6 py-4 md:px-10 md:py-6 rounded-[2rem] font-black transition-all shadow-xl flex items-center gap-4 text-lg md:text-xl group hover:-translate-y-3 transform duration-500 uppercase tracking-widest italic"
                 >
-                  <Activity className="w-6 h-6 text-primary group-hover:text-white transition-colors animate-pulse" />
+                  <Activity className="w-6 h-6 text-primary transition-colors animate-pulse" />
                   {engine.title}
                 </Link>
               ))}
             </div>
           </div>
-
 
         </div>
       </section>
@@ -384,12 +381,12 @@ export default function RangeRoverEnginesClient() {
                 </div>
              </div>
              <div className="w-full lg:w-1/2 space-y-12">
-              <h2 className="text-4xl md:text-7xl font-black text-slate-900 tracking-tighter uppercase leading-none underline decoration-primary decoration-[12px] underline-offset-[16px]">Range Rover <span className="text-primary italic italic">Experts</span></h2>
+                <h2 className="text-4xl md:text-7xl font-black text-slate-900 tracking-tighter uppercase leading-none underline decoration-primary decoration-[12px] underline-offset-[16px]">Land Rover <span className="text-primary italic">Experts</span></h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 pt-10">
                    <div className="space-y-4 group">
                       <div className="text-primary font-black text-5xl group-hover:scale-110 transition-transform inline-block">01.</div>
                       <h4 className="font-extrabold text-slate-900 text-2xl uppercase tracking-tighter italic">Engine Specialist</h4>
-                      <p className="text-slate-600 font-medium leading-relaxed">Dedicated workshop for high-performance Range Rover engine rebuilds.</p>
+                      <p className="text-slate-600 font-medium leading-relaxed">Dedicated workshop for heavy-duty Land Rover engine rebuilds.</p>
                    </div>
                    <div className="space-y-4 group">
                       <div className="text-primary font-black text-5xl group-hover:scale-110 transition-transform inline-block">02.</div>
@@ -421,7 +418,7 @@ export default function RangeRoverEnginesClient() {
       <section className="py-20 md:py-32 bg-slate-900 relative overflow-hidden text-center">
         <div className="absolute inset-0 bg-primary/5 opacity-30 animate-pulse pointer-events-none"></div>
         <div className="container mx-auto px-4 lg:px-8 max-w-5xl space-y-10 md:space-y-12 relative z-10">
-           <h2 className="text-4xl md:text-7xl font-black text-white uppercase tracking-tighter leading-none italic uppercase leading-tight">Revive Your <br/><span className="text-primary underline decoration-white/30 decoration-[10px] underline-offset-[20px]">Range Rover</span></h2>
+           <h2 className="text-4xl md:text-7xl font-black text-white uppercase tracking-tighter leading-none italic uppercase leading-tight">Revive Your <br/><span className="text-primary underline decoration-white/30 decoration-[10px] underline-offset-[20px]">Land Rover</span></h2>
            <p className="text-slate-400 text-lg md:text-xl font-bold uppercase tracking-widest leading-relaxed max-w-3xl mx-auto">
              Get Back On and Off Road Today. Expert Service Guaranteed!
            </p>
@@ -446,28 +443,28 @@ export default function RangeRoverEnginesClient() {
               <div className="relative z-10 space-y-10">
                 <div className="space-y-6">
                   <h3 className="text-2xl md:text-3xl font-black text-slate-900 uppercase tracking-tighter italic leading-tight">
-                    Premium <span className="text-primary italic">Range Rover</span> Engine Solutions
+                    Specialist <span className="text-primary italic">Land Rover</span> Engine Rebuilding
                   </h3>
                   <p className="text-slate-600 text-base leading-relaxed font-medium">
-                    The Range Rover represents the pinnacle of luxury SUVs, and its engines are high-performance masterpieces that demand specialist care. At Vogue Technics, we provide elite reconditioning and replacement services for the entire Range Rover lineup, including the powerful 5.0L V8 Supercharged units and the high-torque TDV6 and SDV8 diesels. Our master technicians approach every rebuild with surgical precision, ensuring that the refinement and power you expect from your Range Rover are fully restored.
+                    Land Rover engines are renowned for their robust performance and off-road capability, but they require precision engineering to maintain their legendary status. At Vogue Technics, we specialize in comprehensive reconditioning for all Land Rover power units, from the versatile 2.0L Ingenium diesels to the heavy-duty 3.0L SDV6 blocks. Our process involves a complete teardown and inspection, identifying common factory weaknesses like oil pump failures or crankshaft snapping, and replacing them with upgraded components that exceed original specifications.
                   </p>
                 </div>
 
                 <div className="space-y-6 pt-8 border-t border-slate-200">
                   <h3 className="text-2xl md:text-3xl font-black text-slate-900 uppercase tracking-tighter italic leading-tight">
-                    Technical <span className="text-primary italic">Mastery</span> and Innovation
+                    Addressing <span className="text-primary italic">Common Faults</span> with Precision
                   </h3>
                   <p className="text-slate-600 text-base leading-relaxed font-medium">
-                    Range Rover engines often face specific technical challenges, such as cooling system vulnerabilities and complex hybrid integration. We utilize advanced diagnostic suites tailored specifically for JLR vehicles to map out every fault before the rebuild begins. Our reconditioning process includes upgrading internal components to more resilient materials, addressing common premature wear points in the valvetrain and turbocharger systems, and ensuring your vehicle maintains its smooth, effortless performance for years to come.
+                    We understand the specific challenges faced by Land Rover owners, including timing chain stretch and turbocharger complications. Our workshop is equipped with specialized diagnostic tools specifically calibrated for Land Rover engine management systems. By using only high-grade OEM parts and implementing reinforced seals and bearings, we ensure that your rebuilt engine isn't just restored—it's improved. This attention to detail is why thousands of Land Rover enthusiasts trust us to get their vehicles back on and off the road.
                   </p>
                 </div>
 
                 <div className="space-y-6 pt-8 border-t border-slate-200">
                   <h3 className="text-2xl md:text-3xl font-black text-slate-900 uppercase tracking-tighter italic leading-tight">
-                    Seamless <span className="text-primary italic">Supply and Fit</span> Experience
+                    End-to-End <span className="text-primary italic">Supply & Fit</span> Services
                   </h3>
                   <p className="text-slate-600 text-base leading-relaxed font-medium">
-                    Managing a Range Rover engine failure can be stressful, which is why our comprehensive service is designed to be completely hands-off for the owner. From nationwide vehicle collection to the final refined calibration on our in-house dyno, we handle the entire journey. We pride ourselves on restoring your vehicle to its original factory dynamics, matching the smooth power delivery and quiet operation that defines the Range Rover driving experience.
+                    For those who need a complete solution, our "Supply and Fit" service offers unparalleled convenience. We manage the entire recovery of your vehicle from anywhere in the UK, bringing it to our West Thurrock facility for expert intervention. Our technicians handle everything from the initial diagnostic to the final road testing, ensuring that your vehicle's complex electronics and drivetrain are perfectly synced with the new or reconditioned engine, providing a seamless turn-key experience.
                   </p>
                 </div>
               </div>
@@ -477,23 +474,23 @@ export default function RangeRoverEnginesClient() {
       </section>
 
       <FAQSection 
-        title={<>Range Rover <span className="text-primary italic">FAQs</span></>}
+        title={<>Land Rover <span className="text-primary italic">FAQs</span></>}
         items={[
           {
-            question: "How do you ensure the refinement of a Range Rover engine rebuild?",
-            answer: "We use high-precision balancing equipment and only genuine OEM bearings and seals. This ensures that the engine vibrates less and runs as quietly as it did when it first left the factory."
+            question: "Do you specialize in Land Rover Ingenium engines?",
+            answer: "Yes, we have extensive experience with both petrol and diesel Ingenium engines, specifically addressing timing chain issues and turbo failures which are common in these models."
           },
           {
-            question: "Do you specialize in the 5.0L V8 Supercharged engine?",
-            answer: "Yes, we are one of the few UK specialists equipped to handle full reconditioning of the 5.0L V8 Supercharged units, including specialist supercharger servicing and timing chain upgrades."
+            question: "How do you fix the 3.0L SDV6 crankshaft issue?",
+            answer: "Our reconditioning process for the 3.0L SDV6 includes fitting reinforced main bearings and high-performance oil pumps to significantly reduce the risk of the notorious crankshaft failure."
           },
           {
-            question: "Will my Range Rover's terrain response system still work?",
-            answer: "Absolutely. Our fitting process includes a complete electronic calibration to ensure that all vehicle systems, including Terrain Response and air suspension, are perfectly integrated with the new engine."
+            question: "Can you recover my Land Rover from an off-road location?",
+            answer: "While we specialize in workshop repairs, our recovery network can collect your vehicle from any standard road-accessible location across the UK to bring it to our specialist facility."
           },
           {
-            question: "What is your typical lead time for a Range Rover TDV6?",
-            answer: "Typically, a full reconditioning and fitting for a TDV6 model takes 10 to 14 working days, depending on the availability of specific upgrade parts."
+            question: "Is the Land Rover warranty valid for off-road use?",
+            answer: "Our 6-month warranty covers all standard use of the vehicle. For specific off-road or performance coverage, please speak with our technical team during the consultation."
           }
         ]}
       />

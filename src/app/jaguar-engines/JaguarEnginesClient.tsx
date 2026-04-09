@@ -4,8 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { CheckCircle2, Shield, Search, Phone, Clock, Wrench, Award, Star, Activity, ArrowRight, AlertTriangle, Truck, Settings } from "lucide-react";
 import PartnerLogos from "@/components/common/PartnerLogos";
+import ReviewsSection from "@/components/common/ReviewsSection";
 import { motion } from "framer-motion";
 import Breadcrumbs from "@/components/common/Breadcrumbs";
+import RegSearch from "@/components/common/RegSearch";
+import FAQSection from "@/components/common/FAQSection";
 
 const jaguarModels = [
   { title: "Jaguar E-Pace Engines", link: "/jaguar-e-pace-engines" },
@@ -87,19 +90,18 @@ export default function JaguarEnginesClient() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a href="tel:01375 531355" className="bg-primary hover:bg-primary-dark text-white font-bold py-4 px-8 md:py-5 md:px-12 rounded-[2rem] shadow-[0_15px_30px_rgba(25,135,84,0.4)] transition-all flex items-center justify-center gap-3 w-full sm:w-auto transform hover:-translate-y-2 uppercase tracking-widest text-lg">
-              <Phone className="w-6 h-6" /> 01375 531355
-            </a>
-            <Link href="/contact-us" className="bg-white hover:bg-slate-50 text-slate-900 font-bold py-4 px-8 md:py-5 md:px-12 rounded-[2rem] transition-all shadow-xl w-full sm:w-auto transform hover:-translate-y-2 flex items-center justify-center uppercase tracking-widest text-lg">
-              Get Free Quote
-            </Link>
+            className="flex justify-center mt-8 w-full">
+            <RegSearch />
           </motion.div>
         </div>
       </div>
     </section>
 
-      <PartnerLogos />
+
+      <ReviewsSection 
+        title="What Our Customers Say" 
+        subtitle="Hear from our satisfied customers who have experienced our professional Jaguar engine services." 
+      />
 
       {/* EXPERIENCE SECTION */}
       <section className="py-24 bg-white border-b border-slate-100 overflow-hidden">
@@ -109,14 +111,14 @@ export default function JaguarEnginesClient() {
                 <h2 className="text-2xl md:text-4xl font-extrabold text-slate-900 leading-none tracking-tight uppercase underline decoration-8 underline-offset-[12px] decoration-primary/20">
                   Over 2 Decades of <br/><span className="text-primary italic">Jaguar Expertise</span>
                 </h2>
-              <div className="space-y-6 text-slate-600 text-lg leading-relaxed">
+              <div className="space-y-6 text-slate-600 text-base leading-relaxed">
                 <p>
                   With over 20 years of experience to facilitate the Jaguar owners, we strive to provide the best servicing and fitting facility to the locals regardless of what model they drive.
                 </p>
                 <p>
                   With Substantial investment in state-of-the-art facility and most updated equipment specialized for Jaguar repairs, we are the top choice for engine reconditioning and fitting.
                 </p>
-                <div className="font-bold text-slate-900 border-l-8 border-primary pl-8 py-6 bg-slate-50 rounded-r-[3rem] shadow-sm italic text-xl">
+                <div className="font-bold text-slate-900 border-l-8 border-primary pl-8 py-6 bg-slate-50 rounded-r-[3rem] shadow-sm italic text-lg">
                    "Our testimonials prove the quality and devotion to our services and our clients. Visit us to have complete peace of mind."
                 </div>
               </div>
@@ -150,7 +152,7 @@ export default function JaguarEnginesClient() {
             <div className="w-full lg:w-2/3 space-y-12">
               <div className="space-y-8">
                 <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight uppercase leading-none">Jaguar Engine <span className="text-primary italic">Replacement Specialists</span></h2>
-                <div className="text-slate-600 text-xl leading-relaxed space-y-6">
+                <div className="text-slate-600 text-lg leading-relaxed space-y-6">
                   <p>
                     We are Jaguar Engine Replacement specialists. Our team has extensive experience in replacing Jaguar engines correctly and efficiently. From removal to fitting, we ensure everything is done to the highest standards.
                   </p>
@@ -159,7 +161,7 @@ export default function JaguarEnginesClient() {
                   </p>
                   <div className="bg-white p-10 rounded-[3rem] border-2 border-slate-100 shadow-lg relative overflow-hidden group">
                      <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-1000"></div>
-                     <p className="font-bold text-slate-800 text-xl leading-relaxed relative z-10 italic">
+                     <p className="font-bold text-slate-800 text-lg leading-relaxed relative z-10 italic">
                         In our garage, we provide a variety of engine components for sale or replacement. We obtain our components from reliable suppliers in order to guarantee performance and reliability.
                      </p>
                   </div>
@@ -187,10 +189,10 @@ export default function JaguarEnginesClient() {
                     <Settings className="w-8 h-8 animate-spin-slow" />
                   </div>
                   <h3 className="text-2xl md:text-3xl font-bold text-slate-900 uppercase tracking-tight italic">High Performance <span className="text-primary">Parts & Repairs</span></h3>
-                  <p className="text-slate-600 text-lg leading-relaxed">
+                  <p className="text-slate-600 text-base leading-relaxed">
                     By utilizing authentic Jaguar OEM components, we assure a precise fit and excellent performance. Our skilled mechanics have the expertise to replace any component accurately.
                   </p>
-                  <p className="text-slate-600 text-lg leading-relaxed font-medium bg-white p-6 rounded-3xl border border-slate-100">
+                  <p className="text-slate-600 text-base leading-relaxed font-medium bg-white p-6 rounded-3xl border border-slate-100">
                     We supply, fit, and deliver Jaguar engines nationwide. Our professional fitting ensures your engine runs smoothly from the moment you turn the key.
                   </p>
                 </div>
@@ -209,8 +211,8 @@ export default function JaguarEnginesClient() {
                     </div>
                     <input 
                       type="text" 
-                      placeholder="ENTER REG" 
-                      className="w-full bg-transparent text-slate-900 font-black text-2xl md:text-4xl px-3 py-6 focus:outline-none placeholder:text-slate-700/40 uppercase tracking-[0.3em] text-center"
+                      placeholder="ENTER VEHICLE REG NUMBER" 
+                      className="w-full bg-transparent text-slate-900 font-black text-xl md:text-3xl px-2 sm:px-3 py-6 focus:outline-none placeholder:text-[10px] sm:placeholder:text-xs md:placeholder:text-sm placeholder:tracking-normal uppercase tracking-[0.2em] md:tracking-[0.3em] text-center placeholder:text-slate-700/60"
                     />
                   </div>
                   <button type="button" className="w-full bg-primary hover:bg-emerald-500 text-white font-black py-6 px-8 rounded-[2rem] shadow-[0_15px_35px_rgba(25,135,84,0.4)] transition-all flex justify-center items-center gap-4 transform hover:-translate-y-2 uppercase tracking-[0.15em] text-lg">
@@ -337,6 +339,33 @@ export default function JaguarEnginesClient() {
         </div>
       </section>
 
+      {/* EXTENDED WARRANTY CALLOUT */}
+      <section className="pb-24 pt-12 bg-slate-900 overflow-hidden relative">
+        <div className="container mx-auto px-4 lg:px-8">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-white/5 border-2 border-primary/40 rounded-[3rem] p-8 md:p-16 text-center relative overflow-hidden group shadow-2xl"
+          >
+            <div className="absolute top-0 right-0 w-80 h-80 bg-primary/10 blur-[100px] rounded-full -mr-40 -mt-40 pointer-events-none"></div>
+            <div className="absolute bottom-0 left-0 w-80 h-80 bg-primary/5 blur-[100px] rounded-full -ml-40 -mb-40 pointer-events-none"></div>
+            
+            <div className="relative z-10 max-w-4xl mx-auto space-y-6 md:space-y-8">
+              <div className="inline-flex items-center gap-3 bg-primary/20 text-primary px-6 py-2 rounded-full text-xs font-black uppercase tracking-widest border border-primary/30">
+                <Shield className="w-5 h-5" /> Main Dealer Sourced
+              </div>
+              <h3 className="text-3xl md:text-5xl lg:text-5xl font-black text-white uppercase tracking-tighter italic leading-none">
+                Looking for <br className="hidden md:block" /> <span className="text-primary italic underline decoration-white/20 underline-offset-8">Extended Coverage?</span>
+              </h3>
+              <p className="text-slate-300 text-lg md:text-xl font-medium leading-relaxed max-w-3xl mx-auto">
+                We also offer <span className="text-white font-bold">up to 24 months warranty</span>, sourced directly from main dealers. Please note, this option comes at a higher cost due to the extended protection and premium coverage.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* WHY CHOOSE US BENTO */}
       <section className="py-32 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
@@ -402,6 +431,70 @@ export default function JaguarEnginesClient() {
           </div>
         </div>
       </section>
+
+      {/* INFORMATIVE CONTENT SECTION */}
+      <section className="py-24 bg-white relative overflow-hidden">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-4xl mx-auto space-y-12">
+            <div className="relative p-10 md:p-16 bg-slate-50 rounded-[4rem] border-2 border-slate-100 shadow-sm relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
+              
+              <div className="relative z-10 space-y-10">
+                <div className="space-y-6">
+                  <h3 className="text-2xl md:text-3xl font-black text-slate-900 uppercase tracking-tighter italic leading-tight">
+                    Premium <span className="text-primary italic">Jaguar</span> Engine Reconditioning
+                  </h3>
+                  <p className="text-slate-600 text-base leading-relaxed font-medium">
+                    Jaguar engines are designed for refinement and high-revving performance, but they require expert attention to maintain their smooth power delivery. At Vogue Technics, we specialize in the complete reconditioning of all Jaguar power units, including the classic AJ-V8 and AJ-V6 engines, as well as the modern 2.0L Ingenium range. Our master technicians understand the nuances of Jaguar engineering, from the delicate balance of the valvetrain to the complexities of the latest ZF transmission integrations.
+                  </p>
+                </div>
+
+                <div className="space-y-6 pt-8 border-t border-slate-200">
+                  <h3 className="text-2xl md:text-3xl font-black text-slate-900 uppercase tracking-tighter italic leading-tight">
+                    Addressing <span className="text-primary italic">Chain Tensioner</span> and Cooling Issues
+                  </h3>
+                  <p className="text-slate-600 text-base leading-relaxed font-medium">
+                    We specialize in correcting well-known Jaguar factory faults, such as the timing chain tensioner failures in the 4.0L/4.2L V8s and the plastic cooling pipe vulnerabilities found in many models. Our reconditioning process includes fitting upgraded metal-bodied tensioners and reinforced cooling components that exceed the original manufacturer's specifications. This proactive approach ensures that your Jaguar's engine is not just repaired, but strengthened for modern driving demands.
+                  </p>
+                </div>
+
+                <div className="space-y-6 pt-8 border-t border-slate-200">
+                  <h3 className="text-2xl md:text-3xl font-black text-slate-900 uppercase tracking-tighter italic leading-tight">
+                    Elite <span className="text-primary italic">Supply and Fit</span> Services
+                  </h3>
+                  <p className="text-slate-600 text-base leading-relaxed font-medium">
+                    Our "Supply and Fit" service is tailored for Jaguar owners who demand an uncompromising level of service. We manage the entire recovery of your vehicle from across the UK to our specialist facility. Our technicians perform a full diagnostic and electronic reset as part of the installation process, ensuring that your Jaguar's sophisticated dynamic systems are perfectly calibrated to the fresh engine, restoring that signature "JAG" performance and refinement.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <FAQSection 
+        title={<>Jaguar Engine <span className="text-primary italic">FAQs</span></>}
+        items={[
+          {
+            question: "Do you offer the upgraded timing chain tensioners for Jaguar V8s?",
+            answer: "Yes, all our Jaguar V8 engine rebuilds include fitting the latest Generation 3 metal-bodied tensioners to prevent the common chain-slip issues found in earlier models."
+          },
+          {
+            question: "Can you recondition the 2.0L Ingenium Jaguar engines?",
+            answer: "Absolutely. We have specialized tools for the Ingenium petrol and diesel range, specifically addressing timing chain stretch and counterbalance shaft failures."
+          },
+          {
+            question: "Will a reconditioned engine affect my Jaguar's refined ride?",
+            answer: "Our rebuilds are balanced to factory-perfect specifications to ensure the smooth, vibration-free operation that Jaguar vehicles are famous for."
+          },
+          {
+            question: "Do you provide a warranty for Jaguar engine fitting?",
+            answer: "Yes, we provide a 6-month / 6,000-mile written warranty on all our Jaguar reconditioned engines and fitting services, with extended options available upon request."
+          }
+        ]}
+      />
+
+      <PartnerLogos />
     </div>
   );
 }

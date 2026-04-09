@@ -28,15 +28,27 @@ const reviews = [
   },
 ];
 
-export default function ReviewsSection() {
+interface ReviewsSectionProps {
+  title?: string;
+  subtitle?: string;
+}
+
+export default function ReviewsSection({ 
+  title = "What Our Customers Say", 
+  subtitle = "Hear from our satisfied customers who have experienced our professional engine services." 
+}: ReviewsSectionProps) {
   return (
     <section id="reviews" className="pt-24 pb-12 bg-slate-50 relative overflow-hidden">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight">What Our Customers Say</h2>
-          <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-8"></div>
-          <p className="text-slate-600 text-lg">
-            Hear from our satisfied customers who have experienced our professional engine services.
+          <div className="flex justify-center mb-6">
+            <h2 className="bg-primary text-white text-3xl md:text-5xl font-bold px-6 py-3 rounded-lg shadow-lg tracking-tight uppercase italic">
+              {title}
+            </h2>
+          </div>
+          <div className="w-24 h-1.5 bg-primary mx-auto rounded-full mb-8"></div>
+          <p className="text-slate-600 text-lg font-medium leading-relaxed uppercase tracking-wide">
+            {subtitle}
           </p>
         </div>
 

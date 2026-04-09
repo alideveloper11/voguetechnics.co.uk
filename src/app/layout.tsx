@@ -35,8 +35,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${outfit.variable} h-full antialiased scroll-smooth`}>
-      <body className="min-h-full flex flex-col bg-slate-50 text-slate-900 selection:bg-primary selection:text-white">
+    <html lang="en" className={`${outfit.variable} h-full antialiased scroll-smooth`} suppressHydrationWarning={true}>
+      <body className="min-h-full flex flex-col bg-slate-50 text-slate-900 selection:bg-primary selection:text-white" suppressHydrationWarning={true}>
         <Header />
         <main className="flex-1 w-full flex flex-col">
           {children}

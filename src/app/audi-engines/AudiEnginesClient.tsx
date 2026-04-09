@@ -4,8 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { CheckCircle2, Shield, Search, Phone, Clock, Wrench, Award, Star, Activity, ArrowRight } from "lucide-react";
 import PartnerLogos from "@/components/common/PartnerLogos";
+import ReviewsSection from "@/components/common/ReviewsSection";
 import { motion } from "framer-motion";
 import Breadcrumbs from "@/components/common/Breadcrumbs";
+import RegSearch from "@/components/common/RegSearch";
+import FAQSection from "@/components/common/FAQSection";
 
 const audiModels = [
   { title: "Audi A1 Engines", link: "/audi-a1-engines" },
@@ -106,19 +109,18 @@ export default function AudiEnginesClient() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a href="tel:01375 531355" className="bg-primary hover:bg-primary-dark text-white font-bold py-4 px-6 md:px-10 rounded-xl shadow-[0_0_20px_rgba(25,135,84,0.4)] transition-all flex items-center justify-center gap-2 w-full sm:w-auto transform hover:-translate-y-1">
-                <Phone className="w-5 h-5" /> 01375 531355
-              </a>
-              <Link href="/contact-us" className="bg-white hover:bg-slate-50 text-slate-900 font-bold py-4 px-6 md:px-10 rounded-xl transition-all shadow-lg w-full sm:w-auto transform hover:-translate-y-1 flex items-center justify-center">
-                Request a Quote
-              </Link>
+              className="flex justify-center mt-8 w-full">
+              <RegSearch />
             </motion.div>
           </div>
         </div>
       </section>
 
-      <PartnerLogos />
+
+      <ReviewsSection 
+        title="What Our Customers Say" 
+        subtitle="Hear from our satisfied customers who have experienced our professional Audi engine services." 
+      />
 
       {/* EXPERIENCE SECTION */}
       <section className="py-20 bg-white border-b border-slate-100">
@@ -128,7 +130,7 @@ export default function AudiEnginesClient() {
               <h2 className="text-2xl md:text-4xl font-extrabold text-slate-900 leading-tight tracking-tight uppercase underline underline-offset-[12px] decoration-primary decoration-[6px]">
                 Over 2 Decades of Experience in <br/><span className="text-primary italic">Fitting and Servicing Audi Vehicles</span>
               </h2>
-              <div className="space-y-4 text-slate-600 text-lg leading-relaxed">
+              <div className="space-y-4 text-slate-600 text-base leading-relaxed">
                 <p>
                   With over 20 years of experience to facilitate the Audi owners, we strive to provide the best servicing and fitting facility to the locals of West Thurrock regardless of what model of Audi they drive.
                 </p>
@@ -235,7 +237,7 @@ export default function AudiEnginesClient() {
             <div className="w-full lg:w-2/3 space-y-8">
               <div className="space-y-6">
                 <h2 className="text-2xl md:text-4xl font-black text-slate-900 leading-none tracking-tighter uppercase">Vogue Technics: <span className="text-primary italic">Audi Engine Specialists</span></h2>
-                <div className="text-slate-600 text-lg leading-relaxed space-y-4">
+                <div className="text-slate-600 text-base leading-relaxed space-y-4">
                   <p>
                     Engine replacement in any Audi vehicle is a complex task requiring high technical proficiency and mechanical understanding. Fortunately, you have the help available as Vogue Technics provides perfect assistance in Audi engine replacements along with offering used and reconditioned Audi engines at affordable prices.
                   </p>
@@ -244,7 +246,7 @@ export default function AudiEnginesClient() {
                   </p>
                 </div>
                 <div className="bg-slate-50 p-10 rounded-[2.5rem] border border-slate-200 shadow-inner">
-                  <p className="text-slate-800 text-xl leading-relaxed italic font-bold">
+                  <p className="text-slate-800 text-lg leading-relaxed italic font-bold">
                     Audi in their engineering department, does not believe in doing things in half measures. They always blend high performance with innovative design and advanced features.
                   </p>
                 </div>
@@ -288,8 +290,8 @@ export default function AudiEnginesClient() {
                     </div>
                     <input 
                       type="text" 
-                      placeholder="ENTER REG" 
-                      className="w-full bg-transparent text-slate-900 font-extrabold text-xl md:text-3xl px-3 py-5 focus:outline-none placeholder:text-slate-600/50 uppercase tracking-[0.25em] text-center"
+                      placeholder="ENTER VEHICLE REG NUMBER" 
+                      className="w-full bg-transparent text-slate-900 font-extrabold text-lg md:text-3xl px-2 sm:px-3 py-5 focus:outline-none placeholder:text-[10px] sm:placeholder:text-xs md:placeholder:text-sm placeholder:tracking-normal uppercase tracking-[0.15em] md:tracking-[0.25em] text-center placeholder:text-slate-600/70"
                     />
                   </div>
                   <button type="button" className="w-full bg-primary hover:bg-emerald-500 text-white font-black py-5 px-6 rounded-2xl shadow-lg transition-all flex justify-center items-center gap-3 transform hover:-translate-y-1">
@@ -349,7 +351,7 @@ export default function AudiEnginesClient() {
                 <Wrench className="w-10 h-10" />
               </div>
               <h3 className="text-3xl font-black text-white tracking-tight uppercase italic">Reconditioned Engines</h3>
-              <p className="text-slate-300 leading-relaxed text-lg">
+              <p className="text-slate-300 leading-relaxed text-base">
                 Refurbished to near new condition where all worn parts are replaced to factory specifications.
               </p>
               <ul className="space-y-4 font-bold text-sm uppercase tracking-widest text-emerald-400">
@@ -386,6 +388,33 @@ export default function AudiEnginesClient() {
         </div>
       </section>
 
+      {/* EXTENDED WARRANTY CALLOUT */}
+      <section className="pb-24 pt-12 bg-slate-900 overflow-hidden relative">
+        <div className="container mx-auto px-4 lg:px-8">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-white/5 border-2 border-primary/40 rounded-[3rem] p-8 md:p-16 text-center relative overflow-hidden group shadow-2XL"
+          >
+            <div className="absolute top-0 right-0 w-80 h-80 bg-primary/10 blur-[100px] rounded-full -mr-40 -mt-40 pointer-events-none"></div>
+            <div className="absolute bottom-0 left-0 w-80 h-80 bg-primary/5 blur-[100px] rounded-full -ml-40 -mb-40 pointer-events-none"></div>
+            
+            <div className="relative z-10 max-w-4xl mx-auto space-y-6 md:space-y-8">
+              <div className="inline-flex items-center gap-3 bg-primary/20 text-primary px-6 py-2 rounded-full text-xs font-black uppercase tracking-widest border border-primary/30">
+                <Shield className="w-5 h-5" /> Main Dealer Sourced
+              </div>
+              <h3 className="text-3xl md:text-5xl lg:text-5xl font-black text-white uppercase tracking-tighter italic leading-none">
+                Looking for <br className="hidden md:block" /> <span className="text-primary italic underline decoration-white/20 underline-offset-8">Extended Coverage?</span>
+              </h3>
+              <p className="text-slate-300 text-base md:text-lg font-medium leading-relaxed max-w-3xl mx-auto">
+                We also offer <span className="text-white font-bold">up to 24 months warranty</span>, sourced directly from main dealers. Please note, this option comes at a higher cost due to the extended protection and premium coverage.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* BIG PROMO BANNER */}
       <section className="py-24 bg-primary relative overflow-hidden">
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-white/10 blur-[180px] rounded-full -mr-72 -mt-72 pointer-events-none"></div>
@@ -419,7 +448,7 @@ export default function AudiEnginesClient() {
              </div>
              <div className="w-full lg:w-1/2 space-y-12">
                 <h2 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter uppercase leading-none underline decoration-8 underline-offset-8 decoration-primary/20">Why choose <br/><span className="text-primary italic italic">Vogue Technics</span>?</h2>
-                <div className="text-slate-600 text-xl leading-relaxed space-y-8 font-medium">
+                <div className="text-slate-600 text-lg leading-relaxed space-y-8 font-medium">
                   <p>
                     Choose us for unmatched quality and expertise in Audi engines. Our state-of-the-art facility is equipped with the latest technology and purpose-built workshop.
                   </p>
@@ -440,7 +469,7 @@ export default function AudiEnginesClient() {
       <section className="py-20 bg-slate-50 border-t-8 border-slate-100">
         <div className="container mx-auto px-4 lg:px-8 text-center max-w-5xl space-y-10">
           <h2 className="text-4xl md:text-6xl font-black text-slate-900 uppercase tracking-tighter leading-none italic">Book an <span className="text-primary">Appointment</span></h2>
-          <p className="text-slate-500 text-lg md:text-xl font-bold leading-relaxed max-w-3xl mx-auto uppercase tracking-widest">
+          <p className="text-slate-500 text-base md:text-lg font-bold leading-relaxed max-w-3xl mx-auto uppercase tracking-widest">
             Scheduling is simple. Call us directly to speak with our specialists.
           </p>
           <div className="flex flex-col md:flex-row gap-6 justify-center pt-4">
@@ -453,6 +482,70 @@ export default function AudiEnginesClient() {
           </div>
         </div>
       </section>
+
+      {/* INFORMATIVE CONTENT SECTION */}
+      <section className="py-24 bg-white relative overflow-hidden">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-4xl mx-auto space-y-12">
+            <div className="relative p-10 md:p-16 bg-slate-50 rounded-[4rem] border-2 border-slate-100 shadow-sm relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
+              
+              <div className="relative z-10 space-y-10">
+                <div className="space-y-6">
+                  <h3 className="text-2xl md:text-3xl font-black text-slate-900 uppercase tracking-tighter italic leading-tight">
+                    Elite <span className="text-primary italic">Audi</span> Engine Engineering
+                  </h3>
+                  <p className="text-slate-600 text-base leading-relaxed font-medium">
+                    Audi is synonymous with technical progress, and their engines are sophisticated units that require specialized knowledge. At Vogue Technics, we provide expert engine reconditioning for the entire Audi range, from the widespread 2.0L TFSI petrol engines to the high-performance V6 and V8 TDI diesels. Our master technicians utilize state-of-the-art diagnostic equipment to interface with Audi's complex electronic control units, ensuring every rebuild is perfectly calibrated.
+                  </p>
+                </div>
+
+                <div className="space-y-6 pt-8 border-t border-slate-200">
+                  <h3 className="text-2xl md:text-3xl font-black text-slate-900 uppercase tracking-tighter italic leading-tight">
+                    Solving <span className="text-primary italic">TFSI and TDI</span> Challenges
+                  </h3>
+                  <p className="text-slate-600 text-base leading-relaxed font-medium">
+                    We specialize in correcting well-documented Audi engine issues, such as the excessive oil consumption found in earlier TFSI models and the timing chain stretch common in high-mileage TDI units. Our reconditioning process includes using upgraded piston rings, reinforced timing components, and improved turbo seals that exceed the original manufacturer's specifications. This balanced approach restores not just power, but also the legendary fuel efficiency and smooth delivery Audi is known for.
+                  </p>
+                </div>
+
+                <div className="space-y-6 pt-8 border-t border-slate-200">
+                  <h3 className="text-2xl md:text-3xl font-black text-slate-900 uppercase tracking-tighter italic leading-tight">
+                    Comprehensive <span className="text-primary italic">Quattro Integration</span>
+                  </h3>
+                  <p className="text-slate-600 text-base leading-relaxed font-medium">
+                    Fitting an engine into an Audi involves more than just mechanical labor; it requires precise integration with the Quattro all-wheel-drive system and S-Tronic transmissions. Our "Supply and Fit" service includes a full system diagnostic and drivetrain calibration. We ensure that your Audi's advanced safety and performance systems are fully functional and perfectly synchronized with the newly fitted engine, restoring the confident handling your vehicle was designed for.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <FAQSection 
+        title={<>Audi Engine <span className="text-primary italic">FAQs</span></>}
+        items={[
+          {
+            question: "How do you fix the Audi TFSI oil consumption issue?",
+            answer: "Our engine rebuilds for TFSI models include fitting redesigned, high-spec piston rings and honing the cylinder walls to eliminate the oil bypass issue common in factory units."
+          },
+          {
+            question: "Do you offer reconditioned engines for Audi S and RS models?",
+            answer: "Yes, we have specialized technicians for Audi Performance models, including the S3, RS4, and RS6. These high-performance rebuilds use race-grade bearings and gaskets to handle the additional power."
+          },
+          {
+            question: "Can you supply an engine for an Audi with Quattro AWD?",
+            answer: "Absolutely. We stock and fit engines compatible with all Audi drivetrain configurations, including standard front-wheel drive, Quattro AWD, and the latest ultra-technology systems."
+          },
+          {
+            question: "What kind of warranty do I get with an Audi engine?",
+            answer: "All our reconditioned Audi engines come with a 6-month / 6,000-mile written warranty as standard, covering both parts and labor when fitted in our workshop."
+          }
+        ]}
+      />
+
+      <PartnerLogos />
     </div>
   );
 }

@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown, Menu, Phone, X } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { services } from "@/data/servicesData";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -19,7 +20,6 @@ export default function Header() {
   }, []);
 
   const navLinks = [
-    { name: "Ancillaries", href: "/ancillaries" },
     { name: "About", href: "/about-us" },
     { name: "Gallery", href: "/gallery" },
     { name: "Reviews", href: "/reviews" },
@@ -48,11 +48,12 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
             <div className="relative group cursor-pointer inline-flex items-center gap-1 font-medium text-white/90 hover:text-white transition-colors">
-              <span>Engines</span>
+              <Link href="/engines">Engines</Link>
               <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
               <div className="absolute top-full left-0 mt-2 w-56 rounded-xl bg-white shadow-xl border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top translate-y-2 group-hover:translate-y-0 overflow-hidden">
                 <div className="flex flex-col p-2 text-slate-800">
                   <Link href="/range-rover-engines" className="px-4 py-2 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium">Range Rover Engines</Link>
+                  <Link href="/land-rover-engines" className="px-4 py-2 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium">Land Rover Engines</Link>
                   <Link href="/audi-engines" className="px-4 py-2 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium">Audi Engines</Link>
                   <Link href="/bmw-engines" className="px-4 py-2 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium">BMW Engines</Link>
                   <Link href="/jaguar-engines" className="px-4 py-2 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium">Jaguar Engines</Link>
@@ -63,13 +64,20 @@ export default function Header() {
             <div className="relative group cursor-pointer inline-flex items-center gap-1 font-medium text-white/90 hover:text-white transition-colors">
               <Link href="/services">Services</Link>
               <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
-              <div className="absolute top-full left-0 mt-2 w-64 rounded-xl bg-white shadow-xl border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top translate-y-2 group-hover:translate-y-0 overflow-hidden">
-                <div className="flex flex-col p-2 text-slate-800">
-                  <Link href="/services/head-gasket-replacement" className="px-4 py-2 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium">Head Gasket Replacement</Link>
-                  <Link href="/services/timing-chain-replacement" className="px-4 py-2 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium">Timing Chain Replacement</Link>
-                  <Link href="/services/turbo-replacement" className="px-4 py-2 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium">Turbo Replacement</Link>
-                  <Link href="/services/engine-rebuild" className="px-4 py-2 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium">Engine Rebuild</Link>
-                  <Link href="/services" className="px-4 py-2 mt-2 bg-slate-50 text-center text-xs font-bold uppercase tracking-widest text-primary hover:bg-primary hover:text-white rounded-lg transition-all">View All Services</Link>
+              <div className="absolute top-full -left-20 lg:-left-40 mt-2 w-[32rem] rounded-2xl bg-white shadow-2xl border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top translate-y-4 group-hover:translate-y-0 overflow-hidden">
+                <div className="grid grid-cols-2 gap-1 p-4 text-slate-800">
+                  {services.map((service) => (
+                    <Link 
+                      key={service.slug} 
+                      href={`/services/${service.slug}`} 
+                      className="flex items-center gap-3 px-4 py-3 hover:bg-emerald-50 hover:text-primary rounded-xl transition-all group/item"
+                    >
+                      <div className="bg-slate-50 p-2 rounded-lg group-hover/item:bg-white transition-colors text-primary shadow-sm border border-slate-100">
+                        {service.icon}
+                      </div>
+                      <span className="font-semibold text-sm leading-tight">{service.title}</span>
+                    </Link>
+                  ))}
                 </div>
               </div>
             </div>
@@ -115,18 +123,30 @@ export default function Header() {
           >
             <div className="flex flex-col p-4 space-y-4 text-white">
               <div className="flex flex-col space-y-2 pb-4 border-b border-white/20">
-                <div className="font-semibold text-white/50 text-sm uppercase px-2 tracking-wide">Engines</div>
+                <Link href="/engines" className="font-semibold text-white/50 text-sm uppercase px-2 tracking-wide hover:text-white transition-colors">Engines</Link>
                 <Link href="/range-rover-engines" className="px-2 py-2 hover:bg-white/10 rounded-lg font-medium">Range Rover Engines</Link>
+                <Link href="/land-rover-engines" className="px-2 py-2 hover:bg-white/10 rounded-lg font-medium">Land Rover Engines</Link>
                 <Link href="/audi-engines" className="px-2 py-2 hover:bg-white/10 rounded-lg font-medium">Audi Engines</Link>
                 <Link href="/bmw-engines" className="px-2 py-2 hover:bg-white/10 rounded-lg font-medium">BMW Engines</Link>
                 <Link href="/jaguar-engines" className="px-2 py-2 hover:bg-white/10 rounded-lg font-medium">Jaguar Engines</Link>
               </div>
               <div className="flex flex-col space-y-2 pb-4 border-b border-white/20">
-                <div className="font-semibold text-white/50 text-sm uppercase px-2 tracking-wide">Services</div>
-                <Link href="/services" className="px-2 py-2 hover:bg-white/10 rounded-lg font-medium">All Services</Link>
-                <Link href="/services/head-gasket-replacement" className="px-2 py-2 hover:bg-white/10 rounded-lg font-medium">Head Gasket Replacement</Link>
-                <Link href="/services/timing-chain-replacement" className="px-2 py-2 hover:bg-white/10 rounded-lg font-medium">Timing Chain Replacement</Link>
-                <Link href="/services/turbo-replacement" className="px-2 py-2 hover:bg-white/10 rounded-lg font-medium">Turbo Replacement</Link>
+                <div className="font-semibold text-white/50 text-sm uppercase px-2 tracking-wide mb-2 pt-2">Our Services</div>
+                <div className="grid grid-cols-1 gap-1">
+                  {services.map((service) => (
+                    <Link 
+                      key={service.slug} 
+                      href={`/services/${service.slug}`} 
+                      className="flex items-center gap-3 px-3 py-2.5 hover:bg-white/10 rounded-xl transition-colors"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      <div className="text-emerald-400 opacity-80 shrink-0">
+                        {service.icon}
+                      </div>
+                      <span className="font-medium text-[15px]">{service.title}</span>
+                    </Link>
+                  ))}
+                </div>
               </div>
               {navLinks.map((link) => (
                 <Link

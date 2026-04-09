@@ -4,8 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { CheckCircle2, Shield, Search, Phone, Clock, Wrench, Award, Star, Activity, ArrowRight, AlertTriangle, Truck, Settings } from "lucide-react";
 import PartnerLogos from "@/components/common/PartnerLogos";
+import ReviewsSection from "@/components/common/ReviewsSection";
 import { motion } from "framer-motion";
 import Breadcrumbs from "@/components/common/Breadcrumbs";
+import RegSearch from "@/components/common/RegSearch";
+import FAQSection from "@/components/common/FAQSection";
 
 const bmwModels = [
   { title: "BMW 1 Series Engines", link: "/bmw-1-series-engines" },
@@ -78,19 +81,18 @@ export default function BmwEnginesClient() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a href="tel:01375 531355" className="bg-primary hover:bg-primary-dark text-white font-bold py-4 px-6 md:px-10 rounded-xl shadow-[0_0_20px_rgba(25,135,84,0.4)] transition-all flex items-center justify-center gap-2 w-full sm:w-auto transform hover:-translate-y-1">
-              <Phone className="w-5 h-5" /> 01375 531355
-            </a>
-            <Link href="/contact-us" className="bg-white hover:bg-slate-50 text-slate-900 font-bold py-4 px-6 md:px-10 rounded-xl transition-all shadow-lg w-full sm:w-auto transform hover:-translate-y-1 flex items-center justify-center">
-              Request a Quote
-            </Link>
+            className="flex justify-center mt-8 w-full">
+            <RegSearch />
           </motion.div>
         </div>
       </div>
     </section>
 
-      <PartnerLogos />
+
+      <ReviewsSection 
+        title="What Our Customers Say" 
+        subtitle="Hear from our satisfied customers who have experienced our professional BMW engine services." 
+      />
 
       {/* EXPERIENCE SECTION */}
       <section className="py-20 bg-white border-b border-slate-100">
@@ -100,7 +102,7 @@ export default function BmwEnginesClient() {
               <h2 className="text-2xl md:text-4xl font-bold text-slate-900 leading-tight tracking-tight uppercase underline underline-offset-[12px] decoration-primary decoration-[6px]">
                 Over 2 Decades of Experience in <br/><span className="text-primary italic">Fitting and Servicing BMW Vehicles</span>
               </h2>
-              <div className="space-y-4 text-slate-600 text-lg leading-relaxed">
+              <div className="space-y-4 text-slate-600 text-base leading-relaxed">
                 <p>
                   With over 20 years of experience to facilitate the BMW owners, we strive to provide the best servicing and fitting facility to the locals of West Thurrock regardless of what model of BMW they drive.
                 </p>
@@ -141,7 +143,7 @@ export default function BmwEnginesClient() {
             <div className="w-full lg:w-2/3 space-y-8">
               <div className="space-y-6">
                 <h2 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tighter uppercase leading-none">Vogue Technics: Expert BMW Engine Rebuild & Fitting</h2>
-                <div className="text-slate-600 text-lg leading-relaxed space-y-4">
+                <div className="text-slate-600 text-base leading-relaxed space-y-4">
                   <p>
                     At Vogue Technics, we understand the value of a well-maintained BMW car. That's why we focus on expert BMW engine rebuilds and replacements that meet the highest standards. Our services are designed to keep your BMW running smoothly for years to come.
                   </p>
@@ -196,8 +198,8 @@ export default function BmwEnginesClient() {
                     </div>
                     <input 
                       type="text" 
-                      placeholder="ENTER REG" 
-                      className="w-full bg-transparent text-slate-900 font-black text-2xl md:text-3xl px-3 py-5 focus:outline-none placeholder:text-slate-600/50 uppercase tracking-[0.25em] text-center"
+                      placeholder="ENTER VEHICLE REG NUMBER" 
+                      className="w-full bg-transparent text-slate-900 font-black text-xl md:text-3xl px-2 sm:px-3 py-5 focus:outline-none placeholder:text-[10px] sm:placeholder:text-xs md:placeholder:text-sm placeholder:tracking-normal uppercase tracking-[0.2em] md:tracking-[0.25em] text-center placeholder:text-slate-600/70"
                     />
                   </div>
                   <button type="button" className="w-full bg-primary hover:bg-emerald-500 text-white font-black py-5 px-6 rounded-2xl shadow-[0_10px_30px_rgba(25,135,84,0.3)] transition-all flex justify-center items-center gap-3 transform hover:-translate-y-1">
@@ -309,6 +311,33 @@ export default function BmwEnginesClient() {
         </div>
       </section>
 
+      {/* EXTENDED WARRANTY CALLOUT */}
+      <section className="pb-24 pt-12 bg-slate-900 overflow-hidden relative">
+        <div className="container mx-auto px-4 lg:px-8">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-white/5 border-2 border-primary/40 rounded-[3rem] p-8 md:p-16 text-center relative overflow-hidden group shadow-2xl"
+          >
+            <div className="absolute top-0 right-0 w-80 h-80 bg-primary/10 blur-[100px] rounded-full -mr-40 -mt-40 pointer-events-none"></div>
+            <div className="absolute bottom-0 left-0 w-80 h-80 bg-primary/5 blur-[100px] rounded-full -ml-40 -mb-40 pointer-events-none"></div>
+            
+            <div className="relative z-10 max-w-4xl mx-auto space-y-6 md:space-y-8">
+              <div className="inline-flex items-center gap-3 bg-primary/20 text-primary px-6 py-2 rounded-full text-xs font-black uppercase tracking-widest border border-primary/30">
+                <Shield className="w-5 h-5" /> Main Dealer Sourced
+              </div>
+              <h3 className="text-3xl md:text-5xl lg:text-5xl font-black text-white uppercase tracking-tighter italic leading-none">
+                Looking for <br className="hidden md:block" /> <span className="text-primary italic underline decoration-white/20 underline-offset-8">Extended Coverage?</span>
+              </h3>
+              <p className="text-slate-300 text-base md:text-lg font-medium leading-relaxed max-w-3xl mx-auto">
+                We also offer <span className="text-white font-bold">up to 24 months warranty</span>, sourced directly from main dealers. Please note, this option comes at a higher cost due to the extended protection and premium coverage.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* WHY CHOOSE US */}
       <section className="py-24 bg-white overflow-hidden">
         <div className="container mx-auto px-4 lg:px-8">
@@ -353,7 +382,7 @@ export default function BmwEnginesClient() {
         <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 blur-[120px] rounded-full -mr-48 -mt-48"></div>
         <div className="container mx-auto px-4 lg:px-8 text-center max-w-4xl space-y-10 relative z-10">
            <h2 className="text-3xl md:text-6xl font-black text-white uppercase tracking-tighter italic">Book Your BMW <br/><span className="text-slate-950 underline underline-offset-8 decoration-white/30 decoration-[8px]">Engine Service</span> Today!</h2>
-           <p className="text-emerald-100 text-lg md:text-xl font-medium max-w-2xl mx-auto uppercase tracking-widest leading-relaxed"> Ready to get your BMW back on the road with superior performance?</p>
+           <p className="text-emerald-100 text-base md:text-lg font-medium max-w-2xl mx-auto uppercase tracking-widest leading-relaxed"> Ready to get your BMW back on the road with superior performance?</p>
            <div className="flex flex-col md:flex-row gap-6 justify-center pt-6">
              <Link href="/contact-us" className="bg-slate-900 hover:bg-slate-800 text-white font-black py-5 px-10 md:px-12 rounded-[2rem] shadow-2xl transition-all transform hover:-translate-y-2 text-lg md:text-xl flex items-center justify-center gap-4 uppercase tracking-[0.2em]">
                <Search className="w-8 h-8 text-primary" /> Book Appointment
@@ -364,6 +393,70 @@ export default function BmwEnginesClient() {
           </div>
         </div>
       </section>
+
+      {/* INFORMATIVE CONTENT SECTION */}
+      <section className="py-24 bg-white relative overflow-hidden">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-4xl mx-auto space-y-12">
+            <div className="relative p-10 md:p-16 bg-slate-50 rounded-[4rem] border-2 border-slate-100 shadow-sm relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
+              
+              <div className="relative z-10 space-y-10">
+                <div className="space-y-6">
+                  <h3 className="text-2xl md:text-3xl font-black text-slate-900 uppercase tracking-tighter italic leading-tight">
+                    Precision <span className="text-primary italic">BMW</span> Engine Reconditioning
+                  </h3>
+                  <p className="text-slate-600 text-base leading-relaxed font-medium">
+                    BMW engines are legendary for their power and efficiency, but they require meticulous maintenance and specialized rebuilding techniques to stay at their peak. At Vogue Technics, we offer premium engine reconditioning for all BMW models, from the fuel-efficient N47 and N57 diesels to the high-revving S-series performance engines found in M-power vehicles. Our workshop uses factory-grade diagnostic software and precision tools to ensure every rebuild restores the "Ultimate Driving Machine" experience.
+                  </p>
+                </div>
+
+                <div className="space-y-6 pt-8 border-t border-slate-200">
+                  <h3 className="text-2xl md:text-3xl font-black text-slate-900 uppercase tracking-tighter italic leading-tight">
+                    Addressing <span className="text-primary italic">Timing Chain</span> and VANOS Faults
+                  </h3>
+                  <p className="text-slate-600 text-base leading-relaxed font-medium">
+                    We specialize in resolving common BMW factory weaknesses, most notably the high-failure rate timing chains in the N47/N57 range and VANOS system issues in the petrol variants. Our reconditioning process includes fitting upgraded, reinforced timing chain kits and precision-calibrated VANOS units. By combining these hardware improvements with factory-standard software updates, we not only fix the immediate failure but also fortify the engine against future complications.
+                  </p>
+                </div>
+
+                <div className="space-y-6 pt-8 border-t border-slate-200">
+                  <h3 className="text-2xl md:text-3xl font-black text-slate-900 uppercase tracking-tighter italic leading-tight">
+                    Expert <span className="text-primary italic">xDrive and Gearbox</span> Integration
+                  </h3>
+                  <p className="text-slate-600 text-base leading-relaxed font-medium">
+                    Modern BMWs feature highly integrated drivetrain systems like xDrive and sophisticated automatic transmissions. Our "Supply and Fit" service goes beyond just the block; we ensure that the engine and gearbox are perfectly aligned and that the xDrive transfer case is correctly calibrated to the new engine's torque delivery. This holistic approach ensures that your BMW's balanced handling and rapid power delivery are fully restored, exactly as the factory intended.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <FAQSection 
+        title={<>BMW Engine <span className="text-primary italic">FAQs</span></>}
+        items={[
+          {
+            question: "Do you offer the BMW N47 timing chain upgrade?",
+            answer: "Yes, we provide a full reconditioning service for the N47 model that specifically includes an upgraded, more resilient timing chain kit to prevent future failures."
+          },
+          {
+            question: "How long does it take to fit a reconditioned BMW engine?",
+            answer: "For most BMW models, the typical turnaround time for a full reconditioning and fitting service is 7 to 10 working days, including rigorous road testing."
+          },
+          {
+            question: "Can you recondition engines for BMW M-series vehicles?",
+            answer: "Absolutely. Our master technicians are highly trained in handling M-series engines (S55, S63, etc.), using specialist performance-grade components for high-rev durability."
+          },
+          {
+            question: "Is your BMW engine warranty nationwide?",
+            answer: "Our 6-month warranty covers all parts and labor performed in our workshop. We also offer extended nationwide coverage via third-party dealer networks for total peace of mind."
+          }
+        ]}
+      />
+
+      <PartnerLogos />
     </div>
   );
 }

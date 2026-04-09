@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { CheckCircle2, Shield, Search, Phone } from "lucide-react";
 import PartnerLogos from "@/components/common/PartnerLogos";
+import ReviewsSection from "@/components/common/ReviewsSection";
 import { notFound } from "next/navigation";
 import Breadcrumbs from "@/components/common/Breadcrumbs";
 
@@ -68,7 +69,7 @@ export default async function DynamicServicePage({ params }: { params: Promise<{
           <h1 className="text-4xl md:text-5xl lg:text-5xl font-extrabold mb-6 tracking-tight leading-tight">
             {formattedTitle}
           </h1>
-          <p className="text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto mb-10">
+          <p className="text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto mb-10">
             We provide fully tested, high-performance <strong className="text-white font-semibold">{formattedTitle}</strong>. Benefit from our 20+ years of industry expertise.
           </p>
           
@@ -92,7 +93,7 @@ export default async function DynamicServicePage({ params }: { params: Promise<{
             <h2 className="text-3xl font-bold text-slate-900">
               Premium Quality <span className="text-primary">{formattedTitle}</span>
             </h2>
-            <div className="space-y-4 text-lg text-slate-600 leading-relaxed">
+            <div className="space-y-4 text-base text-slate-600 leading-relaxed">
               <p>
                 When you are looking for reliable <strong>{formattedTitle}</strong>, Vogue Technics is your ultimate destination. We specialise in offering low-mileage, thoroughly inspected engines and parts to get your vehicle running smoothly again.
               </p>
@@ -118,6 +119,20 @@ export default async function DynamicServicePage({ params }: { params: Promise<{
                   <h4 className="font-bold text-slate-900 mb-1">Extended Warranty</h4>
                   <p className="text-sm text-slate-600">Complete peace of mind with our comprehensive warranty covering all parts and labor.</p>
                 </div>
+              </div>
+            </div>
+
+            {/* EXTENDED WARRANTY CALLOUT */}
+            <div className="mt-12 bg-slate-900 rounded-[2.5rem] p-8 md:p-10 relative overflow-hidden group shadow-xl border-2 border-primary/30">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 blur-[80px] rounded-full -mr-32 -mt-32 pointer-events-none group-hover:bg-primary/20 transition-colors duration-700"></div>
+              <div className="relative z-10 space-y-4">
+                <div className="flex items-center gap-3 text-primary font-black uppercase tracking-[0.2em] text-xs">
+                  <Shield className="w-5 h-5 animate-pulse" /> Premium Dealer Protection
+                </div>
+                <h3 className="text-2xl md:text-3xl font-black text-white uppercase tracking-tighter italic">Looking for <span className="text-primary italic">extended coverage?</span></h3>
+                <p className="text-slate-300 text-base leading-relaxed font-medium">
+                  We also offer <strong className="text-white">up to 24 months warranty</strong>, sourced directly from main dealers. Please note, this option comes at a higher cost due to the extended protection and premium coverage.
+                </p>
               </div>
             </div>
           </div>
@@ -166,6 +181,11 @@ export default async function DynamicServicePage({ params }: { params: Promise<{
           
         </div>
       </div>
+
+      <ReviewsSection 
+        title="What Our Customers Say" 
+        subtitle={`Hear from our satisfied customers who have experienced our professional ${formattedTitle.toLowerCase()} services.`}
+      />
       <PartnerLogos />
     </div>
   );

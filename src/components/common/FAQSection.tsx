@@ -99,13 +99,13 @@ export default function FAQSection({ items, title, subtitle }: FAQSectionProps) 
     <section id="faq" className="pt-12 pb-24 bg-slate-50 relative overflow-hidden">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-3xl md:text-6xl font-black text-slate-900 mb-8 uppercase tracking-tighter leading-none italic">
+          <h2 className="text-2xl md:text-4xl font-extrabold text-slate-900 mb-6 uppercase tracking-tight leading-tight italic">
             {title || (
               <>Frequently <span className="text-primary italic italic">Asked Questions</span></>
             )}
           </h2>
-          <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-8"></div>
-          <p className="text-slate-600 font-bold text-base md:text-lg italic">
+          <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-6"></div>
+          <p className="text-slate-600 font-semibold text-sm md:text-base italic">
             {subtitle || "Find expert answers to common questions about our engine reconditioning and fitting services."}
           </p>
         </div>

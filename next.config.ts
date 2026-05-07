@@ -2,6 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
+
   images: {
     remotePatterns: [
       {
@@ -40,6 +41,18 @@ const nextConfig: NextConfig = {
       {
         source: '/range-',
         destination: '/',
+        permanent: true,
+      },
+      {
+        // Common typo / spacing in the URL
+        source: "/services/timing chain-replacement",
+        destination: "/services/timing-chain-replacement",
+        permanent: true,
+      },
+      {
+        // Common misspelling seen in browsers
+        source: "/services/timing-chaiin-replacement",
+        destination: "/services/timing-chain-replacement",
         permanent: true,
       }
     ];

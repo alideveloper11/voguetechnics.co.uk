@@ -38,9 +38,6 @@ export default function Footer() {
                 <Link href="/blog" className="hover:text-primary transition-colors block">Blog</Link>
               </li>
               <li>
-                <Link href="/areas-we-cover" className="hover:text-primary transition-colors block">Areas We Cover</Link>
-              </li>
-              <li>
                 <Link href="/contact-us" className="hover:text-primary transition-colors block">Contact Us</Link>
               </li>
             </ul>

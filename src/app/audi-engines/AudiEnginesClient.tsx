@@ -4,38 +4,38 @@ import Image from "next/image";
 import Link from "next/link";
 import { CheckCircle2, Shield, Search, Phone, Clock, Wrench, Award, Star, Activity, ArrowRight } from "lucide-react";
 import PartnerLogos from "@/components/common/PartnerLogos";
-import ReviewsSection from "@/components/common/ReviewsSection";
 import { motion } from "framer-motion";
 import Breadcrumbs from "@/components/common/Breadcrumbs";
 import RegSearch from "@/components/common/RegSearch";
 import FAQSection from "@/components/common/FAQSection";
 
 const audiModels = [
-  { title: "Audi A1 Engines", link: "/audi-a1-engines" },
-  { title: "Audi A1 Sportback Engines", link: "/audi-a1-sportback-engines" },
-  { title: "Audi A3 Engines", link: "/audi-a3-engines" },
-  { title: "Audi A3 Convertible Engines", link: "/audi-a3-convertible-engines" },
-  { title: "Audi A3 Limousine Engines", link: "/audi-a3-limousine-engines" },
-  { title: "Audi A3 Sportback Engines", link: "/audi-a3-sportback-engines" },
-  { title: "Audi A4 Engines", link: "/audi-a4-engines" },
-  { title: "Audi A4 Allroad Engines", link: "/audi-a4-allroad-engines" },
-  { title: "Audi A4 Avant Engines", link: "/audi-a4-avant-engines" },
-  { title: "Audi A5 Engines", link: "/audi-a5-engines" },
-  { title: "Audi A5 Convertible Engines", link: "/audi-a5-convertible-engines" },
-  { title: "Audi A5 Sportback Engines", link: "/audi-a5-sportback-engines" },
-  { title: "Audi A6 Engines", link: "/audi-a6-engines" },
-  { title: "Audi A6 Allroad Engines", link: "/audi-a6-allroad-engines" },
-  { title: "Audi A6 Avant Engines", link: "/audi-a6-avant-engines" },
-  { title: "Audi A7 Sportback Engines", link: "/audi-a7-sportback-engines" },
-  { title: "Audi A8 Engines", link: "/audi-a8-engines" },
-  { title: "Audi Q2 Engines", link: "/audi-q2-engines" },
-  { title: "Audi Q3 Engines", link: "/audi-q3-engines" },
-  { title: "Audi Q5 Engines", link: "/audi-q5-engines" },
-  { title: "Audi Q7 Engines", link: "/audi-q7-engines" },
-  { title: "Audi R8 Engines", link: "/audi-r8-engines" },
-  { title: "Audi R8 Spyder Engines", link: "/audi-r8-spyder-engines" },
-  { title: "Audi TT Engines", link: "/audi-tt-engines" },
-  { title: "Audi TT Roadster Engines", link: "/audi-tt-roadster-engines" },
+  { title: "Audi A1 Engines", link: "/audi-a1-engines", description: "Compact Audi engines repaired, rebuilt or replaced with accurate diagnostics and warranty-backed work." },
+  { title: "Audi A1 Sportback Engines", link: "/audi-a1-sportback-engines", description: "Sportback engine solutions from timing work to full rebuilds — done properly and clearly quoted." },
+  { title: "Audi A2 Engines", link: "/audi-a2-engines", description: "Specialist engine repairs and rebuilds for the unique Audi A2 — clearly quoted and warranty-backed." },
+  { title: "Audi A3 Engines", link: "/audi-a3-engines", description: "Common A3 engine faults fixed the right way — repairs, rebuilds, replacements and health checks." },
+  { title: "Audi A3 Convertible Engines", link: "/audi-a3-convertible-engines", description: "Cabriolet engine specialists for TFSI/TDI variants — targeted repairs through to full rebuilds." },
+  { title: "Audi A3 Limousine Engines", link: "/audi-a3-limousine-engines", description: "A3 Saloon/Limousine engine work with OEM-quality parts and written warranty as standard." },
+  { title: "Audi A3 Sportback Engines", link: "/audi-a3-sportback-engines", description: "Sportback engine repairs and rebuilds with clear diagnostics and reliable long-term outcomes." },
+  { title: "Audi A4 Engines", link: "/audi-a4-engines", description: "A4 engine rebuild, repair or replacement — covering TFSI and TDI variants across generations." },
+  { title: "Audi A4 Allroad Engines", link: "/audi-a4-allroad-engines", description: "Allroad engine faults solved with specialist diagnosis — from timing issues to full rebuilds." },
+  { title: "Audi A4 Avant Engines", link: "/audi-a4-avant-engines", description: "Avant engines fixed for the long run — rebuilds, replacements and major repairs with warranty." },
+  { title: "Audi A5 Engines", link: "/audi-a5-engines", description: "A5 engine specialists for coupe models — oil issues, timing faults, turbos and full rebuilds." },
+  { title: "Audi A5 Convertible Engines", link: "/audi-a5-convertible-engines", description: "Cabriolet engine work with transparent pricing — repair, rebuild, replacement and swaps." },
+  { title: "Audi A5 Sportback Engines", link: "/audi-a5-sportback-engines", description: "Sportback engine repairs done properly — accurate diagnosis first, then the right fix." },
+  { title: "Audi A6 Engines", link: "/audi-a6-engines", description: "A6 engines rebuilt, repaired or replaced with specialist tooling and a clear, itemised quote." },
+  { title: "Audi A6 Allroad Engines", link: "/audi-a6-allroad-engines", description: "Allroad engines for serious mileage — rebuilds and replacements that hold up over time." },
+  { title: "Audi A6 Avant Engines", link: "/audi-a6-avant-engines", description: "Avant engine solutions for C6/C7/C8 — timing, head gasket, turbos, rebuilds and swaps." },
+  { title: "Audi A7 Sportback Engines", link: "/audi-a7-sportback-engines", description: "A7 engine specialists for premium platforms — diagnosis-led repairs, rebuilds and replacements." },
+  { title: "Audi A8 Engines", link: "/audi-a8-engines", description: "Flagship A8 engine work handled by specialists — precision diagnosis and warranty-backed results." },
+  { title: "Audi Q2 Engines", link: "/audi-q2-engines", description: "Q2 engine repairs and rebuilds for MQB variants — timing systems, turbos and major faults." },
+  { title: "Audi Q3 Engines", link: "/audi-q3-engines", description: "Q3 engine specialists for 8U/F3 — accurate diagnosis, quality parts and clear reporting." },
+  { title: "Audi Q5 Engines", link: "/audi-q5-engines", description: "Q5 engine solutions across TDI/TFSI — from targeted repairs to complete rebuilds and swaps." },
+  { title: "Audi Q7 Engines", link: "/audi-q7-engines", description: "Large SUV engines demand expertise — rebuilds, replacements and major repairs done properly." },
+  { title: "Audi R8 Engines", link: "/audi-r8-engines", description: "High-performance R8 engines rebuilt with precision — V8/V10 specialist knowledge and tooling." },
+  { title: "Audi R8 Spyder Engines", link: "/audi-r8-spyder-engines", description: "R8 Spyder engine work built for supercar standards — accurate assessment and premium results." },
+  { title: "Audi TT Engines", link: "/audi-tt-engines", description: "TT engines across 8N/8J/8S — timing, turbo and rebuild services with long-term reliability." },
+  { title: "Audi TT Roadster Engines", link: "/audi-tt-roadster-engines", description: "Roadster engine specialists — diagnosis-led repairs, rebuilds and replacements across the UK." },
 ];
 
 const audiEngineSizes = [
@@ -61,6 +61,110 @@ const audiEngineSizes = [
   { title: "Audi 6.3 Engines", link: "/audi-6-3-engines" },
 ];
 
+const audiTrustIndicators = [
+  "25+ Years Experience",
+  "Written Warranty",
+  "OEM Quality Parts",
+  "Transparent Quotes",
+  "UK-Wide Delivery",
+  "Grays, Essex Workshop",
+];
+
+const audiServices = [
+  {
+    title: "Head Gasket Replacement",
+    description:
+      "Complete head gasket replacements using OEM-grade components, including cylinder head skim and pressure testing before the engine is returned to service.",
+    href: "/services/head-gasket-replacement",
+  },
+  {
+    title: "Timing Chain Replacement",
+    description:
+      "Complete timing chain assembly replacement — chain, tensioners, guides, seals — as a properly sequenced job. No half-measures.",
+    href: "/services/timing-chain-replacement",
+  },
+  {
+    title: "Turbo Replacement",
+    description:
+      "OEM-matched turbo supply and fit with oil feed/return line inspection and post-install boost pressure testing before handover.",
+    href: "/services/turbo-replacement",
+  },
+  {
+    title: "Engine Rebuild",
+    description:
+      "Full strip-down, inspection to manufacturer tolerances, replacement of worn internals, reassembly and testing — restoring factory-spec performance at a sensible cost.",
+    href: "/services/engine-rebuild",
+  },
+  {
+    title: "Engine Repair",
+    description:
+      "Targeted repairs after proper diagnosis: oil leaks, coolant loss, misfires, injectors, carbon build-up on TFSI valves, sensors, and diesel EGR issues.",
+    href: "/services/engine-repair",
+  },
+  {
+    title: "Engine Replacement — Used & Reconditioned",
+    description:
+      "Used and fully reconditioned Audi engines supplied with written warranty. Supply-only or complete supply and fit at Grays — clearly quoted up-front.",
+    href: "/services/engine-replacement",
+  },
+  {
+    title: "Engine Swap",
+    description:
+      "Full engine swap service: compatibility assessment, wiring/ECU configuration, ancillaries, and thorough road testing after completion.",
+    href: "/services/engine-swap",
+  },
+  {
+    title: "Timing Belt (Cambelt) Replacement",
+    description:
+      "Complete cambelt replacements including water pump inspection, tensioner assessment and associated seal changes as standard.",
+    href: "/services/timing-belt-replacement",
+  },
+  {
+    title: "Engine Health Check",
+    description:
+      "Compression testing, OBD diagnostics, oil condition analysis and targeted inspection of known failure points — with a clear written report.",
+    href: "/services/engine-health-check",
+  },
+];
+
+const audiFaqs = [
+  {
+    question: "How much does an Audi engine replacement cost in the UK?",
+    answer:
+      "The cost depends on the engine variant, model year, and whether you choose a used or reconditioned unit. Contact us with your registration number for a fast, accurate, no-obligation quote tailored to your specific vehicle.",
+  },
+  {
+    question: "What are the most common Audi engine problems?",
+    answer:
+      "Common issues include timing chain wear on 2.0 TFSI and 3.0 TDI units, turbocharger failure, carbon build-up on TFSI inlet valves, head gasket failure, EGR faults on diesel variants, and oil consumption on higher-mileage TFSI engines.",
+  },
+  {
+    question: "Is it worth rebuilding an Audi engine rather than replacing it?",
+    answer:
+      "In most cases where the block is structurally sound, yes. A rebuild addresses the root causes of failure, restores performance to factory specification, and often costs less than sourcing a used replacement of unknown internal condition.",
+  },
+  {
+    question: "How long does an Audi engine replacement take?",
+    answer:
+      "A straightforward engine replacement at our Grays workshop is typically completed within three to five working days. A full engine rebuild takes five to ten working days depending on parts availability and scope.",
+  },
+  {
+    question: "Do your reconditioned Audi engines come with a warranty?",
+    answer:
+      "Yes. All reconditioned and rebuilt Audi engines supplied and fitted by Vogue Technics carry a minimum 6-month written warranty as standard. Extended options are available on request.",
+  },
+  {
+    question: "Can you supply an Audi engine for fitting elsewhere?",
+    answer:
+      "Absolutely. We offer supply-only with fast UK-wide tracked delivery, complete with technical documentation and warranty paperwork.",
+  },
+  {
+    question: "Do you offer Audi engine diagnostics before repair?",
+    answer:
+      "Yes, always. We carry out a full diagnostic assessment — including OBD scanning, compression testing, and inspection — before quoting on any repair or replacement.",
+  },
+];
+
 export default function AudiEnginesClient() {
   return (
     <div className="bg-white min-h-screen">
@@ -84,60 +188,117 @@ export default function AudiEnginesClient() {
             <motion.span 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="inline-block py-1 px-3 rounded-full bg-primary/20 text-emerald-400 font-semibold tracking-wider text-sm mb-6 border border-primary/30 shadow-[0_0_15px_rgba(25,135,84,0.3)] uppercase">
+              className="inline-block py-1.5 px-4 rounded-full bg-primary/20 text-emerald-300 font-semibold tracking-wide text-sm mb-6 border border-primary/30 shadow-[0_0_15px_rgba(25,135,84,0.25)]"
+            >
               Audi Specialist
             </motion.span>
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="text-3xl md:text-5xl lg:text-5xl font-bold text-white tracking-tight mb-8 leading-tight uppercase">
-              Save Money at Reliable Used and Reconditioned <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-400 to-green-500 italic text-2xl md:text-4xl lg:text-5xl">
-                Audi Replacement Engines
+              className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight mb-6 leading-tight"
+            >
+              Audi Engine Replacement (UK)
+              <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-300 to-green-400 font-extrabold">
+                Expert rebuilds, repairs & reconditioned engines in Grays, Essex
               </span>
             </motion.h1>
+
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.18 }}
+              className="flex justify-center mt-6 mb-8 w-full"
+            >
+              <RegSearch />
+            </motion.div>
+
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-              Vogue Technics provides perfect assistance in Audi engine replacements along with offering used and reconditioned Audi engines at affordable prices.
+              className="text-base md:text-lg text-slate-200 mb-8 max-w-2xl mx-auto leading-relaxed"
+            >
+              When your Audi develops a serious engine problem, the decisions you make matter. Choose the right specialist and you&apos;ll get your car
+              back running the way it should — properly fixed, properly warranted, and clearly quoted.
             </motion.p>
-            
-            <motion.div 
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.26 }}
+              className="text-sm md:text-base text-slate-200/80 mb-8 max-w-3xl mx-auto leading-relaxed"
+            >
+              At Vogue Technics in Grays, Essex, we&apos;ve carried out Audi engine replacements, rebuilds, and repairs across the UK for over 25 years —
+              from 1.8 and 2.0 TFSI petrol units through to 3.0 TDI V6 diesel and high-performance S/RS V8 and V10 engines.
+            </motion.p>
+
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="flex justify-center mt-8 w-full">
-              <RegSearch />
+              className="mb-10 flex flex-wrap justify-center gap-2"
+            >
+              {audiTrustIndicators.map((t) => (
+                <span
+                  key={t}
+                  className="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-bold tracking-wide text-slate-200"
+                >
+                  {t}
+                </span>
+              ))}
             </motion.div>
           </div>
         </div>
       </section>
 
 
-      <ReviewsSection 
-        title="What Our Customers Say" 
-        subtitle="Hear from our satisfied customers who have experienced our professional Audi engine services." 
-      />
+      <section className="py-14 md:py-20 bg-white border-b border-slate-100">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-2xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
+              Our Complete Audi Engine Services — Everything Under One Roof in Grays
+            </h2>
+            <p className="mt-5 text-slate-700 leading-relaxed text-base md:text-lg">
+              Every Audi engine service we provide is carried out entirely in-house by our own specialist technicians, using quality-matched
+              components and professional diagnostic equipment.
+            </p>
+
+            <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+              {audiServices.map((s) => (
+                <div key={s.title} className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
+                  <h3 className="text-lg md:text-xl font-extrabold text-slate-900 tracking-tight">{s.title}</h3>
+                  <p className="mt-3 text-slate-700 leading-relaxed text-sm md:text-base">{s.description}</p>
+                  <Link
+                    href={s.href}
+                    className="mt-5 inline-flex items-center justify-center rounded-2xl bg-primary px-6 py-3 text-white font-extrabold text-xs tracking-[0.14em] hover:bg-primary/90 transition-colors"
+                  >
+                    Explore More <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* EXPERIENCE SECTION */}
       <section className="py-20 bg-white border-b border-slate-100">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="w-full lg:w-1/2 space-y-6">
-              <h2 className="text-2xl md:text-4xl font-extrabold text-slate-900 leading-tight tracking-tight uppercase underline underline-offset-[12px] decoration-primary decoration-[6px]">
-                Over 2 Decades of Experience in <br/><span className="text-primary italic">Fitting and Servicing Audi Vehicles</span>
+              <h2 className="text-2xl md:text-4xl font-extrabold text-slate-900 leading-tight tracking-tight">
+                Over 2 decades of experience fitting and servicing Audi vehicles
               </h2>
-              <div className="space-y-4 text-slate-600 text-base leading-relaxed">
+              <div className="space-y-4 text-slate-700 text-sm md:text-base leading-relaxed">
                 <p>
                   With over 20 years of experience to facilitate the Audi owners, we strive to provide the best servicing and fitting facility to the locals of West Thurrock regardless of what model of Audi they drive.
                 </p>
                 <p>
                   With Substantial investment in state-of-the-art facility and most updated equipment specialized for Audi repairs, Servicing and Fitting of engines, we are the top choice for locals and have gained their trust with our dedication to our craft.
                 </p>
-                <p className="font-medium text-slate-800 italic border-l-4 border-primary pl-4 py-3 bg-slate-50 rounded-r-3xl">
+                <p className="font-semibold text-slate-900 border-l-4 border-primary pl-4 py-3 bg-slate-50 rounded-r-3xl">
                    "Our testimonials prove the quality and devotion to our services and our clients. Visit us to have complete peace of mind and great services."
                 </p>
               </div>
@@ -168,8 +329,12 @@ export default function AudiEnginesClient() {
       <section className="py-24 bg-slate-50">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-2xl md:text-4xl font-extrabold text-slate-900 mb-4 tracking-tight uppercase underline underline-offset-8 decoration-primary decoration-4">Find your <span className="text-primary italic italic">Audi</span></h2>
-            <p className="text-slate-600 mt-2 font-medium">Explore our extensive range of replacement Audi engines for all major models.</p>
+            <h2 className="text-2xl md:text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">
+              Find your <span className="text-primary">Audi</span>
+            </h2>
+            <p className="text-slate-700 mt-2 text-sm md:text-base">
+              Explore our range of Audi engine pages for all major models.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -183,15 +348,33 @@ export default function AudiEnginesClient() {
               >
                 <Link href={model.link} className="group block h-full">
                   <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-xl hover:border-primary/50 transition-all duration-300 h-full flex flex-col justify-between relative overflow-hidden">
-                    <div className="relative z-10 w-full aspect-[4/3] bg-slate-100 rounded-xl mb-5 flex flex-col items-center justify-center overflow-hidden group-hover:bg-slate-200/50 transition-colors">
-                      <span className="text-slate-400 text-[0.6rem] font-bold tracking-[0.2em] uppercase">Audi Image Space</span>
+                    <div className="flex items-center justify-between gap-4">
+                      <div className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-3 py-2">
+                        <span className="inline-flex h-7 w-7 items-center justify-center rounded-lg bg-slate-900 text-white text-[10px] font-black">
+                          <svg width="18" height="10" viewBox="0 0 120 60" aria-hidden="true">
+                            <g fill="none" stroke="currentColor" strokeWidth="6">
+                              <ellipse cx="25" cy="30" rx="20" ry="18" />
+                              <ellipse cx="50" cy="30" rx="20" ry="18" />
+                              <ellipse cx="75" cy="30" rx="20" ry="18" />
+                              <ellipse cx="100" cy="30" rx="20" ry="18" />
+                            </g>
+                          </svg>
+                        </span>
+                        <span className="text-[11px] font-extrabold tracking-wide text-slate-900">Audi</span>
+                      </div>
+                      <span className="text-[10px] font-extrabold tracking-widest uppercase text-primary/90">Engines</span>
                     </div>
-                    <div>
-                      <h3 className="text-lg font-bold text-slate-800 mb-4 group-hover:text-primary transition-colors leading-snug uppercase tracking-tight">
+
+                    <div className="mt-4">
+                      <h3 className="text-base md:text-lg font-extrabold text-slate-900 mb-2 group-hover:text-primary transition-colors leading-snug tracking-tight">
                         {model.title}
                       </h3>
+                      <p className="text-sm text-slate-700 leading-relaxed">
+                        {model.description}
+                      </p>
                     </div>
-                    <div className="flex items-center text-primary font-black text-[0.7rem] mt-6 group-hover:translate-x-2 transition-transform uppercase tracking-widest">
+
+                    <div className="flex items-center text-primary font-extrabold text-[0.7rem] mt-6 group-hover:translate-x-2 transition-transform tracking-widest">
                       Read more <ArrowRight className="w-4 h-4 ml-2" />
                     </div>
                   </div>
@@ -203,8 +386,12 @@ export default function AudiEnginesClient() {
           {/* POPULAR ENGINE SIZES */}
           <div id="engine-sizes" className="mt-24 pt-20 border-t border-slate-200">
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-4 tracking-tighter uppercase underline underline-offset-8 decoration-primary decoration-4">Popular <span className="text-primary italic italic">Engine Sizes</span></h2>
-              <p className="text-slate-600 mt-2 font-medium">Quick access to the most common Audi engine displacements we stock.</p>
+              <h2 className="text-2xl md:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight">
+                Popular <span className="text-primary">engine sizes</span>
+              </h2>
+              <p className="text-slate-700 mt-2 text-sm md:text-base">
+                Quick access to the most common Audi engine displacements we stock.
+              </p>
             </div>
 
             <div className="flex flex-wrap justify-center gap-3 lg:gap-5">
@@ -236,7 +423,9 @@ export default function AudiEnginesClient() {
           <div className="flex flex-col lg:flex-row-reverse gap-16 items-start">
             <div className="w-full lg:w-2/3 space-y-8">
               <div className="space-y-6">
-                <h2 className="text-2xl md:text-4xl font-black text-slate-900 leading-none tracking-tighter uppercase">Vogue Technics: <span className="text-primary italic">Audi Engine Specialists</span></h2>
+                <h2 className="text-2xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
+                  Vogue Technics: <span className="text-primary">Audi engine specialists</span>
+                </h2>
                 <div className="text-slate-600 text-base leading-relaxed space-y-4">
                   <p>
                     Engine replacement in any Audi vehicle is a complex task requiring high technical proficiency and mechanical understanding. Fortunately, you have the help available as Vogue Technics provides perfect assistance in Audi engine replacements along with offering used and reconditioned Audi engines at affordable prices.
@@ -246,7 +435,7 @@ export default function AudiEnginesClient() {
                   </p>
                 </div>
                 <div className="bg-slate-50 p-10 rounded-[2.5rem] border border-slate-200 shadow-inner">
-                  <p className="text-slate-800 text-lg leading-relaxed italic font-bold">
+                  <p className="text-slate-900 text-base md:text-lg leading-relaxed font-semibold">
                     Audi in their engineering department, does not believe in doing things in half measures. They always blend high performance with innovative design and advanced features.
                   </p>
                 </div>
@@ -523,26 +712,13 @@ export default function AudiEnginesClient() {
         </div>
       </section>
 
-      <FAQSection 
-        title={<>Audi Engine <span className="text-primary italic">FAQs</span></>}
-        items={[
-          {
-            question: "How do you fix the Audi TFSI oil consumption issue?",
-            answer: "Our engine rebuilds for TFSI models include fitting redesigned, high-spec piston rings and honing the cylinder walls to eliminate the oil bypass issue common in factory units."
-          },
-          {
-            question: "Do you offer reconditioned engines for Audi S and RS models?",
-            answer: "Yes, we have specialized technicians for Audi Performance models, including the S3, RS4, and RS6. These high-performance rebuilds use race-grade bearings and gaskets to handle the additional power."
-          },
-          {
-            question: "Can you supply an engine for an Audi with Quattro AWD?",
-            answer: "Absolutely. We stock and fit engines compatible with all Audi drivetrain configurations, including standard front-wheel drive, Quattro AWD, and the latest ultra-technology systems."
-          },
-          {
-            question: "What kind of warranty do I get with an Audi engine?",
-            answer: "All our reconditioned Audi engines come with a 6-month / 6,000-mile written warranty as standard, covering both parts and labor when fitted in our workshop."
-          }
-        ]}
+      <FAQSection
+        title={
+          <>
+            Frequently Asked Questions — <span className="text-primary italic">Audi Engine Replacement UK</span>
+          </>
+        }
+        items={audiFaqs}
       />
 
       <PartnerLogos />

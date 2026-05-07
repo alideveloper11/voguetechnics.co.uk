@@ -2,9 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { CheckCircle2, Shield, Search, Phone, Clock, Wrench, Award, Star, Activity, ArrowRight, AlertTriangle, Truck, Settings } from "lucide-react";
+import { ArrowRight, CheckCircle2, Phone, Star } from "lucide-react";
 import PartnerLogos from "@/components/common/PartnerLogos";
-import ReviewsSection from "@/components/common/ReviewsSection";
 import { motion } from "framer-motion";
 import Breadcrumbs from "@/components/common/Breadcrumbs";
 import RegSearch from "@/components/common/RegSearch";
@@ -14,244 +13,344 @@ const rangeRoverModels = [
   { title: "Range Rover Evoque Engines", link: "/range-rover-evoque-engines" },
   { title: "Range Rover Sport Engines", link: "/range-rover-sport-engines" },
   { title: "Range Rover Velar Engines", link: "/range-rover-velar-engines" },
-  { title: "Range Rover Vogue New - MK 4 Engines", link: "/range-rover-vogue-new-engines" },
-  { title: "Range Rover Vogue Old - Mk 3 Engines", link: "/range-rover-vogue-old-engines" },
+  { title: "Range Rover Vogue MK4 Engines", link: "/range-rover-vogue-new-mk-4-engines" },
+  { title: "Range Rover Vogue MK3 Engines", link: "/range-rover-vogue-old-mk-3-engines" },
   { title: "Range Rover Sport SVR", link: "/range-rover-sport-svr-engines" },
 ];
 
-const rangeRoverEngineSizes = [
-  { title: "Range Rover 2.0 Engines", link: "/range-rover-2-0-engines" },
-  { title: "Range Rover 2.2 Engines", link: "/range-rover-2-2-engines" },
-  { title: "Range Rover 2.7 Engines", link: "/range-rover-2-7-engines" },
-  { title: "Range Rover 3.0 Engines", link: "/range-rover-3-0-engines" },
-  { title: "Range Rover 3.6 Engines", link: "/range-rover-3-6-engines" },
-  { title: "Range Rover 4.2 Engines", link: "/range-rover-4-2-engines" },
-  { title: "Range Rover 4.4 Engines", link: "/range-rover-4-4-engines" },
-  { title: "Range Rover 5.0 Engines", link: "/range-rover-5-0-engines" },
-];
-
-const commonRangeRoverProblems = [
-  "Crankshaft Failure (3.0 SDV6/TDV6)",
-  "Turbocharger Failures",
-  "Oil Pump Issues",
-  "Timing Chain Stretch",
-  "Suspension Faults",
-  "Coolant Leaks",
-  "DPF Blockage",
-];
-
 export default function RangeRoverEnginesClient() {
+  const services = [
+    {
+      title: "Head Gasket Replacement",
+      slug: "head-gasket-replacement",
+      body:
+        "A blown head gasket is one of the most damaging faults a Range Rover can suffer. Left untreated, it leads to catastrophic engine failure. Our specialists diagnose head gasket failure accurately and carry out full replacements using quality-matched components — restoring compression, sealing integrity, and engine performance to factory standard.",
+    },
+    {
+      title: "Timing Chain & Timing Belt Replacement",
+      slug: "timing-chain-replacement",
+      body:
+        "Timing chain and timing belt failures are common across Range Rover models, particularly on TDV6 and TDV8 engines. We carry out both timing chain replacements and timing belt replacements with precision, ensuring correct tension, alignment, and component condition throughout. This is not a job to delay — a snapped timing chain can write off an engine in seconds.",
+    },
+    {
+      title: "Turbo Replacement",
+      slug: "turbo-replacement",
+      body:
+        "Turbocharger failure is a frequent issue on Range Rover diesel engines. Symptoms include excessive smoke, loss of power, or a distinctive whining noise. Our team carries out full turbo replacements using OEM-matched units, complete with oil feed line inspection and post-installation testing to confirm correct boost pressure.",
+    },
+    {
+      title: "Engine Rebuild Service",
+      slug: "engine-rebuild",
+      body:
+        "When an engine is worn but structurally sound, a full Range Rover engine rebuild is often the most cost-effective and long-lasting solution. We strip the engine completely, inspect every component, replace worn bearings, rings, seals, and gaskets, then reassemble and dyno-test to manufacturer tolerances. A properly rebuilt Range Rover engine can last as long as a brand-new unit.",
+    },
+    {
+      title: "Engine Repair",
+      slug: "engine-repair",
+      body:
+        "Not every fault requires a full rebuild. Our engine repair service covers everything from oil leaks and coolant loss to sensor faults, misfires, and internal wear issues. We diagnose correctly before we quote, so you only pay for what your engine actually needs.",
+    },
+    {
+      title: "Engine Replacement — Used & Reconditioned",
+      slug: "engine-replacement",
+      body:
+        "When repair or rebuild isn't viable, engine replacement is the answer. We offer both used Range Rover engines and fully reconditioned Range Rover engines for sale, covering all popular variants including the 3.0 diesel, 4.4 petrol, 5.0 supercharged V8, and more. Supply-only or full supply and fit — the choice is yours.",
+    },
+    {
+      title: "Engine Swap",
+      slug: "engine-swap",
+      body:
+        "Need to upgrade your Range Rover's engine or switch between fuel types? Our engine swap service covers full drivetrain compatibility checks, loom adaptation, and ECU remapping where required. We've completed complex engine swaps across multiple Range Rover generations with excellent results.",
+    },
+    {
+      title: "Engine Health Check",
+      slug: "engine-health-check",
+      body:
+        "Not sure what's wrong with your Range Rover? Start with our comprehensive engine health check. Using the latest diagnostic equipment, we identify fault codes, compression issues, oil condition problems, and mechanical wear — giving you a full picture before committing to any work.",
+    },
+  ];
+
+  const faqs = [
+    {
+      question: "How much does a Range Rover engine rebuild cost in the UK?",
+      answer:
+        "The cost of a Range Rover engine rebuild varies depending on the model, engine type, and extent of wear. At Vogue Technics, rebuilds typically start from a competitive base price — contact us with your registration for an accurate quote.",
+    },
+    {
+      question: "What is the difference between a used and a reconditioned Range Rover engine?",
+      answer:
+        "A used engine is a second-hand unit removed from a donor vehicle, tested, and sold as-is. A reconditioned engine has been fully stripped, inspected, worn parts replaced, and reassembled to manufacturer specification. Reconditioned units carry a longer warranty and generally offer greater longevity.",
+    },
+    {
+      question: "Do you offer a Range Rover engine rebuild near me if I'm outside Grays?",
+      answer:
+        "Yes. While our workshop is based in Grays, Essex, we regularly serve customers from across the UK. We also offer engine collection and delivery services for customers who cannot travel to us.",
+    },
+    {
+      question: "How long does a Range Rover engine replacement take?",
+      answer:
+        "Most engine replacements are completed within 3 to 5 working days, depending on parts availability and the complexity of the fitment. We'll give you a realistic timeframe when you book in.",
+    },
+    {
+      question: "Do your reconditioned Range Rover engines come with a warranty?",
+      answer:
+        "Yes. All reconditioned engines supplied by Vogue Technics come with a minimum 6-month warranty as standard. Extended warranty options are also available — ask our team for details.",
+    },
+    {
+      question: "Can I buy a Range Rover engine online and have it delivered?",
+      answer:
+        "Absolutely. We offer UK-wide delivery on all stock engines. Simply contact us with your registration number and required engine specification, and we'll confirm availability, pricing, and delivery timescales.",
+    },
+  ];
+
   return (
     <div className="bg-white min-h-screen">
-      {/* HERO SECTION */}
-      <section className="relative min-h-[70vh] flex flex-col justify-center overflow-hidden bg-slate-900 pt-32 pb-20">
+      <section className="relative overflow-hidden bg-slate-900 pt-32 pb-24">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/car_bgg.jpg"
-            alt="Range Rover Engine Specialist"
+            alt="Range Rover engine specialist in Grays"
             fill
-            className="object-cover opacity-40 mix-blend-overlay"
+            className="object-cover opacity-30 mix-blend-overlay"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/85 to-slate-900/50" />
         </div>
 
         <div className="container relative z-10 mx-auto px-4 lg:px-8">
           <Breadcrumbs items={[{ name: "Range Rover Engines", href: "/range-rover-engines" }]} />
           
-          <div className="text-center max-w-4xl mx-auto">
-            <motion.span 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="inline-block py-1 px-3 rounded-full bg-primary/20 text-emerald-400 font-semibold tracking-wider text-sm mb-6 border border-primary/30 shadow-[0_0_15px_rgba(25,135,84,0.3)] uppercase">
-            Range Rover Specialist
-          </motion.span>
-            <motion.h1 
+          <div className="max-w-5xl pt-8">
+            <motion.span
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/20 px-4 py-2 text-xs font-black uppercase tracking-[0.2em] text-emerald-300 shadow-[0_0_22px_rgba(25,135,84,0.22)]"
+            >
+              Range Rover Engine Specialist — Grays, UK
+            </motion.span>
+            <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight mb-8 leading-tight uppercase">
-              Elite <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-400 to-green-500 italic">Range Rover</span> <br />
-              Engine Rebuild Specialists
+              className="mt-6 text-3xl font-black leading-[1.08] tracking-tight text-white md:text-5xl"
+            >
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-300 to-green-400">
+                Range Rover Engine Specialist in Grays, UK
+              </span>{" "}
+              – Expert Rebuilds, Repairs & Replacements
             </motion.h1>
-            <motion.p 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-              Vogue Technics delivers expert engine reconditioning and seamless replacements for all Range Rover models nationwide.
+              className="mt-7"
+            >
+              <RegSearch className="max-w-3xl" />
+            </motion.div>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className="mt-7 max-w-4xl text-sm leading-relaxed text-slate-300 md:text-base"
+            >
+              If your Range Rover is losing power, burning oil, or showing warning lights you can't ignore, you've landed in the right place. At Vogue Technics, we are Grays' most trusted Range Rover engine specialists, serving customers across Essex and the wider UK with over 25 years of hands-on experience working exclusively on Range Rover, Land Rover, and Jaguar engines.
+              <br />
+              <br />
+              We don't just fix engines — we restore confidence in your vehicle. Whether you need a full engine rebuild, a straightforward replacement, or an urgent head gasket repair, our team delivers precision workmanship backed by genuine warranties and transparent pricing.
             </motion.p>
-          
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="flex justify-center mt-8 w-full">
-            <RegSearch />
-          </motion.div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-
-      <ReviewsSection 
-        title="What Our Customers Say" 
-        subtitle="Hear from our satisfied customers who have experienced our professional Range Rover engine services." 
-      />
-
-      {/* EXPERIENCE SECTION */}
-      <section className="py-24 bg-white border-b border-slate-100 overflow-hidden">
+      <section className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="flex flex-col lg:flex-row gap-16 items-center">
-            <div className="w-full lg:w-1/2 space-y-8">
-              <h2 className="text-2xl md:text-4xl font-extrabold text-slate-900 leading-none tracking-tight uppercase underline decoration-8 underline-offset-[12px] decoration-primary/20">
-                Over 2 Decades of <br/><span className="text-primary italic">Range Rover Expertise</span>
-              </h2>
-              <div className="space-y-6 text-slate-600 text-base leading-relaxed">
-                <p>
-                  With more than 20 years of dedicated experience, Vogue Technics has built a reputation as the UK’s leading specialist for Range Rover engine maintenance and rebuilds.
-                </p>
-                <p>
-                  From the classic Vogue Mk3 to the high-performance SVR and the latest Velar, we have the state-of-the-art facility and specialized tools to handle the most complex internal engine failures.
-                </p>
-                <div className="font-bold text-slate-900 border-l-8 border-primary pl-8 py-6 bg-slate-50 rounded-r-[3rem] shadow-sm italic text-xl">
-                   "Our team lives and breathes Range Rover engineering. We restore your vehicle to factory performance with absolute precision."
-                </div>
-              </div>
+          <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div className="rounded-[2rem] border border-slate-200 bg-slate-50 p-7 shadow-sm">
+              <h2 className="text-xl font-bold text-slate-900">Why Choose Vogue Technics as Your Range Rover Engine Specialist?</h2>
+              <p className="mt-4 text-slate-700 leading-relaxed">
+                When it comes to your Range Rover, cutting corners isn't an option. These vehicles are engineered to perform at the highest level, and they demand specialist knowledge that general mechanics simply don't have. At Vogue Technics, every technician on our team has been trained specifically on Range Rover engine systems — from the classic V8 to the modern 3.0 TDV6 and the turbocharged 2.0-litre Ingenium units.
+              </p>
             </div>
-            <div className="w-full lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6 relative">
-              <div className="bg-slate-900 rounded-[3rem] p-12 text-center text-white space-y-3 border-b-4 border-primary transform hover:scale-105 transition-transform duration-500 shadow-2xl">
-                <div className="text-5xl font-extrabold text-primary">20+</div>
-                <div className="text-[0.7rem] font-bold uppercase tracking-[0.4em] text-slate-400">Years Exp</div>
-              </div>
-              <div className="bg-primary rounded-[3rem] p-12 text-center text-white space-y-3 sm:mt-12 transform hover:scale-105 transition-transform duration-500 shadow-2xl">
-                <div className="text-5xl font-extrabold italic underline decoration-white/30">UK's</div>
-                <div className="text-[0.7rem] font-bold uppercase tracking-[0.4em] text-emerald-100">Leader</div>
-              </div>
-              <div className="bg-slate-50 border-2 border-slate-100 rounded-[3rem] p-12 text-center space-y-3 transform hover:scale-105 transition-transform duration-500 shadow-xl">
-                <div className="text-5xl font-extrabold text-slate-900 tracking-tight">OEM</div>
-                <div className="text-[0.7rem] font-bold uppercase tracking-[0.4em] text-slate-500">Genuine Parts</div>
-              </div>
-              <div className="bg-slate-900 rounded-[3rem] p-12 text-center text-white space-y-3 sm:mt-12 border-b-4 border-primary transform hover:scale-105 transition-transform duration-500 shadow-2xl">
-                <div className="text-5xl font-extrabold text-primary">40%</div>
-                <div className="text-[0.7rem] font-bold uppercase tracking-[0.4em] text-slate-400">Off Deals</div>
-              </div>
+            <div className="rounded-[2rem] border border-slate-200 bg-slate-50 p-7 shadow-sm">
+              <h3 className="text-xl font-bold text-slate-900">25 Years of Dedicated Range Rover Engine Expertise</h3>
+              <p className="mt-4 text-slate-700 leading-relaxed">
+                Since we opened our doors in Grays, we've built our entire reputation around one thing: getting Range Rover engines right. We've handled thousands of engine rebuilds, replacements, and repairs across every model — Sport, Evoque, Velar, Discovery, and Defender. That depth of experience means faster diagnosis, fewer return visits, and engines that last.
+              </p>
+            </div>
+            <div className="rounded-[2rem] border border-slate-200 bg-slate-50 p-7 shadow-sm">
+              <h3 className="text-xl font-bold text-slate-900">Tested, Guaranteed, and Warranty-Backed Engines</h3>
+              <p className="mt-4 text-slate-700 leading-relaxed">
+                Every engine we supply — whether used or fully reconditioned — goes through a rigorous multi-point testing process before it leaves our workshop. All reconditioned Range Rover engines come with a minimum 6-month warranty, giving you full peace of mind long after the job is done. We only source from trusted suppliers, so you'll never receive an engine we wouldn't fit to our own vehicle.
+              </p>
+            </div>
+            <div className="rounded-[2rem] border border-slate-200 bg-slate-50 p-7 shadow-sm lg:col-span-3">
+              <h3 className="text-xl font-bold text-slate-900">Competitive, Transparent Pricing — No Hidden Costs</h3>
+              <p className="mt-4 text-slate-700 leading-relaxed">
+                We understand that engine work is a significant investment. That's why we offer some of the most affordable Range Rover engine prices in the UK, without compromising on quality. You'll receive a clear, itemised quote upfront — no surprises, no inflated labour charges, and no pressure to approve work you don't need.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* SEARCH SECTION */}
-      <section className="py-24 bg-slate-50">
+      <section className="py-16 md:py-20 bg-slate-50">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="flex flex-col lg:flex-row-reverse gap-16 items-start">
-            <div className="w-full lg:w-2/3 space-y-12">
-              <div className="space-y-8">
-                <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight uppercase leading-none">Superior Engine <span className="text-primary italic">Rebuild & Replacement</span></h2>
-                <div className="text-slate-600 text-lg leading-relaxed space-y-6">
-                  <p>
-                    Land Rover engines are masterpieces of engineering, but they are prone to specific faults that require expert intervention. Whether it's the notorious crankshaft failure on the 3.0L SDV6 or timing chain stretch on the Ingenium series, we have the fix.
-                  </p>
-                  <p>
-                    We specialize in complete engine replacements and bespoke rebuilds. Every engine we touch is stripped, cleaned, and reassembled using high-spec components to eliminate inherent factory weaknesses.
-                  </p>
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-900">Our Range Rover Engine Services in Grays, Essex</h2>
+            <div className="w-24 h-1 bg-primary mx-auto rounded-full mt-4"></div>
+            <p className="mt-6 text-slate-600 text-[1.05rem] leading-relaxed">
+              We offer a full spectrum of engine services tailored specifically to Range Rover vehicles. Whatever your engine problem, we have the tools, parts, and expertise to solve it properly.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {services.map((service) => (
+              <div key={service.title} className="rounded-[2rem] border border-slate-200 bg-white p-7 shadow-sm flex flex-col justify-between">
+                <div>
+                  <h3 className="text-xl font-bold text-slate-900">{service.title}</h3>
+                  <p className="mt-4 text-slate-700 leading-relaxed whitespace-pre-line">{service.body}</p>
+                </div>
+                <div className="pt-6">
+                  <Link
+                    href={`/services/${service.slug}`}
+                    className="inline-flex items-center justify-center w-full bg-primary text-white font-bold py-3 px-6 rounded-xl hover:bg-emerald-600 transition-colors"
+                  >
+                    Explore More
+                  </Link>
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-               {/* COMMON PROBLEMS */}
-               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-8">
-                <div className="space-y-8">
-                  <div className="w-16 h-16 bg-red-100 rounded-[1.5rem] flex items-center justify-center text-red-600 shadow-inner">
-                    <AlertTriangle className="w-8 h-8" />
-                  </div>
-                  <h3 className="text-2xl md:text-3xl font-black text-slate-900 uppercase tracking-tighter italic"><span className="text-red-500">Known Faults</span> & Failures</h3>
-                  <div className="grid grid-cols-1 gap-3">
-                    {commonRangeRoverProblems.map((problem, i) => (
-                      <div key={i} className="flex items-center gap-4 text-slate-700 font-bold bg-white p-4 rounded-2xl border border-slate-100 shadow-sm hover:border-red-200 transition-colors">
-                        <CheckCircle2 className="w-6 h-6 text-red-500" />
-                        {problem}
-                      </div>
+      <section className="py-16 md:py-20 bg-white">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-5xl mx-auto space-y-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-900">Reconditioned & Used Range Rover Engines for Sale — Grays, UK</h2>
+            <div className="space-y-5 text-slate-700 leading-relaxed">
+              <p>
+                If you're looking to buy a Range Rover engine online or collect locally from Grays, our engine stock covers the full range of popular models and capacities. Whether it's a 3.0 Range Rover engine for sale, a 4.4 engine, a Range Rover diesel engine, or a Range Rover V8 reconditioned unit, we hold regular stock and can source specific engines quickly.
+              </p>
+              <p>
+                Range Rover Sport Engines
+                <br />
+                The Range Rover Sport is one of our most common engine enquiries. We stock and supply Sport engines across all generations — from the early 4.4 V8 to the later 3.0 SDV6 and the current Ingenium diesel units.
+              </p>
+              <p>
+                Range Rover Evoque Engines
+                <br />
+                Evoque engines, particularly the 2.0 diesel variants, are prone to specific wear patterns that require specialist knowledge. We supply both used and reconditioned Range Rover Evoque engines with full test reports and warranty documentation.
+              </p>
+              <p className="font-medium text-slate-800 border-l-4 border-primary pl-4 py-2 bg-slate-50 rounded-r-xl">
+                Fast UK Delivery & Local Fitting in Grays
+                <br />
+                We offer fast UK-wide engine delivery, and for customers in Grays, Essex, and the surrounding areas — Thurrock, Basildon, Dartford, and beyond — we provide a complete engine supply and fit service at our fully equipped workshop. Drop your vehicle in, and we'll handle everything.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative py-16 md:py-24 bg-slate-950 overflow-hidden">
+        <div className="pointer-events-none absolute inset-0">
+          <div className="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-primary/25 blur-[80px]" />
+          <div className="absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-emerald-400/15 blur-[90px]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.08),_transparent_45%)]" />
+        </div>
+
+        <div className="container relative z-10 mx-auto px-4 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-10 md:mb-14">
+            <h2 className="text-2xl md:text-4xl font-extrabold text-white tracking-tight">What Our Customers Say</h2>
+            <div className="w-24 h-1 bg-primary mx-auto rounded-full mt-4"></div>
+            <div className="mt-6 flex items-center justify-center gap-2 text-emerald-200/90">
+              <div className="flex items-center gap-1">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <Star key={i} className="h-4 w-4 fill-current text-emerald-300" />
+                ))}
+              </div>
+              <span className="text-xs md:text-sm font-semibold tracking-wide">Rated highly by customers across Essex & the wider UK</span>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              {
+                quote:
+                  '"Vogue Technics rebuilt my Range Rover Sport engine after two other garages quoted me for a full replacement. They saved me over £2,000 and the car runs better than ever."',
+                by: "— David R., Grays, Essex",
+              },
+              {
+                quote:
+                  '"Brilliant service from start to finish. They diagnosed the timing chain issue the same day, gave me an honest quote, and had the car back to me within the week. Highly recommended."',
+                by: "— Sarah M., Thurrock",
+              },
+              {
+                quote:
+                  '"I was quoted nearly £8,000 by a main dealer. Vogue Technics did a full engine replacement for less than half that price, with a 6-month warranty. Couldn\'t be happier."',
+                by: "— James T., Basildon",
+              },
+            ].map((t, idx) => (
+              <motion.div
+                key={t.by}
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.05 * idx }}
+                className="h-full"
+              >
+                <div className="h-full rounded-[2rem] border border-white/10 bg-white/5 p-7 shadow-[0_25px_60px_-30px_rgba(0,0,0,0.8)] backdrop-blur-md">
+                  <div className="flex items-center gap-1 text-emerald-300/90">
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <Star key={i} className="h-4 w-4 fill-current" />
                     ))}
                   </div>
+                  <p className="mt-4 text-slate-100/90 leading-relaxed italic">{t.quote}</p>
+                  <p className="mt-5 text-xs font-bold uppercase tracking-[0.18em] text-slate-300/70">{t.by}</p>
                 </div>
-                <div className="space-y-8">
-                  <div className="w-16 h-16 bg-primary/10 rounded-[1.5rem] flex items-center justify-center text-primary shadow-inner">
-                    <Settings className="w-8 h-8 animate-spin-slow" />
-                  </div>
-                  <h3 className="text-2xl md:text-3xl font-black text-slate-900 uppercase tracking-tighter italic">Expert <span className="text-primary">Supply & Fit</span></h3>
-                  <p className="text-slate-600 text-base leading-relaxed">
-                    Our supply and fitting service is designed for maximum convenience. We offer nationwide collection and delivery, ensuring your vehicle is handled by experts from start to finish.
-                  </p>
-                  <div className="bg-white p-8 rounded-[2.5rem] border-2 border-slate-100 shadow-lg relative overflow-hidden group">
-                     <p className="text-slate-900 font-black text-xl mb-4 italic uppercase">Why Choose Vogue?</p>
-                     <ul className="space-y-3 font-bold text-slate-600 uppercase text-xs tracking-widest">
-                        <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-primary" /> Master Technicians</li>
-                        <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-primary" /> State-of-Art Facility</li>
-                        <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-primary" /> Guaranteed Recovery</li>
-                     </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Sticky Sidebar Search */}
-            <div className="w-full lg:w-1/3 sticky top-32">
-              <div className="bg-slate-900 rounded-[3rem] p-10 md:p-12 border border-slate-800 shadow-2xl relative overflow-hidden text-center">
-                <h3 className="text-2xl font-black text-white mb-10 uppercase tracking-widest italic tracking-widest leading-tight">Find Your <br/>Engine Match</h3>
-                <form className="space-y-8">
-                  <div className="flex flex-col overflow-hidden rounded-3xl border-2 border-slate-300 bg-[#eeb318] shadow-inner transform hover:scale-105 transition-all duration-500">
-                    <div className="bg-[#0033A0] flex flex-col items-center justify-center py-2 shrink-0 border-b border-[#0033A0]/50">
-                       <span className="text-white font-black text-[0.6rem] tracking-[0.4em] uppercase">Vogue Technics UK</span>
-                    </div>
-                    <input 
-                      type="text" 
-                      placeholder="ENTER VEHICLE REG NUMBER" 
-                      className="w-full bg-transparent text-slate-900 font-black text-xl md:text-3xl px-2 sm:px-3 py-6 focus:outline-none placeholder:text-[10px] sm:placeholder:text-xs md:placeholder:text-sm placeholder:tracking-normal uppercase tracking-[0.2em] md:tracking-[0.3em] text-center placeholder:text-slate-700/60"
-                    />
-                  </div>
-                  <button type="button" className="w-full bg-primary hover:bg-emerald-500 text-white font-black py-6 px-8 rounded-[2rem] shadow-[0_15px_35px_rgba(25,135,84,0.4)] transition-all flex justify-center items-center gap-4 transform hover:-translate-y-2 uppercase tracking-[0.15em] text-lg">
-                    <Search className="w-7 h-7" /> INSTANT QUOTE
-                  </button>
-                </form>
-                <div className="mt-12 pt-10 border-t border-slate-800">
-                   <p className="text-slate-500 text-xs mb-6 uppercase tracking-[0.4em] font-black">Call an Expert</p>
-                  <a href="tel:01375531355" className="text-white font-black text-3xl md:text-4xl tracking-tighter hover:text-primary transition-colors flex items-center justify-center gap-4">
-                    <Phone className="w-8 h-8 text-primary" /> 01375 531355
-                  </a>
-                </div>
-              </div>
-            </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* RANGE ROVER MODELS GRID */}
-      <section className="py-32 bg-white relative overflow-hidden">
+      <section className="py-16 md:py-20 bg-white relative overflow-hidden">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="text-center max-w-4xl mx-auto mb-16 md:mb-24 px-4">
-             <h2 className="text-4xl md:text-7xl font-black text-slate-900 tracking-tighter uppercase leading-none underline decoration-primary decoration-[12px] underline-offset-[16px]">Find your <span className="text-primary italic">Range Rover</span></h2>
-             <p className="text-slate-500 mt-8 md:mt-10 text-xl md:text-2xl font-medium tracking-wide uppercase">Replacement Engines for the entire luxury Range Rover range</p>
+          <div className="text-center max-w-4xl mx-auto mb-10 md:mb-12 px-4">
+            <h2 className="text-2xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
+              Find your <span className="text-primary italic">Range Rover</span>
+            </h2>
+            <p className="text-slate-600 mt-4 text-sm md:text-base font-medium">
+              Replacement engines for the entire Range Rover range
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 md:gap-4">
             {rangeRoverModels.map((model, idx) => (
               <motion.div
                 key={idx}
-                whileHover={{ y: -15, scale: 1.02 }}
+                whileHover={{ y: -8, scale: 1.01 }}
                 className="group h-full"
               >
                 <Link href={model.link} className="block h-full">
-                  <div className="bg-slate-50 border-4 border-slate-100 rounded-[3rem] p-10 hover:bg-white hover:border-primary hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] transition-all duration-700 flex flex-col items-center text-center space-y-8 relative overflow-hidden h-full group">
-                    <div className="w-full aspect-square bg-white rounded-[2rem] flex flex-col items-center justify-center border-2 border-slate-200 group-hover:border-primary/20 transition-all duration-700 shadow-inner group-hover:scale-105">
-                       <span className="text-[0.6rem] font-black uppercase tracking-[0.4em] text-slate-300">RR Image Space</span>
+                  <div className="bg-slate-50 border border-slate-200 rounded-[1.5rem] p-4 md:p-5 hover:bg-white hover:border-primary/30 hover:shadow-[0_18px_40px_-20px_rgba(0,0,0,0.12)] transition-all duration-500 flex flex-col items-center text-center space-y-4 relative overflow-hidden h-full group">
+                    <div className="w-full aspect-square bg-white rounded-[1.2rem] flex items-center justify-center border border-slate-200 group-hover:border-primary/30 transition-all duration-500 shadow-sm">
+                      <Image
+                        src="/images/brands/range-rover.svg"
+                        alt="Range Rover"
+                        width={360}
+                        height={120}
+                        className="h-auto w-[68%] max-w-[200px] opacity-90"
+                      />
                     </div>
                     <div className="flex-grow">
-                      <h3 className="text-xl font-black text-slate-900 group-hover:text-primary transition-colors uppercase tracking-tighter leading-tight">
+                      <h3 className="text-sm md:text-base font-extrabold text-slate-900 group-hover:text-primary transition-colors tracking-tight leading-snug">
                         {model.title}
                       </h3>
                     </div>
-                    <div className="flex items-center text-primary font-black text-[0.8rem] uppercase tracking-[0.3em] group-hover:gap-6 transition-all">
-                      Read more <ArrowRight className="w-5 h-5 ml-2" />
+                    <div className="flex items-center text-primary font-bold text-[0.7rem] uppercase tracking-[0.18em] group-hover:gap-3 transition-all">
+                      Read more <ArrowRight className="w-4 h-4 ml-2" />
                     </div>
                   </div>
                 </Link>
@@ -260,243 +359,38 @@ export default function RangeRoverEnginesClient() {
           </div>
         </div>
       </section>
-
-
-      {/* POPULAR ENGINE SIZES */}
-      <section id="engine-sizes" className="py-32 bg-white relative overflow-hidden px-4">
-        <div className="container mx-auto lg:px-8">
-          
-          {/* Range Rover Sizes */}
-          <div className="mb-24">
-            <div className="text-center max-w-4xl mx-auto mb-16 text-center">
-              <h2 className="text-3xl md:text-6xl font-black text-slate-900 tracking-tighter uppercase leading-none underline decoration-primary decoration-[10px] underline-offset-[12px]">Range Rover <span className="text-primary italic">Popular Sizes</span></h2>
-            </div>
-            <div className="flex flex-wrap justify-center gap-4 lg:gap-8">
-              {rangeRoverEngineSizes.map((engine, idx) => (
-                <Link 
-                  key={idx}
-                  href={engine.link}
-                  className="bg-white border-4 border-slate-100 text-slate-950 hover:text-white hover:bg-primary hover:border-primary px-6 py-4 md:px-10 md:py-6 rounded-[2rem] font-black transition-all shadow-xl flex items-center gap-4 text-lg md:text-xl group hover:-translate-y-3 transform duration-500 uppercase tracking-widest italic"
-                >
-                  <Activity className="w-6 h-6 text-primary group-hover:text-white transition-colors animate-pulse" />
-                  {engine.title}
-                </Link>
-              ))}
-            </div>
-          </div>
-
-
-        </div>
-      </section>
-
-      {/* SERVICE QUALITY GRID */}
-      <section className="py-32 bg-slate-900 text-white overflow-hidden relative">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            
-            {/* Rebuild */}
-            <div className="space-y-8 p-12 bg-white/5 rounded-[4rem] border-2 border-white/10 hover:border-primary/50 transition-all duration-700 group relative">
-              <div className="w-20 h-20 bg-primary/20 rounded-3xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-700 shadow-inner">
-                <Wrench className="w-10 h-10" />
-              </div>
-              <h3 className="text-4xl font-black uppercase tracking-tighter italic leading-none">Specialist <br/>Engine Rebuild</h3>
-              <p className="text-slate-400 text-lg leading-relaxed">
-                Complete teardown and precision rebuild of high-performance Land Rover units. We address common factory flaws to ensure peak reliability.
-              </p>
-              <ul className="space-y-4 font-black uppercase tracking-[0.2em] text-sm text-slate-300 border-t border-white/10 pt-8">
-                <li className="flex items-center gap-4"><CheckCircle2 className="w-6 h-6 text-primary" /> Specialist Team</li>
-                <li className="flex items-center gap-4"><CheckCircle2 className="w-6 h-6 text-primary" /> Multi-Point Test</li>
-              </ul>
-            </div>
-
-            {/* Reconditioned */}
-            <div className="space-y-8 p-12 bg-primary rounded-[4rem] shadow-[0_40px_80px_-20px_rgba(25,135,84,0.4)] border-4 border-white lg:transform lg:scale-110 relative z-10 transition-transform duration-700">
-              <div className="w-20 h-20 bg-white rounded-3xl flex items-center justify-center text-primary shadow-2xl">
-                <Shield className="w-10 h-10" />
-              </div>
-              <h3 className="text-4xl font-black uppercase tracking-tighter italic leading-none text-white underline decoration-white/30 decoration-[6px] underline-offset-8">Premium <br/>Reconditioned</h3>
-              <p className="text-emerald-50 text-xl leading-relaxed font-medium">
-                Our reconditioned units are restored to near-new condition using OEM parts. A cost-effective way to get your vehicle back to full power.
-              </p>
-              <ul className="space-y-4 font-black uppercase tracking-[0.2em] text-sm text-emerald-100 border-t border-white/20 pt-8">
-                <li className="flex items-center gap-4"><CheckCircle2 className="w-6 h-6 text-white" /> Like-New Build</li>
-                <li className="flex items-center gap-4"><CheckCircle2 className="w-6 h-6 text-white" /> 6 Month Warranty</li>
-              </ul>
-            </div>
-
-            {/* Used */}
-            <div className="space-y-8 p-12 bg-white/5 rounded-[4rem] border-2 border-white/10 hover:border-primary/50 transition-all duration-700 group relative">
-              <div className="w-20 h-20 bg-primary/20 rounded-3xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-700 shadow-inner">
-                <Clock className="w-10 h-10" />
-              </div>
-              <h3 className="text-4xl font-black uppercase tracking-tighter italic leading-none">Guaranteed <br/>Used Engines</h3>
-              <p className="text-slate-400 text-lg leading-relaxed">
-                We stock low-mileage used engines thoroughly tested by our master technicians. A reliable alternative for a quick replacement.
-              </p>
-              <ul className="space-y-4 font-black uppercase tracking-[0.2em] text-sm text-slate-300 border-t border-white/10 pt-8">
-                <li className="flex items-center gap-4"><CheckCircle2 className="w-6 h-6 text-primary" /> Low Mileage</li>
-                <li className="flex items-center gap-4"><CheckCircle2 className="w-6 h-6 text-primary" /> Instant Delivery</li>
-              </ul>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* EXTENDED WARRANTY CALLOUT */}
-      <section className="pb-24 pt-12 bg-slate-900 overflow-hidden relative">
-        <div className="container mx-auto px-4 lg:px-8">
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="bg-white/5 border-2 border-primary/40 rounded-[4rem] p-10 md:p-16 text-center relative overflow-hidden group shadow-2xl"
-          >
-            <div className="absolute top-0 right-0 w-80 h-80 bg-primary/10 blur-[100px] rounded-full -mr-40 -mt-40 pointer-events-none"></div>
-            <div className="absolute bottom-0 left-0 w-80 h-80 bg-primary/5 blur-[100px] rounded-full -ml-40 -mb-40 pointer-events-none"></div>
-            
-            <div className="relative z-10 max-w-4xl mx-auto space-y-8">
-              <div className="inline-flex items-center gap-3 bg-primary/20 text-primary px-6 py-2 rounded-full text-sm font-black uppercase tracking-widest border border-primary/30">
-                <Shield className="w-5 h-5" /> Main Dealer Sourced
-              </div>
-              <h3 className="text-3xl md:text-5xl lg:text-6xl font-black text-white uppercase tracking-tighter italic leading-[0.9]">
-                Looking for <br className="hidden md:block" /> <span className="text-primary italic underline decoration-white/20 underline-offset-8">Extended Coverage?</span>
-              </h3>
-              <p className="text-slate-300 text-lg md:text-2xl font-medium leading-relaxed max-w-3xl mx-auto">
-                We also offer <span className="text-white font-bold">up to 24 months warranty</span>, sourced directly from main dealers. Please note, this option comes at a higher cost due to the extended protection and premium coverage.
-              </p>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* WHY CHOOSE US BENTO */}
-      <section className="py-32 bg-white">
-        <div className="container mx-auto px-4 lg:px-8">
-           <div className="flex flex-col lg:flex-row gap-24 items-center">
-             <div className="w-full lg:w-1/2">
-                <div className="relative rounded-[5rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.2)] border-8 border-slate-50 group">
-                   <Image src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=1200&auto=format&fit=crop" alt="LR Workshop" width={800} height={1000} className="object-cover group-hover:scale-110 transition-transform duration-[3000ms]" />
-                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent" />
-                   <div className="absolute bottom-12 left-12 p-8 bg-white/10 backdrop-blur-md rounded-[2.5rem] border border-white/20 shadow-2xl">
-                      <div className="text-white text-3xl font-black uppercase tracking-tighter italic">Vogue Technics</div>
-                   </div>
-                </div>
-             </div>
-             <div className="w-full lg:w-1/2 space-y-12">
-              <h2 className="text-4xl md:text-7xl font-black text-slate-900 tracking-tighter uppercase leading-none underline decoration-primary decoration-[12px] underline-offset-[16px]">Range Rover <span className="text-primary italic italic">Experts</span></h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 pt-10">
-                   <div className="space-y-4 group">
-                      <div className="text-primary font-black text-5xl group-hover:scale-110 transition-transform inline-block">01.</div>
-                      <h4 className="font-extrabold text-slate-900 text-2xl uppercase tracking-tighter italic">Engine Specialist</h4>
-                      <p className="text-slate-600 font-medium leading-relaxed">Dedicated workshop for high-performance Range Rover engine rebuilds.</p>
-                   </div>
-                   <div className="space-y-4 group">
-                      <div className="text-primary font-black text-5xl group-hover:scale-110 transition-transform inline-block">02.</div>
-                      <h4 className="font-extrabold text-slate-900 text-2xl uppercase tracking-tighter italic">Precision Build</h4>
-                      <p className="text-slate-600 font-medium leading-relaxed">Fixing inherent factory flaws (crankshaft/oil pump) with superior components.</p>
-                   </div>
-                   <div className="space-y-4 group">
-                      <div className="text-primary font-black text-5xl group-hover:scale-110 transition-transform inline-block">03.</div>
-                      <h4 className="font-extrabold text-slate-900 text-2xl uppercase tracking-tighter italic">Full Warranty</h4>
-                      <p className="text-slate-600 font-medium leading-relaxed">We back our craftsmanship with a comprehensive 6-month written warranty.</p>
-                   </div>
-                   <div className="space-y-4 group">
-                      <div className="text-primary font-black text-5xl group-hover:scale-110 transition-transform inline-block">04.</div>
-                      <h4 className="font-extrabold text-slate-900 text-2xl uppercase tracking-tighter italic">Nationwide Reach</h4>
-                      <p className="text-slate-600 font-medium leading-relaxed">Engine supply and professional fitting available throughout the UK.</p>
-                   </div>
-                </div>
-                <div className="pt-10">
-                   <Link href="/contact-us" className="inline-flex items-center gap-6 text-primary font-black text-3xl hover:translate-x-12 transition-all uppercase tracking-tighter italic hover:opacity-80">
-                      Book Restoration <ArrowRight className="w-12 h-12" />
-                   </Link>
-                </div>
-             </div>
-           </div>
-        </div>
-      </section>
-
-      {/* FINAL CTA SECTION */}
-      <section className="py-20 md:py-32 bg-slate-900 relative overflow-hidden text-center">
-        <div className="absolute inset-0 bg-primary/5 opacity-30 animate-pulse pointer-events-none"></div>
-        <div className="container mx-auto px-4 lg:px-8 max-w-5xl space-y-10 md:space-y-12 relative z-10">
-           <h2 className="text-4xl md:text-7xl font-black text-white uppercase tracking-tighter leading-none italic uppercase leading-tight">Revive Your <br/><span className="text-primary underline decoration-white/30 decoration-[10px] underline-offset-[20px]">Range Rover</span></h2>
-           <p className="text-slate-400 text-lg md:text-xl font-bold uppercase tracking-widest leading-relaxed max-w-3xl mx-auto">
-             Get Back On and Off Road Today. Expert Service Guaranteed!
-           </p>
-           <div className="flex flex-col md:flex-row gap-6 md:gap-8 justify-center items-center pt-6 md:pt-10">
-             <Link href="/contact-us" className="bg-primary hover:bg-emerald-500 text-white font-black py-5 px-12 md:py-6 md:px-16 rounded-[2rem] shadow-[0_20px_50px_-15px_rgba(25,135,84,0.5)] transition-all transform hover:-translate-y-2 text-lg md:text-xl flex items-center justify-center gap-4 uppercase tracking-[0.2em] w-full md:w-auto">
-               <Search className="w-8 h-8 md:w-10 md:h-10" /> Instant Quote
-             </Link>
-             <a href="tel:01375531355" className="bg-white hover:bg-slate-100 text-slate-950 font-black py-5 px-12 md:py-6 md:px-16 rounded-[2rem] shadow-2xl transition-all transform hover:-translate-y-2 text-lg md:text-xl flex items-center justify-center gap-4 uppercase tracking-[0.2em] w-full md:w-auto">
-               <Phone className="w-8 h-8 md:w-10 md:h-10 text-primary" /> 01375 531355
-             </a>
-          </div>
-        </div>
-      </section>
-
-      {/* INFORMATIVE CONTENT SECTION */}
-      <section className="py-24 bg-white relative overflow-hidden">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="max-w-4xl mx-auto space-y-12">
-            <div className="relative p-10 md:p-16 bg-slate-50 rounded-[4rem] border-2 border-slate-100 shadow-sm relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
-              
-              <div className="relative z-10 space-y-10">
-                <div className="space-y-6">
-                  <h3 className="text-2xl md:text-3xl font-black text-slate-900 uppercase tracking-tighter italic leading-tight">
-                    Premium <span className="text-primary italic">Range Rover</span> Engine Solutions
-                  </h3>
-                  <p className="text-slate-600 text-base leading-relaxed font-medium">
-                    The Range Rover represents the pinnacle of luxury SUVs, and its engines are high-performance masterpieces that demand specialist care. At Vogue Technics, we provide elite reconditioning and replacement services for the entire Range Rover lineup, including the powerful 5.0L V8 Supercharged units and the high-torque TDV6 and SDV8 diesels. Our master technicians approach every rebuild with surgical precision, ensuring that the refinement and power you expect from your Range Rover are fully restored.
-                  </p>
-                </div>
-
-                <div className="space-y-6 pt-8 border-t border-slate-200">
-                  <h3 className="text-2xl md:text-3xl font-black text-slate-900 uppercase tracking-tighter italic leading-tight">
-                    Technical <span className="text-primary italic">Mastery</span> and Innovation
-                  </h3>
-                  <p className="text-slate-600 text-base leading-relaxed font-medium">
-                    Range Rover engines often face specific technical challenges, such as cooling system vulnerabilities and complex hybrid integration. We utilize advanced diagnostic suites tailored specifically for JLR vehicles to map out every fault before the rebuild begins. Our reconditioning process includes upgrading internal components to more resilient materials, addressing common premature wear points in the valvetrain and turbocharger systems, and ensuring your vehicle maintains its smooth, effortless performance for years to come.
-                  </p>
-                </div>
-
-                <div className="space-y-6 pt-8 border-t border-slate-200">
-                  <h3 className="text-2xl md:text-3xl font-black text-slate-900 uppercase tracking-tighter italic leading-tight">
-                    Seamless <span className="text-primary italic">Supply and Fit</span> Experience
-                  </h3>
-                  <p className="text-slate-600 text-base leading-relaxed font-medium">
-                    Managing a Range Rover engine failure can be stressful, which is why our comprehensive service is designed to be completely hands-off for the owner. From nationwide vehicle collection to the final refined calibration on our in-house dyno, we handle the entire journey. We pride ourselves on restoring your vehicle to its original factory dynamics, matching the smooth power delivery and quiet operation that defines the Range Rover driving experience.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <FAQSection 
-        title={<>Range Rover <span className="text-primary italic">FAQs</span></>}
-        items={[
-          {
-            question: "How do you ensure the refinement of a Range Rover engine rebuild?",
-            answer: "We use high-precision balancing equipment and only genuine OEM bearings and seals. This ensures that the engine vibrates less and runs as quietly as it did when it first left the factory."
-          },
-          {
-            question: "Do you specialize in the 5.0L V8 Supercharged engine?",
-            answer: "Yes, we are one of the few UK specialists equipped to handle full reconditioning of the 5.0L V8 Supercharged units, including specialist supercharger servicing and timing chain upgrades."
-          },
-          {
-            question: "Will my Range Rover's terrain response system still work?",
-            answer: "Absolutely. Our fitting process includes a complete electronic calibration to ensure that all vehicle systems, including Terrain Response and air suspension, are perfectly integrated with the new engine."
-          },
-          {
-            question: "What is your typical lead time for a Range Rover TDV6?",
-            answer: "Typically, a full reconditioning and fitting for a TDV6 model takes 10 to 14 working days, depending on the availability of specific upgrade parts."
-          }
-        ]}
+      <FAQSection
+        title={<>Frequently Asked Questions — <span className="text-primary italic">Range Rover Engine Specialist</span></>}
+        items={faqs}
       />
+
+      <section className="py-16 md:py-20 bg-primary text-white">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-5xl mx-auto text-center space-y-6">
+            <h2 className="text-3xl md:text-4xl font-extrabold leading-tight">
+              Ready to get your Range Rover back on the road?
+            </h2>
+            <p className="text-emerald-50 leading-relaxed max-w-3xl mx-auto">
+              Call us today or enter your registration above to get a fast, no-obligation quote from Grays' leading Range Rover engine specialists. We're here to help — honestly, expertly, and affordably.
+            </p>
+            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="tel:01375531355"
+                className="inline-flex items-center justify-center rounded-2xl bg-white px-8 py-4 font-bold text-primary shadow-xl transition-all hover:bg-slate-50 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99]"
+              >
+                <Phone className="w-5 h-5 mr-2" />
+                Call 01375 531355
+              </a>
+              <Link
+                href="/contact-us"
+                className="inline-flex items-center justify-center rounded-2xl bg-slate-900 px-8 py-4 font-bold text-white shadow-xl transition-all hover:bg-slate-800 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99]"
+              >
+                Request a Quote
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <PartnerLogos />
     </div>

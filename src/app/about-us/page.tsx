@@ -1,242 +1,309 @@
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { CheckCircle2, Shield, Users, Award, Clock, Star, ShieldCheck } from "lucide-react";
+import { Award, CheckCircle2, Clock3, Quote, ShieldCheck, Wrench } from "lucide-react";
 import Breadcrumbs from "@/components/common/Breadcrumbs";
 import PartnerLogos from "@/components/common/PartnerLogos";
-import ReviewsSection from "@/components/common/ReviewsSection";
-import LatestVideos from "@/components/common/LatestVideos";
-import { authors } from "@/data/authorsData";
-import React from "react";
 
 export const metadata: Metadata = {
-  title: "About Us | Specialist Engine Rebuilds & Parts | Vogue Technics",
-  description: "Learn about Vogue Technics, our 20+ years of expertise in the automobile industry, and our dedication to providing premium reconditioned engines and professional fitting services.",
+  title: "About Vogue Technics | Range Rover & Land Rover Engine Specialists — Grays, Essex",
+  description:
+    "Vogue Technics are independent Range Rover and Land Rover engine rebuild specialists based in Grays, Essex. IGA member, RAC Approved, Trading Standards accredited. Serving Essex, Thurrock, and South East London since 2004. Main dealer expertise, independent pricing.",
 };
+
+const trustPoints = [
+  "Independent Land Rover and Range Rover engine specialists since 2004.",
+  "Main dealer knowledge without main dealer pricing.",
+  "Transparent quoting, honest advice, and proper root-cause diagnosis.",
+];
+
+const highlights = [
+  {
+    icon: <Clock3 className="w-6 h-6" />,
+    title: "Established 2004",
+    text: "Over two decades of specialist engine rebuild, repair, and replacement experience.",
+  },
+  {
+    icon: <Wrench className="w-6 h-6" />,
+    title: "Built For Engine Work",
+    text: "A workshop environment designed around strip-down, rebuild, and precision repair work.",
+  },
+  {
+    icon: <ShieldCheck className="w-6 h-6" />,
+    title: "Accredited & Accountable",
+    text: "IGA member, RAC Approved Garage, and Trading Standards Approved Code accredited.",
+  },
+];
+
+const serviceAreas = [
+  "Essex",
+  "Thurrock",
+  "Dartford",
+  "Romford",
+  "Basildon",
+  "South East London",
+];
 
 export default function About() {
   return (
     <main className="bg-white min-h-screen">
-      {/* PREMIUM HERO HEADER */}
-      <section className="bg-slate-900 text-white pt-32 pb-24 relative overflow-hidden">
-        <div className="absolute inset-0 z-0">
+      <section className="relative overflow-hidden bg-slate-900 pt-32 pb-24 text-white">
+        <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=80&w=2600&auto=format&fit=crop"
-            alt="Vogue Technics Engine Workshop"
+            src="/images/car_bgg.jpg"
+            alt="Vogue Technics workshop background"
             fill
-            className="object-cover opacity-30 mix-blend-overlay grayscale"
             priority
+            className="object-cover opacity-25 mix-blend-overlay"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/80 to-slate-900/40" />
         </div>
-        
-        <div className="container mx-auto px-4 lg:px-8 relative z-10">
+
+        <div className="container relative z-10 mx-auto px-4 lg:px-8">
           <Breadcrumbs items={[{ name: "About Us", href: "/about-us" }]} />
-          
-          <div className="max-w-4xl mt-8">
-            <span className="inline-block py-1 px-4 rounded-full bg-primary/20 text-emerald-400 font-bold tracking-widest text-xs mb-6 border border-primary/30 uppercase italic">
-              Our Legacy of Excellence
-            </span>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-8 tracking-tighter leading-none uppercase italic">
-              Pioneering <span className="text-primary italic">Engine</span> <br/>
-              <span className="text-white underline decoration-primary/30 decoration-[10px] underline-offset-[12px]">Rebuilding Since 2004</span>
-            </h1>
-            <p className="text-xl text-slate-300 max-w-2xl leading-relaxed font-medium">
-              Over two decades of precision engineering, restoring thousands of Range Rovers, Land Rovers, and premium European vehicles to factory performance.
-            </p>
+
+          <div className="mt-10 grid gap-10 lg:grid-cols-[1.25fr_0.75fr] lg:items-end">
+            <div className="max-w-4xl">
+              <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/15 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-emerald-300 shadow-[0_0_22px_rgba(25,135,84,0.18)]">
+                About Vogue Technics
+              </span>
+              <h1 className="mt-6 text-4xl font-extrabold leading-[1.05] tracking-tight md:text-6xl lg:text-6xl">
+                Grays, Essex — Est. 2004 | Range Rover & Land Rover Engine Specialists
+              </h1>
+              <p className="mt-6 text-xl font-semibold text-white/95 md:text-2xl">
+                We don't fix engines. We rebuild trust in them.
+              </p>
+              <p className="mt-3 max-w-3xl text-base leading-relaxed text-slate-300 md:text-lg">
+                Independent Land Rover and Range Rover engine specialists — doing things properly since day one.
+              </p>
+            </div>
+
+            <div className="rounded-[2rem] border border-white/10 bg-white/5 p-6 backdrop-blur-xl shadow-[0_30px_60px_-35px_rgba(0,0,0,0.6)]">
+              <div className="space-y-4">
+                {trustPoints.map((point) => (
+                  <div key={point} className="flex items-start gap-3">
+                    <span className="mt-0.5 rounded-xl bg-primary/20 p-2 text-emerald-300">
+                      <CheckCircle2 className="h-4 w-4" />
+                    </span>
+                    <p className="text-sm leading-relaxed text-slate-200">{point}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-
-
-      {/* MAIN STORY SECTION */}
-      <section className="py-24 bg-white relative overflow-hidden">
+      <section className="py-20 md:py-24 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="flex flex-col lg:flex-row gap-20 items-center">
-            
-            {/* Left Narrative */}
-            <div className="w-full lg:w-1/2 space-y-10">
-              <div className="space-y-4">
-                <h2 className="text-3xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter italic leading-tight">
-                  The UK's Most Trusted <br/>
-                  <span className="text-primary italic">Engine Specialist</span>
-                </h2>
-                <div className="w-20 h-2 bg-primary rounded-full" />
-              </div>
-              
-              <div className="space-y-6 text-lg text-slate-600 leading-relaxed font-medium">
-                <p>
-                  Our success story started 20 years ago when we single-mindedly aimed to become the most reliable and trustworthy name in providing Land Rover and Range Rover new, used and remanufactured engines.
-                </p>
-                <p>
-                  We understood that to achieve our aim to become the best we would require a purpose-built state of the art facility that would compliment Land Rover and Range Rover setup. So, we set about to purchase and setup equipment that was especially helpful in fixing and rebuilding the specific brand that we were eyeing from day one.
-                </p>
-                <p>
-                  Today, Vogue Technics has become a landmark for European engine repair. From precision head gasket replacements to complete engine swaps, our master technicians bring unparalleled expertise to every project.
-                </p>
-              </div>
-
-              {/* Stats Bento Grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6">
-                 <div className="bg-slate-50 p-8 rounded-[2.5rem] border-2 border-slate-100 shadow-sm transition-all hover:border-primary/20 hover:bg-white group">
-                    <Users className="w-10 h-10 text-primary mb-4 group-hover:scale-110 transition-transform" />
-                    <div className="text-4xl font-black text-slate-900 tracking-tighter italic uppercase">10k+</div>
-                    <div className="text-slate-500 font-bold uppercase tracking-widest text-[0.65rem] mt-1">Happy Clients Nationwide</div>
-                 </div>
-                 <div className="bg-slate-900 p-8 rounded-[2.5rem] text-white border-b-4 border-primary shadow-xl group">
-                    <Clock className="w-10 h-10 text-primary mb-4 group-hover:rotate-12 transition-transform" />
-                    <div className="text-4xl font-black tracking-tighter italic">20+</div>
-                    <div className="text-slate-400 font-bold uppercase tracking-widest text-[0.65rem] mt-1">Years of Precision Engineering</div>
-                 </div>
-              </div>
-            </div>
-
-            {/* Right Media Display */}
-            <div className="w-full lg:w-2/5 xl:w-1/2 relative">
-              <div className="relative rounded-[5rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(25,135,84,0.3)] border-8 border-slate-50 aspect-[4/5] lg:aspect-square group">
-                <Image
-                  src="/images/expert-mechanicss.webp"
-                  alt="Vogue Technics Expert Mechanics"
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-[3000ms]"
-                  priority
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />
-                <div className="absolute bottom-12 left-12 right-12 p-8 bg-white/10 backdrop-blur-xl rounded-[2.5rem] border border-white/20 shadow-2xl">
-                   <h3 className="text-white text-3xl font-black uppercase tracking-tighter italic italic">Master <br/>Craftsmanship</h3>
+          <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+            <div className="space-y-6">
+              <div className="relative overflow-hidden rounded-[2.5rem] shadow-2xl">
+                <div className="relative h-[380px] md:h-[460px]">
+                  <Image
+                    src="/images/range-rover.webp"
+                    alt="Vogue Technics workshop"
+                    fill
+                    className="object-cover object-center"
+                    sizes="(min-width: 1024px) 50vw, 100vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
+                    <p className="text-sm font-bold uppercase tracking-[0.2em] text-emerald-300">Since 2004</p>
+                    <h2 className="mt-2 text-2xl font-bold md:text-3xl">Built from the ground up, one engine at a time</h2>
+                  </div>
                 </div>
               </div>
-              
-              {/* Floating Badge */}
-              <div className="absolute -top-10 -right-10 w-40 h-40 bg-primary rounded-full border-8 border-white shadow-2xl flex flex-col items-center justify-center p-4 text-center text-white rotate-12">
-                 <Shield className="w-10 h-10 mb-2" />
-                 <span className="text-[0.6rem] font-black uppercase tracking-widest leading-none">Full UK <br/>Warranty</span>
+
+              <div className="grid gap-4 sm:grid-cols-3">
+                {highlights.map((item) => (
+                  <div key={item.title} className="rounded-[2rem] border border-slate-200 bg-slate-50 p-6 shadow-sm">
+                    <div className="mb-4 inline-flex rounded-2xl bg-primary/10 p-3 text-primary">{item.icon}</div>
+                    <h3 className="text-lg font-bold text-slate-900">{item.title}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-slate-600">{item.text}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="space-y-10">
+              <div>
+                <h2 className="text-3xl font-bold text-slate-900 md:text-4xl">Our Story Since 2004</h2>
+                <div className="mt-4 h-1 w-24 rounded-full bg-primary" />
+              </div>
+
+              <div className="space-y-5 text-[1.05rem] leading-relaxed text-slate-700">
+                <p>
+                  Vic didn't set out to build a business. He set out to do the job properly. After spending years working his way through automotive workshops around Essex — learning the trade, developing his diagnostic instincts, and quietly becoming the person colleagues turned to when an engine job got complicated — he realised that the kind of work he wanted to do simply wasn't possible inside a main dealer structure. The targets, the time constraints, the pressure to upsell — none of it left room for the level of care he believed every engine deserved.
+                </p>
+                <p>
+                  It was Land Rovers and Range Rovers that drew him in most. Not because they were fashionable, but because the engines themselves were genuinely complex, often misunderstood, and poorly served by generalist workshops. The TDV6 needed specialist knowledge. The V8 variants demanded attention to tolerances that most garages weren't equipped to assess, let alone correct. Vic saw a genuine need that wasn't being met.
+                </p>
+                <p>
+                  He opened Vogue Technics in Grays, Essex, with a clear idea of what it would be: a workshop that operated at main dealer level but without the main dealer overheads or the main dealer attitude to pricing. The early months were lean. There was no marketing budget, no advertising campaign, no grand opening. The first customers came through word of mouth — people who had been recommended by a friend, or who had already been let down somewhere else and needed someone they could actually trust.
+                </p>
+                <p>
+                  That reputation grew steadily, one rebuilt engine at a time. Customers came back. They sent their colleagues, their partners, their parents. By the time Vogue Technics had been running for a few years, the business was operating almost entirely on referrals and returning customers. That's still largely true today. It's not something Vic planned. It's something that happened because the work was good and the people were treated fairly — and that, in his view, is the only kind of growth worth having.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* DYNAMIC AUTHOR PROFILE SECTION FOR SEO */}
-      <section className="py-24 bg-white relative overflow-hidden">
+      <section className="bg-slate-50 py-20 md:py-24">
         <div className="container mx-auto px-4 lg:px-8">
-           <div className="bg-slate-900 rounded-[4rem] p-8 md:p-16 text-white relative shadow-2xl overflow-hidden group">
-              {/* Decor */}
-              <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full -mr-48 -mt-48 blur-3xl pointer-events-none" />
-              <div className="absolute bottom-0 left-0 w-64 h-64 bg-emerald-500/5 rounded-full -ml-32 -mb-32 blur-3xl pointer-events-none" />
-              
-              <div className="flex flex-col lg:flex-row items-center gap-16 relative z-10">
-                 {/* Author Image */}
-                 <div className="w-56 h-56 md:w-80 md:h-80 relative rounded-[3rem] overflow-hidden border-4 border-primary shadow-2xl shrink-0 -rotate-3 group-hover:rotate-0 transition-transform duration-500">
-                    <Image
-                       src={authors[0].image}
-                       alt={authors[0].name}
-                       fill
-                       className="object-cover"
-                    />
-                 </div>
-
-                 {/* Author Content */}
-                 <div className="flex-1 space-y-8 text-center lg:text-left">
-                    <div className="space-y-2">
-                       <span className="inline-block py-1 px-4 rounded-full bg-primary/20 text-emerald-400 font-black tracking-widest text-[0.65rem] uppercase italic border border-primary/30">
-                          Lead Technical Expert & JLR Specialist
-                       </span>
-                       <h3 className="text-4xl md:text-6xl font-black italic tracking-tighter uppercase leading-none">
-                          Meet <span className="text-primary italic">{authors[0].name}</span>
-                       </h3>
-                    </div>
-                    
-                    <p className="text-xl text-slate-400 max-w-2xl leading-relaxed font-medium italic">
-                       "{authors[0].shortBio}"
-                    </p>
-
-                    <div className="flex flex-col sm:flex-row items-center gap-6 justify-center lg:justify-start">
-                       <Link 
-                          href="/vic"
-                          className="group/btn inline-flex items-center gap-3 bg-white text-slate-900 font-black px-10 py-5 rounded-2xl shadow-2xl hover:bg-slate-100 transition-all uppercase tracking-widest text-sm transform hover:-translate-y-1"
-                       >
-                          View Full Profile <Users className="w-5 h-5 text-primary group-hover/btn:translate-x-1 transition-transform" />
-                       </Link>
-                       
-                       <div className="flex items-center gap-4 py-2 px-6 bg-slate-800 rounded-full border border-slate-700">
-                          <ShieldCheck className="w-5 h-5 text-emerald-400" />
-                          <span className="text-xs font-bold uppercase tracking-widest text-slate-300 italic">20+ Years Experience</span>
-                       </div>
-                    </div>
-                 </div>
+          <div className="grid gap-8 lg:grid-cols-2">
+            <div className="rounded-[2.5rem] bg-white p-8 shadow-sm border border-slate-200">
+              <h2 className="text-3xl font-bold text-slate-900 md:text-4xl">Meet Vic — The Man Behind Vogue Technics</h2>
+              <div className="mt-4 h-1 w-24 rounded-full bg-primary" />
+              <div className="mt-8 space-y-5 text-[1.05rem] leading-relaxed text-slate-700">
+                <p>
+                  Vic has been working on engines for over two decades. His background spans both petrol and diesel systems, but it's the specialist end of the spectrum — Land Rover's TDV6 and SDV8 units, Jaguar's supercharged V8, the Ingenium diesel family — where his knowledge runs deepest. He is one of a small number of independent technicians in the South East who has the equipment, the training, and the hands-on experience to handle the full rebuild of these engines, not just the surface-level diagnostics that most garages can offer.
+                </p>
+                <p>
+                  What separates Vic from a competent general mechanic isn't simply technical knowledge — it's his approach. He doesn't work from symptoms alone. Before any significant work is authorised, he understands the full picture: why an engine has failed, what the underlying conditions were, and what would happen if only the obvious fault were addressed.
+                </p>
+                <p>
+                  He's also straightforward with people. If a job is going to cost what it costs, he says so clearly and explains why. If a vehicle isn't worth spending a certain amount on, he'll tell you that too — even if it means less work for the workshop. Customers pick up on that fairly quickly. He doesn't operate on the assumption that people can't handle honest information. Most of them, he's found, are relieved to get it.
+                </p>
               </div>
-           </div>
-        </div>
-      </section>
+            </div>
 
-      {/* CORE VALUES / QUALITY SECTION */}
-      <section className="py-24 bg-slate-50 border-y border-slate-200">
-        <div className="container mx-auto px-4 lg:px-8">
-           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-              <div className="space-y-6 text-center">
-                 <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mx-auto shadow-inner">
-                    <Award className="w-10 h-10" />
-                 </div>
-                 <h4 className="text-2xl font-black text-slate-900 uppercase tracking-tighter italic">Highest Standards</h4>
-                 <p className="text-slate-500 font-medium leading-relaxed">
-                   We use only genuine OEM parts or better ensuring that every rebuild exceeds factory specifications for longevity.
-                 </p>
-              </div>
-              <div className="space-y-6 text-center">
-                 <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mx-auto shadow-inner">
-                    <Star className="w-10 h-10" />
-                 </div>
-                 <h4 className="text-2xl font-black text-slate-900 uppercase tracking-tighter italic">Quality Tested</h4>
-                 <p className="text-slate-500 font-medium leading-relaxed">
-                   Every engine undergoes rigorous compression and thermal testing in our state-of-the-art diagnostic bay before release.
-                 </p>
-              </div>
-              <div className="space-y-6 text-center">
-                 <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mx-auto shadow-inner">
-                    <CheckCircle2 className="w-10 h-10" />
-                 </div>
-                 <h4 className="text-2xl font-black text-slate-900 uppercase tracking-tighter italic">Peace of Mind</h4>
-                 <p className="text-slate-500 font-medium leading-relaxed">
-                   Our comprehensive 12-month written warranty covers parts and labor, backed by our 20-year reputation.
-                 </p>
-              </div>
-           </div>
-        </div>
-      </section>
-
-      {/* NEW DYNAMIC REVIEWS SECTION */}
-      <ReviewsSection 
-        title="Verified Excellence"
-        subtitle="Hear from the thousands of luxury car owners who trust Vogue Technics for their engine restoration."
-      />
-
-      {/* LATEST VIDEOS COMPONENT */}
-      <LatestVideos />
-
-      {/* CTA SECTION */}
-      <section className="py-24 bg-primary relative overflow-hidden text-center">
-        <div className="container mx-auto px-4 lg:px-8 relative z-10">
-          <h2 className="text-4xl md:text-7xl font-black text-white uppercase tracking-tighter italic leading-none mb-10">
-            Trust the <span className="text-slate-900">Engine Experts</span>
-          </h2>
-          <p className="text-emerald-50 text-xl font-bold uppercase tracking-widest mb-12 max-w-2xl mx-auto">
-            Ready to restore your vehicle? Speak to our master technicians today and feel the difference.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-             <a href="tel:01375 531355" className="bg-white text-primary font-black px-12 py-6 rounded-2xl shadow-2xl hover:bg-slate-50 transition-all uppercase tracking-widest text-xl transform hover:-translate-y-2">
-               Call 01375 531355
-             </a>
-             <a href="/contact-us" className="bg-slate-900 text-white font-black px-12 py-6 rounded-2xl shadow-2xl hover:bg-slate-800 transition-all uppercase tracking-widest text-xl transform hover:-translate-y-2 border-b-4 border-emerald-500">
-               Request a Quote
-             </a>
+            <div className="rounded-[2.5rem] bg-slate-900 p-8 text-white shadow-2xl">
+              <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/15 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-emerald-300">
+                <Quote className="h-4 w-4" /> A Word From Vic
+              </span>
+              <blockquote className="mt-8 text-xl leading-relaxed text-slate-100 md:text-2xl">
+                "If you're standing here wondering whether to trust us with your Range Rover or Land Rover, I understand that completely. These are expensive vehicles, and an engine rebuild is a significant thing to get right. What I can tell you is this: we'll tell you exactly what's wrong, exactly what it will cost to fix it properly, and exactly what we're going to do. We'll use the right parts. We'll take the time it takes. And if at any point we think the numbers don't add up for you, we'll say so. That's how we've worked since 2004, and it's not something we're going to change."
+              </blockquote>
+              <p className="mt-8 text-sm font-bold uppercase tracking-[0.2em] text-emerald-300">
+                — Vic, Owner & Lead Technician, Vogue Technics
+              </p>
+            </div>
           </div>
         </div>
-        
-        {/* Decor */}
-        <div className="absolute top-0 left-0 w-64 h-64 bg-white/10 rounded-full -ml-32 -mt-32 blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 right-0 w-64 h-64 bg-black/10 rounded-full -mr-32 -mb-32 blur-3xl pointer-events-none" />
+      </section>
+
+      <section className="bg-white py-20 md:py-24">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="grid gap-8 lg:grid-cols-2">
+            <div className="rounded-[2.5rem] border border-slate-200 bg-slate-50 p-8">
+              <div className="mb-5 inline-flex rounded-2xl bg-primary/10 p-3 text-primary">
+                <Award className="h-6 w-6" />
+              </div>
+              <h2 className="text-3xl font-bold text-slate-900 md:text-4xl">Our Mission — What We Stand For</h2>
+              <div className="mt-4 h-1 w-24 rounded-full bg-primary" />
+              <div className="mt-8 space-y-5 text-[1.05rem] leading-relaxed text-slate-700">
+                <p>
+                  The mission at Vogue Technics has never changed: carry out every job as if the vehicle belongs to someone you know. That might sound simple, but it has real implications. It means only using OEM-quality or better components — no cheap pattern parts that create new problems while solving old ones.
+                </p>
+                <p>
+                  It means providing a transparent quote before work begins, and sticking to it. It means explaining to a customer exactly what has been done and why, in plain language, without jargon designed to obscure rather than inform.
+                </p>
+                <p>
+                  Vogue Technics isn't chasing volume. There's no incentive here to push unnecessary work, upsell parts that aren't needed, or rush a job to free up a ramp. The business has been built on long-term relationships, and long-term relationships only work if customers feel they were treated well — not just this time, but every time.
+                </p>
+              </div>
+            </div>
+
+            <div className="rounded-[2.5rem] border border-slate-200 bg-white p-8 shadow-sm">
+              <div className="mb-5 inline-flex rounded-2xl bg-primary/10 p-3 text-primary">
+                <Wrench className="h-6 w-6" />
+              </div>
+              <h2 className="text-3xl font-bold text-slate-900 md:text-4xl">Our Workshop — Built for the Job</h2>
+              <div className="mt-4 h-1 w-24 rounded-full bg-primary" />
+              <div className="mt-8 space-y-5 text-[1.05rem] leading-relaxed text-slate-700">
+                <p>
+                  Engine work at this level requires the right environment. The Vogue Technics facility in Grays was put together specifically for Land Rover and Range Rover engine rebuild and repair work — not a general workshop that happens to take on engine jobs, but a space designed around the specific demands of this kind of strip-down, rebuild, and reconditioning work.
+                </p>
+                <p>
+                  The diagnostic equipment includes specialist Land Rover and Jaguar Land Rover diagnostic systems capable of reading the full range of fault codes and live data across every engine variant in the current and recent model range.
+                </p>
+                <p>
+                  The workshop itself is clean and organised in a way that reflects the standards applied to every job. Engine work is precision work. It requires clean components, controlled conditions, and careful handling throughout a rebuild. Customers who visit in person often comment on it — it's not what they expect from an independent garage. That's the point.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-slate-50 py-20 md:py-24">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+            <div className="rounded-[2.5rem] bg-white p-8 shadow-sm border border-slate-200">
+              <h2 className="text-3xl font-bold text-slate-900 md:text-4xl">Our Accreditations — Why They Matter</h2>
+              <div className="mt-4 h-1 w-24 rounded-full bg-primary" />
+              <div className="mt-8 space-y-5 text-[1.05rem] leading-relaxed text-slate-700">
+                <p>
+                  Vogue Technics holds IGA membership, RAC Approved Garage status, and accreditation under the Approved Code of Practice from Trading Standards. These aren't decorative. IGA membership means the business is assessed against professional standards and operates within a framework of accountability that most garages aren't part of.
+                </p>
+                <p>
+                  RAC Approved status means an independent body has audited the workshop — the facilities, the processes, and the customer service — and found them to be up to standard. The Approved Code Trading Standards accreditation provides an additional layer of consumer protection.
+                </p>
+                <p>
+                  Together, these accreditations mean that choosing Vogue Technics comes with accountability built in — not just a verbal promise from a workshop owner, but independently verified standards.
+                </p>
+              </div>
+            </div>
+
+            <div className="rounded-[2.5rem] bg-slate-900 p-8 text-white shadow-2xl">
+              <h3 className="text-2xl font-bold">Our Customers — Who We Serve</h3>
+              <div className="mt-4 h-1 w-20 rounded-full bg-primary" />
+              <div className="mt-8 space-y-5 text-slate-300 leading-relaxed">
+                <p>
+                  Vogue Technics serves Range Rover, Land Rover, Jaguar, Audi, and BMW owners across Essex, Thurrock, Dartford, Romford, Basildon, and into South East London.
+                </p>
+                <p>
+                  Many arrive having just received a main dealer quote that stopped them in their tracks. Others have already spent money at a cheaper garage that diagnosed the problem incorrectly, carried out inadequate repair work, or both.
+                </p>
+                <p>
+                  Customers regularly travel from well beyond the local area because they've been told — by a friend, a colleague, or even another mechanic — that this is where the job gets done properly.
+                </p>
+              </div>
+
+              <div className="mt-8 flex flex-wrap gap-3">
+                {serviceAreas.map((area) => (
+                  <span key={area} className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-slate-200">
+                    {area}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-primary py-20 md:py-24 text-center text-white">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="mx-auto max-w-4xl">
+            <h2 className="text-3xl font-extrabold leading-tight md:text-5xl">
+              Get in Touch — No Obligation, No Pressure
+            </h2>
+            <p className="mt-6 text-base leading-relaxed text-emerald-50 md:text-lg">
+              Whether you've received a main dealer quote and want a second opinion, you're not sure what's wrong and need a proper diagnosis, or you simply want to talk to someone who knows these engines inside out — we're here. There's no script and no sales process. Just a conversation with a specialist who will tell you what you actually need to know.
+            </p>
+            <p className="mt-4 text-base leading-relaxed text-emerald-100 md:text-lg">
+              Vogue Technics — Grays, Essex. Call us, send an email, or drop in to the workshop. We'll take it from there.
+            </p>
+
+            <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
+              <a
+                href="tel:01375531355"
+                className="inline-flex items-center justify-center rounded-2xl bg-white px-8 py-4 font-bold text-primary shadow-xl transition-all hover:bg-slate-50 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99]"
+              >
+                Call 01375 531355
+              </a>
+              <Link
+                href="/contact-us"
+                className="inline-flex items-center justify-center rounded-2xl border-2 border-white px-8 py-4 font-bold text-white transition-all hover:bg-white hover:text-primary hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99]"
+              >
+                Request a Quote
+              </Link>
+            </div>
+          </div>
+        </div>
       </section>
 
       <PartnerLogos />

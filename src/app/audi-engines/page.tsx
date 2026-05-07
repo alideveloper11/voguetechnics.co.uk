@@ -2,8 +2,9 @@ import { Metadata } from "next";
 import AudiEnginesClient from "./AudiEnginesClient";
 
 export const metadata: Metadata = {
-  title: "Audi Used and Reconditioned Engines for Sale | Vogue Technics",
-  description: "Top-quality reconditioned and used Audi engines for sale at affordable prices. Enter your registration to find the perfect engine and parts for your Audi today. Buy now!",
+  title: "Audi Engine Replacement UK – Expert Rebuilds, Repairs & Reconditioned Engines in Grays, Essex",
+  description:
+    "Audi engine replacement, rebuild and repair specialists in Grays, Essex. Vogue Technics supply used and reconditioned Audi engines with written warranty and UK-wide support.",
   alternates: {
     canonical: "/audi-engines",
   },

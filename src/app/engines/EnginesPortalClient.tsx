@@ -1,357 +1,380 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Car, Shield, Gauge, CheckCircle2, Search, Phone } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import PartnerLogos from "@/components/common/PartnerLogos";
 import Breadcrumbs from "@/components/common/Breadcrumbs";
-import ServicesSection from "@/components/common/ServicesSection";
 import FAQSection from "@/components/common/FAQSection";
 
-const brands = [
-  {
-    name: "Range Rover Engines",
-    slug: "range-rover-engines",
-    description: "Premium reconditioned engines for Range Rover Vogue, Sport, Velar, and Evoque models.",
-    image: "/images/range-rover.webp", // Placeholder
-    icon: <Car className="w-8 h-8" />,
-    color: "from-emerald-600 to-green-500"
-  },
-  {
-    name: "Land Rover Engines",
-    slug: "land-rover-engines",
-    description: "Durable engine solutions for Defender, Discovery, and Freelander models.",
-    image: "/images/car_bgg.jpg", // Placeholder
-    icon: <Shield className="w-8 h-8" />,
-    color: "from-slate-700 to-slate-900"
-  },
-  {
-    name: "Audi Engines",
-    slug: "audi-engines",
-    description: "High-performance replacement engines for Audi A, Q, and R series vehicles.",
-    image: "/images/audi.webp", // Placeholder
-    icon: <Gauge className="w-8 h-8" />,
-    color: "from-red-600 to-red-800"
-  },
-  {
-    name: "BMW Engines",
-    slug: "bmw-engines",
-    description: "Reliable reconditioned engines for BMW 1-7 Series and X models.",
-    image: "/images/bmw.webp", // Placeholder
-    icon: <CheckCircle2 className="w-8 h-8" />,
-    color: "from-blue-600 to-blue-800"
-  },
-  {
-    name: "Jaguar Engines",
-    slug: "jaguar-engines",
-    description: "Specialist engine services for Jaguar XF, XJ, and F-Type models.",
-    image: "/images/jaguar.webp", // Placeholder
-    icon: <Car className="w-8 h-8" />,
-    color: "from-slate-800 to-black"
-  }
-];
-
 export default function EnginesPortalClient() {
+  const faqs = [
+    {
+      question: "How much does engine repair or rebuild cost at Vogue Technics?",
+      answer:
+        "Costs vary depending on the platform, the specific fault, and the extent of internal wear identified during assessment. We always provide a detailed written quote following a proper diagnostic — never a generalised estimate that changes once work begins. Contact us directly for a no-obligation quote on your vehicle.",
+    },
+    {
+      question: "Is an engine rebuild worth it, or should I replace the engine?",
+      answer:
+        "In most cases involving a prestige vehicle in otherwise sound condition, a specialist rebuild is the more cost-effective long-term decision — particularly where sourcing a quality replacement unit of verified history is difficult. We advise honestly on which route makes most sense for your specific engine and situation.",
+    },
+    {
+      question: "Do you offer a warranty on all engine work?",
+      answer:
+        "Yes. Every major engine repair, rebuild, replacement, turbo fitment, head gasket job, and timing chain replacement carries a minimum six-month warranty on both parts and labour, confirmed in writing at handover.",
+    },
+    {
+      question: "Can you collect my vehicle from anywhere in the UK?",
+      answer:
+        "Yes. We offer UK-wide collection and return delivery on all major engine work. Many of our customers are not local to Grays, and the process is straightforward from first contact through to return.",
+    },
+    {
+      question: "How long does an engine rebuild take?",
+      answer:
+        "Timescales vary by platform and the extent of work required. We provide an honest, confirmed timeframe at the point of quoting and keep you updated throughout the process without you needing to chase for information.",
+    },
+  ];
+
   return (
     <div className="bg-white min-h-screen">
-      {/* HERO SECTION */}
-      <section className="relative min-h-[60vh] flex flex-col justify-center overflow-hidden bg-slate-900 pt-32 pb-20">
+      <section className="relative overflow-hidden bg-slate-900 pt-32 pb-24">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/car_bgg.jpg"
-            alt="Engine Portal Specialist"
+            alt="Vogue Technics engine specialists"
             fill
             className="object-cover opacity-40 mix-blend-overlay"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/80 to-slate-900/40" />
         </div>
 
         <div className="container relative z-10 mx-auto px-4 lg:px-8">
           <Breadcrumbs items={[{ name: "Our Engines", href: "/engines" }]} />
           
-          <div className="text-center max-w-4xl mx-auto">
-            <motion.span 
+          <div className="max-w-5xl pt-8">
+            <motion.span
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="inline-block py-1 px-3 rounded-full bg-primary/20 text-emerald-400 font-semibold tracking-wider text-sm mb-6 border border-primary/30 shadow-[0_0_15px_rgba(25,135,84,0.3)] uppercase"
+              className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/20 px-4 py-2 text-xs font-black uppercase tracking-[0.2em] text-emerald-300 shadow-[0_0_22px_rgba(25,135,84,0.22)]"
             >
-              UK's Leading Engine Specialist
+              Engine Specialists — Grays, Essex
             </motion.span>
-            <motion.h1 
+            <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="text-4xl md:text-6xl lg:text-7xl font-black text-white tracking-tight mb-8 leading-tight uppercase"
+              className="mt-6 text-3xl font-black leading-[1.08] tracking-tight text-white md:text-5xl"
             >
-              Superior Engines for <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-400 to-green-500 italic">Every Major Brand</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-300 to-green-400">
+                Engine Repair, Rebuild & Replacement Specialists
+              </span>{" "}
+              — Vogue Technics, Grays, Essex
             </motion.h1>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed"
+              className="mt-5 max-w-4xl text-sm leading-relaxed text-slate-300 md:text-base"
             >
-              Whether you're looking for Range Rover power or Audi performance, Vogue Technics provides the UK's most reliable reconditioned & used engines.
+              Some engine problems announce themselves loudly. Others build quietly over weeks and months — a slight drop in power here, an occasional rattle on a cold morning there — until the point where the damage is serious and the decision about what to do next cannot be deferred any longer.
+              <br />
+              <br />
+              At that point, the garage you choose is everything.
             </motion.p>
-            
-            <motion.div 
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.25 }}
+              className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center"
+            >
+              <Link
+                href="/contact-us"
+                className="inline-flex items-center justify-center rounded-2xl bg-primary px-8 py-4 font-bold text-white shadow-xl transition-all hover:bg-primary-dark hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99]"
+              >
+                Request a Free Engine Quote
+              </Link>
+              <a
+                href="tel:01375531355"
+                className="inline-flex items-center justify-center rounded-2xl bg-white px-8 py-4 font-bold text-slate-900 shadow-xl transition-all hover:bg-slate-50 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99]"
+              >
+                Call Us Today
+              </a>
+              <Link
+                href="/contact-us"
+                className="inline-flex items-center justify-center rounded-2xl border-2 border-white/20 bg-white/5 px-8 py-4 font-bold text-white shadow-xl transition-all hover:bg-white hover:text-slate-900 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99]"
+              >
+                Book an Engine Inspection
+              </Link>
+            </motion.div>
+
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+              className="mt-5 max-w-5xl text-sm leading-relaxed text-slate-300 md:text-base"
             >
-              <a href="tel:01375 531355" className="bg-primary hover:bg-emerald-500 text-white font-black py-5 px-10 rounded-[2rem] shadow-xl transition-all flex items-center justify-center gap-3 w-full sm:w-auto transform hover:-translate-y-2 uppercase tracking-widest">
-                <Phone className="w-6 h-6" /> 01375 531355
-              </a>
-              <Link href="/contact-us" className="bg-white hover:bg-slate-50 text-slate-900 font-black py-5 px-10 rounded-[2rem] transition-all shadow-xl w-full sm:w-auto transform hover:-translate-y-2 flex items-center justify-center uppercase tracking-widest">
-                Get Instant Quote
-              </Link>
-            </motion.div>
+              At Vogue Technics, we do one thing and we do it to a standard that general garages simply cannot match. Based in Grays, Essex, we are dedicated engine specialists working exclusively on five of the most demanding and rewarding vehicles on British roads — Range Rover, Land Rover, Jaguar, Audi, and BMW. Engine repair, engine rebuild, engine replacement, turbo replacement, timing chain replacement, head gasket repair — every service we offer is carried out by technicians who have spent years working on these specific platforms, not generalists applying broad mechanical knowledge to whatever comes through the door.
+              <br />
+              <br />
+              Over 25 years of engine work. OEM and OEM-specification parts throughout. A minimum six-month warranty on every major job. Written quotes agreed before a single component is touched.
+              <br />
+              <br />
+              If your engine needs attention — whatever the fault and wherever you are in the UK — you have found the right place.
+            </motion.p>
           </div>
         </div>
       </section>
 
-
-      {/* PORTAL GRID SECTION */}
-      <section className="py-24 bg-slate-50 relative overflow-hidden">
+      <section className="py-20 md:py-24 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16 px-4">
-            <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-6 tracking-tighter uppercase leading-none underline decoration-8 underline-offset-8 decoration-primary/20">Select Your <span className="text-primary italic italic">Vehicle Brand</span></h2>
-            <p className="text-slate-600 text-lg md:text-xl font-medium">Explore our extensive range of high-performance replacement engines tailored to your specific vehicle.</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {brands.map((brand, idx) => (
-              <motion.div
-                key={brand.slug}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                whileHover={{ y: -10 }}
-                className="group relative flex flex-col h-full bg-white border border-slate-100 rounded-[3rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500"
-              >
-                {/* Brand Image/Icon Container */}
-                <div className="relative aspect-[16/9] overflow-hidden bg-slate-900">
-                  <div className={`absolute inset-0 bg-gradient-to-br ${brand.color} opacity-60 mix-blend-multiply group-hover:scale-110 transition-transform duration-1000`} />
-                  <div className="absolute inset-0 flex items-center justify-center text-white scale-150 transform transition-transform group-hover:scale-[1.8] duration-700">
-                    {brand.icon}
-                  </div>
-                  <div className="absolute top-6 left-6 py-2 px-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs font-bold uppercase tracking-widest">
-                    UK Stock
-                  </div>
-                </div>
-
-                {/* Content */}
-                <div className="flex-1 p-10 flex flex-col justify-between">
-                  <div>
-                    <h3 className="text-2xl font-black text-slate-900 mb-4 group-hover:text-primary transition-colors tracking-tighter uppercase italic">{brand.name}</h3>
-                    <p className="text-slate-600 leading-relaxed mb-6 font-medium">
-                      {brand.description}
-                    </p>
-                  </div>
-                  
-                  <Link 
-                    href={`/${brand.slug}`} 
-                    className="inline-flex items-center gap-3 bg-slate-900 text-white font-black py-4 px-8 rounded-2xl text-sm tracking-widest uppercase hover:bg-primary transition-all shadow-lg group/btn"
-                  >
-                    View Engines <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-2 transition-transform" />
-                  </Link>
-                </div>
-
-                {/* Decorative Elements */}
-                <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-colors" />
-              </motion.div>
-            ))}
-
-            {/* Registration CTA Card */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.6 }}
-              className="lg:col-span-1 bg-primary rounded-[3rem] p-10 flex flex-col justify-center items-center text-center text-white shadow-2xl relative overflow-hidden group"
-            >
-              <div className="relative z-10">
-                <div className="w-20 h-20 bg-white/20 rounded-3xl flex items-center justify-center mb-8 mx-auto backdrop-blur-sm border border-white/30 group-hover:rotate-12 transition-transform">
-                  <Search className="w-10 h-10" />
-                </div>
-                <h3 className="text-3xl font-black mb-6 uppercase tracking-tighter italic">Found Your Match?</h3>
-                <p className="text-emerald-50 mb-10 font-bold uppercase tracking-widest text-sm leading-relaxed">
-                  Enter your registration for an instant tailored quote for any engine model.
+          <div className="grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-10 items-start">
+            <div className="space-y-8">
+              <h2 className="text-2xl md:text-3xl font-bold text-slate-900">The Specialists Behind Every Job</h2>
+              <div className="h-1 w-24 rounded-full bg-primary" />
+              <div className="space-y-5 text-[1.05rem] leading-relaxed text-slate-700">
+                <p>
+                  There is a meaningful difference between a garage that has worked on a Range Rover TDV6 a handful of times and a specialist team that has rebuilt dozens of them — that has seen every failure mode, understands every tolerance, and knows before the strip-down begins where the problems are most likely to be found.
                 </p>
-                <Link 
-                  href="/contact-us" 
-                  className="inline-block bg-white text-primary font-black py-5 px-12 rounded-2xl text-base tracking-widest uppercase hover:bg-slate-900 hover:text-white transition-all shadow-[0_15px_30px_rgba(0,0,0,0.1)] active:scale-95"
-                >
-                  Instant Quote
-                </Link>
+                <p>
+                  That difference is what Vogue Technics represents.
+                </p>
               </div>
-              
-              {/* Decorative Pulse */}
-              <div className="absolute inset-0 bg-white/5 animate-pulse" />
-            </motion.div>
-          </div>
-        </div>
-      </section>
+            </div>
 
-      {/* BENEFITS SECTION */}
-      <section className="py-24 bg-white border-y border-slate-100">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            <div className="space-y-4">
-              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary">
-                <CheckCircle2 className="w-6 h-6" />
+            <div className="rounded-[2.5rem] border border-slate-200 bg-slate-50 p-8 shadow-sm">
+              <h3 className="text-xl font-bold text-slate-900">25 Years of Prestige Engine Experience</h3>
+              <div className="mt-4 space-y-4 text-slate-700 leading-relaxed">
+                <p>
+                  We have been operating from Grays, Essex for over two decades, and in that time we have built a reputation that reaches well beyond the local area. Jaguar XF Sportbrake owners travel from Scotland. BMW X5 owners come from Wales. Range Rover Sport customers arrange collection from the north of England — not because there are no garages closer to them, but because genuine specialist knowledge of these engine platforms is rarer than most owners realise until they start looking for it.
+                </p>
+                <p>
+                  Our technicians work on the engines we cover every day. The N47 rear-chain architecture. The TDV6 oil contamination failure pattern. The Ingenium timing chain vulnerability on early Discovery Sport and Evoque models. The N57 tensioner-led failure sequence. These are not engines that reward guesswork, and they are not engines that receive any at Vogue Technics.
+                </p>
               </div>
-              <h4 className="text-xl font-bold text-slate-900 uppercase tracking-tighter italic">Precision Quality</h4>
-              <p className="text-slate-600 leading-relaxed font-medium">All engines undergo rigorous testing in our purpose-built facility to ensure they meet factory specifications.</p>
-            </div>
-            <div className="space-y-4">
-              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary">
-                <CheckCircle2 className="w-6 h-6" />
-              </div>
-              <h4 className="text-xl font-bold text-slate-900 uppercase tracking-tighter italic">6 Month Warranty</h4>
-              <p className="text-slate-600 leading-relaxed font-medium">Shop with absolute peace of mind. Every unit we supply and fit comes with a comprehensive standard warranty.</p>
-            </div>
-            <div className="space-y-4">
-              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary">
-                <CheckCircle2 className="w-6 h-6" />
-              </div>
-              <h4 className="text-xl font-bold text-slate-900 uppercase tracking-tighter italic">UK-Wide Delivery</h4>
-              <p className="text-slate-600 leading-relaxed font-medium">Our logistics network ensures fast and secure delivery of your engine to any garage or home in the UK.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* EXTENDED WARRANTY CALLOUT */}
-      <section className="py-12 bg-slate-900 overflow-hidden relative">
+      <section className="py-20 md:py-24 bg-slate-50 border-y border-slate-200">
         <div className="container mx-auto px-4 lg:px-8">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="bg-white/5 border-2 border-primary/30 rounded-[3rem] p-8 md:p-12 text-center relative overflow-hidden group"
-          >
-            <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 blur-[80px] rounded-full -mr-32 -mt-32 pointer-events-none"></div>
-            <div className="relative z-10 max-w-4xl mx-auto space-y-6">
-              <h3 className="text-2xl md:text-4xl font-black text-white uppercase tracking-tighter italic leading-none">
-                Looking for <span className="text-primary italic">Extended Coverage?</span>
-              </h3>
-              <p className="text-slate-300 text-lg md:text-xl font-medium leading-relaxed">
-                We also offer up to 24 months warranty, sourced directly from main dealers. Please note, this option comes at a higher cost due to the extended protection and premium coverage.
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="rounded-[2rem] bg-white border border-slate-200 p-8 shadow-sm">
+              <h3 className="text-xl font-bold text-slate-900">OEM Standards — On Every Job, Without Exception</h3>
+              <p className="mt-4 text-slate-700 leading-relaxed">
+                There are no budget alternatives in our workshop. No pattern parts selected to protect a margin. No corners cut on components that will not be visible at the point of collection. Every engine rebuild, replacement, turbo fitment, head gasket repair, and timing chain job uses OEM or OEM-specification components — the same standard of part your vehicle was manufactured with, fitted to the same torque specifications the manufacturer defines.
+              </p>
+              <p className="mt-4 text-slate-700 leading-relaxed">
+                That is not a marketing position. It is the only way to carry out this work to a standard worth standing behind.
               </p>
             </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* SERVICES PREVIEW */}
-      <ServicesSection limit={6} />
-
-      {/* INFORMATIVE CONTENT SECTION */}
-      <section className="py-24 bg-white relative overflow-hidden">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="max-w-4xl mx-auto space-y-12">
-            <div className="relative p-10 md:p-16 bg-slate-50 rounded-[4rem] border-2 border-slate-100 shadow-sm relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
-              
-              <div className="relative z-10 space-y-10">
-                <div className="space-y-6">
-                  <h3 className="text-2xl md:text-3xl font-black text-slate-900 uppercase tracking-tighter italic leading-tight">
-                    Unmatched Expertise in <span className="text-primary italic">Engine Reconditioning</span>
-                  </h3>
-                  <p className="text-slate-600 text-base leading-relaxed font-medium">
-                    At Vogue Technics, we pride ourselves on being the UK's premier destination for high-quality reconditioned and used engines. With over two decades of experience, our master technicians specialize in breathing new life into engines for prestigious brands like Range Rover, Land Rover, Audi, BMW, and Jaguar. Our facility is equipped with state-of-the-art diagnostic and machining tools, ensuring every rebuild meets or exceeds original manufacturer specifications. We understand the intricacies of modern engine design, allowing us to address common factory flaws and provide a more reliable power unit for your vehicle.
-                  </p>
-                </div>
-
-                <div className="space-y-6 pt-8 border-t border-slate-200">
-                  <h3 className="text-2xl md:text-3xl font-black text-slate-900 uppercase tracking-tighter italic leading-tight">
-                    Rigorous <span className="text-primary italic">Quality Control</span> and Testing
-                  </h3>
-                  <p className="text-slate-600 text-base leading-relaxed font-medium">
-                    Quality is the cornerstone of our operation. Every engine that enters our workshop—whether it's destined for a full reconditioning or a simple quality check as a used unit—undergoes a series of stringent tests. This includes 50-point inspections, compression testing, oil pressure monitoring, and thorough internal assessments for wear and tear. Our commitment to precision means we only use OEM or high-spec alternative parts in our builds. This uncompromising approach to quality control is why we confidently supply engines to both individual motorists and professional garages across the country.
-                  </p>
-                </div>
-
-                <div className="space-y-6 pt-8 border-t border-slate-200">
-                  <h3 className="text-2xl md:text-3xl font-black text-slate-900 uppercase tracking-tighter italic leading-tight">
-                    Seamless Supply and <span className="text-primary italic">Nationwide Fitting</span>
-                  </h3>
-                  <p className="text-slate-600 text-base leading-relaxed font-medium">
-                    Finding the right engine is only half the battle; proper installation is critical for long-term performance. Vogue Technics provides a comprehensive end-to-end service, including fast nationwide delivery and professional "Supply and Fit" options. We operate our own recovery network, allowing us to collect your vehicle from anywhere in the UK and bring it to our specialist facility. Our technicians handle the entire replacement process, ensuring all ancillary components are correctly integrated and the engine electronics are perfectly calibrated, giving you a turn-key solution to your engine failure.
-                  </p>
-                </div>
-
-                <div className="space-y-6 pt-8 border-t border-slate-200">
-                  <h3 className="text-2xl md:text-3xl font-black text-slate-900 uppercase tracking-tighter italic leading-tight">
-                    The <span className="text-primary italic">Vogue Technics</span> Advantage
-                  </h3>
-                  <p className="text-slate-600 text-base leading-relaxed font-medium">
-                    Choosing Vogue Technics means choosing peace of mind without the main dealer price tag. Customers typically save up to 40% compared to dealer rates while receiving a service that is often more specialized and personal. We back all our workmanship with comprehensive written warranties, and our "Main Dealer Sourced" extended coverage options provide up to 24 months of additional protection. Whether you are dealing with a timing chain failure, a snapped crankshaft, or high-mileage wear, our experts are here to provide honest, professional advice and a transparent roadmap to getting your vehicle back on the road safely and efficiently.
-                  </p>
-                </div>
+            <div className="rounded-[2rem] bg-white border border-slate-200 p-8 shadow-sm">
+              <h3 className="text-xl font-bold text-slate-900">Written Quotes. No Additions. No Surprises.</h3>
+              <p className="mt-4 text-slate-700 leading-relaxed">
+                Engine work on a prestige vehicle is a significant financial decision, and we treat it as one. Every job at Vogue Technics begins with a thorough diagnostic assessment followed by a detailed written quote — covering every element of the work, every component to be used, and the complete cost. Nothing proceeds until you have reviewed and confirmed that quote.
+              </p>
+              <p className="mt-4 text-slate-700 leading-relaxed">
+                The figure you agree is the figure you pay. No additions appear mid-job. No unexpected costs surface when you come to collect.
+              </p>
+            </div>
+            <div className="rounded-[2rem] bg-white border border-slate-200 p-8 shadow-sm">
+              <h3 className="text-xl font-bold text-slate-900">Over 25 Years. Warranty Standard.</h3>
+              <div className="mt-5 space-y-3">
+                {[
+                  "Over 25 years of engine work.",
+                  "OEM and OEM-specification parts throughout.",
+                  "A minimum six-month warranty on every major job.",
+                  "Written quotes agreed before a single component is touched.",
+                ].map((t) => (
+                  <div key={t} className="flex items-start gap-3">
+                    <span className="mt-0.5 rounded-xl bg-primary/10 p-2 text-primary">
+                      <CheckCircle2 className="h-4 w-4" />
+                    </span>
+                    <p className="text-slate-700 leading-relaxed">{t}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* SPECIALIST WORKSHOP FEATURE */}
-      <section className="py-32 bg-white overflow-hidden">
+      <section className="py-20 md:py-24 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="flex flex-col lg:flex-row gap-20 items-center">
-            {/* Left Column: Image */}
-            <div className="w-full lg:w-1/2 relative group">
-              <div className="relative rounded-[5rem] overflow-hidden shadow-2xl border-8 border-slate-50 group-hover:shadow-[0_40px_100px_-20px_rgba(0,0,0,0.3)] transition-all duration-700">
-                <Image 
-                  src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?q=80&w=1200&auto=format&fit=crop" 
-                  alt="Vogue Technics Engine Workshop" 
-                  width={800} 
-                  height={1000} 
-                  className="object-cover group-hover:scale-110 transition-transform duration-[3000ms]" 
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent" />
-                
-                {/* Float Badge */}
-                <div className="absolute bottom-10 left-10 right-10 p-8 bg-white/10 backdrop-blur-xl rounded-[3rem] border border-white/20 shadow-2xl transform translate-y-4 group-hover:translate-y-0 transition-transform duration-700">
-                  <div className="space-y-1">
-                    <h4 className="text-white text-2xl font-black uppercase tracking-tighter italic">Expert Technicians</h4>
-                    <p className="text-white/80 text-sm font-bold uppercase tracking-widest">State of the art repairs and diagnostics</p>
-                  </div>
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-900">Our Engine Services</h2>
+            <div className="w-24 h-1 bg-primary mx-auto rounded-full mt-4"></div>
+            <p className="mt-6 text-slate-600 text-[1.05rem] leading-relaxed">
+              We cover the full range of engine work across Range Rover, Land Rover, Jaguar, Audi, and BMW — from targeted single-fault repairs through to complete strip-and-rebuild jobs and full engine replacements. Every service is carried out to OEM specification with a warranty as standard on all major work.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[
+              {
+                title: "Engine Repair",
+                slug: "engine-repair",
+                body: "Not every engine fault requires a full rebuild, and recommending one when a targeted repair will genuinely resolve the problem is something we simply do not do. Our engine repair service covers oil leaks, EGR faults, cooling system failures, misfires, sensor faults, cylinder head work, and more — diagnosed accurately, addressed completely, and priced honestly.",
+              },
+              {
+                title: "Engine Rebuild",
+                slug: "engine-rebuild",
+                body: "A specialist engine rebuild restores your original unit to OEM specification — every wear component replaced, every clearance measured and set correctly, every seal and gasket renewed. For vehicles with significant internal wear or damage, a rebuild carried out by specialists who know the platform often represents better long-term value than a replacement unit of uncertain history. Every rebuild we complete carries a minimum six-month warranty.",
+              },
+              {
+                title: "Engine Replacement",
+                slug: "engine-replacement",
+                body: "When rebuild is no longer the economical path forward, we source and fit quality reconditioned and low-mileage used engines across all five brands and all engine families we cover. Every unit is assessed and tested at our Grays workshop before installation — compression verified, oil condition checked, overall integrity confirmed. We do not fit engines we have not ourselves verified.",
+              },
+              {
+                title: "Head Gasket Replacement",
+                slug: "head-gasket-replacement",
+                body: "Coolant loss without an obvious external source, white exhaust smoke on a cold start that clears as the engine warms, an overheating warning that keeps returning despite top-ups — head gasket failure develops gradually and is frequently underestimated until it causes secondary damage. We carry out head gasket replacement across all platforms we cover, including combustion gas testing before quoting, cylinder head inspection and resurfacing where required, and full cooling system pressure testing before return.",
+              },
+              {
+                title: "Timing Chain Replacement",
+                slug: "timing-chain-replacement",
+                body: "A metallic cold-start rattle that owners frequently dismiss as normal is rarely that. On the Land Rover Ingenium, the BMW N47, the Jaguar 3.0 diesel, and the Audi 2.0 TDI, timing chain wear follows well-understood patterns — and a chain that has reached the point of rattling audibly has already progressed into territory where delay becomes expensive. We carry out complete timing chain replacement — chain, tensioners, guides, and sprockets replaced together as a system — across all affected platforms.",
+              },
+              {
+                title: "Timing Belt Replacement",
+                slug: "timing-belt-replacement",
+                body: "A timing belt does not gradually announce its failure the way a timing chain does. It simply breaks — and on an interference engine, the consequences are immediate, internal, and severe. Pistons meet valves. The damage that follows is rarely limited to a single component, and the repair bill that results is always significantly higher than the belt replacement that would have prevented it.\n\nTiming belt replacement at the correct manufacturer-specified interval is one of the most important preventative services a prestige vehicle owner can carry out — and one that is frequently deferred because the belt shows no obvious outward signs of wear before it fails. That is precisely why the interval exists.",
+              },
+              {
+                title: "Turbo Replacement",
+                slug: "turbo-replacement",
+                body: "Power loss under acceleration, black or blue smoke under load, a whistle or whine from the engine bay that appears under boost — turbocharger deterioration tends to make itself known clearly, and acting on those signs early prevents debris from entering the engine oil circuit and compounding the repair significantly. We source and fit OEM and remanufactured turbos across all platforms, with full oil system inspection and boost pressure verification on every fitment.",
+              },
+              {
+                title: "Engine Health Check & Diagnostics",
+                slug: "engine-health-check",
+                body: "Our engine health check goes well beyond a basic fault code read. We carry out a full mechanical and electronic assessment — compression testing across every cylinder, oil condition and contamination analysis, turbocharger condition and response, timing component assessment, and a complete electronic scan across all relevant control modules. You receive a written report in plain language: precise findings, honest recommendations, and a clear account of your engine's actual condition ranked by urgency.",
+              },
+            ].map((item) => (
+              <div key={item.title} className="rounded-[2rem] border border-slate-200 bg-slate-50 p-7 shadow-sm flex flex-col justify-between">
+                <h3 className="text-xl font-bold text-slate-900">{item.title}</h3>
+                <div className="mt-4 space-y-4 text-slate-700 leading-relaxed whitespace-pre-line">
+                  {item.body}
                 </div>
+
+                <div className="pt-6">
+                  <Link
+                    href={`/services/${item.slug}`}
+                    className="inline-flex items-center justify-center w-full bg-primary text-white font-bold py-3 px-6 rounded-xl hover:bg-primary-dark transition-colors"
+                  >
+                    Explore More
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 md:py-24 bg-slate-50">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="text-center max-w-4xl mx-auto mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-900">Every Vehicle. Every Engine. Every Platform.</h2>
+            <div className="w-24 h-1 bg-primary mx-auto rounded-full mt-4"></div>
+            <p className="mt-6 text-slate-600 text-[1.05rem] leading-relaxed">
+              Our specialist knowledge covers every significant engine fitted to the five brands we work on.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {[
+              {
+                title: "Range Rover",
+                body: "TDV6, SDV6, TDV8, SDV8, Ingenium 2.0, 5.0 Supercharged V8 across Vogue, Sport, Velar, and Evoque.",
+                href: "/range-rover-engines",
+              },
+              {
+                title: "Land Rover",
+                body: "Ingenium 2.0 diesel and petrol, 2.7 and 3.0 TDV6, across Defender, Discovery 3, 4 and 5, Discovery Sport, and Freelander.",
+                href: "/land-rover-engines",
+              },
+              {
+                title: "Jaguar",
+                body: "Ingenium 2.0, 3.0 V6 diesel, and V8 platforms across XF, XF Sportbrake, XE, XJ, F-Pace, and E-Pace.",
+                href: "/jaguar-engines",
+              },
+              {
+                title: "Audi",
+                body: "2.0 TDI and TFSI, 3.0 TDI V6, and V8 platforms across A3, A4, A5, A6, Q5, Q7, and RS range.",
+                href: "/audi-engines",
+              },
+              {
+                title: "BMW",
+                body: "N47, B47, N57, B57, N54, N55, B58, S55, and S63 across 1, 2, 3, 4, 5, 7 Series, X3, X5, X6, and M-range.",
+                href: "/bmw-engines",
+              },
+            ].map((b) => (
+              <div key={b.title} className="rounded-[2rem] bg-white border border-slate-200 p-7 shadow-sm flex flex-col justify-between">
+                <div>
+                  <h3 className="text-xl font-bold text-slate-900">{b.title}</h3>
+                  <p className="mt-4 text-slate-700 leading-relaxed">{b.body}</p>
+                </div>
+                <div className="pt-6">
+                  <Link
+                    href={b.href}
+                    className="inline-flex items-center justify-center w-full bg-primary text-white font-bold py-3 px-6 rounded-xl hover:bg-primary-dark transition-colors"
+                  >
+                    Explore Engines
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 md:py-24 bg-white">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-10 items-start">
+            <div className="space-y-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900">UK-Wide Service From Our Grays, Essex Workshop</h2>
+              <div className="h-1 w-24 rounded-full bg-primary" />
+              <div className="space-y-5 text-[1.05rem] leading-relaxed text-slate-700">
+                <p>
+                  Being based in Grays puts us within straightforward reach of London, the Home Counties, Kent, and the wider South East. But a significant proportion of our customers are not local — and that is not a barrier.
+                </p>
+                <p>
+                  We offer engine collection and return delivery covering the whole of the United Kingdom. Your engine comes to us, the work is carried out to the same standard regardless of your location, and it comes back to you fully tested and covered by our written warranty. For customers who require the complete vehicle to be transported, we can advise on the most straightforward logistics options.
+                </p>
+                <p>
+                  Distance is not a reason to compromise on the quality of specialist you use.
+                </p>
               </div>
             </div>
 
-            {/* Right Column: Text Content */}
-            <div className="w-full lg:w-1/2 space-y-12">
-              <div className="space-y-6">
-                <h2 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter uppercase italic leading-none">
-                  Top-Quality Specialist <br />
-                  <span className="text-primary italic">Engine Repair Specialist</span>
-                </h2>
-                <div className="h-2 w-32 bg-primary rounded-full" />
-              </div>
-              
-              <div className="space-y-8 text-slate-600 text-lg leading-relaxed font-medium">
-                <p>
-                  With over 20 years of experience facilitating vehicle owners, we strive to provide the best servicing and fitting facility to the locals of Grays, Essex, regardless of what model they drive. As a trusted Engine Specialist and Land Rover Specialist, our workshop is the preferred choice for drivers searching for a specialist near me for repairs, fitting, or professional diagnostics.
-                </p>
-                <p>
-                  With substantial investment in state-of-the-art facilities and the most updated equipment specialised for engine repair, servicing, and fitting of engines, we are the top choice for locals and have gained their trust through dedication to our craft.
-                </p>
-                <p>
-                  Our testimonials prove the quality and devotion we bring to our services and our clients. Visit us for complete peace of mind, expert service, and trusted workmanship backed by true specialists in Range Rover engine works, BMW engines repair and Land Rover engine rebuild services.
-                </p>
-              </div>
-
-              <div className="pt-6">
-                <Link href="/contact-us" className="inline-flex items-center gap-6 text-primary font-black text-3xl hover:translate-x-12 transition-all uppercase tracking-tighter italic group">
-                  Book Specialist Now <ArrowRight className="w-12 h-12 group-hover:translate-x-4 transition-transform" />
+            <div className="rounded-[2.5rem] bg-slate-900 text-white p-8 shadow-2xl border border-white/10">
+              <h3 className="text-2xl font-bold">Whatever the engine, whatever the fault</h3>
+              <p className="mt-4 text-slate-300 leading-relaxed">
+                Whatever the engine, whatever the fault, whatever the platform — do not leave it to a garage that works from general experience and hope for the best result. Vogue Technics is based in Grays, Essex, serves customers across the whole of the United Kingdom, and brings over 25 years of dedicated prestige engine experience to every job that comes through our doors.
+              </p>
+              <div className="mt-8 flex flex-col gap-3">
+                <Link
+                  href="/contact-us"
+                  className="inline-flex items-center justify-center rounded-2xl bg-primary px-6 py-4 font-bold text-white transition-all hover:bg-emerald-600 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99]"
+                >
+                  Request a Free Engine Quote — No Obligation
+                </Link>
+                <a
+                  href="tel:01375531355"
+                  className="inline-flex items-center justify-center rounded-2xl bg-white px-6 py-4 font-bold text-slate-900 transition-all hover:bg-slate-50 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99]"
+                >
+                  Call Us and Speak to a Specialist Today
+                </a>
+                <Link
+                  href="/contact-us"
+                  className="inline-flex items-center justify-center rounded-2xl border border-white/20 bg-white/5 px-6 py-4 font-bold text-white transition-all hover:bg-white hover:text-slate-900 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99]"
+                >
+                  Book an Engine Inspection at Our Grays Workshop
                 </Link>
               </div>
             </div>
@@ -359,28 +382,26 @@ export default function EnginesPortalClient() {
         </div>
       </section>
 
-      {/* FAQ SECTION */}
-      <FAQSection />
+      <FAQSection items={faqs} />
 
-      {/* FINAL CALL TO ACTION */}
       <section className="py-24 bg-primary relative overflow-hidden">
         <div className="container mx-auto px-4 lg:px-8 text-center relative z-10">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-6xl font-black text-white mb-8 tracking-tighter uppercase italic"
+            className="text-2xl md:text-4xl font-black text-white mb-6 tracking-tighter uppercase italic"
           >
-            NEED AN EXPERT OPINION?
+            Vogue Technics | Engine Specialists | Grays, Essex | UK-Wide Collection Available
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-lg text-emerald-50 mb-16 max-w-3xl mx-auto font-medium"
+            className="text-sm md:text-base text-emerald-50 mb-10 max-w-3xl mx-auto font-medium"
           >
-            Our master technicians are ready to diagnose and resolve your engine issues properly. Contact us for a free quote today.
+            Range Rover • Land Rover • Jaguar • Audi • BMW
           </motion.p>
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}
@@ -393,7 +414,7 @@ export default function EnginesPortalClient() {
               CALL 01375 531355
             </a>
             <Link href="/contact-us" className="bg-slate-900 text-white font-black py-6 px-16 rounded-[2rem] shadow-2xl transition-all transform hover:-translate-y-2 hover:bg-slate-800 text-xl uppercase tracking-widest min-w-[320px] border border-white/10">
-              REQUEST QUOTE ONLINE
+              REQUEST A FREE ENGINE QUOTE
             </Link>
           </motion.div>
         </div>

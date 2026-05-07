@@ -4,6 +4,24 @@ import type { NextRequest } from 'next/server'
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
+  // 0. Jaguar model URL normalization
+  // Keep only the preferred model groupings as canonical destinations.
+  if (
+    pathname === '/jaguar-f-type-v6-engines' ||
+    pathname === '/jaguar-f-type-v8-engines' ||
+    pathname === '/jaguar-f-type-svr-r-engines'
+  ) {
+    return NextResponse.redirect(new URL('/jaguar-f-type-coupe-engines', request.url), 308);
+  }
+
+  if (
+    pathname === '/jaguar-xj-x300-x308-engines' ||
+    pathname === '/jaguar-xj-x350-x358-engines' ||
+    pathname === '/jaguar-xj-x351-engines'
+  ) {
+    return NextResponse.redirect(new URL('/jaguar-xj-engines', request.url), 308);
+  }
+
   // 1. Blog Tag/Category/Author/Page Pattern Cleanup
   // Redirects low-value legacy WordPress taxonomy pages to the main blog
   if (

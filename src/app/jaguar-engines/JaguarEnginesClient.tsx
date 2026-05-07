@@ -2,497 +2,634 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { CheckCircle2, Shield, Search, Phone, Clock, Wrench, Award, Star, Activity, ArrowRight, AlertTriangle, Truck, Settings } from "lucide-react";
+import { ArrowRight, Phone } from "lucide-react";
 import PartnerLogos from "@/components/common/PartnerLogos";
-import ReviewsSection from "@/components/common/ReviewsSection";
 import { motion } from "framer-motion";
 import Breadcrumbs from "@/components/common/Breadcrumbs";
 import RegSearch from "@/components/common/RegSearch";
 import FAQSection from "@/components/common/FAQSection";
 
 const jaguarModels = [
-  { title: "Jaguar E-Pace Engines", link: "/jaguar-e-pace-engines" },
-  { title: "Jaguar F-Pace Engines", link: "/jaguar-f-pace-engines" },
-  { title: "Jaguar F-Type Coupe Engines", link: "/jaguar-f-type-coupe-engines" },
-  { title: "Jaguar XE Engines", link: "/jaguar-xe-engines" },
-  { title: "Jaguar XF Engines", link: "/jaguar-xf-engines" },
-  { title: "Jaguar XF Sportbrake Engines", link: "/jaguar-xf-sportbrake-engines" },
-  { title: "Jaguar XJ Engines", link: "/jaguar-xj-engines" },
-  { title: "Jaguar XK Engines", link: "/jaguar-xk-engines" },
-  { title: "Jaguar XK8 Engines", link: "/jaguar-xk8-engines" },
-  { title: "Jaguar XKR Engines", link: "/jaguar-xkr-engines" },
-  { title: "Jaguar XKR-S Engines", link: "/jaguar-xkr-s-engines" },
+  {
+    title: "Jaguar E-Pace Engines",
+    link: "/jaguar-e-pace-engines",
+    description:
+      "The E-Pace uses the 2.0 Ingenium petrol and diesel engines. Diesel models can be susceptible to oil dilution from DPF regeneration, with timing chain wear a known concern at higher mileage. We provide E-Pace diagnostics, timing chain replacement and full rebuilds with deep Ingenium knowledge.",
+  },
+  {
+    title: "Jaguar F-Pace Engines",
+    link: "/jaguar-f-pace-engines",
+    description:
+      "The F-Pace is Jaguar’s best-selling model with Ingenium four-cylinder and V6 petrol/diesel engines. Turbo faults, coolant failures and oil consumption are common, with the 3.0 V6 diesel also seeing timing and oil pressure issues as mileage rises. We repair, rebuild and supply reconditioned engines across all variants.",
+  },
+  {
+    title: "Jaguar F-Type Coupe Engines",
+    link: "/jaguar-f-type-coupe-engines",
+    description:
+      "The F-Type is Jaguar’s performance flagship with supercharged V6 and V8 petrol engines that demand precision. Common concerns include crankshaft bearing wear, supercharger faults and oil pressure issues on higher-mileage cars. We rebuild F-Type engines to OEM specification with bench testing before return.",
+  },
+  {
+    title: "Jaguar XE Engines",
+    link: "/jaguar-xe-engines",
+    description:
+      "The XE shares the 2.0 Ingenium diesel with other models. Oil dilution, timing chain wear and turbo faults are frequent issues on the diesel variants. These are manageable when caught early, but can escalate when ignored. We diagnose properly and rebuild/repair with root-cause focus.",
+  },
+  {
+    title: "Jaguar XF Engines",
+    link: "/jaguar-xf-engines",
+    description:
+      "The XF is one of the models we work on most. 2.0 Ingenium diesel owners often report timing chain concerns, oil dilution and turbo issues. Earlier 2.7 and 3.0 V6 diesels have their own timing vulnerabilities, while 5.0 V8 variants need specialist knowledge. UK-wide collection available.",
+  },
+  {
+    title: "Jaguar XF Sportbrake Engines",
+    link: "/jaguar-xf-sportbrake-engines",
+    description:
+      "The XF Sportbrake shares its engine family with the XF saloon and the same Ingenium-related diesel patterns, plus timing chain concerns. Sportbrake models often cover higher mileages, making timely specialist attention important. We rebuild, repair and supply reconditioned replacements.",
+  },
+  {
+    title: "Jaguar XJ Engines",
+    link: "/jaguar-xj-engines",
+    description:
+      "The XJ has used a broad range of V6 and V8 petrol and diesel engines. Higher-mileage engines can develop oil pressure faults, bearing wear and timing-related issues that require specialist diagnosis. We maintain and rebuild XJ engines to a standard befitting a flagship saloon.",
+  },
+  {
+    title: "Jaguar XK Engines",
+    link: "/jaguar-xk-engines",
+    description:
+      "The XK grand tourer is powered by the AJ-V8. Generally robust, but can develop oil consumption, valve timing irregularities and cooling system faults as mileage accumulates. Rebuilding an AJ-V8 correctly requires understanding of its tolerances and characteristics — we do it properly, not quickly.",
+  },
+  {
+    title: "Jaguar XK8 Engines",
+    link: "/jaguar-xk8-engines",
+    description:
+      "The XK8 reintroduced the V8 to Jaguar and its AJ-V8 has well-known vulnerabilities. Timing chain tensioner failure can be catastrophic if not addressed promptly, alongside oil leaks, cooling system degradation and wear. We carry out timing chain work, rebuilds and targeted repairs with AJ-V8 expertise.",
+  },
+  {
+    title: "Jaguar XKR Engines",
+    link: "/jaguar-xkr-engines",
+    description:
+      "The XKR adds a supercharger to the AJ-V8, increasing complexity and reward. Supercharger faults, oil system issues and crankshaft bearing wear are common on higher-mileage cars. Rebuilding a supercharged V8 demands precision and the right equipment — we deliver that level of detail.",
+  },
+  {
+    title: "Jaguar XKR-S Engines",
+    link: "/jaguar-xkr-s-engines",
+    description:
+      "The XKR-S uses an uprated supercharged V8 with higher stresses and tighter tolerances. Engine work demands the highest precision — the consequences of improper repair are significant. We carry out XKR-S diagnostics, rebuilds and repairs using OEM-spec components and true specialist knowledge.",
+  },
 ];
 
-const jaguarEngineSizes = [
-  { title: "Jaguar 2.0 Engines", link: "/jaguar-2-0-engines" },
-  { title: "Jaguar 2.2 Engines", link: "/jaguar-2-2-engines" },
-  { title: "Jaguar 2.8 Engines", link: "/jaguar-2-8-engines" },
-  { title: "Jaguar 3.0 Engines", link: "/jaguar-3-0-engines" },
-  { title: "Jaguar 4.2 Engines", link: "/jaguar-4-2-engines" },
-  { title: "Jaguar 5.0 Engines", link: "/jaguar-5-0-engines" },
+const trustIndicators = [
+  "Written Warranty",
+  "UK-Wide Collection",
+  "25+ Years Experience",
+  "OEM Quality Parts",
+  "Fast Turnaround",
+  "Jaguar Specialists Only",
 ];
 
-const jaguarProblems = [
-  "Timing Chain Tensioner Failure",
-  "Cooling System Problems",
-  "Oil Leaks (Pan/Valve Cover)",
-  "Ignition Coil Issues",
-  "Turbocharger Failures (Diesel)",
-  "Fuel Injector Problems",
-  "Electrical Issues (ECU/Sensors)",
-  "Head Gasket Failures",
+const keyStats = [
+  { label: "Years of Jaguar Engine Expertise", value: "25+" },
+  { label: "Jaguar Engines Rebuilt & Repaired", value: "10,000+" },
+  { label: "Jaguar Dedicated", value: "100%" },
+  { label: "Collection & Delivery", value: "UK-Wide" },
+];
+
+const jaguarReviews = [
+  {
+    quote:
+      "My Jaguar XF had been flagging up timing chain warnings for a while and two local garages told me it would be a huge job. Vogue Technics were upfront from the very first call — they explained exactly what was involved, gave me a fair quote, and turned the car around in under two weeks. The XF is running better than it has in years. Absolutely first class service.",
+    name: "Andrew K.",
+    vehicle: "Jaguar XF 2.0 Ingenium Diesel — Birmingham",
+  },
+  {
+    quote:
+      "The turbocharger on my F-Pace went without much warning — one day it was fine, the next it was producing clouds of smoke and had no power at all. I called Vogue Technics and they arranged collection from my home in Yorkshire. The diagnostic report they sent over was thorough and completely clear. The replacement and associated engine work was carried out to a really high standard and the car has been faultless since. I would not take my Jaguar anywhere else.",
+    name: "Sarah L.",
+    vehicle: "Jaguar F-Pace 3.0 V6 Diesel — Yorkshire",
+  },
+  {
+    quote:
+      "I was facing a near £10,000 bill from my Jaguar dealer for an engine replacement on my XE. Vogue Technics offered me a fully reconditioned engine with a written warranty for significantly less. The whole process was smooth and professional — they kept me updated throughout and the car was ready ahead of schedule. Genuinely impressed with the quality of the work and the honesty of the people involved.",
+    name: "Marcus T.",
+    vehicle: "Jaguar XE 2.0 Diesel — Surrey",
+  },
+];
+
+const modernJaguarServices = [
+  "Jaguar Ingenium 2.0 diesel and petrol engine rebuild — F-Pace, XF, XE, E-Pace",
+  "AJ133 5.0 supercharged V8 supply and rebuild — F-Type SVR, F-Pace SVR",
+  "AJ126 3.0 supercharged V6 engine replacement — XF, XJ, F-Pace",
+  "Jaguar 3.0 V6 diesel engine supply and fit — all model years",
+  "4.2 litre V8 supercharged engine rebuild — XF, XJ, XK variants",
+  "Remanufactured Jaguar engines supplied with warranty — UK-wide delivery available",
+];
+
+const classicJaguarServices = [
+  "E-Type 3.8 and 4.2 litre straight-six engine rebuild and supply",
+  "XJ6 4.0 litre AJ6 and AJ16 engine rebuild — all series",
+  "XJS V12 engine supply — 5.3 and 6.0 litre variants",
+  "XK8 and XKR 4.0 and 4.2 litre V8 engine rebuild service",
+  "S-Type 3.0 V6 and 4.2 V8 engine supply and fit",
+  "X-Type 2.5 and 3.0 V6 engine replacement and rebuild",
+];
+
+const faultList = [
+  "Jaguar engine system fault — Ingenium management system diagnosis",
+  "Check engine light and engine warning light — all model years resolved",
+  "Failsafe engine mode — S-Type, XJ8, XK8 specialist diagnosis",
+  "Jaguar Ingenium engine reliability issues — targeted rebuild and repair",
+  "5.0 V8 supercharged engine problems — timing chain and supercharger faults",
+  "Low battery — please start engine — electrical and charging system faults",
+  "Classic V12 engine rebuild — XJS and E-Type specialist service",
+];
+
+const faqs = [
+  {
+    question: "How much does a Jaguar engine rebuild cost?",
+    answer:
+      "The cost depends on engine type, extent of damage, and the components required. A rebuild on a 2.0 Ingenium diesel typically starts from around £3,000 and can rise to £5,500+ for severely damaged units. V6 and V8 rebuilds carry higher costs due to complexity. We provide a detailed, itemised quote before any work begins.",
+  },
+  {
+    question: "How long does a Jaguar engine rebuild take?",
+    answer:
+      "Most rebuilds are completed within 5 to 10 working days from receipt of the vehicle or engine. More complex jobs or those requiring additional machining can take longer. We provide a clear timeline at the outset and keep you updated throughout.",
+  },
+  {
+    question: "Do you offer a warranty on Jaguar engine rebuilds?",
+    answer:
+      "Yes. Engine rebuilds, repairs and reconditioned engines completed at Vogue Technics are covered by a written warranty as standard. Terms are agreed clearly before any work begins.",
+  },
+  {
+    question: "Can you collect my Jaguar from anywhere in the UK?",
+    answer:
+      "Yes. We offer a fully managed UK-wide collection and delivery service for vehicles and engines, so distance from Grays is not a barrier to accessing our specialist work.",
+  },
+  {
+    question: "What are the signs my Jaguar timing chain needs replacing?",
+    answer:
+      "A common early sign is a rattling noise on cold start. You may also see timing-related fault codes, rough idle, or a loss of power. On Ingenium diesel engines in particular, timing chain wear should be treated as urgent.",
+  },
+  {
+    question: "Is a reconditioned Jaguar engine as reliable as a new one?",
+    answer:
+      "When built correctly to OEM specification using quality components and properly tested, a reconditioned engine can be an excellent long-term solution. We build engines in-house, test them, and supply them with written warranty terms agreed up-front.",
+  },
+  {
+    question: "What are the most common Jaguar engine problems?",
+    answer:
+      "Common faults include timing chain wear (particularly on some diesel variants), oil dilution concerns on certain Ingenium diesels, turbocharger failure on higher-mileage cars, cooling system issues that can contribute to head gasket problems, and wear-related oil pressure or bearing issues on older engines.",
+  },
+  {
+    question: "Should I repair or replace my Jaguar engine?",
+    answer:
+      "It depends on the extent of damage and the overall engine condition. In many cases a rebuild is the better investment; in others, a verified reconditioned replacement is more practical. We present both options clearly after diagnosis.",
+  },
+  {
+    question: "Do you carry out diagnostics before recommending engine work?",
+    answer:
+      "Always. We use specialist diagnostic equipment plus physical inspection and testing. You receive clear findings before any major work is authorised.",
+  },
+  {
+    question: "How do I book my Jaguar in with Vogue Technics?",
+    answer:
+      "Call us to speak with a specialist or request a quote online. If you are not local to Grays, we can discuss UK-wide collection options at the same time.",
+  },
 ];
 
 export default function JaguarEnginesClient() {
   return (
     <div className="bg-white min-h-screen">
-      {/* HERO SECTION */}
-      <section className="relative min-h-[70vh] flex flex-col justify-center overflow-hidden bg-slate-900 pt-32 pb-20">
+      <section className="relative overflow-hidden bg-slate-900 pt-32 pb-24">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/car_bgg.jpg"
-            alt="Jaguar Engine Specialist"
+            alt="Jaguar engine specialists in Grays"
             fill
-            className="object-cover opacity-40 mix-blend-overlay"
+            className="object-cover opacity-30 mix-blend-overlay"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/85 to-slate-900/50" />
         </div>
 
         <div className="container relative z-10 mx-auto px-4 lg:px-8">
           <Breadcrumbs items={[{ name: "Jaguar Engines", href: "/jaguar-engines" }]} />
           
-          <div className="text-center max-w-4xl mx-auto">
-            <motion.span 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="inline-block py-1 px-3 rounded-full bg-primary/20 text-emerald-400 font-semibold tracking-wider text-sm mb-6 border border-primary/30 shadow-[0_0_15px_rgba(25,135,84,0.3)] uppercase">
-            Jaguar Specialist
-          </motion.span>
-            <motion.h1 
+          <div className="max-w-5xl pt-8">
+            <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight mb-8 leading-tight uppercase">
-              Find the <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-400 to-green-500 italic">Perfect Jaguar Engine</span> <br />
-              for Your Vehicle
+              className="text-3xl font-black leading-[1.08] tracking-tight text-white md:text-5xl"
+            >
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-300 to-green-400">
+                Jaguar Engine Rebuild Specialists
+              </span>{" "}
+              | Grays, Essex | UK-Wide Service
             </motion.h1>
-            <motion.p 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-              At Vogue Technics, we offer top-quality reconditioned and used Jaguar engines. Our engines are thoroughly inspected and tested to ensure peak performance.
-            </motion.p>
-          
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="flex justify-center mt-8 w-full">
-            <RegSearch />
-          </motion.div>
-        </div>
-      </div>
-    </section>
+              transition={{ delay: 0.12 }}
+              className="mt-7"
+            >
+              <RegSearch className="max-w-3xl" />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.22 }}
+              className="mt-7 max-w-4xl text-sm leading-relaxed text-slate-300 md:text-base space-y-4"
+            >
+              <p>
+                Your Jaguar was engineered to perform. When that performance starts to fade — when the warning lights appear, the engine note changes, or the power simply is not what it was — you need specialists who understand these machines at a fundamental level.
+              </p>
+              <p>
+                At Vogue Technics, Jaguar engines are our sole focus. With over 25 years of dedicated experience, our team carries out Jaguar engine rebuilds, repairs, and replacements to the highest standard, backed by a written warranty and supported by a UK-wide collection and delivery service.
+              </p>
+              <p>
+                We do not take a generalist approach. Every technician in our Grays, Essex workshop has spent their career working exclusively on Jaguar powertrains — from classic AJ6 and V8 units through to the modern Ingenium engine family.
+              </p>
+            </motion.div>
 
-
-      <ReviewsSection 
-        title="What Our Customers Say" 
-        subtitle="Hear from our satisfied customers who have experienced our professional Jaguar engine services." 
-      />
-
-      {/* EXPERIENCE SECTION */}
-      <section className="py-24 bg-white border-b border-slate-100 overflow-hidden">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="flex flex-col lg:flex-row gap-16 items-center">
-            <div className="w-full lg:w-1/2 space-y-8">
-                <h2 className="text-2xl md:text-4xl font-extrabold text-slate-900 leading-none tracking-tight uppercase underline decoration-8 underline-offset-[12px] decoration-primary/20">
-                  Over 2 Decades of <br/><span className="text-primary italic">Jaguar Expertise</span>
-                </h2>
-              <div className="space-y-6 text-slate-600 text-base leading-relaxed">
-                <p>
-                  With over 20 years of experience to facilitate the Jaguar owners, we strive to provide the best servicing and fitting facility to the locals regardless of what model they drive.
-                </p>
-                <p>
-                  With Substantial investment in state-of-the-art facility and most updated equipment specialized for Jaguar repairs, we are the top choice for engine reconditioning and fitting.
-                </p>
-                <div className="font-bold text-slate-900 border-l-8 border-primary pl-8 py-6 bg-slate-50 rounded-r-[3rem] shadow-sm italic text-lg">
-                   "Our testimonials prove the quality and devotion to our services and our clients. Visit us to have complete peace of mind."
-                </div>
-              </div>
-            </div>
-            <div className="w-full lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6 relative">
-              <div className="bg-slate-900 rounded-[3rem] p-12 text-center text-white space-y-3 border-b-4 border-primary transform hover:scale-105 transition-transform duration-500 shadow-2xl">
-                <div className="text-5xl font-extrabold text-primary">20+</div>
-                <div className="text-[0.7rem] font-bold uppercase tracking-[0.4em] text-slate-400">Years Exp</div>
-              </div>
-              <div className="bg-primary rounded-[3rem] p-12 text-center text-white space-y-3 sm:mt-12 transform hover:scale-105 transition-transform duration-500 shadow-2xl">
-                <div className="text-5xl font-extrabold italic underline decoration-white/30">UK's</div>
-                <div className="text-[0.7rem] font-bold uppercase tracking-[0.4em] text-emerald-100">Specialist</div>
-              </div>
-              <div className="bg-slate-50 border-2 border-slate-100 rounded-[3rem] p-12 text-center space-y-3 transform hover:scale-105 transition-transform duration-500 shadow-xl">
-                <div className="text-5xl font-extrabold text-slate-900 tracking-tight">OEM</div>
-                <div className="text-[0.7rem] font-bold uppercase tracking-[0.4em] text-slate-500">Quality Parts</div>
-              </div>
-              <div className="bg-slate-900 rounded-[3rem] p-12 text-center text-white space-y-3 sm:mt-12 border-b-4 border-primary transform hover:scale-105 transition-transform duration-500 shadow-2xl">
-                <div className="text-5xl font-extrabold text-primary">40%</div>
-                <div className="text-[0.7rem] font-bold uppercase tracking-[0.4em] text-slate-400">Off Deals</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* INTRODUCTION SECTION */}
-      <section className="py-24 bg-slate-50">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="flex flex-col lg:flex-row-reverse gap-16 items-start">
-            <div className="w-full lg:w-2/3 space-y-12">
-              <div className="space-y-8">
-                <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight uppercase leading-none">Jaguar Engine <span className="text-primary italic">Replacement Specialists</span></h2>
-                <div className="text-slate-600 text-lg leading-relaxed space-y-6">
-                  <p>
-                    We are Jaguar Engine Replacement specialists. Our team has extensive experience in replacing Jaguar engines correctly and efficiently. From removal to fitting, we ensure everything is done to the highest standards.
-                  </p>
-                  <p>
-                    Replacing a Jaguar engine is a complex task. It requires skilled professionals and specialized tools. We have both. Our experts ensure that your new engine is fitted perfectly, guaranteed optimal performance and longevity.
-                  </p>
-                  <div className="bg-white p-10 rounded-[3rem] border-2 border-slate-100 shadow-lg relative overflow-hidden group">
-                     <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-1000"></div>
-                     <p className="font-bold text-slate-800 text-lg leading-relaxed relative z-10 italic">
-                        In our garage, we provide a variety of engine components for sale or replacement. We obtain our components from reliable suppliers in order to guarantee performance and reliability.
-                     </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* COMMON PROBLEMS */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-8">
-                <div className="space-y-8">
-                  <div className="w-16 h-16 bg-red-100 rounded-[1.5rem] flex items-center justify-center text-red-600 shadow-inner">
-                    <AlertTriangle className="w-8 h-8" />
-                  </div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-slate-900 uppercase tracking-tight italic">Common Jaguar <span className="text-red-500">Engine Faults</span></h3>
-                  <div className="grid grid-cols-1 gap-3">
-                    {jaguarProblems.map((problem, i) => (
-                      <div key={i} className="flex items-center gap-4 text-slate-700 font-bold bg-white p-4 rounded-2xl border border-slate-100 shadow-sm hover:border-red-200 transition-colors">
-                        <CheckCircle2 className="w-6 h-6 text-red-500" />
-                        {problem}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                <div className="space-y-8">
-                  <div className="w-16 h-16 bg-primary/10 rounded-[1.5rem] flex items-center justify-center text-primary shadow-inner">
-                    <Settings className="w-8 h-8 animate-spin-slow" />
-                  </div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-slate-900 uppercase tracking-tight italic">High Performance <span className="text-primary">Parts & Repairs</span></h3>
-                  <p className="text-slate-600 text-base leading-relaxed">
-                    By utilizing authentic Jaguar OEM components, we assure a precise fit and excellent performance. Our skilled mechanics have the expertise to replace any component accurately.
-                  </p>
-                  <p className="text-slate-600 text-base leading-relaxed font-medium bg-white p-6 rounded-3xl border border-slate-100">
-                    We supply, fit, and deliver Jaguar engines nationwide. Our professional fitting ensures your engine runs smoothly from the moment you turn the key.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Sticky Sidebar Search */}
-            <div className="w-full lg:w-1/3 sticky top-32">
-              <div className="bg-slate-900 rounded-[3rem] p-12 border border-slate-800 shadow-2xl relative overflow-hidden text-center">
-                <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-50"></div>
-                <h3 className="text-2xl font-black text-white mb-10 uppercase tracking-widest italic">Jaguar Engine Search</h3>
-                <form className="space-y-8">
-                  <div className="flex flex-col overflow-hidden rounded-3xl border-2 border-slate-300 bg-[#eeb318] shadow-inner transform hover:scale-105 transition-all duration-500">
-                    <div className="bg-[#0033A0] flex flex-col items-center justify-center py-2 shrink-0 border-b border-[#0033A0]/50">
-                       <span className="text-white font-black text-[0.6rem] tracking-[0.4em] uppercase">Vogue Technics UK</span>
-                    </div>
-                    <input 
-                      type="text" 
-                      placeholder="ENTER VEHICLE REG NUMBER" 
-                      className="w-full bg-transparent text-slate-900 font-black text-xl md:text-3xl px-2 sm:px-3 py-6 focus:outline-none placeholder:text-[10px] sm:placeholder:text-xs md:placeholder:text-sm placeholder:tracking-normal uppercase tracking-[0.2em] md:tracking-[0.3em] text-center placeholder:text-slate-700/60"
-                    />
-                  </div>
-                  <button type="button" className="w-full bg-primary hover:bg-emerald-500 text-white font-black py-6 px-8 rounded-[2rem] shadow-[0_15px_35px_rgba(25,135,84,0.4)] transition-all flex justify-center items-center gap-4 transform hover:-translate-y-2 uppercase tracking-[0.15em] text-lg">
-                    <Search className="w-7 h-7" /> INSTANT QUOTE
-                  </button>
-                </form>
-                <div className="mt-12 pt-10 border-t border-slate-800">
-                   <p className="text-slate-500 text-xs mb-6 uppercase tracking-[0.4em] font-black">Expert Jaguar Team</p>
-                  <a href="tel:01375531355" className="text-white font-black text-3xl md:text-4xl tracking-tighter hover:text-primary transition-colors flex items-center justify-center gap-4">
-                    <Phone className="w-8 h-8 text-primary" /> 01375 531355
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* JAGUAR MODELS GRID */}
-      <section className="py-32 bg-white relative overflow-hidden">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="text-center max-w-4xl mx-auto mb-16 md:mb-24 px-4">
-             <h2 className="text-4xl md:text-7xl font-black text-slate-900 tracking-tighter uppercase leading-none underline decoration-primary decoration-[12px] underline-offset-[16px]">Find your <span className="text-primary italic">Jaguar</span></h2>
-             <p className="text-slate-500 mt-8 md:mt-10 text-xl md:text-2xl font-medium tracking-wide uppercase">Elite Replacement Engines for all major Jaguar Models</p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-            {jaguarModels.map((model, idx) => (
-              <motion.div
-                key={idx}
-                whileHover={{ y: -15, scale: 1.02 }}
-                className="group h-full"
-              >
-                <Link href={model.link} className="block h-full">
-                  <div className="bg-slate-50 border-4 border-slate-100 rounded-[3rem] p-10 hover:bg-white hover:border-primary hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] transition-all duration-700 flex flex-col items-center text-center space-y-8 relative overflow-hidden h-full group">
-                    <div className="w-full aspect-square bg-white rounded-[2rem] flex flex-col items-center justify-center border-2 border-slate-200 group-hover:border-primary/20 transition-all duration-700 shadow-inner group-hover:scale-105">
-                       <span className="text-[0.6rem] font-black uppercase tracking-[0.4em] text-slate-300">Jaguar Image</span>
-                    </div>
-                    <div className="flex-grow">
-                      <h3 className="text-xl font-black text-slate-900 group-hover:text-primary transition-colors uppercase tracking-tighter leading-tight">
-                        {model.title}
-                      </h3>
-                    </div>
-                    <div className="flex items-center text-primary font-black text-[0.8rem] uppercase tracking-[0.3em] group-hover:gap-6 transition-all border-b-2 border-transparent hover:border-primary pb-1">
-                      Explore <ArrowRight className="w-5 h-5 ml-2" />
-                    </div>
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-
-          <div id="engine-sizes" className="mt-24 md:mt-32 pt-16 md:pt-24 border-t-8 border-slate-100">
-            <div className="text-center max-w-4xl mx-auto mb-16 text-center px-4">
-              <h2 className="text-3xl md:text-6xl font-black text-slate-900 tracking-tighter uppercase leading-none underline decoration-primary decoration-[10px] underline-offset-[12px]">Popular <span className="text-primary italic">Engine Sizes</span></h2>
-            </div>
-            <div className="flex flex-wrap justify-center gap-4 lg:gap-8">
-              {jaguarEngineSizes.map((engine, idx) => (
-                <Link 
-                  key={idx}
-                  href={engine.link}
-                  className="bg-white border-4 border-slate-100 text-slate-950 hover:text-white hover:bg-primary hover:border-primary px-6 py-4 md:px-10 md:py-6 rounded-[2rem] font-black transition-all shadow-xl flex items-center gap-4 text-lg md:text-xl group hover:-translate-y-3 transform duration-500 uppercase tracking-widest italic"
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className="mt-8 flex flex-wrap gap-2"
+            >
+              {trustIndicators.map((item) => (
+                <span
+                  key={item}
+                  className="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-bold tracking-wide text-slate-200"
                 >
-                  <Activity className="w-6 h-6 text-primary group-hover:text-white transition-colors animate-pulse" />
-                  {engine.title}
-                </Link>
+                  {item}
+                </span>
+              ))}
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.38 }}
+              className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"
+            >
+              {keyStats.map((s) => (
+                <div
+                  key={s.label}
+                  className="rounded-[1.25rem] border border-white/10 bg-slate-950/40 p-5"
+                >
+                  <div className="text-3xl font-black text-white tracking-tight">{s.value}</div>
+                  <div className="mt-2 text-xs font-semibold text-slate-300 leading-relaxed">
+                    {s.label}
+                  </div>
+                </div>
+              ))}
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-20 bg-slate-50">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
+              What Our Jaguar Customers Say
+            </h2>
+            <p className="mt-4 text-slate-700 leading-relaxed">
+              Reviews from real Jaguar owners who trusted Vogue Technics when their vehicle needed specialist attention.
+            </p>
+
+            <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+              {jaguarReviews.map((r) => (
+                <div
+                  key={r.name}
+                  className="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm"
+                >
+                  <div className="text-amber-500 font-black tracking-wide">★★★★★</div>
+                  <p className="mt-4 text-slate-700 leading-relaxed italic">“{r.quote}”</p>
+                  <div className="mt-5 border-t border-slate-100 pt-5">
+                    <div className="font-bold text-slate-900">{r.name}</div>
+                    <div className="text-sm font-medium text-slate-600">{r.vehicle}</div>
+                  </div>
+                </div>
               ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* SERVICE QUALITY GRID */}
-      <section className="py-32 bg-slate-900 text-white overflow-hidden relative">
+      <section className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            
-            {/* Rebuild */}
-            <div className="space-y-8 p-12 bg-white/5 rounded-[4rem] border-2 border-white/10 hover:border-primary/50 transition-all duration-700 group relative">
-              <div className="w-20 h-20 bg-primary/20 rounded-3xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-700 shadow-inner">
-                <Wrench className="w-10 h-10" />
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
+              Comprehensive Jaguar Engine Services
+            </h2>
+            <p className="mt-6 text-slate-700 leading-relaxed">
+              Whether your Jaguar requires a full engine rebuild, a targeted repair, or a fresh reconditioned unit, every service at Vogue Technics
+              is delivered with the same precision and commitment to quality. We handle the full spectrum of Jaguar engine work — and we do it
+              exclusively, which means our knowledge runs deep.
+            </p>
+
+            <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
+                <h3 className="text-xl font-bold text-slate-900">Engine Rebuilds</h3>
+                <p className="mt-4 text-slate-700 leading-relaxed">
+                  A full Jaguar engine rebuild is the definitive solution for engines that have suffered significant internal damage, excessive
+                  wear, or catastrophic failure. We strip the engine completely, clean and measure components against OEM tolerances, machine where
+                  required, and rebuild using quality parts. Every rebuilt engine is bench-tested and covered by written warranty.
+                </p>
+                <Link
+                  href="/services/engine-rebuild"
+                  className="mt-6 inline-flex items-center justify-center rounded-2xl bg-primary px-6 py-3 text-white font-black text-xs uppercase tracking-[0.18em] hover:bg-primary/90 transition-colors"
+                >
+                  Explore More <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
               </div>
-              <h3 className="text-4xl font-black uppercase tracking-tighter italic leading-none">Complete <br/>Jaguar Rebuild</h3>
-              <p className="text-slate-400 text-lg leading-relaxed">
-                Rebuilding involves a complete teardown where all engine parts are inspected, cleaned, and replaced if necessary. It's like giving your engine a second life.
-              </p>
-              <ul className="space-y-4 font-black uppercase tracking-[0.2em] text-sm text-slate-300 border-t border-white/10 pt-8">
-                <li className="flex items-center gap-4"><CheckCircle2 className="w-6 h-6 text-primary" /> Full Teardown</li>
-                <li className="flex items-center gap-4"><CheckCircle2 className="w-6 h-6 text-primary" /> Multi-Point Inspection</li>
-              </ul>
-            </div>
 
-            {/* Reconditioned */}
-            <div className="space-y-8 p-12 bg-primary rounded-[4rem] shadow-[0_40px_80px_-20px_rgba(25,135,84,0.4)] border-4 border-white lg:transform lg:scale-110 relative z-10 transition-transform duration-700">
-              <div className="w-20 h-20 bg-white rounded-3xl flex items-center justify-center text-primary shadow-2xl">
-                <Shield className="w-10 h-10" />
+              <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
+                <h3 className="text-xl font-bold text-slate-900">Engine Repairs</h3>
+                <p className="mt-4 text-slate-700 leading-relaxed">
+                  Not every Jaguar engine problem demands a full rebuild. We diagnose the root cause and carry out precise repairs using OEM-quality
+                  components. Common repairs include oil pressure faults, coolant system failures, crankshaft bearing wear, valve train damage, and
+                  turbo-related issues.
+                </p>
+                <Link
+                  href="/services/engine-repair"
+                  className="mt-6 inline-flex items-center justify-center rounded-2xl bg-primary px-6 py-3 text-white font-black text-xs uppercase tracking-[0.18em] hover:bg-primary/90 transition-colors"
+                >
+                  Explore More <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
               </div>
-              <h3 className="text-4xl font-black uppercase tracking-tighter italic leading-none text-white underline decoration-white/30 decoration-[6px] underline-offset-8">Supreme <br/>Reconditioned</h3>
-              <p className="text-emerald-50 text-xl leading-relaxed font-medium">
-                Restoring to original state. Cleaning, repairing, and replacing worn parts with cost-effective options that provide excellent Jaguar performance.
-              </p>
-              <ul className="space-y-4 font-black uppercase tracking-[0.2em] text-sm text-emerald-100 border-t border-white/20 pt-8">
-                <li className="flex items-center gap-4"><CheckCircle2 className="w-6 h-6 text-white" /> Cost-Effective Solution</li>
-                <li className="flex items-center gap-4"><CheckCircle2 className="w-6 h-6 text-white" /> Like-New Reliability</li>
-              </ul>
-            </div>
 
-            {/* Used */}
-            <div className="space-y-8 p-12 bg-white/5 rounded-[4rem] border-2 border-white/10 hover:border-primary/50 transition-all duration-700 group relative">
-              <div className="w-20 h-20 bg-primary/20 rounded-3xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-700 shadow-inner">
-                <Clock className="w-10 h-10" />
+              <div className="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm">
+                <h3 className="text-xl font-bold text-slate-900">Engine Replacements</h3>
+                <p className="mt-4 text-slate-700 leading-relaxed">
+                  When damage is beyond economical repair, replacement is the practical route forward. We source engines carefully (new and quality
+                  reconditioned), inspect them before installation, and fit them with the same attention to detail we bring to every job. We advise
+                  honestly on rebuild vs replacement based on your vehicle.
+                </p>
+                <Link
+                  href="/services/engine-replacement"
+                  className="mt-6 inline-flex items-center justify-center rounded-2xl bg-slate-900 px-6 py-3 text-white font-black text-xs uppercase tracking-[0.18em] hover:bg-slate-800 transition-colors"
+                >
+                  Explore More <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
               </div>
-              <h3 className="text-4xl font-black uppercase tracking-tighter italic leading-none">Low Mileage <br/>Used Units</h3>
-              <p className="text-slate-400 text-lg leading-relaxed">
-                Finding quality used units made easy. Each engine is thoroughly inspected and tested for models including XF, XJ, and F-Pace.
-              </p>
-              <ul className="space-y-4 font-black uppercase tracking-[0.2em] text-sm text-slate-300 border-t border-white/10 pt-8">
-                <li className="flex items-center gap-4"><CheckCircle2 className="w-6 h-6 text-primary" /> Hand-Picked Stock</li>
-                <li className="flex items-center gap-4"><CheckCircle2 className="w-6 h-6 text-primary" /> Nationwide Delivery</li>
-              </ul>
-            </div>
 
-          </div>
-        </div>
-      </section>
-
-      {/* EXTENDED WARRANTY CALLOUT */}
-      <section className="pb-24 pt-12 bg-slate-900 overflow-hidden relative">
-        <div className="container mx-auto px-4 lg:px-8">
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="bg-white/5 border-2 border-primary/40 rounded-[3rem] p-8 md:p-16 text-center relative overflow-hidden group shadow-2xl"
-          >
-            <div className="absolute top-0 right-0 w-80 h-80 bg-primary/10 blur-[100px] rounded-full -mr-40 -mt-40 pointer-events-none"></div>
-            <div className="absolute bottom-0 left-0 w-80 h-80 bg-primary/5 blur-[100px] rounded-full -ml-40 -mb-40 pointer-events-none"></div>
-            
-            <div className="relative z-10 max-w-4xl mx-auto space-y-6 md:space-y-8">
-              <div className="inline-flex items-center gap-3 bg-primary/20 text-primary px-6 py-2 rounded-full text-xs font-black uppercase tracking-widest border border-primary/30">
-                <Shield className="w-5 h-5" /> Main Dealer Sourced
+              <div className="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm">
+                <h3 className="text-xl font-bold text-slate-900">Timing Chain Replacement</h3>
+                <p className="mt-4 text-slate-700 leading-relaxed">
+                  Timing chain problems are among the most serious and common issues affecting modern Jaguar diesel engines — particularly the 2.0
+                  Ingenium unit. Cold-start rattle is an early warning that should not be ignored. We carry out timing chain replacements as
+                  standalone procedures and as part of wider rebuilds using OEM or OEM-equivalent components.
+                </p>
+                <Link
+                  href="/services/timing-chain-replacement"
+                  className="mt-6 inline-flex items-center justify-center rounded-2xl bg-slate-900 px-6 py-3 text-white font-black text-xs uppercase tracking-[0.18em] hover:bg-slate-800 transition-colors"
+                >
+                  Explore More <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
               </div>
-              <h3 className="text-3xl md:text-5xl lg:text-5xl font-black text-white uppercase tracking-tighter italic leading-none">
-                Looking for <br className="hidden md:block" /> <span className="text-primary italic underline decoration-white/20 underline-offset-8">Extended Coverage?</span>
-              </h3>
-              <p className="text-slate-300 text-lg md:text-xl font-medium leading-relaxed max-w-3xl mx-auto">
-                We also offer <span className="text-white font-bold">up to 24 months warranty</span>, sourced directly from main dealers. Please note, this option comes at a higher cost due to the extended protection and premium coverage.
-              </p>
-            </div>
-          </motion.div>
-        </div>
-      </section>
 
-      {/* WHY CHOOSE US BENTO */}
-      <section className="py-32 bg-white">
-        <div className="container mx-auto px-4 lg:px-8">
-           <div className="flex flex-col lg:flex-row gap-24 items-center">
-             <div className="w-full lg:w-1/2">
-                <div className="relative rounded-[5rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.2)] border-8 border-slate-50 group">
-                   <Image src="https://images.unsplash.com/photo-1542281286-9e0a16bb7366?q=80&w=1200&auto=format&fit=crop" alt="Jaguar Engine Workshop" width={800} height={1000} className="object-cover group-hover:scale-110 transition-transform duration-[3000ms]" />
-                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent" />
-                   <div className="absolute bottom-12 left-12 p-8 bg-white/10 backdrop-blur-md rounded-[2.5rem] border border-white/20 shadow-2xl">
-                      <div className="text-white text-3xl font-black uppercase tracking-tighter italic">Vogue Technics</div>
-                   </div>
-                </div>
-             </div>
-             <div className="w-full lg:w-1/2 space-y-12">
-                <h2 className="text-4xl md:text-7xl font-black text-slate-900 tracking-tighter uppercase leading-none underline decoration-primary decoration-[12px] underline-offset-[16px]">Why choose <span className="text-primary italic italic">Us</span>?</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 pt-10">
-                   <div className="space-y-4 group">
-                      <div className="text-primary font-black text-5xl group-hover:scale-110 transition-transform inline-block">01.</div>
-                      <h4 className="font-extrabold text-slate-900 text-2xl uppercase tracking-tighter italic">20+ Years Expertise</h4>
-                      <p className="text-slate-600 font-medium leading-relaxed">Seen and fixed all kinds of Jaguar engine problems across two decades.</p>
-                   </div>
-                   <div className="space-y-4 group">
-                      <div className="text-primary font-black text-5xl group-hover:scale-110 transition-transform inline-block">02.</div>
-                      <h4 className="font-extrabold text-slate-900 text-2xl uppercase tracking-tighter italic">OEM Guaranteed</h4>
-                      <p className="text-slate-600 font-medium leading-relaxed">Utilizing authentic Jaguar parts and state-of-the-art diagnostic tools.</p>
-                   </div>
-                   <div className="space-y-4 group">
-                      <div className="text-primary font-black text-5xl group-hover:scale-110 transition-transform inline-block">03.</div>
-                      <h4 className="font-extrabold text-slate-900 text-2xl uppercase tracking-tighter italic">6 Months Warranty</h4>
-                      <p className="text-slate-600 font-medium leading-relaxed">Peace of mind knowing your rebuilt or reconditioned engine is protected.</p>
-                   </div>
-                   <div className="space-y-4 group">
-                      <div className="text-primary font-black text-5xl group-hover:scale-110 transition-transform inline-block">04.</div>
-                      <h4 className="font-extrabold text-slate-900 text-2xl uppercase tracking-tighter italic">Unbeatable Price</h4>
-                      <p className="text-slate-600 font-medium leading-relaxed">Save up to 40% on engine queries and get back on the road affordably.</p>
-                   </div>
-                </div>
-                <div className="pt-10">
-                   <Link href="/contact-us" className="inline-flex items-center gap-6 text-primary font-black text-3xl hover:translate-x-12 transition-all uppercase tracking-tighter italic hover:opacity-80">
-                      Book Service Now <ArrowRight className="w-12 h-12" />
-                   </Link>
-                </div>
-             </div>
-           </div>
-        </div>
-      </section>
+              <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
+                <h3 className="text-xl font-bold text-slate-900">Head Gasket Repairs</h3>
+                <p className="mt-4 text-slate-700 leading-relaxed">
+                  Head gasket failure is rarely straightforward. We do not just fit a gasket and hope — we diagnose the cause, crack-test and
+                  surface-check the cylinder head, machine where necessary, and ensure the cooling system is fully healthy before reassembly.
+                </p>
+                <Link
+                  href="/services/head-gasket-replacement"
+                  className="mt-6 inline-flex items-center justify-center rounded-2xl bg-primary px-6 py-3 text-white font-black text-xs uppercase tracking-[0.18em] hover:bg-primary/90 transition-colors"
+                >
+                  Explore More <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
+              </div>
 
-      {/* FINAL CTA SECTION */}
-      <section className="py-20 md:py-32 bg-slate-900 relative overflow-hidden text-center">
-        <div className="absolute inset-0 bg-primary/5 opacity-30 animate-pulse pointer-events-none"></div>
-        <div className="container mx-auto px-4 lg:px-8 max-w-5xl space-y-10 md:space-y-12 relative z-10">
-           <h2 className="text-4xl md:text-7xl font-black text-white uppercase tracking-tighter leading-none italic">Book Your <br/><span className="text-primary underline decoration-white/30 decoration-[10px] underline-offset-[20px]">Jaguar Appointment</span></h2>
-           <p className="text-slate-400 text-lg md:text-xl font-bold uppercase tracking-widest leading-relaxed max-w-3xl mx-auto">
-             Experience Top-Notch Maintenance. Scheduled services today!
-           </p>
-           <div className="flex flex-col md:flex-row gap-6 md:gap-8 justify-center items-center pt-6 md:pt-10">
-             <Link href="/contact-us" className="bg-primary hover:bg-emerald-500 text-white font-black py-5 px-12 md:py-6 md:px-16 rounded-[2rem] shadow-[0_20px_50px_-15px_rgba(25,135,84,0.5)] transition-all transform hover:-translate-y-2 text-lg md:text-xl flex items-center justify-center gap-4 uppercase tracking-[0.2em] w-full md:w-auto">
-               <Search className="w-8 h-8 md:w-10 md:h-10" /> Book Online
-             </Link>
-             <a href="tel:01375531355" className="bg-white hover:bg-slate-100 text-slate-950 font-black py-5 px-12 md:py-6 md:px-16 rounded-[2rem] shadow-2xl transition-all transform hover:-translate-y-2 text-lg md:text-xl flex items-center justify-center gap-4 uppercase tracking-[0.2em] w-full md:w-auto">
-               <Phone className="w-8 h-8 md:w-10 md:h-10 text-primary" /> 01375 531355
-             </a>
-          </div>
-        </div>
-      </section>
+              <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
+                <h3 className="text-xl font-bold text-slate-900">Turbocharger Replacement</h3>
+                <p className="mt-4 text-slate-700 leading-relaxed">
+                  Turbo failure can cause significant collateral damage if oil contamination is not addressed. We assess the full extent of damage,
+                  address the oil supply system, and install the correct replacement turbo into a clean and healthy engine — for reduced power, smoke,
+                  or whining noises under load.
+                </p>
+                <Link
+                  href="/services/turbo-replacement"
+                  className="mt-6 inline-flex items-center justify-center rounded-2xl bg-primary px-6 py-3 text-white font-black text-xs uppercase tracking-[0.18em] hover:bg-primary/90 transition-colors"
+                >
+                  Explore More <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
+              </div>
 
-      {/* INFORMATIVE CONTENT SECTION */}
-      <section className="py-24 bg-white relative overflow-hidden">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="max-w-4xl mx-auto space-y-12">
-            <div className="relative p-10 md:p-16 bg-slate-50 rounded-[4rem] border-2 border-slate-100 shadow-sm relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
-              
-              <div className="relative z-10 space-y-10">
-                <div className="space-y-6">
-                  <h3 className="text-2xl md:text-3xl font-black text-slate-900 uppercase tracking-tighter italic leading-tight">
-                    Premium <span className="text-primary italic">Jaguar</span> Engine Reconditioning
-                  </h3>
-                  <p className="text-slate-600 text-base leading-relaxed font-medium">
-                    Jaguar engines are designed for refinement and high-revving performance, but they require expert attention to maintain their smooth power delivery. At Vogue Technics, we specialize in the complete reconditioning of all Jaguar power units, including the classic AJ-V8 and AJ-V6 engines, as well as the modern 2.0L Ingenium range. Our master technicians understand the nuances of Jaguar engineering, from the delicate balance of the valvetrain to the complexities of the latest ZF transmission integrations.
-                  </p>
-                </div>
+              <div className="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm">
+                <h3 className="text-xl font-bold text-slate-900">Engine Health Checks</h3>
+                <p className="mt-4 text-slate-700 leading-relaxed">
+                  Whether you are buying a used Jaguar or want reassurance, our health check gives an honest picture of your engine&apos;s condition. We
+                  examine oil and coolant quality, compression, timing system condition, and stored fault codes — then provide a written report you
+                  can rely on.
+                </p>
+                <Link
+                  href="/services/engine-health-check"
+                  className="mt-6 inline-flex items-center justify-center rounded-2xl bg-slate-900 px-6 py-3 text-white font-black text-xs uppercase tracking-[0.18em] hover:bg-slate-800 transition-colors"
+                >
+                  Explore More <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
+              </div>
 
-                <div className="space-y-6 pt-8 border-t border-slate-200">
-                  <h3 className="text-2xl md:text-3xl font-black text-slate-900 uppercase tracking-tighter italic leading-tight">
-                    Addressing <span className="text-primary italic">Chain Tensioner</span> and Cooling Issues
-                  </h3>
-                  <p className="text-slate-600 text-base leading-relaxed font-medium">
-                    We specialize in correcting well-known Jaguar factory faults, such as the timing chain tensioner failures in the 4.0L/4.2L V8s and the plastic cooling pipe vulnerabilities found in many models. Our reconditioning process includes fitting upgraded metal-bodied tensioners and reinforced cooling components that exceed the original manufacturer's specifications. This proactive approach ensures that your Jaguar's engine is not just repaired, but strengthened for modern driving demands.
-                  </p>
-                </div>
-
-                <div className="space-y-6 pt-8 border-t border-slate-200">
-                  <h3 className="text-2xl md:text-3xl font-black text-slate-900 uppercase tracking-tighter italic leading-tight">
-                    Elite <span className="text-primary italic">Supply and Fit</span> Services
-                  </h3>
-                  <p className="text-slate-600 text-base leading-relaxed font-medium">
-                    Our "Supply and Fit" service is tailored for Jaguar owners who demand an uncompromising level of service. We manage the entire recovery of your vehicle from across the UK to our specialist facility. Our technicians perform a full diagnostic and electronic reset as part of the installation process, ensuring that your Jaguar's sophisticated dynamic systems are perfectly calibrated to the fresh engine, restoring that signature "JAG" performance and refinement.
-                  </p>
-                </div>
+              <div className="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm md:col-span-2">
+                <h3 className="text-xl font-bold text-slate-900">Engine Swaps &amp; Conversions</h3>
+                <p className="mt-4 text-slate-700 leading-relaxed">
+                  Engine swaps and conversions are complex projects that demand proper planning and precision execution. Whether you want a more
+                  powerful variant, a different fuel type, or an alternative unit after irreparable failure, we advise on compatibility, source the
+                  right components, and carry out the work to a reliability and safety-first standard.
+                </p>
+                <Link
+                  href="/services/engine-swap"
+                  className="mt-6 inline-flex items-center justify-center rounded-2xl bg-slate-900 px-6 py-3 text-white font-black text-xs uppercase tracking-[0.18em] hover:bg-slate-800 transition-colors"
+                >
+                  Explore More <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <FAQSection 
-        title={<>Jaguar Engine <span className="text-primary italic">FAQs</span></>}
-        items={[
-          {
-            question: "Do you offer the upgraded timing chain tensioners for Jaguar V8s?",
-            answer: "Yes, all our Jaguar V8 engine rebuilds include fitting the latest Generation 3 metal-bodied tensioners to prevent the common chain-slip issues found in earlier models."
-          },
-          {
-            question: "Can you recondition the 2.0L Ingenium Jaguar engines?",
-            answer: "Absolutely. We have specialized tools for the Ingenium petrol and diesel range, specifically addressing timing chain stretch and counterbalance shaft failures."
-          },
-          {
-            question: "Will a reconditioned engine affect my Jaguar's refined ride?",
-            answer: "Our rebuilds are balanced to factory-perfect specifications to ensure the smooth, vibration-free operation that Jaguar vehicles are famous for."
-          },
-          {
-            question: "Do you provide a warranty for Jaguar engine fitting?",
-            answer: "Yes, we provide a 6-month / 6,000-mile written warranty on all our Jaguar reconditioned engines and fitting services, with extended options available upon request."
-          }
-        ]}
-      />
+      <section className="py-16 md:py-20 bg-white">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
+              Jaguar Engine Supply — Reconditioned & Used Units Across All Models & Variants
+            </h2>
+            <p className="mt-6 text-slate-700 leading-relaxed">
+              We stock and supply Jaguar engines across every model and engine family. Every unit — reconditioned or used — is fully tested, properly documented, and dispatched with warranty cover from our Grays workshop.
+            </p>
+
+            <div className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
+                <h3 className="text-xl font-bold text-slate-900">
+                  Modern Jaguar Engines — Ingenium, AJ133, AJ126 & V8 Supply and Rebuild
+                </h3>
+                <p className="mt-4 text-slate-700 leading-relaxed">
+                  The modern Jaguar engine range spans several distinct families — each with its own specific characteristics, known failure points, and rebuild requirements. Our team carries genuine, hands-on knowledge of every current and recent Jaguar engine code.
+                </p>
+                <ul className="mt-5 space-y-2 text-slate-700">
+                  {modernJaguarServices.map((item) => (
+                    <li key={item} className="flex gap-3">
+                      <span className="mt-[0.55rem] h-2 w-2 rounded-full bg-primary shrink-0" />
+                      <span className="leading-relaxed">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
+                <h3 className="text-xl font-bold text-slate-900">
+                  Classic Jaguar Engines — XK, XJ6, XJS & E-Type Supply and Rebuild
+                </h3>
+                <p className="mt-4 text-slate-700 leading-relaxed">
+                  The classic Jaguar engine range carries a heritage that enthusiasts continue to value deeply. From the XK straight-six through to the V12 — these are engines that reward proper specialist rebuilding with decades of continued reliable service.
+                </p>
+                <ul className="mt-5 space-y-2 text-slate-700">
+                  {classicJaguarServices.map((item) => (
+                    <li key={item} className="flex gap-3">
+                      <span className="mt-[0.55rem] h-2 w-2 rounded-full bg-primary shrink-0" />
+                      <span className="leading-relaxed">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div className="mt-8 rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm">
+              <h3 className="text-xl font-bold text-slate-900">Jaguar Engine Supply Only or Complete Supply and Fit</h3>
+              <p className="mt-4 text-slate-700 leading-relaxed">
+                Whether you need a complete supply and fit at our Grays workshop or a rebuilt unit delivered directly to your chosen garage — we accommodate both. Our Jaguar engine supply and fit service covers every stage from initial sourcing through to installation, calibration, and road testing — all under one roof.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-20 bg-slate-50">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
+              Jaguar Engine Problems, Diagnostics & Specialist Repair
+            </h2>
+            <p className="mt-6 text-slate-700 leading-relaxed">
+              Jaguar engine problems range from simple warning light faults through to serious internal failures — and accurate diagnosis before committing to any repair or replacement is always the right first step.
+            </p>
+
+            <div className="mt-6 rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm">
+              <h3 className="text-xl font-bold text-slate-900">Common Jaguar Engine Problems — All Models Diagnosed & Resolved</h3>
+              <p className="mt-4 text-slate-700 leading-relaxed">
+                Our team diagnoses and resolves Jaguar engine faults regularly across the full model range. On Ingenium diesel units, the most frequently encountered issues include EGR valve failure, DPF-related management faults, timing chain wear, and oil leaks. On AJ133 and AJ126 V8 and V6 units, supercharger seal wear, timing chain stretch, and oil consumption are the most common presenting faults.
+              </p>
+              <p className="mt-4 text-slate-700 leading-relaxed">
+                Classic Jaguar engines develop predictable issues — head gasket failure on XJ6 units, Nikasil bore problems on early XK8 V8 engines, and oil seal degradation on V12 units — all of which our team resolves with the correct specialist approach.
+              </p>
+              <div className="mt-5 grid grid-cols-1 md:grid-cols-2 gap-3">
+                {faultList.map((f) => (
+                  <div key={f} className="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-slate-800 font-medium">
+                    {f}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm">
+                <h3 className="text-xl font-bold text-slate-900">Same-Day Jaguar Engine Diagnostics — Grays, UK</h3>
+                <p className="mt-4 text-slate-700 leading-relaxed">
+                  Our same-day Jaguar engine diagnostics service uses specialist equipment and genuine hands-on knowledge of Jaguar engine management systems — across both modern and classic model lines — to identify faults accurately and efficiently. We read fault codes, assess live engine data, and deliver a clear written assessment before recommending any course of action.
+                  <br />
+                  <br />
+                  No assumptions. No pressure. No unnecessary upselling. Just accurate diagnosis and honest options.
+                </p>
+              </div>
+              <div className="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm">
+                <h3 className="text-xl font-bold text-slate-900">
+                  Emergency Jaguar Engine Replacement — Fast-Track Response Available
+                </h3>
+                <p className="mt-4 text-slate-700 leading-relaxed">
+                  Jaguar off the road unexpectedly? We offer emergency Jaguar engine replacement with fast-track fitting slots at our Grays workshop. Same-day diagnostics, priority engine sourcing, and urgent installation options mean your vehicle is not waiting weeks for a resolution while you arrange alternatives elsewhere.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-20 bg-white">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-5xl mx-auto mb-10 md:mb-12">
+            <h2 className="text-2xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
+              Find Your Jaguar — Engine Services by Model
+            </h2>
+            <p className="mt-6 text-slate-700 leading-relaxed">
+              Every Jaguar model carries its own engineering story, its own common failure patterns, and its own demands when it comes to engine work.
+              Our dedicated model pages give you the specific detail relevant to your vehicle — and our specialists have the hands-on experience with
+              every one of them.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
+            {jaguarModels.map((model, idx) => (
+              <motion.div
+                key={idx}
+                whileHover={{ y: -8, scale: 1.01 }}
+                className="group h-full"
+              >
+                <Link href={model.link} className="block h-full">
+                  <div className="bg-slate-50 border border-slate-200 rounded-[1.5rem] p-5 hover:bg-white hover:border-primary/30 hover:shadow-[0_18px_40px_-20px_rgba(0,0,0,0.12)] transition-all duration-500 flex flex-col space-y-4 relative overflow-hidden h-full">
+                    <div>
+                      <h3 className="text-base font-extrabold text-slate-900 group-hover:text-primary transition-colors tracking-tight leading-snug">
+                        {model.title}
+                      </h3>
+                      <p className="mt-3 text-sm text-slate-700 leading-relaxed line-clamp-5">
+                        {model.description}
+                      </p>
+                    </div>
+                    <div className="mt-auto inline-flex items-center justify-center rounded-2xl bg-primary/10 px-5 py-2 text-primary font-black text-[0.7rem] uppercase tracking-[0.18em] group-hover:bg-primary group-hover:text-white transition-all">
+                      Explore More <ArrowRight className="w-4 h-4 ml-2" />
+                    </div>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      <FAQSection title={<>Frequently Asked Questions — <span className="text-primary italic">Jaguar Engine</span></>} items={faqs} />
+
+      <section className="py-16 md:py-20 bg-primary text-white">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-5xl mx-auto text-center space-y-6">
+            <h2 className="text-3xl md:text-4xl font-extrabold leading-tight">
+              Ready to resolve your Jaguar engine problem?
+            </h2>
+            <p className="text-emerald-50 leading-relaxed max-w-4xl mx-auto">
+              Contact our specialists in Grays today. Whether you need same-day diagnostics, a fully reconditioned Ingenium diesel, a rebuilt AJ133 V8, a classic XJ6 engine rebuild, or an emergency fitting slot — we&apos;re here with fast responses, straight answers, and a service that genuinely reflects the quality Jaguar ownership demands.
+              <br />
+              Jaguar has always built engines with character, precision, and ambition. At Vogue Technics, every rebuild we carry out honours exactly that standard.
+            </p>
+            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="tel:01375531355"
+                className="inline-flex items-center justify-center rounded-2xl bg-white px-8 py-4 font-bold text-primary shadow-xl transition-all hover:bg-slate-50 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99]"
+              >
+                <Phone className="w-5 h-5 mr-2" />
+                Call 01375 531355
+              </a>
+              <Link
+                href="/contact-us"
+                className="inline-flex items-center justify-center rounded-2xl bg-slate-900 px-8 py-4 font-bold text-white shadow-xl transition-all hover:bg-slate-800 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99]"
+              >
+                Request a Quote
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <PartnerLogos />
     </div>

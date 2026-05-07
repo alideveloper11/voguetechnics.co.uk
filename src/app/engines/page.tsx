@@ -2,8 +2,9 @@ import { Metadata } from "next";
 import EnginesPortalClient from "./EnginesPortalClient";
 
 export const metadata: Metadata = {
-  title: "High-Quality Reconditioned & Used Engines for All Major Brands | Vogue Technics",
-  description: "Explore our extensive stock of reconditioned and used engines for Range Rover, Land Rover, Audi, BMW, and Jaguar. UK's leading engine specialist with nationwide delivery.",
+  title: "Engine Repair, Rebuild & Replacement Specialists — Vogue Technics, Grays, Essex",
+  description:
+    "Vogue Technics are prestige engine specialists in Grays, Essex, covering Range Rover, Land Rover, Jaguar, Audi, and BMW. Engine repair, rebuild, replacement, diagnostics, turbos, timing chains and head gaskets with written quotes and warranty.",
   alternates: {
     canonical: "/engines",
   },

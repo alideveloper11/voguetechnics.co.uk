@@ -20,7 +20,7 @@ const services = [
     title: "Timing Chain Replacement",
     slug: "timing-chain-replacement",
     body:
-      "The Velar's Ingenium diesel engines are known to develop timing chain issues, particularly on higher-mileage examples and vehicles that have experienced irregular oil change intervals. A cold-start rattle is typically the first warning — and it rarely improves on its own. Our timing chain replacement service covers the full assembly: chain, tensioners, guides, and all associated seals replaced in a single visit. Addressing this early is always far less expensive than dealing with the engine damage that follows if you don't.",
+      "The Velar's Ingenium diesel engines are known to develop timing chain issues, particularly on higher-mileage examples and vehicles that have experienced irregular oil change intervals. A cold-start rattle is typically the first warning   and it rarely improves on its own. Our timing chain replacement service covers the full assembly: chain, tensioners, guides, and all associated seals replaced in a single visit. Addressing this early is always far less expensive than dealing with the engine damage that follows if you don't.",
   },
   {
     title: "Turbo Replacement",
@@ -32,37 +32,37 @@ const services = [
     title: "Engine Rebuild",
     slug: "engine-rebuild",
     body:
-      "When internal wear has taken hold but your Velar's engine block remains structurally sound, a full rebuild often represents the most cost-effective and longest-lasting solution available. We dismantle the engine completely, inspect every component against manufacturer tolerances, replace worn bearings, piston rings, seals, and gaskets, then reassemble and test thoroughly before reinstallation. A correctly rebuilt Velar engine delivers performance and reliability indistinguishable from a brand-new unit — at a fraction of new-engine cost.",
+      "When internal wear has taken hold but your Velar's engine block remains structurally sound, a full rebuild often represents the most cost-effective and longest-lasting solution available. We dismantle the engine completely, inspect every component against manufacturer tolerances, replace worn bearings, piston rings, seals, and gaskets, then reassemble and test thoroughly before reinstallation. A correctly rebuilt Velar engine delivers performance and reliability indistinguishable from a brand-new unit   at a fraction of new-engine cost.",
   },
   {
     title: "Engine Repair",
     slug: "engine-repair",
     body:
-      "Many Velar engine faults don't require a full rebuild or replacement — they need accurate diagnosis and targeted repair carried out by someone who actually knows this engine family. Our repair service covers oil leaks, coolant leaks, misfires, rough running, injector faults, EGR issues, sensor failures, and a wide range of mechanical problems specific to the Ingenium engine range. We diagnose first, quote second — always.",
+      "Many Velar engine faults don't require a full rebuild or replacement   they need accurate diagnosis and targeted repair carried out by someone who actually knows this engine family. Our repair service covers oil leaks, coolant leaks, misfires, rough running, injector faults, EGR issues, sensor failures, and a wide range of mechanical problems specific to the Ingenium engine range. We diagnose first, quote second   always.",
   },
   {
     title: "Engine Replacement – Used & Reconditioned Options",
     slug: "engine-replacement",
     body:
-      "When replacement is the right decision, we make the process clear and straightforward. We offer both used Range Rover Velar engines for owners managing costs carefully and fully reconditioned Velar engines for those prioritising longevity. Supply-only or complete engine supply and fit — we accommodate both. Every engine comes with written warranty documentation and a fully itemised quote before a single bolt is turned.",
+      "When replacement is the right decision, we make the process clear and straightforward. We offer both used Range Rover Velar engines for owners managing costs carefully and fully reconditioned Velar engines for those prioritising longevity. Supply-only or complete engine supply and fit   we accommodate both. Every engine comes with written warranty documentation and a fully itemised quote before a single bolt is turned.",
   },
   {
     title: "Engine Swap",
     slug: "engine-swap",
     body:
-      "Whether you're upgrading your Velar's engine specification, switching fuel types due to clean air zone requirements, or addressing a compatibility issue following a major failure, our engine swap service handles the full process. We carry out drivetrain compatibility assessments, wiring loom adaptation, ECU configuration, and thorough road testing after every swap. Complex jobs are our speciality — not something we improvise.",
+      "Whether you're upgrading your Velar's engine specification, switching fuel types due to clean air zone requirements, or addressing a compatibility issue following a major failure, our engine swap service handles the full process. We carry out drivetrain compatibility assessments, wiring loom adaptation, ECU configuration, and thorough road testing after every swap. Complex jobs are our speciality   not something we improvise.",
   },
   {
     title: "Timing Belt Replacement",
     slug: "timing-belt-replacement",
     body:
-      "Certain Range Rover Velar petrol variants use a timing belt configuration, and the consequences of belt failure are every bit as severe as timing chain failure — immediate, expensive, and entirely avoidable with timely maintenance. We carry out complete timing belt replacements including water pump inspection, tensioner condition assessment, and all associated seal changes as standard. If your Velar is approaching its service interval on the timing belt, don't delay.",
+      "Certain Range Rover Velar petrol variants use a timing belt configuration, and the consequences of belt failure are every bit as severe as timing chain failure   immediate, expensive, and entirely avoidable with timely maintenance. We carry out complete timing belt replacements including water pump inspection, tensioner condition assessment, and all associated seal changes as standard. If your Velar is approaching its service interval on the timing belt, don't delay.",
   },
   {
     title: "Engine Health Check",
     slug: "engine-health-check",
     body:
-      "Unsure what's wrong with your Range Rover Velar — or simply want to know its true engine condition before committing to a purchase or repair? Our engine health check uses professional OBD diagnostic equipment alongside physical compression testing and oil condition analysis to deliver a complete picture. You receive a clear, written report with our honest recommendation — no jargon, no pressure, just the facts your decision should be based on.",
+      "Unsure what's wrong with your Range Rover Velar   or simply want to know its true engine condition before committing to a purchase or repair? Our engine health check uses professional OBD diagnostic equipment alongside physical compression testing and oil condition analysis to deliver a complete picture. You receive a clear, written report with our honest recommendation   no jargon, no pressure, just the facts your decision should be based on.",
   },
 ];
 
@@ -75,7 +75,7 @@ const faqs = [
   {
     question: "How much does a Range Rover Velar engine replacement cost in the UK?",
     answer:
-      "Replacement costs depend on the specific engine variant, model year, and whether you choose a used or reconditioned unit. At Vogue Technics, our pricing is consistently more competitive than main dealer quotes — often significantly so. Contact us with your registration number for a fast, accurate, no-obligation quote.",
+      "Replacement costs depend on the specific engine variant, model year, and whether you choose a used or reconditioned unit. At Vogue Technics, our pricing is consistently more competitive than main dealer quotes   often significantly so. Contact us with your registration number for a fast, accurate, no-obligation quote.",
   },
   {
     question: "What are the most common Range Rover Velar engine problems?",
@@ -85,22 +85,22 @@ const faqs = [
   {
     question: "How long does a Range Rover Velar engine replacement take?",
     answer:
-      "Most engine replacements at our Grays workshop are completed within three to five working days, subject to parts availability. We provide a realistic timescale when you book in and keep you updated at every stage of the process.",
+      "Most engine replacements at our  workshop are completed within three to five working days, subject to parts availability. We provide a realistic timescale when you book in and keep you updated at every stage of the process.",
   },
   {
-    question: "Do you offer Range Rover Velar engine supply and fit in Grays, Essex?",
+    question: "Do you offer Range Rover Velar engine supply and fit in ?",
     answer:
-      "Yes. Our Grays workshop provides a complete supply and fit service for all Velar engine variants. We also offer supply-only with fast UK-wide tracked delivery for customers having their engine fitted elsewhere.",
+      "Yes. Our  workshop provides a complete supply and fit service for all Velar engine variants. We also offer supply-only with fast UK-wide tracked delivery for customers having their engine fitted elsewhere.",
   },
   {
     question: "What warranty comes with a reconditioned Range Rover Velar engine?",
     answer:
-      "All reconditioned Velar engines supplied and fitted by Vogue Technics carry a minimum 6-month warranty as standard. Extended warranty options are available — speak to our team when you enquire for full details.",
+      "All reconditioned Velar engines supplied and fitted by Vogue Technics carry a minimum 6-month warranty as standard. Extended warranty options are available   speak to our team when you enquire for full details.",
   },
   {
     question: "Is it worth rebuilding a Range Rover Velar engine rather than replacing it?",
     answer:
-      "In many cases, yes — particularly where the engine block is in sound condition and the failure is confined to internal wear components. A full rebuild by a specialist can restore your Velar's engine to near-factory performance at lower cost than a full replacement unit. We always assess honestly and recommend the solution that makes the most sense for your specific engine and budget.",
+      "In many cases, yes   particularly where the engine block is in sound condition and the failure is confined to internal wear components. A full rebuild by a specialist can restore your Velar's engine to near-factory performance at lower cost than a full replacement unit. We always assess honestly and recommend the solution that makes the most sense for your specific engine and budget.",
   },
   {
     question: "Can I buy a Range Rover Velar engine online and have it delivered across the UK?",
@@ -116,7 +116,7 @@ export default function RangeRoverVelarEnginesClient() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/car_bgg.jpg"
-            alt="Range Rover Velar engine specialist in Grays"
+            alt="Range Rover Velar engine specialist in "
             fill
             className="object-cover opacity-30 mix-blend-overlay"
             priority
@@ -141,7 +141,7 @@ export default function RangeRoverVelarEnginesClient() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-300 to-green-400">
                 Range Rover Velar Engines
               </span>{" "}
-              – Specialist Supply, Rebuild & Replacement in Grays, UK
+              – Specialist Supply, Rebuild & Replacement in , UK
             </motion.h1>
 
             <motion.div
@@ -160,10 +160,10 @@ export default function RangeRoverVelarEnginesClient() {
               className="mt-7 max-w-4xl text-sm leading-relaxed text-slate-300 md:text-base space-y-4"
             >
               <p>
-                The Range Rover Velar sits in a unique space — sophisticated enough to turn heads on any street, engineered precisely enough to demand specialist knowledge when something goes wrong. At Vogue Technics, we understand this vehicle better than most. For over 25 years, we've worked exclusively on Land Rover and Range Rover engines, and the Velar — with its refined Ingenium engine family — is one of the models our Grays workshop handles regularly and with complete confidence.
+                The Range Rover Velar sits in a unique space   sophisticated enough to turn heads on any street, engineered precisely enough to demand specialist knowledge when something goes wrong. At Vogue Technics, we understand this vehicle better than most. For over 25 years, we've worked exclusively on Land Rover and Range Rover engines, and the Velar   with its refined Ingenium engine family   is one of the models our  workshop handles regularly and with complete confidence.
               </p>
               <p>
-                If you're searching for a Range Rover Velar engine for sale, need an honest assessment of your repair options, or want a specialist who will treat your vehicle with the care it deserves — you've found the right place. We serve customers across Grays, Thurrock, Basildon, Dartford, and throughout the UK, offering everything from a straightforward used engine supply to a full ground-up rebuild.
+                If you're searching for a Range Rover Velar engine for sale, need an honest assessment of your repair options, or want a specialist who will treat your vehicle with the care it deserves   you've found the right place. We serve customers across , Thurrock, Basildon, Dartford, and throughout the UK, offering everything from a straightforward used engine supply to a full ground-up rebuild.
               </p>
             </motion.div>
           </div>
@@ -178,7 +178,7 @@ export default function RangeRoverVelarEnginesClient() {
             </h2>
             <div className="w-24 h-1 bg-primary mx-auto rounded-full mt-4"></div>
             <p className="mt-6 text-slate-600 text-[1.05rem] leading-relaxed">
-              The Velar deserves more than a generic garage visit. Its Ingenium engine family — covering 2.0-litre diesel and petrol units alongside the more powerful 3.0-litre six-cylinder variants — requires hands-on familiarity that only comes from years of dedicated experience. Our in-house specialist team at Grays carries out every service listed below with no subcontracting, no shortcuts, and no vague timelines.
+              The Velar deserves more than a generic garage visit. Its Ingenium engine family   covering 2.0-litre diesel and petrol units alongside the more powerful 3.0-litre six-cylinder variants   requires hands-on familiarity that only comes from years of dedicated experience. Our in-house specialist team at  carries out every service listed below with no subcontracting, no shortcuts, and no vague timelines.
             </p>
           </div>
 
@@ -214,7 +214,7 @@ export default function RangeRoverVelarEnginesClient() {
             </h2>
             <div className="mt-6 space-y-6 text-slate-700 leading-relaxed">
               <p>
-                The Velar was introduced in 2017 as Land Rover&apos;s most design-forward model, built around the company&apos;s in-house Ingenium engine family from the outset. Understanding the differences between engine variants, model years, and specification levels is essential before sourcing a replacement — and it&apos;s knowledge our team applies every day.
+                The Velar was introduced in 2017 as Land Rover&apos;s most design-forward model, built around the company&apos;s in-house Ingenium engine family from the outset. Understanding the differences between engine variants, model years, and specification levels is essential before sourcing a replacement   and it&apos;s knowledge our team applies every day.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
@@ -226,14 +226,14 @@ export default function RangeRoverVelarEnginesClient() {
                 <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
                   <h3 className="font-bold text-slate-900">Range Rover Velar 3.0 Engine for Sale – Six-Cylinder Power</h3>
                   <p className="mt-3">
-                    The 3.0-litre six-cylinder Velar engine — available in both diesel SDV6 and petrol P380 configurations — delivers a significantly different driving experience and carries its own specific service requirements. We source and supply reconditioned 3.0 Velar engines with the same rigorous testing and warranty standards applied to every unit we handle. If you&apos;re running the higher-specification Velar and need a 3.0 replacement, call us directly for availability and pricing.
+                    The 3.0-litre six-cylinder Velar engine   available in both diesel SDV6 and petrol P380 configurations   delivers a significantly different driving experience and carries its own specific service requirements. We source and supply reconditioned 3.0 Velar engines with the same rigorous testing and warranty standards applied to every unit we handle. If you&apos;re running the higher-specification Velar and need a 3.0 replacement, call us directly for availability and pricing.
                   </p>
                 </div>
               </div>
               <p className="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm">
-                <span className="font-bold text-slate-900">Range Rover Velar Engine Specs, Capacity & Power — Know Your Options</span>
+                <span className="font-bold text-slate-900">Range Rover Velar Engine Specs, Capacity & Power   Know Your Options</span>
                 <br />
-                The Velar engine range covers displacement from 2.0 to 3.0 litres, power outputs from 180bhp to 380bhp, and both four-cylinder and six-cylinder configurations. Getting the right replacement engine means matching not just the displacement but the specific engine code, output specification, and gearbox compatibility for your exact model and year. Our team guides every customer through this process before confirming any order — because a mismatched engine creates problems that are far more expensive to resolve than the original fault.
+                The Velar engine range covers displacement from 2.0 to 3.0 litres, power outputs from 180bhp to 380bhp, and both four-cylinder and six-cylinder configurations. Getting the right replacement engine means matching not just the displacement but the specific engine code, output specification, and gearbox compatibility for your exact model and year. Our team guides every customer through this process before confirming any order   because a mismatched engine creates problems that are far more expensive to resolve than the original fault.
               </p>
             </div>
           </div>
@@ -244,13 +244,13 @@ export default function RangeRoverVelarEnginesClient() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
-              Why Velar Owners in Grays & Across the UK Trust Vogue Technics
+              Why Velar Owners in  & Across the UK Trust Vogue Technics
             </h2>
             <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm">
                 <h3 className="font-bold text-slate-900">25 Years of Dedicated Land Rover & Range Rover Engine Expertise</h3>
                 <p className="mt-3 text-slate-700 leading-relaxed">
-                  We have spent a quarter of a century working exclusively on this vehicle family. That focus means our team has encountered virtually every failure mode the Velar and its predecessor models can produce — and knows precisely how to address each one. General garages learn from your car. We already know.
+                  We have spent a quarter of a century working exclusively on this vehicle family. That focus means our team has encountered virtually every failure mode the Velar and its predecessor models can produce   and knows precisely how to address each one. General garages learn from your car. We already know.
                 </p>
               </div>
               <div className="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm">
@@ -262,7 +262,7 @@ export default function RangeRoverVelarEnginesClient() {
               <div className="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm">
                 <h3 className="font-bold text-slate-900">Minimum 6-Month Warranty on All Reconditioned Engines</h3>
                 <p className="mt-3 text-slate-700 leading-relaxed">
-                  Every reconditioned engine we supply or fit carries a minimum 6-month warranty as standard, with extended options available on request. We test every engine before it leaves our workshop — because the warranty we offer is backed by the confidence we have in the work we&apos;ve done.
+                  Every reconditioned engine we supply or fit carries a minimum 6-month warranty as standard, with extended options available on request. We test every engine before it leaves our workshop   because the warranty we offer is backed by the confidence we have in the work we&apos;ve done.
                 </p>
               </div>
             </div>
@@ -288,17 +288,17 @@ export default function RangeRoverVelarEnginesClient() {
               {
                 quote:
                   '"Main dealer quoted me nearly £7,000 for a Velar engine replacement. Vogue Technics supplied and fitted a fully reconditioned 2.0 diesel for considerably less, with a written 6-month warranty. The car has been perfect since the day I collected it."',
-                by: "— Caroline H., Grays, Essex",
+                by: "  Caroline H., ",
               },
               {
                 quote:
-                  '"Brought my Velar in with a timing chain rattle that two garages told me wasn\'t serious. Vogue Technics diagnosed it immediately and fixed it properly. Honest, knowledgeable, and reasonably priced — exactly what you want."',
-                by: "— Omar S., Thurrock",
+                  '"Brought my Velar in with a timing chain rattle that two garages told me wasn\'t serious. Vogue Technics diagnosed it immediately and fixed it properly. Honest, knowledgeable, and reasonably priced   exactly what you want."',
+                by: "  Omar S., Thurrock",
               },
               {
                 quote:
                   '"Ordered a reconditioned 3.0 engine for supply only and had it shipped to my garage in Leeds. Arrived on time, packaged professionally, with full documentation and compression test results included. Couldn\'t ask for more."',
-                by: "— Paul R., Leeds",
+                by: "  Paul R., Leeds",
               },
             ].map((t) => (
               <div
@@ -319,7 +319,7 @@ export default function RangeRoverVelarEnginesClient() {
       </section>
 
       <FAQSection
-        title={<>Frequently Asked Questions — <span className="text-primary italic">Range Rover Velar Engines</span></>}
+        title={<>Frequently Asked Questions   <span className="text-primary italic">Range Rover Velar Engines</span></>}
         items={faqs}
       />
 
@@ -327,10 +327,10 @@ export default function RangeRoverVelarEnginesClient() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-5xl mx-auto text-center space-y-6">
             <h2 className="text-3xl md:text-4xl font-extrabold leading-tight">
-              Your Range Rover Velar deserves specialist care — not a best guess.
+              Your Range Rover Velar deserves specialist care   not a best guess.
             </h2>
             <p className="text-emerald-50 leading-relaxed max-w-3xl mx-auto">
-              Call Vogue Technics today or enter your registration above for a fast, no-obligation quote. Our team in Grays is ready to help with genuine expertise, honest pricing, and engine work that lasts.
+              Call Vogue Technics today or enter your registration above for a fast, no-obligation quote. Our team in  is ready to help with genuine expertise, honest pricing, and engine work that lasts.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <a

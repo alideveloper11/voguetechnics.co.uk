@@ -23,7 +23,7 @@ const faqs = [
   {
     question: "Do you offer UK-wide collection and delivery?",
     answer:
-      "Yes. We offer UK-wide collection and delivery so you can access our Grays workshop expertise from anywhere in the country.",
+      "Yes. We offer UK-wide collection and delivery so you can access our  workshop expertise from anywhere in the country.",
   },
   {
     question: "Do you provide written warranty on engine work?",
@@ -39,7 +39,7 @@ export default function JaguarXKEnginesPage() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/car_bgg.jpg"
-            alt="Jaguar XK engine specialists in Grays"
+            alt="Jaguar XK engine specialists in "
             fill
             className="object-cover opacity-30 mix-blend-overlay"
             priority
@@ -64,7 +64,7 @@ export default function JaguarXKEnginesPage() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-300 to-green-400">
                 Jaguar XK Engine
               </span>{" "}
-              — Reconditioned, Rebuilt & Used Supply and Fit Across the UK
+                Reconditioned, Rebuilt & Used Supply and Fit Across the UK
             </motion.h1>
 
             <motion.div
@@ -83,12 +83,12 @@ export default function JaguarXKEnginesPage() {
               className="mt-7 max-w-4xl text-sm leading-relaxed text-slate-300 md:text-base space-y-4"
             >
               <p>
-                The Jaguar XK is a grand tourer built around Jaguar V8 performance — and when engine issues develop, the right specialist approach
+                The Jaguar XK is a grand tourer built around Jaguar V8 performance   and when engine issues develop, the right specialist approach
                 determines whether the fix lasts.
               </p>
               <p>
-                Vogue Technics in Grays, Essex supply, rebuild and fit Jaguar XK engines with accurate diagnosis, transparent pricing, and written
-                warranty — plus UK-wide collection and delivery.
+                Vogue Technics in  supply, rebuild and fit Jaguar XK engines with accurate diagnosis, transparent pricing, and written
+                warranty   plus UK-wide collection and delivery.
               </p>
             </motion.div>
           </div>
@@ -104,7 +104,7 @@ export default function JaguarXKEnginesPage() {
             </div>
             <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
               <h3 className="font-bold text-slate-900">Specialist Diagnostics</h3>
-              <p className="mt-3 text-slate-700 leading-relaxed">Same‑day diagnostics in Grays to confirm the exact fault and best route.</p>
+              <p className="mt-3 text-slate-700 leading-relaxed">Same‑day diagnostics in  to confirm the exact fault and best route.</p>
             </div>
             <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
               <h3 className="font-bold text-slate-900">Supply & Fit Available</h3>
@@ -117,7 +117,7 @@ export default function JaguarXKEnginesPage() {
       <FAQSection
         title={
           <>
-            Frequently Asked Questions — <span className="text-primary italic">Jaguar XK Engine</span>
+            Frequently Asked Questions   <span className="text-primary italic">Jaguar XK Engine</span>
           </>
         }
         items={faqs}
@@ -128,7 +128,7 @@ export default function JaguarXKEnginesPage() {
           <div className="max-w-5xl mx-auto text-center space-y-6">
             <h2 className="text-3xl md:text-4xl font-extrabold leading-tight">Need an XK engine quote or diagnosis?</h2>
             <p className="text-emerald-50 leading-relaxed max-w-4xl mx-auto">
-              Call our Grays workshop team to confirm your exact engine and get a clear quote for supply, rebuild, or replacement.
+              Call our  workshop team to confirm your exact engine and get a clear quote for supply, rebuild, or replacement.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <a

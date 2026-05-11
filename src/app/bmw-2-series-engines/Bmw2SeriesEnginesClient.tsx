@@ -55,12 +55,12 @@ const faqs = [
   {
     question: "What are the most common engine problems on the BMW 2 Series?",
     answer:
-      "The most frequently reported issues include timing chain wear on the N47 diesel, turbo failure, head gasket failure, and rear main seal oil leaks. Early diagnosis is always the most cost-effective approach — the longer a fault is left, the more it typically costs to resolve.",
+      "The most frequently reported issues include timing chain wear on the N47 diesel, turbo failure, head gasket failure, and rear main seal oil leaks. Early diagnosis is always the most cost-effective approach   the longer a fault is left, the more it typically costs to resolve.",
   },
   {
     question: "Is it worth rebuilding a BMW 2 Series engine?",
     answer:
-      "In most cases, yes — particularly when the rest of the vehicle is in good condition. A quality rebuild extends the car's usable life significantly and costs far less than sourcing a like-for-like replacement vehicle at this level.",
+      "In most cases, yes   particularly when the rest of the vehicle is in good condition. A quality rebuild extends the car's usable life significantly and costs far less than sourcing a like-for-like replacement vehicle at this level.",
   },
   {
     question: "Do you provide a warranty on rebuilt or replacement engines?",
@@ -70,7 +70,7 @@ const faqs = [
   {
     question: "Can you supply and fit, or just supply the engine?",
     answer:
-      "Both. We offer full supply and fit at our Grays, Essex workshop. We also offer supply-only for customers working with their own installer, and we can connect you with approved fitters in your area if needed.",
+      "Both. We offer full supply and fit at our  workshop. We also offer supply-only for customers working with their own installer, and we can connect you with approved fitters in your area if needed.",
   },
   {
     question: "How long does a BMW 2 Series engine replacement take?",
@@ -121,7 +121,7 @@ export default function Bmw2SeriesEnginesClient() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 via-green-400 to-lime-300">
                 BMW 2 Series Engine Rebuild
               </span>{" "}
-              — Expert Reconditioning, Repairs &amp; Replacements in the UK
+                Expert Reconditioning, Repairs &amp; Replacements in the UK
             </motion.h1>
 
             <motion.div
@@ -139,10 +139,10 @@ export default function Bmw2SeriesEnginesClient() {
               transition={{ delay: 0.22 }}
               className="text-base md:text-lg text-slate-200 mb-8 max-w-4xl mx-auto leading-relaxed"
             >
-              If your BMW 2 Series has started showing signs of engine trouble — whether that&apos;s unusual smoke, a rattling timing chain, loss of
-              power, or a blown head gasket — you&apos;re in the right hands. At Vogue Technics, based in Grays, Essex, we deliver specialist BMW 2
+              If your BMW 2 Series has started showing signs of engine trouble   whether that&apos;s unusual smoke, a rattling timing chain, loss of
+              power, or a blown head gasket   you&apos;re in the right hands. At Vogue Technics, based in , we deliver specialist BMW 2
               Series engine rebuild services to drivers across the United Kingdom. With over 25 years of hands-on experience and a workshop built
-              around precision engineering, we don&apos;t just fix engines — we restore them properly.
+              around precision engineering, we don&apos;t just fix engines   we restore them properly.
             </motion.p>
 
             <motion.p
@@ -175,7 +175,7 @@ export default function Bmw2SeriesEnginesClient() {
               {[
                 {
                   title: "25 Years of BMW Engine Expertise",
-                  text: "Our technicians have spent decades working specifically on BMW engines. The B47, B48, and N47 units found across the 2 Series range each come with their own known weaknesses — and we know how to address every one of them correctly. This isn&apos;t general garage work. This is specialist knowledge built over a quarter of a century.",
+                  text: "Our technicians have spent decades working specifically on BMW engines. The B47, B48, and N47 units found across the 2 Series range each come with their own known weaknesses   and we know how to address every one of them correctly. This isn&apos;t general garage work. This is specialist knowledge built over a quarter of a century.",
                 },
                 {
                   title: "Transparent Quotes, No Hidden Costs",
@@ -183,7 +183,7 @@ export default function Bmw2SeriesEnginesClient() {
                 },
                 {
                   title: "Written Warranty on All Engine Work",
-                  text: "Every engine rebuild, replacement, and major repair carried out at Vogue Technics comes with a written warranty. We stand behind our workmanship completely — because we know it&apos;s done right the first time.",
+                  text: "Every engine rebuild, replacement, and major repair carried out at Vogue Technics comes with a written warranty. We stand behind our workmanship completely   because we know it&apos;s done right the first time.",
                 },
               ].map((item) => (
                 <div
@@ -256,23 +256,23 @@ export default function Bmw2SeriesEnginesClient() {
                 title: "Head Gasket Replacement",
                 body: [
                   "A blown head gasket is one of the most urgent engine issues a BMW 2 Series owner can face. White smoke from the exhaust, coolant loss, or a persistently overheating temperature gauge are all warning signs that should never be ignored. Left unaddressed, a failing head gasket will cause severe internal engine damage within a very short time.",
-                  "At Vogue Technics, we carry out BMW 2 Series head gasket replacement using OEM-grade components, ensuring a proper, lasting seal that holds under the operating pressures these engines demand. Every replacement is followed by a thorough post-repair inspection before your vehicle leaves our workshop. The sooner it&apos;s caught, the less collateral damage — so if you&apos;re seeing any of the warning signs, call us today.",
+                  "At Vogue Technics, we carry out BMW 2 Series head gasket replacement using OEM-grade components, ensuring a proper, lasting seal that holds under the operating pressures these engines demand. Every replacement is followed by a thorough post-repair inspection before your vehicle leaves our workshop. The sooner it&apos;s caught, the less collateral damage   so if you&apos;re seeing any of the warning signs, call us today.",
                 ],
                 href: "/services/head-gasket-replacement",
               },
               {
                 title: "Timing Chain Replacement",
                 body: [
-                  "The timing chain on many BMW 2 Series engines — particularly the N47 diesel — is a well-documented weak point that has caught out thousands of owners across the UK. Rattling on cold starts, rough idling, or a sudden illumination of warning lights can all indicate timing chain wear that&apos;s already progressing.",
-                  "We carry out complete BMW 2 Series timing chain replacement as a full kit job — chain, tensioners, guides, and sprockets all replaced together. We never take a half-measure approach on timing chain work, because replacing only one component while leaving worn parts behind is a false economy that leads to repeat failures. Get it done properly the first time.",
+                  "The timing chain on many BMW 2 Series engines   particularly the N47 diesel   is a well-documented weak point that has caught out thousands of owners across the UK. Rattling on cold starts, rough idling, or a sudden illumination of warning lights can all indicate timing chain wear that&apos;s already progressing.",
+                  "We carry out complete BMW 2 Series timing chain replacement as a full kit job   chain, tensioners, guides, and sprockets all replaced together. We never take a half-measure approach on timing chain work, because replacing only one component while leaving worn parts behind is a false economy that leads to repeat failures. Get it done properly the first time.",
                 ],
                 href: "/services/timing-chain-replacement",
               },
               {
                 title: "Timing Belt Replacement",
                 body: [
-                  "Certain BMW 2 Series variants run a timing belt rather than a chain. The consequences of a snapped timing belt are immediate and catastrophic — bent valves, damaged pistons, and in most cases, a write-off engine. There is no warning before it goes.",
-                  "We strongly recommend BMW 2 Series timing belt replacement at or before the manufacturer&apos;s specified interval — and earlier still if you&apos;ve purchased a used 2 Series with an uncertain service history. We carry belts and full replacement kits for all applicable 2 Series engine configurations. It&apos;s a small cost now against a potentially devastating one later.",
+                  "Certain BMW 2 Series variants run a timing belt rather than a chain. The consequences of a snapped timing belt are immediate and catastrophic   bent valves, damaged pistons, and in most cases, a write-off engine. There is no warning before it goes.",
+                  "We strongly recommend BMW 2 Series timing belt replacement at or before the manufacturer&apos;s specified interval   and earlier still if you&apos;ve purchased a used 2 Series with an uncertain service history. We carry belts and full replacement kits for all applicable 2 Series engine configurations. It&apos;s a small cost now against a potentially devastating one later.",
                 ],
                 href: "/services/timing-belt-replacement",
               },
@@ -287,15 +287,15 @@ export default function Bmw2SeriesEnginesClient() {
               {
                 title: "Engine Rebuild",
                 body: [
-                  "For high-mileage BMW 2 Series engines showing widespread internal wear, a full engine rebuild is often the most cost-effective long-term solution — and the one that delivers the best result. Rather than chasing individual faults on an engine that&apos;s fundamentally tired, a proper rebuild gives you essentially a fresh unit without the cost of sourcing a brand-new one.",
-                  "At Vogue Technics, our BMW 2 Series engine rebuild process involves a complete strip-down, a thorough inspection of every internal component, replacement of all worn or damaged parts, and full reassembly to factory tolerances. The engine is then tested before refitting. It&apos;s a comprehensive process carried out by technicians who know these engines inside out — and the results speak for themselves.",
+                  "For high-mileage BMW 2 Series engines showing widespread internal wear, a full engine rebuild is often the most cost-effective long-term solution   and the one that delivers the best result. Rather than chasing individual faults on an engine that&apos;s fundamentally tired, a proper rebuild gives you essentially a fresh unit without the cost of sourcing a brand-new one.",
+                  "At Vogue Technics, our BMW 2 Series engine rebuild process involves a complete strip-down, a thorough inspection of every internal component, replacement of all worn or damaged parts, and full reassembly to factory tolerances. The engine is then tested before refitting. It&apos;s a comprehensive process carried out by technicians who know these engines inside out   and the results speak for themselves.",
                 ],
                 href: "/services/engine-rebuild",
               },
               {
                 title: "Engine Repair",
                 body: [
-                  "Not every engine problem requires a full rebuild, and we&apos;d never recommend one if a targeted repair is genuinely all that&apos;s needed. Our diagnostic process is thorough and precise — we identify the root cause of the problem accurately before any work begins, so you only pay for what your engine actually requires.",
+                  "Not every engine problem requires a full rebuild, and we&apos;d never recommend one if a targeted repair is genuinely all that&apos;s needed. Our diagnostic process is thorough and precise   we identify the root cause of the problem accurately before any work begins, so you only pay for what your engine actually requires.",
                   "BMW 2 Series engine repair work we regularly carry out includes oil leak rectification, bearing replacements, valve repairs, sensor faults, and cylinder head work. Whether the issue is straightforward or complex, our technicians approach every repair with the same standard of care. Honest diagnostics, honest pricing, and work that lasts.",
                 ],
                 href: "/services/engine-repair",
@@ -303,8 +303,8 @@ export default function Bmw2SeriesEnginesClient() {
               {
                 title: "Engine Replacement",
                 body: [
-                  "Sometimes a full BMW 2 Series engine replacement is the most practical route — particularly when multiple internal components have failed simultaneously, or when the cost of rebuilding exceeds the value of the work. In these cases, fitting a quality reconditioned or low-mileage used engine is the smarter call.",
-                  "We supply and fit reconditioned engines and quality used BMW 2 Series engines sourced from trusted UK suppliers. Every unit is inspected and bench-tested before installation. We&apos;ll talk you through your options clearly, explain the cost difference between each route, and recommend what genuinely makes sense for your vehicle and your budget — not what earns us the most margin.",
+                  "Sometimes a full BMW 2 Series engine replacement is the most practical route   particularly when multiple internal components have failed simultaneously, or when the cost of rebuilding exceeds the value of the work. In these cases, fitting a quality reconditioned or low-mileage used engine is the smarter call.",
+                  "We supply and fit reconditioned engines and quality used BMW 2 Series engines sourced from trusted UK suppliers. Every unit is inspected and bench-tested before installation. We&apos;ll talk you through your options clearly, explain the cost difference between each route, and recommend what genuinely makes sense for your vehicle and your budget   not what earns us the most margin.",
                 ],
                 href: "/services/engine-replacement",
               },
@@ -312,15 +312,15 @@ export default function Bmw2SeriesEnginesClient() {
                 title: "Engine Swap",
                 body: [
                   "Whether you&apos;re upgrading to a more powerful engine variant, switching from diesel to petrol, or fitting a newer unit into an earlier 2 Series shell, an engine swap is a significant undertaking that needs to be managed by people who know what they&apos;re doing.",
-                  "Our BMW 2 Series engine swap service covers the complete process — from sourcing the right donor engine through to mounts, ancillary connections, ECU mapping, and full post-swap diagnostics. We don&apos;t hand a car back until everything is functioning correctly and the engine management system is properly calibrated. If you&apos;re considering a swap and want an honest conversation about feasibility and cost, give us a call.",
+                  "Our BMW 2 Series engine swap service covers the complete process   from sourcing the right donor engine through to mounts, ancillary connections, ECU mapping, and full post-swap diagnostics. We don&apos;t hand a car back until everything is functioning correctly and the engine management system is properly calibrated. If you&apos;re considering a swap and want an honest conversation about feasibility and cost, give us a call.",
                 ],
                 href: "/services/engine-swap",
               },
               {
                 title: "Engine Health Check",
                 body: [
-                  "Not sure what&apos;s wrong with your BMW 2 Series — or simply want peace of mind before buying a used one? Our BMW 2 Series engine health check is a comprehensive inspection covering compression testing, oil analysis, full diagnostic scanning, and a detailed visual assessment of all accessible engine components.",
-                  "At the end of the check, you&apos;ll receive a clear written report with our honest findings and recommendations. No upselling. No inflated concerns designed to push you towards unnecessary work. Just a straight, professional assessment of exactly where your engine stands — so you can make an informed decision about what, if anything, needs to be done.",
+                  "Not sure what&apos;s wrong with your BMW 2 Series   or simply want peace of mind before buying a used one? Our BMW 2 Series engine health check is a comprehensive inspection covering compression testing, oil analysis, full diagnostic scanning, and a detailed visual assessment of all accessible engine components.",
+                  "At the end of the check, you&apos;ll receive a clear written report with our honest findings and recommendations. No upselling. No inflated concerns designed to push you towards unnecessary work. Just a straight, professional assessment of exactly where your engine stands   so you can make an informed decision about what, if anything, needs to be done.",
                 ],
                 href: "/services/engine-health-check",
               },
@@ -354,10 +354,10 @@ export default function Bmw2SeriesEnginesClient() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-5xl mx-auto rounded-[2.25rem] border border-slate-200 bg-gradient-to-b from-white to-slate-50 p-8 md:p-12 shadow-sm">
             <h2 className="text-2xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
-              BMW 2 Series Engine Reconditioning — Serving All of the UK from Grays, Essex
+              BMW 2 Series Engine Reconditioning   Serving All of the UK from 
             </h2>
             <p className="mt-5 text-slate-700 leading-relaxed">
-              We understand that being without your BMW — especially if it&apos;s your daily driver — is a genuine inconvenience. That&apos;s why we work
+              We understand that being without your BMW   especially if it&apos;s your daily driver   is a genuine inconvenience. That&apos;s why we work
               efficiently without ever compromising on the quality of the work leaving our workshop.
             </p>
 
@@ -365,9 +365,9 @@ export default function Bmw2SeriesEnginesClient() {
               <div className="rounded-[1.75rem] border border-slate-200 bg-white p-7">
                 <h3 className="font-extrabold text-slate-900 tracking-tight">Collection &amp; Delivery Across the UK</h3>
                 <p className="mt-3 text-slate-700 leading-relaxed">
-                  Can&apos;t get to our workshop in Grays, Essex? Not a problem. We offer an engine collection and delivery service covering the whole
+                  Can&apos;t get to our workshop in ? Not a problem. We offer an engine collection and delivery service covering the whole
                   of the United Kingdom. Send us your old unit, and we&apos;ll return your rebuilt or replacement engine fully tested and ready to fit.
-                  We can also arrange installation through our trusted network of approved fitters nationwide — so wherever you are in Britain, we
+                  We can also arrange installation through our trusted network of approved fitters nationwide   so wherever you are in Britain, we
                   have a solution for you.
                 </p>
               </div>
@@ -375,7 +375,7 @@ export default function Bmw2SeriesEnginesClient() {
                 <h3 className="font-extrabold text-slate-900 tracking-tight">Turnaround Times We Actually Stick To</h3>
                 <p className="mt-3 text-slate-700 leading-relaxed">
                   Most BMW 2 Series engine rebuilds are completed within 5–10 working days. Repairs and replacements are often faster depending on
-                  parts availability. We give you a realistic timeframe at the point of booking — and we honour it.
+                  parts availability. We give you a realistic timeframe at the point of booking   and we honour it.
                 </p>
               </div>
             </div>
@@ -387,7 +387,7 @@ export default function Bmw2SeriesEnginesClient() {
       <FAQSection
         title={
           <>
-            Frequently Asked Questions — <span className="text-primary italic">BMW 2 Series Engine Rebuild &amp; Repair</span>
+            Frequently Asked Questions   <span className="text-primary italic">BMW 2 Series Engine Rebuild &amp; Repair</span>
           </>
         }
         items={faqs}
@@ -401,10 +401,10 @@ export default function Bmw2SeriesEnginesClient() {
             Ready to get your BMW 2 Series back on the road?
           </h2>
           <p className="text-emerald-100 text-base md:text-lg font-medium max-w-3xl mx-auto leading-relaxed">
-            Call Vogue Technics today or complete our online enquiry form for a fast, no-obligation quote. We&apos;re based in Grays, Essex, and serve
+            Call Vogue Technics today or complete our online enquiry form for a fast, no-obligation quote. We&apos;re based in , and serve
             BMW owners right across the United Kingdom.
             <br />
-            Don&apos;t trust your 2 Series to just anyone — trust the specialists.
+            Don&apos;t trust your 2 Series to just anyone   trust the specialists.
           </p>
 
           <div className="flex flex-col md:flex-row gap-6 justify-center pt-4">

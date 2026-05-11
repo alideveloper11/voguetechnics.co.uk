@@ -287,7 +287,7 @@ export default function BmwEngineModelPageClient(props: BmwEngineModelPageProps)
             <span className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-slate-50 p-2">
               <BmwRoundelMark />
             </span>
-            Vogue Technics | Grays, Essex | UK-Wide Service
+            Vogue Technics |  | UK-Wide Service
           </div>
         </div>
       </section>

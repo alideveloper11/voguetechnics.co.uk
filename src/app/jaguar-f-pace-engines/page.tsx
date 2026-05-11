@@ -38,7 +38,7 @@ const faqs = [
   {
     question: "Can you collect my engine from anywhere in the UK?",
     answer:
-      "Yes. We offer UK-wide collection and delivery so you can access our Grays workshop expertise from anywhere in the country.",
+      "Yes. We offer UK-wide collection and delivery so you can access our  workshop expertise from anywhere in the country.",
   },
 ];
 
@@ -47,7 +47,7 @@ export default function JaguarFPaceEnginesPage() {
     <div className="bg-white min-h-screen">
       <section className="relative overflow-hidden bg-slate-900 pt-32 pb-24">
         <div className="absolute inset-0 z-0">
-          <Image src="/images/car_bgg.jpg" alt="Jaguar F-Pace engine specialists in Grays" fill className="object-cover opacity-30 mix-blend-overlay" priority />
+          <Image src="/images/car_bgg.jpg" alt="Jaguar F-Pace engine specialists in " fill className="object-cover opacity-30 mix-blend-overlay" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/85 to-slate-900/50" />
         </div>
         <div className="container relative z-10 mx-auto px-4 lg:px-8">
@@ -55,17 +55,17 @@ export default function JaguarFPaceEnginesPage() {
           <div className="max-w-5xl pt-8">
             <motion.h1 initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} className="text-3xl font-black leading-[1.08] tracking-tight text-white md:text-5xl">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-300 to-green-400">Jaguar F-Pace Engine</span>{" "}
-              — Supply, Rebuild & Fit by Specialist Engineers in Grays, Essex
+                Supply, Rebuild & Fit by Specialist Engineers in 
             </motion.h1>
             <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.12 }} className="mt-7">
               <RegSearch className="max-w-3xl" />
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.22 }} className="mt-7 max-w-4xl text-sm leading-relaxed text-slate-300 md:text-base space-y-4">
               <p>
-                The Jaguar F-Pace is one of the most technically demanding premium SUVs on British roads — from the 2.0-litre Ingenium engines through to the supercharged V6 and V8 variants. Each engine carries specific fault patterns and rebuild tolerances that only a genuine specialist understands from experience.
+                The Jaguar F-Pace is one of the most technically demanding premium SUVs on British roads   from the 2.0-litre Ingenium engines through to the supercharged V6 and V8 variants. Each engine carries specific fault patterns and rebuild tolerances that only a genuine specialist understands from experience.
               </p>
               <p>
-                At Vogue Technics, based in Grays, Essex, we carry out Jaguar F-Pace engine rebuilds, targeted repairs, reconditioned engine replacements, and full diagnostic assessments across the complete F-Pace range — with transparent, itemised quotes and written warranty.
+                At Vogue Technics, based in , we carry out Jaguar F-Pace engine rebuilds, targeted repairs, reconditioned engine replacements, and full diagnostic assessments across the complete F-Pace range   with transparent, itemised quotes and written warranty.
               </p>
             </motion.div>
           </div>
@@ -102,7 +102,7 @@ export default function JaguarFPaceEnginesPage() {
             <div className="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm">
               <h3 className="text-xl font-bold text-slate-900">UK-wide service available</h3>
               <p className="mt-4 text-slate-700 leading-relaxed">
-                Not local to Essex? We offer UK-wide collection and delivery. Your engine or vehicle can be brought to our Grays workshop for the
+                Not local to ? We offer UK-wide collection and delivery. Your engine or vehicle can be brought to our  workshop for the
                 same specialist process and returned with clear documentation and warranty terms.
               </p>
               <div className="mt-6 rounded-2xl border border-slate-200 bg-slate-50 p-5">
@@ -111,7 +111,7 @@ export default function JaguarFPaceEnginesPage() {
                   “The turbocharger on my F-Pace went without much warning… Vogue Technics arranged collection from Yorkshire, the diagnostic report was
                   clear, and the work has been faultless since.”
                 </p>
-                <div className="mt-4 text-sm font-bold text-slate-900">Sarah L. — Jaguar F-Pace 3.0 V6 Diesel</div>
+                <div className="mt-4 text-sm font-bold text-slate-900">Sarah L.   Jaguar F-Pace 3.0 V6 Diesel</div>
               </div>
             </div>
           </div>
@@ -124,13 +124,13 @@ export default function JaguarFPaceEnginesPage() {
             <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
               <h2 className="font-bold text-slate-900">Reconditioned engines</h2>
               <p className="mt-3 text-slate-700 leading-relaxed">
-                Fully stripped, inspected and rebuilt to OEM specification — tested before dispatch.
+                Fully stripped, inspected and rebuilt to OEM specification   tested before dispatch.
               </p>
             </div>
             <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
               <h3 className="font-bold text-slate-900">Used engines (verified)</h3>
               <p className="mt-3 text-slate-700 leading-relaxed">
-                Compression tested, documented and warranted — supply-only or supply & fit.
+                Compression tested, documented and warranted   supply-only or supply & fit.
               </p>
             </div>
             <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
@@ -143,14 +143,14 @@ export default function JaguarFPaceEnginesPage() {
         </div>
       </section>
 
-      <FAQSection title={<>Frequently Asked Questions — <span className="text-primary italic">Jaguar F‑Pace Engine</span></>} items={faqs} />
+      <FAQSection title={<>Frequently Asked Questions   <span className="text-primary italic">Jaguar F‑Pace Engine</span></>} items={faqs} />
 
       <section className="py-16 md:py-20 bg-primary text-white">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-5xl mx-auto text-center space-y-6">
             <h2 className="text-3xl md:text-4xl font-extrabold leading-tight">Need help with your F‑Pace engine?</h2>
             <p className="text-emerald-50 leading-relaxed max-w-4xl mx-auto">
-              Call our Grays team for a fast, no‑obligation quote — supply‑only or supply & fit, with warranty cover.
+              Call our  team for a fast, no‑obligation quote   supply‑only or supply & fit, with warranty cover.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <a href="tel:01375531355" className="inline-flex items-center justify-center rounded-2xl bg-white px-8 py-4 font-bold text-primary shadow-xl transition-all hover:bg-slate-50 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99]">

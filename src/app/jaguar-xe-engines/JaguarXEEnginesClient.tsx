@@ -44,7 +44,7 @@ export default function JaguarXEEnginesClient() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/car_bgg.jpg"
-            alt="Jaguar XE engine specialists in Grays"
+            alt="Jaguar XE engine specialists in "
             fill
             className="object-cover opacity-30 mix-blend-overlay"
             priority
@@ -68,7 +68,7 @@ export default function JaguarXEEnginesClient() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-300 to-green-400">
                 Jaguar XE Engine Rebuild
               </span>{" "}
-              — Specialist Engine Repairs, Reconditioning & Replacements Across the UK
+                Specialist Engine Repairs, Reconditioning & Replacements Across the UK
             </motion.h1>
 
             <motion.div
@@ -87,12 +87,12 @@ export default function JaguarXEEnginesClient() {
               className="mt-7 max-w-4xl text-sm leading-relaxed text-slate-300 md:text-base space-y-4"
             >
               <p>
-                The Jaguar XE was engineered to compete with the best compact executive saloons — but the Ingenium engine family carries
+                The Jaguar XE was engineered to compete with the best compact executive saloons   but the Ingenium engine family carries
                 well-documented vulnerabilities that become more significant as mileage accumulates.
               </p>
               <p>
-                At Vogue Technics in Grays, Essex, we carry out Jaguar XE engine rebuilds, targeted repairs, reconditioned engine replacements, and
-                thorough diagnostic assessments across the full XE range — with transparent quotes and written warranty.
+                At Vogue Technics in , we carry out Jaguar XE engine rebuilds, targeted repairs, reconditioned engine replacements, and
+                thorough diagnostic assessments across the full XE range   with transparent quotes and written warranty.
               </p>
             </motion.div>
           </div>
@@ -127,7 +127,7 @@ export default function JaguarXEEnginesClient() {
       <FAQSection
         title={
           <>
-            Frequently Asked Questions — <span className="text-primary italic">Jaguar XE Engines</span>
+            Frequently Asked Questions   <span className="text-primary italic">Jaguar XE Engines</span>
           </>
         }
         items={faqs}
@@ -140,7 +140,7 @@ export default function JaguarXEEnginesClient() {
               Book Jaguar XE diagnostics or request a quote
             </h2>
             <p className="text-emerald-50 leading-relaxed max-w-4xl mx-auto">
-              Call our team in Grays today to discuss symptoms, availability, and the best route forward — repair, rebuild or engine replacement.
+              Call our team in  today to discuss symptoms, availability, and the best route forward   repair, rebuild or engine replacement.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <a

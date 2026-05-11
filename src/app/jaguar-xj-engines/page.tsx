@@ -23,12 +23,12 @@ const faqs = [
   {
     question: "Do you offer supply and fit for Jaguar XJ engines?",
     answer:
-      "Yes. We offer supply-only with UK-wide delivery or complete supply and fit at our Grays workshop with clear quoting and written warranty terms agreed up-front.",
+      "Yes. We offer supply-only with UK-wide delivery or complete supply and fit at our  workshop with clear quoting and written warranty terms agreed up-front.",
   },
   {
     question: "Can you collect my engine from anywhere in the UK?",
     answer:
-      "Yes. We offer UK-wide collection and delivery so you can access our Grays workshop expertise from anywhere in the country.",
+      "Yes. We offer UK-wide collection and delivery so you can access our  workshop expertise from anywhere in the country.",
   },
 ];
 
@@ -39,7 +39,7 @@ export default function JaguarXJEnginesPage() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/car_bgg.jpg"
-            alt="Jaguar XJ engine specialists in Grays"
+            alt="Jaguar XJ engine specialists in "
             fill
             className="object-cover opacity-30 mix-blend-overlay"
             priority
@@ -64,7 +64,7 @@ export default function JaguarXJEnginesPage() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-300 to-green-400">
                 Jaguar XJ Engine
               </span>{" "}
-              — Reconditioned, Rebuilt & Used Supply and Fit Across the UK
+                Reconditioned, Rebuilt & Used Supply and Fit Across the UK
             </motion.h1>
 
             <motion.div
@@ -83,12 +83,12 @@ export default function JaguarXJEnginesPage() {
               className="mt-7 max-w-4xl text-sm leading-relaxed text-slate-300 md:text-base space-y-4"
             >
               <p>
-                The Jaguar XJ is Jaguar&apos;s flagship saloon — engineered for refinement and long-distance comfort, and built around powerful V6 and V8
+                The Jaguar XJ is Jaguar&apos;s flagship saloon   engineered for refinement and long-distance comfort, and built around powerful V6 and V8
                 petrol and diesel engines across its generations.
               </p>
               <p>
-                At Vogue Technics in Grays, Essex, we carry out Jaguar XJ engine rebuilds, targeted repairs and complete replacements with accurate
-                diagnosis, transparent pricing, and written warranty — plus UK-wide collection and delivery.
+                At Vogue Technics in , we carry out Jaguar XJ engine rebuilds, targeted repairs and complete replacements with accurate
+                diagnosis, transparent pricing, and written warranty   plus UK-wide collection and delivery.
               </p>
             </motion.div>
           </div>
@@ -104,10 +104,10 @@ export default function JaguarXJEnginesPage() {
             </div>
             <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
               <h3 className="font-bold text-slate-900">Rebuilds & Repairs</h3>
-              <p className="mt-3 text-slate-700 leading-relaxed">From warning lights to internal faults — diagnose, rebuild, and fix properly.</p>
+              <p className="mt-3 text-slate-700 leading-relaxed">From warning lights to internal faults   diagnose, rebuild, and fix properly.</p>
             </div>
             <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
-              <h3 className="font-bold text-slate-900">Supply & Fit (Grays)</h3>
+              <h3 className="font-bold text-slate-900">Supply & Fit ()</h3>
               <p className="mt-3 text-slate-700 leading-relaxed">Complete fitting service with the right supporting work and checks.</p>
             </div>
           </div>
@@ -117,7 +117,7 @@ export default function JaguarXJEnginesPage() {
       <FAQSection
         title={
           <>
-            Frequently Asked Questions — <span className="text-primary italic">Jaguar XJ Engine</span>
+            Frequently Asked Questions   <span className="text-primary italic">Jaguar XJ Engine</span>
           </>
         }
         items={faqs}
@@ -128,7 +128,7 @@ export default function JaguarXJEnginesPage() {
           <div className="max-w-5xl mx-auto text-center space-y-6">
             <h2 className="text-3xl md:text-4xl font-extrabold leading-tight">Need a Jaguar XJ engine quote?</h2>
             <p className="text-emerald-50 leading-relaxed max-w-4xl mx-auto">
-              Call our Grays team for the quickest route to the correct engine specification and a clear, itemised quote.
+              Call our  team for the quickest route to the correct engine specification and a clear, itemised quote.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <a

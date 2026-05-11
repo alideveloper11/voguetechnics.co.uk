@@ -128,7 +128,7 @@ export default function ServiceDetailClient({ service, relatedServices }: Servic
                        <a href="tel:01375531355" className="w-full bg-slate-900 hover:bg-slate-800 text-white font-black py-5 px-8 rounded-2xl shadow-xl transition-all flex justify-center items-center gap-4 uppercase tracking-[0.2em] text-sm group">
                           <Phone className="w-5 h-5 text-primary group-hover:scale-110 transition-transform" /> 01375 531355
                        </a>
-                       <p className="text-slate-400 text-[0.6rem] text-center font-bold uppercase tracking-widest">Available Mon—Sat: 8am — 6pm</p>
+                       <p className="text-slate-400 text-[0.6rem] text-center font-bold uppercase tracking-widest">Available Mon Sat: 8am   6pm</p>
                     </div>
                  </div>
 

@@ -14,31 +14,31 @@ const services = [
     title: "Head Gasket Replacement",
     slug: "head-gasket-replacement",
     body:
-      "White smoke from the exhaust, coolant disappearing without explanation, or an engine that keeps running hot — these are the warning signs of a failing head gasket. Left unaddressed, a blown head gasket destroys engines quickly and expensively. We replace Defender head gaskets using OEM-grade components, and where necessary, we machine the head to ensure a clean, lasting seal. Act early and save your engine.",
+      "White smoke from the exhaust, coolant disappearing without explanation, or an engine that keeps running hot   these are the warning signs of a failing head gasket. Left unaddressed, a blown head gasket destroys engines quickly and expensively. We replace Defender head gaskets using OEM-grade components, and where necessary, we machine the head to ensure a clean, lasting seal. Act early and save your engine.",
   },
   {
     title: "Timing Chain & Timing Belt Replacement",
     slug: "timing-chain-replacement",
     body:
-      "The 2.4 and 2.2 Puma engines are particularly prone to timing chain wear — and when a timing chain lets go, it does so without warning and without mercy. We replace chains, tensioners, guides, and sprockets together as a complete system, not as a piecemeal repair. For Defender variants running a timing belt, we follow — or improve upon — the manufacturer's recommended replacement intervals. A snapped belt means instant, irreversible engine damage. Don't wait.",
+      "The 2.4 and 2.2 Puma engines are particularly prone to timing chain wear   and when a timing chain lets go, it does so without warning and without mercy. We replace chains, tensioners, guides, and sprockets together as a complete system, not as a piecemeal repair. For Defender variants running a timing belt, we follow   or improve upon   the manufacturer's recommended replacement intervals. A snapped belt means instant, irreversible engine damage. Don't wait.",
   },
   {
     title: "Turbo Replacement",
     slug: "turbo-replacement",
     body:
-      "A failing turbocharger announces itself through sluggish acceleration, black or blue smoke under load, or a distinct whistle that wasn't there before. We source quality replacement turbos for all Defender engine configurations — TDi, TD5, Puma TDCI, and Ingenium — and fit them to manufacturer specifications, carrying out full post-installation testing before the vehicle leaves our care.",
+      "A failing turbocharger announces itself through sluggish acceleration, black or blue smoke under load, or a distinct whistle that wasn't there before. We source quality replacement turbos for all Defender engine configurations   TDi, TD5, Puma TDCI, and Ingenium   and fit them to manufacturer specifications, carrying out full post-installation testing before the vehicle leaves our care.",
   },
   {
     title: "Engine Rebuild",
     slug: "engine-rebuild",
     body:
-      "When mileage is high and wear has crept in across multiple components, a full engine rebuild is often the most cost-effective path forward. We strip the engine completely, inspect every part with care, replace everything that's past its best, and reassemble to factory tolerances. The result is an engine that performs as it should — at a fraction of the cost of a replacement vehicle. For many Defender owners, a quality rebuild is the single best investment they make in their vehicle.",
+      "When mileage is high and wear has crept in across multiple components, a full engine rebuild is often the most cost-effective path forward. We strip the engine completely, inspect every part with care, replace everything that's past its best, and reassemble to factory tolerances. The result is an engine that performs as it should   at a fraction of the cost of a replacement vehicle. For many Defender owners, a quality rebuild is the single best investment they make in their vehicle.",
   },
   {
     title: "Engine Repair",
     slug: "engine-repair",
     body:
-      "Not every problem demands a full rebuild. Our diagnostic process identifies exactly what's wrong, so you only pay for what's genuinely needed. Oil leaks, bearing wear, injector faults, valve damage, sensor failures — we handle every level of Defender engine repair with precision and honesty.",
+      "Not every problem demands a full rebuild. Our diagnostic process identifies exactly what's wrong, so you only pay for what's genuinely needed. Oil leaks, bearing wear, injector faults, valve damage, sensor failures   we handle every level of Defender engine repair with precision and honesty.",
   },
   {
     title: "Engine Replacement",
@@ -50,13 +50,13 @@ const services = [
     title: "Engine Swap",
     slug: "engine-swap",
     body:
-      "Fitting a later Ingenium unit into an earlier Defender? Upgrading from a four-cylinder to an inline-six? Considering a V8 conversion? Our engine swap service covers the complete process — mounts, ancillaries, wiring, ECU mapping, and post-swap diagnostics — handled from start to finish by people who've done it many times before.",
+      "Fitting a later Ingenium unit into an earlier Defender? Upgrading from a four-cylinder to an inline-six? Considering a V8 conversion? Our engine swap service covers the complete process   mounts, ancillaries, wiring, ECU mapping, and post-swap diagnostics   handled from start to finish by people who've done it many times before.",
   },
   {
     title: "Engine Health Check",
     slug: "engine-health-check",
     body:
-      "If you're unsure what's wrong with your Defender, or you're considering buying a used example and want to know what you're getting into, our engine health check gives you the full picture. We carry out compression testing, oil analysis, diagnostic scanning, and a thorough visual inspection of the engine bay. You receive a written report with clear, honest findings — no upselling, no unnecessary work recommended.",
+      "If you're unsure what's wrong with your Defender, or you're considering buying a used example and want to know what you're getting into, our engine health check gives you the full picture. We carry out compression testing, oil analysis, diagnostic scanning, and a thorough visual inspection of the engine bay. You receive a written report with clear, honest findings   no upselling, no unnecessary work recommended.",
   },
 ];
 
@@ -74,12 +74,12 @@ const faqs = [
   {
     question: "Is it worth rebuilding a Land Rover Defender engine?",
     answer:
-      "In the vast majority of cases, yes — particularly for vehicles in otherwise sound condition. A quality rebuild extends the vehicle's life significantly and costs far less than sourcing a replacement Defender at current market prices.",
+      "In the vast majority of cases, yes   particularly for vehicles in otherwise sound condition. A quality rebuild extends the vehicle's life significantly and costs far less than sourcing a replacement Defender at current market prices.",
   },
   {
     question: "Do you cover engine work for classic Defenders as well as the new model?",
     answer:
-      "Yes. We work across all Defender generations — from 90s and 110s running 200TDi and 300TDi engines through to the current L663 Defender with Ingenium and P400 units.",
+      "Yes. We work across all Defender generations   from 90s and 110s running 200TDi and 300TDi engines through to the current L663 Defender with Ingenium and P400 units.",
   },
   {
     question: "Do rebuilt engines come with a warranty?",
@@ -89,7 +89,7 @@ const faqs = [
   {
     question: "How long does a Defender engine rebuild or replacement take?",
     answer:
-      "Engine repairs and replacements typically take 3–7 working days. Full rebuilds take 5–10 working days depending on parts availability. We give you a confirmed timeline when you book — and we honour it.",
+      "Engine repairs and replacements typically take 3–7 working days. Full rebuilds take 5–10 working days depending on parts availability. We give you a confirmed timeline when you book   and we honour it.",
   },
 ];
 
@@ -100,7 +100,7 @@ export default function LandRoverDefenderEnginesClient() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/car_bgg.jpg"
-            alt="Land Rover Defender engine specialist in Grays"
+            alt="Land Rover Defender engine specialist in "
             fill
             className="object-cover opacity-30 mix-blend-overlay"
             priority
@@ -125,7 +125,7 @@ export default function LandRoverDefenderEnginesClient() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-300 to-green-400">
                 Land Rover Defender Engine Specialists
               </span>{" "}
-              — Rebuilds, Repairs & Replacements Across the UK
+                Rebuilds, Repairs & Replacements Across the UK
             </motion.h1>
 
             <motion.div
@@ -144,10 +144,10 @@ export default function LandRoverDefenderEnginesClient() {
               className="mt-7 max-w-4xl text-sm leading-relaxed text-slate-300 md:text-base space-y-4"
             >
               <p>
-                If your Land Rover Defender has lost power, started smoking, or simply refused to start, you already know that time off the road costs money. At Vogue Technics, based in Grays, Essex, we specialise exclusively in Land Rover and Range Rover engines — and the Defender, in all its generations, is a vehicle we know inside out.
+                If your Land Rover Defender has lost power, started smoking, or simply refused to start, you already know that time off the road costs money. At Vogue Technics, based in , we specialise exclusively in Land Rover and Range Rover engines   and the Defender, in all its generations, is a vehicle we know inside out.
               </p>
               <p>
-                From the bulletproof 200TDi and the characterful 300TDi, through to the TD5, the Puma TDCI, and the modern Ingenium diesel and petrol units — every Land Rover Defender engine has its own personality, its own failure points, and its own demands. We know all of them. Backed by over 25 years of hands-on experience, we deliver engine work that lasts.
+                From the bulletproof 200TDi and the characterful 300TDi, through to the TD5, the Puma TDCI, and the modern Ingenium diesel and petrol units   every Land Rover Defender engine has its own personality, its own failure points, and its own demands. We know all of them. Backed by over 25 years of hands-on experience, we deliver engine work that lasts.
               </p>
             </motion.div>
           </div>
@@ -163,21 +163,21 @@ export default function LandRoverDefenderEnginesClient() {
             </p>
             <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
-                <h3 className="font-bold text-slate-900">We Work on Land Rovers — Nothing Else</h3>
+                <h3 className="font-bold text-slate-900">We Work on Land Rovers   Nothing Else</h3>
                 <p className="mt-3 text-slate-700 leading-relaxed">
-                  Every technician at Vogue Technics is trained specifically on Land Rover and Range Rover platforms. We don't split our workshop between brands or compromise our expertise across dozens of vehicle types. When your Defender comes in, every person working on it understands the platform deeply — from the classic Series-era architecture right through to the current L663 generation.
+                  Every technician at Vogue Technics is trained specifically on Land Rover and Range Rover platforms. We don't split our workshop between brands or compromise our expertise across dozens of vehicle types. When your Defender comes in, every person working on it understands the platform deeply   from the classic Series-era architecture right through to the current L663 generation.
                 </p>
               </div>
               <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
-                <h3 className="font-bold text-slate-900">25 Years of Proven Results in Grays, Essex</h3>
+                <h3 className="font-bold text-slate-900">25 Years of Proven Results in </h3>
                 <p className="mt-3 text-slate-700 leading-relaxed">
-                  Our reputation has been built entirely on word of mouth. Since we established our workshop in Grays, we've rebuilt and replaced thousands of Land Rover Defender engines for customers from Essex to Edinburgh. When we fix your engine, it stays fixed — and that's what keeps our customers coming back and referring their friends.
+                  Our reputation has been built entirely on word of mouth. Since we established our workshop in , we've rebuilt and replaced thousands of Land Rover Defender engines for customers from  to Edinburgh. When we fix your engine, it stays fixed   and that's what keeps our customers coming back and referring their friends.
                 </p>
               </div>
               <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
                 <h3 className="font-bold text-slate-900">Clear Pricing From the Start</h3>
                 <p className="mt-3 text-slate-700 leading-relaxed">
-                  Engine work can feel overwhelming, particularly when you're not sure what you're dealing with. We make it straightforward. You receive a full, itemised quote before any work begins — no vague estimates, no unexpected additions when you come to collect. Just honest pricing from people who respect your vehicle and your budget.
+                  Engine work can feel overwhelming, particularly when you're not sure what you're dealing with. We make it straightforward. You receive a full, itemised quote before any work begins   no vague estimates, no unexpected additions when you come to collect. Just honest pricing from people who respect your vehicle and your budget.
                 </p>
               </div>
             </div>
@@ -193,7 +193,7 @@ export default function LandRoverDefenderEnginesClient() {
             </h2>
             <div className="w-24 h-1 bg-primary mx-auto rounded-full mt-4"></div>
             <p className="mt-6 text-slate-600 text-[1.05rem] leading-relaxed">
-              Whatever the problem with your Land Rover Defender engine — whether it's a suspected head gasket or a full seizure — we have the solution. We cover every Defender variant and every engine type across the model's history.
+              Whatever the problem with your Land Rover Defender engine   whether it's a suspected head gasket or a full seizure   we have the solution. We cover every Defender variant and every engine type across the model's history.
             </p>
           </div>
 
@@ -225,17 +225,17 @@ export default function LandRoverDefenderEnginesClient() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
-              UK-Wide Collection, Delivery & Local Service From Grays, Essex
+              UK-Wide Collection, Delivery & Local Service From 
             </h2>
             <div className="mt-6 space-y-6 text-slate-700 leading-relaxed">
               <p>
-                We understand that a Defender off the road is a problem — whether it's your daily driver, your towing vehicle, or your weekend off-roader. We work efficiently without ever cutting corners, and we've built our service to reach Defender owners wherever they are in the UK.
+                We understand that a Defender off the road is a problem   whether it's your daily driver, your towing vehicle, or your weekend off-roader. We work efficiently without ever cutting corners, and we've built our service to reach Defender owners wherever they are in the UK.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
                   <h3 className="font-bold text-slate-900">Engine Collection & Delivery Across the UK</h3>
                   <p className="mt-3">
-                    You don't need to be local to benefit from Vogue Technics. We operate a UK-wide engine collection and delivery service — remove your engine, send it to us in Grays, and we'll return it rebuilt, replaced, or repaired, fully tested and ready to install. We can also connect you with our approved fitter network if you need it installed locally.
+                    You don't need to be local to benefit from Vogue Technics. We operate a UK-wide engine collection and delivery service   remove your engine, send it to us in , and we'll return it rebuilt, replaced, or repaired, fully tested and ready to install. We can also connect you with our approved fitter network if you need it installed locally.
                   </p>
                 </div>
                 <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
@@ -266,17 +266,17 @@ export default function LandRoverDefenderEnginesClient() {
               {
                 quote:
                   '"My Defender 110 TD5 had been misdiagnosed at two garages before I found Vogue Technics. They identified the problem immediately, quoted fairly, and had it running properly within the week. Exceptional."',
-                by: "— Dan H., Norwich",
+                by: "  Dan H., Norwich",
               },
               {
                 quote:
                   '"Sent my 300TDi up from Devon. Came back rebuilt beautifully, packaged properly, and two days ahead of the estimated date. Couldn\'t be happier."',
-                by: "— Rob C., Exeter",
+                by: "  Rob C., Exeter",
               },
               {
                 quote:
                   '"Quoted over £5,500 at a local dealer for an engine replacement. Vogue Technics did it for considerably less, with a warranty included. Professional from start to finish."',
-                by: "— Claire W., Leeds",
+                by: "  Claire W., Leeds",
               },
             ].map((t) => (
               <div
@@ -297,7 +297,7 @@ export default function LandRoverDefenderEnginesClient() {
       </section>
 
       <FAQSection
-        title={<>Frequently Asked Questions — <span className="text-primary italic">Land Rover Defender Engines</span></>}
+        title={<>Frequently Asked Questions   <span className="text-primary italic">Land Rover Defender Engines</span></>}
         items={faqs}
       />
 
@@ -308,9 +308,9 @@ export default function LandRoverDefenderEnginesClient() {
               Get Your Land Rover Defender Engine Sorted Today
             </h2>
             <p className="text-emerald-50 leading-relaxed max-w-3xl mx-auto">
-              Don't leave your Defender standing or trust it to someone who doesn't truly know the vehicle. Vogue Technics has spent over 25 years earning the trust of Land Rover owners across the United Kingdom — and we're ready to help you next.
+              Don't leave your Defender standing or trust it to someone who doesn't truly know the vehicle. Vogue Technics has spent over 25 years earning the trust of Land Rover owners across the United Kingdom   and we're ready to help you next.
               <br />
-              Call us today or complete our online enquiry form for a fast, no-obligation quote. We're based in Grays, Essex, and we work with Defender owners from Cornwall to the Scottish Highlands. Your Defender deserves proper specialists — and that's exactly what we are.
+              Call us today or complete our online enquiry form for a fast, no-obligation quote. We're based in , and we work with Defender owners from Cornwall to the Scottish Highlands. Your Defender deserves proper specialists   and that's exactly what we are.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <a

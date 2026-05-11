@@ -58,18 +58,18 @@ export default function EngineRebuildPage() {
             >
               <p>
                 When an engine has reached the point where a repair is no longer the right answer, the conversation turns to two
-                options — rebuild or replace. Both have their place, and the right choice depends on your specific engine, its
+                options   rebuild or replace. Both have their place, and the right choice depends on your specific engine, its
                 condition, and what you want from the vehicle long term.
               </p>
               <p>
                 At Vogue Technics, we carry out full engine rebuilds and engine reconditioning for Range Rover, Land Rover, Jaguar,
                 Audi, and BMW. Every rebuild is carried out to OEM specification using quality parts throughout, every job is backed
                 by a minimum six-month warranty, and every written quote is agreed before a single component is removed. Based in
-                Grays, Essex, with UK-wide collection available.
+                , with UK-wide collection available.
               </p>
               <p>
-                If you have been told your engine needs rebuilding — or if you are weighing up whether a rebuild or replacement
-                makes more sense — this page will give you the honest information you need to make the right decision.
+                If you have been told your engine needs rebuilding   or if you are weighing up whether a rebuild or replacement
+                makes more sense   this page will give you the honest information you need to make the right decision.
               </p>
             </motion.div>
 
@@ -102,7 +102,7 @@ export default function EngineRebuildPage() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center max-w-4xl mx-auto mb-16 space-y-6">
             <h2 className="text-2xl md:text-4xl font-extrabold text-slate-900 uppercase tracking-tight italic">
-              Rebuild or Replace <span className="text-primary">— Which Is Right for You?</span>
+              Rebuild or Replace <span className="text-primary">  Which Is Right for You?</span>
             </h2>
             <div className="w-24 h-1.5 bg-primary mx-auto rounded-full"></div>
           </div>
@@ -115,7 +115,7 @@ export default function EngineRebuildPage() {
               </p>
               <p>
                 A full engine rebuild is often the smarter long-term choice. When your original engine is stripped, inspected, and
-                rebuilt to OEM specification by a specialist who knows the platform, you end up with a unit of known history — every
+                rebuilt to OEM specification by a specialist who knows the platform, you end up with a unit of known history   every
                 wear item replaced, every clearance checked, every seal and gasket renewed. The result is an engine that performs as
                 it should and carries a warranty to match.
               </p>
@@ -230,7 +230,7 @@ export default function EngineRebuildPage() {
               {
                 title: "Range Rover Engine Rebuild",
                 body:
-                  "Range Rover engine rebuilds sit at the premium end of the specialist rebuild market. We rebuild across Vogue, Sport, Velar, and Evoque — covering TDV6, SDV6, TDV8, SDV8, Ingenium 2.0, and the 5.0 supercharged V8. We also quote replacement options alongside rebuild where applicable, sourcing quality reconditioned engines and fitting every unit to OEM specification with full warranty cover. UK-wide collection is available.",
+                  "Range Rover engine rebuilds sit at the premium end of the specialist rebuild market. We rebuild across Vogue, Sport, Velar, and Evoque   covering TDV6, SDV6, TDV8, SDV8, Ingenium 2.0, and the 5.0 supercharged V8. We also quote replacement options alongside rebuild where applicable, sourcing quality reconditioned engines and fitting every unit to OEM specification with full warranty cover. UK-wide collection is available.",
                 href: "/range-rover-engines",
               },
               {
@@ -254,7 +254,7 @@ export default function EngineRebuildPage() {
               {
                 title: "BMW Engine Rebuild",
                 body:
-                  "BMW rebuilds are among the most technically demanding jobs we carry out — including N54/N57/N47/N55/N20/B58 platforms across 1/2/3/4/5/7 Series and X models. We advise honestly on rebuild vs reconditioning vs replacement options and quote in full following assessment. UK-wide collection available.",
+                  "BMW rebuilds are among the most technically demanding jobs we carry out   including N54/N57/N47/N55/N20/B58 platforms across 1/2/3/4/5/7 Series and X models. We advise honestly on rebuild vs reconditioning vs replacement options and quote in full following assessment. UK-wide collection available.",
                 href: "/bmw-engines",
               },
             ].map((item) => (
@@ -292,8 +292,8 @@ export default function EngineRebuildPage() {
               { icon: <Wrench className="w-5 h-5" />, title: "OEM and OEM-Specification Parts Throughout", text: "Quality pistons, rings, bearings, gaskets, seals and timing components built to OEM specification. No shortcuts." },
               { icon: <ShieldCheck className="w-5 h-5" />, title: "Platform-Specific Expertise", text: "Each brand has specific tolerances and known wear patterns. Our technicians rebuild engines they know in depth." },
               { icon: <CheckCircle2 className="w-5 h-5" />, title: "Six-Month Warranty on Every Rebuild", text: "Every rebuild carries a minimum six-month warranty covering parts and workmanship, confirmed in writing." },
-              { icon: <RefreshCw className="w-5 h-5" />, title: "Honest Rebuild vs Replace Advice", text: "If replacement represents better value than rebuild, we will say so — and source the right unit accordingly." },
-              { icon: <Wrench className="w-5 h-5" />, title: "UK-Wide Collection and Delivery", text: "Based in Grays, Essex — we collect and deliver across the UK on all rebuild and replacement work." },
+              { icon: <RefreshCw className="w-5 h-5" />, title: "Honest Rebuild vs Replace Advice", text: "If replacement represents better value than rebuild, we will say so   and source the right unit accordingly." },
+              { icon: <Wrench className="w-5 h-5" />, title: "UK-Wide Collection and Delivery", text: "Based in    we collect and deliver across the UK on all rebuild and replacement work." },
             ].map((item) => (
               <div key={item.title} className="bg-white/5 border border-white/10 rounded-[2.5rem] p-10 hover:bg-white/10 transition-all duration-500">
                 <div className="flex items-start gap-4">
@@ -317,12 +317,12 @@ export default function EngineRebuildPage() {
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {[
-                "Step 1 — Contact Us with your vehicle details, symptoms, and any existing diagnosis. We provide honest initial advice from the first conversation.",
-                "Step 2 — Drop Off or Collection — bring your vehicle to our Grays, Essex workshop or arrange UK-wide collection.",
-                "Step 3 — Strip and Inspect — the engine is fully stripped and every component assessed. You receive a written report and quote before any rebuild work begins.",
-                "Step 4 — Rebuild to OEM Specification — all worn components replaced, all clearances set correctly, full reassembly by platform specialists.",
-                "Step 5 — Testing and Quality Check — every rebuilt engine is run and tested before being refitted. Post-fit checks confirm correct operation before handover.",
-                "Step 6 — Return with Warranty Documentation — your vehicle is returned fully tested with all warranty paperwork confirmed in writing.",
+                "Step 1   Contact Us with your vehicle details, symptoms, and any existing diagnosis. We provide honest initial advice from the first conversation.",
+                "Step 2   Drop Off or Collection   bring your vehicle to our  workshop or arrange UK-wide collection.",
+                "Step 3   Strip and Inspect   the engine is fully stripped and every component assessed. You receive a written report and quote before any rebuild work begins.",
+                "Step 4   Rebuild to OEM Specification   all worn components replaced, all clearances set correctly, full reassembly by platform specialists.",
+                "Step 5   Testing and Quality Check   every rebuilt engine is run and tested before being refitted. Post-fit checks confirm correct operation before handover.",
+                "Step 6   Return with Warranty Documentation   your vehicle is returned fully tested with all warranty paperwork confirmed in writing.",
               ].map((text, idx) => (
                 <div key={idx} className="bg-white/5 border border-white/10 rounded-[2.5rem] p-10 hover:bg-white/10 transition-all duration-500">
                   <div className="w-12 h-12 rounded-2xl bg-primary text-white flex items-center justify-center font-black text-lg mb-6 shadow-lg">
@@ -344,7 +344,7 @@ export default function EngineRebuildPage() {
           {
             question: "How much does an engine rebuild cost?",
             answer:
-              "Engine rebuild cost varies significantly by platform and internal condition. We always quote after a proper strip and inspect — contact us for an initial assessment on your specific vehicle.",
+              "Engine rebuild cost varies significantly by platform and internal condition. We always quote after a proper strip and inspect   contact us for an initial assessment on your specific vehicle.",
           },
           {
             question: "Is an engine rebuild better than replacement?",
@@ -359,12 +359,12 @@ export default function EngineRebuildPage() {
           {
             question: "Do you offer a warranty on engine rebuilds?",
             answer:
-              "Yes — every engine rebuild carries a minimum six-month warranty on parts and labour, confirmed in writing at handover.",
+              "Yes   every engine rebuild carries a minimum six-month warranty on parts and labour, confirmed in writing at handover.",
           },
           {
             question: "Can you collect my vehicle for engine rebuild work?",
             answer:
-              "Yes. UK-wide collection and delivery is available on all engine rebuild and reconditioning work from our Grays, Essex base.",
+              "Yes. UK-wide collection and delivery is available on all engine rebuild and reconditioning work from our  base.",
           },
         ]}
       />
@@ -385,7 +385,7 @@ export default function EngineRebuildPage() {
               href="/contact-us"
               className="bg-slate-950 text-white font-black px-12 py-6 rounded-[2rem] shadow-2xl hover:bg-slate-900 transition-all uppercase tracking-[0.2em] text-xs md:text-sm flex items-center gap-4"
             >
-              Request a Free Engine Rebuild Quote — No Obligation <ArrowRight className="w-6 h-6 text-primary" />
+              Request a Free Engine Rebuild Quote   No Obligation <ArrowRight className="w-6 h-6 text-primary" />
             </Link>
             <a
               href="tel:01375531355"
@@ -397,12 +397,12 @@ export default function EngineRebuildPage() {
               href="/contact-us"
               className="bg-white/20 text-white font-black px-12 py-6 rounded-[2rem] shadow-2xl hover:bg-white/25 transition-all uppercase tracking-[0.2em] text-xs md:text-sm border border-white/20"
             >
-              Book an Engine Assessment at Our Grays Workshop
+              Book an Engine Assessment at Our  Workshop
             </Link>
           </div>
 
           <div className="mt-16 text-white/90 font-black uppercase tracking-widest text-[0.65rem]">
-            Vogue Technics | Engine Rebuild Specialists | Grays, Essex | UK-Wide Collection &nbsp; Range Rover • Land Rover • Jaguar
+            Vogue Technics | Engine Rebuild Specialists |  | UK-Wide Collection &nbsp; Range Rover • Land Rover • Jaguar
             • Audi • BMW
           </div>
         </div>

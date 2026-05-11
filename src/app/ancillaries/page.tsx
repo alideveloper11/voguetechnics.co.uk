@@ -75,7 +75,7 @@ export default function Ancillaries() {
               Find our comprehensive range of ancillaries to provide unbeatable value and great quality for your Land Rover or Range Rover. Whether you want to ensure it brings back the kick in your ride or simply gives you reliability miles ahead, our online store has your model covered from EGR valves to superchargers, all specially designed.
             </p>
             <p className="text-slate-600 leading-relaxed">
-              Right here at Vogue Technics, we fully understand the value of having your vehicle keep up its performance without necessarily having to step up. In short, that is where the quality of our parts comes in. Our parts are second to none when it comes to restoring your vehicle to its original performance. Click here to browse the full range of ancillaries and take the first steps in bringing your vehicle back to life.
+              Right here at Vogue Technics, we fully understand the value of having your vehicle keep up its performance without necessarily having to step up. In short, that is where the quality of our parts comes . Our parts are second to none when it comes to restoring your vehicle to its original performance. Click here to browse the full range of ancillaries and take the first steps in bringing your vehicle back to life.
             </p>
             <p className="text-slate-600 leading-relaxed">
               Our quality and level of commitment to customer satisfaction make us the first call for Land Rover and Range Rover ancillaries. Return your car to life - go to checkout now and feel the quality.

@@ -57,19 +57,18 @@ export default function EngineHealthCheckPage() {
               className="max-w-4xl mx-auto text-slate-300 leading-relaxed font-medium space-y-6 text-sm md:text-base"
             >
               <p>
-                Most engine problems are not sudden. They develop slowly — a fault code that clears itself, an oil level that drops
+                Most engine problems are not sudden. They develop slowly   a fault code that clears itself, an oil level that drops
                 slightly faster than expected, a noise that appears on cold start and disappears after a few minutes. By the time
                 the warning light stays on permanently, the damage has often already taken hold.
               </p>
               <p>
-                An engine health check from Vogue Technics gives you a complete, honest picture of your engine&apos;s condition —
+                An engine health check from Vogue Technics gives you a complete, honest picture of your engine&apos;s condition  
                 before a small fault becomes an expensive repair, before you purchase a vehicle with hidden problems, or simply
                 because you want to know your engine is in good shape before a long journey or a change of ownership.
               </p>
               <p>
-                We carry out engine health checks across Range Rover, Land Rover, Jaguar, Audi, and BMW — using professional
-                diagnostic equipment, mechanical inspection, and a written report covering everything we find. Based in Grays,
-                Essex, with UK-wide collection available.
+                We carry out engine health checks across Range Rover, Land Rover, Jaguar, Audi, and BMW   using professional
+                diagnostic equipment, mechanical inspection, and a written report covering everything we find. Based in , with UK-wide collection available.
               </p>
             </motion.div>
 
@@ -148,14 +147,14 @@ export default function EngineHealthCheckPage() {
 
           <div className="max-w-5xl mx-auto space-y-6 text-slate-600 leading-relaxed font-medium text-sm md:text-base bg-white border border-slate-100 rounded-[3rem] p-10 md:p-12 shadow-sm">
             <p>
-              There are several situations where an engine health check is not just useful — it is essential.
+              There are several situations where an engine health check is not just useful   it is essential.
             </p>
             <p>
               If a warning light has appeared and cleared, or appeared and stayed on, a proper diagnostic is the only way to
               understand what the engine management system has recorded and why. If you are buying a used prestige vehicle and
               want confidence in its mechanical condition before committing, a pre-purchase engine check could save you from a very
               expensive mistake. If your engine has started consuming more oil than usual, running roughly at idle, or producing
-              noises that were not there six months ago — these are exactly the symptoms a health check is designed to investigate.
+              noises that were not there six months ago   these are exactly the symptoms a health check is designed to investigate.
               And if your vehicle is coming up to a high mileage service interval and you want to understand what condition the
               engine is actually in, a health check gives you that clarity before the service begins.
             </p>
@@ -183,7 +182,7 @@ export default function EngineHealthCheckPage() {
               {
                 title: "Range Rover Engine Health Check",
                 body:
-                  "The Range Rover's engine complexity makes a thorough health check more valuable than on almost any other vehicle. Hidden faults on TDV6, SDV6, TDV8, and Ingenium platforms can develop quietly and expensively — and a generic diagnostic tool will not reach the depth of data these systems hold. Our check covers full fault code reading across all JLR-specific diagnostic channels, oil leak checks, overheating history, timing chain assessment on Ingenium platforms, V8 health assessment, misfire investigation, and turbo inspection. You receive a written report covering everything found.",
+                  "The Range Rover's engine complexity makes a thorough health check more valuable than on almost any other vehicle. Hidden faults on TDV6, SDV6, TDV8, and Ingenium platforms can develop quietly and expensively   and a generic diagnostic tool will not reach the depth of data these systems hold. Our check covers full fault code reading across all JLR-specific diagnostic channels, oil leak checks, overheating history, timing chain assessment on Ingenium platforms, V8 health assessment, misfire investigation, and turbo inspection. You receive a written report covering everything found.",
                 href: "/range-rover-engines",
               },
               {
@@ -201,7 +200,7 @@ export default function EngineHealthCheckPage() {
               {
                 title: "Audi Engine Health Check",
                 body:
-                  "Audi engines carry fault patterns that vary considerably between TDI diesel and TFSI petrol platforms — and understanding early signs requires diagnostic depth. Our checks cover full diagnostics, oil consumption data, timing condition on affected platforms, turbo health and boost verification, compression testing where oil consumption or misfire symptoms are present, and cooling system condition.",
+                  "Audi engines carry fault patterns that vary considerably between TDI diesel and TFSI petrol platforms   and understanding early signs requires diagnostic depth. Our checks cover full diagnostics, oil consumption data, timing condition on affected platforms, turbo health and boost verification, compression testing where oil consumption or misfire symptoms are present, and cooling system condition.",
                 href: "/audi-engines",
               },
               {
@@ -245,7 +244,7 @@ export default function EngineHealthCheckPage() {
               { title: "Written Report on Every Check", text: "You receive a clear written report covering findings, fault codes, and recommended actions." },
               { title: "Honest Findings, No Upselling", text: "If your engine is in good health, we tell you that. If a fault is developing, we explain it clearly." },
               { title: "Platform-Specific Knowledge", text: "Every technician carries out health checks on platforms they know in depth." },
-              { title: "UK-Wide Collection Available", text: "Based in Grays, Essex, we collect and deliver across the UK on health checks and follow-up work." },
+              { title: "UK-Wide Collection Available", text: "Based in , we collect and deliver across the UK on health checks and follow-up work." },
             ].map((item) => (
               <div key={item.title} className="bg-white/5 border border-white/10 rounded-[2.5rem] p-10 hover:bg-white/10 transition-all duration-500">
                 <div className="flex items-start gap-4">
@@ -271,11 +270,11 @@ export default function EngineHealthCheckPage() {
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {[
-                "Step 1 — Book Your Check — call us or complete our online form with your vehicle details and any symptoms you have noticed.",
-                "Step 2 — Drop Off or Collection — visit our Grays, Essex workshop or arrange collection anywhere in the UK.",
-                "Step 3 — Full Engine Health Assessment — diagnostic scan, mechanical inspection, compression and cooling system checks carried out by a platform specialist.",
-                "Step 4 — Written Report — you receive a full written report covering all findings, fault codes, and clearly explained recommendations.",
-                "Step 5 — Next Steps on Your Terms — if a repair is needed, we quote separately. No pressure, no obligation.",
+                "Step 1   Book Your Check   call us or complete our online form with your vehicle details and any symptoms you have noticed.",
+                "Step 2   Drop Off or Collection   visit our  workshop or arrange collection anywhere in the UK.",
+                "Step 3   Full Engine Health Assessment   diagnostic scan, mechanical inspection, compression and cooling system checks carried out by a platform specialist.",
+                "Step 4   Written Report   you receive a full written report covering all findings, fault codes, and clearly explained recommendations.",
+                "Step 5   Next Steps on Your Terms   if a repair is needed, we quote separately. No pressure, no obligation.",
               ].map((text, idx) => (
                 <div key={idx} className="bg-white/5 border border-white/10 rounded-[2.5rem] p-10 hover:bg-white/10 transition-all duration-500">
                   <div className="w-12 h-12 rounded-2xl bg-primary text-white flex items-center justify-center font-black text-lg mb-6 shadow-lg">
@@ -311,7 +310,7 @@ export default function EngineHealthCheckPage() {
           {
             question: "Is this the same as a basic diagnostic scan?",
             answer:
-              "No. Our health check goes considerably further than a fault code read — it includes mechanical inspection, compression testing where appropriate, cooling and turbo assessment, and a written report.",
+              "No. Our health check goes considerably further than a fault code read   it includes mechanical inspection, compression testing where appropriate, cooling and turbo assessment, and a written report.",
           },
           {
             question: "What if a fault is found during the check?",
@@ -321,7 +320,7 @@ export default function EngineHealthCheckPage() {
           {
             question: "Do you carry out pre-purchase engine checks?",
             answer:
-              "Yes — pre-purchase engine checks are one of our most requested services across all five vehicle brands we cover.",
+              "Yes   pre-purchase engine checks are one of our most requested services across all five vehicle brands we cover.",
           },
         ]}
       />
@@ -335,7 +334,7 @@ export default function EngineHealthCheckPage() {
           </h2>
           <p className="text-emerald-100 text-sm md:text-base mb-14 max-w-3xl mx-auto font-medium leading-relaxed">
             Do not wait for a warning light to tell you something is wrong. An engine health check from Vogue Technics gives you the
-            full picture — clearly, honestly, and in writing.
+            full picture   clearly, honestly, and in writing.
           </p>
 
           <div className="flex flex-col lg:flex-row gap-6 justify-center items-center">
@@ -360,7 +359,7 @@ export default function EngineHealthCheckPage() {
           </div>
 
           <div className="mt-16 text-white/90 font-black uppercase tracking-widest text-[0.65rem]">
-            Vogue Technics | Engine Health Check Specialists | Grays, Essex | UK-Wide Collection &nbsp; Range Rover • Land Rover •
+            Vogue Technics | Engine Health Check Specialists |  | UK-Wide Collection &nbsp; Range Rover • Land Rover •
             Jaguar • Audi • BMW
           </div>
         </div>

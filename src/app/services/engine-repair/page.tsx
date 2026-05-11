@@ -58,13 +58,13 @@ export default function EngineRepairPage() {
             >
               <p>
                 Engine problems rarely wait for a convenient moment. Whether it is a warning light that will not clear, an oil
-                leak that keeps returning, or an engine that has seized without much warning — the moment something goes wrong,
+                leak that keeps returning, or an engine that has seized without much warning   the moment something goes wrong,
                 you need a specialist who knows your vehicle, not a general garage working from a generic checklist.
               </p>
               <p>
                 At Vogue Technics, engine repair is our sole focus. We diagnose and repair engines on Range Rover, Land Rover,
-                Jaguar, Audi, and BMW — using OEM-specification parts, with a written quote agreed before any work begins, and a
-                six-month warranty on every repair we complete. Based in Grays, Essex, with UK-wide collection available.
+                Jaguar, Audi, and BMW   using OEM-specification parts, with a written quote agreed before any work begins, and a
+                six-month warranty on every repair we complete. Based in , with UK-wide collection available.
               </p>
             </motion.div>
 
@@ -101,7 +101,7 @@ export default function EngineRepairPage() {
             </h2>
             <div className="w-24 h-1.5 bg-primary mx-auto rounded-full"></div>
             <p className="text-slate-600 font-medium leading-relaxed text-sm md:text-base">
-              If your engine is showing any of the following, it needs specialist attention — not a wait-and-see approach.
+              If your engine is showing any of the following, it needs specialist attention   not a wait-and-see approach.
             </p>
           </div>
 
@@ -111,7 +111,7 @@ export default function EngineRepairPage() {
               that something needs investigating properly. Engine misfires affecting performance across one or multiple cylinders,
               oil leaks from gaskets, cam covers, or the sump, overheating caused by cooling system failure, timing chain noise on
               cold start, head gasket failure indicated by white smoke or coolant loss, and complete engine seizure following oil
-              starvation — these are all faults we diagnose and repair every week across five of the most technically demanding
+              starvation   these are all faults we diagnose and repair every week across five of the most technically demanding
               vehicle platforms on the road.
             </p>
             <p className="text-slate-600 leading-relaxed font-medium text-sm md:text-base mt-6">
@@ -143,15 +143,15 @@ export default function EngineRepairPage() {
           <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
             <div className="lg:col-span-2 space-y-6 text-slate-600 leading-relaxed font-medium text-sm md:text-base">
               <p>
-                We cover the full range of engine repair work — from targeted oil leak fixes to full engine overhauls — all carried
+                We cover the full range of engine repair work   from targeted oil leak fixes to full engine overhauls   all carried
                 out to OEM specification with parts and labour backed by our standard warranty.
               </p>
               <p>
-                Engine Repair — targeted fault diagnosis and repair covering all engine systems. Engine Rebuild — full strip,
-                inspect, and rebuild to OEM specification for engines with significant internal wear. Engine Replacement — supply
-                and fit of tested reconditioned or low-mileage units where repair is uneconomical. Engine Overhaul — comprehensive
-                mechanical restoration where multiple systems require attention together. Engine Reconditioning — component-level
-                restoration and reassembly to manufacturer specification. Major Engine Repair — cylinder head work, bottom-end
+                Engine Repair   targeted fault diagnosis and repair covering all engine systems. Engine Rebuild   full strip,
+                inspect, and rebuild to OEM specification for engines with significant internal wear. Engine Replacement   supply
+                and fit of tested reconditioned or low-mileage units where repair is uneconomical. Engine Overhaul   comprehensive
+                mechanical restoration where multiple systems require attention together. Engine Reconditioning   component-level
+                restoration and reassembly to manufacturer specification. Major Engine Repair   cylinder head work, bottom-end
                 repairs, and complex multi-system faults.
               </p>
               <p>Every job begins with an accurate diagnostic. Every quote is written and agreed before work starts.</p>
@@ -199,9 +199,9 @@ export default function EngineRepairPage() {
               {
                 title: "Range Rover Engine Repair",
                 text: [
-                  "Range Rover engine repair requires platform-specific knowledge that a general garage simply does not carry. We work across the full Range Rover range — Vogue, Sport, Velar, and Evoque — covering TDV6, SDV6, TDV8, SDV8, and Ingenium 2.0 diesel and petrol engines.",
+                  "Range Rover engine repair requires platform-specific knowledge that a general garage simply does not carry. We work across the full Range Rover range   Vogue, Sport, Velar, and Evoque   covering TDV6, SDV6, TDV8, SDV8, and Ingenium 2.0 diesel and petrol engines.",
                   "Common faults we resolve include TDV6 oil contamination from EGR cooler failure, SDV6 overheating linked to water pump deterioration, Evoque engine misfires and oil leaks, and Range Rover Sport engine seized situations where repair versus replacement needs honest assessment.",
-                  "Range Rover engine repair cost varies by platform and fault severity. We always provide a clear written quote following a full diagnostic — at a price that reflects independent specialist expertise, not main dealer margins.",
+                  "Range Rover engine repair cost varies by platform and fault severity. We always provide a clear written quote following a full diagnostic   at a price that reflects independent specialist expertise, not main dealer margins.",
                 ],
                 href: "/range-rover-engines",
                 cta: "Explore Range Rover Engine Repair",
@@ -210,7 +210,7 @@ export default function EngineRepairPage() {
                 title: "Land Rover Engine Repair",
                 text: [
                   "From the Freelander and Discovery 3 through to the Discovery Sport and current Defender, Land Rover engines develop specific fault patterns that experienced specialists recognise immediately. We carry out Land Rover engine repairs across the full model range, including Land Rover Discovery engine repair, Defender engine work, and Freelander fault resolution.",
-                  "Discovery engine repair cost depends entirely on the fault — a cooling system repair on a Discovery 4 TDV6 is a very different job to a cylinder head rebuild on a Discovery 3 2.7 diesel. We assess every vehicle honestly and advise on the most cost-effective outcome rather than the most expensive one.",
+                  "Discovery engine repair cost depends entirely on the fault   a cooling system repair on a Discovery 4 TDV6 is a very different job to a cylinder head rebuild on a Discovery 3 2.7 diesel. We assess every vehicle honestly and advise on the most cost-effective outcome rather than the most expensive one.",
                   "As Jaguar and Land Rover specialist engine repair providers, we cover both brands with the same depth of platform knowledge and the same standard of workmanship.",
                 ],
                 href: "/land-rover-engines",
@@ -219,9 +219,9 @@ export default function EngineRepairPage() {
               {
                 title: "Jaguar Engine Repair",
                 text: [
-                  "Jaguar and Land Rover share engineering architecture, which means our expertise transfers directly across the full Jaguar range. We carry out Jaguar engine repair across the XE, XF, XJ, F-Pace, E-Pace, X-Type, and S-Type — covering 2.0 Ingenium diesel and petrol, 2.7 V6 diesel, 3.0 V6, and V8 platforms.",
+                  "Jaguar and Land Rover share engineering architecture, which means our expertise transfers directly across the full Jaguar range. We carry out Jaguar engine repair across the XE, XF, XJ, F-Pace, E-Pace, X-Type, and S-Type   covering 2.0 Ingenium diesel and petrol, 2.7 V6 diesel, 3.0 V6, and V8 platforms.",
                   "Common Jaguar engine faults we resolve include XF 2.7 TDV6 oil cooler and head gasket failure, XE Ingenium oil leaks and cooling faults, and F-Pace engine misfires linked to EGR and turbo-related contamination.",
-                  "Jaguar engine repair near me is a search we see constantly — and for customers across Essex, London, and beyond, we offer same-day diagnostics and UK-wide collection for those further afield.",
+                  "Jaguar engine repair near me is a search we see constantly   and for customers across , London, and beyond, we offer same-day diagnostics and UK-wide collection for those further afield.",
                 ],
                 href: "/jaguar-engines",
                 cta: "Explore Jaguar Engine Repair",
@@ -229,9 +229,9 @@ export default function EngineRepairPage() {
               {
                 title: "Audi Engine Repair",
                 text: [
-                  "Audi engines are refined and capable — but they carry known fault patterns that require a specialist approach. We carry out Audi engine repair across the A3, A4, A5, A6, Q5, Q7, S4, and RS range, covering TDI diesel and TFSI petrol platforms.",
+                  "Audi engines are refined and capable   but they carry known fault patterns that require a specialist approach. We carry out Audi engine repair across the A3, A4, A5, A6, Q5, Q7, S4, and RS range, covering TDI diesel and TFSI petrol platforms.",
                   "Audi engine faults we diagnose and resolve regularly include 2.0 TFSI oil consumption and piston ring wear, 2.0 TDI timing chain faults, Audi A6 engine repair for cooling system and EGR-related failures, Audi engine oil leak repair from cam covers and oil cooler gaskets, and Audi engine misfire diagnosis covering injector and compression-related faults.",
-                  "Audi engine seized repair is a situation we assess carefully — in some cases a targeted repair is viable, in others a rebuild or replacement is the honest recommendation. Audi engine rebuild cost is always provided in a written quote following a proper diagnostic inspection.",
+                  "Audi engine seized repair is a situation we assess carefully   in some cases a targeted repair is viable, in others a rebuild or replacement is the honest recommendation. Audi engine rebuild cost is always provided in a written quote following a proper diagnostic inspection.",
                 ],
                 href: "/audi-engines",
                 cta: "Explore Audi Engine Repair",
@@ -239,9 +239,9 @@ export default function EngineRepairPage() {
               {
                 title: "BMW Engine Repair",
                 text: [
-                  "BMW engines demand specialist knowledge when they develop faults — and a generic code reader at a general garage is rarely enough to get to the actual cause. We carry out BMW engine repair across the 1, 2, 3, 4, 5, and 7 Series, X3, X5, and X6, covering N47, B47, N57, N54, N55, N20, and B58 platforms.",
+                  "BMW engines demand specialist knowledge when they develop faults   and a generic code reader at a general garage is rarely enough to get to the actual cause. We carry out BMW engine repair across the 1, 2, 3, 4, 5, and 7 Series, X3, X5, and X6, covering N47, B47, N57, N54, N55, N20, and B58 platforms.",
                   "BMW engine faults we resolve include BMW N54 engine repair for misfire, injector, and boost-related faults, BMW engine oil leak repair from valve covers, oil filter housings and rear main seals, BMW engine misfire diagnosis across petrol and diesel platforms, BMW 3 Series engine repair covering the full range of N and B-series units, and BMW engine seized repair assessment where oil starvation has caused internal damage.",
-                  "BMW engine diagnostics at Vogue Technics go beyond fault codes — we carry out a full mechanical assessment alongside the electronic diagnostic to find the actual cause, not just the reported symptom. BMW engine rebuild cost is quoted in full before any work begins.",
+                  "BMW engine diagnostics at Vogue Technics go beyond fault codes   we carry out a full mechanical assessment alongside the electronic diagnostic to find the actual cause, not just the reported symptom. BMW engine rebuild cost is quoted in full before any work begins.",
                 ],
                 href: "/bmw-engines",
                 cta: "Explore BMW Engine Repair",
@@ -289,7 +289,7 @@ export default function EngineRepairPage() {
               { icon: <Wrench className="w-5 h-5" />, title: "OEM and OEM-Specification Parts", text: "No budget alternatives, no pattern parts. Every repair is carried out to the standard your vehicle was built to." },
               { icon: <Activity className="w-5 h-5" />, title: "Written Quotes, No Surprises", text: "The figure you agree is the figure you pay. Nothing is added without your approval." },
               { icon: <CheckCircle2 className="w-5 h-5" />, title: "Six-Month Warranty", text: "All engine repair work is backed by a minimum six-month warranty on parts and labour." },
-              { icon: <Wrench className="w-5 h-5" />, title: "UK-Wide Collection", text: "Based in Grays, Essex, we collect and deliver across the UK on all major engine work." },
+              { icon: <Wrench className="w-5 h-5" />, title: "UK-Wide Collection", text: "Based in , we collect and deliver across the UK on all major engine work." },
             ].map((item) => (
               <div key={item.title} className="bg-white/5 border border-white/10 rounded-[2.5rem] p-10 hover:bg-white/10 transition-all duration-500">
                 <div className="flex items-start gap-4">
@@ -313,11 +313,11 @@ export default function EngineRepairPage() {
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {[
-                "Step 1 — Contact Us with your vehicle details and symptoms. We respond promptly with honest initial advice.",
-                "Step 2 — Drop Off or Collection — visit our Grays workshop or arrange UK-wide collection.",
-                "Step 3 — Full Diagnostic and Written Quote — mechanical and electronic assessment, followed by a clear itemised quote.",
-                "Step 4 — Repair to OEM Specification — carried out by specialists using quality parts, with updates throughout.",
-                "Step 5 — Quality Check and Return — full post-repair inspection and road test before handover.",
+                "Step 1   Contact Us with your vehicle details and symptoms. We respond promptly with honest initial advice.",
+                "Step 2   Drop Off or Collection   visit our  workshop or arrange UK-wide collection.",
+                "Step 3   Full Diagnostic and Written Quote   mechanical and electronic assessment, followed by a clear itemised quote.",
+                "Step 4   Repair to OEM Specification   carried out by specialists using quality parts, with updates throughout.",
+                "Step 5   Quality Check and Return   full post-repair inspection and road test before handover.",
               ].map((text, idx) => (
                 <div key={idx} className="bg-white/5 border border-white/10 rounded-[2.5rem] p-10 hover:bg-white/10 transition-all duration-500">
                   <div className="w-12 h-12 rounded-2xl bg-primary text-white flex items-center justify-center font-black text-lg mb-6 shadow-lg">
@@ -348,22 +348,22 @@ export default function EngineRepairPage() {
           {
             question: "How much does engine repair cost?",
             answer:
-              "It depends entirely on the fault and the platform. A gasket repair and a cylinder head rebuild are very different jobs. We always quote after a proper diagnostic — contact us for a no-obligation estimate.",
+              "It depends entirely on the fault and the platform. A gasket repair and a cylinder head rebuild are very different jobs. We always quote after a proper diagnostic   contact us for a no-obligation estimate.",
           },
           {
-            question: "Repair, rebuild, or replace — which is right?",
+            question: "Repair, rebuild, or replace   which is right?",
             answer:
               "We assess every engine honestly and recommend the most cost-effective outcome for your vehicle. We will never push a replacement if a repair will resolve the problem properly.",
           },
           {
             question: "Do you offer a warranty on engine repairs?",
             answer:
-              "Yes — a minimum six-month warranty on all parts and labour, confirmed in writing at handover.",
+              "Yes   a minimum six-month warranty on all parts and labour, confirmed in writing at handover.",
           },
           {
             question: "Can you collect my vehicle?",
             answer:
-              "Yes. UK-wide collection and delivery is available on all engine repair work from our Grays, Essex base.",
+              "Yes. UK-wide collection and delivery is available on all engine repair work from our  base.",
           },
         ]}
       />
@@ -376,7 +376,7 @@ export default function EngineRepairPage() {
             Let&apos;s Get Your <span className="text-slate-950">Engine Sorted</span>
           </h2>
           <p className="text-emerald-100 text-sm md:text-base mb-14 max-w-3xl mx-auto font-medium leading-relaxed">
-            Whatever your vehicle, whatever the fault — do not leave it and do not settle for a garage that does not specialise in
+            Whatever your vehicle, whatever the fault   do not leave it and do not settle for a garage that does not specialise in
             your platform.
           </p>
 
@@ -397,12 +397,12 @@ export default function EngineRepairPage() {
               href="/services/engine-health-check"
               className="bg-white/20 text-white font-black px-12 py-6 rounded-[2rem] shadow-2xl hover:bg-white/25 transition-all uppercase tracking-[0.2em] text-xs md:text-sm border border-white/20"
             >
-              Book a Diagnostic at Our Grays Workshop
+              Book a Diagnostic at Our  Workshop
             </Link>
           </div>
 
           <div className="mt-16 text-white/90 font-black uppercase tracking-widest text-[0.65rem]">
-            Vogue Technics | Engine Repair Specialists | Grays, Essex | UK-Wide Collection &nbsp; Range Rover • Land Rover • Jaguar
+            Vogue Technics | Engine Repair Specialists |  | UK-Wide Collection &nbsp; Range Rover • Land Rover • Jaguar
             • Audi • BMW
           </div>
         </div>

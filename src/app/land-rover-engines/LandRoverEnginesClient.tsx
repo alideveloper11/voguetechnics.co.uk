@@ -455,7 +455,7 @@ export default function LandRoverEnginesClient() {
                     Addressing <span className="text-primary italic">Common Faults</span> with Precision
                   </h3>
                   <p className="text-slate-600 text-base leading-relaxed font-medium">
-                    We understand the specific challenges faced by Land Rover owners, including timing chain stretch and turbocharger complications. Our workshop is equipped with specialized diagnostic tools specifically calibrated for Land Rover engine management systems. By using only high-grade OEM parts and implementing reinforced seals and bearings, we ensure that your rebuilt engine isn't just restored—it's improved. This attention to detail is why thousands of Land Rover enthusiasts trust us to get their vehicles back on and off the road.
+                    We understand the specific challenges faced by Land Rover owners, including timing chain stretch and turbocharger complications. Our workshop is equipped with specialized diagnostic tools specifically calibrated for Land Rover engine management systems. By using only high-grade OEM parts and implementing reinforced seals and bearings, we ensure that your rebuilt engine isn't just restored it's improved. This attention to detail is why thousands of Land Rover enthusiasts trust us to get their vehicles back on and off the road.
                   </p>
                 </div>
 

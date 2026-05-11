@@ -14,13 +14,13 @@ const services = [
     title: "Head Gasket Replacement",
     slug: "head-gasket-replacement",
     body:
-      "Head gasket failure on the 5.0 V8 supercharged engine is more serious than on naturally aspirated units — the combination of high compression and forced induction puts significant stress on the gasket over time. Symptoms include overheating, white exhaust smoke, and coolant loss. We replace head gaskets using OEM-specification components and resurface cylinder heads where necessary, restoring a proper seal and protecting the rest of the engine from consequential damage.",
+      "Head gasket failure on the 5.0 V8 supercharged engine is more serious than on naturally aspirated units   the combination of high compression and forced induction puts significant stress on the gasket over time. Symptoms include overheating, white exhaust smoke, and coolant loss. We replace head gaskets using OEM-specification components and resurface cylinder heads where necessary, restoring a proper seal and protecting the rest of the engine from consequential damage.",
   },
   {
     title: "Timing Chain Replacement",
     slug: "timing-chain-replacement",
     body:
-      "The AJ133's timing chain system is robust, but not indestructible — particularly on higher-mileage SVRs or those that have suffered from irregular oil changes. A rattling noise on cold start is usually the first warning sign. We replace the full timing chain kit — chains, tensioners, guides, and sprockets — as a complete assembly. Fitting only a chain and leaving worn tensioners behind is a false economy we refuse to offer.",
+      "The AJ133's timing chain system is robust, but not indestructible   particularly on higher-mileage SVRs or those that have suffered from irregular oil changes. A rattling noise on cold start is usually the first warning sign. We replace the full timing chain kit   chains, tensioners, guides, and sprockets   as a complete assembly. Fitting only a chain and leaving worn tensioners behind is a false economy we refuse to offer.",
   },
   {
     title: "Turbo Replacement",
@@ -32,37 +32,37 @@ const services = [
     title: "Engine Rebuild",
     slug: "engine-rebuild",
     body:
-      "A full engine rebuild is the definitive solution for a high-mileage or heavily worn SVR engine. We completely disassemble the AJ133 unit, clean and inspect every component, replace all worn or damaged parts — including bearings, rings, seals, and gaskets — and reassemble the engine to factory tolerances. The result is a unit that performs like new, at a fraction of the cost of sourcing a factory replacement. Every rebuilt engine is tested before fitting or despatch.",
+      "A full engine rebuild is the definitive solution for a high-mileage or heavily worn SVR engine. We completely disassemble the AJ133 unit, clean and inspect every component, replace all worn or damaged parts   including bearings, rings, seals, and gaskets   and reassemble the engine to factory tolerances. The result is a unit that performs like new, at a fraction of the cost of sourcing a factory replacement. Every rebuilt engine is tested before fitting or despatch.",
   },
   {
     title: "Engine Repair",
     slug: "engine-repair",
     body:
-      "Not every SVR engine problem demands a full rebuild. Sometimes it's an oil leak from a valve cover gasket, a failing sensor, a worn bearing, or a fuelling issue. Our diagnostic process identifies the exact fault so you pay only for what's actually needed. We carry out all levels of engine repair on the 5.0 V8 SVR unit — from minor fixes to significant internal work.",
+      "Not every SVR engine problem demands a full rebuild. Sometimes it's an oil leak from a valve cover gasket, a failing sensor, a worn bearing, or a fuelling issue. Our diagnostic process identifies the exact fault so you pay only for what's actually needed. We carry out all levels of engine repair on the 5.0 V8 SVR unit   from minor fixes to significant internal work.",
   },
   {
     title: "Engine Replacement",
     slug: "engine-replacement",
     body:
-      "When the engine has suffered catastrophic failure — a spun bearing, a seized block, or serious internal damage — replacement is often the most cost-effective route. We supply and fit quality reconditioned or low-mileage used AJ133 engines for the Range Rover Sport SVR, each sourced from verified suppliers and tested before installation. Supply-only is also available for customers fitting elsewhere.",
+      "When the engine has suffered catastrophic failure   a spun bearing, a seized block, or serious internal damage   replacement is often the most cost-effective route. We supply and fit quality reconditioned or low-mileage used AJ133 engines for the Range Rover Sport SVR, each sourced from verified suppliers and tested before installation. Supply-only is also available for customers fitting elsewhere.",
   },
   {
     title: "Engine Swap",
     slug: "engine-swap",
     body:
-      "Looking to fit a later SVR engine variant into an earlier Sport shell, or upgrading the specification of your build? Our engine swap service handles the entire process — engine mapping, mount adaptation, ancillary connections, wiring loom compatibility, and full post-swap diagnostics. We do it properly, with no shortcuts.",
+      "Looking to fit a later SVR engine variant into an earlier Sport shell, or upgrading the specification of your build? Our engine swap service handles the entire process   engine mapping, mount adaptation, ancillary connections, wiring loom compatibility, and full post-swap diagnostics. We do it properly, with no shortcuts.",
   },
   {
     title: "Timing Belt Replacement",
     slug: "timing-belt-replacement",
     body:
-      "Certain Range Rover Sport variants in the wider L494 family use timing belts rather than chains. If your SVR-adjacent model falls into this category, or if you're unsure of your vehicle's service history, we recommend replacement at — or before — the manufacturer's specified interval. A snapped belt destroys an engine within milliseconds. We carry kits for all applicable configurations.",
+      "Certain Range Rover Sport variants in the wider L494 family use timing belts rather than chains. If your SVR-adjacent model falls into this category, or if you're unsure of your vehicle's service history, we recommend replacement at   or before   the manufacturer's specified interval. A snapped belt destroys an engine within milliseconds. We carry kits for all applicable configurations.",
   },
   {
     title: "Engine Health Check",
     slug: "engine-health-check",
     body:
-      "Considering buying a used Range Rover Sport SVR, or just want peace of mind on your current vehicle? Our engine health check covers compression testing across all cylinders, oil analysis, full diagnostic scanning, supercharger inspection, and a thorough visual assessment. You'll receive a written report with clear findings and honest recommendations — no pressure, no upselling.",
+      "Considering buying a used Range Rover Sport SVR, or just want peace of mind on your current vehicle? Our engine health check covers compression testing across all cylinders, oil analysis, full diagnostic scanning, supercharger inspection, and a thorough visual assessment. You'll receive a written report with clear findings and honest recommendations   no pressure, no upselling.",
   },
 ];
 
@@ -90,7 +90,7 @@ const faqs = [
   {
     question: "Can you fit the engine as well as supply it?",
     answer:
-      "Absolutely. We offer a complete supply and fit service at our Grays, Essex workshop. We can also connect you with our approved installer network if you're based elsewhere in the UK.",
+      "Absolutely. We offer a complete supply and fit service at our  workshop. We can also connect you with our approved installer network if you're based elsewhere in the UK.",
   },
   {
     question: "How long does a Range Rover Sport SVR engine rebuild take?",
@@ -116,7 +116,7 @@ export default function RangeRoverSportSVREnginesClient() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/car_bgg.jpg"
-            alt="Range Rover Sport SVR engine specialist in Grays"
+            alt="Range Rover Sport SVR engine specialist in "
             fill
             className="object-cover opacity-30 mix-blend-overlay"
             priority
@@ -141,7 +141,7 @@ export default function RangeRoverSportSVREnginesClient() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-300 to-green-400">
                 Range Rover Sport SVR
               </span>{" "}
-              Engine Rebuild & Replacement — Specialists in Grays, Essex
+              Engine Rebuild & Replacement   Specialists in 
             </motion.h1>
 
             <motion.div
@@ -160,10 +160,10 @@ export default function RangeRoverSportSVREnginesClient() {
               className="mt-7 max-w-4xl text-sm leading-relaxed text-slate-300 md:text-base space-y-4"
             >
               <p>
-                The Range Rover Sport SVR is not just any SUV. It's a 575bhp, 5.0-litre supercharged V8 machine built to perform at a level most vehicles simply can't match. When that engine starts playing up — whether it's a supercharger whine, a sudden loss of power, or something more serious — you need specialists who truly understand what's under that bonnet.
+                The Range Rover Sport SVR is not just any SUV. It's a 575bhp, 5.0-litre supercharged V8 machine built to perform at a level most vehicles simply can't match. When that engine starts playing up   whether it's a supercharger whine, a sudden loss of power, or something more serious   you need specialists who truly understand what's under that bonnet.
               </p>
               <p>
-                At Vogue Technics, based in Grays, Essex, we work exclusively on Land Rover and Range Rover engines. The Sport SVR's AJ133 5.0 V8 supercharged unit is one we know inside out — every known fault, every wear pattern, every rebuild consideration. If your SVR needs an engine rebuild, repair, replacement, or anything in between, you're in exactly the right hands.
+                At Vogue Technics, based in , we work exclusively on Land Rover and Range Rover engines. The Sport SVR's AJ133 5.0 V8 supercharged unit is one we know inside out   every known fault, every wear pattern, every rebuild consideration. If your SVR needs an engine rebuild, repair, replacement, or anything in between, you're in exactly the right hands.
               </p>
             </motion.div>
           </div>
@@ -180,19 +180,19 @@ export default function RangeRoverSportSVREnginesClient() {
               <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
                 <h3 className="font-bold text-slate-900">SVR-Specific Expertise, Not Generic Engine Work</h3>
                 <p className="mt-3 text-slate-700 leading-relaxed">
-                  Our technicians work solely on Land Rover and Range Rover platforms. The 5.0-litre AJ133 supercharged unit found in the Sport SVR has its own set of known failure points — supercharger bearing wear, timing chain stretch, oil consumption issues, and carbon build-up on intake valves, to name a few. We've seen every one of them, repeatedly. That accumulated knowledge translates directly into better, faster, more reliable work on your vehicle.
+                  Our technicians work solely on Land Rover and Range Rover platforms. The 5.0-litre AJ133 supercharged unit found in the Sport SVR has its own set of known failure points   supercharger bearing wear, timing chain stretch, oil consumption issues, and carbon build-up on intake valves, to name a few. We've seen every one of them, repeatedly. That accumulated knowledge translates directly into better, faster, more reliable work on your vehicle.
                 </p>
               </div>
               <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
                 <h3 className="font-bold text-slate-900">25 Years of Land Rover Engine Experience</h3>
                 <p className="mt-3 text-slate-700 leading-relaxed">
-                  Vogue Technics has been operating for over 25 years. In that time, we've rebuilt and replaced more Land Rover and Range Rover engines than most garages will see in a lifetime. Our reputation across Grays, Essex, and the wider UK has been earned one satisfied customer at a time — because the work we do holds up long after the vehicle leaves our workshop.
+                  Vogue Technics has been operating for over 25 years. In that time, we've rebuilt and replaced more Land Rover and Range Rover engines than most garages will see in a lifetime. Our reputation across , and the wider UK has been earned one satisfied customer at a time   because the work we do holds up long after the vehicle leaves our workshop.
                 </p>
               </div>
               <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
                 <h3 className="font-bold text-slate-900">Upfront Quotes, Honest Advice</h3>
                 <p className="mt-3 text-slate-700 leading-relaxed">
-                  SVR engine work can be a significant investment, and we respect that. We give every customer a clear, itemised quote before any work begins — no vague estimates, no bill that doubles by collection day. If we think a repair is more sensible than a full rebuild for your situation, we'll tell you that honestly.
+                  SVR engine work can be a significant investment, and we respect that. We give every customer a clear, itemised quote before any work begins   no vague estimates, no bill that doubles by collection day. If we think a repair is more sensible than a full rebuild for your situation, we'll tell you that honestly.
                 </p>
               </div>
             </div>
@@ -238,23 +238,23 @@ export default function RangeRoverSportSVREnginesClient() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
-              Fast UK-Wide Service From Our Grays, Essex Workshop
+              Fast UK-Wide Service From Our  Workshop
             </h2>
             <div className="mt-6 space-y-6 text-slate-700 leading-relaxed">
               <p>
-                We know that being without a vehicle like the SVR — whether it's your daily driver or weekend car — is genuinely frustrating. We work efficiently without ever compromising on the standard of work.
+                We know that being without a vehicle like the SVR   whether it's your daily driver or weekend car   is genuinely frustrating. We work efficiently without ever compromising on the standard of work.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
                   <h3 className="font-bold text-slate-900">Engine Collection & Delivery Across the UK</h3>
                   <p className="mt-3">
-                    Not able to bring your vehicle or engine to us in Grays? We offer a fully managed engine collection and return service covering the entire UK. Send us your unit, we rebuild or replace it, test it thoroughly, and return it ready to fit — or arrange installation through our approved fitter network if required.
+                    Not able to bring your vehicle or engine to us in ? We offer a fully managed engine collection and return service covering the entire UK. Send us your unit, we rebuild or replace it, test it thoroughly, and return it ready to fit   or arrange installation through our approved fitter network if required.
                   </p>
                 </div>
                 <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
                   <h3 className="font-bold text-slate-900">Fast, Realistic Turnaround Times</h3>
                   <p className="mt-3">
-                    Most engine rebuilds on the SVR unit are completed within 5–10 working days. Repairs and replacements are frequently quicker. We give you a confirmed timeframe at booking — and we honour it. If anything changes, we tell you immediately.
+                    Most engine rebuilds on the SVR unit are completed within 5–10 working days. Repairs and replacements are frequently quicker. We give you a confirmed timeframe at booking   and we honour it. If anything changes, we tell you immediately.
                   </p>
                 </div>
                 <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
@@ -286,18 +286,18 @@ export default function RangeRoverSportSVREnginesClient() {
             {[
               {
                 quote:
-                  '"My 2018 SVR developed a serious oil consumption issue at 68,000 miles. Vogue Technics carried out a full engine rebuild — the car now pulls harder than it did when I bought it. Outstanding work and very fair pricing."',
-                by: "— Daniel H., Essex",
+                  '"My 2018 SVR developed a serious oil consumption issue at 68,000 miles. Vogue Technics carried out a full engine rebuild   the car now pulls harder than it did when I bought it. Outstanding work and very fair pricing."',
+                by: "  Daniel H., ",
               },
               {
                 quote:
                   '"Was quoted over £11,000 by a main dealer for an engine replacement on my SVR. Vogue Technics supplied and fitted a fully reconditioned AJ133 for significantly less, with a warranty included. Couldn\'t be happier."',
-                by: "— Michelle T., Leeds",
+                by: "  Michelle T., Leeds",
               },
               {
                 quote:
-                  '"Sent my engine down from Glasgow after a timing chain failure. It came back rebuilt, tested, and perfectly packaged within the timeframe promised. Absolute professionals — the only people I\'d trust with a V8 supercharged engine."',
-                by: "— Ross M., Glasgow",
+                  '"Sent my engine down from Glasgow after a timing chain failure. It came back rebuilt, tested, and perfectly packaged within the timeframe promised. Absolute professionals   the only people I\'d trust with a V8 supercharged engine."',
+                by: "  Ross M., Glasgow",
               },
             ].map((t) => (
               <div
@@ -318,7 +318,7 @@ export default function RangeRoverSportSVREnginesClient() {
       </section>
 
       <FAQSection
-        title={<>Frequently Asked Questions — <span className="text-primary italic">Range Rover Sport SVR Engine</span></>}
+        title={<>Frequently Asked Questions   <span className="text-primary italic">Range Rover Sport SVR Engine</span></>}
         items={faqs}
       />
 
@@ -329,7 +329,7 @@ export default function RangeRoverSportSVREnginesClient() {
               Ready to get your Range Rover Sport SVR back to full power?
             </h2>
             <p className="text-emerald-50 leading-relaxed max-w-3xl mx-auto">
-              Call Vogue Technics today or submit your details through our online enquiry form for a fast, no-obligation quote. We're based in Grays, Essex, and serve Range Rover Sport SVR owners across the entire United Kingdom. Don't leave a 575bhp supercharged V8 in the hands of a general garage — bring it to the specialists.
+              Call Vogue Technics today or submit your details through our online enquiry form for a fast, no-obligation quote. We're based in , and serve Range Rover Sport SVR owners across the entire United Kingdom. Don't leave a 575bhp supercharged V8 in the hands of a general garage   bring it to the specialists.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <a

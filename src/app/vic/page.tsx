@@ -52,8 +52,8 @@ export default function VicProfilePage() {
     "image": author.image,
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Grays",
-      "addressRegion": "Essex"
+      "addressLocality": "",
+      "addressRegion": ""
     },
     "knowsAbout": ["Jaguar Land Rover Engines", "AJ133 Supercharged", "306DT TDV6", "Ingenium Diesel", "Engine Remanufacturing"]
   };
@@ -121,7 +121,7 @@ export default function VicProfilePage() {
                     <Award className="w-4 h-4 text-primary" /> NVQ Level 3
                  </div>
                  <div className="flex items-center gap-2 px-4 py-2 bg-slate-800 rounded-lg border border-slate-700 text-slate-300 text-xs font-bold uppercase tracking-widest">
-                    <Activity className="w-4 h-4 text-primary" /> Grays, Essex
+                    <Activity className="w-4 h-4 text-primary" /> 
                  </div>
               </div>
             </div>
@@ -172,7 +172,7 @@ export default function VicProfilePage() {
                        "{author.quote}"
                     </blockquote>
                     <p className="text-slate-400 text-lg font-bold italic border-l-4 border-primary pl-6">
-                       — Vic's WhatsApp Video Transparency Policy
+                         Vic's WhatsApp Video Transparency Policy
                     </p>
                  </div>
               </div>

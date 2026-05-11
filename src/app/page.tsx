@@ -44,7 +44,7 @@ export default function Home() {
       slug: "turbo-replacement",
       body: (
         <>
-          A failing turbocharger will rob your engine of performance, increase fuel consumption, and — if left unaddressed — can cause serious secondary damage. We diagnose turbo faults accurately before recommending replacement, fitting quality turbos that are matched correctly to your engine variant. Our turbo replacement service covers both supply and fitting, with proper run-in procedures carried out before the vehicle is returned.
+          A failing turbocharger will rob your engine of performance, increase fuel consumption, and   if left unaddressed   can cause serious secondary damage. We diagnose turbo faults accurately before recommending replacement, fitting quality turbos that are matched correctly to your engine variant. Our turbo replacement service covers both supply and fitting, with proper run-in procedures carried out before the vehicle is returned.
         </>
       ),
     },
@@ -62,7 +62,7 @@ export default function Home() {
       slug: "engine-repair",
       body: (
         <>
-          Not every engine problem requires a full rebuild. Many faults — oil consumption issues, internal leaks, bearing noise, loss of compression in specific cylinders — can be resolved with targeted engine repairs that cost significantly less than a full rebuild while delivering excellent results. We assess your engine honestly and recommend only what's genuinely needed.
+          Not every engine problem requires a full rebuild. Many faults   oil consumption issues, internal leaks, bearing noise, loss of compression in specific cylinders   can be resolved with targeted engine repairs that cost significantly less than a full rebuild while delivering excellent results. We assess your engine honestly and recommend only what's genuinely needed.
         </>
       ),
     },
@@ -137,7 +137,7 @@ export default function Home() {
       href: "/audi-engines",
       body: (
         <>
-          Audi engines are well-engineered but not without their common fault patterns — timing chain issues on the 2.0 TFSI, high-pressure fuel pump failures, and oil consumption problems on various units are among the faults we see regularly. We work across the A3, A4, A5, A6, Q5, Q7, RS4, and more, covering both petrol and diesel variants.
+          Audi engines are well-engineered but not without their common fault patterns   timing chain issues on the 2.0 TFSI, high-pressure fuel pump failures, and oil consumption problems on various units are among the faults we see regularly. We work across the A3, A4, A5, A6, Q5, Q7, RS4, and more, covering both petrol and diesel variants.
         </>
       ),
     },
@@ -163,7 +163,7 @@ export default function Home() {
 
   const processSteps = [
     {
-      title: "Step 1 — Diagnose",
+      title: "Step 1   Diagnose",
       body: (
         <>
           Everything starts with a proper assessment. You bring your vehicle in, or we discuss the symptoms over the phone, and we carry out a thorough diagnostic inspection using specialist equipment. We won't guess, and we won't start recommending work until we know exactly what we're dealing with.
@@ -171,15 +171,15 @@ export default function Home() {
       ),
     },
     {
-      title: "Step 2 — Quote",
+      title: "Step 2   Quote",
       body: (
         <>
-          Once we have a clear picture of what your engine needs, we provide a full written quote. Every element of the work is itemised, parts costs are included, and the labour time is explained. You make an informed decision with complete clarity — there's no pressure and no ambiguity.
+          Once we have a clear picture of what your engine needs, we provide a full written quote. Every element of the work is itemised, parts costs are included, and the labour time is explained. You make an informed decision with complete clarity   there's no pressure and no ambiguity.
         </>
       ),
     },
     {
-      title: "Step 3 — Repair",
+      title: "Step 3   Repair",
       body: (
         <>
           With your approval, work begins. Our technicians carry out every job to manufacturer specifications using quality parts. We keep you updated throughout, particularly on longer jobs such as full engine rebuilds, so you're never left wondering what's happening with your vehicle.
@@ -187,7 +187,7 @@ export default function Home() {
       ),
     },
     {
-      title: "Step 4 — Test & Return",
+      title: "Step 4   Test & Return",
       body: (
         <>
           Before your vehicle leaves our workshop, the engine is fully tested. We check for leaks, run the engine through its operating ranges, and carry out any final adjustments needed. Only when we're satisfied that the work meets our standards does your vehicle go back to you, along with your warranty documentation and a full record of the work carried out.
@@ -210,12 +210,12 @@ export default function Home() {
     {
       question: "Do you offer a warranty on engine repairs and rebuilds?",
       answer:
-        "Yes. All engine work carried out at Vogue Technics is covered by a warranty. The warranty period and terms depend on the nature of the work — we'll confirm the specifics in writing as part of your quote. We stand behind the quality of our workmanship.",
+        "Yes. All engine work carried out at Vogue Technics is covered by a warranty. The warranty period and terms depend on the nature of the work   we'll confirm the specifics in writing as part of your quote. We stand behind the quality of our workmanship.",
     },
     {
       question: "Do I need to use a main dealer for my Range Rover engine, or will an independent specialist void my warranty?",
       answer:
-        "Using an independent specialist does not automatically void your manufacturer warranty, provided the work is carried out to the correct standard using appropriate parts — which is exactly what we do. Once your vehicle is outside its manufacturer warranty period, there's no obligation to use a main dealer at all, and the cost savings of using a quality independent specialist like Vogue Technics can be very significant.",
+        "Using an independent specialist does not automatically void your manufacturer warranty, provided the work is carried out to the correct standard using appropriate parts   which is exactly what we do. Once your vehicle is outside its manufacturer warranty period, there's no obligation to use a main dealer at all, and the cost savings of using a quality independent specialist like Vogue Technics can be very significant.",
     },
     {
       question: "Can you source a replacement engine if mine is beyond repair?",
@@ -223,9 +223,9 @@ export default function Home() {
         "Yes. If your engine assessment indicates that repair isn't economically viable, we can source a low-mileage, quality-checked replacement engine for your specific vehicle variant. We handle the full supply and fitment process, including all ancillaries and post-fitment testing.",
     },
     {
-      question: "Do you only work on vehicles in Grays, or do customers travel to you from further afield?",
+      question: "Do you only work on vehicles in , or do customers travel to you from further afield?",
       answer:
-        "We're based in Grays, Essex, and our local customers come from across Thurrock, Dartford, Basildon, Romford, and East London. However, we also regularly work on vehicles brought to us from further across the UK. When customers need a genuine specialist for their Range Rover or Land Rover engine, they're often willing to travel — and we're well set up to accommodate that.",
+        "We're based in , and our local customers come from across Thurrock, Dartford, Basildon, Romford, and East London. However, we also regularly work on vehicles brought to us from further across the UK. When customers need a genuine specialist for their Range Rover or Land Rover engine, they're often willing to travel   and we're well set up to accommodate that.",
     },
   ];
 
@@ -256,11 +256,7 @@ export default function Home() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-300 to-green-400">
                 Vogue Technics
               </span>{" "}
-              — Range Rover & Land Rover Engine Specialists <br />
-              in{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-300 to-green-400">
-                Grays, Essex
-              </span>
+              Range Rover & Land Rover Engine Specialists
             </h1>
           </motion.div>
 
@@ -307,10 +303,10 @@ export default function Home() {
             className="text-center max-w-2xl mx-auto mt-8"
           >
             <p className="text-sm md:text-base text-white/90 mb-3 leading-relaxed font-semibold">
-              Essex's Most Trusted Independent Engine Rebuild, Repair & Replacement Specialists
+              UK's Most Trusted Independent Engine Rebuild, Repair & Replacement Specialists
             </p>
             <p className="text-sm md:text-base text-slate-300 leading-relaxed">
-              When your Range Rover or Land Rover engine starts giving trouble, you need more than a general garage. You need specialists who know these engines inside out — their common failure points, their engineering quirks, and exactly what it takes to get them running properly again. That's what Vogue Technics has been delivering for over two decades from our workshop in Grays, Essex.
+              When your Range Rover or Land Rover engine starts giving trouble, you need more than a general garage. You need specialists who know these engines inside out - their common failure points, their engineering quirks, and exactly what it takes to get them running properly again. That's what Vogue Technics has been delivering for over two decades from our workshop.
             </p>
           </motion.div>
         </div>
@@ -418,16 +414,16 @@ export default function Home() {
               <div className="space-y-4 text-slate-600 text-[1.05rem] leading-relaxed">
 
                 <p>
-                  Vogue Technics has been one of Essex's most respected independent engine specialists since we first opened our doors in Grays. We didn't set out to be everything to everyone. From day one, our focus has been singular — engine work, done properly, on the vehicles that demand proper expertise. That focus is what's built our reputation, and it's what keeps customers returning and referring us to friends and family across Thurrock, Dartford, Romford, Basildon, and beyond.
+                  Vogue Technics has been one of 's most respected independent engine specialists since we first opened our doors . We didn't set out to be everything to everyone. From day one, our focus has been singular   engine work, done properly, on the vehicles that demand proper expertise. That focus is what's built our reputation, and it's what keeps customers returning and referring us to friends and family across Thurrock, Dartford, Romford, Basildon, and beyond.
                 </p>
                 <p>
-                  Range Rovers and Land Rovers are at the core of what we do. The TDV6, SDV8, SDV6, Ingenium diesel, and supercharged V8 are engines we know like the backs of our hands. We've rebuilt them from the bottom end up, replaced cylinder heads, tackled timing chain failures, and resolved turbo problems that other workshops couldn't diagnose. That depth of hands-on experience simply cannot be replicated — it comes from years of working on nothing else.
+                  Range Rovers and Land Rovers are at the core of what we do. The TDV6, SDV8, SDV6, Ingenium diesel, and supercharged V8 are engines we know like the backs of our hands. We've rebuilt them from the bottom end up, replaced cylinder heads, tackled timing chain failures, and resolved turbo problems that other workshops couldn't diagnose. That depth of hands-on experience simply cannot be replicated   it comes from years of working on nothing else.
                 </p>
                 <p>
                   Being an IGA member means we're held to a professional standard that protects you as a customer. Every job is quoted transparently before work begins. Every repair is explained in plain English. And every engine that leaves our workshop is tested, signed off, and covered by a warranty. There are no hidden surprises on your invoice and no vague explanations when you call to ask how your vehicle is getting on.
                 </p>
                 <p>
-                  Customers drive to us from across South Essex and East London not because we're the closest option, but because they've learned — or been told by someone they trust — that Vogue Technics is the right option. We're the independent specialist that gives you main dealer knowledge without the main dealer price tag.
+                  Customers drive to us from across South  and East London not because we're the closest option, but because they've learned   or been told by someone they trust   that Vogue Technics is the right option. We're the independent specialist that gives you main dealer knowledge without the main dealer price tag.
                 </p>
               </div>
               
@@ -693,7 +689,7 @@ export default function Home() {
               <div className="mt-6 rounded-[2rem] bg-slate-900 text-white p-6 shadow-xl border border-white/10">
                 <p className="text-sm font-bold uppercase tracking-[0.2em] text-emerald-300">Premium workmanship</p>
                 <p className="mt-3 text-slate-200 leading-relaxed">
-                  Specialist engine work is precision work — clean processes, correct parts, and careful testing on every vehicle.
+                  Specialist engine work is precision work   clean processes, correct parts, and careful testing on every vehicle.
                 </p>
               </div>
             </div>
@@ -726,7 +722,7 @@ export default function Home() {
       <section className="py-20 bg-slate-50 relative overflow-hidden">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Our Process — From First Call to Collection</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Our Process   From First Call to Collection</h2>
             <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
           </div>
 
@@ -752,13 +748,13 @@ export default function Home() {
       <section className="py-20 bg-white relative overflow-hidden">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Trusted by Customers Across Essex and Beyond</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Trusted by Customers Across  and Beyond</h2>
             <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
           </div>
 
           <div className="max-w-4xl mx-auto text-slate-600 text-[1.05rem] leading-relaxed space-y-4">
             <p>
-              Vogue Technics has been building its reputation one engine at a time since we established our Grays workshop over twenty years ago. We've carried out thousands of engine repairs, rebuilds, and replacements across our specialist brands, and the majority of our new customers arrive through word of mouth — which, in our trade, is the most meaningful endorsement there is.
+              Vogue Technics has been building its reputation one engine at a time since we established our  workshop over twenty years ago. We've carried out thousands of engine repairs, rebuilds, and replacements across our specialist brands, and the majority of our new customers arrive through word of mouth   which, in our trade, is the most meaningful endorsement there is.
             </p>
             <p>
               We hold a consistently high rating across Google Reviews and Trustpilot, reflecting the standard of work and the customer experience we work hard to maintain. As an IGA-accredited workshop, we operate to a professional code of practice that gives you additional reassurance and accountability.
@@ -798,7 +794,7 @@ export default function Home() {
               If your Range Rover, Land Rover, Jaguar, Audi, or BMW is giving you engine trouble, don't leave it sitting on a driveway while you weigh up your options. The longer most engine faults are left, the more expensive they become to resolve.
               <br />
               <br />
-              Call the Vogue Technics team today or submit an online quote request and we'll come back to you promptly with an honest assessment of where things stand. No pressure, no jargon — just straightforward advice from people who genuinely know these engines.
+              Call the Vogue Technics team today or submit an online quote request and we'll come back to you promptly with an honest assessment of where things stand. No pressure, no jargon   just straightforward advice from people who genuinely know these engines.
             </p>
           </div>
         </div>

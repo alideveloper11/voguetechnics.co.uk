@@ -14,13 +14,13 @@ const services = [
     title: "Head Gasket Replacement",
     slug: "head-gasket-replacement",
     body:
-      "Head gasket failure on the Discovery Sport 2.0 Td4 and Ingenium diesel is a fault we see consistently. Coolant levels dropping without visible external leaks, white smoke on start-up, a persistent sweet smell, or an engine temperature gauge climbing higher than it should — these are not symptoms to monitor and revisit later. We replace Discovery Sport head gaskets using OEM-grade components, machining the head surface where necessary to guarantee a clean, durable, lasting seal.",
+      "Head gasket failure on the Discovery Sport 2.0 Td4 and Ingenium diesel is a fault we see consistently. Coolant levels dropping without visible external leaks, white smoke on start-up, a persistent sweet smell, or an engine temperature gauge climbing higher than it should   these are not symptoms to monitor and revisit later. We replace Discovery Sport head gaskets using OEM-grade components, machining the head surface where necessary to guarantee a clean, durable, lasting seal.",
   },
   {
     title: "Timing Chain Replacement",
     slug: "timing-chain-replacement",
     body:
-      "The Discovery Sport's Ingenium engine carries a timing chain system that is sensitive to oil quality and service frequency. Stretched chain, worn tensioners, and degraded guides produce the characteristic cold-start rattle. We replace the complete timing chain assembly as a full system — chain, tensioners, guides, and sprockets together.",
+      "The Discovery Sport's Ingenium engine carries a timing chain system that is sensitive to oil quality and service frequency. Stretched chain, worn tensioners, and degraded guides produce the characteristic cold-start rattle. We replace the complete timing chain assembly as a full system   chain, tensioners, guides, and sprockets together.",
   },
   {
     title: "Turbo Replacement",
@@ -32,19 +32,19 @@ const services = [
     title: "Timing Belt Replacement",
     slug: "timing-belt-replacement",
     body:
-      "Certain Discovery Sport configurations incorporate a timing belt. A timing belt gives no warning before failure — and when it fails, the engine is destroyed instantaneously. We carry belts and complete replacement kits for applicable variants and strongly recommend inspection/replacement if service history is unclear.",
+      "Certain Discovery Sport configurations incorporate a timing belt. A timing belt gives no warning before failure   and when it fails, the engine is destroyed instantaneously. We carry belts and complete replacement kits for applicable variants and strongly recommend inspection/replacement if service history is unclear.",
   },
   {
     title: "Engine Rebuild",
     slug: "engine-rebuild",
     body:
-      "When a Discovery Sport engine has accumulated significant mileage or developed wear across multiple components, a full rebuild is frequently the most sensible and cost-effective decision. We strip the engine completely, inspect every internal component, replace everything outside factory tolerance, and rebuild to manufacturer specifications — backed by a written warranty.",
+      "When a Discovery Sport engine has accumulated significant mileage or developed wear across multiple components, a full rebuild is frequently the most sensible and cost-effective decision. We strip the engine completely, inspect every internal component, replace everything outside factory tolerance, and rebuild to manufacturer specifications   backed by a written warranty.",
   },
   {
     title: "Engine Repair",
     slug: "engine-repair",
     body:
-      "Not every Discovery Sport engine fault demands a full rebuild. Our diagnostic process is precise — we identify the exact root cause before recommending any course of action. Oil leaks, bearing wear, EGR system faults, injector problems, sensor failures, valve damage — we handle every level of engine repair with accuracy and complete honesty.",
+      "Not every Discovery Sport engine fault demands a full rebuild. Our diagnostic process is precise   we identify the exact root cause before recommending any course of action. Oil leaks, bearing wear, EGR system faults, injector problems, sensor failures, valve damage   we handle every level of engine repair with accuracy and complete honesty.",
   },
   {
     title: "Engine Replacement",
@@ -56,13 +56,13 @@ const services = [
     title: "Engine Swap",
     slug: "engine-swap",
     body:
-      "Considering an engine upgrade or conversion on your Discovery Sport? Our engine swap service covers mounts, ancillaries, wiring integration, ECU mapping, and post-swap diagnostics — carried out by specialists who understand what each conversion demands to be done correctly.",
+      "Considering an engine upgrade or conversion on your Discovery Sport? Our engine swap service covers mounts, ancillaries, wiring integration, ECU mapping, and post-swap diagnostics   carried out by specialists who understand what each conversion demands to be done correctly.",
   },
   {
     title: "Engine Health Check",
     slug: "engine-health-check",
     body:
-      "Our engine health check provides the honest answer. We carry out compression testing, oil analysis, full diagnostic scanning, and a thorough visual inspection of the engine bay. You receive a written report with plain-English findings and genuine recommendations — no upselling, no invented faults.",
+      "Our engine health check provides the honest answer. We carry out compression testing, oil analysis, full diagnostic scanning, and a thorough visual inspection of the engine bay. You receive a written report with plain-English findings and genuine recommendations   no upselling, no invented faults.",
   },
 ];
 
@@ -80,17 +80,17 @@ const faqs = [
   {
     question: "What does the Discovery Sport engine warning light mean?",
     answer:
-      "An engine warning light can indicate anything from a minor sensor fault through to a significant mechanical issue requiring immediate attention. We strongly recommend booking a diagnostic inspection without delay — continuing to drive risks turning a manageable problem into a serious and expensive one.",
+      "An engine warning light can indicate anything from a minor sensor fault through to a significant mechanical issue requiring immediate attention. We strongly recommend booking a diagnostic inspection without delay   continuing to drive risks turning a manageable problem into a serious and expensive one.",
   },
   {
     question: "Is it worth rebuilding a Discovery Sport engine?",
     answer:
-      "In most cases, yes — particularly when the vehicle is otherwise in sound condition. A quality rebuild costs considerably less than sourcing a replacement Discovery Sport at current market prices, and it comes with a written warranty.",
+      "In most cases, yes   particularly when the vehicle is otherwise in sound condition. A quality rebuild costs considerably less than sourcing a replacement Discovery Sport at current market prices, and it comes with a written warranty.",
   },
   {
     question: "Do you supply reconditioned Discovery Sport engines for sale in the UK?",
     answer:
-      "Yes. We supply quality reconditioned and low-mileage used Discovery Sport engines for all variants — Td4, Ingenium diesel, Ingenium petrol, and PHEV configurations. Contact us for current availability and accurate pricing.",
+      "Yes. We supply quality reconditioned and low-mileage used Discovery Sport engines for all variants   Td4, Ingenium diesel, Ingenium petrol, and PHEV configurations. Contact us for current availability and accurate pricing.",
   },
   {
     question: "How long does Discovery Sport engine repair or replacement take?",
@@ -98,7 +98,7 @@ const faqs = [
       "Targeted repairs and engine replacements are typically completed within 3–7 working days. Full rebuilds take 5–10 working days depending on parts availability. We confirm your exact timeline at the point of booking and we honour it.",
   },
   {
-    question: "Can you collect my engine if I'm not near Essex?",
+    question: "Can you collect my engine if I'm not near ?",
     answer:
       "Absolutely. We operate a UK-wide engine collection and delivery service. Wherever you are in the UK, we manage the logistics and return your engine fully tested and ready to fit.",
   },
@@ -111,7 +111,7 @@ export default function LandRoverDiscoverySportEnginesClient() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/car_bgg.jpg"
-            alt="Land Rover Discovery Sport engine specialist in Grays"
+            alt="Land Rover Discovery Sport engine specialist in "
             fill
             className="object-cover opacity-30 mix-blend-overlay"
             priority
@@ -136,7 +136,7 @@ export default function LandRoverDiscoverySportEnginesClient() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-300 to-green-400">
                 Land Rover Discovery Sport
               </span>{" "}
-              Engine Repair, Rebuild & Replacement — Specialists in Grays, Essex
+              Engine Repair, Rebuild & Replacement   Specialists in 
             </motion.h1>
 
             <motion.div
@@ -155,10 +155,10 @@ export default function LandRoverDiscoverySportEnginesClient() {
               className="mt-7 max-w-4xl text-sm leading-relaxed text-slate-300 md:text-base space-y-4"
             >
               <p>
-                The Land Rover Discovery Sport has become one of the most popular compact SUVs on British roads — and for good reason. It's practical, capable, refined, and genuinely versatile. But its Ingenium engine family, while technically impressive, carries known vulnerabilities that reveal themselves as mileage accumulates and service intervals get pushed.
+                The Land Rover Discovery Sport has become one of the most popular compact SUVs on British roads   and for good reason. It's practical, capable, refined, and genuinely versatile. But its Ingenium engine family, while technically impressive, carries known vulnerabilities that reveal themselves as mileage accumulates and service intervals get pushed.
               </p>
               <p>
-                At Vogue Technics, based in Grays, Essex, we work exclusively on Land Rover and Range Rover engines. The Discovery Sport — whether it's running the 2.0 Td4 diesel, the Ingenium diesel, the Ingenium petrol, or a PHEV configuration — is a vehicle our technicians understand at a level that general garages simply cannot match. Backed by over 25 years of hands-on specialist experience, we carry out Discovery Sport engine repair, rebuilds, and replacements that are done correctly, done once, and backed by a written warranty.
+                At Vogue Technics, based in , we work exclusively on Land Rover and Range Rover engines. The Discovery Sport   whether it's running the 2.0 Td4 diesel, the Ingenium diesel, the Ingenium petrol, or a PHEV configuration   is a vehicle our technicians understand at a level that general garages simply cannot match. Backed by over 25 years of hands-on specialist experience, we carry out Discovery Sport engine repair, rebuilds, and replacements that are done correctly, done once, and backed by a written warranty.
               </p>
             </motion.div>
           </div>
@@ -179,7 +179,7 @@ export default function LandRoverDiscoverySportEnginesClient() {
               <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
                 <h3 className="font-bold text-slate-900">Over 25 Years Building an Unshakeable Reputation</h3>
                 <p className="mt-3 text-slate-700 leading-relaxed">
-                  Our reputation has grown entirely through results. Owners call us because other owners recommended us — and they return because the work holds.
+                  Our reputation has grown entirely through results. Owners call us because other owners recommended us   and they return because the work holds.
                 </p>
               </div>
               <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
@@ -201,7 +201,7 @@ export default function LandRoverDiscoverySportEnginesClient() {
             </h2>
             <div className="w-24 h-1 bg-primary mx-auto rounded-full mt-4"></div>
             <p className="mt-6 text-slate-600 text-[1.05rem] leading-relaxed">
-              We offer every engine service the Discovery Sport requires — from targeted repairs to full rebuilds and complete engine replacement.
+              We offer every engine service the Discovery Sport requires   from targeted repairs to full rebuilds and complete engine replacement.
             </p>
           </div>
 
@@ -247,17 +247,17 @@ export default function LandRoverDiscoverySportEnginesClient() {
               {
                 quote:
                   '"My 2017 Discovery Sport Ingenium diesel had an engine warning light that two local garages couldn\'t diagnose accurately. Vogue Technics identified the problem within hours, explained the issue clearly, and had it resolved within five working days. Absolutely the right people for this vehicle."',
-                by: "— Oliver M., Hertfordshire",
+                by: "  Oliver M., Hertfordshire",
               },
               {
                 quote:
                   '"Sent my Discovery Sport engine down from Birmingham after a head gasket failure. It came back rebuilt to an excellent standard, well packaged, and arrived a day ahead of schedule. Outstanding service from start to finish."',
-                by: "— Karen B., Birmingham",
+                by: "  Karen B., Birmingham",
               },
               {
                 quote:
-                  '"I was facing quotes of over £5,500 for a Discovery Sport engine replacement from two garages locally. Vogue Technics completed the same job, with a warranty included, for significantly less. Wish I\'d found them first — lesson learned."',
-                by: "— Tom W., Kent",
+                  '"I was facing quotes of over £5,500 for a Discovery Sport engine replacement from two garages locally. Vogue Technics completed the same job, with a warranty included, for significantly less. Wish I\'d found them first   lesson learned."',
+                by: "  Tom W., Kent",
               },
             ].map((t) => (
               <div
@@ -278,7 +278,7 @@ export default function LandRoverDiscoverySportEnginesClient() {
       </section>
 
       <FAQSection
-        title={<>Frequently Asked Questions — <span className="text-primary italic">Land Rover Discovery Sport</span></>}
+        title={<>Frequently Asked Questions   <span className="text-primary italic">Land Rover Discovery Sport</span></>}
         items={faqs}
       />
 
@@ -286,10 +286,10 @@ export default function LandRoverDiscoverySportEnginesClient() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-5xl mx-auto text-center space-y-6">
             <h2 className="text-3xl md:text-4xl font-extrabold leading-tight">
-              Book Your Discovery Sport Engine Repair Today — No-Obligation Quote
+              Book Your Discovery Sport Engine Repair Today   No-Obligation Quote
             </h2>
             <p className="text-emerald-50 leading-relaxed max-w-3xl mx-auto">
-              Call us today or complete our online enquiry form for a fast, no-obligation quote. We're based in Grays, Essex, and we serve Discovery Sport owners across the UK. Your Discovery Sport deserves a genuine specialist — and that is exactly what we are.
+              Call us today or complete our online enquiry form for a fast, no-obligation quote. We're based in , and we serve Discovery Sport owners across the UK. Your Discovery Sport deserves a genuine specialist   and that is exactly what we are.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <a

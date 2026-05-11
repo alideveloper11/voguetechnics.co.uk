@@ -65,15 +65,15 @@ export default function HeadGasketReplacementPage() {
               className="max-w-4xl mx-auto text-slate-300 leading-relaxed font-medium space-y-6 text-sm md:text-base"
             >
               <p>
-                A blown head gasket is one of the most serious engine faults a prestige vehicle owner can face — and one of the
+                A blown head gasket is one of the most serious engine faults a prestige vehicle owner can face   and one of the
                 most frequently mishandled. The wrong diagnosis leads to the wrong repair. The wrong repair leads to the same
                 fault returning weeks later, often with additional damage that was not there the first time.
               </p>
               <p>
                 At Vogue Technics, head gasket repair and replacement is carried out by specialists who understand the specific
-                failure patterns of each platform they work on. We cover Range Rover, Land Rover, Jaguar, Audi, and BMW — with
+                failure patterns of each platform they work on. We cover Range Rover, Land Rover, Jaguar, Audi, and BMW   with
                 accurate diagnostics, OEM-specification parts, a written quote before any work begins, and a minimum six-month
-                warranty on every repair. Based in Grays, Essex, with UK-wide collection available.
+                warranty on every repair. Based in , with UK-wide collection available.
               </p>
               <p>
                 If your engine is showing head gasket symptoms, the cost of addressing it now is a fraction of what it becomes
@@ -106,12 +106,12 @@ export default function HeadGasketReplacementPage() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center max-w-4xl mx-auto mb-16 space-y-6">
             <h2 className="text-2xl md:text-4xl font-extrabold text-slate-900 uppercase tracking-tight italic">
-              Head Gasket Failure <span className="text-primary">— Know the Symptoms</span>
+              Head Gasket Failure <span className="text-primary">  Know the Symptoms</span>
             </h2>
             <div className="w-24 h-1.5 bg-primary mx-auto rounded-full"></div>
             <p className="text-slate-600 font-medium leading-relaxed text-sm md:text-base">
               Head gasket failure does not always announce itself dramatically. In some cases the signs are subtle and easy to
-              attribute to something less serious — until the damage has progressed significantly.
+              attribute to something less serious   until the damage has progressed significantly.
             </p>
           </div>
 
@@ -132,8 +132,8 @@ export default function HeadGasketReplacementPage() {
               </div>
               <h3 className="text-lg font-extrabold text-slate-900 uppercase tracking-tight italic mb-4">Coolant Loss</h3>
               <p className="text-slate-600 leading-relaxed font-medium text-sm md:text-base">
-                Coolant loss without a visible external leak — where the level drops consistently but there is no puddle under
-                the car — is a strong indicator.
+                Coolant loss without a visible external leak   where the level drops consistently but there is no puddle under
+                the car   is a strong indicator.
               </p>
             </div>
             <div className="bg-slate-50 border border-slate-100 rounded-[2.5rem] p-10 hover:bg-white hover:shadow-2xl transition-all duration-500">
@@ -155,7 +155,7 @@ export default function HeadGasketReplacementPage() {
                   If any symptoms apply, book a specialist diagnostic.
                 </h3>
                 <p className="text-slate-300 font-medium leading-relaxed text-sm md:text-base">
-                  Subtle presentations are often the most dangerous — acting early keeps costs contained and protects your
+                  Subtle presentations are often the most dangerous   acting early keeps costs contained and protects your
                   engine.
                 </p>
               </div>
@@ -183,7 +183,7 @@ export default function HeadGasketReplacementPage() {
           <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
             <div className="lg:col-span-2 space-y-6 text-slate-600 leading-relaxed font-medium text-sm md:text-base">
               <p>
-                A failing head gasket does not stabilise. It deteriorates — and as it does, the damage spreads. Coolant
+                A failing head gasket does not stabilise. It deteriorates   and as it does, the damage spreads. Coolant
                 contaminating the engine oil destroys bearing surfaces and accelerates internal wear throughout the engine.
                 Overheating caused by coolant loss can warp the cylinder head, turning a head gasket replacement into a cylinder
                 head rebuild or replacement. In the most serious cases, prolonged operation with a blown head gasket results in
@@ -191,7 +191,7 @@ export default function HeadGasketReplacementPage() {
               </p>
               <p>
                 The difference in cost between a head gasket repair carried out at the early symptom stage and one carried out
-                after the cylinder head has warped — or after the engine has suffered internal damage from oil contamination —
+                after the cylinder head has warped   or after the engine has suffered internal damage from oil contamination  
                 is substantial. Acting on the symptoms, having the vehicle properly diagnosed, and committing to the repair
                 while the damage is still contained is always the financially sensible decision.
               </p>
@@ -232,7 +232,7 @@ export default function HeadGasketReplacementPage() {
                 body: (
                   <>
                     <p>
-                      Range Rover head gasket failure is a fault pattern we see regularly across several platforms — and one that
+                      Range Rover head gasket failure is a fault pattern we see regularly across several platforms   and one that
                       requires a specialist approach rather than a generic repair. We carry out Range Rover head gasket repair and
                       replacement across the Vogue, Sport, Velar, and Evoque, covering TDV6, SDV6, TDV8, Ingenium 2.0 diesel and
                       petrol platforms.
@@ -240,12 +240,12 @@ export default function HeadGasketReplacementPage() {
                     <p>
                       The TDV6 3.0 diesel fitted to the Range Rover Sport is one of the platforms we see most frequently for head
                       gasket related work. Coolant loss, overheating, and oil contamination on this engine are often traced back to
-                      EGR cooler failure that has allowed coolant to enter the system — a fault that needs to be identified and
+                      EGR cooler failure that has allowed coolant to enter the system   a fault that needs to be identified and
                       resolved alongside the head gasket repair itself, not after.
                     </p>
                     <p>
                       Range Rover head gasket repair cost and Range Rover head gasket replacement cost vary by platform and the
-                      extent of cylinder head damage found during inspection. Range Rover Sport head gasket repair at our Grays
+                      extent of cylinder head damage found during inspection. Range Rover Sport head gasket repair at our 
                       workshop is carried out with OEM-specification gaskets and head bolts, full cylinder head assessment, and a
                       skim where required to restore the mating surface. We provide a full written quote covering all work before
                       anything proceeds.
@@ -260,22 +260,22 @@ export default function HeadGasketReplacementPage() {
                 body: (
                   <>
                     <p>
-                      Land Rover head gasket replacement is one of the most established services we carry out — with the Discovery
+                      Land Rover head gasket replacement is one of the most established services we carry out   with the Discovery
                       2, Discovery 3, and Freelander platforms all carrying well-documented head gasket fault histories that owners
                       and specialists have been managing for years.
                     </p>
                     <p>
                       The Land Rover Discovery 2 head gasket is one of the most recognised failures in the Land Rover ownership
                       community. The 2003 Land Rover Discovery 2 head gasket fault, often presenting with overheating and coolant
-                      loss, is a repair we carry out correctly — with a full cylinder head inspection, pressure test, and skim where
-                      required — rather than as a quick turn-around job that reuses components that should be replaced.
+                      loss, is a repair we carry out correctly   with a full cylinder head inspection, pressure test, and skim where
+                      required   rather than as a quick turn-around job that reuses components that should be replaced.
                     </p>
                     <p>
                       Land Rover head gasket replacement cost UK varies by model and the condition of the cylinder head at the time
                       of repair. A 2013 Land Rover head gasket replacement on a later Discovery or Freelander platform may involve
-                      different considerations to an older Discovery 2 job — and we always provide a written quote following a proper
+                      different considerations to an older Discovery 2 job   and we always provide a written quote following a proper
                       assessment rather than estimating from symptoms alone. UK-wide collection is available for those who cannot
-                      reach our Grays workshop.
+                      reach our  workshop.
                     </p>
                   </>
                 ),
@@ -287,17 +287,17 @@ export default function HeadGasketReplacementPage() {
                 body: (
                   <>
                     <p>
-                      Jaguar head gasket repair covers several platforms with distinct fault characteristics — and the cost of repair
+                      Jaguar head gasket repair covers several platforms with distinct fault characteristics   and the cost of repair
                       varies considerably depending on the engine, the extent of gasket failure, and whether the cylinder head has
                       sustained additional damage.
                     </p>
                     <p>
                       The Jaguar S-Type head gasket is one of the most frequently requested repairs we carry out on older Jaguar
                       petrol platforms. Jaguar S-Type blown head gasket repair requires careful assessment of the V6 or V8 cylinder
-                      heads before work proceeds — warping caused by overheating is common on this platform.
+                      heads before work proceeds   warping caused by overheating is common on this platform.
                     </p>
                     <p>
-                      Jaguar X-Type head gasket repair cost is another common enquiry — the X-Type diesel and petrol platforms both
+                      Jaguar X-Type head gasket repair cost is another common enquiry   the X-Type diesel and petrol platforms both
                       develop head gasket faults that require specialist attention. We always provide a written estimate following a
                       thorough diagnostic rather than quoting figures based on vehicle model alone. UK-wide collection is available on
                       all head gasket repair work.
@@ -312,19 +312,19 @@ export default function HeadGasketReplacementPage() {
                 body: (
                   <>
                     <p>
-                      Audi head gasket failure presents differently across the TDI diesel and TFSI petrol platforms — and diagnosing
+                      Audi head gasket failure presents differently across the TDI diesel and TFSI petrol platforms   and diagnosing
                       the fault accurately before committing to a repair approach is essential on these engines. We carry out Audi head
                       gasket repair and replacement across the A4, A5, A6, TT, and Q5 range, covering 1.8T, 2.0 TFSI, 2.0 TDI, and
                       3.0 TDI platforms.
                     </p>
                     <p>
-                      Audi 2.0 TFSI head gasket failure is one of the most common faults we see on this petrol platform — often
+                      Audi 2.0 TFSI head gasket failure is one of the most common faults we see on this petrol platform   often
                       presenting alongside the oil consumption issues this engine is known for. Coolant loss, overheating, and white
                       smoke under load are the typical symptoms.
                     </p>
                     <p>
                       Audi head gasket cost is always provided following a proper diagnostic and cylinder head inspection. Audi head
-                      gasket specialist near me is a search we serve from Grays, Essex, with UK-wide collection available.
+                      gasket specialist near me is a search we serve from , with UK-wide collection available.
                     </p>
                   </>
                 ),
@@ -337,7 +337,7 @@ export default function HeadGasketReplacementPage() {
                   <>
                     <p>
                       BMW head gasket repair requires platform-specific knowledge that varies considerably between the N52, N54, and
-                      N20 petrol engines — each of which develops head gasket related faults in distinct ways and at different mileage
+                      N20 petrol engines   each of which develops head gasket related faults in distinct ways and at different mileage
                       points. We carry out BMW head gasket repair and replacement across the 3 Series, 5 Series, X3, and X5.
                     </p>
                     <p>
@@ -346,7 +346,7 @@ export default function HeadGasketReplacementPage() {
                       Careful cylinder head inspection and surface measurement is essential before the replacement gasket is fitted.
                     </p>
                     <p>
-                      BMW head gasket cost is always provided in a written quote following a full assessment — BMW head gasket symptoms
+                      BMW head gasket cost is always provided in a written quote following a full assessment   BMW head gasket symptoms
                       should never be managed conservatively, as the secondary damage from delayed repair is always more expensive than
                       the repair itself.
                     </p>
@@ -391,11 +391,11 @@ export default function HeadGasketReplacementPage() {
             {[
               {
                 title: "Accurate Diagnosis Before Any Repair Recommendation",
-                text: "Head gasket failure can be mimicked by other cooling system faults — and a proper diagnostic, including a combustion gas test and cylinder compression assessment, is the only way to confirm the fault before recommending repair. We never skip this step.",
+                text: "Head gasket failure can be mimicked by other cooling system faults   and a proper diagnostic, including a combustion gas test and cylinder compression assessment, is the only way to confirm the fault before recommending repair. We never skip this step.",
               },
               {
                 title: "Cylinder Head Inspection Included on Every Job",
-                text: "A head gasket replacement carried out without inspecting and measuring the cylinder head for warping is an incomplete repair. We assess every cylinder head before refitting — and skim or replace where necessary.",
+                text: "A head gasket replacement carried out without inspecting and measuring the cylinder head for warping is an incomplete repair. We assess every cylinder head before refitting   and skim or replace where necessary.",
               },
               {
                 title: "OEM and OEM-Specification Parts Throughout",
@@ -411,7 +411,7 @@ export default function HeadGasketReplacementPage() {
               },
               {
                 title: "UK-Wide Collection and Delivery",
-                text: "Based in Grays, Essex — we collect and deliver across the UK on all head gasket and engine work.",
+                text: "Based in    we collect and deliver across the UK on all head gasket and engine work.",
               },
             ].map((item) => (
               <div key={item.title} className="bg-white/5 border border-white/10 rounded-[2.5rem] p-10 hover:bg-white/10 transition-all duration-500">
@@ -438,12 +438,12 @@ export default function HeadGasketReplacementPage() {
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {[
-                "Step 1 — Contact Us with your symptoms and vehicle details. We provide honest initial advice from the first call.",
-                "Step 2 — Drop Off or Collection — visit our Grays workshop or arrange UK-wide collection.",
-                "Step 3 — Diagnostic and Written Quote — combustion gas test, compression test, cooling system assessment, and cylinder head inspection. Full written quote covering all work before anything proceeds.",
-                "Step 4 — Head Gasket Repair to OEM Specification — new gasket, new head bolts, cylinder head skim where required, full reassembly with correct torque settings throughout.",
-                "Step 5 — Cooling System Flush and Refill — full coolant system flush, refill with correct specification coolant, and pressure test before the engine is started.",
-                "Step 6 — Road Test and Quality Check — temperature monitoring, pressure check, and road test before handover. Warranty documentation confirmed in writing.",
+                "Step 1   Contact Us with your symptoms and vehicle details. We provide honest initial advice from the first call.",
+                "Step 2   Drop Off or Collection   visit our  workshop or arrange UK-wide collection.",
+                "Step 3   Diagnostic and Written Quote   combustion gas test, compression test, cooling system assessment, and cylinder head inspection. Full written quote covering all work before anything proceeds.",
+                "Step 4   Head Gasket Repair to OEM Specification   new gasket, new head bolts, cylinder head skim where required, full reassembly with correct torque settings throughout.",
+                "Step 5   Cooling System Flush and Refill   full coolant system flush, refill with correct specification coolant, and pressure test before the engine is started.",
+                "Step 6   Road Test and Quality Check   temperature monitoring, pressure check, and road test before handover. Warranty documentation confirmed in writing.",
               ].map((text, idx) => (
                 <div key={idx} className="bg-white/5 border border-white/10 rounded-[2.5rem] p-10 hover:bg-white/10 transition-all duration-500">
                   <div className="w-12 h-12 rounded-2xl bg-primary text-white flex items-center justify-center font-black text-lg mb-6 shadow-lg">
@@ -465,12 +465,12 @@ export default function HeadGasketReplacementPage() {
           {
             question: "How much does head gasket repair cost?",
             answer:
-              "Head gasket repair cost varies by platform, engine, and the condition of the cylinder head at the time of repair. A head that requires skimming adds cost to the job. We always quote following a proper diagnostic — contact us for a no-obligation estimate on your specific vehicle.",
+              "Head gasket repair cost varies by platform, engine, and the condition of the cylinder head at the time of repair. A head that requires skimming adds cost to the job. We always quote following a proper diagnostic   contact us for a no-obligation estimate on your specific vehicle.",
           },
           {
             question: "Can a blown head gasket be repaired with a sealer product?",
             answer:
-              "No. Liquid sealers are a temporary measure that does not address the underlying failure and frequently causes additional problems — blocked coolant passages, damaged water pump impellers, and masked symptoms that allow further damage to develop. A proper head gasket replacement is always the correct repair.",
+              "No. Liquid sealers are a temporary measure that does not address the underlying failure and frequently causes additional problems   blocked coolant passages, damaged water pump impellers, and masked symptoms that allow further damage to develop. A proper head gasket replacement is always the correct repair.",
           },
           {
             question: "How do I know if my head gasket is blown?",
@@ -514,12 +514,12 @@ export default function HeadGasketReplacementPage() {
               href="/services/engine-health-check"
               className="bg-white/20 text-white font-black px-12 py-6 rounded-[2rem] shadow-2xl hover:bg-white/25 transition-all uppercase tracking-[0.2em] text-xs md:text-sm border border-white/20"
             >
-              Book a Head Gasket Diagnostic at Our Grays Workshop
+              Book a Head Gasket Diagnostic at Our  Workshop
             </Link>
           </div>
 
           <div className="mt-16 text-white/90 font-black uppercase tracking-widest text-[0.65rem]">
-            Vogue Technics | Head Gasket Repair Specialists | Grays, Essex | UK-Wide Collection &nbsp; Range Rover • Land Rover •
+            Vogue Technics | Head Gasket Repair Specialists |  | UK-Wide Collection &nbsp; Range Rover • Land Rover •
             Jaguar • Audi • BMW
           </div>
         </div>

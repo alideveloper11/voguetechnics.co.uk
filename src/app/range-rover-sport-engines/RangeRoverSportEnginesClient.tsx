@@ -14,13 +14,13 @@ const services = [
     title: "Head Gasket Replacement",
     slug: "head-gasket-replacement",
     body:
-      "Head gasket failure is one of the most damaging faults a Range Rover Sport can develop — and one of the most frequently misdiagnosed. White exhaust smoke, unexplained coolant loss, and engines running hotter than usual are all warning signs that shouldn't be ignored. Our specialists carry out full head gasket replacements using quality-matched components, including a complete head skim and cylinder pressure test to confirm the repair is structurally sound before your vehicle leaves our workshop.",
+      "Head gasket failure is one of the most damaging faults a Range Rover Sport can develop   and one of the most frequently misdiagnosed. White exhaust smoke, unexplained coolant loss, and engines running hotter than usual are all warning signs that shouldn't be ignored. Our specialists carry out full head gasket replacements using quality-matched components, including a complete head skim and cylinder pressure test to confirm the repair is structurally sound before your vehicle leaves our workshop.",
   },
   {
     title: "Timing Chain Replacement",
     slug: "timing-chain-replacement",
     body:
-      "Timing chain wear is a well-documented issue on several Range Rover Sport engine variants, particularly the 2.7 TDV6 and 3.0 SDV6 diesels. A rattling noise on cold start is often the first sign — and by that point, the wear is already significant. We carry out full timing chain replacements covering the complete kit: chain, tensioners, guides, sprockets, and all associated seals. This is not a job to delay. A failed timing chain can destroy an otherwise healthy engine in seconds.",
+      "Timing chain wear is a well-documented issue on several Range Rover Sport engine variants, particularly the 2.7 TDV6 and 3.0 SDV6 diesels. A rattling noise on cold start is often the first sign   and by that point, the wear is already significant. We carry out full timing chain replacements covering the complete kit: chain, tensioners, guides, sprockets, and all associated seals. This is not a job to delay. A failed timing chain can destroy an otherwise healthy engine in seconds.",
   },
   {
     title: "Turbo Replacement",
@@ -32,19 +32,19 @@ const services = [
     title: "Engine Rebuild",
     slug: "engine-rebuild",
     body:
-      "When your Range Rover Sport engine has suffered internal wear but the block remains structurally viable, a full rebuild is frequently the best long-term investment you can make. We strip the engine completely, measure all critical tolerances, replace worn bearings, piston rings, seals, and gaskets, then reassemble and test to manufacturer specification. A correctly rebuilt Sport engine doesn't just run — it runs as well as it did when it left the factory. And it costs considerably less than a full engine replacement.",
+      "When your Range Rover Sport engine has suffered internal wear but the block remains structurally viable, a full rebuild is frequently the best long-term investment you can make. We strip the engine completely, measure all critical tolerances, replace worn bearings, piston rings, seals, and gaskets, then reassemble and test to manufacturer specification. A correctly rebuilt Sport engine doesn't just run   it runs as well as it did when it left the factory. And it costs considerably less than a full engine replacement.",
   },
   {
     title: "Engine Repair",
     slug: "engine-repair",
     body:
-      "Not every engine fault demands a rebuild or replacement. Our engine repair service covers the complete spectrum of Range Rover Sport engine problems — oil leaks, coolant loss, misfires, rough running, injector failure, EGR faults, sensor issues, and general mechanical wear. We always diagnose accurately before we quote, using professional diagnostic equipment alongside hands-on mechanical assessment. You'll never be sold a repair your engine doesn't actually need.",
+      "Not every engine fault demands a rebuild or replacement. Our engine repair service covers the complete spectrum of Range Rover Sport engine problems   oil leaks, coolant loss, misfires, rough running, injector failure, EGR faults, sensor issues, and general mechanical wear. We always diagnose accurately before we quote, using professional diagnostic equipment alongside hands-on mechanical assessment. You'll never be sold a repair your engine doesn't actually need.",
   },
   {
-    title: "Engine Replacement — Used & Reconditioned Options",
+    title: "Engine Replacement   Used & Reconditioned Options",
     slug: "engine-replacement",
     body:
-      "When repair or rebuild isn't the right answer, we make the replacement process as straightforward as possible. We offer both used Range Rover Sport engines for budget-conscious owners and fully reconditioned engines for those prioritising longevity. Supply-only or complete supply and fit — the choice is yours. Every engine comes with a written warranty and a clear, itemised quote before any work begins.",
+      "When repair or rebuild isn't the right answer, we make the replacement process as straightforward as possible. We offer both used Range Rover Sport engines for budget-conscious owners and fully reconditioned engines for those prioritising longevity. Supply-only or complete supply and fit   the choice is yours. Every engine comes with a written warranty and a clear, itemised quote before any work begins.",
   },
   {
     title: "Engine Swap",
@@ -56,13 +56,13 @@ const services = [
     title: "Timing Belt Replacement",
     slug: "timing-belt-replacement",
     body:
-      "Certain Range Rover Sport petrol variants use a timing belt rather than a chain — and a snapped belt causes exactly the same catastrophic engine damage. We carry out complete timing belt replacements including water pump inspection, tensioner assessment, and all associated seal changes. If your Sport is due a timing belt service, don't put it off.",
+      "Certain Range Rover Sport petrol variants use a timing belt rather than a chain   and a snapped belt causes exactly the same catastrophic engine damage. We carry out complete timing belt replacements including water pump inspection, tensioner assessment, and all associated seal changes. If your Sport is due a timing belt service, don't put it off.",
   },
   {
     title: "Engine Health Check",
     slug: "engine-health-check",
     body:
-      "Not sure what's wrong with your Range Rover Sport? Start here. Our comprehensive engine health check uses the latest OBD diagnostic equipment alongside physical compression testing and oil analysis to build a complete picture of your engine's condition. You receive a clear, jargon-free written report with our honest recommendation — whether that's a minor repair, a full rebuild, or confirmation that your engine is in better shape than you feared.",
+      "Not sure what's wrong with your Range Rover Sport? Start here. Our comprehensive engine health check uses the latest OBD diagnostic equipment alongside physical compression testing and oil analysis to build a complete picture of your engine's condition. You receive a clear, jargon-free written report with our honest recommendation   whether that's a minor repair, a full rebuild, or confirmation that your engine is in better shape than you feared.",
   },
 ];
 
@@ -75,7 +75,7 @@ const faqs = [
   {
     question: "How much does a Range Rover Sport engine rebuild cost?",
     answer:
-      "Rebuild costs depend on the engine variant and the extent of internal wear. At Vogue Technics, we provide a full strip and assess before quoting, so you receive an accurate price based on your specific engine's condition — not a generic estimate. Contact us with your registration for an honest starting point.",
+      "Rebuild costs depend on the engine variant and the extent of internal wear. At Vogue Technics, we provide a full strip and assess before quoting, so you receive an accurate price based on your specific engine's condition   not a generic estimate. Contact us with your registration for an honest starting point.",
   },
   {
     question: "What is the most common Range Rover Sport engine problem?",
@@ -85,22 +85,22 @@ const faqs = [
   {
     question: "How long does a Range Rover Sport engine replacement take?",
     answer:
-      "Most engine replacements are completed within three to five working days, depending on parts availability and the complexity of the specific fitment. We always provide a realistic timeframe when you book in — and we keep you updated throughout the job.",
+      "Most engine replacements are completed within three to five working days, depending on parts availability and the complexity of the specific fitment. We always provide a realistic timeframe when you book in   and we keep you updated throughout the job.",
   },
   {
-    question: "Do you offer Range Rover Sport engine supply and fit in Grays?",
+    question: "Do you offer Range Rover Sport engine supply and fit in ?",
     answer:
-      "Yes. Our Grays workshop offers a complete supply and fit service for all Range Rover Sport engine variants. We also offer supply-only with UK-wide delivery for customers fitting elsewhere.",
+      "Yes. Our  workshop offers a complete supply and fit service for all Range Rover Sport engine variants. We also offer supply-only with UK-wide delivery for customers fitting elsewhere.",
   },
   {
     question: "What warranty comes with a reconditioned Range Rover Sport engine?",
     answer:
-      "All reconditioned engines supplied and fitted by Vogue Technics come with a minimum 6-month warranty as standard. Extended cover is available — ask our team for full details when you get in touch.",
+      "All reconditioned engines supplied and fitted by Vogue Technics come with a minimum 6-month warranty as standard. Extended cover is available   ask our team for full details when you get in touch.",
   },
   {
     question: "Is it better to rebuild or replace a Range Rover Sport engine?",
     answer:
-      "It depends entirely on the condition of your existing engine block and the nature of the fault. In many cases, a full rebuild is the more cost-effective and longer-lasting solution. We always assess your engine honestly before recommending a path — our goal is the right outcome for your vehicle and your budget, not the most expensive option.",
+      "It depends entirely on the condition of your existing engine block and the nature of the fault. In many cases, a full rebuild is the more cost-effective and longer-lasting solution. We always assess your engine honestly before recommending a path   our goal is the right outcome for your vehicle and your budget, not the most expensive option.",
   },
 ];
 
@@ -111,7 +111,7 @@ export default function RangeRoverSportEnginesClient() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/car_bgg.jpg"
-            alt="Range Rover Sport engine specialist in Grays"
+            alt="Range Rover Sport engine specialist in "
             fill
             className="object-cover opacity-30 mix-blend-overlay"
             priority
@@ -136,7 +136,7 @@ export default function RangeRoverSportEnginesClient() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-300 to-green-400">
                 Range Rover Sport Engines
               </span>{" "}
-              – Expert Rebuild, Repair & Replacement in Grays, UK
+              – Expert Rebuild, Repair & Replacement in , UK
             </motion.h1>
 
             <motion.div
@@ -155,13 +155,13 @@ export default function RangeRoverSportEnginesClient() {
               className="mt-7 max-w-4xl text-sm leading-relaxed text-slate-300 md:text-base space-y-4"
             >
               <p>
-                There&apos;s a particular kind of frustration that comes with a Range Rover Sport engine problem. It&apos;s not just the inconvenience — it&apos;s the uncertainty. Who do you trust? What will it actually cost? Will the repair hold? At Vogue Technics, we&apos;ve been answering those questions honestly for over 25 years, working exclusively on Range Rover, Land Rover, and Jaguar engines from our specialist workshop in Grays, Essex.
+                There&apos;s a particular kind of frustration that comes with a Range Rover Sport engine problem. It&apos;s not just the inconvenience   it&apos;s the uncertainty. Who do you trust? What will it actually cost? Will the repair hold? At Vogue Technics, we&apos;ve been answering those questions honestly for over 25 years, working exclusively on Range Rover, Land Rover, and Jaguar engines from our specialist workshop .
               </p>
               <p>
-                We are not a general garage that occasionally handles prestige vehicles. Every technician on our team has been trained specifically on Range Rover Sport engine systems — from the early 2.7 TDV6 and 4.2 supercharged V8 through to the modern 3.0 SDV6 and 2.0 Ingenium units. That focused expertise is what separates us from the average independent garage, and it&apos;s why Sport owners travel from across Essex, Kent, and the wider UK to have their engines looked after here.
+                We are not a general garage that occasionally handles prestige vehicles. Every technician on our team has been trained specifically on Range Rover Sport engine systems   from the early 2.7 TDV6 and 4.2 supercharged V8 through to the modern 3.0 SDV6 and 2.0 Ingenium units. That focused expertise is what separates us from the average independent garage, and it&apos;s why Sport owners travel from across , Kent, and the wider UK to have their engines looked after here.
               </p>
               <p>
-                Whether you need a complete engine rebuild, an urgent replacement, or specialist diagnosis on a fault nobody else has managed to fix — you&apos;re in the right place.
+                Whether you need a complete engine rebuild, an urgent replacement, or specialist diagnosis on a fault nobody else has managed to fix   you&apos;re in the right place.
               </p>
             </motion.div>
           </div>
@@ -172,7 +172,7 @@ export default function RangeRoverSportEnginesClient() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
-              Complete Range Rover Sport Engine Services in Grays, Essex
+              Complete Range Rover Sport Engine Services in 
             </h2>
             <div className="w-24 h-1 bg-primary mx-auto rounded-full mt-4"></div>
             <p className="mt-6 text-slate-600 text-[1.05rem] leading-relaxed">
@@ -208,7 +208,7 @@ export default function RangeRoverSportEnginesClient() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
-              Used & Reconditioned Range Rover Sport Engines for Sale — All Variants
+              Used & Reconditioned Range Rover Sport Engines for Sale   All Variants
             </h2>
             <div className="mt-6 space-y-6 text-slate-700 leading-relaxed">
               <p>
@@ -218,20 +218,20 @@ export default function RangeRoverSportEnginesClient() {
                 <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
                   <h3 className="font-bold text-slate-900">Range Rover Sport 2.7 TDV6 & 3.6 TDV8 Engines</h3>
                   <p className="mt-3">
-                    The first-generation Sport engines — particularly the 2.7 TDV6 — remain in high demand as affordable, capable units. We supply tested used and fully reconditioned 2.7 and 3.6 engines with compression test results, mileage documentation, and minimum 6-month warranty cover included as standard.
+                    The first-generation Sport engines   particularly the 2.7 TDV6   remain in high demand as affordable, capable units. We supply tested used and fully reconditioned 2.7 and 3.6 engines with compression test results, mileage documentation, and minimum 6-month warranty cover included as standard.
                   </p>
                 </div>
                 <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
                   <h3 className="font-bold text-slate-900">Range Rover Sport 3.0 SDV6 & 5.0 Supercharged Engines</h3>
                   <p className="mt-3">
-                    The 3.0 SDV6 diesel and 5.0 supercharged V8 petrol are the two most requested second-generation Sport engines. Both are exceptional when properly maintained — and both respond extremely well to a full professional rebuild. We hold regular stock of both variants in used and reconditioned condition, with fast UK-wide delivery available.
+                    The 3.0 SDV6 diesel and 5.0 supercharged V8 petrol are the two most requested second-generation Sport engines. Both are exceptional when properly maintained   and both respond extremely well to a full professional rebuild. We hold regular stock of both variants in used and reconditioned condition, with fast UK-wide delivery available.
                   </p>
                 </div>
               </div>
               <p className="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm">
-                <span className="font-bold text-slate-900">Fast UK Delivery & Local Fitting in Grays</span>
+                <span className="font-bold text-slate-900">Fast UK Delivery & Local Fitting in </span>
                 <br />
-                Every engine we supply is packaged securely and dispatched with full technical documentation. For customers across Grays, Thurrock, Basildon, Dartford, and the surrounding Essex area, we offer a complete supply and fit service at our workshop — handled entirely by our own specialist team from start to finish.
+                Every engine we supply is packaged securely and dispatched with full technical documentation. For customers across , Thurrock, Basildon, Dartford, and the surrounding  area, we offer a complete supply and fit service at our workshop   handled entirely by our own specialist team from start to finish.
               </p>
             </div>
           </div>
@@ -248,19 +248,19 @@ export default function RangeRoverSportEnginesClient() {
               <div className="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm">
                 <h3 className="font-bold text-slate-900">25 Years of Focused Range Rover Engine Experience</h3>
                 <p className="mt-3 text-slate-700 leading-relaxed">
-                  We have spent a quarter of a century working exclusively on Range Rover and Land Rover engines. That depth of experience means faster, more accurate diagnosis, fewer return visits, and engine work that holds up properly over time. We&apos;ve seen virtually every failure mode these engines can produce — and we know exactly how to address each one correctly.
+                  We have spent a quarter of a century working exclusively on Range Rover and Land Rover engines. That depth of experience means faster, more accurate diagnosis, fewer return visits, and engine work that holds up properly over time. We&apos;ve seen virtually every failure mode these engines can produce   and we know exactly how to address each one correctly.
                 </p>
               </div>
               <div className="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm">
-                <h3 className="font-bold text-slate-900">Transparent Pricing — No Surprises, Ever</h3>
+                <h3 className="font-bold text-slate-900">Transparent Pricing   No Surprises, Ever</h3>
                 <p className="mt-3 text-slate-700 leading-relaxed">
-                  Every job at Vogue Technics starts with a clear, itemised quote. We explain what needs doing, why it needs doing, and what it will cost — before we touch your vehicle. There are no hidden labour charges, no unexpected parts invoices, and no pressure to approve work you&apos;re not comfortable with.
+                  Every job at Vogue Technics starts with a clear, itemised quote. We explain what needs doing, why it needs doing, and what it will cost   before we touch your vehicle. There are no hidden labour charges, no unexpected parts invoices, and no pressure to approve work you&apos;re not comfortable with.
                 </p>
               </div>
               <div className="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm">
                 <h3 className="font-bold text-slate-900">All Reconditioned Engines Warranted for Minimum 6 Months</h3>
                 <p className="mt-3 text-slate-700 leading-relaxed">
-                  Every reconditioned engine we supply or fit carries a minimum 6-month warranty as standard. Extended warranty options are available for customers who want additional peace of mind. We stand behind every engine that leaves our workshop — because we built it, we tested it, and we&apos;re confident in it.
+                  Every reconditioned engine we supply or fit carries a minimum 6-month warranty as standard. Extended warranty options are available for customers who want additional peace of mind. We stand behind every engine that leaves our workshop   because we built it, we tested it, and we&apos;re confident in it.
                 </p>
               </div>
             </div>
@@ -284,17 +284,17 @@ export default function RangeRoverSportEnginesClient() {
               {
                 quote:
                   '"Vogue Technics rebuilt my Sport\'s 3.0 SDV6 after a catastrophic oil system failure. Every other garage I called quoted for a full replacement. These guys rebuilt it properly for significantly less and it\'s been faultless for 18 months."',
-                by: "— Andrew F., Grays, Essex",
+                by: "  Andrew F., ",
               },
               {
                 quote:
                   '"The engine health check alone was worth it. They found a timing chain issue that was weeks away from causing serious damage. Fixed quickly, priced fairly, and explained everything clearly throughout."',
-                by: "— Natalie W., Thurrock",
+                by: "  Natalie W., Thurrock",
               },
               {
                 quote:
-                  '"I ordered a reconditioned 5.0 supercharged engine for supply only — needed it shipped to my garage in Birmingham. Arrived on time, perfectly packaged, with full documentation. Exactly as described."',
-                by: "— Dean M., Birmingham",
+                  '"I ordered a reconditioned 5.0 supercharged engine for supply only   needed it shipped to my garage in Birmingham. Arrived on time, perfectly packaged, with full documentation. Exactly as described."',
+                by: "  Dean M., Birmingham",
               },
             ].map((t) => (
               <div
@@ -315,7 +315,7 @@ export default function RangeRoverSportEnginesClient() {
       </section>
 
       <FAQSection
-        title={<>Frequently Asked Questions — <span className="text-primary italic">Range Rover Sport Engines</span></>}
+        title={<>Frequently Asked Questions   <span className="text-primary italic">Range Rover Sport Engines</span></>}
         items={faqs}
       />
 
@@ -326,7 +326,7 @@ export default function RangeRoverSportEnginesClient() {
               Ready to get your Range Rover Sport back to its best?
             </h2>
             <p className="text-emerald-50 leading-relaxed max-w-3xl mx-auto">
-              Call Vogue Technics today or enter your registration above for a fast, no-obligation quote. Our specialist team in Grays is ready to help — with 25 years of focused expertise, honest pricing, and engine work you can genuinely rely on.
+              Call Vogue Technics today or enter your registration above for a fast, no-obligation quote. Our specialist team in  is ready to help   with 25 years of focused expertise, honest pricing, and engine work you can genuinely rely on.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <a

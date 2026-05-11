@@ -59,16 +59,16 @@ export default function TimingBeltReplacementPage() {
               <p>
                 A timing belt does not warn you before it snaps. There is no gradual performance decline, no persistent warning
                 light, no sound that builds over weeks until you cannot ignore it. On most engines, a snapped timing belt causes
-                immediate and catastrophic internal damage — bent valves, destroyed pistons, a repair bill that dwarfs what the belt
+                immediate and catastrophic internal damage   bent valves, destroyed pistons, a repair bill that dwarfs what the belt
                 replacement would have cost.
               </p>
               <p>
                 At Vogue Technics, we carry out timing belt and cambelt replacement for Range Rover, Land Rover, Jaguar, Audi, and
                 BMW. Every replacement uses OEM or OEM-specification parts, every job is backed by a six-month warranty, and every
-                written quote is agreed before work begins. Based in Grays, Essex, with UK-wide collection available.
+                written quote is agreed before work begins. Based in , with UK-wide collection available.
               </p>
               <p>
-                If your vehicle is approaching its timing belt service interval — or if you are not sure when it was last changed —
+                If your vehicle is approaching its timing belt service interval   or if you are not sure when it was last changed  
                 do not leave it to chance.
               </p>
             </motion.div>
@@ -102,25 +102,25 @@ export default function TimingBeltReplacementPage() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center max-w-4xl mx-auto mb-16 space-y-6">
             <h2 className="text-2xl md:text-4xl font-extrabold text-slate-900 uppercase tracking-tight italic">
-              Timing Belt or Timing Chain <span className="text-primary">— Does Your Vehicle Have One?</span>
+              Timing Belt or Timing Chain <span className="text-primary">  Does Your Vehicle Have One?</span>
             </h2>
             <div className="w-24 h-1.5 bg-primary mx-auto rounded-full"></div>
           </div>
 
           <div className="max-w-5xl mx-auto space-y-6 text-slate-600 leading-relaxed font-medium text-sm md:text-base bg-slate-50 border border-slate-100 rounded-[3rem] p-10 md:p-12">
             <p>
-              This is one of the most common questions we receive, and it is an important one — because the answer determines
+              This is one of the most common questions we receive, and it is an important one   because the answer determines
               whether your vehicle has a component with a finite service life that needs replacing at regular intervals.
             </p>
             <p>
-              A timing belt — also called a cambelt — is a rubber reinforced belt that synchronises the crankshaft and camshaft
+              A timing belt   also called a cambelt   is a rubber reinforced belt that synchronises the crankshaft and camshaft
               rotation. It degrades over time regardless of mileage and has a manufacturer replacement interval based on mileage or
               age. A timing chain performs the same function but is a metal component lubricated by engine oil and is designed to
               last the life of the engine under normal conditions (though it can develop wear and noise on certain platforms).
             </p>
             <p>
               Many modern JLR, Audi, and BMW platforms use timing chains rather than belts. However, several platforms within these
-              ranges — particularly older diesel engines — do use a timing belt. We advise on this at the point of enquiry, free of
+              ranges   particularly older diesel engines   do use a timing belt. We advise on this at the point of enquiry, free of
               charge.
             </p>
             <div className="pt-6">
@@ -150,7 +150,7 @@ export default function TimingBeltReplacementPage() {
               },
               {
                 title: "Visible cracking / fraying",
-                text: "Cracking, fraying, or glazing on the belt surface — if visible during service — indicates replacement is overdue.",
+                text: "Cracking, fraying, or glazing on the belt surface   if visible during service   indicates replacement is overdue.",
               },
               {
                 title: "Rough running",
@@ -202,19 +202,19 @@ export default function TimingBeltReplacementPage() {
               {
                 title: "Land Rover Timing Belt Replacement",
                 body:
-                  "Land Rover timing belt replacement is most relevant across older Discovery and Freelander platforms — particularly 2.7 TDV6 and TD4 diesel engines. We advise on platform-specific intervals and carry out every cambelt replacement with the full kit, tensioner and idlers, plus water pump where belt-driven, followed by a post-replacement check before return.",
+                  "Land Rover timing belt replacement is most relevant across older Discovery and Freelander platforms   particularly 2.7 TDV6 and TD4 diesel engines. We advise on platform-specific intervals and carry out every cambelt replacement with the full kit, tensioner and idlers, plus water pump where belt-driven, followed by a post-replacement check before return.",
                 href: "/land-rover-engines",
               },
               {
                 title: "Jaguar Timing Belt Replacement",
                 body:
-                  "Jaguar timing belt replacement applies most directly to older diesel and petrol platforms. Many current models use timing chains, but older XF/XJ/X-Type variants can carry belts. We advise on correct intervals and carry out every cambelt replacement with the full kit — belt, tensioner, idlers and water pump where applicable.",
+                  "Jaguar timing belt replacement applies most directly to older diesel and petrol platforms. Many current models use timing chains, but older XF/XJ/X-Type variants can carry belts. We advise on correct intervals and carry out every cambelt replacement with the full kit   belt, tensioner, idlers and water pump where applicable.",
                 href: "/jaguar-engines",
               },
               {
                 title: "Audi Timing Belt Replacement",
                 body:
-                  "Audi timing belt replacement is critical across the TDI diesel range. The 2.0 TDI in A3/A4/A5/A6/Q5 uses a timing belt — not a chain — and age-based replacement is commonly overlooked. We replace belts with the full kit and water pump where belt-driven, and quote in writing after confirming platform and interval status.",
+                  "Audi timing belt replacement is critical across the TDI diesel range. The 2.0 TDI in A3/A4/A5/A6/Q5 uses a timing belt   not a chain   and age-based replacement is commonly overlooked. We replace belts with the full kit and water pump where belt-driven, and quote in writing after confirming platform and interval status.",
                 href: "/audi-engines",
               },
               {
@@ -254,12 +254,12 @@ export default function TimingBeltReplacementPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { icon: <CheckCircle2 className="w-5 h-5" />, title: "Full Kit Replacement as Standard", text: "Belt, tensioner, idlers, and water pump where applicable — we do not fit just the belt." },
-              { icon: <ShieldCheck className="w-5 h-5" />, title: "OEM and OEM-Specification Parts Only", text: "Timing belts are not a job where budget parts represent a saving — they represent a risk." },
+              { icon: <CheckCircle2 className="w-5 h-5" />, title: "Full Kit Replacement as Standard", text: "Belt, tensioner, idlers, and water pump where applicable   we do not fit just the belt." },
+              { icon: <ShieldCheck className="w-5 h-5" />, title: "OEM and OEM-Specification Parts Only", text: "Timing belts are not a job where budget parts represent a saving   they represent a risk." },
               { icon: <Gauge className="w-5 h-5" />, title: "Platform-Specific Knowledge", text: "Routing, tensioner preload and alignment procedures vary by engine. We do this work on platforms we know." },
               { icon: <Wrench className="w-5 h-5" />, title: "Written Quotes, No Surprises", text: "Full itemised quote agreed before work begins. The figure you confirm is the figure you pay." },
               { icon: <CheckCircle2 className="w-5 h-5" />, title: "Six-Month Warranty", text: "Every timing belt replacement carries a minimum six-month warranty on parts and labour." },
-              { icon: <Wrench className="w-5 h-5" />, title: "UK-Wide Collection", text: "Based in Grays, Essex — we collect and deliver across the UK on all timing belt and engine work." },
+              { icon: <Wrench className="w-5 h-5" />, title: "UK-Wide Collection", text: "Based in    we collect and deliver across the UK on all timing belt and engine work." },
             ].map((item) => (
               <div key={item.title} className="bg-white/5 border border-white/10 rounded-[2.5rem] p-10 hover:bg-white/10 transition-all duration-500">
                 <div className="flex items-start gap-4">
@@ -283,11 +283,11 @@ export default function TimingBeltReplacementPage() {
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {[
-                "Step 1 — Contact Us with your vehicle details and service history. We advise on belt or chain, interval status, and next steps.",
-                "Step 2 — Drop Off or Collection — visit our Grays workshop or arrange UK-wide collection.",
-                "Step 3 — Inspection and Written Quote — belt condition assessment, tensioner and ancillary inspection, full written quote covering all components.",
-                "Step 4 — Full Timing Belt Service — belt, tensioner, idler pulleys, and water pump replaced to OEM specification.",
-                "Step 5 — Timing Check and Road Test — valve timing verified, post-replacement check completed, road test before handover.",
+                "Step 1   Contact Us with your vehicle details and service history. We advise on belt or chain, interval status, and next steps.",
+                "Step 2   Drop Off or Collection   visit our  workshop or arrange UK-wide collection.",
+                "Step 3   Inspection and Written Quote   belt condition assessment, tensioner and ancillary inspection, full written quote covering all components.",
+                "Step 4   Full Timing Belt Service   belt, tensioner, idler pulleys, and water pump replaced to OEM specification.",
+                "Step 5   Timing Check and Road Test   valve timing verified, post-replacement check completed, road test before handover.",
               ].map((text, idx) => (
                 <div key={idx} className="bg-white/5 border border-white/10 rounded-[2.5rem] p-10 hover:bg-white/10 transition-all duration-500">
                   <div className="w-12 h-12 rounded-2xl bg-primary text-white flex items-center justify-center font-black text-lg mb-6 shadow-lg">
@@ -309,12 +309,12 @@ export default function TimingBeltReplacementPage() {
           {
             question: "How often should a timing belt be replaced?",
             answer:
-              "Intervals vary by engine and manufacturer — typically between 40,000 and 60,000 miles, or every four to five years, whichever comes first. Age-based replacement is equally important to mileage-based replacement. We advise on your specific interval at the point of enquiry.",
+              "Intervals vary by engine and manufacturer   typically between 40,000 and 60,000 miles, or every four to five years, whichever comes first. Age-based replacement is equally important to mileage-based replacement. We advise on your specific interval at the point of enquiry.",
           },
           {
             question: "Does my Range Rover or Land Rover have a timing belt?",
             answer:
-              "Most current JLR engines use a timing chain. Older diesel and some petrol variants do carry timing belts. We confirm which system your specific vehicle uses during the initial enquiry — at no charge.",
+              "Most current JLR engines use a timing chain. Older diesel and some petrol variants do carry timing belts. We confirm which system your specific vehicle uses during the initial enquiry   at no charge.",
           },
           {
             question: "What happens if a timing belt breaks?",
@@ -324,7 +324,7 @@ export default function TimingBeltReplacementPage() {
           {
             question: "Should the water pump be replaced with the timing belt?",
             answer:
-              "Yes, in most cases. Where the water pump is driven by the timing belt, replacing it at the same time adds minimal cost compared to the labour saving — and prevents repeat labour if the pump fails later.",
+              "Yes, in most cases. Where the water pump is driven by the timing belt, replacing it at the same time adds minimal cost compared to the labour saving   and prevents repeat labour if the pump fails later.",
           },
         ]}
       />
@@ -357,12 +357,12 @@ export default function TimingBeltReplacementPage() {
               href="/contact-us"
               className="bg-white/20 text-white font-black px-12 py-6 rounded-[2rem] shadow-2xl hover:bg-white/25 transition-all uppercase tracking-[0.2em] text-xs md:text-sm border border-white/20"
             >
-              Book a Timing Belt Inspection at Our Grays Workshop
+              Book a Timing Belt Inspection at Our  Workshop
             </Link>
           </div>
 
           <div className="mt-16 text-white/90 font-black uppercase tracking-widest text-[0.65rem]">
-            Vogue Technics | Timing Belt Replacement Specialists | Grays, Essex | UK-Wide Collection &nbsp; Range Rover • Land Rover
+            Vogue Technics | Timing Belt Replacement Specialists |  | UK-Wide Collection &nbsp; Range Rover • Land Rover
             • Jaguar • Audi • BMW
           </div>
         </div>

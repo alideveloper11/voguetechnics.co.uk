@@ -60,7 +60,7 @@ const reviews = [
   {
     name: "James O., London",
     quote:
-      "Vogue Technics rebuilt the N47D20C in my 118d after catastrophic timing chain failure. The diagnosis was spot on, the communication throughout was excellent, and the engine has performed without a single issue since. These are genuine BMW engine specialists — I would not go anywhere else.",
+      "Vogue Technics rebuilt the N47D20C in my 118d after catastrophic timing chain failure. The diagnosis was spot on, the communication throughout was excellent, and the engine has performed without a single issue since. These are genuine BMW engine specialists   I would not go anywhere else.",
   },
   {
     name: "Laura B., Manchester",
@@ -78,7 +78,7 @@ const faqs = [
   {
     question: "How much does a BMW 1 Series engine rebuild cost in the UK?",
     answer:
-      "Rebuild costs depend on the engine code — N47D20C, N47D20B, B47D20A, B47D20B, or B47D20D — and the extent of internal wear or damage found on strip-down. We provide this service to you at a rate 40% lower than the dealer. Contact us for a bespoke, fully itemised quote specific to your vehicle, engine code, and presenting fault.",
+      "Rebuild costs depend on the engine code   N47D20C, N47D20B, B47D20A, B47D20B, or B47D20D   and the extent of internal wear or damage found on strip-down. We provide this service to you at a rate 40% lower than the dealer. Contact us for a bespoke, fully itemised quote specific to your vehicle, engine code, and presenting fault.",
   },
   {
     question: "What are the most common engine faults on the BMW 1 Series F20/F21?",
@@ -88,7 +88,7 @@ const faqs = [
   {
     question: "Is it worth rebuilding a BMW 1 Series engine?",
     answer:
-      "In the majority of cases, yes — particularly when the vehicle is otherwise in sound mechanical and cosmetic condition. A properly executed rebuild extends the life of your 1 Series significantly and costs considerably less than a replacement vehicle at current UK market prices.",
+      "In the majority of cases, yes   particularly when the vehicle is otherwise in sound mechanical and cosmetic condition. A properly executed rebuild extends the life of your 1 Series significantly and costs considerably less than a replacement vehicle at current UK market prices.",
   },
   {
     question: "Do you supply reconditioned or used BMW 1 Series engines?",
@@ -103,12 +103,12 @@ const faqs = [
   {
     question: "Do you cover the whole of the UK?",
     answer:
-      "Absolutely. Our workshop is in Grays, Essex, but we serve BMW 1 Series owners across the entire United Kingdom through our engine collection, delivery, and approved installer network.",
+      "Absolutely. Our workshop is in , but we serve BMW 1 Series owners across the entire United Kingdom through our engine collection, delivery, and approved installer network.",
   },
   {
     question: "Is there a warranty on rebuilt and replacement engines?",
     answer:
-      "Yes. Every engine rebuild, replacement, and major repair at Vogue Technics is backed by a written warranty. All terms are communicated clearly at the point of booking — no ambiguity, no small print, no surprises.",
+      "Yes. Every engine rebuild, replacement, and major repair at Vogue Technics is backed by a written warranty. All terms are communicated clearly at the point of booking   no ambiguity, no small print, no surprises.",
   },
 ];
 
@@ -154,7 +154,7 @@ export default function Bmw1SeriesEnginesClient() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 via-green-400 to-lime-300">
                 BMW 1 Series Engine Rebuild
               </span>{" "}
-              — Specialist Repairs, Replacements &amp; Reconditioning Across the UK
+                Specialist Repairs, Replacements &amp; Reconditioning Across the UK
             </motion.h1>
 
             <motion.div
@@ -172,9 +172,9 @@ export default function Bmw1SeriesEnginesClient() {
               transition={{ delay: 0.22 }}
               className="text-base md:text-lg text-slate-200 mb-8 max-w-4xl mx-auto leading-relaxed"
             >
-              The BMW 1 Series is a driver&apos;s car in the truest sense — rear-wheel drive, precise, and genuinely engaging in a way that most
+              The BMW 1 Series is a driver&apos;s car in the truest sense   rear-wheel drive, precise, and genuinely engaging in a way that most
               competitors in its class simply are not. When the engine develops a serious fault, that enjoyment disappears immediately and the
-              financial decisions that follow can feel genuinely daunting. At Vogue Technics, based in Grays, Essex, we take that pressure off your
+              financial decisions that follow can feel genuinely daunting. At Vogue Technics, based in , we take that pressure off your
               shoulders entirely.
             </motion.p>
           </div>
@@ -186,10 +186,10 @@ export default function Bmw1SeriesEnginesClient() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-5xl mx-auto space-y-6 text-slate-700 leading-relaxed">
             <p>
-              We specialise in BMW engine work across the full 1 Series range — covering the F20 and F21 generations from 2011 through to 2019,
+              We specialise in BMW engine work across the full 1 Series range   covering the F20 and F21 generations from 2011 through to 2019,
               across the N47 and B47 engine families, and across the complete spectrum of faults these engines are known to develop. Whether your
               N47D20C has developed a timing chain rattle, your B47D20A turbo actuator has failed, your swirl flaps have collapsed, or your engine
-              has sustained damage that goes beyond targeted repair — we have the right solution, the right experience, and the technical knowledge
+              has sustained damage that goes beyond targeted repair   we have the right solution, the right experience, and the technical knowledge
               to deliver it properly. With over 25 years of hands-on specialist engine expertise and a reputation built entirely on consistent
               quality workmanship, Vogue Technics is the BMW 1 Series specialist UK owners turn to when the engine needs serious attention.
             </p>
@@ -209,7 +209,7 @@ export default function Bmw1SeriesEnginesClient() {
               <p>
                 Choosing the right specialist for BMW engine work is the single most consequential decision you make when your 1 Series develops a
                 serious fault. A generalist garage without model-specific knowledge, the correct diagnostic equipment, or genuine parts experience
-                will frequently misdiagnose the root cause — and produce a repair that returns within months. That costs you more financially and
+                will frequently misdiagnose the root cause   and produce a repair that returns within months. That costs you more financially and
                 puts you back at square one.
               </p>
 
@@ -220,7 +220,7 @@ export default function Bmw1SeriesEnginesClient() {
                   </h3>
                   <p className="mt-3 text-slate-700 leading-relaxed">
                     Every technician at Vogue Technics focuses on BMW engines as their core discipline. We understand the specific failure
-                    characteristics of the 1 Series F20/F21 engine range in genuine, applied depth — the timing chain tensioner vulnerabilities
+                    characteristics of the 1 Series F20/F21 engine range in genuine, applied depth   the timing chain tensioner vulnerabilities
                     across the N47 family, the turbo actuator failure patterns on the B47D20A, the swirl flap collapse issues on the N47D20C, the
                     crankcase ventilation faults on the B47D20D, the glow plug and ECU calibration issues affecting the B47D20B, and the EGR system
                     problems that develop across both engine families at higher mileages. This knowledge does not come from a reference manual. It
@@ -230,12 +230,12 @@ export default function Bmw1SeriesEnginesClient() {
                 </div>
                 <div className="rounded-[1.75rem] border border-slate-200 bg-white p-7">
                   <h3 className="text-lg font-extrabold text-slate-900 tracking-tight">
-                    Over 25 Years of Engine Work — Reputation Built on Results
+                    Over 25 Years of Engine Work   Reputation Built on Results
                   </h3>
                   <p className="mt-3 text-slate-700 leading-relaxed">
                     We have been rebuilding, repairing, and replacing BMW engines for customers across the United Kingdom for over 25 years. Our
-                    standing in Grays and nationally has never been built through advertising campaigns or promotional offers. It has been built
-                    through the quality of work we consistently deliver and the customers who return to us — and who send their friends, family
+                    standing in  and nationally has never been built through advertising campaigns or promotional offers. It has been built
+                    through the quality of work we consistently deliver and the customers who return to us   and who send their friends, family
                     members, and colleagues our way without being prompted. When we fix your BMW 1 Series engine, the repair holds.
                   </p>
                 </div>
@@ -302,10 +302,10 @@ export default function Bmw1SeriesEnginesClient() {
           <div className="max-w-5xl mx-auto space-y-12">
             <div>
               <h2 className="text-2xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
-                Our BMW 1 Series Engine Services — Every Job a Dedicated Specialist Task
+                Our BMW 1 Series Engine Services   Every Job a Dedicated Specialist Task
               </h2>
               <p className="mt-5 text-slate-700 leading-relaxed">
-                Each service below is handled as its own focused, standalone piece of specialist work — given the correct procedure, the correct
+                Each service below is handled as its own focused, standalone piece of specialist work   given the correct procedure, the correct
                 components, and the correct amount of time for that specific job on that specific engine code. We do not rush jobs through, we do not
                 combine work carelessly, and we do not cut corners regardless of workshop pressure.
               </p>
@@ -315,7 +315,7 @@ export default function Bmw1SeriesEnginesClient() {
             <div className="rounded-[2rem] bg-white border border-slate-200 p-8 md:p-10">
               <h3 className="text-xl md:text-2xl font-extrabold text-slate-900 tracking-tight">Head Gasket Replacement</h3>
               <p className="mt-4 text-slate-700 leading-relaxed">
-                Unexplained coolant loss, white exhaust smoke on start-up, or your 1 Series running warmer than normal — these are the defining
+                Unexplained coolant loss, white exhaust smoke on start-up, or your 1 Series running warmer than normal   these are the defining
                 indicators of head gasket failure. Across both the N47 diesel units and the B47 family, head gasket deterioration is a fault that
                 worsens rapidly once it takes hold. Coolant entering the combustion chamber and oil contamination are the direct consequences of a
                 head gasket left unaddressed.
@@ -324,7 +324,7 @@ export default function Bmw1SeriesEnginesClient() {
               <p className="mt-2 text-slate-700 leading-relaxed">
                 We replace the head gasket using OEM-grade components, carry out a full inspection of the cylinder head surface for warping or
                 cracking, resurface where necessary, pressure-test the entire cooling system post-repair, and return the engine to manufacturer
-                tolerances throughout. We address the underlying cause fully — not just the most visible symptom — which is precisely why our repairs
+                tolerances throughout. We address the underlying cause fully   not just the most visible symptom   which is precisely why our repairs
                 do not return.
               </p>
               <h4 className="mt-6 font-extrabold text-slate-900">Why Early Action Makes a Significant Financial Difference</h4>
@@ -347,20 +347,20 @@ export default function Bmw1SeriesEnginesClient() {
             <div className="rounded-[2rem] bg-white border border-slate-200 p-8 md:p-10">
               <h3 className="text-xl md:text-2xl font-extrabold text-slate-900 tracking-tight">Timing Chain Replacement</h3>
               <p className="mt-4 text-slate-700 leading-relaxed">
-                Timing chain failure is without question the most serious and most widely reported fault across the BMW 1 Series engine range —
+                Timing chain failure is without question the most serious and most widely reported fault across the BMW 1 Series engine range  
                 particularly across the N47D20C and N47D20B diesel units, which have a well-documented history of timing chain tensioner failure that
                 has affected a significant number of vehicles across the F20 and F21 generations. A cold-start rattle that clears within seconds,
-                rough idle, or unexpected power loss are the early warning signs. When a timing chain fails completely — and on the N47 family, it
-                can fail suddenly and without further warning — the internal engine damage is catastrophic and immediate.
+                rough idle, or unexpected power loss are the early warning signs. When a timing chain fails completely   and on the N47 family, it
+                can fail suddenly and without further warning   the internal engine damage is catastrophic and immediate.
               </p>
               <h4 className="mt-6 font-extrabold text-slate-900">Our Complete Timing Chain Kit Replacement</h4>
               <p className="mt-2 text-slate-700 leading-relaxed">
-                We replace the full timing chain assembly as a complete kit without exception — chain, tensioners, guides, and sprockets replaced
+                We replace the full timing chain assembly as a complete kit without exception   chain, tensioners, guides, and sprockets replaced
                 together. Replacing only the chain while leaving worn tensioners and guides in place is not an approach we offer. It fails again
-                quickly and costs significantly more the second time. We carry quality timing chain kits for all applicable 1 Series engine codes —
-                N47D20C, N47D20B, B47D20A, B47D20B, and B47D20D — and we complete the work without creating unnecessary delays.
+                quickly and costs significantly more the second time. We carry quality timing chain kits for all applicable 1 Series engine codes  
+                N47D20C, N47D20B, B47D20A, B47D20B, and B47D20D   and we complete the work without creating unnecessary delays.
               </p>
-              <h4 className="mt-6 font-extrabold text-slate-900">N47 and B47 — Two Engine Families, Two Sets of Vulnerabilities</h4>
+              <h4 className="mt-6 font-extrabold text-slate-900">N47 and B47   Two Engine Families, Two Sets of Vulnerabilities</h4>
               <p className="mt-2 text-slate-700 leading-relaxed">
                 The timing chain characteristics and failure modes differ between the N47 and B47 engine families, and our technicians understand
                 both in specific, applied detail. Whether your 1 Series runs an older N47 unit or a newer B47 variant, we carry the correct
@@ -381,7 +381,7 @@ export default function Bmw1SeriesEnginesClient() {
               <h3 className="text-xl md:text-2xl font-extrabold text-slate-900 tracking-tight">Turbo Replacement</h3>
               <p className="mt-4 text-slate-700 leading-relaxed">
                 Power loss under acceleration, black or blue exhaust smoke, a whistling or grinding noise from the engine bay, or a boost-related
-                warning light on your dashboard — these are the clear indicators of turbocharger wear or failure on the BMW 1 Series. The B47D20A is
+                warning light on your dashboard   these are the clear indicators of turbocharger wear or failure on the BMW 1 Series. The B47D20A is
                 particularly susceptible to turbo actuator failure, while the N47 family develops turbo bearing wear from oil degradation and
                 extended service intervals. Both are faults our technicians identify and address without hesitation.
               </p>
@@ -389,14 +389,14 @@ export default function Bmw1SeriesEnginesClient() {
               <p className="mt-2 text-slate-700 leading-relaxed">
                 We source quality replacement turbos for all 1 Series engine variants and install them to manufacturer specifications with full
                 attention to oil feed integrity, return pipe condition, actuator calibration where applicable, and mounting accuracy throughout.
-                Every turbo replacement at Vogue Technics is followed by comprehensive post-installation testing — boost pressure verification, oil
+                Every turbo replacement at Vogue Technics is followed by comprehensive post-installation testing   boost pressure verification, oil
                 circuit confirmation, and a road test to confirm correct performance across the full rev range before your vehicle is returned.
               </p>
               <h4 className="mt-6 font-extrabold text-slate-900">The Wider Damage a Failing Turbo Causes</h4>
               <p className="mt-2 text-slate-700 leading-relaxed">
                 A deteriorating turbo does not confine its damage to the turbocharger itself. It actively introduces contaminated oil into the
                 intake system, intercooler pipework, and engine internals. What presents as a turbo replacement can escalate into a far more
-                involved and expensive situation if action is delayed. Early intervention costs a fraction of what late intervention demands —
+                involved and expensive situation if action is delayed. Early intervention costs a fraction of what late intervention demands  
                 consistently and without exception.
               </p>
               <div className="mt-6">
@@ -441,10 +441,10 @@ export default function Bmw1SeriesEnginesClient() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-5xl mx-auto space-y-8 text-slate-700 leading-relaxed">
             <h2 className="text-2xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
-              UK-Wide BMW Engine Service From Our Workshop in Grays, Essex
+              UK-Wide BMW Engine Service From Our Workshop in 
             </h2>
             <p>
-              We understand what it means to have your BMW 1 Series off the road — particularly if it is your primary vehicle and every day without
+              We understand what it means to have your BMW 1 Series off the road   particularly if it is your primary vehicle and every day without
               it carries a real, tangible cost. We work with genuine urgency at every stage, without allowing that urgency to compromise a single
               aspect of the standard we deliver.
             </p>
@@ -453,17 +453,17 @@ export default function Bmw1SeriesEnginesClient() {
               <div className="rounded-[1.75rem] border border-slate-200 bg-slate-50 p-7">
                 <h3 className="font-extrabold text-slate-900 tracking-tight">Engine Collection and Delivery Nationwide</h3>
                 <p className="mt-3">
-                  Cannot travel to our Grays workshop? That is not a problem and it is an arrangement we make regularly for customers across the
-                  country. We collect engines from anywhere in the United Kingdom, carry out all work at our Essex facility, and return your rebuilt
+                  Cannot travel to our  workshop? That is not a problem and it is an arrangement we make regularly for customers across the
+                  country. We collect engines from anywhere in the United Kingdom, carry out all work at our  facility, and return your rebuilt
                   or replacement unit fully tested, securely packaged, and ready for installation. For customers requiring a completely managed
                   end-to-end service, we coordinate fitting through our nationwide network of approved installers.
                 </p>
               </div>
               <div className="rounded-[1.75rem] border border-slate-200 bg-slate-50 p-7">
-                <h3 className="font-extrabold text-slate-900 tracking-tight">Confirmed Turnaround Times — Delivered Without Exception</h3>
+                <h3 className="font-extrabold text-slate-900 tracking-tight">Confirmed Turnaround Times   Delivered Without Exception</h3>
                 <p className="mt-3">
                   Most full engine rebuilds are completed within 5–10 working days from the point the engine is received. Targeted repairs and
-                  replacements are typically completed faster. We give you a confirmed timeframe at booking and we deliver on it — no mid-job delays,
+                  replacements are typically completed faster. We give you a confirmed timeframe at booking and we deliver on it   no mid-job delays,
                   no vague updates, no unexplained extensions.
                 </p>
               </div>
@@ -471,7 +471,7 @@ export default function Bmw1SeriesEnginesClient() {
                 <h3 className="font-extrabold text-slate-900 tracking-tight">Written Warranty on Every Engine Service</h3>
                 <p className="mt-3">
                   Every rebuild, replacement, and major repair completed at Vogue Technics is backed by a written warranty. We stand fully and
-                  without reservation behind the quality of our workmanship — because every job leaves our workshop at a standard we are completely
+                  without reservation behind the quality of our workmanship   because every job leaves our workshop at a standard we are completely
                   confident in before it goes anywhere.
                 </p>
               </div>
@@ -526,7 +526,7 @@ export default function Bmw1SeriesEnginesClient() {
       <FAQSection
         title={
           <>
-            Frequently Asked Questions — <span className="text-primary italic">BMW 1 Series Engine Rebuild &amp; Repair</span>
+            Frequently Asked Questions   <span className="text-primary italic">BMW 1 Series Engine Rebuild &amp; Repair</span>
           </>
         }
         items={faqs}
@@ -540,9 +540,9 @@ export default function Bmw1SeriesEnginesClient() {
             Ready to get your BMW 1 Series back on the road performing exactly as it should?
           </h2>
           <p className="text-emerald-100 text-base md:text-lg font-medium max-w-3xl mx-auto leading-relaxed">
-            Call Vogue Technics today or complete our online enquiry form for a fast, no-obligation quote. We are based in Grays, Essex, and we
-            serve BMW 1 Series owners right across the United Kingdom. When your engine needs a genuine specialist — one who knows the N47 and B47
-            families inside out — trust the team that has been delivering exactly that for over 25 years.
+            Call Vogue Technics today or complete our online enquiry form for a fast, no-obligation quote. We are based in , and we
+            serve BMW 1 Series owners right across the United Kingdom. When your engine needs a genuine specialist   one who knows the N47 and B47
+            families inside out   trust the team that has been delivering exactly that for over 25 years.
           </p>
 
           <div className="flex flex-col md:flex-row gap-6 justify-center pt-4">

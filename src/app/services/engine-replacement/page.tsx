@@ -66,7 +66,7 @@ export default function EngineReplacementPage() {
                 At Vogue Technics, we supply and fit replacement engines for Range Rover, Land Rover, Jaguar, Audi, and BMW. We
                 source used low-mileage engines, reconditioned units, and remanufactured engines depending on what suits your
                 vehicle, your budget, and your long-term plans. Every replacement engine is fitted to OEM specification, every job
-                carries a minimum six-month warranty, and every written quote is agreed before work begins. Based in Grays, Essex,
+                carries a minimum six-month warranty, and every written quote is agreed before work begins. Based in ,
                 with UK-wide collection available.
               </p>
             </motion.div>
@@ -107,13 +107,13 @@ export default function EngineReplacementPage() {
 
           <div className="max-w-5xl mx-auto space-y-6 text-slate-600 leading-relaxed font-medium text-sm md:text-base bg-slate-50 border border-slate-100 rounded-[3rem] p-10 md:p-12">
             <p>
-              Not every engine problem requires replacement — but some do, and recognising when replacement is the correct
+              Not every engine problem requires replacement   but some do, and recognising when replacement is the correct
               recommendation rather than a convenient one is where genuine specialist integrity shows.
             </p>
             <p>
               Engine replacement makes sense when internal damage is extensive enough that rebuild cost exceeds the value a rebuilt
               engine would deliver. A seized engine following severe oil starvation, a block that has cracked due to overheating, or
-              pistons and bores worn beyond the point where machining is economical — these are situations where sourcing a quality
+              pistons and bores worn beyond the point where machining is economical   these are situations where sourcing a quality
               replacement unit is the more sensible financial decision.
             </p>
             <p>
@@ -197,7 +197,7 @@ export default function EngineReplacementPage() {
               {
                 title: "Audi Engine Replacement",
                 body:
-                  "Audi replacement covers like-for-like swaps on failed 2.0 TDI units through to reconditioned 3.0 TDI V6 replacements on Q7/A6. We source used, reconditioned and low-mileage units depending on availability and budget, and we do not source and fit blind — units are inspected before recommendation.",
+                  "Audi replacement covers like-for-like swaps on failed 2.0 TDI units through to reconditioned 3.0 TDI V6 replacements on Q7/A6. We source used, reconditioned and low-mileage units depending on availability and budget, and we do not source and fit blind   units are inspected before recommendation.",
                 href: "/audi-engines",
               },
               {
@@ -237,12 +237,12 @@ export default function EngineReplacementPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { icon: <ShieldCheck className="w-5 h-5" />, title: "Honest Sourcing — No Blind Units", text: "We assess provenance, mileage, and condition before recommending a replacement engine." },
+              { icon: <ShieldCheck className="w-5 h-5" />, title: "Honest Sourcing   No Blind Units", text: "We assess provenance, mileage, and condition before recommending a replacement engine." },
               { icon: <Wrench className="w-5 h-5" />, title: "Oil System Preparation on Every Job", text: "We flush and prepare the oil system to prevent premature failure." },
               { icon: <Gauge className="w-5 h-5" />, title: "OEM-Specification Installation", text: "Correct torque settings, sealing, and ancillary connections throughout." },
               { icon: <CheckCircle2 className="w-5 h-5" />, title: "Six-Month Warranty", text: "Minimum six-month warranty on the unit and installation labour, confirmed in writing." },
               { icon: <FileText className="w-5 h-5" />, title: "Written Quotes, No Surprises", text: "No additions without approval, no work beyond what has been confirmed." },
-              { icon: <RefreshCw className="w-5 h-5" />, title: "UK-Wide Collection and Delivery", text: "Based in Grays, Essex — collection and delivery across the UK on all engine replacement work." },
+              { icon: <RefreshCw className="w-5 h-5" />, title: "UK-Wide Collection and Delivery", text: "Based in    collection and delivery across the UK on all engine replacement work." },
             ].map((item) => (
               <div key={item.title} className="bg-white/5 border border-white/10 rounded-[2.5rem] p-10 hover:bg-white/10 transition-all duration-500">
                 <div className="flex items-start gap-4">
@@ -266,13 +266,13 @@ export default function EngineReplacementPage() {
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {[
-                "Step 1 — Contact Us with your vehicle details and the fault history. We provide honest advice on replacement versus rebuild.",
-                "Step 2 — Drop Off or Collection — visit our Grays workshop or arrange UK-wide collection.",
-                "Step 3 — Assessment and Written Quote — assess the failed engine, identify root cause, source unit options, provide a full written quote.",
-                "Step 4 — Unit Sourcing and Pre-Fit Inspection — the replacement unit is sourced and inspected before installation begins.",
-                "Step 5 — Engine Replacement to OEM Specification — installation with oil system preparation, correct torque and sealing throughout.",
-                "Step 6 — Post-Fit Diagnostic and Road Test — fault code scan, oil pressure verification, road test before handover.",
-                "Step 7 — Return with Full Warranty Documentation — vehicle returned fully tested with warranty paperwork confirmed in writing.",
+                "Step 1   Contact Us with your vehicle details and the fault history. We provide honest advice on replacement versus rebuild.",
+                "Step 2   Drop Off or Collection   visit our  workshop or arrange UK-wide collection.",
+                "Step 3   Assessment and Written Quote   assess the failed engine, identify root cause, source unit options, provide a full written quote.",
+                "Step 4   Unit Sourcing and Pre-Fit Inspection   the replacement unit is sourced and inspected before installation begins.",
+                "Step 5   Engine Replacement to OEM Specification   installation with oil system preparation, correct torque and sealing throughout.",
+                "Step 6   Post-Fit Diagnostic and Road Test   fault code scan, oil pressure verification, road test before handover.",
+                "Step 7   Return with Full Warranty Documentation   vehicle returned fully tested with warranty paperwork confirmed in writing.",
               ].map((text, idx) => (
                 <div key={idx} className="bg-white/5 border border-white/10 rounded-[2.5rem] p-10 hover:bg-white/10 transition-all duration-500">
                   <div className="w-12 h-12 rounded-2xl bg-primary text-white flex items-center justify-center font-black text-lg mb-6 shadow-lg">
@@ -294,7 +294,7 @@ export default function EngineReplacementPage() {
           {
             question: "How much does engine replacement cost?",
             answer:
-              "Engine replacement cost varies by vehicle platform, engine specification, and unit type — used low-mileage, reconditioned, or remanufactured. We always provide a written quote following a proper assessment. Contact us for a no-obligation estimate.",
+              "Engine replacement cost varies by vehicle platform, engine specification, and unit type   used low-mileage, reconditioned, or remanufactured. We always provide a written quote following a proper assessment. Contact us for a no-obligation estimate.",
           },
           {
             question: "What is the difference between a used engine and a reconditioned engine?",
@@ -304,12 +304,12 @@ export default function EngineReplacementPage() {
           {
             question: "Do you provide a warranty on replacement engines?",
             answer:
-              "Yes — every engine replacement carries a minimum six-month warranty on the unit and the installation labour, confirmed in writing at handover.",
+              "Yes   every engine replacement carries a minimum six-month warranty on the unit and the installation labour, confirmed in writing at handover.",
           },
           {
             question: "Can you collect my vehicle for engine replacement work?",
             answer:
-              "Yes. UK-wide collection and delivery is available from our Grays, Essex base on all engine replacement jobs.",
+              "Yes. UK-wide collection and delivery is available from our  base on all engine replacement jobs.",
           },
           {
             question: "Do you address the root cause of the original engine failure?",
@@ -335,7 +335,7 @@ export default function EngineReplacementPage() {
               href="/contact-us"
               className="bg-slate-950 text-white font-black px-12 py-6 rounded-[2rem] shadow-2xl hover:bg-slate-900 transition-all uppercase tracking-[0.2em] text-xs md:text-sm flex items-center gap-4"
             >
-              Request a Free Engine Replacement Quote — No Obligation <ArrowRight className="w-6 h-6 text-primary" />
+              Request a Free Engine Replacement Quote   No Obligation <ArrowRight className="w-6 h-6 text-primary" />
             </Link>
             <a
               href="tel:01375531355"
@@ -347,12 +347,12 @@ export default function EngineReplacementPage() {
               href="/contact-us"
               className="bg-white/20 text-white font-black px-12 py-6 rounded-[2rem] shadow-2xl hover:bg-white/25 transition-all uppercase tracking-[0.2em] text-xs md:text-sm border border-white/20"
             >
-              Book an Engine Assessment at Our Grays Workshop
+              Book an Engine Assessment at Our  Workshop
             </Link>
           </div>
 
           <div className="mt-16 text-white/90 font-black uppercase tracking-widest text-[0.65rem]">
-            Vogue Technics | Engine Replacement Specialists | Grays, Essex | UK-Wide Collection &nbsp; Range Rover • Land Rover •
+            Vogue Technics | Engine Replacement Specialists |  | UK-Wide Collection &nbsp; Range Rover • Land Rover •
             Jaguar • Audi • BMW
           </div>
         </div>

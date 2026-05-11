@@ -33,7 +33,7 @@ const faqs = [
   {
     question: "Can you collect my engine from anywhere in the UK?",
     answer:
-      "Yes. We offer UK-wide collection and delivery for vehicles and engines, so distance from Grays is not a barrier.",
+      "Yes. We offer UK-wide collection and delivery for vehicles and engines, so distance from  is not a barrier.",
   },
 ];
 
@@ -44,7 +44,7 @@ export default function JaguarFTypeCoupeEnginesPage() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/car_bgg.jpg"
-            alt="Jaguar F-Type Coupe engine specialists in Grays"
+            alt="Jaguar F-Type Coupe engine specialists in "
             fill
             className="object-cover opacity-30 mix-blend-overlay"
             priority
@@ -69,7 +69,7 @@ export default function JaguarFTypeCoupeEnginesPage() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-300 to-green-400">
                 Jaguar F‑Type Coupe Engine
               </span>{" "}
-              — Specialist Engine Repairs, Supercharger Rebuilds & Replacements Across the UK
+                Specialist Engine Repairs, Supercharger Rebuilds & Replacements Across the UK
             </motion.h1>
 
             <motion.div
@@ -89,11 +89,11 @@ export default function JaguarFTypeCoupeEnginesPage() {
             >
               <p>
                 The Jaguar F-Type Coupe is a genuine performance machine. Built around supercharged V6 and V8 petrol engines, it delivers an
-                exceptional driving experience — but these are high-output engines and when something goes wrong, precision matters.
+                exceptional driving experience   but these are high-output engines and when something goes wrong, precision matters.
               </p>
               <p>
-                At Vogue Technics in Grays, Essex, we carry out Jaguar F-Type Coupe engine rebuilds, supercharger rebuilds and replacements, targeted
-                repairs, timing chain replacements, and reconditioned engine sourcing across the full F-Type Coupe range — with transparent pricing,
+                At Vogue Technics in , we carry out Jaguar F-Type Coupe engine rebuilds, supercharger rebuilds and replacements, targeted
+                repairs, timing chain replacements, and reconditioned engine sourcing across the full F-Type Coupe range   with transparent pricing,
                 written warranty, and UK-wide support.
               </p>
             </motion.div>
@@ -130,7 +130,7 @@ export default function JaguarFTypeCoupeEnginesPage() {
             <div className="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm">
               <h3 className="text-xl font-bold text-slate-900">UK-wide collection and delivery</h3>
               <p className="mt-4 text-slate-700 leading-relaxed">
-                If you are not local to Essex, we can arrange UK-wide collection and delivery. Your F-Type Coupe receives the same specialist process
+                If you are not local to , we can arrange UK-wide collection and delivery. Your F-Type Coupe receives the same specialist process
                 and returns with clear documentation and written warranty terms.
               </p>
             </div>
@@ -144,17 +144,17 @@ export default function JaguarFTypeCoupeEnginesPage() {
             <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
               <h2 className="font-bold text-slate-900">Reconditioned & Used Units</h2>
               <p className="mt-3 text-slate-700 leading-relaxed">
-                Tested engines supplied with documentation and warranty cover from our Grays workshop.
+                Tested engines supplied with documentation and warranty cover from our  workshop.
               </p>
             </div>
             <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
-              <h3 className="font-bold text-slate-900">Same‑Day Diagnostics (Grays)</h3>
-              <p className="mt-3 text-slate-700 leading-relaxed">Accurate diagnosis first — then clear options for repair, rebuild, or replacement.</p>
+              <h3 className="font-bold text-slate-900">Same‑Day Diagnostics ()</h3>
+              <p className="mt-3 text-slate-700 leading-relaxed">Accurate diagnosis first   then clear options for repair, rebuild, or replacement.</p>
             </div>
             <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
               <h3 className="font-bold text-slate-900">Supply Only or Supply & Fit</h3>
               <p className="mt-3 text-slate-700 leading-relaxed">
-                UK-wide delivery for supply-only, or complete supply and fit at our Grays workshop.
+                UK-wide delivery for supply-only, or complete supply and fit at our  workshop.
               </p>
             </div>
           </div>
@@ -164,7 +164,7 @@ export default function JaguarFTypeCoupeEnginesPage() {
       <FAQSection
         title={
           <>
-            Frequently Asked Questions — <span className="text-primary italic">Jaguar F‑Type Coupe Engine</span>
+            Frequently Asked Questions   <span className="text-primary italic">Jaguar F‑Type Coupe Engine</span>
           </>
         }
         items={faqs}
@@ -175,7 +175,7 @@ export default function JaguarFTypeCoupeEnginesPage() {
           <div className="max-w-5xl mx-auto text-center space-y-6">
             <h2 className="text-3xl md:text-4xl font-extrabold leading-tight">Need help with your Jaguar F‑Type Coupe engine?</h2>
             <p className="text-emerald-50 leading-relaxed max-w-4xl mx-auto">
-              Call our Grays specialists for same‑day diagnostics, a tested engine supply, or a fast‑track replacement slot.
+              Call our  specialists for same‑day diagnostics, a tested engine supply, or a fast‑track replacement slot.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <a

@@ -28,7 +28,7 @@ const faqs = [
   {
     question: "Do you offer UK-wide collection and delivery?",
     answer:
-      "Yes. We offer UK-wide collection and delivery so you can access our Grays workshop expertise from anywhere in the country.",
+      "Yes. We offer UK-wide collection and delivery so you can access our  workshop expertise from anywhere in the country.",
   },
   {
     question: "Do you provide written warranty on engine work?",
@@ -44,7 +44,7 @@ export default function JaguarXKREnginesPage() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/car_bgg.jpg"
-            alt="Jaguar XKR engine specialists in Grays"
+            alt="Jaguar XKR engine specialists in "
             fill
             className="object-cover opacity-30 mix-blend-overlay"
             priority
@@ -69,7 +69,7 @@ export default function JaguarXKREnginesPage() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-300 to-green-400">
                 Jaguar XKR Engine
               </span>{" "}
-              — Supercharged V8 Supply, Rebuild & Fit Across the UK
+                Supercharged V8 Supply, Rebuild & Fit Across the UK
             </motion.h1>
 
             <motion.div
@@ -89,10 +89,10 @@ export default function JaguarXKREnginesPage() {
             >
               <p>
                 The Jaguar XKR pairs XK refinement with supercharged V8 performance. When issues develop, the engine is far less forgiving of
-                guesswork — correct diagnosis and precision work matters.
+                guesswork   correct diagnosis and precision work matters.
               </p>
               <p>
-                Vogue Technics in Grays, Essex supply, rebuild and fit Jaguar XKR engines — including supercharger work — with transparent pricing,
+                Vogue Technics in  supply, rebuild and fit Jaguar XKR engines   including supercharger work   with transparent pricing,
                 UK-wide support, and written warranty terms agreed before work begins.
               </p>
             </motion.div>
@@ -108,7 +108,7 @@ export default function JaguarXKREnginesPage() {
               <p className="mt-3 text-slate-700 leading-relaxed">Engines supplied tested, documented, and covered by warranty terms.</p>
             </div>
             <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
-              <h3 className="font-bold text-slate-900">Diagnostics in Grays</h3>
+              <h3 className="font-bold text-slate-900">Diagnostics in </h3>
               <p className="mt-3 text-slate-700 leading-relaxed">Same‑day diagnostics to confirm the exact failure before replacement decisions.</p>
             </div>
             <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
@@ -122,7 +122,7 @@ export default function JaguarXKREnginesPage() {
       <FAQSection
         title={
           <>
-            Frequently Asked Questions — <span className="text-primary italic">Jaguar XKR Engine</span>
+            Frequently Asked Questions   <span className="text-primary italic">Jaguar XKR Engine</span>
           </>
         }
         items={faqs}
@@ -133,7 +133,7 @@ export default function JaguarXKREnginesPage() {
           <div className="max-w-5xl mx-auto text-center space-y-6">
             <h2 className="text-3xl md:text-4xl font-extrabold leading-tight">Need an XKR engine quote?</h2>
             <p className="text-emerald-50 leading-relaxed max-w-4xl mx-auto">
-              Call our Grays team to confirm your engine code and get a clear quote for supply, rebuild, or replacement.
+              Call our  team to confirm your engine code and get a clear quote for supply, rebuild, or replacement.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <a

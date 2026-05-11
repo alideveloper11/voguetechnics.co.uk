@@ -28,7 +28,7 @@ const faqs = [
   {
     question: "Do you offer UK-wide collection and delivery?",
     answer:
-      "Yes. We offer UK-wide collection and delivery so you can access our Grays workshop expertise from anywhere in the country.",
+      "Yes. We offer UK-wide collection and delivery so you can access our  workshop expertise from anywhere in the country.",
   },
   {
     question: "Do you provide written warranty on engine work?",
@@ -42,7 +42,7 @@ export default function JaguarXKRSPage() {
     <div className="bg-white min-h-screen">
       <section className="relative overflow-hidden bg-slate-900 pt-32 pb-24">
         <div className="absolute inset-0 z-0">
-          <Image src="/images/car_bgg.jpg" alt="Jaguar XKR-S engine specialists in Grays" fill className="object-cover opacity-30 mix-blend-overlay" priority />
+          <Image src="/images/car_bgg.jpg" alt="Jaguar XKR-S engine specialists in " fill className="object-cover opacity-30 mix-blend-overlay" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/85 to-slate-900/50" />
         </div>
 
@@ -51,17 +51,17 @@ export default function JaguarXKRSPage() {
           <div className="max-w-5xl pt-8">
             <motion.h1 initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} className="text-3xl font-black leading-[1.08] tracking-tight text-white md:text-5xl">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-300 to-green-400">Jaguar XKR-S Engine</span>{" "}
-              — 5.0 Supercharged V8 Supply, Rebuild & Fit Across the UK
+                5.0 Supercharged V8 Supply, Rebuild & Fit Across the UK
             </motion.h1>
             <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.12 }} className="mt-7">
               <RegSearch className="max-w-3xl" />
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.22 }} className="mt-7 max-w-4xl text-sm leading-relaxed text-slate-300 md:text-base space-y-4">
               <p>
-                The Jaguar XKR‑S is the most extreme, most driver‑focused XK ever produced. Built between 2011 and 2014, it combined sharper chassis tuning with a 5.0 litre supercharged V8 producing 550HP — elevating it firmly into supercar territory.
+                The Jaguar XKR‑S is the most extreme, most driver‑focused XK ever produced. Built between 2011 and 2014, it combined sharper chassis tuning with a 5.0 litre supercharged V8 producing 550HP   elevating it firmly into supercar territory.
               </p>
               <p>
-                At Vogue Technics in Grays, UK, we supply, rebuild, and fit Jaguar XKR‑S engines — combining genuine AJ133SC supercharged V8 expertise, fully tested reconditioned units, emergency response capability, and a transparent supply and fit process that reflects the standard of the vehicle we are working on.
+                At Vogue Technics in , UK, we supply, rebuild, and fit Jaguar XKR‑S engines   combining genuine AJ133SC supercharged V8 expertise, fully tested reconditioned units, emergency response capability, and a transparent supply and fit process that reflects the standard of the vehicle we are working on.
               </p>
             </motion.div>
           </div>
@@ -74,13 +74,13 @@ export default function JaguarXKRSPage() {
             <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
               <h2 className="font-bold text-slate-900">Reconditioned & Used AJ133SC Units</h2>
               <p className="mt-3 text-slate-700 leading-relaxed">
-                Every unit is fully tested, documented, and dispatched with warranty cover from our Grays workshop.
+                Every unit is fully tested, documented, and dispatched with warranty cover from our  workshop.
               </p>
             </div>
             <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
-              <h3 className="font-bold text-slate-900">Same‑Day Diagnostics (Grays)</h3>
+              <h3 className="font-bold text-slate-900">Same‑Day Diagnostics ()</h3>
               <p className="mt-3 text-slate-700 leading-relaxed">
-                Specialist equipment + hands‑on AJ133SC knowledge. No guesswork, no upsell — just accurate diagnosis and honest options.
+                Specialist equipment + hands‑on AJ133SC knowledge. No guesswork, no upsell   just accurate diagnosis and honest options.
               </p>
             </div>
             <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
@@ -93,14 +93,14 @@ export default function JaguarXKRSPage() {
         </div>
       </section>
 
-      <FAQSection title={<>Frequently Asked Questions — <span className="text-primary italic">Jaguar XKR‑S Engine</span></>} items={faqs} />
+      <FAQSection title={<>Frequently Asked Questions   <span className="text-primary italic">Jaguar XKR‑S Engine</span></>} items={faqs} />
 
       <section className="py-16 md:py-20 bg-primary text-white">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-5xl mx-auto text-center space-y-6">
             <h2 className="text-3xl md:text-4xl font-extrabold leading-tight">Ready to resolve your Jaguar XKR‑S engine problem?</h2>
             <p className="text-emerald-50 leading-relaxed max-w-4xl mx-auto">
-              Contact our specialists in Grays today for same‑day diagnostics, a fully reconditioned AJ133SC unit, or fast‑track replacement.
+              Contact our specialists in  today for same‑day diagnostics, a fully reconditioned AJ133SC unit, or fast‑track replacement.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <a href="tel:01375531355" className="inline-flex items-center justify-center rounded-2xl bg-white px-8 py-4 font-bold text-primary shadow-xl transition-all hover:bg-slate-50 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99]">

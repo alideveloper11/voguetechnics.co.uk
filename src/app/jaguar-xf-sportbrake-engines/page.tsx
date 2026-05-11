@@ -28,7 +28,7 @@ const faqs = [
   {
     question: "Can you collect my engine from anywhere in the UK?",
     answer:
-      "Yes. We offer UK-wide collection and delivery so you can access our Grays workshop expertise from anywhere in the country.",
+      "Yes. We offer UK-wide collection and delivery so you can access our  workshop expertise from anywhere in the country.",
   },
 ];
 
@@ -39,7 +39,7 @@ export default function JaguarXFSportbrakeEnginesPage() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/car_bgg.jpg"
-            alt="Jaguar XF Sportbrake engine specialists in Grays"
+            alt="Jaguar XF Sportbrake engine specialists in "
             fill
             className="object-cover opacity-30 mix-blend-overlay"
             priority
@@ -64,7 +64,7 @@ export default function JaguarXFSportbrakeEnginesPage() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-300 to-green-400">
                 Jaguar XF Sportbrake Engine
               </span>{" "}
-              — Supply, Repair, Rebuild & Fit Across the UK
+                Supply, Repair, Rebuild & Fit Across the UK
             </motion.h1>
 
             <motion.div
@@ -83,12 +83,12 @@ export default function JaguarXFSportbrakeEnginesPage() {
               className="mt-7 max-w-4xl text-sm leading-relaxed text-slate-300 md:text-base space-y-4"
             >
               <p>
-                The Jaguar XF Sportbrake is a practical, high-mileage-friendly estate — but that also means engines often see heavier use over time.
+                The Jaguar XF Sportbrake is a practical, high-mileage-friendly estate   but that also means engines often see heavier use over time.
                 When faults develop, specialist diagnosis and the correct repair route matters.
               </p>
               <p>
-                At Vogue Technics in Grays, Essex, we specialise in Jaguar XF Sportbrake engine rebuilds, targeted repairs and complete replacements
-                across the full range — including Ingenium and V6 variants — with transparent pricing and written warranty.
+                At Vogue Technics in , we specialise in Jaguar XF Sportbrake engine rebuilds, targeted repairs and complete replacements
+                across the full range   including Ingenium and V6 variants   with transparent pricing and written warranty.
               </p>
             </motion.div>
           </div>
@@ -104,7 +104,7 @@ export default function JaguarXFSportbrakeEnginesPage() {
             </div>
             <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
               <h3 className="font-bold text-slate-900">Diagnostics Before Decisions</h3>
-              <p className="mt-3 text-slate-700 leading-relaxed">Same‑day diagnostics available in Grays to pinpoint the exact fault.</p>
+              <p className="mt-3 text-slate-700 leading-relaxed">Same‑day diagnostics available in  to pinpoint the exact fault.</p>
             </div>
             <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
               <h3 className="font-bold text-slate-900">Supply & Fit Available</h3>
@@ -117,7 +117,7 @@ export default function JaguarXFSportbrakeEnginesPage() {
       <FAQSection
         title={
           <>
-            Frequently Asked Questions — <span className="text-primary italic">Jaguar XF Sportbrake Engine</span>
+            Frequently Asked Questions   <span className="text-primary italic">Jaguar XF Sportbrake Engine</span>
           </>
         }
         items={faqs}
@@ -128,7 +128,7 @@ export default function JaguarXFSportbrakeEnginesPage() {
           <div className="max-w-5xl mx-auto text-center space-y-6">
             <h2 className="text-3xl md:text-4xl font-extrabold leading-tight">Need an XF Sportbrake engine solution?</h2>
             <p className="text-emerald-50 leading-relaxed max-w-4xl mx-auto">
-              Call our Grays workshop for diagnostics, supply-only, or a complete supply and fit booking.
+              Call our  workshop for diagnostics, supply-only, or a complete supply and fit booking.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <a

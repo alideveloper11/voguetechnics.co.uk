@@ -47,22 +47,22 @@ const findYourBmwCards = [
 ];
 
 const heroParagraphs = [
-  "The BMW 6 Series has always occupied a distinctive position in the BMW lineup — a grand tourer that combines genuine performance with long-distance refinement, available across coupé, convertible, and gran coupé body styles and spanning engine options that range from composed straight-six diesels to thunderous twin-turbo V8s. Whether you own an E63, an F12, an F06, or a G32 Gran Turismo, the 6 Series represents a significant investment — and when the engine develops problems, it deserves specialist attention that matches the engineering complexity it was built with.",
-  "At Vogue Technics, based in Grays, Essex, we carry out BMW 6 Series engine rebuilds, repairs, and replacements across all generations and engine families. The N57 diesel units, the N55 and N63 turbocharged petrols, the high-performance S63 twin-turbo V8 in the M6, and the earlier naturally aspirated engines in the E63 and E64 — we know these engines in practical, hands-on terms developed over more than 25 years of dedicated BMW engine work. If your 6 Series is experiencing engine trouble, you have come to the right workshop.",
+  "The BMW 6 Series has always occupied a distinctive position in the BMW lineup   a grand tourer that combines genuine performance with long-distance refinement, available across coupé, convertible, and gran coupé body styles and spanning engine options that range from composed straight-six diesels to thunderous twin-turbo V8s. Whether you own an E63, an F12, an F06, or a G32 Gran Turismo, the 6 Series represents a significant investment   and when the engine develops problems, it deserves specialist attention that matches the engineering complexity it was built with.",
+  "At Vogue Technics, based in , we carry out BMW 6 Series engine rebuilds, repairs, and replacements across all generations and engine families. The N57 diesel units, the N55 and N63 turbocharged petrols, the high-performance S63 twin-turbo V8 in the M6, and the earlier naturally aspirated engines in the E63 and E64   we know these engines in practical, hands-on terms developed over more than 25 years of dedicated BMW engine work. If your 6 Series is experiencing engine trouble, you have come to the right workshop.",
 ];
 
 const whyChooseBlocks = [
   {
     title: "Genuine Cross-Generation BMW Engine Expertise",
     text: [
-      "The BMW 6 Series is not a single engine family — it is a collection of very different powertrains unified under one model name, each with its own specific failure patterns, rebuild requirements, and service considerations. The N63's notorious hot-V turbo placement creates thermal management challenges that simply do not exist on conventional twin-turbo layouts. The S63 in the M6 is a high-output performance engine that demands rebuild precision far beyond what a standard V8 overhaul requires. The N57 diesel carries timing chain vulnerabilities that are well-documented and consequential. The S85 V10 in the E63 M6 presents rod bearing risks that require a very specific diagnostic and rebuild approach.",
-      "We understand these differences at a practical level. That is what genuine BMW engine specialisation looks like — not a single process applied to every engine, but the right approach applied to each specific unit based on what it actually is and how it actually fails.",
+      "The BMW 6 Series is not a single engine family   it is a collection of very different powertrains unified under one model name, each with its own specific failure patterns, rebuild requirements, and service considerations. The N63's notorious hot-V turbo placement creates thermal management challenges that simply do not exist on conventional twin-turbo layouts. The S63 in the M6 is a high-output performance engine that demands rebuild precision far beyond what a standard V8 overhaul requires. The N57 diesel carries timing chain vulnerabilities that are well-documented and consequential. The S85 V10 in the E63 M6 presents rod bearing risks that require a very specific diagnostic and rebuild approach.",
+      "We understand these differences at a practical level. That is what genuine BMW engine specialisation looks like   not a single process applied to every engine, but the right approach applied to each specific unit based on what it actually is and how it actually fails.",
     ],
   },
   {
-    title: "Over 25 Years of BMW Engine Work From Grays, Essex",
+    title: "Over 25 Years of BMW Engine Work From ",
     text: [
-      "Vogue Technics has been operating from our Grays workshop for over a quarter of a century. In that time we have worked on BMW 6 Series engines across every generation — E63 and E64 straight-six and V8 units, F-series N55, N57, N63, and S63 engines, and the newer B-series units in the G32 Gran Turismo. Our customer base across Essex, London, and the wider UK has been built almost entirely through direct referrals from satisfied customers. When we fix your engine, it stays fixed — and word gets around.",
+      "Vogue Technics has been operating from our  workshop for over a quarter of a century. In that time we have worked on BMW 6 Series engines across every generation   E63 and E64 straight-six and V8 units, F-series N55, N57, N63, and S63 engines, and the newer B-series units in the G32 Gran Turismo. Our customer base across , London, and the wider UK has been built almost entirely through direct referrals from satisfied customers. When we fix your engine, it stays fixed   and word gets around.",
     ],
   },
   {
@@ -82,16 +82,16 @@ const serviceSections = [
         heading: "Head Gasket Replacement & Blown Head Gasket Repair",
         text: [
           "Head gasket failure across the BMW 6 Series range presents differently depending on the engine in question. On the N57 and N63 units, the combination of turbocharger boost pressure and thermal cycling places the head gasket under sustained stress that increases significantly with mileage. On the naturally aspirated straight-six engines in the E63, the failure is typically more gradual but no less consequential when it arrives.",
-          "The warning signs are consistent regardless of engine variant — persistent white or grey exhaust smoke, coolant that disappears without any visible external leak, oil with a milky or contaminated appearance, or an engine temperature that climbs despite the cooling system appearing to function correctly. Any of these symptoms requires prompt investigation.",
-          "We carry out BMW 6 Series head gasket replacement using OEM-grade sealing components throughout, with a full cylinder head inspection — surface flatness measurement, crack testing, and structural integrity assessment — carried out before reassembly begins. The job is done correctly and completely, not patched and returned.",
+          "The warning signs are consistent regardless of engine variant   persistent white or grey exhaust smoke, coolant that disappears without any visible external leak, oil with a milky or contaminated appearance, or an engine temperature that climbs despite the cooling system appearing to function correctly. Any of these symptoms requires prompt investigation.",
+          "We carry out BMW 6 Series head gasket replacement using OEM-grade sealing components throughout, with a full cylinder head inspection   surface flatness measurement, crack testing, and structural integrity assessment   carried out before reassembly begins. The job is done correctly and completely, not patched and returned.",
         ],
       },
       {
         heading: "Timing Chain Replacement & Timing Chain Repair",
         text: [
-          "The timing chain is a critical concern across several BMW 6 Series engine families — most notably the N57 diesel units fitted to the 630d and 640d across F-series and G32 applications, where the timing chain tensioner failure pattern is well-established and the consequences of ignoring it are severe.",
-          "The N55 straight-six petrol units fitted to the 640i also carry documented timing chain tensioner vulnerabilities. A cold-start rattle — one that clears within a few seconds of the engine running — is the most reliable early warning sign across all affected engines. Camshaft timing fault codes, rough cold idle, or misfires on start-up can follow as the condition progresses.",
-          "We carry out BMW 6 Series timing chain replacement as a complete system job across all affected engine families — chain, tensioners, guides, and sprockets replaced together as a full kit. We also handle BMW 6 Series timing chain repair where secondary valve train damage has already occurred, restoring correct engine timing and confirming clean operation before the vehicle returns to the road.",
+          "The timing chain is a critical concern across several BMW 6 Series engine families   most notably the N57 diesel units fitted to the 630d and 640d across F-series and G32 applications, where the timing chain tensioner failure pattern is well-established and the consequences of ignoring it are severe.",
+          "The N55 straight-six petrol units fitted to the 640i also carry documented timing chain tensioner vulnerabilities. A cold-start rattle   one that clears within a few seconds of the engine running   is the most reliable early warning sign across all affected engines. Camshaft timing fault codes, rough cold idle, or misfires on start-up can follow as the condition progresses.",
+          "We carry out BMW 6 Series timing chain replacement as a complete system job across all affected engine families   chain, tensioners, guides, and sprockets replaced together as a full kit. We also handle BMW 6 Series timing chain repair where secondary valve train damage has already occurred, restoring correct engine timing and confirming clean operation before the vehicle returns to the road.",
         ],
       },
       {
@@ -99,64 +99,64 @@ const serviceSections = [
         text: [
           "Turbocharger work on the BMW 6 Series covers a considerably wider range of scenarios than on a model with a single engine option. The N55's single twin-scroll turbo, the N57's twin-turbo diesel system, the N63's unconventionally positioned hot-V turbos, and the S63's high-performance twin-turbo setup each fail differently, present different symptoms, and require different replacement and testing procedures.",
           "The N63 deserves specific mention. With its turbos mounted inside the engine V rather than on the outside of the block, thermal concentration in the N63 is significant. Oil coking in the turbo feed lines is a well-documented failure mode on higher-mileage and hard-driven examples. When an N63 turbo fails, the inspection scope needs to extend well beyond the turbo unit itself to the oil feed system, the cooling jackets, and the wider thermal management components.",
-          "We source and fit quality replacement turbochargers for all BMW 6 Series engine variants, with post-installation testing covering boost pressure, oil feed integrity, and fault-free operation before the vehicle leaves our workshop. We assess the wider system — not just the failed component — because incomplete turbo replacements create repeat failures.",
+          "We source and fit quality replacement turbochargers for all BMW 6 Series engine variants, with post-installation testing covering boost pressure, oil feed integrity, and fault-free operation before the vehicle leaves our workshop. We assess the wider system   not just the failed component   because incomplete turbo replacements create repeat failures.",
         ],
       },
       {
         heading: "Engine Rebuild",
         text: [
-          "A full BMW 6 Series engine rebuild is the most thorough solution available — and across a range that includes the S85 V10, the S63 twin-turbo V8, and the N63 hot-V, it is work that requires genuine technical breadth alongside the precision that any engine rebuild demands.",
-          "We strip the engine completely, measure every internal component against factory tolerances, replace everything outside specification, and reassemble with the care that BMW's engineering demands as standard. For the S85 V10 in the E63 M6 — where rod bearing failure is the primary concern on higher-mileage examples — we carry out a full bearing assessment and replacement as part of every rebuild on this engine, because the consequences of missing bearing wear on a V10 are immediate and total.",
+          "A full BMW 6 Series engine rebuild is the most thorough solution available   and across a range that includes the S85 V10, the S63 twin-turbo V8, and the N63 hot-V, it is work that requires genuine technical breadth alongside the precision that any engine rebuild demands.",
+          "We strip the engine completely, measure every internal component against factory tolerances, replace everything outside specification, and reassemble with the care that BMW's engineering demands as standard. For the S85 V10 in the E63 M6   where rod bearing failure is the primary concern on higher-mileage examples   we carry out a full bearing assessment and replacement as part of every rebuild on this engine, because the consequences of missing bearing wear on a V10 are immediate and total.",
           "The result, regardless of which 6 Series engine sits on our bench, is a unit that performs as it should and lasts as it should.",
         ],
       },
       {
         heading: "Engine Repair",
         text: [
-          "Not every BMW 6 Series engine problem warrants a full rebuild, and we will never recommend one when it is not genuinely necessary. Our BMW 6 Series engine repair service begins with thorough diagnostic work — electronic fault scanning across all relevant systems, compression testing, oil analysis, and systematic physical inspection — so that the work carried out is precisely targeted to the actual fault. Oil leaks, bearing wear, VANOS system faults on N-series engines, EGR issues on diesel variants, valve damage, sensor failures — we identify the root cause and address it properly.",
+          "Not every BMW 6 Series engine problem warrants a full rebuild, and we will never recommend one when it is not genuinely necessary. Our BMW 6 Series engine repair service begins with thorough diagnostic work   electronic fault scanning across all relevant systems, compression testing, oil analysis, and systematic physical inspection   so that the work carried out is precisely targeted to the actual fault. Oil leaks, bearing wear, VANOS system faults on N-series engines, EGR issues on diesel variants, valve damage, sensor failures   we identify the root cause and address it properly.",
         ],
       },
       {
         heading: "Engine Replacement & Engine Swap",
         text: [
           "When internal damage makes repair uneconomical, or when multiple systems have failed simultaneously, a quality replacement engine is the correct decision. We supply and fit reconditioned and low-mileage used BMW 6 Series engines across all variants, sourced from verified suppliers and tested before installation.",
-          "Our BMW 6 Series engine swap service manages the entire process — removal of the failed engine, full installation of the replacement unit, all ancillary connections, ECU calibration where the replacement differs from the original, and comprehensive post-installation diagnostic testing before the vehicle is returned to the road.",
+          "Our BMW 6 Series engine swap service manages the entire process   removal of the failed engine, full installation of the replacement unit, all ancillary connections, ECU calibration where the replacement differs from the original, and comprehensive post-installation diagnostic testing before the vehicle is returned to the road.",
         ],
       },
       {
         heading: "Timing Belt Replacement",
         text: [
-          "Certain BMW 6 Series variants — particularly those from earlier production years in the E63 and E64 range — incorporate timing belt components within the valve train. Unlike a timing chain, a belt gives very little warning before failure. When it snaps, the engine damage is immediate and typically total. We carry timing belt kits for all applicable 6 Series engine configurations and strongly recommend replacement at or ahead of BMW's specified service intervals on any vehicle with an uncertain service history.",
+          "Certain BMW 6 Series variants   particularly those from earlier production years in the E63 and E64 range   incorporate timing belt components within the valve train. Unlike a timing chain, a belt gives very little warning before failure. When it snaps, the engine damage is immediate and typically total. We carry timing belt kits for all applicable 6 Series engine configurations and strongly recommend replacement at or ahead of BMW's specified service intervals on any vehicle with an uncertain service history.",
         ],
       },
       {
         heading: "Engine Health Check & Diagnostic",
         text: [
-          "Not sure what is actually wrong with your 6 Series? Or considering buying a used example — particularly a high-mileage N63 or S63 variant — and wanting an honest independent assessment of the engine's true condition before committing? Our BMW 6 Series engine health check covers full compression testing, oil condition and contamination analysis, comprehensive electronic diagnostic scanning across all engine and turbo-related fault codes, and a detailed visual inspection of the engine bay and all accessible components.",
+          "Not sure what is actually wrong with your 6 Series? Or considering buying a used example   particularly a high-mileage N63 or S63 variant   and wanting an honest independent assessment of the engine's true condition before committing? Our BMW 6 Series engine health check covers full compression testing, oil condition and contamination analysis, comprehensive electronic diagnostic scanning across all engine and turbo-related fault codes, and a detailed visual inspection of the engine bay and all accessible components.",
           "You receive a written report with clear findings and honest recommendations. No manufactured urgency, no upselling, no vague language. Just the information you need to make a properly informed decision.",
         ],
       },
     ],
   },
   {
-    title: "UK-Wide Service, Fast Turnaround, From Our Grays, Essex Workshop",
+    title: "UK-Wide Service, Fast Turnaround, From Our  Workshop",
     paragraphs: [
       {
-        heading: "Engine Collection & Return — Nationwide Coverage",
+        heading: "Engine Collection & Return   Nationwide Coverage",
         text: [
-          "Not within reach of our Grays workshop? That is not a problem. We operate a fully managed engine collection and delivery service covering the whole of the United Kingdom. Send your unit to us and we will return it rebuilt, repaired, or replaced — fully tested and ready to install. We also work with a trusted network of approved fitting partners across the UK for customers who need the engine installed locally.",
+          "Not within reach of our  workshop? That is not a problem. We operate a fully managed engine collection and delivery service covering the whole of the United Kingdom. Send your unit to us and we will return it rebuilt, repaired, or replaced   fully tested and ready to install. We also work with a trusted network of approved fitting partners across the UK for customers who need the engine installed locally.",
         ],
       },
       {
-        heading: "Honest Turnaround Times — Confirmed at Booking",
+        heading: "Honest Turnaround Times   Confirmed at Booking",
         text: [
-          "Most BMW 6 Series engine rebuilds are completed within 5–10 working days from parts confirmation. Repairs and replacements are frequently completed more quickly. We confirm your specific timeframe at the point of booking and communicate clearly if anything changes — which is rarely.",
+          "Most BMW 6 Series engine rebuilds are completed within 5–10 working days from parts confirmation. Repairs and replacements are frequently completed more quickly. We confirm your specific timeframe at the point of booking and communicate clearly if anything changes   which is rarely.",
         ],
       },
       {
         heading: "Written Warranty on Every Engine Job",
         text: [
-          "Every engine rebuild, repair, and replacement that leaves Vogue Technics carries a written warranty. We provide it because our work warrants it — and because every BMW 6 Series owner who trusts us with their engine deserves to drive away with complete confidence in what has been done.",
+          "Every engine rebuild, repair, and replacement that leaves Vogue Technics carries a written warranty. We provide it because our work warrants it   and because every BMW 6 Series owner who trusts us with their engine deserves to drive away with complete confidence in what has been done.",
         ],
       },
     ],
@@ -177,7 +177,7 @@ const faqs = [
   {
     question: "Is it worth rebuilding a BMW 6 Series engine?",
     answer:
-      "In most cases, yes — particularly when the vehicle is otherwise in sound condition. The 6 Series is expensive to replace at an equivalent level of quality and performance. A properly executed engine rebuild extends the vehicle's usable life significantly and represents far better value than replacement.",
+      "In most cases, yes   particularly when the vehicle is otherwise in sound condition. The 6 Series is expensive to replace at an equivalent level of quality and performance. A properly executed engine rebuild extends the vehicle's usable life significantly and represents far better value than replacement.",
   },
   {
     question: "Do you provide a warranty on rebuilt engines?",
@@ -187,12 +187,12 @@ const faqs = [
   {
     question: "Can you handle both petrol and diesel 6 Series engines?",
     answer:
-      "Yes. We work across the full BMW 6 Series engine range — N52, N55, N57, N62, N63, S63, S85, M57, B47, B57, and B58 — covering petrol, diesel, naturally aspirated, turbocharged, and high-performance M variants across E63, E64, F06, F12, F13, and G32 chassis generations.",
+      "Yes. We work across the full BMW 6 Series engine range   N52, N55, N57, N62, N63, S63, S85, M57, B47, B57, and B58   covering petrol, diesel, naturally aspirated, turbocharged, and high-performance M variants across E63, E64, F06, F12, F13, and G32 chassis generations.",
   },
   {
     question: "Can you supply and fit, or just supply the engine?",
     answer:
-      "Both options are available. We offer complete supply and fit at our Grays, Essex workshop. For customers elsewhere in the UK, we arrange fitting through our network of approved installers.",
+      "Both options are available. We offer complete supply and fit at our  workshop. For customers elsewhere in the UK, we arrange fitting through our network of approved installers.",
   },
   {
     question: "How long does a BMW 6 Series engine replacement take?",
@@ -243,7 +243,7 @@ export default function Bmw6SeriesEnginesClient() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 via-green-400 to-lime-300">
                 BMW 6 Series Engine Rebuild
               </span>{" "}
-              — Expert Reconditioning, Repair &amp; Replacement Across the UK
+                Expert Reconditioning, Repair &amp; Replacement Across the UK
             </motion.h1>
 
             <motion.div
@@ -376,7 +376,7 @@ export default function Bmw6SeriesEnginesClient() {
       <FAQSection
         title={
           <>
-            Frequently Asked Questions — <span className="text-primary italic">BMW 6 Series Engine Work</span>
+            Frequently Asked Questions   <span className="text-primary italic">BMW 6 Series Engine Work</span>
           </>
         }
         items={faqs}
@@ -390,8 +390,8 @@ export default function Bmw6SeriesEnginesClient() {
             Ready to get your BMW 6 Series back to the standard it deserves?
           </h2>
           <p className="text-emerald-100 text-base md:text-lg font-medium max-w-3xl mx-auto leading-relaxed">
-            Call Vogue Technics today or complete our online enquiry form for a fast, no-obligation quote. We are based in Grays, Essex, and serve
-            BMW owners right across the United Kingdom. The 6 Series is a grand tourer built to exceptional engineering standards — and that is
+            Call Vogue Technics today or complete our online enquiry form for a fast, no-obligation quote. We are based in , and serve
+            BMW owners right across the United Kingdom. The 6 Series is a grand tourer built to exceptional engineering standards   and that is
             exactly the standard we apply when we work on its engine.
           </p>
 

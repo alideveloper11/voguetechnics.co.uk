@@ -60,17 +60,17 @@ const faqs = [
   {
     question: "What are the most common BMW X1 engine problems?",
     answer:
-      "The most frequently reported issues include N47 timing chain tensioner failure on E84 diesel variants — one of the most documented failures in BMW diesel history — B47 timing chain vulnerabilities on F48 diesel variants, B38 three-cylinder head gasket failure on F48 petrol variants, turbocharger wear across diesel and petrol turbocharged units, and EGR system faults on diesel examples. Early diagnosis consistently prevents the most expensive outcomes.",
+      "The most frequently reported issues include N47 timing chain tensioner failure on E84 diesel variants   one of the most documented failures in BMW diesel history   B47 timing chain vulnerabilities on F48 diesel variants, B38 three-cylinder head gasket failure on F48 petrol variants, turbocharger wear across diesel and petrol turbocharged units, and EGR system faults on diesel examples. Early diagnosis consistently prevents the most expensive outcomes.",
   },
   {
     question: "Is BMW X1 N47 timing chain failure really that serious?",
     answer:
-      "Yes — and it deserves treating with urgency. The N47 timing chain tensioner failure has caused catastrophic engine damage on a very significant number of vehicles. A cold-start rattle that clears after a few seconds is the definitive early warning. Do not continue driving an X1 diesel that produces this sound. Book a diagnostic immediately.",
+      "Yes   and it deserves treating with urgency. The N47 timing chain tensioner failure has caused catastrophic engine damage on a very significant number of vehicles. A cold-start rattle that clears after a few seconds is the definitive early warning. Do not continue driving an X1 diesel that produces this sound. Book a diagnostic immediately.",
   },
   {
     question: "Is it worth rebuilding a BMW X1 engine?",
     answer:
-      "In most cases, yes — particularly when the vehicle is otherwise in sound condition and has a low remaining finance balance or has been purchased outright. A properly executed rebuild extends the X1's working life considerably and represents far better value than replacing the vehicle.",
+      "In most cases, yes   particularly when the vehicle is otherwise in sound condition and has a low remaining finance balance or has been purchased outright. A properly executed rebuild extends the X1's working life considerably and represents far better value than replacing the vehicle.",
   },
   {
     question: "Do you provide a warranty on rebuilt and reconditioned BMW X1 engines?",
@@ -85,7 +85,7 @@ const faqs = [
   {
     question: "Do you offer a BMW X1 engine fitting service?",
     answer:
-      "Yes. We offer complete supply and fit at our Grays, Essex workshop. For customers elsewhere in the UK, we arrange fitting through our approved installer network. We also offer a fully managed engine collection and return service.",
+      "Yes. We offer complete supply and fit at our  workshop. For customers elsewhere in the UK, we arrange fitting through our approved installer network. We also offer a fully managed engine collection and return service.",
   },
   {
     question: "How long does a BMW X1 engine replacement take?",
@@ -133,7 +133,7 @@ export default function BmwX1EnginesClient() {
               transition={{ delay: 0.1 }}
               className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-emerald-50 tracking-tight mb-6 leading-tight"
             >
-              <span className="text-primary italic">BMW X1</span> Engine Rebuild — Expert Reconditioning, Repair &amp;
+              <span className="text-primary italic">BMW X1</span> Engine Rebuild   Expert Reconditioning, Repair &amp;
               Replacement Across the UK
             </motion.h1>
 
@@ -143,11 +143,11 @@ export default function BmwX1EnginesClient() {
               transition={{ delay: 0.2 }}
               className="text-lg md:text-xl text-slate-200 leading-relaxed mb-8"
             >
-              The BMW X1 has earned its place as one of the most popular premium compact SUVs on UK roads — and for good
+              The BMW X1 has earned its place as one of the most popular premium compact SUVs on UK roads   and for good
               reason. It is practical, refined, well-built, and genuinely enjoyable to drive in a way that few
               competitors in its class match. Whether you own an E84, an F48, or a newer U11 variant, the X1 is a
               vehicle worth looking after properly. And when the engine starts causing problems, it deserves to be
-              fixed by people who understand BMW engines at a genuinely technical level — not a generalist garage that
+              fixed by people who understand BMW engines at a genuinely technical level   not a generalist garage that
               will attempt anything and specialise in nothing.
             </motion.p>
 
@@ -157,11 +157,11 @@ export default function BmwX1EnginesClient() {
               transition={{ delay: 0.25 }}
               className="text-base md:text-lg text-slate-200 leading-relaxed mb-10"
             >
-              At Vogue Technics, based in Grays, Essex, we carry out BMW X1 engine rebuilds, repairs, timing chain
+              At Vogue Technics, based in , we carry out BMW X1 engine rebuilds, repairs, timing chain
               replacements, turbo replacements, head gasket repairs, and complete engine reconditioning across all
               three X1 generations and all engine families. The N47 diesel&apos;s timing chain vulnerabilities, the B47&apos;s
               continuation of those risks into the F48 generation, the three-cylinder B38&apos;s specific failure patterns,
-              the turbocharger wear across both diesel and petrol variants — we understand all of it from over 25 years
+              the turbocharger wear across both diesel and petrol variants   we understand all of it from over 25 years
               of specialist BMW engine experience. If your X1 needs engine work, you have found the right workshop.
             </motion.p>
 
@@ -262,21 +262,21 @@ export default function BmwX1EnginesClient() {
                 {
                   title: "BMW Engine Specialists Who Know the X1 Across All Generations",
                   text: [
-                    "The BMW X1 has changed significantly across its three generations — and so have the engine families fitted to it. The E84's N47 diesel carries one of the most documented timing chain vulnerabilities in BMW's modern diesel history. The F48's B47 diesel carries forward a related but distinct tensioner failure risk. The F48's B38 three-cylinder petrol presents its own specific head gasket and timing concerns. The B48 four-cylinder petrol units are more robust but not without their own failure patterns at higher mileages.",
-                    "Knowing which engine is in your X1 — and what that engine specifically does when it begins to fail — is the foundation of diagnosing and fixing it correctly. That knowledge only comes from having worked on these engines repeatedly, across multiple generations, in a workshop that focuses on BMW rather than spreading its attention across every make that comes through the door.",
+                    "The BMW X1 has changed significantly across its three generations   and so have the engine families fitted to it. The E84's N47 diesel carries one of the most documented timing chain vulnerabilities in BMW's modern diesel history. The F48's B47 diesel carries forward a related but distinct tensioner failure risk. The F48's B38 three-cylinder petrol presents its own specific head gasket and timing concerns. The B48 four-cylinder petrol units are more robust but not without their own failure patterns at higher mileages.",
+                    "Knowing which engine is in your X1   and what that engine specifically does when it begins to fail   is the foundation of diagnosing and fixing it correctly. That knowledge only comes from having worked on these engines repeatedly, across multiple generations, in a workshop that focuses on BMW rather than spreading its attention across every make that comes through the door.",
                     "That is precisely what we do at Vogue Technics.",
                   ],
                 },
                 {
-                  title: "Over 25 Years of BMW Engine Work From Grays, Essex",
+                  title: "Over 25 Years of BMW Engine Work From ",
                   text: [
-                    "We have been working on BMW engines from our Grays workshop since long before the first X1 was produced. In that time we have built a reputation across Essex and the wider UK that has been earned entirely through the quality of our work. Our customers come to us through referrals from other BMW owners — because the standard we maintain means the vehicles we work on keep running long after they leave our workshop.",
+                    "We have been working on BMW engines from our  workshop since long before the first X1 was produced. In that time we have built a reputation across  and the wider UK that has been earned entirely through the quality of our work. Our customers come to us through referrals from other BMW owners   because the standard we maintain means the vehicles we work on keep running long after they leave our workshop.",
                   ],
                 },
                 {
                   title: "Honest Pricing, Clear Communication, No Surprises",
                   text: [
-                    "We understand that engine trouble on a family SUV is stressful — and that the cost of repair is often the most pressing concern. We provide fully itemised, clearly explained written quotes before any work begins. Every job is priced transparently and agreed upfront. There are no additions that appear without warning on collection day, and no estimates that quietly become something larger.",
+                    "We understand that engine trouble on a family SUV is stressful   and that the cost of repair is often the most pressing concern. We provide fully itemised, clearly explained written quotes before any work begins. Every job is priced transparently and agreed upfront. There are no additions that appear without warning on collection day, and no estimates that quietly become something larger.",
                     "Call us or submit an online enquiry for a fast, no-obligation quote specific to your X1, its generation, its engine, and the work it needs.",
                   ],
                 },
@@ -313,60 +313,60 @@ export default function BmwX1EnginesClient() {
                 {
                   title: "Head Gasket Replacement & Head Gasket Repair",
                   paragraphs: [
-                    "Head gasket failure on the BMW X1 varies in character depending on the engine in question. On the B38 three-cylinder petrol engine — fitted to F48 sDrive16i and sDrive18i variants — the three-cylinder configuration creates specific thermal stresses that the head gasket is more susceptible to than on four-cylinder equivalents. On diesel variants, sustained high-boost operation under mixed urban and motorway use contributes to head gasket stress over higher mileages.",
-                    "The signs are consistent regardless of engine family — white or grey exhaust smoke that clears slowly after a cold start, coolant that needs topping up without any visible external leak, oil that has taken on a contaminated or milky appearance, or an engine temperature that sits higher than it used to. Any of these symptoms on an X1 needs prompt investigation.",
+                    "Head gasket failure on the BMW X1 varies in character depending on the engine in question. On the B38 three-cylinder petrol engine   fitted to F48 sDrive16i and sDrive18i variants   the three-cylinder configuration creates specific thermal stresses that the head gasket is more susceptible to than on four-cylinder equivalents. On diesel variants, sustained high-boost operation under mixed urban and motorway use contributes to head gasket stress over higher mileages.",
+                    "The signs are consistent regardless of engine family   white or grey exhaust smoke that clears slowly after a cold start, coolant that needs topping up without any visible external leak, oil that has taken on a contaminated or milky appearance, or an engine temperature that sits higher than it used to. Any of these symptoms on an X1 needs prompt investigation.",
                     "We carry out BMW X1 head gasket replacement using OEM-grade sealing components, with a full cylinder head inspection covering surface flatness measurement, crack testing, and complete structural assessment before any reassembly begins. A head gasket repair done correctly holds. Done inadequately, it creates the same failure on a shorter timeline.",
                   ],
                 },
                 {
                   title: "Timing Chain Replacement & Timing Chain Repair",
                   paragraphs: [
-                    "BMW X1 N47 timing chain replacement is the single most important engine service topic for owners of E84 diesel variants — and it is one of the most well-documented failure patterns in BMW's modern diesel history. The N47D20 engine fitted to the sDrive18d, xDrive18d, xDrive20d, and xDrive23d variants carries a timing chain tensioner failure risk that has resulted in catastrophic engine damage on thousands of vehicles across the UK.",
-                    "The tensioner is located at the rear of the engine — which means access for inspection is more complex than on many other diesel units. The cold-start rattle is the most reliable early warning: a brief metallic clatter at start-up that disappears within a few seconds as oil pressure builds. That sound means the chain has stretched beyond reliable tensioner compensation. Continued operation from that point is not safe.",
-                    "The F48 generation's B47 diesel carries a related but distinct timing chain tensioner vulnerability — the failure pattern differs from the N47 in some characteristics but shares the same fundamental consequence when the tensioner fails.",
+                    "BMW X1 N47 timing chain replacement is the single most important engine service topic for owners of E84 diesel variants   and it is one of the most well-documented failure patterns in BMW's modern diesel history. The N47D20 engine fitted to the sDrive18d, xDrive18d, xDrive20d, and xDrive23d variants carries a timing chain tensioner failure risk that has resulted in catastrophic engine damage on thousands of vehicles across the UK.",
+                    "The tensioner is located at the rear of the engine   which means access for inspection is more complex than on many other diesel units. The cold-start rattle is the most reliable early warning: a brief metallic clatter at start-up that disappears within a few seconds as oil pressure builds. That sound means the chain has stretched beyond reliable tensioner compensation. Continued operation from that point is not safe.",
+                    "The F48 generation's B47 diesel carries a related but distinct timing chain tensioner vulnerability   the failure pattern differs from the N47 in some characteristics but shares the same fundamental consequence when the tensioner fails.",
                     "Do not ignore a cold-start rattle on any BMW X1 diesel. The internal damage that follows full timing chain failure on either the N47 or B47 is extensive and expensive.",
-                    "We carry out BMW X1 timing chain replacement as a complete system job across all affected engine families — chain, tensioners, guides, and sprockets replaced together as a full kit without exception. We also handle BMW X1 timing chain repair where secondary valve train damage has already occurred alongside the primary failure, restoring correct engine timing before the vehicle returns to the road.",
+                    "We carry out BMW X1 timing chain replacement as a complete system job across all affected engine families   chain, tensioners, guides, and sprockets replaced together as a full kit without exception. We also handle BMW X1 timing chain repair where secondary valve train damage has already occurred alongside the primary failure, restoring correct engine timing before the vehicle returns to the road.",
                   ],
                 },
                 {
                   title: "Turbo Replacement & Turbocharger Service",
                   paragraphs: [
-                    "Turbocharger failure on the BMW X1 presents across both the diesel and petrol turbocharged variants — and the mixed-use driving pattern typical of a family SUV creates a specific turbo wear profile. Short cold journeys, school runs, urban stop-start driving interspersed with motorway runs place particular stress on turbo bearings — particularly when oil is cold and hasn't reached full operating temperature before the engine is worked hard.",
-                    "On X1 diesel variants, power that softens progressively, increased exhaust smoke under acceleration, or a whistling noise that appears under boost are the signs to act on. On petrol turbocharged variants — the B48 in particular — similar symptoms present alongside potentially more sudden onset turbo failure at higher mileages.",
-                    "We source and fit quality replacement turbochargers for all BMW X1 engine variants — diesel and petrol — with full post-installation testing covering boost pressure, oil feed integrity, and fault-free operation before the vehicle leaves our workshop. We assess the complete oil feed and return system on every turbo job — because a turbo fitted without addressing why the previous unit failed simply repeats the failure.",
+                    "Turbocharger failure on the BMW X1 presents across both the diesel and petrol turbocharged variants   and the mixed-use driving pattern typical of a family SUV creates a specific turbo wear profile. Short cold journeys, school runs, urban stop-start driving interspersed with motorway runs place particular stress on turbo bearings   particularly when oil is cold and hasn't reached full operating temperature before the engine is worked hard.",
+                    "On X1 diesel variants, power that softens progressively, increased exhaust smoke under acceleration, or a whistling noise that appears under boost are the signs to act on. On petrol turbocharged variants   the B48 in particular   similar symptoms present alongside potentially more sudden onset turbo failure at higher mileages.",
+                    "We source and fit quality replacement turbochargers for all BMW X1 engine variants   diesel and petrol   with full post-installation testing covering boost pressure, oil feed integrity, and fault-free operation before the vehicle leaves our workshop. We assess the complete oil feed and return system on every turbo job   because a turbo fitted without addressing why the previous unit failed simply repeats the failure.",
                   ],
                 },
                 {
                   title: "Engine Rebuild",
                   paragraphs: [
-                    "A full BMW X1 engine rebuild is the most thorough solution available — and for an X1 that has accumulated significant mileage in mixed family use, it is frequently the most sensible long-term investment the owner can make. We strip the engine completely, measure every internal component against factory tolerances, replace everything outside specification, and reassemble with the care and precision that a quality rebuild requires.",
-                    "Whether the engine in question is an N47 diesel on an E84, a B47 on an F48, a B38 three-cylinder petrol, or a B48 four-cylinder unit, the rebuild process is applied specifically to that engine's characteristics — because each family has its own wear profile and its own rebuild considerations.",
+                    "A full BMW X1 engine rebuild is the most thorough solution available   and for an X1 that has accumulated significant mileage in mixed family use, it is frequently the most sensible long-term investment the owner can make. We strip the engine completely, measure every internal component against factory tolerances, replace everything outside specification, and reassemble with the care and precision that a quality rebuild requires.",
+                    "Whether the engine in question is an N47 diesel on an E84, a B47 on an F48, a B38 three-cylinder petrol, or a B48 four-cylinder unit, the rebuild process is applied specifically to that engine's characteristics   because each family has its own wear profile and its own rebuild considerations.",
                   ],
                 },
                 {
                   title: "Engine Repair",
                   paragraphs: [
-                    "Not every BMW X1 engine problem requires a full rebuild. Our BMW X1 engine repair and engine fault repair service begins with thorough diagnostic work — full electronic fault scanning, compression testing, oil analysis, and systematic physical inspection — so the work carried out is precisely targeted to the actual fault.",
-                    "Oil leaks from ageing seals and gaskets, EGR system faults on diesel variants, VANOS system wear on petrol units, injector issues, sensor failures, and cooling system faults all fall within our standard engine repair scope. We identify the root cause and address it — not the most convenient surface symptom.",
+                    "Not every BMW X1 engine problem requires a full rebuild. Our BMW X1 engine repair and engine fault repair service begins with thorough diagnostic work   full electronic fault scanning, compression testing, oil analysis, and systematic physical inspection   so the work carried out is precisely targeted to the actual fault.",
+                    "Oil leaks from ageing seals and gaskets, EGR system faults on diesel variants, VANOS system wear on petrol units, injector issues, sensor failures, and cooling system faults all fall within our standard engine repair scope. We identify the root cause and address it   not the most convenient surface symptom.",
                   ],
                 },
                 {
                   title: "Engine Replacement & Engine Swap",
                   paragraphs: [
-                    "When internal damage has progressed beyond economical repair, we supply and fit reconditioned and low-mileage used BMW X1 engines across all generations and engine families — every unit sourced from verified suppliers and assessed before installation. Our BMW X1 engine swap service covers scenarios where a direct like-for-like replacement is not the objective, managing the complete process including ECU calibration, ancillary adaptation, and post-swap diagnostic verification.",
+                    "When internal damage has progressed beyond economical repair, we supply and fit reconditioned and low-mileage used BMW X1 engines across all generations and engine families   every unit sourced from verified suppliers and assessed before installation. Our BMW X1 engine swap service covers scenarios where a direct like-for-like replacement is not the objective, managing the complete process including ECU calibration, ancillary adaptation, and post-swap diagnostic verification.",
                   ],
                 },
                 {
                   title: "Timing Belt Replacement",
                   paragraphs: [
-                    "Certain BMW X1 configurations — particularly some earlier E84 petrol variants — incorporate timing belt components within the valve train system. A timing belt fails without meaningful warning, and when it does, engine damage is immediate and total. We carry timing belt kits for all applicable X1 engine configurations and recommend replacement at or ahead of BMW's specified service intervals on any vehicle with an incomplete service history.",
+                    "Certain BMW X1 configurations   particularly some earlier E84 petrol variants   incorporate timing belt components within the valve train system. A timing belt fails without meaningful warning, and when it does, engine damage is immediate and total. We carry timing belt kits for all applicable X1 engine configurations and recommend replacement at or ahead of BMW's specified service intervals on any vehicle with an incomplete service history.",
                   ],
                 },
                 {
                   title: "Engine Health Check & Diagnostic",
                   paragraphs: [
-                    "Not certain what is wrong with your X1? Or considering buying a used E84 or F48 and wanting an honest assessment of the engine's condition — particularly the timing chain system on diesel variants — before you commit? Our BMW X1 engine health check and engine inspection covers full compression testing across all cylinders, oil condition analysis, comprehensive electronic diagnostic scanning, and a thorough visual inspection including timing system assessment.",
-                    "You receive a written report with clear, honest findings. No upselling, no manufactured urgency — just the accurate information you need to make the right decision about your vehicle.",
+                    "Not certain what is wrong with your X1? Or considering buying a used E84 or F48 and wanting an honest assessment of the engine's condition   particularly the timing chain system on diesel variants   before you commit? Our BMW X1 engine health check and engine inspection covers full compression testing across all cylinders, oil condition analysis, comprehensive electronic diagnostic scanning, and a thorough visual inspection including timing system assessment.",
+                    "You receive a written report with clear, honest findings. No upselling, no manufactured urgency   just the accurate information you need to make the right decision about your vehicle.",
                   ],
                 },
               ].map((item) => (
@@ -393,20 +393,20 @@ export default function BmwX1EnginesClient() {
           <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
             {[
               {
-                title: "Fast UK-Wide Service From Our Grays, Essex Workshop",
+                title: "Fast UK-Wide Service From Our  Workshop",
                 paragraphs: [
-                  "Engine Collection & Return — Full UK Coverage",
-                  "Not local to Grays? That is not a barrier. We operate a fully managed engine collection and delivery service covering the whole of the United Kingdom. Send your unit to us and we will return it rebuilt, repaired, or replaced — fully tested and ready to install. We also work with a trusted network of approved fitting partners nationwide for customers who need local installation.",
-                  "Confirmed Turnaround Times — Realistic and Delivered",
+                  "Engine Collection & Return   Full UK Coverage",
+                  "Not local to ? That is not a barrier. We operate a fully managed engine collection and delivery service covering the whole of the United Kingdom. Send your unit to us and we will return it rebuilt, repaired, or replaced   fully tested and ready to install. We also work with a trusted network of approved fitting partners nationwide for customers who need local installation.",
+                  "Confirmed Turnaround Times   Realistic and Delivered",
                   "Most BMW X1 engine rebuilds are completed within 5–10 working days from parts confirmation. Repairs and replacements are frequently completed more quickly. We confirm your specific timeframe at booking and communicate clearly if anything changes.",
                   "Written Warranty on Every Job",
-                  "Every engine rebuild, repair, and replacement that leaves Vogue Technics carries a written warranty. We stand behind our work because we are confident in the standard it is done to — and we want every X1 owner who trusts us to drive away with complete confidence in what has been done.",
+                  "Every engine rebuild, repair, and replacement that leaves Vogue Technics carries a written warranty. We stand behind our work because we are confident in the standard it is done to   and we want every X1 owner who trusts us to drive away with complete confidence in what has been done.",
                 ],
               },
               {
                 title: "Ready to get your BMW X1 back on the road properly?",
                 paragraphs: [
-                  "Call Vogue Technics today or complete our online enquiry form for a fast, no-obligation quote. We are based in Grays, Essex, and serve BMW owners right across the United Kingdom. Your X1 deserves more than a generalist approach — and that is precisely what we provide.",
+                  "Call Vogue Technics today or complete our online enquiry form for a fast, no-obligation quote. We are based in , and serve BMW owners right across the United Kingdom. Your X1 deserves more than a generalist approach   and that is precisely what we provide.",
                 ],
                 cta: true,
               },
@@ -444,7 +444,7 @@ export default function BmwX1EnginesClient() {
       <FAQSection
         title={
           <>
-            Frequently Asked Questions — <span className="text-primary italic">BMW X1 Engine Work</span>
+            Frequently Asked Questions   <span className="text-primary italic">BMW X1 Engine Work</span>
           </>
         }
         items={faqs}

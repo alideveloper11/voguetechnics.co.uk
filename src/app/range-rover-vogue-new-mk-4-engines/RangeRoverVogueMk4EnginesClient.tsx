@@ -14,13 +14,13 @@ const services = [
     title: "Head Gasket Replacement",
     slug: "head-gasket-replacement",
     body:
-      "A failing head gasket is one of the most common and costly issues on the MK4 Vogue. White smoke, overheating, or coolant loss are tell-tale signs. Our technicians replace head gaskets using OEM-grade components, ensuring a proper seal and long-term reliability. Catching it early saves your engine — don't delay.",
+      "A failing head gasket is one of the most common and costly issues on the MK4 Vogue. White smoke, overheating, or coolant loss are tell-tale signs. Our technicians replace head gaskets using OEM-grade components, ensuring a proper seal and long-term reliability. Catching it early saves your engine   don't delay.",
   },
   {
     title: "Timing Chain Replacement",
     slug: "timing-chain-replacement",
     body:
-      "The 3.0 TDV6 engine in the Vogue MK4 is known for timing chain wear, particularly on higher-mileage vehicles. A stretched or snapped timing chain can cause catastrophic engine damage within seconds. We replace timing chains and associated tensioners, guides, and sprockets as a complete kit — not a half-measure.",
+      "The 3.0 TDV6 engine in the Vogue MK4 is known for timing chain wear, particularly on higher-mileage vehicles. A stretched or snapped timing chain can cause catastrophic engine damage within seconds. We replace timing chains and associated tensioners, guides, and sprockets as a complete kit   not a half-measure.",
   },
   {
     title: "Turbo Replacement",
@@ -32,7 +32,7 @@ const services = [
     title: "Engine Rebuild",
     slug: "engine-rebuild",
     body:
-      "If your MK4 Vogue engine has high mileage or significant wear, a full rebuild is often the most cost-effective long-term solution. We strip the engine down completely, inspect every component, replace worn parts, and reassemble to factory tolerances. The result is essentially a fresh engine — at a fraction of the cost of a new one.",
+      "If your MK4 Vogue engine has high mileage or significant wear, a full rebuild is often the most cost-effective long-term solution. We strip the engine down completely, inspect every component, replace worn parts, and reassemble to factory tolerances. The result is essentially a fresh engine   at a fraction of the cost of a new one.",
   },
   {
     title: "Engine Repair",
@@ -44,25 +44,25 @@ const services = [
     title: "Engine Replacement",
     slug: "engine-replacement",
     body:
-      "Sometimes replacement is the smarter call — especially when multiple components have failed. We supply and fit quality reconditioned or low-mileage used engines for the Range Rover Vogue MK4, sourced from trusted suppliers and tested before installation.",
+      "Sometimes replacement is the smarter call   especially when multiple components have failed. We supply and fit quality reconditioned or low-mileage used engines for the Range Rover Vogue MK4, sourced from trusted suppliers and tested before installation.",
   },
   {
     title: "Engine Swap",
     slug: "engine-swap",
     body:
-      "Upgrading from a diesel to the 5.0 V8 supercharged petrol, or fitting a newer engine variant into an earlier MK4 shell? Our engine swap service covers the full process — mapping, mounts, ancillaries, and post-swap diagnostics — done properly from start to finish.",
+      "Upgrading from a diesel to the 5.0 V8 supercharged petrol, or fitting a newer engine variant into an earlier MK4 shell? Our engine swap service covers the full process   mapping, mounts, ancillaries, and post-swap diagnostics   done properly from start to finish.",
   },
   {
     title: "Timing Belt Replacement",
     slug: "timing-belt-replacement",
     body:
-      "Certain MK4 Vogue variants use a timing belt rather than a chain. A snapped belt means instant engine destruction. We recommend replacing it at the manufacturer's specified interval — or earlier if you're unsure of its history. We carry belts and kits for all applicable MK4 engine configurations.",
+      "Certain MK4 Vogue variants use a timing belt rather than a chain. A snapped belt means instant engine destruction. We recommend replacing it at the manufacturer's specified interval   or earlier if you're unsure of its history. We carry belts and kits for all applicable MK4 engine configurations.",
   },
   {
     title: "Engine Health Check",
     slug: "engine-health-check",
     body:
-      "Not sure what's wrong — or just want peace of mind before buying a used MK4 Vogue? Our engine health check covers compression testing, oil analysis, diagnostic scanning, and a full visual inspection. You'll receive a written report with honest recommendations, no upselling, no fluff.",
+      "Not sure what's wrong   or just want peace of mind before buying a used MK4 Vogue? Our engine health check covers compression testing, oil analysis, diagnostic scanning, and a full visual inspection. You'll receive a written report with honest recommendations, no upselling, no fluff.",
   },
 ];
 
@@ -80,7 +80,7 @@ const faqs = [
   {
     question: "Is it worth rebuilding a Range Rover Vogue MK4 engine?",
     answer:
-      "In most cases, yes — especially for vehicles in otherwise good condition. A quality rebuild significantly extends the vehicle's life and is far cheaper than buying a replacement car at this level.",
+      "In most cases, yes   especially for vehicles in otherwise good condition. A quality rebuild significantly extends the vehicle's life and is far cheaper than buying a replacement car at this level.",
   },
   {
     question: "Do you offer a warranty on rebuilt engines?",
@@ -90,7 +90,7 @@ const faqs = [
   {
     question: "Can you fit the engine as well as supply it?",
     answer:
-      "Absolutely. We offer full supply and fit at our Grays, Essex workshop. We can also arrange fitting through our approved installer network if you're located elsewhere in the UK.",
+      "Absolutely. We offer full supply and fit at our  workshop. We can also arrange fitting through our approved installer network if you're located elsewhere in the UK.",
   },
   {
     question: "How long does a Range Rover Vogue MK4 engine replacement take?",
@@ -106,7 +106,7 @@ export default function RangeRoverVogueMk4EnginesClient() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/car_bgg.jpg"
-            alt="Range Rover Vogue MK4 engine specialist in Grays"
+            alt="Range Rover Vogue MK4 engine specialist in "
             fill
             className="object-cover opacity-30 mix-blend-overlay"
             priority
@@ -131,7 +131,7 @@ export default function RangeRoverVogueMk4EnginesClient() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-300 to-green-400">
                 Range Rover Vogue MK4 Engines
               </span>{" "}
-              — Expert Rebuilds, Repairs & Replacements Across the UK
+                Expert Rebuilds, Repairs & Replacements Across the UK
             </motion.h1>
 
             <motion.div
@@ -150,7 +150,7 @@ export default function RangeRoverVogueMk4EnginesClient() {
               className="mt-7 max-w-4xl text-sm leading-relaxed text-slate-300 md:text-base space-y-4"
             >
               <p>
-                If you own a Range Rover Vogue MK4 (L405, 2012–2021) and you're facing engine trouble, you've landed in the right place. At Vogue Technics, based in Grays, Essex, we specialise exclusively in Land Rover and Range Rover engines — and the MK4 Vogue is our bread and butter. Whether your engine has seized, your timing chain has gone, or you simply want a fully rebuilt unit to extend your vehicle's life, we deliver quality you can trust, backed by over 25 years of hands-on experience.
+                If you own a Range Rover Vogue MK4 (L405, 2012–2021) and you're facing engine trouble, you've landed in the right place. At Vogue Technics, based in , we specialise exclusively in Land Rover and Range Rover engines   and the MK4 Vogue is our bread and butter. Whether your engine has seized, your timing chain has gone, or you simply want a fully rebuilt unit to extend your vehicle's life, we deliver quality you can trust, backed by over 25 years of hands-on experience.
               </p>
             </motion.div>
           </div>
@@ -167,19 +167,19 @@ export default function RangeRoverVogueMk4EnginesClient() {
               <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
                 <h3 className="font-bold text-slate-900">Specialists, Not Generalists</h3>
                 <p className="mt-3 text-slate-700 leading-relaxed">
-                  We don't work on Ford Fiestas one day and Range Rovers the next. Every technician at Vogue Technics is trained specifically on Land Rover and Range Rover platforms. The MK4 Vogue&apos;s 3.0 TDV6, 4.4 V8 diesel, and 5.0 V8 supercharged engines each have their own quirks — and we know every single one of them.
+                  We don't work on Ford Fiestas one day and Range Rovers the next. Every technician at Vogue Technics is trained specifically on Land Rover and Range Rover platforms. The MK4 Vogue&apos;s 3.0 TDV6, 4.4 V8 diesel, and 5.0 V8 supercharged engines each have their own quirks   and we know every single one of them.
                 </p>
               </div>
               <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
                 <h3 className="font-bold text-slate-900">Over 25 Years Serving UK Drivers</h3>
                 <p className="mt-3 text-slate-700 leading-relaxed">
-                  Since our founding, we've rebuilt and replaced thousands of engines for Range Rover owners across the UK. Our reputation in Grays and beyond has been built entirely on word of mouth — because when we fix your engine, it stays fixed.
+                  Since our founding, we've rebuilt and replaced thousands of engines for Range Rover owners across the UK. Our reputation in  and beyond has been built entirely on word of mouth   because when we fix your engine, it stays fixed.
                 </p>
               </div>
               <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
                 <h3 className="font-bold text-slate-900">Transparent Pricing, No Hidden Surprises</h3>
                 <p className="mt-3 text-slate-700 leading-relaxed">
-                  We know engine work can feel daunting, especially on a premium vehicle. That's why we give you a clear, itemised quote upfront — no vague estimates, no nasty surprises on collection day. Call us or use our online form to get your quote today.
+                  We know engine work can feel daunting, especially on a premium vehicle. That's why we give you a clear, itemised quote upfront   no vague estimates, no nasty surprises on collection day. Call us or use our online form to get your quote today.
                 </p>
               </div>
             </div>
@@ -193,7 +193,7 @@ export default function RangeRoverVogueMk4EnginesClient() {
             <h2 className="text-2xl md:text-3xl font-bold text-slate-900">Our Range Rover Vogue MK4 Engine Services</h2>
             <div className="w-24 h-1 bg-primary mx-auto rounded-full mt-4"></div>
             <p className="mt-6 text-slate-600 text-[1.05rem] leading-relaxed">
-              We offer a full spectrum of engine services for the Range Rover Vogue MK4. Whatever the problem — from a cracked head gasket to a complete engine swap — we have the solution.
+              We offer a full spectrum of engine services for the Range Rover Vogue MK4. Whatever the problem   from a cracked head gasket to a complete engine swap   we have the solution.
             </p>
           </div>
 
@@ -225,23 +225,23 @@ export default function RangeRoverVogueMk4EnginesClient() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
-              Fast UK-Wide Delivery & Local Service in Grays, Essex
+              Fast UK-Wide Delivery & Local Service in 
             </h2>
             <div className="mt-6 space-y-6 text-slate-700 leading-relaxed">
               <p>
-                We understand that being without your Range Rover Vogue is frustrating — and expensive if it's your daily driver. That's why we work quickly without cutting corners.
+                We understand that being without your Range Rover Vogue is frustrating   and expensive if it's your daily driver. That's why we work quickly without cutting corners.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
                   <h3 className="font-bold text-slate-900">Engine Collection & Delivery Across the UK</h3>
                   <p className="mt-3">
-                    Can&apos;t get to us in Grays? No problem. We offer an engine collection and delivery service covering the whole of the UK. Send us your old unit, and we'll return your rebuilt or replacement engine fully tested and ready to fit — or we can arrange fitting through our trusted network of approved installers nationwide.
+                    Can&apos;t get to us in ? No problem. We offer an engine collection and delivery service covering the whole of the UK. Send us your old unit, and we'll return your rebuilt or replacement engine fully tested and ready to fit   or we can arrange fitting through our trusted network of approved installers nationwide.
                   </p>
                 </div>
                 <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
                   <h3 className="font-bold text-slate-900">Fast Turnaround Times</h3>
                   <p className="mt-3">
-                    Most engine rebuilds are completed within 5–10 working days. Replacements and repairs are often quicker. We&apos;ll give you a realistic timeframe when you book — and we stick to it.
+                    Most engine rebuilds are completed within 5–10 working days. Replacements and repairs are often quicker. We&apos;ll give you a realistic timeframe when you book   and we stick to it.
                   </p>
                 </div>
                 <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
@@ -272,17 +272,17 @@ export default function RangeRoverVogueMk4EnginesClient() {
               {
                 quote:
                   '"Vogue Technics rebuilt the 3.0 TDV6 in my 2016 Range Rover Vogue. Brilliant communication throughout, fair price, and the engine runs better than ever. Highly recommend to any Range Rover owner."',
-                by: "— James R., London",
+                by: "  James R., London",
               },
               {
                 quote:
                   '"I was quoted nearly £9,000 elsewhere for an engine replacement. Vogue Technics did the job for significantly less and gave me a warranty too. Absolute professionals."',
-                by: "— Karen M., Birmingham",
+                by: "  Karen M., Birmingham",
               },
               {
                 quote:
                   '"Sent my engine down from Manchester. It came back beautifully rebuilt, well packaged, and ahead of schedule. Five stars."',
-                by: "— Paul T., Manchester",
+                by: "  Paul T., Manchester",
               },
             ].map((t) => (
               <div
@@ -303,7 +303,7 @@ export default function RangeRoverVogueMk4EnginesClient() {
       </section>
 
       <FAQSection
-        title={<>Frequently Asked Questions — <span className="text-primary italic">Range Rover Vogue MK4 Engines</span></>}
+        title={<>Frequently Asked Questions   <span className="text-primary italic">Range Rover Vogue MK4 Engines</span></>}
         items={faqs}
       />
 
@@ -314,7 +314,7 @@ export default function RangeRoverVogueMk4EnginesClient() {
               Ready to get your Range Rover Vogue MK4 back on the road?
             </h2>
             <p className="text-emerald-50 leading-relaxed max-w-3xl mx-auto">
-              Call Vogue Technics today or fill in our online enquiry form for a fast, no-obligation quote. We're based in Grays, Essex, and serve Range Rover owners across the whole of the United Kingdom. Don&apos;t trust your Vogue to just anyone — trust the specialists.
+              Call Vogue Technics today or fill in our online enquiry form for a fast, no-obligation quote. We're based in , and serve Range Rover owners across the whole of the United Kingdom. Don&apos;t trust your Vogue to just anyone   trust the specialists.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <a

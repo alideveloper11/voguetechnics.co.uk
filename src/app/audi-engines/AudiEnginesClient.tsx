@@ -11,31 +11,31 @@ import FAQSection from "@/components/common/FAQSection";
 
 const audiModels = [
   { title: "Audi A1 Engines", link: "/audi-a1-engines", description: "Compact Audi engines repaired, rebuilt or replaced with accurate diagnostics and warranty-backed work." },
-  { title: "Audi A1 Sportback Engines", link: "/audi-a1-sportback-engines", description: "Sportback engine solutions from timing work to full rebuilds — done properly and clearly quoted." },
-  { title: "Audi A2 Engines", link: "/audi-a2-engines", description: "Specialist engine repairs and rebuilds for the unique Audi A2 — clearly quoted and warranty-backed." },
-  { title: "Audi A3 Engines", link: "/audi-a3-engines", description: "Common A3 engine faults fixed the right way — repairs, rebuilds, replacements and health checks." },
-  { title: "Audi A3 Convertible Engines", link: "/audi-a3-convertible-engines", description: "Cabriolet engine specialists for TFSI/TDI variants — targeted repairs through to full rebuilds." },
+  { title: "Audi A1 Sportback Engines", link: "/audi-a1-sportback-engines", description: "Sportback engine solutions from timing work to full rebuilds   done properly and clearly quoted." },
+  { title: "Audi A2 Engines", link: "/audi-a2-engines", description: "Specialist engine repairs and rebuilds for the unique Audi A2   clearly quoted and warranty-backed." },
+  { title: "Audi A3 Engines", link: "/audi-a3-engines", description: "Common A3 engine faults fixed the right way   repairs, rebuilds, replacements and health checks." },
+  { title: "Audi A3 Convertible Engines", link: "/audi-a3-convertible-engines", description: "Cabriolet engine specialists for TFSI/TDI variants   targeted repairs through to full rebuilds." },
   { title: "Audi A3 Limousine Engines", link: "/audi-a3-limousine-engines", description: "A3 Saloon/Limousine engine work with OEM-quality parts and written warranty as standard." },
   { title: "Audi A3 Sportback Engines", link: "/audi-a3-sportback-engines", description: "Sportback engine repairs and rebuilds with clear diagnostics and reliable long-term outcomes." },
-  { title: "Audi A4 Engines", link: "/audi-a4-engines", description: "A4 engine rebuild, repair or replacement — covering TFSI and TDI variants across generations." },
-  { title: "Audi A4 Allroad Engines", link: "/audi-a4-allroad-engines", description: "Allroad engine faults solved with specialist diagnosis — from timing issues to full rebuilds." },
-  { title: "Audi A4 Avant Engines", link: "/audi-a4-avant-engines", description: "Avant engines fixed for the long run — rebuilds, replacements and major repairs with warranty." },
-  { title: "Audi A5 Engines", link: "/audi-a5-engines", description: "A5 engine specialists for coupe models — oil issues, timing faults, turbos and full rebuilds." },
-  { title: "Audi A5 Convertible Engines", link: "/audi-a5-convertible-engines", description: "Cabriolet engine work with transparent pricing — repair, rebuild, replacement and swaps." },
-  { title: "Audi A5 Sportback Engines", link: "/audi-a5-sportback-engines", description: "Sportback engine repairs done properly — accurate diagnosis first, then the right fix." },
+  { title: "Audi A4 Engines", link: "/audi-a4-engines", description: "A4 engine rebuild, repair or replacement   covering TFSI and TDI variants across generations." },
+  { title: "Audi A4 Allroad Engines", link: "/audi-a4-allroad-engines", description: "Allroad engine faults solved with specialist diagnosis   from timing issues to full rebuilds." },
+  { title: "Audi A4 Avant Engines", link: "/audi-a4-avant-engines", description: "Avant engines fixed for the long run   rebuilds, replacements and major repairs with warranty." },
+  { title: "Audi A5 Engines", link: "/audi-a5-engines", description: "A5 engine specialists for coupe models   oil issues, timing faults, turbos and full rebuilds." },
+  { title: "Audi A5 Convertible Engines", link: "/audi-a5-convertible-engines", description: "Cabriolet engine work with transparent pricing   repair, rebuild, replacement and swaps." },
+  { title: "Audi A5 Sportback Engines", link: "/audi-a5-sportback-engines", description: "Sportback engine repairs done properly   accurate diagnosis first, then the right fix." },
   { title: "Audi A6 Engines", link: "/audi-a6-engines", description: "A6 engines rebuilt, repaired or replaced with specialist tooling and a clear, itemised quote." },
-  { title: "Audi A6 Allroad Engines", link: "/audi-a6-allroad-engines", description: "Allroad engines for serious mileage — rebuilds and replacements that hold up over time." },
-  { title: "Audi A6 Avant Engines", link: "/audi-a6-avant-engines", description: "Avant engine solutions for C6/C7/C8 — timing, head gasket, turbos, rebuilds and swaps." },
-  { title: "Audi A7 Sportback Engines", link: "/audi-a7-sportback-engines", description: "A7 engine specialists for premium platforms — diagnosis-led repairs, rebuilds and replacements." },
-  { title: "Audi A8 Engines", link: "/audi-a8-engines", description: "Flagship A8 engine work handled by specialists — precision diagnosis and warranty-backed results." },
-  { title: "Audi Q2 Engines", link: "/audi-q2-engines", description: "Q2 engine repairs and rebuilds for MQB variants — timing systems, turbos and major faults." },
-  { title: "Audi Q3 Engines", link: "/audi-q3-engines", description: "Q3 engine specialists for 8U/F3 — accurate diagnosis, quality parts and clear reporting." },
-  { title: "Audi Q5 Engines", link: "/audi-q5-engines", description: "Q5 engine solutions across TDI/TFSI — from targeted repairs to complete rebuilds and swaps." },
-  { title: "Audi Q7 Engines", link: "/audi-q7-engines", description: "Large SUV engines demand expertise — rebuilds, replacements and major repairs done properly." },
-  { title: "Audi R8 Engines", link: "/audi-r8-engines", description: "High-performance R8 engines rebuilt with precision — V8/V10 specialist knowledge and tooling." },
-  { title: "Audi R8 Spyder Engines", link: "/audi-r8-spyder-engines", description: "R8 Spyder engine work built for supercar standards — accurate assessment and premium results." },
-  { title: "Audi TT Engines", link: "/audi-tt-engines", description: "TT engines across 8N/8J/8S — timing, turbo and rebuild services with long-term reliability." },
-  { title: "Audi TT Roadster Engines", link: "/audi-tt-roadster-engines", description: "Roadster engine specialists — diagnosis-led repairs, rebuilds and replacements across the UK." },
+  { title: "Audi A6 Allroad Engines", link: "/audi-a6-allroad-engines", description: "Allroad engines for serious mileage   rebuilds and replacements that hold up over time." },
+  { title: "Audi A6 Avant Engines", link: "/audi-a6-avant-engines", description: "Avant engine solutions for C6/C7/C8   timing, head gasket, turbos, rebuilds and swaps." },
+  { title: "Audi A7 Sportback Engines", link: "/audi-a7-sportback-engines", description: "A7 engine specialists for premium platforms   diagnosis-led repairs, rebuilds and replacements." },
+  { title: "Audi A8 Engines", link: "/audi-a8-engines", description: "Flagship A8 engine work handled by specialists   precision diagnosis and warranty-backed results." },
+  { title: "Audi Q2 Engines", link: "/audi-q2-engines", description: "Q2 engine repairs and rebuilds for MQB variants   timing systems, turbos and major faults." },
+  { title: "Audi Q3 Engines", link: "/audi-q3-engines", description: "Q3 engine specialists for 8U/F3   accurate diagnosis, quality parts and clear reporting." },
+  { title: "Audi Q5 Engines", link: "/audi-q5-engines", description: "Q5 engine solutions across TDI/TFSI   from targeted repairs to complete rebuilds and swaps." },
+  { title: "Audi Q7 Engines", link: "/audi-q7-engines", description: "Large SUV engines demand expertise   rebuilds, replacements and major repairs done properly." },
+  { title: "Audi R8 Engines", link: "/audi-r8-engines", description: "High-performance R8 engines rebuilt with precision   V8/V10 specialist knowledge and tooling." },
+  { title: "Audi R8 Spyder Engines", link: "/audi-r8-spyder-engines", description: "R8 Spyder engine work built for supercar standards   accurate assessment and premium results." },
+  { title: "Audi TT Engines", link: "/audi-tt-engines", description: "TT engines across 8N/8J/8S   timing, turbo and rebuild services with long-term reliability." },
+  { title: "Audi TT Roadster Engines", link: "/audi-tt-roadster-engines", description: "Roadster engine specialists   diagnosis-led repairs, rebuilds and replacements across the UK." },
 ];
 
 const audiEngineSizes = [
@@ -67,7 +67,7 @@ const audiTrustIndicators = [
   "OEM Quality Parts",
   "Transparent Quotes",
   "UK-Wide Delivery",
-  "Grays, Essex Workshop",
+  " Workshop",
 ];
 
 const audiServices = [
@@ -80,7 +80,7 @@ const audiServices = [
   {
     title: "Timing Chain Replacement",
     description:
-      "Complete timing chain assembly replacement — chain, tensioners, guides, seals — as a properly sequenced job. No half-measures.",
+      "Complete timing chain assembly replacement   chain, tensioners, guides, seals   as a properly sequenced job. No half-measures.",
     href: "/services/timing-chain-replacement",
   },
   {
@@ -92,7 +92,7 @@ const audiServices = [
   {
     title: "Engine Rebuild",
     description:
-      "Full strip-down, inspection to manufacturer tolerances, replacement of worn internals, reassembly and testing — restoring factory-spec performance at a sensible cost.",
+      "Full strip-down, inspection to manufacturer tolerances, replacement of worn internals, reassembly and testing   restoring factory-spec performance at a sensible cost.",
     href: "/services/engine-rebuild",
   },
   {
@@ -102,9 +102,9 @@ const audiServices = [
     href: "/services/engine-repair",
   },
   {
-    title: "Engine Replacement — Used & Reconditioned",
+    title: "Engine Replacement   Used & Reconditioned",
     description:
-      "Used and fully reconditioned Audi engines supplied with written warranty. Supply-only or complete supply and fit at Grays — clearly quoted up-front.",
+      "Used and fully reconditioned Audi engines supplied with written warranty. Supply-only or complete supply and fit at    clearly quoted up-front.",
     href: "/services/engine-replacement",
   },
   {
@@ -122,7 +122,7 @@ const audiServices = [
   {
     title: "Engine Health Check",
     description:
-      "Compression testing, OBD diagnostics, oil condition analysis and targeted inspection of known failure points — with a clear written report.",
+      "Compression testing, OBD diagnostics, oil condition analysis and targeted inspection of known failure points   with a clear written report.",
     href: "/services/engine-health-check",
   },
 ];
@@ -146,7 +146,7 @@ const audiFaqs = [
   {
     question: "How long does an Audi engine replacement take?",
     answer:
-      "A straightforward engine replacement at our Grays workshop is typically completed within three to five working days. A full engine rebuild takes five to ten working days depending on parts availability and scope.",
+      "A straightforward engine replacement at our  workshop is typically completed within three to five working days. A full engine rebuild takes five to ten working days depending on parts availability and scope.",
   },
   {
     question: "Do your reconditioned Audi engines come with a warranty?",
@@ -161,7 +161,7 @@ const audiFaqs = [
   {
     question: "Do you offer Audi engine diagnostics before repair?",
     answer:
-      "Yes, always. We carry out a full diagnostic assessment — including OBD scanning, compression testing, and inspection — before quoting on any repair or replacement.",
+      "Yes, always. We carry out a full diagnostic assessment   including OBD scanning, compression testing, and inspection   before quoting on any repair or replacement.",
   },
 ];
 
@@ -201,7 +201,7 @@ export default function AudiEnginesClient() {
               Audi Engine Replacement (UK)
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-300 to-green-400 font-extrabold">
-                Expert rebuilds, repairs & reconditioned engines in Grays, Essex
+                Expert rebuilds, repairs & reconditioned engines in 
               </span>
             </motion.h1>
 
@@ -221,7 +221,7 @@ export default function AudiEnginesClient() {
               className="text-base md:text-lg text-slate-200 mb-8 max-w-2xl mx-auto leading-relaxed"
             >
               When your Audi develops a serious engine problem, the decisions you make matter. Choose the right specialist and you&apos;ll get your car
-              back running the way it should — properly fixed, properly warranted, and clearly quoted.
+              back running the way it should   properly fixed, properly warranted, and clearly quoted.
             </motion.p>
 
             <motion.p
@@ -230,7 +230,7 @@ export default function AudiEnginesClient() {
               transition={{ delay: 0.26 }}
               className="text-sm md:text-base text-slate-200/80 mb-8 max-w-3xl mx-auto leading-relaxed"
             >
-              At Vogue Technics in Grays, Essex, we&apos;ve carried out Audi engine replacements, rebuilds, and repairs across the UK for over 25 years —
+              At Vogue Technics in , we&apos;ve carried out Audi engine replacements, rebuilds, and repairs across the UK for over 25 years  
               from 1.8 and 2.0 TFSI petrol units through to 3.0 TDI V6 diesel and high-performance S/RS V8 and V10 engines.
             </motion.p>
 
@@ -258,7 +258,7 @@ export default function AudiEnginesClient() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-2xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
-              Our Complete Audi Engine Services — Everything Under One Roof in Grays
+              Our Complete Audi Engine Services   Everything Under One Roof in 
             </h2>
             <p className="mt-5 text-slate-700 leading-relaxed text-base md:text-lg">
               Every Audi engine service we provide is carried out entirely in-house by our own specialist technicians, using quality-matched
@@ -715,7 +715,7 @@ export default function AudiEnginesClient() {
       <FAQSection
         title={
           <>
-            Frequently Asked Questions — <span className="text-primary italic">Audi Engine Replacement UK</span>
+            Frequently Asked Questions   <span className="text-primary italic">Audi Engine Replacement UK</span>
           </>
         }
         items={audiFaqs}

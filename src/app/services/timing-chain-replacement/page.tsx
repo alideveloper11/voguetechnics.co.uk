@@ -57,13 +57,13 @@ export default function TimingChainReplacementPage() {
             >
               <p>
                 That rattling sound on a cold start is not something to investigate next month. On most prestige vehicles, a timing
-                chain rattle is one of the clearest warnings an engine can give — and ignoring it is a decision that tends to end
+                chain rattle is one of the clearest warnings an engine can give   and ignoring it is a decision that tends to end
                 with a bill several times larger than the replacement would have cost.
               </p>
               <p>
                 At Vogue Technics, we carry out timing chain replacement across Range Rover, Land Rover, Jaguar, Audi, and BMW. Every
                 job uses OEM or OEM-specification parts, every quote is written and agreed before work begins, and every replacement
-                carries a minimum six-month warranty. Based in Grays, Essex, with UK-wide collection available.
+                carries a minimum six-month warranty. Based in , with UK-wide collection available.
               </p>
             </motion.div>
 
@@ -127,7 +127,7 @@ export default function TimingChainReplacementPage() {
 
           <div className="max-w-5xl mx-auto space-y-6 text-slate-600 leading-relaxed font-medium text-sm md:text-base bg-slate-50 border border-slate-100 rounded-[3rem] p-10 md:p-12">
             <p>
-              Timing chain problems rarely appear without warning. The difficulty is that the early signs are easy to dismiss —
+              Timing chain problems rarely appear without warning. The difficulty is that the early signs are easy to dismiss  
               until the damage becomes irreversible.
             </p>
             <p>
@@ -139,7 +139,7 @@ export default function TimingChainReplacementPage() {
               causes the engine to stop without warning and suffer catastrophic internal damage.
             </p>
             <p>
-              If any of these apply to your vehicle, the timing chain needs specialist attention now — not after the next service.
+              If any of these apply to your vehicle, the timing chain needs specialist attention now   not after the next service.
             </p>
             <div className="pt-6">
               <Link href="/contact-us" className="inline-flex items-center gap-2 text-primary font-black text-xs tracking-widest uppercase">
@@ -162,7 +162,7 @@ export default function TimingChainReplacementPage() {
 
           <div className="max-w-5xl mx-auto space-y-6 text-slate-600 leading-relaxed font-medium text-sm md:text-base bg-white border border-slate-100 rounded-[3rem] p-10 md:p-12 shadow-sm">
             <p>
-              A worn timing chain does not just affect performance. When it fails completely — and it will, if left long enough —
+              A worn timing chain does not just affect performance. When it fails completely   and it will, if left long enough  
               the consequences are severe. On interference engines, which includes the majority of modern prestige vehicle
               platforms, a snapped or jumped timing chain causes the pistons and valves to collide. The result is bent valves,
               damaged pistons, and in many cases a destroyed cylinder head. What started as a timing chain replacement becomes a
@@ -191,26 +191,26 @@ export default function TimingChainReplacementPage() {
               {
                 title: "Range Rover Timing Chain Replacement",
                 text: [
-                  "Range Rover timing chain issues are well documented across several platforms — and owners who hear the cold start rattle and delay investigation consistently end up with more serious and costly repairs. We carry out Range Rover timing chain replacement across the full model range, covering TDV6, SDV6, TDV8, and Ingenium 2.0 diesel and petrol engines.",
-                  "The Ingenium 2.0 diesel fitted to the Range Rover Evoque and newer Sport models is one of the most affected platforms — timing chain wear on this engine appears earlier than many owners expect, often before 80,000 miles. Range Rover timing chain replacement cost varies by platform and whether tensioners and guides require replacement alongside the chain. We always provide a full written quote following inspection.",
-                  "Do Range Rovers have a timing belt or chain? All current Range Rover engines use a timing chain — there is no timing belt on any modern JLR petrol or diesel platform.",
+                  "Range Rover timing chain issues are well documented across several platforms   and owners who hear the cold start rattle and delay investigation consistently end up with more serious and costly repairs. We carry out Range Rover timing chain replacement across the full model range, covering TDV6, SDV6, TDV8, and Ingenium 2.0 diesel and petrol engines.",
+                  "The Ingenium 2.0 diesel fitted to the Range Rover Evoque and newer Sport models is one of the most affected platforms   timing chain wear on this engine appears earlier than many owners expect, often before 80,000 miles. Range Rover timing chain replacement cost varies by platform and whether tensioners and guides require replacement alongside the chain. We always provide a full written quote following inspection.",
+                  "Do Range Rovers have a timing belt or chain? All current Range Rover engines use a timing chain   there is no timing belt on any modern JLR petrol or diesel platform.",
                 ],
                 href: "/range-rover-engines",
               },
               {
                 title: "Land Rover Timing Chain Replacement",
                 text: [
-                  "Land Rover timing chain replacement is one of the most frequently requested jobs across the Discovery Sport, Evoque, and Freelander range. The 2.0 Ingenium diesel — fitted across Discovery Sport, Evoque, and current Defender models — develops timing chain wear that requires specialist attention and OEM-specification parts to resolve correctly.",
+                  "Land Rover timing chain replacement is one of the most frequently requested jobs across the Discovery Sport, Evoque, and Freelander range. The 2.0 Ingenium diesel   fitted across Discovery Sport, Evoque, and current Defender models   develops timing chain wear that requires specialist attention and OEM-specification parts to resolve correctly.",
                   "Land Rover Discovery timing chain replacement cost depends on the specific platform and the condition of the tensioners and guides at the time of replacement. We carry out a full assessment before quoting, and we include tensioner and guide inspection as standard on every timing chain job.",
-                  "The Land Rover 5.0 petrol engine fitted to the Range Rover Sport and Discovery 4 V8 also requires timing chain tensioner replacement at recommended intervals — we cover this platform fully. Land Rover timing chain warranty is provided on every replacement we complete as part of our standard six-month cover.",
+                  "The Land Rover 5.0 petrol engine fitted to the Range Rover Sport and Discovery 4 V8 also requires timing chain tensioner replacement at recommended intervals   we cover this platform fully. Land Rover timing chain warranty is provided on every replacement we complete as part of our standard six-month cover.",
                 ],
                 href: "/land-rover-engines",
               },
               {
                 title: "Jaguar Timing Chain Replacement",
                 text: [
-                  "Jaguar timing chain issues mirror those seen on Land Rover platforms — because the engines are shared. The 2.0 Ingenium diesel fitted to the XE, XF, E-Pace, and F-Pace develops timing chain wear that Jaguar owners across the UK have increasingly sought specialist help to resolve outside of main dealer pricing.",
-                  "We carry out Jaguar timing chain replacement across the XE, XF, XJ, F-Pace, and E-Pace, covering Ingenium diesel and petrol platforms and the older 2.7 and 3.0 V6 diesel units. Jaguar timing chain replacement cost UK is always provided in a written quote following a proper diagnostic — and our pricing reflects independent specialist expertise rather than franchise overhead.",
+                  "Jaguar timing chain issues mirror those seen on Land Rover platforms   because the engines are shared. The 2.0 Ingenium diesel fitted to the XE, XF, E-Pace, and F-Pace develops timing chain wear that Jaguar owners across the UK have increasingly sought specialist help to resolve outside of main dealer pricing.",
+                  "We carry out Jaguar timing chain replacement across the XE, XF, XJ, F-Pace, and E-Pace, covering Ingenium diesel and petrol platforms and the older 2.7 and 3.0 V6 diesel units. Jaguar timing chain replacement cost UK is always provided in a written quote following a proper diagnostic   and our pricing reflects independent specialist expertise rather than franchise overhead.",
                   "Jaguar timing chain recall and warranty queries are something we are asked about regularly. If your vehicle falls within a recall or extended warranty window, we will advise you honestly on your options before recommending any paid repair.",
                 ],
                 href: "/jaguar-engines",
@@ -218,18 +218,18 @@ export default function TimingChainReplacementPage() {
               {
                 title: "Audi Timing Chain Replacement",
                 text: [
-                  "Audi timing chain noise — that distinctive cold start rattle on 2.0 TFSI and 2.0 TDI engines — is one of the most searched fault symptoms across the Audi A4, A5, and Q5 range. The timing chain tensioner on these platforms is a known weakness, and stretch develops progressively until the rattle becomes constant and fault codes begin to appear.",
-                  "We carry out Audi timing chain replacement across the A3, A4, A5, A6, Q5, and Q7 range, covering 2.0 TFSI, 2.0 TDI, and 3.0 TDI platforms. Audi timing chain tensioner replacement is included as standard on every job — fitting a new chain onto a worn tensioner is a false economy that leads to premature failure.",
-                  "Audi timing chain cost varies by platform. Audi timing chain stretch on the 2.0 TFSI in particular often appears alongside oil consumption symptoms — we carry out a full engine assessment alongside the chain replacement where this is the case.",
+                  "Audi timing chain noise   that distinctive cold start rattle on 2.0 TFSI and 2.0 TDI engines   is one of the most searched fault symptoms across the Audi A4, A5, and Q5 range. The timing chain tensioner on these platforms is a known weakness, and stretch develops progressively until the rattle becomes constant and fault codes begin to appear.",
+                  "We carry out Audi timing chain replacement across the A3, A4, A5, A6, Q5, and Q7 range, covering 2.0 TFSI, 2.0 TDI, and 3.0 TDI platforms. Audi timing chain tensioner replacement is included as standard on every job   fitting a new chain onto a worn tensioner is a false economy that leads to premature failure.",
+                  "Audi timing chain cost varies by platform. Audi timing chain stretch on the 2.0 TFSI in particular often appears alongside oil consumption symptoms   we carry out a full engine assessment alongside the chain replacement where this is the case.",
                 ],
                 href: "/audi-engines",
               },
               {
                 title: "BMW Timing Chain Replacement",
                 text: [
-                  "BMW timing chain failure is one of the most serious and well-documented faults in the modern prestige vehicle market. The N47 2.0 diesel — fitted to the BMW 1 Series, 3 Series, and 5 Series — has a rear-mounted timing chain that develops stretch and tensioner failure, often without significant warning before complete failure occurs. BMW 318d and BMW 320d timing chain replacement are among the most critical repairs we carry out.",
-                  "BMW N47 timing chain failure can happen suddenly and at relatively low mileage — we have seen complete failures on engines with under 80,000 miles. The N57 3.0 diesel is a more durable platform but still develops timing chain noise and tensioner wear over time.",
-                  "We carry out BMW timing chain replacement across the 1, 2, 3, 4, and 5 Series covering N47, N57, N20, and B47 platforms. BMW timing chain cost is always provided in a written quote. BMW timing chain recall information is something we advise on at the point of enquiry — if your vehicle falls within any extended warranty or recall programme, we will tell you before recommending a paid repair.",
+                  "BMW timing chain failure is one of the most serious and well-documented faults in the modern prestige vehicle market. The N47 2.0 diesel   fitted to the BMW 1 Series, 3 Series, and 5 Series   has a rear-mounted timing chain that develops stretch and tensioner failure, often without significant warning before complete failure occurs. BMW 318d and BMW 320d timing chain replacement are among the most critical repairs we carry out.",
+                  "BMW N47 timing chain failure can happen suddenly and at relatively low mileage   we have seen complete failures on engines with under 80,000 miles. The N57 3.0 diesel is a more durable platform but still develops timing chain noise and tensioner wear over time.",
+                  "We carry out BMW timing chain replacement across the 1, 2, 3, 4, and 5 Series covering N47, N57, N20, and B47 platforms. BMW timing chain cost is always provided in a written quote. BMW timing chain recall information is something we advise on at the point of enquiry   if your vehicle falls within any extended warranty or recall programme, we will tell you before recommending a paid repair.",
                 ],
                 href: "/bmw-engines",
               },
@@ -273,7 +273,7 @@ export default function TimingChainReplacementPage() {
               { icon: <Gauge className="w-5 h-5" />, title: "Tensioners and Guides Inspected", text: "Replacing the chain without assessing tensioners and guides is poor practice. We inspect and include replacement where required." },
               { icon: <Activity className="w-5 h-5" />, title: "Written Quotes, No Surprises", text: "Full itemised quote agreed before work begins. The figure you confirm is the figure you pay." },
               { icon: <CheckCircle2 className="w-5 h-5" />, title: "Six-Month Warranty", text: "Every timing chain replacement carries a minimum six-month warranty on parts and labour." },
-              { icon: <Wrench className="w-5 h-5" />, title: "UK-Wide Collection", text: "Based in Grays, Essex, we collect and deliver across the UK on all timing chain and engine work." },
+              { icon: <Wrench className="w-5 h-5" />, title: "UK-Wide Collection", text: "Based in , we collect and deliver across the UK on all timing chain and engine work." },
             ].map((item) => (
               <div key={item.title} className="bg-white/5 border border-white/10 rounded-[2.5rem] p-10 hover:bg-white/10 transition-all duration-500">
                 <div className="flex items-start gap-4">
@@ -297,11 +297,11 @@ export default function TimingChainReplacementPage() {
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {[
-                "Step 1 — Contact Us with your vehicle details and symptoms. We respond promptly with honest advice.",
-                "Step 2 — Drop Off or Collection — visit our Grays workshop or arrange UK-wide collection.",
-                "Step 3 — Inspection and Written Quote — full timing chain assessment including tensioners and guides, followed by a clear itemised quote.",
-                "Step 4 — Replacement to OEM Specification — carried out by platform specialists using quality parts throughout.",
-                "Step 5 — Quality Check and Return — post-replacement inspection, fault code clearance, and road test before handover.",
+                "Step 1   Contact Us with your vehicle details and symptoms. We respond promptly with honest advice.",
+                "Step 2   Drop Off or Collection   visit our  workshop or arrange UK-wide collection.",
+                "Step 3   Inspection and Written Quote   full timing chain assessment including tensioners and guides, followed by a clear itemised quote.",
+                "Step 4   Replacement to OEM Specification   carried out by platform specialists using quality parts throughout.",
+                "Step 5   Quality Check and Return   post-replacement inspection, fault code clearance, and road test before handover.",
               ].map((text, idx) => (
                 <div key={idx} className="bg-white/5 border border-white/10 rounded-[2.5rem] p-10 hover:bg-white/10 transition-all duration-500">
                   <div className="w-12 h-12 rounded-2xl bg-primary text-white flex items-center justify-center font-black text-lg mb-6 shadow-lg">
@@ -323,7 +323,7 @@ export default function TimingChainReplacementPage() {
           {
             question: "How much does timing chain replacement cost?",
             answer:
-              "Cost varies by platform and whether tensioners and guides require replacement. We always quote after a proper inspection — contact us for a no-obligation estimate on your specific vehicle.",
+              "Cost varies by platform and whether tensioners and guides require replacement. We always quote after a proper inspection   contact us for a no-obligation estimate on your specific vehicle.",
           },
           {
             question: "How do I know if my timing chain needs replacing?",
@@ -338,7 +338,7 @@ export default function TimingChainReplacementPage() {
           {
             question: "Do you cover BMW N47 timing chain replacement?",
             answer:
-              "Yes — BMW N47 timing chain replacement is one of the most critical repairs we carry out. We advise on this platform specifically during the initial enquiry.",
+              "Yes   BMW N47 timing chain replacement is one of the most critical repairs we carry out. We advise on this platform specifically during the initial enquiry.",
           },
         ]}
       />
@@ -371,12 +371,12 @@ export default function TimingChainReplacementPage() {
               href="/contact-us"
               className="bg-white/20 text-white font-black px-12 py-6 rounded-[2rem] shadow-2xl hover:bg-white/25 transition-all uppercase tracking-[0.2em] text-xs md:text-sm border border-white/20"
             >
-              Book a Timing Chain Inspection at Our Grays Workshop
+              Book a Timing Chain Inspection at Our  Workshop
             </Link>
           </div>
 
           <div className="mt-16 text-white/90 font-black uppercase tracking-widest text-[0.65rem]">
-            Vogue Technics | Timing Chain Replacement Specialists | Grays, Essex | UK-Wide Collection &nbsp; Range Rover • Land Rover
+            Vogue Technics | Timing Chain Replacement Specialists |  | UK-Wide Collection &nbsp; Range Rover • Land Rover
             • Jaguar • Audi • BMW
           </div>
         </div>

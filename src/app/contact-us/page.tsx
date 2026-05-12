@@ -5,7 +5,7 @@ import Breadcrumbs from "@/components/common/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Contact Us | Vogue Technics",
-  description: "Get in touch with Vogue Technics for engine repair, replacements, or inquiries. Call us at 01375 531355 or visit our workshop in Grays, Essex.",
+  description: "Get in touch with Vogue Technics for engine repair, replacements, or inquiries. Call us at 01375 531355 or visit our workshop.",
 };
 
 export default function Contact() {
@@ -57,7 +57,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <div className="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-1">Location</div>
-                    <div className="text-lg font-medium text-slate-900">UNIT 1D Hedley Avenue, Grays,<br />Essex RM20 4EL</div>
+                    <div className="text-lg font-medium text-slate-900">UNIT 1D Hedley Avenue<br />RM20 4EL</div>
                   </div>
                 </div>
 

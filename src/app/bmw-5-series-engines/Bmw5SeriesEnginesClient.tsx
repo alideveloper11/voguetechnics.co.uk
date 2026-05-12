@@ -62,22 +62,22 @@ const faqs = [
   {
     question: "Which BMW 5 Series engine has the most problems?",
     answer:
-      "The N47D20C four-cylinder diesel — fitted to F10 518d and 520d models — is the most frequently flagged for timing chain failure. The N63B44 V8 in the 550i is well known for oil consumption issues. The N57 six-cylinder diesel is generally more reliable but is susceptible to swirl flap failure and EGR faults on higher-mileage examples. All are manageable with the right specialist.",
+      "The N47D20C four-cylinder diesel   fitted to F10 518d and 520d models   is the most frequently flagged for timing chain failure. The N63B44 V8 in the 550i is well known for oil consumption issues. The N57 six-cylinder diesel is generally more reliable but is susceptible to swirl flap failure and EGR faults on higher-mileage examples. All are manageable with the right specialist.",
   },
   {
     question: "Is it worth rebuilding a BMW 5 Series engine?",
     answer:
-      "In most cases, yes — particularly for F10 and G30 examples in otherwise good condition. A quality rebuild extends the vehicle's useful life considerably and costs significantly less than replacing the car. For E60 generation vehicles, the rebuild-versus-replace decision depends more on overall vehicle condition — we'll advise honestly when you contact us.",
+      "In most cases, yes   particularly for F10 and G30 examples in otherwise good condition. A quality rebuild extends the vehicle's useful life considerably and costs significantly less than replacing the car. For E60 generation vehicles, the rebuild-versus-replace decision depends more on overall vehicle condition   we'll advise honestly when you contact us.",
   },
   {
-    question: "Do you cover all 5 Series generations — E60, F10, G30?",
+    question: "Do you cover all 5 Series generations   E60, F10, G30?",
     answer:
-      "Yes — we work across all three generations, every engine family, both diesel and petrol, including the high-performance M5 variants.",
+      "Yes   we work across all three generations, every engine family, both diesel and petrol, including the high-performance M5 variants.",
   },
   {
     question: "Can you supply and fit a replacement engine as well as rebuild my existing one?",
     answer:
-      "Both services are available at our Grays, Essex workshop. We can also arrange professional installation through our approved UK fitter network for owners based elsewhere in the country.",
+      "Both services are available at our  workshop. We can also arrange professional installation through our approved UK fitter network for owners based elsewhere in the country.",
   },
   {
     question: "How long does a BMW 5 Series engine replacement take?",
@@ -128,7 +128,7 @@ export default function Bmw5SeriesEnginesClient() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 via-green-400 to-lime-300">
                 BMW 5 Series Engine Rebuild
               </span>{" "}
-              — Expert Reconditioning, Repair &amp; Replacement Across the UK
+                Expert Reconditioning, Repair &amp; Replacement Across the UK
             </motion.h1>
 
             <motion.div
@@ -146,9 +146,9 @@ export default function Bmw5SeriesEnginesClient() {
               transition={{ delay: 0.22 }}
               className="text-base md:text-lg text-slate-200 mb-6 max-w-4xl mx-auto leading-relaxed"
             >
-              The BMW 5 Series has been one of Britain&apos;s most popular executive cars for decades — and for good reason. Whether you drive an F10
-              530d, a G30 520d, an older E60 525d, or a high-performance F10 M5, the engineering underneath you is sophisticated, capable, and —
-              when it develops problems — demanding of genuine specialist knowledge.
+              The BMW 5 Series has been one of Britain&apos;s most popular executive cars for decades   and for good reason. Whether you drive an F10
+              530d, a G30 520d, an older E60 525d, or a high-performance F10 M5, the engineering underneath you is sophisticated, capable, and  
+              when it develops problems   demanding of genuine specialist knowledge.
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -159,7 +159,7 @@ export default function Bmw5SeriesEnginesClient() {
               The 5 Series spans three distinct generations and an enormous range of engine families. The N47&apos;s rear-mounted timing chain in the F10
               diesel. The N57&apos;s swirl flap vulnerability across the 530d and 535d. The N63&apos;s well-documented oil consumption issues in the 550i. The
               S63&apos;s extraordinary rebuild complexity in the M5. Each engine has its own failure patterns, its own rebuild requirements, and its own
-              specific demands. A generic approach to any of them produces generic results — which is precisely why 5 Series owners across the UK
+              specific demands. A generic approach to any of them produces generic results   which is precisely why 5 Series owners across the UK
               bring their cars to us.
             </motion.p>
             <motion.p
@@ -168,7 +168,7 @@ export default function Bmw5SeriesEnginesClient() {
               transition={{ delay: 0.3 }}
               className="text-base md:text-lg text-slate-200/90 max-w-4xl mx-auto leading-relaxed"
             >
-              At Vogue Technics, based in Grays, Essex, we&apos;ve worked on BMW 5 Series engines across every generation and every engine family for over
+              At Vogue Technics, based in , we&apos;ve worked on BMW 5 Series engines across every generation and every engine family for over
               25 years. Whatever your variant, whatever your problem, you&apos;ve found the right specialist.
             </motion.p>
           </div>
@@ -188,14 +188,14 @@ export default function Bmw5SeriesEnginesClient() {
               {[
                 {
                   title: "We Know Every Engine the 5 Series Has Ever Used",
-                  text: "The breadth of the BMW 5 Series engine range is genuinely impressive — and genuinely demanding for anyone trying to service it properly. From the M47N2 four-cylinder diesel in the E60 520d through to the B57D30B six-cylinder diesel in the G30 540d xDrive, from the N20B20 four-cylinder petrol in the F10 520i to the twin-turbo S63B44 V8 in the M5 — every one of these engines has distinct characteristics, distinct failure modes, and distinct rebuild requirements. We cover all of them. Not as a list of capabilities on a website, but as the result of 25 years of direct, hands-on work across every significant engine code the 5 Series has carried. When your car comes into our Grays workshop, the technician working on it has seen that engine before — many times.",
+                  text: "The breadth of the BMW 5 Series engine range is genuinely impressive   and genuinely demanding for anyone trying to service it properly. From the M47N2 four-cylinder diesel in the E60 520d through to the B57D30B six-cylinder diesel in the G30 540d xDrive, from the N20B20 four-cylinder petrol in the F10 520i to the twin-turbo S63B44 V8 in the M5   every one of these engines has distinct characteristics, distinct failure modes, and distinct rebuild requirements. We cover all of them. Not as a list of capabilities on a website, but as the result of 25 years of direct, hands-on work across every significant engine code the 5 Series has carried. When your car comes into our  workshop, the technician working on it has seen that engine before   many times.",
                 },
                 {
                   title: "Three Generations, One Specialist",
-                  text: "The E60/E61, F10/F11, and G30/G31 generations each represent a distinct engineering era — with different engine families, different failure patterns, and different rebuild considerations. F10 520d owners face the N47's rear-mounted timing chain as their primary concern. G30 530d owners are dealing with B57 EGR sensitivity and swirl flap risk. E60 535d owners are working with the M57TU2 twin-turbo diesel — a capable but demanding unit that requires very specific knowledge during rebuild. We understand these generational differences in practice, not just on paper. That's what genuine 5 Series expertise looks like.",
+                  text: "The E60/E61, F10/F11, and G30/G31 generations each represent a distinct engineering era   with different engine families, different failure patterns, and different rebuild considerations. F10 520d owners face the N47's rear-mounted timing chain as their primary concern. G30 530d owners are dealing with B57 EGR sensitivity and swirl flap risk. E60 535d owners are working with the M57TU2 twin-turbo diesel   a capable but demanding unit that requires very specific knowledge during rebuild. We understand these generational differences in practice, not just on paper. That's what genuine 5 Series expertise looks like.",
                 },
                 {
-                  title: "Honest Pricing — Fully Itemised Before We Begin",
+                  title: "Honest Pricing   Fully Itemised Before We Begin",
                   text: "Engine work on an executive BMW deserves complete financial clarity. Before any work starts, you'll receive a fully itemised quote covering all parts, labour, and ancillary requirements. No vague figures, no additions at collection. Call us or submit an online enquiry and we'll come back to you promptly with an honest, detailed breakdown.",
                 },
               ].map((item) => (
@@ -254,7 +254,7 @@ export default function Bmw5SeriesEnginesClient() {
       <FAQSection
         title={
           <>
-            Frequently Asked Questions — <span className="text-primary italic">BMW 5 Series Engine Rebuild &amp; Repair</span>
+            Frequently Asked Questions   <span className="text-primary italic">BMW 5 Series Engine Rebuild &amp; Repair</span>
           </>
         }
         items={faqs}
@@ -268,8 +268,8 @@ export default function Bmw5SeriesEnginesClient() {
             Ready to give your BMW 5 Series the specialist attention it deserves?
           </h2>
           <p className="text-emerald-100 text-base md:text-lg font-medium max-w-3xl mx-auto leading-relaxed">
-            Call Vogue Technics today or use our online enquiry form for a fast, honest, no-obligation quote. We&apos;re based in Grays, Essex, and we
-            work with BMW 5 Series owners across the entire United Kingdom — every generation, every engine, every problem, done properly.
+            Call Vogue Technics today or use our online enquiry form for a fast, honest, no-obligation quote. We&apos;re based in , and we
+            work with BMW 5 Series owners across the entire United Kingdom   every generation, every engine, every problem, done properly.
           </p>
 
           <div className="flex flex-col md:flex-row gap-6 justify-center pt-4">

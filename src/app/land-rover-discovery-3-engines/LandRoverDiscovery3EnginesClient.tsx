@@ -14,37 +14,37 @@ const services = [
     title: "Head Gasket Replacement",
     slug: "head-gasket-replacement",
     body:
-      "Head gasket failure is arguably the most common serious fault on the Discovery 3 2.7 TDV6. Coolant mixing with oil, persistent overheating, white exhaust smoke, or a sweet smell from the engine bay are all warning signs that should never be ignored. We replace Discovery 3 head gaskets using OEM-grade components, machining the head surface where required to guarantee a clean, lasting seal. Catching it at the earliest sign saves the engine — delay almost always turns a manageable repair into a catastrophic one.",
+      "Head gasket failure is arguably the most common serious fault on the Discovery 3 2.7 TDV6. Coolant mixing with oil, persistent overheating, white exhaust smoke, or a sweet smell from the engine bay are all warning signs that should never be ignored. We replace Discovery 3 head gaskets using OEM-grade components, machining the head surface where required to guarantee a clean, lasting seal. Catching it at the earliest sign saves the engine   delay almost always turns a manageable repair into a catastrophic one.",
   },
   {
     title: "Timing Chain Replacement",
     slug: "timing-chain-replacement",
     body:
-      "The 2.7 TDV6's timing chain system is another known weak point, especially on vehicles with higher mileage or inconsistent service history. A stretched chain rattles on start-up and, if left unaddressed, can jump or snap — causing irreversible internal damage in an instant. We replace the full timing chain kit as a complete system: chain, tensioners, guides, and sprockets together. We never replace one component and leave worn parts alongside it. That's a half-measure, and we don't do half-measures.",
+      "The 2.7 TDV6's timing chain system is another known weak point, especially on vehicles with higher mileage or inconsistent service history. A stretched chain rattles on start-up and, if left unaddressed, can jump or snap   causing irreversible internal damage in an instant. We replace the full timing chain kit as a complete system: chain, tensioners, guides, and sprockets together. We never replace one component and leave worn parts alongside it. That's a half-measure, and we don't do half-measures.",
   },
   {
     title: "Turbo Replacement",
     slug: "turbo-replacement",
     body:
-      "The Discovery 3 TDV6 runs a twin-turbo configuration, and both turbos are susceptible to failure — particularly when oil changes have been stretched or the engine has run low on oil. Loss of power, excessive smoke under acceleration, or an unusual whistling noise are the telling signs. We source quality replacement turbos for all Discovery 3 engine variants and fit them to manufacturer specifications, carrying out full post-installation testing before the vehicle leaves our care.",
+      "The Discovery 3 TDV6 runs a twin-turbo configuration, and both turbos are susceptible to failure   particularly when oil changes have been stretched or the engine has run low on oil. Loss of power, excessive smoke under acceleration, or an unusual whistling noise are the telling signs. We source quality replacement turbos for all Discovery 3 engine variants and fit them to manufacturer specifications, carrying out full post-installation testing before the vehicle leaves our care.",
   },
   {
     title: "Timing Belt Replacement",
     slug: "timing-belt-replacement",
     body:
-      "Certain Discovery 3 engine configurations use a timing belt as part of their valve train system. A snapped timing belt causes instant, catastrophic engine damage — there is no warning and no recovery. We carry timing belts and full replacement kits for all applicable Discovery 3 variants and recommend replacement at — or ahead of — the manufacturer's specified intervals, particularly if you are unsure of the vehicle's service history.",
+      "Certain Discovery 3 engine configurations use a timing belt as part of their valve train system. A snapped timing belt causes instant, catastrophic engine damage   there is no warning and no recovery. We carry timing belts and full replacement kits for all applicable Discovery 3 variants and recommend replacement at   or ahead of   the manufacturer's specified intervals, particularly if you are unsure of the vehicle's service history.",
   },
   {
     title: "Engine Rebuild",
     slug: "engine-rebuild",
     body:
-      "When mileage is high and wear has accumulated across multiple components, a full engine rebuild is often the most cost-effective decision a Discovery 3 owner can make. We strip the engine completely, inspect every individual component, replace everything that falls outside tolerance, and reassemble to factory specifications. The result is an engine that performs as it should — at a fraction of the cost of sourcing a replacement vehicle, and with a written warranty included.",
+      "When mileage is high and wear has accumulated across multiple components, a full engine rebuild is often the most cost-effective decision a Discovery 3 owner can make. We strip the engine completely, inspect every individual component, replace everything that falls outside tolerance, and reassemble to factory specifications. The result is an engine that performs as it should   at a fraction of the cost of sourcing a replacement vehicle, and with a written warranty included.",
   },
   {
     title: "Engine Repair",
     slug: "engine-repair",
     body:
-      "Not every fault demands a full rebuild. Our diagnostic process identifies the root cause precisely — so you only pay for what actually needs doing. Oil leaks, bearing wear, injector faults, EGR issues, valve damage, sensor failures — we handle every level of Discovery 3 engine repair with accuracy and honesty. No unnecessary work, ever.",
+      "Not every fault demands a full rebuild. Our diagnostic process identifies the root cause precisely   so you only pay for what actually needs doing. Oil leaks, bearing wear, injector faults, EGR issues, valve damage, sensor failures   we handle every level of Discovery 3 engine repair with accuracy and honesty. No unnecessary work, ever.",
   },
   {
     title: "Engine Replacement",
@@ -56,7 +56,7 @@ const services = [
     title: "Engine Swap",
     slug: "engine-swap",
     body:
-      "Considering an engine conversion on your Discovery 3 — whether that's upgrading to a later TDV6 variant, swapping to the V8 petrol, or exploring an alternative powerplant? Our engine swap service covers the complete process from start to finish: mounts, ancillaries, wiring, ECU mapping, and post-swap diagnostics. Done properly, by people who have carried out these conversions before.",
+      "Considering an engine conversion on your Discovery 3   whether that's upgrading to a later TDV6 variant, swapping to the V8 petrol, or exploring an alternative powerplant? Our engine swap service covers the complete process from start to finish: mounts, ancillaries, wiring, ECU mapping, and post-swap diagnostics. Done properly, by people who have carried out these conversions before.",
   },
   {
     title: "Engine Health Check",
@@ -80,7 +80,7 @@ const faqs = [
   {
     question: "Is it worth rebuilding a Discovery 3 engine?",
     answer:
-      "In most cases, absolutely — particularly when the vehicle is otherwise in good condition. A quality rebuild at Vogue Technics significantly extends the vehicle's working life and costs far less than sourcing a replacement Discovery 3 at current used car prices.",
+      "In most cases, absolutely   particularly when the vehicle is otherwise in good condition. A quality rebuild at Vogue Technics significantly extends the vehicle's working life and costs far less than sourcing a replacement Discovery 3 at current used car prices.",
   },
   {
     question: "Do you supply reconditioned Discovery 3 engines for sale?",
@@ -90,7 +90,7 @@ const faqs = [
   {
     question: "What does the Discovery 3 engine system fault warning mean?",
     answer:
-      "An engine system fault warning on the Discovery 3 can indicate anything from a sensor issue through to turbo failure or more serious internal problems. We strongly recommend booking a diagnostic check immediately — driving on with this warning active risks causing significantly greater damage.",
+      "An engine system fault warning on the Discovery 3 can indicate anything from a sensor issue through to turbo failure or more serious internal problems. We strongly recommend booking a diagnostic check immediately   driving on with this warning active risks causing significantly greater damage.",
   },
   {
     question: "How long does a Discovery 3 engine replacement or rebuild take?",
@@ -98,9 +98,9 @@ const faqs = [
       "Engine repairs and replacements are typically completed within 3–7 working days. Full rebuilds take 5–10 working days depending on parts availability. We confirm your timeline at the point of booking and we honour it.",
   },
   {
-    question: "Can you collect my engine if I'm not near Essex?",
+    question: "Can you collect my engine if I'm not near ?",
     answer:
-      "Yes. We collect engines from across the UK. You don't need to be local to access our specialist service — we handle the logistics and return your engine fully tested and ready to fit.",
+      "Yes. We collect engines from across the UK. You don't need to be local to access our specialist service   we handle the logistics and return your engine fully tested and ready to fit.",
   },
 ];
 
@@ -111,7 +111,7 @@ export default function LandRoverDiscovery3EnginesClient() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/car_bgg.jpg"
-            alt="Land Rover Discovery 3 engine specialist in Grays"
+            alt="Land Rover Discovery 3 engine specialist in "
             fill
             className="object-cover opacity-30 mix-blend-overlay"
             priority
@@ -136,7 +136,7 @@ export default function LandRoverDiscovery3EnginesClient() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-300 to-green-400">
                 Land Rover Discovery 3 Engine Specialists
               </span>{" "}
-              — Rebuilds, Repairs & Replacements Across the UK
+                Rebuilds, Repairs & Replacements Across the UK
             </motion.h1>
 
             <motion.div
@@ -155,10 +155,10 @@ export default function LandRoverDiscovery3EnginesClient() {
               className="mt-7 max-w-4xl text-sm leading-relaxed text-slate-300 md:text-base space-y-4"
             >
               <p>
-                The Land Rover Discovery 3 is a genuinely capable machine — comfortable on the motorway, composed off-road, and practical enough for family life. But its engines, particularly the 2.7 TDV6, carry well-documented vulnerabilities that catch owners off guard. Head gasket failures, timing chain wear, and turbo problems are not rare on the Discovery 3 — they are predictable, and they require a specialist who knows exactly what they're dealing with.
+                The Land Rover Discovery 3 is a genuinely capable machine   comfortable on the motorway, composed off-road, and practical enough for family life. But its engines, particularly the 2.7 TDV6, carry well-documented vulnerabilities that catch owners off guard. Head gasket failures, timing chain wear, and turbo problems are not rare on the Discovery 3   they are predictable, and they require a specialist who knows exactly what they're dealing with.
               </p>
               <p>
-                At Vogue Technics, based in Grays, Essex, we work exclusively on Land Rover and Range Rover engines. The Discovery 3 is one of the vehicles we know most thoroughly — every fault code, every failure pattern, every engineering quirk across the 2.7 TDV6 diesel, the 4.4 V8 petrol, and the 4.0 V6 petrol. Backed by over 25 years of hands-on experience, we deliver engine work that genuinely solves the problem — not a temporary fix that brings the vehicle back within months.
+                At Vogue Technics, based in , we work exclusively on Land Rover and Range Rover engines. The Discovery 3 is one of the vehicles we know most thoroughly   every fault code, every failure pattern, every engineering quirk across the 2.7 TDV6 diesel, the 4.4 V8 petrol, and the 4.0 V6 petrol. Backed by over 25 years of hands-on experience, we deliver engine work that genuinely solves the problem   not a temporary fix that brings the vehicle back within months.
               </p>
             </motion.div>
           </div>
@@ -170,19 +170,19 @@ export default function LandRoverDiscovery3EnginesClient() {
           <div className="max-w-5xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-bold text-slate-900">Why Discovery 3 Owners Trust Vogue Technics</h2>
             <p className="mt-6 text-slate-700 leading-relaxed">
-              The Discovery 3 deserves more than a general garage. Its engines — particularly the 2.7 TDV6 — are complex, and poor-quality repairs on this platform cost owners far more in the long run than a proper specialist job from the start.
+              The Discovery 3 deserves more than a general garage. Its engines   particularly the 2.7 TDV6   are complex, and poor-quality repairs on this platform cost owners far more in the long run than a proper specialist job from the start.
             </p>
             <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
-                <h3 className="font-bold text-slate-900">Land Rover Exclusivity — Every Single Day</h3>
+                <h3 className="font-bold text-slate-900">Land Rover Exclusivity   Every Single Day</h3>
                 <p className="mt-3 text-slate-700 leading-relaxed">
-                  We don't divide our attention across makes and models. Every technician at Vogue Technics is trained and experienced specifically on Land Rover and Range Rover platforms. When your Discovery 3 comes into our Grays workshop, the people working on it have seen your exact problem dozens of times before — and they know precisely how to fix it correctly.
+                  We don't divide our attention across makes and models. Every technician at Vogue Technics is trained and experienced specifically on Land Rover and Range Rover platforms. When your Discovery 3 comes into our  workshop, the people working on it have seen your exact problem dozens of times before   and they know precisely how to fix it correctly.
                 </p>
               </div>
               <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
                 <h3 className="font-bold text-slate-900">Over 25 Years Serving UK Discovery Owners</h3>
                 <p className="mt-3 text-slate-700 leading-relaxed">
-                  Our track record in Grays, Essex and across the wider UK has been built entirely through results and reputation. We've rebuilt and replaced hundreds of Discovery 3 engines for owners from Essex to Scotland — and the reason so many of them return to us, and recommend us to others, is straightforward. When we fix an engine, it stays fixed.
+                  Our track record in  and across the wider UK has been built entirely through results and reputation. We've rebuilt and replaced hundreds of Discovery 3 engines for owners from  to Scotland   and the reason so many of them return to us, and recommend us to others, is straightforward. When we fix an engine, it stays fixed.
                 </p>
               </div>
               <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
@@ -204,7 +204,7 @@ export default function LandRoverDiscovery3EnginesClient() {
             </h2>
             <div className="w-24 h-1 bg-primary mx-auto rounded-full mt-4"></div>
             <p className="mt-6 text-slate-600 text-[1.05rem] leading-relaxed">
-              We offer the full spectrum of engine services for the Discovery 3 — covering all engine variants, all body configurations, and all levels of fault from minor repairs to complete rebuilds and replacements.
+              We offer the full spectrum of engine services for the Discovery 3   covering all engine variants, all body configurations, and all levels of fault from minor repairs to complete rebuilds and replacements.
             </p>
           </div>
 
@@ -236,23 +236,23 @@ export default function LandRoverDiscovery3EnginesClient() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
-              UK-Wide Service & Local Expertise From Grays, Essex
+              UK-Wide Service & Local Expertise From 
             </h2>
             <div className="mt-6 space-y-6 text-slate-700 leading-relaxed">
               <p>
-                A Discovery 3 off the road is a genuine inconvenience — and for many owners, it's a daily driver that simply cannot sit idle. We work efficiently and without cutting corners, and we've structured our service to reach owners wherever they are in the UK.
+                A Discovery 3 off the road is a genuine inconvenience   and for many owners, it's a daily driver that simply cannot sit idle. We work efficiently and without cutting corners, and we've structured our service to reach owners wherever they are in the UK.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
                   <h3 className="font-bold text-slate-900">Engine Collection & Delivery Across the UK</h3>
                   <p className="mt-3">
-                    You don't need to be based near Grays to benefit from Vogue Technics. We operate a UK-wide engine collection and delivery service — remove your engine, send it to our Essex workshop, and we'll return it rebuilt, repaired, or replaced, fully tested and ready to install. We can also connect you with our network of approved local fitters if you need installation arranged near you.
+                    You don't need to be based near  to benefit from Vogue Technics. We operate a UK-wide engine collection and delivery service   remove your engine, send it to our  workshop, and we'll return it rebuilt, repaired, or replaced, fully tested and ready to install. We can also connect you with our network of approved local fitters if you need installation arranged near you.
                   </p>
                 </div>
                 <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
                   <h3 className="font-bold text-slate-900">Written Warranty on Every Job</h3>
                   <p className="mt-3">
-                    Every engine rebuild, replacement, and major repair carried out at Vogue Technics is covered by a written warranty. We stand behind our work completely — because our standards mean we can.
+                    Every engine rebuild, replacement, and major repair carried out at Vogue Technics is covered by a written warranty. We stand behind our work completely   because our standards mean we can.
                   </p>
                 </div>
               </div>
@@ -277,17 +277,17 @@ export default function LandRoverDiscovery3EnginesClient() {
               {
                 quote:
                   '"My Discovery 3 TDV6 had been misdiagnosed twice elsewhere. Vogue Technics found the real problem within a day, gave me a fair and transparent quote, and had the vehicle back with me inside a week. Genuinely impressive."',
-                by: "— Thomas B., Cambridge",
+                by: "  Thomas B., Cambridge",
               },
               {
                 quote:
                   '"Sent my 2.7 TDV6 down from Yorkshire after a head gasket failure. It came back rebuilt to a brilliant standard, packaged carefully, and a day earlier than promised. These people know exactly what they\'re doing."',
-                by: "— Ian W., Leeds",
+                by: "  Ian W., Leeds",
               },
               {
                 quote:
                   '"Three other garages quoted me between £5,000 and £7,000 for a Discovery 3 engine replacement. Vogue Technics did it properly, with a warranty, for considerably less. Wish I\'d found them first."',
-                by: "— Sarah K., Milton Keynes",
+                by: "  Sarah K., Milton Keynes",
               },
             ].map((t) => (
               <div
@@ -308,7 +308,7 @@ export default function LandRoverDiscovery3EnginesClient() {
       </section>
 
       <FAQSection
-        title={<>Frequently Asked Questions — <span className="text-primary italic">Land Rover Discovery 3 Engines</span></>}
+        title={<>Frequently Asked Questions   <span className="text-primary italic">Land Rover Discovery 3 Engines</span></>}
         items={faqs}
       />
 
@@ -319,9 +319,9 @@ export default function LandRoverDiscovery3EnginesClient() {
               Book Your Land Rover Discovery 3 Engine Work Today
             </h2>
             <p className="text-emerald-50 leading-relaxed max-w-3xl mx-auto">
-              Don't leave your Discovery 3 standing, and don't trust its engine to someone who isn't a genuine specialist. Vogue Technics has spent over 25 years earning the confidence of Land Rover owners across the United Kingdom — and we're ready to help you next.
+              Don't leave your Discovery 3 standing, and don't trust its engine to someone who isn't a genuine specialist. Vogue Technics has spent over 25 years earning the confidence of Land Rover owners across the United Kingdom   and we're ready to help you next.
               <br />
-              Call us today or complete our online enquiry form for a fast, no-obligation quote. We're based in Grays, Essex, and we work with Discovery 3 owners from Cornwall to the Scottish Highlands. Your Discovery 3 deserves the right hands — and these are them.
+              Call us today or complete our online enquiry form for a fast, no-obligation quote. We're based in , and we work with Discovery 3 owners from Cornwall to the Scottish Highlands. Your Discovery 3 deserves the right hands   and these are them.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <a

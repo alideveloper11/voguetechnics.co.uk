@@ -57,14 +57,14 @@ export default function TurboReplacementPage() {
               className="max-w-4xl mx-auto text-slate-300 leading-relaxed font-medium space-y-6 text-sm md:text-base"
             >
               <p>
-                A failing turbo rarely stops working all at once. It loses efficiency gradually — a little power here, a little
-                smoke there — until one morning the car pulls onto a roundabout and there is simply nothing left. By that point,
+                A failing turbo rarely stops working all at once. It loses efficiency gradually   a little power here, a little
+                smoke there   until one morning the car pulls onto a roundabout and there is simply nothing left. By that point,
                 the damage has usually been building for weeks.
               </p>
               <p>
                 At Vogue Technics, turbo replacement is one of the most frequent jobs through our workshop. We supply and fit OEM
-                and remanufactured turbos for Range Rover, Land Rover, Jaguar, Audi, and BMW — with every job backed by a six-month
-                warranty and a written quote agreed before anything is touched. Based in Grays, Essex, with UK-wide collection
+                and remanufactured turbos for Range Rover, Land Rover, Jaguar, Audi, and BMW   with every job backed by a six-month
+                warranty and a written quote agreed before anything is touched. Based in , with UK-wide collection
                 available.
               </p>
             </motion.div>
@@ -116,7 +116,7 @@ export default function TurboReplacementPage() {
                 <div className="space-y-4">
                   <h3 className="text-lg font-extrabold text-slate-900 uppercase tracking-tight italic">Loss of Power</h3>
                   <p className="text-slate-600 leading-relaxed font-medium text-sm md:text-base">
-                    A noticeable loss of power — particularly under acceleration or when pulling uphill — is one of the first signs
+                    A noticeable loss of power   particularly under acceleration or when pulling uphill   is one of the first signs
                     a turbo is losing efficiency.
                   </p>
                 </div>
@@ -205,13 +205,13 @@ export default function TurboReplacementPage() {
             <div className="lg:col-span-2 space-y-6 text-slate-600 leading-relaxed font-medium text-sm md:text-base">
               <p>
                 We carry out turbo replacement across all five vehicle brands using OEM turbos, OEM-specification remanufactured
-                units, and quality alternatives where appropriate — always with honest advice on which option suits your vehicle,
+                units, and quality alternatives where appropriate   always with honest advice on which option suits your vehicle,
                 its age, and its mileage.
               </p>
               <p>
                 Every turbo replacement includes a full inspection of the oil feed and return lines, the intercooler system, and
                 the intake pipework before the new unit is fitted. A new turbo fitted onto a contaminated oil system will not last
-                — which is why this inspection is standard on every job, not an optional extra.
+                  which is why this inspection is standard on every job, not an optional extra.
               </p>
               <p>
                 All turbo replacement work is backed by a minimum six-month warranty, with a written quote confirmed before work
@@ -259,27 +259,27 @@ export default function TurboReplacementPage() {
             {[
               {
                 title: "Range Rover Turbo Replacement",
-                text: "Range Rover turbo problems vary by platform, and understanding which fault you are actually dealing with requires genuine platform knowledge. We carry out Range Rover turbo replacement across the Vogue, Sport, Velar, and Evoque — covering the TDV6 3.0, TDV8 4.4, SDV6, SDV8, and Ingenium 2.0 diesel platforms. Common faults include TDV6 turbo oil seal failure causing excessive consumption, variable geometry actuator faults triggering limp mode, and Evoque Ingenium boost pressure faults linked to turbo wear. Range Rover turbo replacement cost depends on the platform and unit specification — we provide clear written quotes at a price well below main dealer rates.",
+                text: "Range Rover turbo problems vary by platform, and understanding which fault you are actually dealing with requires genuine platform knowledge. We carry out Range Rover turbo replacement across the Vogue, Sport, Velar, and Evoque   covering the TDV6 3.0, TDV8 4.4, SDV6, SDV8, and Ingenium 2.0 diesel platforms. Common faults include TDV6 turbo oil seal failure causing excessive consumption, variable geometry actuator faults triggering limp mode, and Evoque Ingenium boost pressure faults linked to turbo wear. Range Rover turbo replacement cost depends on the platform and unit specification   we provide clear written quotes at a price well below main dealer rates.",
                 href: "/range-rover-engines",
               },
               {
                 title: "Land Rover Turbo Replacement",
-                text: "Land Rover turbo replacement covers a wide range of platforms and fault types. We work across the Discovery Sport, Discovery 3, Discovery 4, Freelander 2, and Defender — with specific knowledge of the turbo-related faults common to each. Discovery Sport turbo replacement is one of the most frequent jobs we carry out on current Land Rover models. The Ingenium 2.0 diesel develops boost pressure faults and actuator failure from higher mileage, and Discovery Sport turbo replacement cost is a question we answer honestly with a written quote — not a figure inflated by franchise overheads. The Discovery 4 TDV6 twin turbo arrangement and the Freelander 2 TD4 turbo are both platforms we cover regularly. Land Rover turbo replacement cost is always confirmed in writing before any work begins.",
+                text: "Land Rover turbo replacement covers a wide range of platforms and fault types. We work across the Discovery Sport, Discovery 3, Discovery 4, Freelander 2, and Defender   with specific knowledge of the turbo-related faults common to each. Discovery Sport turbo replacement is one of the most frequent jobs we carry out on current Land Rover models. The Ingenium 2.0 diesel develops boost pressure faults and actuator failure from higher mileage, and Discovery Sport turbo replacement cost is a question we answer honestly with a written quote   not a figure inflated by franchise overheads. The Discovery 4 TDV6 twin turbo arrangement and the Freelander 2 TD4 turbo are both platforms we cover regularly. Land Rover turbo replacement cost is always confirmed in writing before any work begins.",
                 href: "/land-rover-engines",
               },
               {
                 title: "Jaguar Turbo Replacement",
-                text: "Jaguar's shared JLR engineering means our turbo expertise covers the full Jaguar range directly. We carry out Jaguar turbo replacement across the XE, XF, XJ, F-Pace, E-Pace, S-Type, and X-Type — covering 2.0 Ingenium, 2.7 V6 diesel, and 3.0 V6 platforms. Jaguar XF turbo replacement cost and Jaguar XE turbo replacement cost are among our most common enquiries. The XF 2.7 diesel twin turbo develops oil contamination faults that require both units to be assessed together. The XE Ingenium develops boost faults and seal failure typically between 60,000 and 100,000 miles. Jaguar turbo replacement near me is a search that brings customers to us from across Essex, London, and the wider UK — with same-day diagnostics available and UK-wide collection for those further away.",
+                text: "Jaguar's shared JLR engineering means our turbo expertise covers the full Jaguar range directly. We carry out Jaguar turbo replacement across the XE, XF, XJ, F-Pace, E-Pace, S-Type, and X-Type   covering 2.0 Ingenium, 2.7 V6 diesel, and 3.0 V6 platforms. Jaguar XF turbo replacement cost and Jaguar XE turbo replacement cost are among our most common enquiries. The XF 2.7 diesel twin turbo develops oil contamination faults that require both units to be assessed together. The XE Ingenium develops boost faults and seal failure typically between 60,000 and 100,000 miles. Jaguar turbo replacement near me is a search that brings customers to us from across , London, and the wider UK   with same-day diagnostics available and UK-wide collection for those further away.",
                 href: "/jaguar-engines",
               },
               {
                 title: "Audi Turbo Replacement",
-                text: "Audi turbo failure symptoms are often gradual — increased oil consumption, intermittent boost loss, and occasional fault codes that seem minor until they are not. We carry out Audi turbo replacement across the A3, A4, A5, A6, S3, and RS range, covering the 1.8T, 2.0 TFSI petrol, and TDI diesel platforms. Audi 2.0 TFSI turbo replacement is one of the most common jobs we carry out on petrol Audis — often preceded by a period of oil burning that owners attribute to normal consumption. Audi A6 turbocharger repair, Audi turbo oil leak diagnosis, and Audi RS turbo replacement for performance variants are all within our regular workload. Audi turbo cost varies by platform and unit. We always provide a full written quote following a proper diagnostic inspection.",
+                text: "Audi turbo failure symptoms are often gradual   increased oil consumption, intermittent boost loss, and occasional fault codes that seem minor until they are not. We carry out Audi turbo replacement across the A3, A4, A5, A6, S3, and RS range, covering the 1.8T, 2.0 TFSI petrol, and TDI diesel platforms. Audi 2.0 TFSI turbo replacement is one of the most common jobs we carry out on petrol Audis   often preceded by a period of oil burning that owners attribute to normal consumption. Audi A6 turbocharger repair, Audi turbo oil leak diagnosis, and Audi RS turbo replacement for performance variants are all within our regular workload. Audi turbo cost varies by platform and unit. We always provide a full written quote following a proper diagnostic inspection.",
                 href: "/audi-engines",
               },
               {
                 title: "BMW Turbo Replacement",
-                text: "BMW turbocharged engines are rewarding when running correctly and problematic when not. We carry out BMW turbo replacement across the 1, 2, 3, 4, 5, and 7 Series, X3, X5, and X6 — covering N47, N57, N54, N55, N20, and B58 platforms. BMW N54 turbo replacement is one of our most requested petrol turbo jobs — wastegate rattle, boost pressure fault codes, and seal failure are all common on this twin-turbocharged platform. BMW turbo boost problems on diesel platforms — particularly the N47 and N57 — are often linked to variable geometry actuator faults that we diagnose accurately before recommending replacement. BMW turbo cost UK is always confirmed in a written quote before work begins, with pricing that reflects independent specialist expertise.",
+                text: "BMW turbocharged engines are rewarding when running correctly and problematic when not. We carry out BMW turbo replacement across the 1, 2, 3, 4, 5, and 7 Series, X3, X5, and X6   covering N47, N57, N54, N55, N20, and B58 platforms. BMW N54 turbo replacement is one of our most requested petrol turbo jobs   wastegate rattle, boost pressure fault codes, and seal failure are all common on this twin-turbocharged platform. BMW turbo boost problems on diesel platforms   particularly the N47 and N57   are often linked to variable geometry actuator faults that we diagnose accurately before recommending replacement. BMW turbo cost UK is always confirmed in a written quote before work begins, with pricing that reflects independent specialist expertise.",
                 href: "/bmw-engines",
               },
             ].map((item) => (
@@ -318,7 +318,7 @@ export default function TurboReplacementPage() {
             {[
               {
                 title: "Platform Specialists, Not Generalists",
-                text: "Every technician in our workshop has hands-on experience with the specific platforms we cover. That means the person replacing your turbo has done it before — on the same engine, with the same fault pattern — and knows exactly what to look for.",
+                text: "Every technician in our workshop has hands-on experience with the specific platforms we cover. That means the person replacing your turbo has done it before   on the same engine, with the same fault pattern   and knows exactly what to look for.",
               },
               {
                 title: "Oil System Inspection on Every Job",
@@ -326,7 +326,7 @@ export default function TurboReplacementPage() {
               },
               {
                 title: "OEM and OEM-Specification Parts",
-                text: "No budget turbos on prestige vehicles. Every replacement uses OEM or OEM-specification remanufactured units — the same quality standard your vehicle was built to.",
+                text: "No budget turbos on prestige vehicles. Every replacement uses OEM or OEM-specification remanufactured units   the same quality standard your vehicle was built to.",
               },
               {
                 title: "Written Quotes, No Surprises",
@@ -338,7 +338,7 @@ export default function TurboReplacementPage() {
               },
               {
                 title: "UK-Wide Collection",
-                text: "Based in Grays, Essex — we collect and deliver across the UK on all turbo and engine work.",
+                text: "Based in    we collect and deliver across the UK on all turbo and engine work.",
               },
             ].map((item) => (
               <div key={item.title} className="bg-white/5 border border-white/10 rounded-[2.5rem] p-10 hover:bg-white/10 transition-all duration-500">
@@ -365,11 +365,11 @@ export default function TurboReplacementPage() {
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {[
-                "Step 1 — Contact Us with your symptoms and vehicle details. Honest advice from the first call.",
-                "Step 2 — Drop Off or Collection — visit our Grays workshop or arrange UK-wide collection.",
-                "Step 3 — Diagnostic and Written Quote — full turbo and oil system inspection, followed by a clear itemised quote.",
-                "Step 4 — Turbo Replacement — carried out to OEM specification with quality parts throughout.",
-                "Step 5 — Post-Fit Check and Road Test — boost pressure verified, fault codes cleared, road tested before return.",
+                "Step 1   Contact Us with your symptoms and vehicle details. Honest advice from the first call.",
+                "Step 2   Drop Off or Collection   visit our  workshop or arrange UK-wide collection.",
+                "Step 3   Diagnostic and Written Quote   full turbo and oil system inspection, followed by a clear itemised quote.",
+                "Step 4   Turbo Replacement   carried out to OEM specification with quality parts throughout.",
+                "Step 5   Post-Fit Check and Road Test   boost pressure verified, fault codes cleared, road tested before return.",
               ].map((text, idx) => (
                 <div key={idx} className="bg-white/5 border border-white/10 rounded-[2.5rem] p-10 hover:bg-white/10 transition-all duration-500">
                   <div className="w-12 h-12 rounded-2xl bg-primary text-white flex items-center justify-center font-black text-lg mb-6 shadow-lg">
@@ -400,12 +400,12 @@ export default function TurboReplacementPage() {
           {
             question: "How much does turbo replacement cost?",
             answer:
-              "It varies by platform and unit specification. We provide a written quote after a proper diagnostic — contact us for a no-obligation estimate on your specific vehicle.",
+              "It varies by platform and unit specification. We provide a written quote after a proper diagnostic   contact us for a no-obligation estimate on your specific vehicle.",
           },
           {
             question: "Can a turbo be repaired rather than replaced?",
             answer:
-              "In some cases yes — if damage is limited to the cartridge or bearing assembly. We assess every turbo individually and advise honestly on repair versus replacement.",
+              "In some cases yes   if damage is limited to the cartridge or bearing assembly. We assess every turbo individually and advise honestly on repair versus replacement.",
           },
           {
             question: "How long does turbo replacement take?",
@@ -415,7 +415,7 @@ export default function TurboReplacementPage() {
           {
             question: "Do you offer a warranty?",
             answer:
-              "Yes — minimum six-month warranty on all turbo replacement work, covering parts and labour.",
+              "Yes   minimum six-month warranty on all turbo replacement work, covering parts and labour.",
           },
         ]}
       />
@@ -448,12 +448,12 @@ export default function TurboReplacementPage() {
               href="/services/engine-health-check"
               className="bg-white/20 text-white font-black px-12 py-6 rounded-[2rem] shadow-2xl hover:bg-white/25 transition-all uppercase tracking-[0.2em] text-xs md:text-sm border border-white/20"
             >
-              Book a Turbo Inspection at Our Grays Workshop
+              Book a Turbo Inspection at Our  Workshop
             </Link>
           </div>
 
           <div className="mt-16 text-white/90 font-black uppercase tracking-widest text-[0.65rem]">
-            Vogue Technics | Turbo Replacement Specialists | Grays, Essex | UK-Wide Collection &nbsp; Range Rover • Land Rover •
+            Vogue Technics | Turbo Replacement Specialists |  | UK-Wide Collection &nbsp; Range Rover • Land Rover •
             Jaguar • Audi • BMW
           </div>
         </div>

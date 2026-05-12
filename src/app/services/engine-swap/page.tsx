@@ -63,8 +63,8 @@ export default function EngineSwapPage() {
               </p>
               <p>
                 At Vogue Technics, we carry out engine swaps and engine conversions for Range Rover, Land Rover, Jaguar, Audi, and
-                BMW. Based in Grays, Essex with UK-wide collection available, we handle everything from a like-for-like engine change
-                to a full performance conversion — with the technical knowledge to advise you properly and the workshop capability
+                BMW. Based in  with UK-wide collection available, we handle everything from a like-for-like engine change
+                to a full performance conversion   with the technical knowledge to advise you properly and the workshop capability
                 to carry it out to a high standard.
               </p>
             </motion.div>
@@ -105,7 +105,7 @@ export default function EngineSwapPage() {
 
           <div className="max-w-5xl mx-auto space-y-6 text-slate-600 leading-relaxed font-medium text-sm md:text-base bg-slate-50 border border-slate-100 rounded-[3rem] p-10 md:p-12">
             <p>
-              An engine swap is not always the first option — but in the right circumstances, it is absolutely the right one. There
+              An engine swap is not always the first option   but in the right circumstances, it is absolutely the right one. There
               are several situations where a swap makes more sense than a repair or standard replacement.
             </p>
             <p>
@@ -117,12 +117,12 @@ export default function EngineSwapPage() {
             </p>
             <p>
               The key is getting the right advice before committing to anything. Engine swaps vary enormously in complexity, cost,
-              and what they involve — and the first conversation should always be an honest one about whether a swap is genuinely the
+              and what they involve   and the first conversation should always be an honest one about whether a swap is genuinely the
               right decision for your specific vehicle.
             </p>
             <div className="pt-6">
               <Link href="/contact-us" className="inline-flex items-center gap-2 text-primary font-black text-xs tracking-widest uppercase">
-                Speak to a Specialist Before You Decide — No Obligation <ArrowRight className="w-4 h-4" />
+                Speak to a Specialist Before You Decide   No Obligation <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </div>
@@ -134,7 +134,7 @@ export default function EngineSwapPage() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center max-w-4xl mx-auto mb-16 space-y-6">
             <h2 className="text-2xl md:text-4xl font-extrabold text-slate-900 uppercase tracking-tight italic">
-              Engine Swap Cost <span className="text-primary">— What Should You Expect to Pay?</span>
+              Engine Swap Cost <span className="text-primary">  What Should You Expect to Pay?</span>
             </h2>
             <div className="w-24 h-1.5 bg-primary mx-auto rounded-full"></div>
           </div>
@@ -146,14 +146,14 @@ export default function EngineSwapPage() {
                 depending on the vehicle, the donor engine, and the complexity of the conversion.
               </p>
               <p>
-                A straightforward like-for-like engine change — where a tested replacement unit of the same specification is fitted
-                in place of a failed original — sits at one end of the cost scale. A full engine conversion involving a different
+                A straightforward like-for-like engine change   where a tested replacement unit of the same specification is fitted
+                in place of a failed original   sits at one end of the cost scale. A full engine conversion involving a different
                 donor engine, modified engine mounts, revised ancillary systems, and mapping work sits at the other.
               </p>
               <p>
                 What we can tell you is that every engine swap quote from Vogue Technics is written, itemised, and agreed before any
                 work begins. There are no surprises at collection and no additions without your approval. If you have been quoted
-                elsewhere and the figure does not feel right, come to us for a second opinion — we are straightforward about what
+                elsewhere and the figure does not feel right, come to us for a second opinion   we are straightforward about what
                 things cost and why.
               </p>
             </div>
@@ -163,7 +163,7 @@ export default function EngineSwapPage() {
                 Request a Written Engine Swap Quote Today
               </h3>
               <p className="text-slate-300 font-medium leading-relaxed text-sm md:text-base mb-8">
-                Tell us your vehicle, your objective, and any symptoms or history — we’ll advise honestly on feasibility and cost.
+                Tell us your vehicle, your objective, and any symptoms or history   we’ll advise honestly on feasibility and cost.
               </p>
               <Link
                 href="/contact-us"
@@ -191,7 +191,7 @@ export default function EngineSwapPage() {
               {
                 title: "Range Rover Engine Swap",
                 text: [
-                  "The Range Rover has one of the most active engine swap communities of any prestige 4x4 — and for good reason. Whether it is a P38 that needs a more reliable and cost-effective alternative to the original BMW V8, a classic Range Rover being restored and upgraded, an L322 with a failed engine where a quality swap makes more financial sense than a rebuild, or a Range Rover Sport owner exploring performance options beyond the standard configuration — the swap conversation comes up regularly on this platform.",
+                  "The Range Rover has one of the most active engine swap communities of any prestige 4x4   and for good reason. Whether it is a P38 that needs a more reliable and cost-effective alternative to the original BMW V8, a classic Range Rover being restored and upgraded, an L322 with a failed engine where a quality swap makes more financial sense than a rebuild, or a Range Rover Sport owner exploring performance options beyond the standard configuration   the swap conversation comes up regularly on this platform.",
                   "We carry out Range Rover engine swaps across the Classic, P38, L322, L405, Sport, and Evoque. We advise on compatible swap options for each platform, manage the ancillary system changes the conversion requires, and carry out the installation to a standard that reflects what this vehicle deserves.",
                   "Range Rover engine swap cost depends on the platform and the chosen donor engine. We provide full written quotes following an initial consultation on your specific vehicle and objectives.",
                 ],
@@ -201,8 +201,8 @@ export default function EngineSwapPage() {
               {
                 title: "Land Rover Engine Swap",
                 text: [
-                  "The Defender, the Discovery, and the Series Land Rovers are arguably the most swap-friendly vehicles in the JLR family. The Defender engine swap market in particular is well established — with owners upgrading from the original 300 TDI or TD5 to more modern and capable units, or exploring LS swap options for maximum performance and reliability in demanding off-road use.",
-                  "We carry out Land Rover Defender engine swaps, Discovery engine swaps including Discovery 2 and LR4 platforms, and Series 2 and Series 3 engine conversions for classic vehicles being rebuilt or upgraded. Land Rover LS swap work is something we advise on carefully — it requires specific knowledge of mounting, ancillary routing, and mapping — and we have the experience to guide you through the options honestly.",
+                  "The Defender, the Discovery, and the Series Land Rovers are arguably the most swap-friendly vehicles in the JLR family. The Defender engine swap market in particular is well established   with owners upgrading from the original 300 TDI or TD5 to more modern and capable units, or exploring LS swap options for maximum performance and reliability in demanding off-road use.",
+                  "We carry out Land Rover Defender engine swaps, Discovery engine swaps including Discovery 2 and LR4 platforms, and Series 2 and Series 3 engine conversions for classic vehicles being rebuilt or upgraded. Land Rover LS swap work is something we advise on carefully   it requires specific knowledge of mounting, ancillary routing, and mapping   and we have the experience to guide you through the options honestly.",
                   "Land Rover engine swap cost varies by model and conversion type. Contact us to discuss your specific vehicle and what you are trying to achieve.",
                 ],
                 href: "/land-rover-engines",
@@ -211,7 +211,7 @@ export default function EngineSwapPage() {
               {
                 title: "Jaguar Engine Swap",
                 text: [
-                  "Jaguar engine swaps cover a range of scenarios — from owners of older XJ and S-Type models looking for a reliable and cost-effective engine change, through to enthusiasts exploring Jaguar LS swap options or a V8 conversion on a platform that warrants it.",
+                  "Jaguar engine swaps cover a range of scenarios   from owners of older XJ and S-Type models looking for a reliable and cost-effective engine change, through to enthusiasts exploring Jaguar LS swap options or a V8 conversion on a platform that warrants it.",
                   "We carry out Jaguar engine swaps and conversions across the XF, XJ, S-Type, and X-Type, advising on compatible units, swap feasibility, and what the conversion realistically involves in terms of cost and timescale. Jaguar engine replacement cost as part of a swap is always quoted in full before work begins.",
                 ],
                 href: "/jaguar-engines",
@@ -229,7 +229,7 @@ export default function EngineSwapPage() {
               {
                 title: "BMW Engine Swap",
                 text: [
-                  "BMW engine swaps are some of the most technically involved jobs we carry out — and some of the most rewarding. From a BMW 3 Series engine swap where a failed N47 diesel is being replaced with a more reliable alternative, through to an M engine conversion or an S54 swap into a platform that did not originally receive it, the work requires genuine expertise and proper planning.",
+                  "BMW engine swaps are some of the most technically involved jobs we carry out   and some of the most rewarding. From a BMW 3 Series engine swap where a failed N47 diesel is being replaced with a more reliable alternative, through to an M engine conversion or an S54 swap into a platform that did not originally receive it, the work requires genuine expertise and proper planning.",
                   "We carry out BMW engine swaps and performance conversions across the 3 Series, 5 Series, X3, X5, and M-series platforms. BMW diesel to petrol swaps are an area of growing demand, particularly among owners of N47-equipped models. BMW engine swap cost is quoted in full following a consultation on your vehicle and the conversion you have in mind.",
                 ],
                 href: "/bmw-engines",
@@ -277,7 +277,7 @@ export default function EngineSwapPage() {
               { icon: <Gauge className="w-5 h-5" />, title: "Technical Knowledge Across All Five Platforms", text: "Mounting points, ancillary systems, ECU compatibility, and emissions compliance all need to be considered. We know where the complications lie." },
               { icon: <Wrench className="w-5 h-5" />, title: "Written Quotes, No Surprises", text: "Every engine swap is quoted in full before work begins. The figure you agree is the figure you pay." },
               { icon: <CheckCircle2 className="w-5 h-5" />, title: "Six-Month Warranty as Standard", text: "All engine swap work carries a minimum six-month warranty covering parts and labour." },
-              { icon: <RefreshCw className="w-5 h-5" />, title: "UK-Wide Collection Available", text: "Based in Grays, Essex, we collect and deliver UK-wide on all engine swap and major conversion work." },
+              { icon: <RefreshCw className="w-5 h-5" />, title: "UK-Wide Collection Available", text: "Based in , we collect and deliver UK-wide on all engine swap and major conversion work." },
             ].map((item) => (
               <div key={item.title} className="bg-white/5 border border-white/10 rounded-[2.5rem] p-10 hover:bg-white/10 transition-all duration-500">
                 <div className="flex items-start gap-4">
@@ -331,7 +331,7 @@ export default function EngineSwapPage() {
           {
             question: "Do you offer UK-wide collection for engine swap work?",
             answer:
-              "Yes. We collect and deliver UK-wide on all engine swap jobs from our Grays, Essex base.",
+              "Yes. We collect and deliver UK-wide on all engine swap jobs from our  base.",
           },
         ]}
       />
@@ -365,12 +365,12 @@ export default function EngineSwapPage() {
               href="/contact-us"
               className="bg-white/20 text-white font-black px-12 py-6 rounded-[2rem] shadow-2xl hover:bg-white/25 transition-all uppercase tracking-[0.2em] text-xs md:text-sm border border-white/20"
             >
-              Get a Written Quote — No Obligation
+              Get a Written Quote   No Obligation
             </Link>
           </div>
 
           <div className="mt-16 text-white/90 font-black uppercase tracking-widest text-[0.65rem]">
-            Vogue Technics | Engine Swap Specialists | Grays, Essex | UK-Wide Collection &nbsp; Range Rover • Land Rover • Jaguar •
+            Vogue Technics | Engine Swap Specialists |  | UK-Wide Collection &nbsp; Range Rover • Land Rover • Jaguar •
             Audi • BMW
           </div>
         </div>

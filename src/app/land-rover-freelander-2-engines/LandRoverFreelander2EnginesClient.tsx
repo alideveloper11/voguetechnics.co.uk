@@ -20,7 +20,7 @@ const services = [
     title: "Timing Belt Replacement",
     slug: "timing-belt-replacement",
     body:
-      "This is arguably the single most important maintenance item on the Freelander 2 2.2 TD4. Unlike many other Land Rover engines that use a timing chain, the Freelander 2 diesel runs a timing belt — and a belt gives no warning before failure. If you're uncertain when it was last replaced, we strongly recommend immediate inspection and replacement rather than assumption. We carry complete timing belt kits for all Freelander 2 diesel variants and replace them to — or ahead of — manufacturer-specified intervals.",
+      "This is arguably the single most important maintenance item on the Freelander 2 2.2 TD4. Unlike many other Land Rover engines that use a timing chain, the Freelander 2 diesel runs a timing belt   and a belt gives no warning before failure. If you're uncertain when it was last replaced, we strongly recommend immediate inspection and replacement rather than assumption. We carry complete timing belt kits for all Freelander 2 diesel variants and replace them to   or ahead of   manufacturer-specified intervals.",
   },
   {
     title: "Turbo Replacement",
@@ -32,31 +32,31 @@ const services = [
     title: "Timing Chain Replacement",
     slug: "timing-chain-replacement",
     body:
-      "While the Freelander 2 diesel runs a belt, certain petrol variants incorporate timing chain systems that develop wear over time, particularly at higher mileage. Cold-start rattle and rough running are indicators. We replace complete timing chain assemblies — chain, tensioners, guides, and sprockets as a full system — ensuring the repair addresses the root cause.",
+      "While the Freelander 2 diesel runs a belt, certain petrol variants incorporate timing chain systems that develop wear over time, particularly at higher mileage. Cold-start rattle and rough running are indicators. We replace complete timing chain assemblies   chain, tensioners, guides, and sprockets as a full system   ensuring the repair addresses the root cause.",
   },
   {
     title: "Engine Rebuild",
     slug: "engine-rebuild",
     body:
-      "When a Freelander 2 engine has accumulated significant mileage, suffered prolonged head gasket contamination, or developed wear across multiple components, a full rebuild is often the most cost-effective path forward. We strip the engine entirely, inspect every component against factory tolerances, replace everything that falls short, and rebuild to manufacturer specifications — backed by a written warranty.",
+      "When a Freelander 2 engine has accumulated significant mileage, suffered prolonged head gasket contamination, or developed wear across multiple components, a full rebuild is often the most cost-effective path forward. We strip the engine entirely, inspect every component against factory tolerances, replace everything that falls short, and rebuild to manufacturer specifications   backed by a written warranty.",
   },
   {
     title: "Engine Repair",
     slug: "engine-repair",
     body:
-      "Not every Freelander 2 engine fault demands a full rebuild. Our diagnostic process identifies the precise root cause before we recommend any course of action. Oil leaks, bearing wear, EGR faults, injector problems, sensor failures, valve damage — we handle every level of engine repair with accuracy and complete honesty.",
+      "Not every Freelander 2 engine fault demands a full rebuild. Our diagnostic process identifies the precise root cause before we recommend any course of action. Oil leaks, bearing wear, EGR faults, injector problems, sensor failures, valve damage   we handle every level of engine repair with accuracy and complete honesty.",
   },
   {
     title: "Engine Replacement",
     slug: "engine-replacement",
     body:
-      "When multiple major faults develop together, or replacement is the more sensible decision, we supply and fit quality reconditioned and low-mileage used Freelander 2 engines sourced from trusted UK suppliers. Every engine we supply is inspected and tested before it goes near your vehicle — we don't fit engines we haven't personally verified as fit for purpose.",
+      "When multiple major faults develop together, or replacement is the more sensible decision, we supply and fit quality reconditioned and low-mileage used Freelander 2 engines sourced from trusted UK suppliers. Every engine we supply is inspected and tested before it goes near your vehicle   we don't fit engines we haven't personally verified as fit for purpose.",
   },
   {
     title: "Engine Swap",
     slug: "engine-swap",
     body:
-      "Considering an engine conversion on your Freelander 2 — upgrading from the TD4 to the more capable SD4, or exploring an alternative option? Our engine swap service covers mounts, ancillaries, wiring, ECU mapping, and thorough post-swap diagnostics — carried out by specialists who understand what each conversion involves.",
+      "Considering an engine conversion on your Freelander 2   upgrading from the TD4 to the more capable SD4, or exploring an alternative option? Our engine swap service covers mounts, ancillaries, wiring, ECU mapping, and thorough post-swap diagnostics   carried out by specialists who understand what each conversion involves.",
   },
   {
     title: "Engine Health Check",
@@ -80,22 +80,22 @@ const faqs = [
   {
     question: "How often should the Freelander 2 timing belt be replaced?",
     answer:
-      "Land Rover recommends timing belt replacement on the 2.2 TD4 at specified mileage and age intervals — typically every 72,000 miles or 6 years, whichever comes first. If you're unsure when it was last replaced, we strongly recommend immediate inspection and replacement rather than waiting.",
+      "Land Rover recommends timing belt replacement on the 2.2 TD4 at specified mileage and age intervals   typically every 72,000 miles or 6 years, whichever comes first. If you're unsure when it was last replaced, we strongly recommend immediate inspection and replacement rather than waiting.",
   },
   {
     question: "Is the Land Rover Freelander 2 worth repairing?",
     answer:
-      "For vehicles in otherwise sound condition, yes — absolutely. A quality engine rebuild or replacement costs significantly less than sourcing a replacement Freelander 2 at current used market prices, and it comes with a written warranty.",
+      "For vehicles in otherwise sound condition, yes   absolutely. A quality engine rebuild or replacement costs significantly less than sourcing a replacement Freelander 2 at current used market prices, and it comes with a written warranty.",
   },
   {
     question: "Do you supply reconditioned Freelander 2 engines for sale in the UK?",
     answer:
-      "Yes. We supply quality reconditioned and low-mileage used Freelander 2 engines for all variants — 2.2 TD4, 2.2 SD4, and petrol units. Contact us for current availability and accurate pricing.",
+      "Yes. We supply quality reconditioned and low-mileage used Freelander 2 engines for all variants   2.2 TD4, 2.2 SD4, and petrol units. Contact us for current availability and accurate pricing.",
   },
   {
     question: "What does the Freelander 2 engine system fault warning mean?",
     answer:
-      "This warning typically indicates a fault within the engine management system — anything from a sensor issue through to turbo failure or more serious internal problems. We recommend booking a diagnostic check immediately. Continuing to drive risks escalating an existing fault.",
+      "This warning typically indicates a fault within the engine management system   anything from a sensor issue through to turbo failure or more serious internal problems. We recommend booking a diagnostic check immediately. Continuing to drive risks escalating an existing fault.",
   },
   {
     question: "How long does Freelander 2 engine repair or replacement take?",
@@ -111,7 +111,7 @@ export default function LandRoverFreelander2EnginesClient() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/car_bgg.jpg"
-            alt="Land Rover Freelander 2 engine specialist in Grays"
+            alt="Land Rover Freelander 2 engine specialist in "
             fill
             className="object-cover opacity-30 mix-blend-overlay"
             priority
@@ -136,7 +136,7 @@ export default function LandRoverFreelander2EnginesClient() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-300 to-green-400">
                 Land Rover Freelander 2
               </span>{" "}
-              Engine Repair, Rebuild & Replacement — Specialists in Grays, Essex
+              Engine Repair, Rebuild & Replacement   Specialists in 
             </motion.h1>
 
             <motion.div
@@ -155,10 +155,10 @@ export default function LandRoverFreelander2EnginesClient() {
               className="mt-7 max-w-4xl text-sm leading-relaxed text-slate-300 md:text-base space-y-4"
             >
               <p>
-                The Land Rover Freelander 2 occupies a unique place in the Land Rover family. Smaller and more accessible than the Discovery or Range Rover, it still delivers genuine capability, everyday practicality, and that unmistakable Land Rover build quality. But the Freelander 2 — particularly those running the 2.2 TD4 diesel engine — carries well-documented vulnerabilities that catch owners off guard, often at significant cost.
+                The Land Rover Freelander 2 occupies a unique place in the Land Rover family. Smaller and more accessible than the Discovery or Range Rover, it still delivers genuine capability, everyday practicality, and that unmistakable Land Rover build quality. But the Freelander 2   particularly those running the 2.2 TD4 diesel engine   carries well-documented vulnerabilities that catch owners off guard, often at significant cost.
               </p>
               <p>
-                At Vogue Technics, based in Grays, Essex, we work exclusively on Land Rover and Range Rover engines. Backed by over 25 years of hands-on specialist experience, we carry out Freelander 2 engine repair, rebuilds, and replacements that are done correctly, done once, and backed by a written warranty.
+                At Vogue Technics, based in , we work exclusively on Land Rover and Range Rover engines. Backed by over 25 years of hands-on specialist experience, we carry out Freelander 2 engine repair, rebuilds, and replacements that are done correctly, done once, and backed by a written warranty.
               </p>
             </motion.div>
           </div>
@@ -171,9 +171,9 @@ export default function LandRoverFreelander2EnginesClient() {
             <h2 className="text-2xl md:text-3xl font-bold text-slate-900">Why Freelander 2 Owners Choose Vogue Technics</h2>
             <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
-                <h3 className="font-bold text-slate-900">Land Rover Exclusivity — Every Technician, Every Day</h3>
+                <h3 className="font-bold text-slate-900">Land Rover Exclusivity   Every Technician, Every Day</h3>
                 <p className="mt-3 text-slate-700 leading-relaxed">
-                  Every technician works exclusively on Land Rover and Range Rover platforms. The Freelander 2's 2.2 TD4 and SD4 engines have specific failure characteristics — and our team has dealt with every one repeatedly.
+                  Every technician works exclusively on Land Rover and Range Rover platforms. The Freelander 2's 2.2 TD4 and SD4 engines have specific failure characteristics   and our team has dealt with every one repeatedly.
                 </p>
               </div>
               <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
@@ -183,7 +183,7 @@ export default function LandRoverFreelander2EnginesClient() {
                 </p>
               </div>
               <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
-                <h3 className="font-bold text-slate-900">Itemised Quotes — Before We Touch Your Vehicle</h3>
+                <h3 className="font-bold text-slate-900">Itemised Quotes   Before We Touch Your Vehicle</h3>
                 <p className="mt-3 text-slate-700 leading-relaxed">
                   We provide a full itemised quote covering parts, labour, and a confirmed timeline before we lift a single tool. No evolving estimates. No surprises.
                 </p>
@@ -201,7 +201,7 @@ export default function LandRoverFreelander2EnginesClient() {
             </h2>
             <div className="w-24 h-1 bg-primary mx-auto rounded-full mt-4"></div>
             <p className="mt-6 text-slate-600 text-[1.05rem] leading-relaxed">
-              We cover every engine service the Freelander 2 requires — all variants, all model years from 2006 to 2015, and all levels of fault from a single component repair through to a complete engine replacement.
+              We cover every engine service the Freelander 2 requires   all variants, all model years from 2006 to 2015, and all levels of fault from a single component repair through to a complete engine replacement.
             </p>
           </div>
 
@@ -246,18 +246,18 @@ export default function LandRoverFreelander2EnginesClient() {
             {[
               {
                 quote:
-                  '"My Freelander 2 TD4 had been misdiagnosed at two different garages — both replaced parts that didn\'t fix the problem. Vogue Technics found the real fault immediately, gave me a clear quote, and resolved it properly first time. Wish I\'d called them initially."',
-                by: "— Andrew H., Suffolk",
+                  '"My Freelander 2 TD4 had been misdiagnosed at two different garages   both replaced parts that didn\'t fix the problem. Vogue Technics found the real fault immediately, gave me a clear quote, and resolved it properly first time. Wish I\'d called them initially."',
+                by: "  Andrew H., Suffolk",
               },
               {
                 quote:
                   '"Sent my 2.2 TD4 engine down from Leeds after a head gasket failure that had gone too far to repair in situ. It came back beautifully rebuilt, packaged properly, and arrived ahead of the date I\'d been given. Exceptional."',
-                by: "— Lisa M., Leeds",
+                by: "  Lisa M., Leeds",
               },
               {
                 quote:
                   '"I was quoted over £4,800 by two garages for a Freelander 2 engine replacement. Vogue Technics completed the same job with a warranty for significantly less. Professional, honest, and genuinely knowledgeable about the vehicle."',
-                by: "— Simon R., Berkshire",
+                by: "  Simon R., Berkshire",
               },
             ].map((t) => (
               <div
@@ -278,7 +278,7 @@ export default function LandRoverFreelander2EnginesClient() {
       </section>
 
       <FAQSection
-        title={<>Frequently Asked Questions — <span className="text-primary italic">Land Rover Freelander 2 Engines</span></>}
+        title={<>Frequently Asked Questions   <span className="text-primary italic">Land Rover Freelander 2 Engines</span></>}
         items={faqs}
       />
 
@@ -286,10 +286,10 @@ export default function LandRoverFreelander2EnginesClient() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-5xl mx-auto text-center space-y-6">
             <h2 className="text-3xl md:text-4xl font-extrabold leading-tight">
-              Book Your Freelander 2 Engine Work Today — Call Vogue Technics
+              Book Your Freelander 2 Engine Work Today   Call Vogue Technics
             </h2>
             <p className="text-emerald-50 leading-relaxed max-w-3xl mx-auto">
-              Call us today or complete our online enquiry form for a fast, no-obligation quote. We're based in Grays, Essex, and we serve Freelander 2 owners from Cornwall to the Scottish Highlands. Your Freelander 2 deserves genuine specialist care — and that is exactly what we deliver.
+              Call us today or complete our online enquiry form for a fast, no-obligation quote. We're based in , and we serve Freelander 2 owners from Cornwall to the Scottish Highlands. Your Freelander 2 deserves genuine specialist care   and that is exactly what we deliver.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <a

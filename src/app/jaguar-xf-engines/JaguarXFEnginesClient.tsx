@@ -33,7 +33,7 @@ const faqs = [
   {
     question: "Can you collect my engine from anywhere in the UK?",
     answer:
-      "Yes. We offer UK-wide collection and delivery so you can access our Grays workshop expertise from anywhere in the country.",
+      "Yes. We offer UK-wide collection and delivery so you can access our  workshop expertise from anywhere in the country.",
   },
 ];
 
@@ -44,7 +44,7 @@ export default function JaguarXFEnginesClient() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/car_bgg.jpg"
-            alt="Jaguar XF engine specialists in Grays"
+            alt="Jaguar XF engine specialists in "
             fill
             className="object-cover opacity-30 mix-blend-overlay"
             priority
@@ -68,7 +68,7 @@ export default function JaguarXFEnginesClient() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-300 to-green-400">
                 Jaguar XF Engine Rebuild
               </span>{" "}
-              — Specialist Engine Repairs, Reconditioning & Replacements Across the UK
+                Specialist Engine Repairs, Reconditioning & Replacements Across the UK
             </motion.h1>
 
             <motion.div
@@ -87,12 +87,12 @@ export default function JaguarXFEnginesClient() {
               className="mt-7 max-w-4xl text-sm leading-relaxed text-slate-300 md:text-base space-y-4"
             >
               <p>
-                The Jaguar XF spans two generations and a wide variety of petrol and diesel engines — each with its own fault patterns, rebuild
+                The Jaguar XF spans two generations and a wide variety of petrol and diesel engines   each with its own fault patterns, rebuild
                 tolerances and diagnostic approach.
               </p>
               <p>
-                Vogue Technics in Grays, Essex carry out Jaguar XF engine rebuilds, targeted repairs, reconditioned engine replacements and proper
-                diagnostic assessments across the full XF range — with clear, itemised quotes and written warranty.
+                Vogue Technics in  carry out Jaguar XF engine rebuilds, targeted repairs, reconditioned engine replacements and proper
+                diagnostic assessments across the full XF range   with clear, itemised quotes and written warranty.
               </p>
             </motion.div>
           </div>
@@ -127,7 +127,7 @@ export default function JaguarXFEnginesClient() {
       <FAQSection
         title={
           <>
-            Frequently Asked Questions — <span className="text-primary italic">Jaguar XF Engines</span>
+            Frequently Asked Questions   <span className="text-primary italic">Jaguar XF Engines</span>
           </>
         }
         items={faqs}
@@ -140,7 +140,7 @@ export default function JaguarXFEnginesClient() {
               Speak to a Jaguar XF engine specialist
             </h2>
             <p className="text-emerald-50 leading-relaxed max-w-4xl mx-auto">
-              Call today to discuss your Jaguar XF symptoms and receive a clear plan — diagnostics, targeted repair, or a full rebuild/replacement option.
+              Call today to discuss your Jaguar XF symptoms and receive a clear plan   diagnostics, targeted repair, or a full rebuild/replacement option.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <a

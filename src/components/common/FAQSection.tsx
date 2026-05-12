@@ -19,7 +19,7 @@ const faqs = [
   },
   {
     question: "Can you supply and fit the engine at my location?",
-    answer: "While we perform major installations at our specialized workshop in Grays, we offer nationwide collection and delivery services to make the process as seamless as possible for you.",
+    answer: "While we perform major installations at our specialized workshop, we offer nationwide collection and delivery services to make the process as seamless as possible for you.",
   },
   {
     question: "What is the difference between a used and reconditioned engine?",

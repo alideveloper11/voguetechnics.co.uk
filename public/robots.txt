@@ -1,4 +1,9 @@
+# *
 User-agent: *
-Disallow: /cdn-cgi/
+Allow: /
 
+# Host
+Host: https://www.voguetechnics.co.uk
+
+# Sitemaps
 Sitemap: https://www.voguetechnics.co.uk/sitemap.xml

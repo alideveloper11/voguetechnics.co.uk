@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import Breadcrumbs from "@/components/common/Breadcrumbs";
+import { useState } from "react";
 
 const TRUSTPILOT_URL = "https://www.trustpilot.com/review/voguetechnics.co.uk";
 const GOOGLE_REVIEWS_URL =
@@ -152,6 +153,79 @@ const platformStats = [
   { label: "Would Recommend", value: "96%", detail: "To a friend or family member" },
 ];
 
+function ReviewCard({ review, idx }: { review: (typeof reviews)[0]; idx: number }) {
+  const [expanded, setExpanded] = useState(false);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, delay: idx * 0.05 }}
+      className="group relative flex flex-col rounded-[1.5rem] border border-slate-200 bg-white p-4 shadow-sm transition-all duration-500 hover:border-primary/20 hover:shadow-2xl hover:-translate-y-0.5"
+    >
+      <div className="absolute right-4 top-4 text-slate-100 transition-colors duration-500 group-hover:text-primary/10">
+        <Quote className="w-8 h-8 fill-current" />
+      </div>
+
+      {/* Stars */}
+      <div className="relative z-10 mb-2 flex gap-1">
+        {[...Array(review.rating)].map((_, i) => (
+          <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+        ))}
+      </div>
+
+      {/* Name */}
+      <h3 className="relative z-10 text-base font-bold text-slate-900">{review.name}</h3>
+
+      {/* Location — always its own row; show icon even when location text is empty */}
+      <div className="relative z-10 mt-1.5 flex items-center gap-1 text-xs text-slate-500">
+        <MapPin className="w-3 h-3 shrink-0" />
+        {review.location && <span>{review.location}</span>}
+      </div>
+
+      {/* Source badge — always its own row below location */}
+      <div className="relative z-10 mt-1">
+        <span className="rounded-full bg-emerald-50 px-2.5 py-0.5 text-xs font-bold uppercase tracking-[0.18em] text-emerald-700">
+          {review.source}
+        </span>
+      </div>
+
+      {/* Vehicle box */}
+      <div className="relative z-10 mt-3 rounded-xl bg-slate-50 p-2.5">
+        <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary">{review.vehicle}</p>
+        <p className="mt-0.5 text-xs text-slate-600">{review.service}</p>
+      </div>
+
+      {/* Text — flex-1 fills remaining space so bottom section stays aligned */}
+      <div className="relative z-10 mt-3 flex flex-1 flex-col">
+        <p className={`flex-1 text-xs leading-relaxed text-slate-700 ${expanded ? "" : "line-clamp-3"}`}>
+          &ldquo;{review.text}&rdquo;
+        </p>
+        <button
+          onClick={() => setExpanded(!expanded)}
+          className="mt-1.5 self-start text-primary text-xs font-bold uppercase tracking-wide hover:underline"
+        >
+          {expanded ? "View Less" : "View More"}
+        </button>
+      </div>
+
+      {/* Bottom — always pinned to bottom */}
+      <div className="relative z-10 mt-4 flex items-center justify-between border-t border-slate-100 pt-3">
+        <span className="rounded-full bg-slate-100 px-2.5 py-1 text-[0.65rem] font-bold uppercase tracking-[0.18em] text-slate-700">
+          {review.category}
+        </span>
+        <div className="flex items-center gap-1.5 text-emerald-600">
+          <div className="flex h-7 w-7 items-center justify-center rounded-full bg-emerald-50">
+            <CheckCircle className="w-4 h-4" />
+          </div>
+          <span className="text-[0.65rem] font-black uppercase tracking-[0.18em]">Five out of Five</span>
+        </div>
+      </div>
+    </motion.div>
+  );
+}
+
 export default function ReviewsClient() {
   return (
     <div className="bg-white min-h-screen">
@@ -228,54 +302,7 @@ export default function ReviewsClient() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
             {reviews.map((review, idx) => (
-              <motion.div
-                key={review.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: idx * 0.05 }}
-                className="group relative flex h-full flex-col justify-between rounded-[2.25rem] border border-slate-200 bg-white p-6 shadow-sm transition-all duration-500 hover:border-primary/20 hover:shadow-2xl hover:-translate-y-0.5"
-              >
-                <div className="absolute right-6 top-6 text-slate-100 transition-colors duration-500 group-hover:text-primary/10">
-                  <Quote className="w-12 h-12 fill-current" />
-                </div>
-
-                <div className="relative z-10">
-                  <div className="mb-4 flex gap-1">
-                    {[...Array(review.rating)].map((_, i) => (
-                      <Star key={i} className="w-4.5 h-4.5 fill-yellow-400 text-yellow-400" />
-                    ))}
-                  </div>
-                  <h3 className="text-xl font-bold text-slate-900">{review.name}</h3>
-                  <div className="mt-2 flex flex-wrap items-center gap-3 text-xs text-slate-500">
-                    <span className="inline-flex items-center gap-1">
-                      <MapPin className="w-3.5 h-3.5" /> {review.location}
-                    </span>
-                    <span className="rounded-full bg-emerald-50 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-emerald-700">
-                      {review.source}
-                    </span>
-                  </div>
-                  <div className="mt-4 rounded-2xl bg-slate-50 p-3">
-                    <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary">{review.vehicle}</p>
-                    <p className="mt-1 text-xs text-slate-600">{review.service}</p>
-                  </div>
-                  <p className="mt-4 text-sm leading-relaxed text-slate-700">
-                    "{review.text}"
-                  </p>
-                </div>
-
-                <div className="relative z-10 mt-6 flex items-center justify-between border-t border-slate-100 pt-5">
-                  <span className="rounded-full bg-slate-100 px-3 py-2 text-[0.7rem] font-bold uppercase tracking-[0.18em] text-slate-700">
-                    {review.category}
-                  </span>
-                  <div className="flex items-center gap-2 text-emerald-600">
-                    <div className="flex h-9 w-9 items-center justify-center rounded-full bg-emerald-50">
-                      <CheckCircle className="w-4.5 h-4.5" />
-                    </div>
-                    <span className="text-[0.7rem] font-black uppercase tracking-[0.18em]">Five out of Five</span>
-                  </div>
-                </div>
-              </motion.div>
+              <ReviewCard key={review.id} review={review} idx={idx} />
             ))}
           </div>
 
@@ -284,12 +311,12 @@ export default function ReviewsClient() {
               <div>
                 <h2 className="text-3xl font-bold text-slate-900 md:text-4xl">A Note From the Vogue Technics Team</h2>
                 <div className="mt-4 h-1 w-24 rounded-full bg-primary" />
-                <div className="mt-8 space-y-5 text-[1.05rem] leading-relaxed text-slate-700">
+                <div className="mt-5 space-y-3 text-sm leading-relaxed text-slate-700">
                   <p>
-                    Every review on this page represents a vehicle that came to us with a problem and left running properly   and a customer who trusted us with something that matters. We don't take that lightly. Engine work on Range Rovers, Land Rovers, Jaguars, Audis, and BMWs is what we've dedicated the last twenty years to, and the standard we hold ourselves to hasn't changed since the day we opened.
+                    Every review here represents a vehicle that came to us with a problem and left running properly. Engine work on Range Rovers, Land Rovers, Jaguars, Audis, and BMWs is what we've dedicated the last twenty years to. We hold ourselves to the same standard on every job — whether it's a diagnostic check or a full engine rebuild. No shortcuts, no guesswork, just honest specialist work.
                   </p>
                   <p>
-                    Thank you to every customer who has taken the time to share their experience. Your words mean more to us than any advertisement ever could, and they're the reason new customers feel confident picking up the phone for the first time.
+                    Thank you to every customer who took the time to share their experience — your words are the reason new customers feel confident picking up the phone. We don't take that trust lightly, and it pushes us to keep raising the bar with every vehicle that comes through our doors. If you've had work done with us and haven't yet left a review, we'd genuinely appreciate hearing from you. Every piece of feedback helps us improve and helps other drivers make an informed choice.
                   </p>
                 </div>
               </div>
@@ -301,8 +328,8 @@ export default function ReviewsClient() {
                 <div className="mt-6 space-y-6">
                   <div>
                     <h3 className="text-xl font-bold">Google Reviews</h3>
-                    <p className="mt-2 text-slate-300">
-                      Rated 4.9 out of 5 from over 280 verified Google reviews. Read the full collection of customer reviews on our Google Business profile and see what drivers across  and East London are saying about their experience with Vogue Technics.
+                    <p className="mt-2 text-sm text-slate-300">
+                      Rated 4.9 out of 5 from over 280 verified reviews. See what drivers across Essex and East London are saying about Vogue Technics.
                     </p>
                     <div className="mt-4">
                       <a
@@ -317,8 +344,8 @@ export default function ReviewsClient() {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold">Trustpilot</h3>
-                    <p className="mt-2 text-slate-300">
-                      Rated 4.9 out of 5 from over 100 verified Trustpilot reviews. Visit our Trustpilot profile to read independently verified customer feedback and see why Vogue Technics is consistently rated as one of 's most trusted independent engine specialists.
+                    <p className="mt-2 text-sm text-slate-300">
+                      Rated 4.9 out of 5 from over 100 verified reviews. Independently verified feedback from customers who trust us with their engines.
                     </p>
                     <div className="mt-4">
                       <a
@@ -345,14 +372,12 @@ export default function ReviewsClient() {
               <div>
                 <h2 className="text-3xl font-bold text-slate-900 md:text-4xl">Worked With Us? We'd Love to Hear From You.</h2>
                 <div className="mt-4 h-1 w-24 rounded-full bg-primary" />
-                <div className="mt-8 space-y-5 text-[1.05rem] leading-relaxed text-slate-700">
-                  <p>
-                    When a customer collects their vehicle, the first thing Vic tends to say is   take it for a proper drive, give it a few days, and if you're happy with what we've done, it would mean the world if you left us a review. That's genuinely how we feel about it. We don't chase reviews or incentivise them. We just do the work properly and hope that speaks for itself.
-                  </p>
-                  <p>
-                    If Vogue Technics has helped you with your engine, whether it was a full rebuild, a diagnostic check, or something in between, please consider leaving a review on Google or Trustpilot. It takes two minutes and it helps other drivers in  find a specialist they can actually trust.
-                  </p>
-                </div>
+                <p className="mt-4 text-sm leading-relaxed text-slate-600">
+                  If Vogue Technics has helped with your engine, please consider leaving a review on Google or Trustpilot. It takes two minutes and helps other drivers find a specialist they can trust.
+                </p>
+                <p className="mt-3 text-sm leading-relaxed text-slate-600">
+                  We don't chase reviews or incentivise them — we simply do the work properly and let that speak for itself. Your honest feedback means the world to our team.
+                </p>
               </div>
 
               <div className="rounded-[2rem] bg-white p-6 shadow-sm border border-slate-200">
@@ -381,20 +406,14 @@ export default function ReviewsClient() {
         </div>
       </section>
 
-      <section className="bg-primary py-20 md:py-24 text-white">
+      <section className="bg-primary py-10 md:py-12 text-white">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="mx-auto max-w-4xl text-center">
-            <h2 className="text-3xl font-extrabold leading-tight md:text-5xl">
+            <h2 className="text-xl font-extrabold leading-tight md:text-3xl">
               Ready to Experience the Vogue Technics Difference?
             </h2>
-            <p className="mt-6 text-base leading-relaxed text-emerald-50 md:text-lg">
-              Reading about other people's experiences is one thing. Finding out for yourself is another. If your Range Rover, Land Rover, Jaguar, Audi, or BMW has an engine concern   whether it's a noise you can't quite place, a warning light that won't go away, or a fault that another workshop has failed to resolve   we're here to give you a straight answer.
-            </p>
-            <p className="mt-4 text-base leading-relaxed text-emerald-100 md:text-lg">
-              Call us today or request a quote online and one of our team will come back to you promptly. No pressure, no obligation, just honest advice from people who know these engines properly.
-            </p>
 
-            <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
+            <div className="mt-6 flex flex-col justify-center gap-4 sm:flex-row">
               <a
                 href="tel:01375531355"
                 className="inline-flex items-center justify-center gap-3 rounded-2xl bg-white px-8 py-4 font-bold text-primary shadow-xl transition-all hover:bg-slate-50 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99]"

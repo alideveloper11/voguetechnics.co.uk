@@ -37,7 +37,8 @@ export default function ContactForm() {
   };
 
   const handleCaptchaChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setUserCaptchaAnswer(e.target.value);
+    const value = e.target.value.replace(/[^0-9]/g, "");
+    setUserCaptchaAnswer(value);
     setCaptchaError(false);
   };
 
@@ -166,7 +167,7 @@ export default function ContactForm() {
         </div>
 
         {/* Custom Math Captcha Section */}
-        <div className="relative overflow-hidden bg-slate-100 rounded-xl p-6 border border-slate-200">
+        <div className="relative overflow-hidden bg-slate-100 rounded-xl py-3 px-4 border border-slate-200">
           {/* Watermark Pattern */}
           <div className="absolute inset-0 opacity-[0.03] pointer-events-none select-none flex flex-wrap gap-4 p-2 text-[10px] font-bold uppercase rotate-[-10deg]">
             {Array.from({ length: 20 }).map((_, i) => (
@@ -174,26 +175,27 @@ export default function ContactForm() {
             ))}
           </div>
 
-          <div className="relative z-10 flex flex-col items-center justify-center space-y-4">
-            <div className="text-[#0D2447]/70 font-medium text-lg">
-              What is {captcha.num1} + {captcha.num2}?
-            </div>
-            
-            <div className="flex items-center gap-3">
-              <input 
-                type="text" 
+          <div className="relative z-10 flex flex-col gap-1.5">
+            <div className="flex items-center gap-3 w-full">
+              <span className="text-[#0D2447]/70 font-medium text-sm whitespace-nowrap shrink-0">
+                What is {captcha.num1} + {captcha.num2}?
+              </span>
+              <input
+                type="text"
                 value={userCaptchaAnswer}
                 onChange={handleCaptchaChange}
-                placeholder="Robot Captcha Here"
-                className={`w-48 bg-white border ${captchaError ? 'border-red-500 shadow-[0_0_5px_rgba(239,68,68,0.3)]' : 'border-slate-200'} rounded-lg px-4 py-2.5 text-center focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-slate-400`}
+                placeholder="Your answer"
+                inputMode="numeric"
+                pattern="[0-9]*"
+                className={`flex-1 min-w-0 bg-white border ${captchaError ? 'border-red-500 shadow-[0_0_5px_rgba(239,68,68,0.3)]' : 'border-slate-200'} rounded-lg px-3 py-1.5 text-center text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-slate-400`}
               />
-              <button 
+              <button
                 type="button"
                 onClick={generateCaptcha}
-                className="p-2.5 bg-white border border-slate-200 rounded-lg text-emerald-600 hover:bg-slate-50 transition-colors shadow-sm"
+                className="shrink-0 p-1.5 bg-white border border-slate-200 rounded-lg text-emerald-600 hover:bg-slate-50 transition-colors shadow-sm"
                 title="Refresh Captcha"
               >
-                <RotateCw className="w-5 h-5" />
+                <RotateCw className="w-4 h-4" />
               </button>
             </div>
             {captchaError && (

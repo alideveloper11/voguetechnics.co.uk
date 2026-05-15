@@ -214,41 +214,6 @@ export default function AudiEnginesClient() {
               <RegSearch />
             </motion.div>
 
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="text-base md:text-lg text-slate-200 mb-8 max-w-2xl mx-auto leading-relaxed"
-            >
-              When your Audi develops a serious engine problem, the decisions you make matter. Choose the right specialist and you&apos;ll get your car
-              back running the way it should   properly fixed, properly warranted, and clearly quoted.
-            </motion.p>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.26 }}
-              className="text-sm md:text-base text-slate-200/80 mb-8 max-w-3xl mx-auto leading-relaxed"
-            >
-              At Vogue Technics in , we&apos;ve carried out Audi engine replacements, rebuilds, and repairs across the UK for over 25 years  
-              from 1.8 and 2.0 TFSI petrol units through to 3.0 TDI V6 diesel and high-performance S/RS V8 and V10 engines.
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="mb-10 flex flex-wrap justify-center gap-2"
-            >
-              {audiTrustIndicators.map((t) => (
-                <span
-                  key={t}
-                  className="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-bold tracking-wide text-slate-200"
-                >
-                  {t}
-                </span>
-              ))}
-            </motion.div>
           </div>
         </div>
       </section>

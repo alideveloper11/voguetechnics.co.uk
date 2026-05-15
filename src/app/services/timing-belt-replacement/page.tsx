@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React from "react";
 import Image from "next/image";
@@ -50,28 +50,6 @@ export default function TimingBeltReplacementPage() {
               <RegSearch />
             </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 14 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.05 }}
-              className="max-w-4xl mx-auto text-slate-300 leading-relaxed font-medium space-y-6 text-sm md:text-base"
-            >
-              <p>
-                A timing belt does not warn you before it snaps. There is no gradual performance decline, no persistent warning
-                light, no sound that builds over weeks until you cannot ignore it. On most engines, a snapped timing belt causes
-                immediate and catastrophic internal damage   bent valves, destroyed pistons, a repair bill that dwarfs what the belt
-                replacement would have cost.
-              </p>
-              <p>
-                At Vogue Technics, we carry out timing belt and cambelt replacement for Range Rover, Land Rover, Jaguar, Audi, and
-                BMW. Every replacement uses OEM or OEM-specification parts, every job is backed by a six-month warranty, and every
-                written quote is agreed before work begins. Based in , with UK-wide collection available.
-              </p>
-              <p>
-                If your vehicle is approaching its timing belt service interval   or if you are not sure when it was last changed  
-                do not leave it to chance.
-              </p>
-            </motion.div>
 
             <div className="flex flex-col lg:flex-row gap-4 justify-center items-center mt-10">
               <Link
@@ -107,21 +85,12 @@ export default function TimingBeltReplacementPage() {
             <div className="w-24 h-1.5 bg-primary mx-auto rounded-full"></div>
           </div>
 
-          <div className="max-w-5xl mx-auto space-y-6 text-slate-600 leading-relaxed font-medium text-sm md:text-base bg-slate-50 border border-slate-100 rounded-[3rem] p-10 md:p-12">
+          <div className="max-w-5xl mx-auto space-y-4 text-slate-600 leading-relaxed font-medium text-sm bg-slate-50 border border-slate-100 rounded-[3rem] p-8 md:p-10">
             <p>
-              This is one of the most common questions we receive, and it is an important one   because the answer determines
-              whether your vehicle has a component with a finite service life that needs replacing at regular intervals.
+              A timing belt (cambelt) is a rubber belt that degrades over time and must be replaced at set mileage or age intervals. A timing chain does the same job but is metal, oil-lubricated, and designed to last the engine's lifetime — though it can wear on certain platforms.
             </p>
             <p>
-              A timing belt   also called a cambelt   is a rubber reinforced belt that synchronises the crankshaft and camshaft
-              rotation. It degrades over time regardless of mileage and has a manufacturer replacement interval based on mileage or
-              age. A timing chain performs the same function but is a metal component lubricated by engine oil and is designed to
-              last the life of the engine under normal conditions (though it can develop wear and noise on certain platforms).
-            </p>
-            <p>
-              Many modern JLR, Audi, and BMW platforms use timing chains rather than belts. However, several platforms within these
-              ranges   particularly older diesel engines   do use a timing belt. We advise on this at the point of enquiry, free of
-              charge.
+              Many modern JLR, Audi, and BMW engines use timing chains, but several older diesel platforms still use a belt. We'll confirm which your vehicle has at the point of enquiry, free of charge.
             </p>
             <div className="pt-6">
               <Link href="/contact-us" className="inline-flex items-center gap-2 text-primary font-black text-xs tracking-widest uppercase">
@@ -191,7 +160,7 @@ export default function TimingBeltReplacementPage() {
             <div className="w-24 h-1.5 bg-primary mx-auto rounded-full"></div>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
                 title: "Range Rover Timing Belt Replacement",
@@ -224,10 +193,10 @@ export default function TimingBeltReplacementPage() {
                 href: "/bmw-engines",
               },
             ].map((item) => (
-              <div key={item.title} className="bg-slate-50 border border-slate-100 rounded-[2.5rem] p-10 hover:bg-white hover:shadow-2xl transition-all duration-500">
-                <h3 className="text-xl font-extrabold text-slate-900 uppercase tracking-tight italic mb-6">{item.title}</h3>
-                <p className="text-slate-600 leading-relaxed font-medium text-sm md:text-base">{item.body}</p>
-                <div className="pt-8 flex flex-wrap gap-4">
+              <div key={item.title} className="bg-slate-50 border border-slate-100 rounded-[2.5rem] p-6 hover:bg-white hover:shadow-2xl transition-all duration-500">
+                <h3 className="text-xl font-extrabold text-slate-900 uppercase tracking-tight italic mb-3">{item.title}</h3>
+                <p className="text-slate-600 leading-relaxed font-medium text-sm line-clamp-4">{item.body}</p>
+                <div className="pt-4 flex flex-wrap gap-4">
                   <Link href={item.href} className="inline-flex items-center gap-2 text-primary font-black text-xs tracking-widest uppercase">
                     Explore {item.title.split(" ")[0]} Timing Belt Service <ArrowRight className="w-4 h-4" />
                   </Link>
@@ -261,12 +230,12 @@ export default function TimingBeltReplacementPage() {
               { icon: <CheckCircle2 className="w-5 h-5" />, title: "Six-Month Warranty", text: "Every timing belt replacement carries a minimum six-month warranty on parts and labour." },
               { icon: <Wrench className="w-5 h-5" />, title: "UK-Wide Collection", text: "Based in    we collect and deliver across the UK on all timing belt and engine work." },
             ].map((item) => (
-              <div key={item.title} className="bg-white/5 border border-white/10 rounded-[2.5rem] p-10 hover:bg-white/10 transition-all duration-500">
+              <div key={item.title} className="bg-white/5 border border-white/10 rounded-[2.5rem] p-6 hover:bg-white/10 transition-all duration-500">
                 <div className="flex items-start gap-4">
                   <div className="bg-primary/20 text-primary p-2 rounded-xl flex-shrink-0">{item.icon}</div>
-                  <div className="space-y-3">
-                    <h3 className="font-extrabold uppercase tracking-tight italic text-sm md:text-base">{item.title}</h3>
-                    <p className="text-slate-300 leading-relaxed font-medium text-sm md:text-base">{item.text}</p>
+                  <div className="space-y-2 min-w-0">
+                    <h3 className="font-extrabold uppercase tracking-tight italic text-sm">{item.title}</h3>
+                    <p className="text-slate-300 font-medium text-sm line-clamp-3">{item.text}</p>
                   </div>
                 </div>
               </div>
@@ -289,11 +258,11 @@ export default function TimingBeltReplacementPage() {
                 "Step 4   Full Timing Belt Service   belt, tensioner, idler pulleys, and water pump replaced to OEM specification.",
                 "Step 5   Timing Check and Road Test   valve timing verified, post-replacement check completed, road test before handover.",
               ].map((text, idx) => (
-                <div key={idx} className="bg-white/5 border border-white/10 rounded-[2.5rem] p-10 hover:bg-white/10 transition-all duration-500">
-                  <div className="w-12 h-12 rounded-2xl bg-primary text-white flex items-center justify-center font-black text-lg mb-6 shadow-lg">
+                <div key={idx} className="bg-white/5 border border-white/10 rounded-[2.5rem] p-6 hover:bg-white/10 transition-all duration-500">
+                  <div className="w-10 h-10 rounded-2xl bg-primary text-white flex items-center justify-center font-black text-base mb-3 shadow-lg">
                     {idx + 1}
                   </div>
-                  <p className="text-slate-200 leading-relaxed font-medium text-sm md:text-base">{text}</p>
+                  <p className="text-slate-200 font-medium text-sm line-clamp-3">{text}</p>
                 </div>
               ))}
             </div>
@@ -330,38 +299,38 @@ export default function TimingBeltReplacementPage() {
       />
 
       {/* Final CTA */}
-      <section className="py-24 bg-primary relative overflow-hidden">
+      <section className="py-12 bg-primary relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-[100px] pointer-events-none"></div>
         <div className="container mx-auto px-4 lg:px-8 text-center relative z-10">
-          <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-8 uppercase tracking-tight italic leading-tight">
+          <h2 className="text-xl md:text-3xl font-extrabold text-white mb-4 uppercase tracking-tight italic leading-tight">
             Do Not Wait for a Belt <span className="text-slate-950">to Become an Engine</span>
           </h2>
-          <p className="text-emerald-100 text-sm md:text-base mb-14 max-w-3xl mx-auto font-medium leading-relaxed">
+          <p className="text-emerald-100 text-sm md:text-base mb-6 max-w-3xl mx-auto font-medium leading-relaxed">
             Replace at the correct interval with the full kit, then drive with peace of mind.
           </p>
 
           <div className="flex flex-col lg:flex-row gap-6 justify-center items-center">
             <Link
               href="/contact-us"
-              className="bg-slate-950 text-white font-black px-12 py-6 rounded-[2rem] shadow-2xl hover:bg-slate-900 transition-all uppercase tracking-[0.2em] text-xs md:text-sm flex items-center gap-4"
+              className="bg-slate-950 text-white font-black px-7 py-3 rounded-xl shadow-2xl hover:bg-slate-900 transition-all uppercase tracking-[0.2em] text-xs md:text-sm flex items-center gap-4"
             >
               Request a Free Timing Belt Replacement Quote <ArrowRight className="w-6 h-6 text-primary" />
             </Link>
             <a
               href="tel:01375531355"
-              className="bg-white text-slate-950 font-black px-12 py-6 rounded-[2rem] shadow-2xl hover:bg-slate-50 transition-all uppercase tracking-[0.2em] text-xs md:text-sm border-4 border-slate-950/10"
+              className="bg-white text-slate-950 font-black px-7 py-3 rounded-xl shadow-2xl hover:bg-slate-50 transition-all uppercase tracking-[0.2em] text-xs md:text-sm border-4 border-slate-950/10"
             >
               Call Us and Speak to a Specialist
             </a>
             <Link
               href="/contact-us"
-              className="bg-white/20 text-white font-black px-12 py-6 rounded-[2rem] shadow-2xl hover:bg-white/25 transition-all uppercase tracking-[0.2em] text-xs md:text-sm border border-white/20"
+              className="bg-white/20 text-white font-black px-7 py-3 rounded-xl shadow-2xl hover:bg-white/25 transition-all uppercase tracking-[0.2em] text-xs md:text-sm border border-white/20"
             >
               Book a Timing Belt Inspection at Our  Workshop
             </Link>
           </div>
 
-          <div className="mt-16 text-white/90 font-black uppercase tracking-widest text-[0.65rem]">
+          <div className="mt-8 text-white/90 font-black uppercase tracking-widest text-[0.65rem]">
             Vogue Technics | Timing Belt Replacement Specialists |  | UK-Wide Collection &nbsp; Range Rover • Land Rover
             • Jaguar • Audi • BMW
           </div>
@@ -373,4 +342,5 @@ export default function TimingBeltReplacementPage() {
     </main>
   );
 }
+
 

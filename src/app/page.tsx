@@ -24,83 +24,56 @@ export default function Home() {
     {
       title: "Head Gasket Replacement",
       slug: "head-gasket-replacement",
-      body: (
-        <>
-          A blown head gasket is one of the most serious engine faults a vehicle can develop, and one of the most commonly misdiagnosed. We carry out thorough cylinder head inspections, pressure testing, and full head gasket replacement using quality gasket kits suited to your specific engine. Caught early, the repair is straightforward. Left too long, it can cost considerably more.
-        </>
-      ),
+      image: "/images/gallery/1g.webp",
+      body: "A blown head gasket is one of the most serious engine faults a vehicle can develop. We carry out thorough inspections, pressure testing, and full replacement using quality gasket kits suited to your specific engine.",
     },
     {
       title: "Timing Chain Replacement",
       slug: "timing-chain-replacement",
-      body: (
-        <>
-          Timing chain wear is a known issue across several Range Rover and Land Rover engine variants, particularly the TDV6 and SDV6. Rattling on cold start, rough idle, or timing-related fault codes are warning signs that shouldn't be ignored. We replace timing chains, tensioners, and guides to factory specification, restoring engine timing integrity and preventing the kind of catastrophic failure that a neglected chain can cause.
-        </>
-      ),
+      image: "/images/gallery/2g.webp",
+      body: "Timing chain wear is a known issue across several Range Rover and Land Rover variants. We replace chains, tensioners, and guides to factory spec, restoring timing integrity and preventing catastrophic failure.",
     },
     {
       title: "Turbo Replacement",
       slug: "turbo-replacement",
-      body: (
-        <>
-          A failing turbocharger will rob your engine of performance, increase fuel consumption, and   if left unaddressed   can cause serious secondary damage. We diagnose turbo faults accurately before recommending replacement, fitting quality turbos that are matched correctly to your engine variant. Our turbo replacement service covers both supply and fitting, with proper run-in procedures carried out before the vehicle is returned.
-        </>
-      ),
+      image: "/images/gallery/3g.webp",
+      body: "A failing turbocharger robs your engine of performance and can cause serious secondary damage. We diagnose faults accurately and fit quality turbos matched correctly to your engine variant.",
     },
     {
       title: "Engine Rebuild",
       slug: "engine-rebuild",
-      body: (
-        <>
-          A full engine rebuild is the right solution when internal wear, damage, or failure has reached a point where a simple repair won't suffice. We strip the engine completely, inspect every component, machine what can be salvaged, replace what can't, and reassemble to manufacturer tolerances. This is precision work, and it's where our experience really shows.
-        </>
-      ),
+      image: "/images/land-rover-engine-rebuild.webp",
+      body: "A full engine rebuild is the right solution when internal wear or damage is beyond simple repair. We strip, inspect, machine, and reassemble to manufacturer tolerances — precision work done properly.",
     },
     {
       title: "Engine Repair",
       slug: "engine-repair",
-      body: (
-        <>
-          Not every engine problem requires a full rebuild. Many faults   oil consumption issues, internal leaks, bearing noise, loss of compression in specific cylinders   can be resolved with targeted engine repairs that cost significantly less than a full rebuild while delivering excellent results. We assess your engine honestly and recommend only what's genuinely needed.
-        </>
-      ),
+      image: "/images/gallery/4g.webp",
+      body: "Not every engine problem requires a full rebuild. Many faults can be resolved with targeted repairs at significantly lower cost. We assess honestly and recommend only what's genuinely needed.",
     },
     {
       title: "Engine Replacement",
       slug: "engine-replacement",
-      body: (
-        <>
-          When an engine is beyond economical repair, replacement is often the most cost-effective path forward. We source low-mileage, quality-checked replacement engines and handle the full swap, including all associated ancillaries, fluid changes, and post-fitment testing.
-        </>
-      ),
+      image: "/images/supply-and-fit-service.webp",
+      body: "When an engine is beyond economical repair, replacement is often the most cost-effective path. We source quality-checked replacement engines and handle the full swap including all ancillaries and testing.",
     },
     {
       title: "Engine Swap",
       slug: "engine-swap",
-      body: (
-        <>
-          Whether you're looking to upgrade to a more powerful unit, replace a failed engine with an improved variant, or convert between engine types, our engine swap service covers the planning, sourcing, and fitment in full. We'll advise you on compatibility, parts requirements, and realistic costs before any work begins.
-        </>
-      ),
+      image: "/images/gallery/5g.webp",
+      body: "Looking to upgrade or convert between engine types? Our engine swap service covers planning, sourcing, and fitment in full — with honest advice on compatibility and costs before any work begins.",
     },
     {
       title: "Timing Belt Replacement",
       slug: "timing-belt-replacement",
-      body: (
-        <>
-          Some engine variants across our specialist brands still use a timing belt rather than a chain, and missed replacement intervals can have devastating consequences. We replace timing belts, tensioners, and water pumps as a complete service, ensuring the job is done once and done right.
-        </>
-      ),
+      image: "/images/gallery/6g.webp",
+      body: "Missed timing belt replacement intervals can have devastating consequences. We replace belts, tensioners, and water pumps as a complete service — done once and done right.",
     },
     {
       title: "Engine Health Check",
       slug: "engine-health-check",
-      body: (
-        <>
-          If you're buying a used Range Rover, Land Rover, Jaguar, Audi, or BMW, or if your current vehicle is developing symptoms you can't quite pin down, our engine health check gives you a clear, honest assessment of where things stand. We use specialist diagnostic equipment alongside physical inspection to give you an accurate picture of engine condition.
-        </>
-      ),
+      image: "/images/expert-mechanicss.webp",
+      body: "Buying a used vehicle or noticing symptoms you can't pin down? Our engine health check gives you a clear, honest assessment using specialist diagnostic equipment alongside physical inspection.",
     },
   ];
 
@@ -232,7 +205,7 @@ export default function Home() {
   return (
     <>
       {/* HERO SECTION */}
-      <section className="relative min-h-[90vh] flex flex-col justify-center overflow-hidden bg-slate-900 pt-28 md:pt-32">
+      <section className="relative min-h-[90vh] flex flex-col justify-center overflow-hidden bg-slate-900 pt-28 md:pt-32 pb-28 md:pb-32">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/car_bgg.jpg"
@@ -296,19 +269,6 @@ export default function Home() {
             </div>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.25 }}
-            className="text-center max-w-2xl mx-auto mt-8"
-          >
-            <p className="text-sm md:text-base text-white/90 mb-3 leading-relaxed font-semibold">
-              UK's Most Trusted Independent Engine Rebuild, Repair & Replacement Specialists
-            </p>
-            <p className="text-sm md:text-base text-slate-300 leading-relaxed">
-              When your Range Rover or Land Rover engine starts giving trouble, you need more than a general garage. You need specialists who know these engines inside out - their common failure points, their engineering quirks, and exactly what it takes to get them running properly again. That's what Vogue Technics has been delivering for over two decades from our workshop.
-            </p>
-          </motion.div>
         </div>
       </section>
 
@@ -471,25 +431,29 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.05 }}
-                className="group bg-slate-50 border border-slate-100 rounded-[2rem] p-8 hover:bg-white hover:shadow-2xl hover:border-primary/20 transition-all duration-500 overflow-hidden flex flex-col justify-between h-full"
+                className="group bg-white border border-slate-200 rounded-[1.5rem] overflow-hidden flex flex-col shadow-sm hover:shadow-xl transition-shadow duration-300"
               >
-                <div className="relative z-10">
-                  <h3 className="text-xl font-bold text-slate-900 mb-4">
-                    <Link href={`/services/${service.slug}`} className="hover:text-primary transition-colors">
-                      {service.title}
-                    </Link>
-                  </h3>
-                  <div className="text-slate-600 leading-relaxed group-hover:text-slate-700 transition-colors">
-                    {service.body}
-                  </div>
+                <div className="relative h-40 w-full overflow-hidden">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
                 </div>
 
-                <div className="pt-6">
+                <div className="flex flex-col flex-1 p-4 text-center">
+                  <h3 className="text-lg font-bold text-slate-900 mb-2">
+                    {service.title}
+                  </h3>
+                  <p className="text-slate-600 text-sm leading-relaxed mb-4 flex-1 line-clamp-3">
+                    {service.body}
+                  </p>
                   <Link
                     href={`/services/${service.slug}`}
-                    className="inline-flex items-center justify-center w-full bg-primary text-white font-bold py-3 px-6 rounded-xl hover:bg-primary-dark transition-colors"
+                    className="inline-flex items-center justify-center w-full border-2 border-slate-800 text-slate-900 font-bold py-2 px-4 rounded-xl hover:bg-slate-900 hover:text-white transition-colors text-sm"
                   >
-                    Explore More
+                    View Details
                   </Link>
                 </div>
               </motion.div>

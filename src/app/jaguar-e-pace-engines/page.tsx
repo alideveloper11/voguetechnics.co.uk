@@ -65,17 +65,6 @@ export default function JaguarEPaceEnginesPage() {
             <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.12 }} className="mt-7">
               <RegSearch className="max-w-3xl" />
             </motion.div>
-            <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.22 }} className="mt-7 max-w-4xl text-sm leading-relaxed text-slate-300 md:text-base space-y-4">
-              <p>
-                The Jaguar E-Pace is a genuinely impressive compact SUV   sharp to drive, well-appointed inside, and built around Jaguar&apos;s 2.0-litre Ingenium engine family in both diesel and petrol form.
-              </p>
-              <p>
-                But the Ingenium unit carries specific vulnerabilities as mileage climbs. Timing chain wear, turbocharger deterioration, head gasket stress, and EGR-related faults are well documented across the E-Pace range   and when they surface, the specialist you choose determines everything about the outcome.
-              </p>
-              <p>
-                At Vogue Technics, based in , we carry out Jaguar E-Pace engine rebuilds, targeted engine repairs, and complete reconditioned engine replacements across the full E-Pace range   backed by written warranty and supported by UK-wide collection and delivery.
-              </p>
-            </motion.div>
           </div>
         </div>
       </section>

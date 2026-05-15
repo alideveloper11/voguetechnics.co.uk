@@ -233,38 +233,6 @@ export default function JaguarEnginesClient() {
             >
               <RegSearch className="max-w-3xl" />
             </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.22 }}
-              className="mt-7 max-w-4xl text-sm leading-relaxed text-slate-300 md:text-base space-y-4"
-            >
-              <p>
-                Your Jaguar was engineered to perform. When that performance starts to fade   when the warning lights appear, the engine note changes, or the power simply is not what it was   you need specialists who understand these machines at a fundamental level.
-              </p>
-              <p>
-                At Vogue Technics, Jaguar engines are our sole focus. With over 25 years of dedicated experience, our team carries out Jaguar engine rebuilds, repairs, and replacements to the highest standard, backed by a written warranty and supported by a UK-wide collection and delivery service.
-              </p>
-              <p>
-                We do not take a generalist approach. Every technician in our  workshop has spent their career working exclusively on Jaguar powertrains   from classic AJ6 and V8 units through to the modern Ingenium engine family.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="mt-8 flex flex-wrap gap-2"
-            >
-              {trustIndicators.map((item) => (
-                <span
-                  key={item}
-                  className="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-bold tracking-wide text-slate-200"
-                >
-                  {item}
-                </span>
-              ))}
-            </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}

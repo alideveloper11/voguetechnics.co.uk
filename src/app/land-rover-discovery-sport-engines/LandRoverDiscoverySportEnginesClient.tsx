@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -148,19 +148,6 @@ export default function LandRoverDiscoverySportEnginesClient() {
               <RegSearch className="max-w-3xl" />
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.22 }}
-              className="mt-7 max-w-4xl text-sm leading-relaxed text-slate-300 md:text-base space-y-4"
-            >
-              <p>
-                The Land Rover Discovery Sport has become one of the most popular compact SUVs on British roads   and for good reason. It's practical, capable, refined, and genuinely versatile. But its Ingenium engine family, while technically impressive, carries known vulnerabilities that reveal themselves as mileage accumulates and service intervals get pushed.
-              </p>
-              <p>
-                At Vogue Technics, based in , we work exclusively on Land Rover and Range Rover engines. The Discovery Sport   whether it's running the 2.0 Td4 diesel, the Ingenium diesel, the Ingenium petrol, or a PHEV configuration   is a vehicle our technicians understand at a level that general garages simply cannot match. Backed by over 25 years of hands-on specialist experience, we carry out Discovery Sport engine repair, rebuilds, and replacements that are done correctly, done once, and backed by a written warranty.
-              </p>
-            </motion.div>
           </div>
         </div>
       </section>
@@ -172,19 +159,19 @@ export default function LandRoverDiscoverySportEnginesClient() {
             <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
                 <h3 className="font-bold text-slate-900">Exclusive Land Rover and Range Rover Focus</h3>
-                <p className="mt-3 text-slate-700 leading-relaxed">
+                <p className="mt-3 text-sm text-slate-700 leading-relaxed line-clamp-5">
                   Every technician at Vogue Technics works solely on Land Rover and Range Rover vehicles. That focused, accumulated experience produces outcomes a generalist garage cannot replicate.
                 </p>
               </div>
               <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
                 <h3 className="font-bold text-slate-900">Over 25 Years Building an Unshakeable Reputation</h3>
-                <p className="mt-3 text-slate-700 leading-relaxed">
+                <p className="mt-3 text-sm text-slate-700 leading-relaxed line-clamp-5">
                   Our reputation has grown entirely through results. Owners call us because other owners recommended us   and they return because the work holds.
                 </p>
               </div>
               <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
                 <h3 className="font-bold text-slate-900">Complete Pricing Transparency From the First Call</h3>
-                <p className="mt-3 text-slate-700 leading-relaxed">
+                <p className="mt-3 text-sm text-slate-700 leading-relaxed line-clamp-5">
                   Before any work begins, you receive a full itemised quote covering parts, labour, and a realistic timeline. No uncomfortable surprises on collection day.
                 </p>
               </div>
@@ -205,17 +192,17 @@ export default function LandRoverDiscoverySportEnginesClient() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
             {services.map((service) => (
               <div
                 key={service.title}
-                className="rounded-[2rem] border border-slate-200 bg-white p-7 shadow-sm flex flex-col justify-between"
+                className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm flex flex-col justify-between"
               >
                 <div>
-                  <h3 className="text-xl font-bold text-slate-900">{service.title}</h3>
-                  <p className="mt-4 text-slate-700 leading-relaxed">{service.body}</p>
+                  <h3 className="text-sm font-bold text-slate-900">{service.title}</h3>
+                  <p className="mt-2 text-xs text-slate-700 leading-relaxed line-clamp-4">{service.body}</p>
                 </div>
-                <div className="pt-6">
+                <div className="pt-3">
                   <Link
                     href={`/services/${service.slug}`}
                     className="inline-flex items-center justify-center w-full bg-primary text-white font-bold py-3 px-6 rounded-xl hover:bg-emerald-600 transition-colors"
@@ -288,9 +275,6 @@ export default function LandRoverDiscoverySportEnginesClient() {
             <h2 className="text-3xl md:text-4xl font-extrabold leading-tight">
               Book Your Discovery Sport Engine Repair Today   No-Obligation Quote
             </h2>
-            <p className="text-emerald-50 leading-relaxed max-w-3xl mx-auto">
-              Call us today or complete our online enquiry form for a fast, no-obligation quote. We're based in , and we serve Discovery Sport owners across the UK. Your Discovery Sport deserves a genuine specialist   and that is exactly what we are.
-            </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:01375531355"

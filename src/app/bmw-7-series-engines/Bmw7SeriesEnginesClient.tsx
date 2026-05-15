@@ -278,20 +278,6 @@ export default function Bmw7SeriesEnginesClient() {
             >
               <RegSearch />
             </motion.div>
-
-            <div className="max-w-4xl mx-auto space-y-4">
-              {heroParagraphs.map((p) => (
-                <motion.p
-                  key={p.slice(0, 50)}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.22 }}
-                  className="text-base md:text-lg text-slate-200 leading-relaxed"
-                >
-                  {p}
-                </motion.p>
-              ))}
-            </div>
           </div>
         </div>
       </section>

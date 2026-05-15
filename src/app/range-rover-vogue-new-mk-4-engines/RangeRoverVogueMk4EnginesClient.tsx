@@ -143,16 +143,6 @@ export default function RangeRoverVogueMk4EnginesClient() {
               <RegSearch className="max-w-3xl" />
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.22 }}
-              className="mt-7 max-w-4xl text-sm leading-relaxed text-slate-300 md:text-base space-y-4"
-            >
-              <p>
-                If you own a Range Rover Vogue MK4 (L405, 2012–2021) and you're facing engine trouble, you've landed in the right place. At Vogue Technics, based in , we specialise exclusively in Land Rover and Range Rover engines   and the MK4 Vogue is our bread and butter. Whether your engine has seized, your timing chain has gone, or you simply want a fully rebuilt unit to extend your vehicle's life, we deliver quality you can trust, backed by over 25 years of hands-on experience.
-              </p>
-            </motion.div>
           </div>
         </div>
       </section>
@@ -163,23 +153,23 @@ export default function RangeRoverVogueMk4EnginesClient() {
             <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
               Why Choose Vogue Technics for Your Range Rover Vogue MK4 Engine?
             </h2>
-            <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
-                <h3 className="font-bold text-slate-900">Specialists, Not Generalists</h3>
-                <p className="mt-3 text-slate-700 leading-relaxed">
-                  We don't work on Ford Fiestas one day and Range Rovers the next. Every technician at Vogue Technics is trained specifically on Land Rover and Range Rover platforms. The MK4 Vogue&apos;s 3.0 TDV6, 4.4 V8 diesel, and 5.0 V8 supercharged engines each have their own quirks   and we know every single one of them.
+            <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-5">
+              <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-5">
+                <h3 className="font-bold text-slate-900 text-sm">Specialists, Not Generalists</h3>
+                <p className="mt-2 text-sm text-slate-700 leading-relaxed line-clamp-3">
+                  Every technician is trained solely on Land Rover and Range Rover platforms. The MK4's TDV6, V8 diesel, and V8 supercharged engines each have unique quirks — we know all of them.
                 </p>
               </div>
-              <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
-                <h3 className="font-bold text-slate-900">Over 25 Years Serving UK Drivers</h3>
-                <p className="mt-3 text-slate-700 leading-relaxed">
-                  Since our founding, we've rebuilt and replaced thousands of engines for Range Rover owners across the UK. Our reputation in  and beyond has been built entirely on word of mouth   because when we fix your engine, it stays fixed.
+              <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-5">
+                <h3 className="font-bold text-slate-900 text-sm">Over 25 Years Serving UK Drivers</h3>
+                <p className="mt-2 text-sm text-slate-700 leading-relaxed line-clamp-3">
+                  Thousands of engines rebuilt and replaced for Range Rover owners across the UK. Our reputation has been built entirely on word of mouth — because when we fix it, it stays fixed.
                 </p>
               </div>
-              <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
-                <h3 className="font-bold text-slate-900">Transparent Pricing, No Hidden Surprises</h3>
-                <p className="mt-3 text-slate-700 leading-relaxed">
-                  We know engine work can feel daunting, especially on a premium vehicle. That's why we give you a clear, itemised quote upfront   no vague estimates, no nasty surprises on collection day. Call us or use our online form to get your quote today.
+              <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-5">
+                <h3 className="font-bold text-slate-900 text-sm">Transparent Pricing, No Surprises</h3>
+                <p className="mt-2 text-sm text-slate-700 leading-relaxed line-clamp-3">
+                  Clear, itemised quote upfront — no vague estimates, no nasty surprises on collection day. Call us or use our online form to get started.
                 </p>
               </div>
             </div>
@@ -197,20 +187,20 @@ export default function RangeRoverVogueMk4EnginesClient() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {services.map((service) => (
               <div
                 key={service.title}
-                className="rounded-[2rem] border border-slate-200 bg-white p-7 shadow-sm flex flex-col justify-between"
+                className="rounded-[1.5rem] border border-slate-200 bg-white p-5 shadow-sm flex flex-col justify-between"
               >
                 <div>
-                  <h3 className="text-xl font-bold text-slate-900">{service.title}</h3>
-                  <p className="mt-4 text-slate-700 leading-relaxed">{service.body}</p>
+                  <h3 className="text-base font-bold text-slate-900">{service.title}</h3>
+                  <p className="mt-3 text-sm text-slate-700 leading-relaxed line-clamp-4">{service.body}</p>
                 </div>
-                <div className="pt-6">
+                <div className="pt-4">
                   <Link
                     href={`/services/${service.slug}`}
-                    className="inline-flex items-center justify-center w-full bg-primary text-white font-bold py-3 px-6 rounded-xl hover:bg-emerald-600 transition-colors"
+                    className="inline-flex items-center justify-center w-full bg-primary text-white font-bold py-2 px-4 text-sm rounded-xl hover:bg-emerald-600 transition-colors"
                   >
                     Explore More
                   </Link>
@@ -231,23 +221,23 @@ export default function RangeRoverVogueMk4EnginesClient() {
               <p>
                 We understand that being without your Range Rover Vogue is frustrating   and expensive if it's your daily driver. That's why we work quickly without cutting corners.
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
-                  <h3 className="font-bold text-slate-900">Engine Collection & Delivery Across the UK</h3>
-                  <p className="mt-3">
-                    Can&apos;t get to us in ? No problem. We offer an engine collection and delivery service covering the whole of the UK. Send us your old unit, and we'll return your rebuilt or replacement engine fully tested and ready to fit   or we can arrange fitting through our trusted network of approved installers nationwide.
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-5">
+                  <h3 className="font-bold text-slate-900 text-sm">UK-Wide Collection & Delivery</h3>
+                  <p className="mt-2 text-sm line-clamp-3">
+                    Can't get to us? We collect, rebuild, and return your engine fully tested — or arrange fitting through our approved installer network nationwide.
                   </p>
                 </div>
-                <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
-                  <h3 className="font-bold text-slate-900">Fast Turnaround Times</h3>
-                  <p className="mt-3">
-                    Most engine rebuilds are completed within 5–10 working days. Replacements and repairs are often quicker. We&apos;ll give you a realistic timeframe when you book   and we stick to it.
+                <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-5">
+                  <h3 className="font-bold text-slate-900 text-sm">Fast Turnaround Times</h3>
+                  <p className="mt-2 text-sm line-clamp-3">
+                    Most rebuilds completed within 5–10 working days. Replacements and repairs often quicker. We give a realistic timeframe and stick to it.
                   </p>
                 </div>
-                <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
-                  <h3 className="font-bold text-slate-900">Warranty on All Engine Work</h3>
-                  <p className="mt-3">
-                    Every engine rebuild, replacement, and major repair carried out at Vogue Technics comes with a written warranty. We stand behind our work because we know it's done right.
+                <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-5">
+                  <h3 className="font-bold text-slate-900 text-sm">Warranty on All Engine Work</h3>
+                  <p className="mt-2 text-sm line-clamp-3">
+                    Every rebuild, replacement, and major repair comes with a written warranty. We stand behind our work because we know it's done right.
                   </p>
                 </div>
               </div>

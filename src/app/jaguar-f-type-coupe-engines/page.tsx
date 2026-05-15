@@ -81,22 +81,6 @@ export default function JaguarFTypeCoupeEnginesPage() {
               <RegSearch className="max-w-3xl" />
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.22 }}
-              className="mt-7 max-w-4xl text-sm leading-relaxed text-slate-300 md:text-base space-y-4"
-            >
-              <p>
-                The Jaguar F-Type Coupe is a genuine performance machine. Built around supercharged V6 and V8 petrol engines, it delivers an
-                exceptional driving experience   but these are high-output engines and when something goes wrong, precision matters.
-              </p>
-              <p>
-                At Vogue Technics in , we carry out Jaguar F-Type Coupe engine rebuilds, supercharger rebuilds and replacements, targeted
-                repairs, timing chain replacements, and reconditioned engine sourcing across the full F-Type Coupe range   with transparent pricing,
-                written warranty, and UK-wide support.
-              </p>
-            </motion.div>
           </div>
         </div>
       </section>

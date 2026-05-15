@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React from "react";
 import Image from "next/image";
@@ -50,26 +50,6 @@ export default function EngineReplacementPage() {
               <RegSearch />
             </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 14 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.05 }}
-              className="max-w-4xl mx-auto text-slate-300 leading-relaxed font-medium space-y-6 text-sm md:text-base"
-            >
-              <p>
-                There comes a point with every engine fault where the repair conversation ends and the replacement conversation
-                begins. It might be a seizure following oil starvation, catastrophic internal damage after a head gasket failure
-                that ran too long, or simply an engine that has covered enough miles that rebuild is no longer the most economical
-                route.
-              </p>
-              <p>
-                At Vogue Technics, we supply and fit replacement engines for Range Rover, Land Rover, Jaguar, Audi, and BMW. We
-                source used low-mileage engines, reconditioned units, and remanufactured engines depending on what suits your
-                vehicle, your budget, and your long-term plans. Every replacement engine is fitted to OEM specification, every job
-                carries a minimum six-month warranty, and every written quote is agreed before work begins. Based in ,
-                with UK-wide collection available.
-              </p>
-            </motion.div>
 
             <div className="flex flex-col lg:flex-row gap-4 justify-center items-center mt-10">
               <Link
@@ -105,21 +85,12 @@ export default function EngineReplacementPage() {
             <div className="w-24 h-1.5 bg-primary mx-auto rounded-full"></div>
           </div>
 
-          <div className="max-w-5xl mx-auto space-y-6 text-slate-600 leading-relaxed font-medium text-sm md:text-base bg-slate-50 border border-slate-100 rounded-[3rem] p-10 md:p-12">
+          <div className="max-w-5xl mx-auto space-y-4 text-slate-600 leading-relaxed font-medium text-sm bg-slate-50 border border-slate-100 rounded-[3rem] p-8 md:p-10">
             <p>
-              Not every engine problem requires replacement   but some do, and recognising when replacement is the correct
-              recommendation rather than a convenient one is where genuine specialist integrity shows.
+              Replacement makes sense when damage is extensive enough that rebuild cost exceeds the value it would deliver — a seized engine, cracked block, or bores worn beyond machining are typical examples.
             </p>
             <p>
-              Engine replacement makes sense when internal damage is extensive enough that rebuild cost exceeds the value a rebuilt
-              engine would deliver. A seized engine following severe oil starvation, a block that has cracked due to overheating, or
-              pistons and bores worn beyond the point where machining is economical   these are situations where sourcing a quality
-              replacement unit is the more sensible financial decision.
-            </p>
-            <p>
-              It also makes sense when a quality low-mileage or reconditioned unit is available at a cost that compares favourably
-              to the rebuild work the existing engine requires. Where rebuild is still viable and cost-effective, we will tell you
-              that clearly and quote for both.
+              It also applies when a quality low-mileage or reconditioned unit is available at a cost that compares favourably to the rebuild. Where rebuild is the better option, we'll say so and quote for both.
             </p>
             <div className="pt-6">
               <Link href="/contact-us" className="inline-flex items-center gap-2 text-primary font-black text-xs tracking-widest uppercase">
@@ -174,7 +145,7 @@ export default function EngineReplacementPage() {
             <div className="w-24 h-1.5 bg-primary mx-auto rounded-full"></div>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
                 title: "Range Rover Engine Replacement",
@@ -207,10 +178,10 @@ export default function EngineReplacementPage() {
                 href: "/bmw-engines",
               },
             ].map((item) => (
-              <div key={item.title} className="bg-slate-50 border border-slate-100 rounded-[2.5rem] p-10 hover:bg-white hover:shadow-2xl transition-all duration-500">
-                <h3 className="text-xl font-extrabold text-slate-900 uppercase tracking-tight italic mb-6">{item.title}</h3>
-                <p className="text-slate-600 leading-relaxed font-medium text-sm md:text-base">{item.body}</p>
-                <div className="pt-8 flex flex-wrap gap-4">
+              <div key={item.title} className="bg-slate-50 border border-slate-100 rounded-[2.5rem] p-6 hover:bg-white hover:shadow-2xl transition-all duration-500">
+                <h3 className="text-xl font-extrabold text-slate-900 uppercase tracking-tight italic mb-3">{item.title}</h3>
+                <p className="text-slate-600 leading-relaxed font-medium text-sm line-clamp-4">{item.body}</p>
+                <div className="pt-4 flex flex-wrap gap-4">
                   <Link href={item.href} className="inline-flex items-center gap-2 text-primary font-black text-xs tracking-widest uppercase">
                     Explore {item.title.split(" ")[0]} Engine Replacement <ArrowRight className="w-4 h-4" />
                   </Link>
@@ -244,12 +215,12 @@ export default function EngineReplacementPage() {
               { icon: <FileText className="w-5 h-5" />, title: "Written Quotes, No Surprises", text: "No additions without approval, no work beyond what has been confirmed." },
               { icon: <RefreshCw className="w-5 h-5" />, title: "UK-Wide Collection and Delivery", text: "Based in    collection and delivery across the UK on all engine replacement work." },
             ].map((item) => (
-              <div key={item.title} className="bg-white/5 border border-white/10 rounded-[2.5rem] p-10 hover:bg-white/10 transition-all duration-500">
+              <div key={item.title} className="bg-white/5 border border-white/10 rounded-[2.5rem] p-6 hover:bg-white/10 transition-all duration-500">
                 <div className="flex items-start gap-4">
                   <div className="bg-primary/20 text-primary p-2 rounded-xl flex-shrink-0">{item.icon}</div>
-                  <div className="space-y-3">
-                    <h3 className="font-extrabold uppercase tracking-tight italic text-sm md:text-base">{item.title}</h3>
-                    <p className="text-slate-300 leading-relaxed font-medium text-sm md:text-base">{item.text}</p>
+                  <div className="space-y-2 min-w-0">
+                    <h3 className="font-extrabold uppercase tracking-tight italic text-sm">{item.title}</h3>
+                    <p className="text-slate-300 font-medium text-sm line-clamp-3">{item.text}</p>
                   </div>
                 </div>
               </div>
@@ -274,11 +245,11 @@ export default function EngineReplacementPage() {
                 "Step 6   Post-Fit Diagnostic and Road Test   fault code scan, oil pressure verification, road test before handover.",
                 "Step 7   Return with Full Warranty Documentation   vehicle returned fully tested with warranty paperwork confirmed in writing.",
               ].map((text, idx) => (
-                <div key={idx} className="bg-white/5 border border-white/10 rounded-[2.5rem] p-10 hover:bg-white/10 transition-all duration-500">
-                  <div className="w-12 h-12 rounded-2xl bg-primary text-white flex items-center justify-center font-black text-lg mb-6 shadow-lg">
+                <div key={idx} className="bg-white/5 border border-white/10 rounded-[2.5rem] p-6 hover:bg-white/10 transition-all duration-500">
+                  <div className="w-10 h-10 rounded-2xl bg-primary text-white flex items-center justify-center font-black text-base mb-3 shadow-lg">
                     {idx + 1}
                   </div>
-                  <p className="text-slate-200 leading-relaxed font-medium text-sm md:text-base">{text}</p>
+                  <p className="text-slate-200 font-medium text-sm line-clamp-3">{text}</p>
                 </div>
               ))}
             </div>
@@ -320,38 +291,38 @@ export default function EngineReplacementPage() {
       />
 
       {/* Final CTA */}
-      <section className="py-24 bg-primary relative overflow-hidden">
+      <section className="py-12 bg-primary relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-[100px] pointer-events-none"></div>
         <div className="container mx-auto px-4 lg:px-8 text-center relative z-10">
-          <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-8 uppercase tracking-tight italic leading-tight">
+          <h2 className="text-xl md:text-3xl font-extrabold text-white mb-4 uppercase tracking-tight italic leading-tight">
             Ready to <span className="text-slate-950">Move Forward</span>?
           </h2>
-          <p className="text-emerald-100 text-sm md:text-base mb-14 max-w-3xl mx-auto font-medium leading-relaxed">
+          <p className="text-emerald-100 text-sm md:text-base mb-6 max-w-3xl mx-auto font-medium leading-relaxed">
             Get an honest assessment, a written quote, and a replacement fitted correctly the first time.
           </p>
 
           <div className="flex flex-col lg:flex-row gap-6 justify-center items-center">
             <Link
               href="/contact-us"
-              className="bg-slate-950 text-white font-black px-12 py-6 rounded-[2rem] shadow-2xl hover:bg-slate-900 transition-all uppercase tracking-[0.2em] text-xs md:text-sm flex items-center gap-4"
+              className="bg-slate-950 text-white font-black px-7 py-3 rounded-xl shadow-2xl hover:bg-slate-900 transition-all uppercase tracking-[0.2em] text-xs md:text-sm flex items-center gap-4"
             >
               Request a Free Engine Replacement Quote   No Obligation <ArrowRight className="w-6 h-6 text-primary" />
             </Link>
             <a
               href="tel:01375531355"
-              className="bg-white text-slate-950 font-black px-12 py-6 rounded-[2rem] shadow-2xl hover:bg-slate-50 transition-all uppercase tracking-[0.2em] text-xs md:text-sm border-4 border-slate-950/10"
+              className="bg-white text-slate-950 font-black px-7 py-3 rounded-xl shadow-2xl hover:bg-slate-50 transition-all uppercase tracking-[0.2em] text-xs md:text-sm border-4 border-slate-950/10"
             >
               Call Us and Speak to a Specialist Today
             </a>
             <Link
               href="/contact-us"
-              className="bg-white/20 text-white font-black px-12 py-6 rounded-[2rem] shadow-2xl hover:bg-white/25 transition-all uppercase tracking-[0.2em] text-xs md:text-sm border border-white/20"
+              className="bg-white/20 text-white font-black px-7 py-3 rounded-xl shadow-2xl hover:bg-white/25 transition-all uppercase tracking-[0.2em] text-xs md:text-sm border border-white/20"
             >
               Book an Engine Assessment at Our  Workshop
             </Link>
           </div>
 
-          <div className="mt-16 text-white/90 font-black uppercase tracking-widest text-[0.65rem]">
+          <div className="mt-8 text-white/90 font-black uppercase tracking-widest text-[0.65rem]">
             Vogue Technics | Engine Replacement Specialists |  | UK-Wide Collection &nbsp; Range Rover • Land Rover •
             Jaguar • Audi • BMW
           </div>
@@ -363,4 +334,5 @@ export default function EngineReplacementPage() {
     </main>
   );
 }
+
 

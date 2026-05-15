@@ -56,14 +56,6 @@ export default function JaguarXKRSPage() {
             <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.12 }} className="mt-7">
               <RegSearch className="max-w-3xl" />
             </motion.div>
-            <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.22 }} className="mt-7 max-w-4xl text-sm leading-relaxed text-slate-300 md:text-base space-y-4">
-              <p>
-                The Jaguar XKR‑S is the most extreme, most driver‑focused XK ever produced. Built between 2011 and 2014, it combined sharper chassis tuning with a 5.0 litre supercharged V8 producing 550HP   elevating it firmly into supercar territory.
-              </p>
-              <p>
-                At Vogue Technics in , UK, we supply, rebuild, and fit Jaguar XKR‑S engines   combining genuine AJ133SC supercharged V8 expertise, fully tested reconditioned units, emergency response capability, and a transparent supply and fit process that reflects the standard of the vehicle we are working on.
-              </p>
-            </motion.div>
           </div>
         </div>
       </section>

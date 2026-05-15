@@ -153,19 +153,6 @@ export default function RangeRoverVelarEnginesClient() {
               <RegSearch className="max-w-3xl" />
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.22 }}
-              className="mt-7 max-w-4xl text-sm leading-relaxed text-slate-300 md:text-base space-y-4"
-            >
-              <p>
-                The Range Rover Velar sits in a unique space   sophisticated enough to turn heads on any street, engineered precisely enough to demand specialist knowledge when something goes wrong. At Vogue Technics, we understand this vehicle better than most. For over 25 years, we've worked exclusively on Land Rover and Range Rover engines, and the Velar   with its refined Ingenium engine family   is one of the models our  workshop handles regularly and with complete confidence.
-              </p>
-              <p>
-                If you're searching for a Range Rover Velar engine for sale, need an honest assessment of your repair options, or want a specialist who will treat your vehicle with the care it deserves   you've found the right place. We serve customers across , Thurrock, Basildon, Dartford, and throughout the UK, offering everything from a straightforward used engine supply to a full ground-up rebuild.
-              </p>
-            </motion.div>
           </div>
         </div>
       </section>
@@ -182,20 +169,20 @@ export default function RangeRoverVelarEnginesClient() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {services.map((service) => (
               <div
                 key={service.title}
-                className="rounded-[2rem] border border-slate-200 bg-white p-7 shadow-sm flex flex-col justify-between"
+                className="rounded-[1.5rem] border border-slate-200 bg-white p-5 shadow-sm flex flex-col justify-between"
               >
                 <div>
-                  <h3 className="text-xl font-bold text-slate-900">{service.title}</h3>
-                  <p className="mt-4 text-slate-700 leading-relaxed">{service.body}</p>
+                  <h3 className="text-base font-bold text-slate-900">{service.title}</h3>
+                  <p className="mt-3 text-sm text-slate-700 leading-relaxed line-clamp-4">{service.body}</p>
                 </div>
-                <div className="pt-6">
+                <div className="pt-4">
                   <Link
                     href={`/services/${service.slug}`}
-                    className="inline-flex items-center justify-center w-full bg-primary text-white font-bold py-3 px-6 rounded-xl hover:bg-emerald-600 transition-colors"
+                    className="inline-flex items-center justify-center w-full bg-primary text-white font-bold py-2 px-4 text-sm rounded-xl hover:bg-emerald-600 transition-colors"
                   >
                     Explore More
                   </Link>
@@ -246,23 +233,23 @@ export default function RangeRoverVelarEnginesClient() {
             <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
               Why Velar Owners in  & Across the UK Trust Vogue Technics
             </h2>
-            <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm">
-                <h3 className="font-bold text-slate-900">25 Years of Dedicated Land Rover & Range Rover Engine Expertise</h3>
-                <p className="mt-3 text-slate-700 leading-relaxed">
-                  We have spent a quarter of a century working exclusively on this vehicle family. That focus means our team has encountered virtually every failure mode the Velar and its predecessor models can produce   and knows precisely how to address each one. General garages learn from your car. We already know.
+            <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-5">
+              <div className="rounded-[1.5rem] border border-slate-200 bg-white p-5 shadow-sm">
+                <h3 className="font-bold text-slate-900 text-sm">25 Years of Land Rover & Range Rover Expertise</h3>
+                <p className="mt-2 text-sm text-slate-700 leading-relaxed line-clamp-3">
+                  A quarter century focused exclusively on this vehicle family. We've seen every failure mode the Velar can produce — and know exactly how to fix each one.
                 </p>
               </div>
-              <div className="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm">
-                <h3 className="font-bold text-slate-900">Transparent Pricing with No Hidden Costs</h3>
-                <p className="mt-3 text-slate-700 leading-relaxed">
-                  Every job at Vogue Technics starts with a clear, itemised written quote. We explain the fault, the recommended solution, and the full cost before any work begins. There are no surprise invoices, no labour charges added after the fact, and no pressure to approve work you haven&apos;t asked for.
+              <div className="rounded-[1.5rem] border border-slate-200 bg-white p-5 shadow-sm">
+                <h3 className="font-bold text-slate-900 text-sm">Transparent Pricing, No Hidden Costs</h3>
+                <p className="mt-2 text-sm text-slate-700 leading-relaxed line-clamp-3">
+                  Clear, itemised written quote before any work begins. No surprise invoices, no added labour charges, no pressure to approve work you haven't asked for.
                 </p>
               </div>
-              <div className="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm">
-                <h3 className="font-bold text-slate-900">Minimum 6-Month Warranty on All Reconditioned Engines</h3>
-                <p className="mt-3 text-slate-700 leading-relaxed">
-                  Every reconditioned engine we supply or fit carries a minimum 6-month warranty as standard, with extended options available on request. We test every engine before it leaves our workshop   because the warranty we offer is backed by the confidence we have in the work we&apos;ve done.
+              <div className="rounded-[1.5rem] border border-slate-200 bg-white p-5 shadow-sm">
+                <h3 className="font-bold text-slate-900 text-sm">Minimum 6-Month Warranty</h3>
+                <p className="mt-2 text-sm text-slate-700 leading-relaxed line-clamp-3">
+                  Every reconditioned engine carries a minimum 6-month warranty, with extended options on request. Every engine is tested before it leaves our workshop.
                 </p>
               </div>
             </div>

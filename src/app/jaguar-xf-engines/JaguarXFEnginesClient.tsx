@@ -80,21 +80,6 @@ export default function JaguarXFEnginesClient() {
               <RegSearch className="max-w-3xl" />
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.22 }}
-              className="mt-7 max-w-4xl text-sm leading-relaxed text-slate-300 md:text-base space-y-4"
-            >
-              <p>
-                The Jaguar XF spans two generations and a wide variety of petrol and diesel engines   each with its own fault patterns, rebuild
-                tolerances and diagnostic approach.
-              </p>
-              <p>
-                Vogue Technics in  carry out Jaguar XF engine rebuilds, targeted repairs, reconditioned engine replacements and proper
-                diagnostic assessments across the full XF range   with clear, itemised quotes and written warranty.
-              </p>
-            </motion.div>
           </div>
         </div>
       </section>

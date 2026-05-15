@@ -76,21 +76,6 @@ export default function JaguarXFSportbrakeEnginesPage() {
               <RegSearch className="max-w-3xl" />
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.22 }}
-              className="mt-7 max-w-4xl text-sm leading-relaxed text-slate-300 md:text-base space-y-4"
-            >
-              <p>
-                The Jaguar XF Sportbrake is a practical, high-mileage-friendly estate   but that also means engines often see heavier use over time.
-                When faults develop, specialist diagnosis and the correct repair route matters.
-              </p>
-              <p>
-                At Vogue Technics in , we specialise in Jaguar XF Sportbrake engine rebuilds, targeted repairs and complete replacements
-                across the full range   including Ingenium and V6 variants   with transparent pricing and written warranty.
-              </p>
-            </motion.div>
           </div>
         </div>
       </section>

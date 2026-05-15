@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { Activity, ArrowRight, CheckCircle2, Gauge, ShieldCheck, Wrench } from "lucide-react";
@@ -49,23 +49,6 @@ export default function TimingChainReplacementPage() {
               <RegSearch />
             </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 14 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.05 }}
-              className="max-w-4xl mx-auto text-slate-300 leading-relaxed font-medium space-y-6 text-sm md:text-base"
-            >
-              <p>
-                That rattling sound on a cold start is not something to investigate next month. On most prestige vehicles, a timing
-                chain rattle is one of the clearest warnings an engine can give   and ignoring it is a decision that tends to end
-                with a bill several times larger than the replacement would have cost.
-              </p>
-              <p>
-                At Vogue Technics, we carry out timing chain replacement across Range Rover, Land Rover, Jaguar, Audi, and BMW. Every
-                job uses OEM or OEM-specification parts, every quote is written and agreed before work begins, and every replacement
-                carries a minimum six-month warranty. Based in , with UK-wide collection available.
-              </p>
-            </motion.div>
 
             <div className="flex flex-col lg:flex-row gap-4 justify-center items-center mt-10">
               <Link
@@ -125,21 +108,12 @@ export default function TimingChainReplacementPage() {
             <div className="w-24 h-1.5 bg-primary mx-auto rounded-full"></div>
           </div>
 
-          <div className="max-w-5xl mx-auto space-y-6 text-slate-600 leading-relaxed font-medium text-sm md:text-base bg-slate-50 border border-slate-100 rounded-[3rem] p-10 md:p-12">
+          <div className="max-w-5xl mx-auto space-y-4 text-slate-600 leading-relaxed font-medium text-sm bg-slate-50 border border-slate-100 rounded-[3rem] p-8 md:p-10">
             <p>
-              Timing chain problems rarely appear without warning. The difficulty is that the early signs are easy to dismiss  
-              until the damage becomes irreversible.
+              The most recognised symptom is a metallic rattling on cold start that fades as the engine warms — this is chain slack against the tensioner before oil pressure builds. Never dismiss it as normal.
             </p>
             <p>
-              A metallic rattling or chattering sound on cold start that fades after the engine warms up is the most recognised
-              symptom of timing chain wear. This sound is the chain slack moving against the tensioner before oil pressure builds
-              fully. It should never be dismissed as normal. Other warning signs include a check engine light with camshaft position
-              or timing-related fault codes, rough running or misfires caused by timing being slightly off, noticeable power loss as
-              the engine struggles to maintain correct valve timing, and in serious cases, a complete timing chain failure that
-              causes the engine to stop without warning and suffer catastrophic internal damage.
-            </p>
-            <p>
-              If any of these apply to your vehicle, the timing chain needs specialist attention now   not after the next service.
+              Other signs include a check engine light with timing-related fault codes, rough running or misfires, and noticeable power loss. If any of these apply, the timing chain needs specialist attention now — not after the next service.
             </p>
             <div className="pt-6">
               <Link href="/contact-us" className="inline-flex items-center gap-2 text-primary font-black text-xs tracking-widest uppercase">
@@ -160,17 +134,12 @@ export default function TimingChainReplacementPage() {
             <div className="w-24 h-1.5 bg-primary mx-auto rounded-full"></div>
           </div>
 
-          <div className="max-w-5xl mx-auto space-y-6 text-slate-600 leading-relaxed font-medium text-sm md:text-base bg-white border border-slate-100 rounded-[3rem] p-10 md:p-12 shadow-sm">
+          <div className="max-w-5xl mx-auto space-y-4 text-slate-600 leading-relaxed font-medium text-sm bg-white border border-slate-100 rounded-[3rem] p-8 md:p-10 shadow-sm">
             <p>
-              A worn timing chain does not just affect performance. When it fails completely   and it will, if left long enough  
-              the consequences are severe. On interference engines, which includes the majority of modern prestige vehicle
-              platforms, a snapped or jumped timing chain causes the pistons and valves to collide. The result is bent valves,
-              damaged pistons, and in many cases a destroyed cylinder head. What started as a timing chain replacement becomes a
-              full engine rebuild or replacement.
+              On interference engines — which covers most modern prestige platforms — a snapped or jumped chain causes pistons and valves to collide, resulting in bent valves, damaged pistons, and often a destroyed cylinder head. A timing chain job becomes a full engine rebuild.
             </p>
             <p>
-              The cost difference between a timing chain replacement carried out at the right time and an engine rebuild carried
-              out after failure is significant. Acting on the warning signs is always the more sensible financial decision.
+              Acting on the warning signs early is always significantly cheaper than dealing with the failure.
             </p>
           </div>
         </div>
@@ -186,7 +155,7 @@ export default function TimingChainReplacementPage() {
             <div className="w-24 h-1.5 bg-primary mx-auto rounded-full"></div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
                 title: "Range Rover Timing Chain Replacement",
@@ -234,14 +203,10 @@ export default function TimingChainReplacementPage() {
                 href: "/bmw-engines",
               },
             ].map((item) => (
-              <div key={item.title} className="bg-slate-50 border border-slate-100 rounded-[2.5rem] p-10 hover:bg-white hover:shadow-2xl transition-all duration-500">
-                <h3 className="text-xl font-extrabold text-slate-900 uppercase tracking-tight italic mb-6">{item.title}</h3>
-                <div className="space-y-5 text-slate-600 leading-relaxed font-medium text-sm md:text-base">
-                  {item.text.map((t) => (
-                    <p key={t}>{t}</p>
-                  ))}
-                </div>
-                <div className="pt-8 flex flex-wrap gap-4">
+              <div key={item.title} className="bg-slate-50 border border-slate-100 rounded-[2.5rem] p-6 hover:bg-white hover:shadow-2xl transition-all duration-500">
+                <h3 className="text-xl font-extrabold text-slate-900 uppercase tracking-tight italic mb-3">{item.title}</h3>
+                <p className="text-slate-600 leading-relaxed font-medium text-sm line-clamp-4">{item.text[0]}</p>
+                <div className="pt-4 flex flex-wrap gap-4">
                   <Link href={item.href} className="inline-flex items-center gap-2 text-primary font-black text-xs tracking-widest uppercase">
                     Explore {item.title.split(" ")[0]} Timing Chain Replacement <ArrowRight className="w-4 h-4" />
                   </Link>
@@ -275,12 +240,12 @@ export default function TimingChainReplacementPage() {
               { icon: <CheckCircle2 className="w-5 h-5" />, title: "Six-Month Warranty", text: "Every timing chain replacement carries a minimum six-month warranty on parts and labour." },
               { icon: <Wrench className="w-5 h-5" />, title: "UK-Wide Collection", text: "Based in , we collect and deliver across the UK on all timing chain and engine work." },
             ].map((item) => (
-              <div key={item.title} className="bg-white/5 border border-white/10 rounded-[2.5rem] p-10 hover:bg-white/10 transition-all duration-500">
+              <div key={item.title} className="bg-white/5 border border-white/10 rounded-[2.5rem] p-6 hover:bg-white/10 transition-all duration-500">
                 <div className="flex items-start gap-4">
                   <div className="bg-primary/20 text-primary p-2 rounded-xl flex-shrink-0">{item.icon}</div>
-                  <div className="space-y-3">
-                    <h3 className="font-extrabold uppercase tracking-tight italic text-sm md:text-base">{item.title}</h3>
-                    <p className="text-slate-300 leading-relaxed font-medium text-sm md:text-base">{item.text}</p>
+                  <div className="space-y-2 min-w-0">
+                    <h3 className="font-extrabold uppercase tracking-tight italic text-sm">{item.title}</h3>
+                    <p className="text-slate-300 font-medium text-sm line-clamp-3">{item.text}</p>
                   </div>
                 </div>
               </div>
@@ -303,11 +268,11 @@ export default function TimingChainReplacementPage() {
                 "Step 4   Replacement to OEM Specification   carried out by platform specialists using quality parts throughout.",
                 "Step 5   Quality Check and Return   post-replacement inspection, fault code clearance, and road test before handover.",
               ].map((text, idx) => (
-                <div key={idx} className="bg-white/5 border border-white/10 rounded-[2.5rem] p-10 hover:bg-white/10 transition-all duration-500">
-                  <div className="w-12 h-12 rounded-2xl bg-primary text-white flex items-center justify-center font-black text-lg mb-6 shadow-lg">
+                <div key={idx} className="bg-white/5 border border-white/10 rounded-[2.5rem] p-6 hover:bg-white/10 transition-all duration-500">
+                  <div className="w-10 h-10 rounded-2xl bg-primary text-white flex items-center justify-center font-black text-base mb-3 shadow-lg">
                     {idx + 1}
                   </div>
-                  <p className="text-slate-200 leading-relaxed font-medium text-sm md:text-base">{text}</p>
+                  <p className="text-slate-200 font-medium text-sm line-clamp-3">{text}</p>
                 </div>
               ))}
             </div>
@@ -344,38 +309,38 @@ export default function TimingChainReplacementPage() {
       />
 
       {/* Final CTA */}
-      <section className="py-24 bg-primary relative overflow-hidden">
+      <section className="py-12 bg-primary relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-[100px] pointer-events-none"></div>
         <div className="container mx-auto px-4 lg:px-8 text-center relative z-10">
-          <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-8 uppercase tracking-tight italic leading-tight">
+          <h2 className="text-xl md:text-3xl font-extrabold text-white mb-4 uppercase tracking-tight italic leading-tight">
             Do Not Wait for a Rattle <span className="text-slate-950">to Become a Rebuild</span>
           </h2>
-          <p className="text-emerald-100 text-sm md:text-base mb-14 max-w-3xl mx-auto font-medium leading-relaxed">
+          <p className="text-emerald-100 text-sm md:text-base mb-6 max-w-3xl mx-auto font-medium leading-relaxed">
             Act early, diagnose correctly, and replace the chain before catastrophic internal damage occurs.
           </p>
 
           <div className="flex flex-col lg:flex-row gap-6 justify-center items-center">
             <Link
               href="/contact-us"
-              className="bg-slate-950 text-white font-black px-12 py-6 rounded-[2rem] shadow-2xl hover:bg-slate-900 transition-all uppercase tracking-[0.2em] text-xs md:text-sm flex items-center gap-4"
+              className="bg-slate-950 text-white font-black px-7 py-3 rounded-xl shadow-2xl hover:bg-slate-900 transition-all uppercase tracking-[0.2em] text-xs md:text-sm flex items-center gap-4"
             >
               Request a Free Timing Chain Replacement Quote <ArrowRight className="w-6 h-6 text-primary" />
             </Link>
             <a
               href="tel:01375531355"
-              className="bg-white text-slate-950 font-black px-12 py-6 rounded-[2rem] shadow-2xl hover:bg-slate-50 transition-all uppercase tracking-[0.2em] text-xs md:text-sm border-4 border-slate-950/10"
+              className="bg-white text-slate-950 font-black px-7 py-3 rounded-xl shadow-2xl hover:bg-slate-50 transition-all uppercase tracking-[0.2em] text-xs md:text-sm border-4 border-slate-950/10"
             >
               Call Us and Speak to a Specialist
             </a>
             <Link
               href="/contact-us"
-              className="bg-white/20 text-white font-black px-12 py-6 rounded-[2rem] shadow-2xl hover:bg-white/25 transition-all uppercase tracking-[0.2em] text-xs md:text-sm border border-white/20"
+              className="bg-white/20 text-white font-black px-7 py-3 rounded-xl shadow-2xl hover:bg-white/25 transition-all uppercase tracking-[0.2em] text-xs md:text-sm border border-white/20"
             >
               Book a Timing Chain Inspection at Our  Workshop
             </Link>
           </div>
 
-          <div className="mt-16 text-white/90 font-black uppercase tracking-widest text-[0.65rem]">
+          <div className="mt-8 text-white/90 font-black uppercase tracking-widest text-[0.65rem]">
             Vogue Technics | Timing Chain Replacement Specialists |  | UK-Wide Collection &nbsp; Range Rover • Land Rover
             • Jaguar • Audi • BMW
           </div>
@@ -386,4 +351,5 @@ export default function TimingChainReplacementPage() {
     </main>
   );
 }
+
 

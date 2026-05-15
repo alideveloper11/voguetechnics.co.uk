@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -137,19 +137,6 @@ export default function LandRoverDefenderEnginesClient() {
               <RegSearch className="max-w-3xl" />
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.22 }}
-              className="mt-7 max-w-4xl text-sm leading-relaxed text-slate-300 md:text-base space-y-4"
-            >
-              <p>
-                If your Land Rover Defender has lost power, started smoking, or simply refused to start, you already know that time off the road costs money. At Vogue Technics, based in , we specialise exclusively in Land Rover and Range Rover engines   and the Defender, in all its generations, is a vehicle we know inside out.
-              </p>
-              <p>
-                From the bulletproof 200TDi and the characterful 300TDi, through to the TD5, the Puma TDCI, and the modern Ingenium diesel and petrol units   every Land Rover Defender engine has its own personality, its own failure points, and its own demands. We know all of them. Backed by over 25 years of hands-on experience, we deliver engine work that lasts.
-              </p>
-            </motion.div>
           </div>
         </div>
       </section>
@@ -158,25 +145,22 @@ export default function LandRoverDefenderEnginesClient() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-bold text-slate-900">Why Defender Owners Choose Vogue Technics</h2>
-            <p className="mt-6 text-slate-700 leading-relaxed">
-              The Defender isn't just another vehicle. It's a workhorse, an adventure companion, and for many owners, a serious financial investment. Trusting its engine to a garage that doesn't specialise is a gamble you don't need to take.
-            </p>
             <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
                 <h3 className="font-bold text-slate-900">We Work on Land Rovers   Nothing Else</h3>
-                <p className="mt-3 text-slate-700 leading-relaxed">
+                <p className="mt-3 text-sm text-slate-700 leading-relaxed line-clamp-5">
                   Every technician at Vogue Technics is trained specifically on Land Rover and Range Rover platforms. We don't split our workshop between brands or compromise our expertise across dozens of vehicle types. When your Defender comes in, every person working on it understands the platform deeply   from the classic Series-era architecture right through to the current L663 generation.
                 </p>
               </div>
               <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
                 <h3 className="font-bold text-slate-900">25 Years of Proven Results in </h3>
-                <p className="mt-3 text-slate-700 leading-relaxed">
+                <p className="mt-3 text-sm text-slate-700 leading-relaxed line-clamp-5">
                   Our reputation has been built entirely on word of mouth. Since we established our workshop in , we've rebuilt and replaced thousands of Land Rover Defender engines for customers from  to Edinburgh. When we fix your engine, it stays fixed   and that's what keeps our customers coming back and referring their friends.
                 </p>
               </div>
               <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
                 <h3 className="font-bold text-slate-900">Clear Pricing From the Start</h3>
-                <p className="mt-3 text-slate-700 leading-relaxed">
+                <p className="mt-3 text-sm text-slate-700 leading-relaxed line-clamp-5">
                   Engine work can feel overwhelming, particularly when you're not sure what you're dealing with. We make it straightforward. You receive a full, itemised quote before any work begins   no vague estimates, no unexpected additions when you come to collect. Just honest pricing from people who respect your vehicle and your budget.
                 </p>
               </div>
@@ -197,17 +181,17 @@ export default function LandRoverDefenderEnginesClient() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
             {services.map((service) => (
               <div
                 key={service.title}
-                className="rounded-[2rem] border border-slate-200 bg-white p-7 shadow-sm flex flex-col justify-between"
+                className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm flex flex-col justify-between"
               >
                 <div>
-                  <h3 className="text-xl font-bold text-slate-900">{service.title}</h3>
-                  <p className="mt-4 text-slate-700 leading-relaxed">{service.body}</p>
+                  <h3 className="text-sm font-bold text-slate-900">{service.title}</h3>
+                  <p className="mt-2 text-xs text-slate-700 leading-relaxed line-clamp-4">{service.body}</p>
                 </div>
-                <div className="pt-6">
+                <div className="pt-3">
                   <Link
                     href={`/services/${service.slug}`}
                     className="inline-flex items-center justify-center w-full bg-primary text-white font-bold py-3 px-6 rounded-xl hover:bg-emerald-600 transition-colors"
@@ -307,11 +291,6 @@ export default function LandRoverDefenderEnginesClient() {
             <h2 className="text-3xl md:text-4xl font-extrabold leading-tight">
               Get Your Land Rover Defender Engine Sorted Today
             </h2>
-            <p className="text-emerald-50 leading-relaxed max-w-3xl mx-auto">
-              Don't leave your Defender standing or trust it to someone who doesn't truly know the vehicle. Vogue Technics has spent over 25 years earning the trust of Land Rover owners across the United Kingdom   and we're ready to help you next.
-              <br />
-              Call us today or complete our online enquiry form for a fast, no-obligation quote. We're based in , and we work with Defender owners from Cornwall to the Scottish Highlands. Your Defender deserves proper specialists   and that's exactly what we are.
-            </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:01375531355"

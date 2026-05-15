@@ -140,37 +140,6 @@ export default function Bmw5SeriesEnginesClient() {
               <RegSearch />
             </motion.div>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.22 }}
-              className="text-base md:text-lg text-slate-200 mb-6 max-w-4xl mx-auto leading-relaxed"
-            >
-              The BMW 5 Series has been one of Britain&apos;s most popular executive cars for decades   and for good reason. Whether you drive an F10
-              530d, a G30 520d, an older E60 525d, or a high-performance F10 M5, the engineering underneath you is sophisticated, capable, and  
-              when it develops problems   demanding of genuine specialist knowledge.
-            </motion.p>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.26 }}
-              className="text-base md:text-lg text-slate-200/90 max-w-4xl mx-auto leading-relaxed"
-            >
-              The 5 Series spans three distinct generations and an enormous range of engine families. The N47&apos;s rear-mounted timing chain in the F10
-              diesel. The N57&apos;s swirl flap vulnerability across the 530d and 535d. The N63&apos;s well-documented oil consumption issues in the 550i. The
-              S63&apos;s extraordinary rebuild complexity in the M5. Each engine has its own failure patterns, its own rebuild requirements, and its own
-              specific demands. A generic approach to any of them produces generic results   which is precisely why 5 Series owners across the UK
-              bring their cars to us.
-            </motion.p>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="text-base md:text-lg text-slate-200/90 max-w-4xl mx-auto leading-relaxed"
-            >
-              At Vogue Technics, based in , we&apos;ve worked on BMW 5 Series engines across every generation and every engine family for over
-              25 years. Whatever your variant, whatever your problem, you&apos;ve found the right specialist.
-            </motion.p>
           </div>
         </div>
       </section>

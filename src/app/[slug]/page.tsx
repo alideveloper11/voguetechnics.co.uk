@@ -2264,8 +2264,7 @@ const audiModelContent: Record<string, ModelPageContent> = {
       "Audi Q5 engine rebuild, repair and replacement specialists . Expert engine services across 2.0 TDI, 3.0 TDI, 2.0 TFSI and SQ5 3.0 TFSI with diagnostic-led work, transparent pricing and written warranty.",
     h1: "Audi Q5 Engine Rebuild   Specialist Repairs, Replacements & Rebuilds Across the UK",
     intro: [
-      "The Audi Q5 occupies a sweet spot in the premium SUV market   sophisticated enough to turn heads, capable enough to earn genuine daily driver loyalty. When its engine starts failing, though, that sophistication becomes a liability in the wrong hands. The Q5's engine range   spanning the 2.0 TDI, 3.0 TDI, 2.0 TFSI, and SQ5's 3.0 TFSI   demands specialist knowledge, proper tooling, and the kind of experience that only comes from years of working on nothing but premium European engines.",
-      "At Vogue Technics, based in , that's precisely what we offer. With over 25 years of hands-on engine expertise and a reputation built entirely on the quality of our work, we're the Audi Q5 engine rebuild specialist that owners across the UK turn to when it matters most.",
+      "The Q5's engine range — 2.0 TDI, 3.0 TDI, 2.0 TFSI and SQ5 3.0 TFSI — demands specialist knowledge and proper tooling. At Vogue Technics, with 25+ years of hands-on engine expertise, we're the Audi Q5 rebuild specialist that owners across the UK trust.",
     ],
     sections: [
       {
@@ -3888,11 +3887,6 @@ export default async function DynamicServicePage({ params }: { params: Promise<{
             <h1 className="text-4xl md:text-5xl lg:text-5xl font-extrabold mb-6 tracking-tight leading-tight">
               {audiOverride.h1}
             </h1>
-            <div className="text-base md:text-lg text-slate-200/90 leading-relaxed max-w-3xl mx-auto space-y-4 mb-10">
-              {audiOverride.intro.map((p) => (
-                <p key={p}>{p}</p>
-              ))}
-            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="tel:01375 531355"
@@ -3940,23 +3934,23 @@ export default async function DynamicServicePage({ params }: { params: Promise<{
                           </Link>
                         </div>
 
-                        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
                           {keyBenefits.map((s, idx) => {
                             const Icon = icons[idx] ?? CheckCircle2;
                             return (
                               <div
                                 key={s.title}
-                                className="group rounded-[1.75rem] border border-slate-200 bg-gradient-to-b from-white to-slate-50/60 p-7 shadow-sm hover:border-primary/30 transition-colors"
+                                className="group rounded-xl border border-slate-200 bg-gradient-to-b from-white to-slate-50/60 p-4 shadow-sm hover:border-primary/30 transition-colors"
                               >
-                                <div className="flex items-start gap-4">
-                                  <div className="rounded-2xl border border-primary/20 bg-primary/10 p-3 text-primary shadow-sm">
-                                    <Icon className="h-6 w-6" />
+                                <div className="flex items-start gap-3">
+                                  <div className="rounded-xl border border-primary/20 bg-primary/10 p-2 text-primary shadow-sm shrink-0">
+                                    <Icon className="h-4 w-4" />
                                   </div>
                                   <div className="min-w-0">
-                                    <h3 className="text-lg md:text-xl font-extrabold text-slate-900 tracking-tight">
+                                    <h3 className="text-sm font-extrabold text-slate-900 tracking-tight">
                                       {s.title}
                                     </h3>
-                                    <div className="mt-3 space-y-3 text-slate-700 leading-relaxed text-sm md:text-base">
+                                    <div className="mt-2 space-y-1.5 text-slate-700 leading-relaxed text-xs line-clamp-4">
                                       {s.paragraphs.map((p) => (
                                         <p key={p}>{p}</p>
                                       ))}
@@ -3970,98 +3964,26 @@ export default async function DynamicServicePage({ params }: { params: Promise<{
                       </section>
                     ) : null}
 
-                    {mainSections.map((s, idx) => {
-                      const isEven = idx % 2 === 0;
-                      const sectionNo = String(idx + 1).padStart(2, "0");
-                      const [lead, ...rest] = s.paragraphs;
-                      return (
-                        <section
-                          key={s.title}
-                          className={[
-                            "group relative rounded-[2rem] border shadow-sm overflow-hidden transition-all",
-                            "hover:-translate-y-[1px] hover:shadow-md",
-                            isEven ? "border-slate-200 bg-white" : "border-slate-200 bg-slate-50/70",
-                          ].join(" ")}
-                        >
-                          <div className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity">
-                            <div className="absolute -top-24 -left-24 h-64 w-64 rounded-full bg-primary/10 blur-[80px]" />
-                            <div className="absolute -bottom-24 -right-24 h-64 w-64 rounded-full bg-slate-900/5 blur-[90px]" />
-                          </div>
-
-                          <div className="p-8 md:p-10 relative">
-                            <div className="flex flex-col lg:flex-row lg:items-start gap-6">
-                              <div className="lg:w-5/12 lg:sticky lg:top-28">
-                                <div className="inline-flex items-center gap-3">
-                                  <div className="rounded-2xl border border-slate-200 bg-white/80 backdrop-blur px-3 py-2 text-xs font-black tracking-[0.28em] text-slate-800 shadow-sm">
-                                    {sectionNo}
-                                  </div>
-                                  <div className="h-px w-10 bg-slate-200" />
-                                  <div className="text-[11px] font-black tracking-[0.22em] uppercase text-slate-500">
-                                    Vogue Technics
-                                  </div>
-                                </div>
-
-                                <h2 className="mt-5 text-[1.65rem] leading-tight md:text-3xl font-extrabold text-slate-900 tracking-tight">
-                                  {s.title}
-                                </h2>
-
-                                <div className="mt-6 hidden lg:block">
-                                  <div className="h-px w-24 bg-slate-200" />
-                                  <div className="mt-6 flex items-center gap-2 text-sm font-bold text-slate-700">
-                                    <CheckCircle2 className="h-5 w-5 text-primary" />
-                                    Diagnosis-led, warranty-backed work
-                                  </div>
-                                </div>
-                              </div>
-                              <div className="lg:w-7/12">
-                                <div className="rounded-[1.5rem] border border-slate-200/70 bg-white/70 backdrop-blur p-6 md:p-7">
-                                  {lead ? (
-                                    <p className="text-slate-900 leading-relaxed text-base md:text-lg font-semibold">
-                                      {lead}
-                                    </p>
-                                  ) : null}
-
-                                  {rest.length > 0 ? (
-                                    <div className="mt-5 space-y-4 text-slate-700 leading-relaxed text-base">
-                                      {rest.map((p) => (
-                                        <p key={p}>{p}</p>
-                                      ))}
-                                    </div>
-                                  ) : null}
-                                </div>
-
-                                {idx === 0 ? (
-                                  <div className="mt-8 rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/10 to-white p-6">
-                                    <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                                      <div className="text-slate-900">
-                                        <div className="font-extrabold tracking-tight">Want an exact quote?</div>
-                                        <div className="text-sm text-slate-700">
-                                          Call us now or request a quote online   fast response, no-obligation.
-                                        </div>
-                                      </div>
-                                      <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
-                                        <a
-                                          href="tel:01375 531355"
-                                          className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-bold text-white shadow-[0_0_18px_rgba(25,135,84,0.35)] hover:bg-primary-dark transition-colors w-full sm:w-auto"
-                                        >
-                                          <Phone className="h-5 w-5" /> Call now
-                                        </a>
-                                        <Link
-                                          href="/contact-us"
-                                          className="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-bold text-slate-900 shadow-sm hover:border-primary/30 transition-colors w-full sm:w-auto"
-                                        >
-                                          Request a quote
-                                        </Link>
-                                      </div>
-                                    </div>
-                                  </div>
-                                ) : null}
+                    {mainSections.length > 0 && (
+                      <div className="space-y-4">
+                        <h2 className="text-lg font-extrabold text-slate-900 px-1">Our Engine Services</h2>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          {mainSections.map((s) => (
+                            <div
+                              key={s.title}
+                              className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm hover:border-primary/30 transition-colors"
+                            >
+                              <h3 className="text-sm font-bold text-slate-900 tracking-tight">{s.title}</h3>
+                              <div className="mt-2 text-xs text-slate-600 leading-relaxed line-clamp-4">
+                                {s.paragraphs.map((p) => (
+                                  <p key={p}>{p}</p>
+                                ))}
                               </div>
                             </div>
-                          </div>
-                        </section>
-                      );
-                    })}
+                          ))}
+                        </div>
+                      </div>
+                    )}
                   </>
                 );
               })()}

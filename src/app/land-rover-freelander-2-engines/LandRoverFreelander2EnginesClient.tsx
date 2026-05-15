@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -148,19 +148,6 @@ export default function LandRoverFreelander2EnginesClient() {
               <RegSearch className="max-w-3xl" />
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.22 }}
-              className="mt-7 max-w-4xl text-sm leading-relaxed text-slate-300 md:text-base space-y-4"
-            >
-              <p>
-                The Land Rover Freelander 2 occupies a unique place in the Land Rover family. Smaller and more accessible than the Discovery or Range Rover, it still delivers genuine capability, everyday practicality, and that unmistakable Land Rover build quality. But the Freelander 2   particularly those running the 2.2 TD4 diesel engine   carries well-documented vulnerabilities that catch owners off guard, often at significant cost.
-              </p>
-              <p>
-                At Vogue Technics, based in , we work exclusively on Land Rover and Range Rover engines. Backed by over 25 years of hands-on specialist experience, we carry out Freelander 2 engine repair, rebuilds, and replacements that are done correctly, done once, and backed by a written warranty.
-              </p>
-            </motion.div>
           </div>
         </div>
       </section>
@@ -205,17 +192,17 @@ export default function LandRoverFreelander2EnginesClient() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
             {services.map((service) => (
               <div
                 key={service.title}
-                className="rounded-[2rem] border border-slate-200 bg-white p-7 shadow-sm flex flex-col justify-between"
+                className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm flex flex-col justify-between"
               >
                 <div>
-                  <h3 className="text-xl font-bold text-slate-900">{service.title}</h3>
-                  <p className="mt-4 text-slate-700 leading-relaxed">{service.body}</p>
+                  <h3 className="text-sm font-bold text-slate-900">{service.title}</h3>
+                  <p className="mt-2 text-xs text-slate-700 leading-relaxed line-clamp-4">{service.body}</p>
                 </div>
-                <div className="pt-6">
+                <div className="pt-3">
                   <Link
                     href={`/services/${service.slug}`}
                     className="inline-flex items-center justify-center w-full bg-primary text-white font-bold py-3 px-6 rounded-xl hover:bg-emerald-600 transition-colors"
@@ -288,9 +275,6 @@ export default function LandRoverFreelander2EnginesClient() {
             <h2 className="text-3xl md:text-4xl font-extrabold leading-tight">
               Book Your Freelander 2 Engine Work Today   Call Vogue Technics
             </h2>
-            <p className="text-emerald-50 leading-relaxed max-w-3xl mx-auto">
-              Call us today or complete our online enquiry form for a fast, no-obligation quote. We're based in , and we serve Freelander 2 owners from Cornwall to the Scottish Highlands. Your Freelander 2 deserves genuine specialist care   and that is exactly what we deliver.
-            </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:01375531355"

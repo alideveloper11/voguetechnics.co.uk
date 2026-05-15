@@ -157,15 +157,12 @@ export default function About() {
             <div className="rounded-[2.5rem] bg-white p-8 shadow-sm border border-slate-200">
               <h2 className="text-3xl font-bold text-slate-900 md:text-4xl">Meet Vic   The Man Behind Vogue Technics</h2>
               <div className="mt-4 h-1 w-24 rounded-full bg-primary" />
-              <div className="mt-8 space-y-5 text-[1.05rem] leading-relaxed text-slate-700">
+              <div className="mt-6 space-y-4 text-sm leading-relaxed text-slate-700">
                 <p>
-                  Vic has been working on engines for over two decades. His background spans both petrol and diesel systems, but it's the specialist end of the spectrum   Land Rover's TDV6 and SDV8 units, Jaguar's supercharged V8, the Ingenium diesel family   where his knowledge runs deepest. He is one of a small number of independent technicians in the South East who has the equipment, the training, and the hands-on experience to handle the full rebuild of these engines, not just the surface-level diagnostics that most garages can offer.
+                  Vic has been working on engines for over two decades, specialising in Land Rover's TDV6 and SDV8 units, Jaguar's supercharged V8, and the Ingenium diesel family. He is one of a small number of independent technicians in the South East with the equipment and experience to handle full engine rebuilds on these vehicles.
                 </p>
                 <p>
-                  What separates Vic from a competent general mechanic isn't simply technical knowledge   it's his approach. He doesn't work from symptoms alone. Before any significant work is authorised, he understands the full picture: why an engine has failed, what the underlying conditions were, and what would happen if only the obvious fault were addressed.
-                </p>
-                <p>
-                  He's also straightforward with people. If a job is going to cost what it costs, he says so clearly and explains why. If a vehicle isn't worth spending a certain amount on, he'll tell you that too   even if it means less work for the workshop. Customers pick up on that fairly quickly. He doesn't operate on the assumption that people can't handle honest information. Most of them, he's found, are relieved to get it.
+                  What sets Vic apart isn't just technical knowledge — it's his approach. He looks beyond symptoms to understand why an engine failed and what it would take to fix it properly. If a vehicle isn't worth the spend, he'll say so. Customers tend to appreciate the honesty.
                 </p>
               </div>
             </div>
@@ -174,11 +171,11 @@ export default function About() {
               <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/15 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-emerald-300">
                 <Quote className="h-4 w-4" /> A Word From Vic
               </span>
-              <blockquote className="mt-8 text-xl leading-relaxed text-slate-100 md:text-2xl">
-                "If you're standing here wondering whether to trust us with your Range Rover or Land Rover, I understand that completely. These are expensive vehicles, and an engine rebuild is a significant thing to get right. What I can tell you is this: we'll tell you exactly what's wrong, exactly what it will cost to fix it properly, and exactly what we're going to do. We'll use the right parts. We'll take the time it takes. And if at any point we think the numbers don't add up for you, we'll say so. That's how we've worked since 2004, and it's not something we're going to change."
+              <blockquote className="mt-6 text-base leading-relaxed text-slate-100 md:text-lg">
+                "We'll tell you exactly what's wrong, what it will cost, and what we're going to do. We'll use the right parts and take the time it takes. If the numbers don't add up for you, we'll say so. That's how we've worked since 2004. Every vehicle that comes through our doors gets the same level of care — whether it's a diagnostic check or a complete engine rebuild. We don't cut corners, and we don't tell people what they want to hear."
               </blockquote>
-              <p className="mt-8 text-sm font-bold uppercase tracking-[0.2em] text-emerald-300">
-                  Vic, Owner & Lead Technician, Vogue Technics
+              <p className="mt-6 text-sm font-bold uppercase tracking-[0.2em] text-emerald-300">
+                Vic, Owner & Lead Technician, Vogue Technics
               </p>
             </div>
           </div>

@@ -42,30 +42,30 @@ export default function LatestVideos() {
           <h2 className="text-2xl md:text-3xl font-bold text-[#0D2447] tracking-wider uppercase">LATEST VIDEOS</h2>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-6xl mx-auto">
           {videos.map((vid, idx) => (
-            <div key={idx} className="bg-white rounded-[24px] overflow-hidden shadow-sm hover:shadow-xl transition-shadow border border-slate-200 flex flex-col group cursor-pointer">
+            <div key={idx} className="bg-white rounded-[16px] overflow-hidden shadow-sm hover:shadow-xl transition-shadow border border-slate-200 flex flex-col group cursor-pointer">
               {/* Video Thumbnail Area */}
-              <div className="relative aspect-[4/3] w-full bg-slate-900 overflow-hidden">
-                <Image 
+              <div className="relative aspect-[16/7] w-full bg-slate-900 overflow-hidden">
+                <Image
                   src={vid.image}
-                  alt={vid.title} 
-                  fill 
+                  alt={vid.title}
+                  fill
                   className="object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-300 group-hover:scale-105"
                 />
-                
+
                 {/* Play Button */}
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-14 h-14 bg-[#198754] rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:bg-[#146c43] transition-all duration-300">
-                    <Play className="w-6 h-6 text-white ml-1" fill="currentColor" />
+                  <div className="w-10 h-10 bg-[#198754] rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:bg-[#146c43] transition-all duration-300">
+                    <Play className="w-4 h-4 text-white ml-0.5" fill="currentColor" />
                   </div>
                 </div>
               </div>
-              
+
               {/* Text Content */}
-              <div className="p-6 text-center space-y-1.5 pt-8">
-                <h3 className="text-slate-800 font-medium text-[15px]">{vid.title}</h3>
-                <p className="text-slate-400 text-[13px] font-medium">{vid.date}</p>
+              <div className="px-4 py-5 text-center space-y-1.5">
+                <h3 className="text-slate-800 font-semibold text-sm">{vid.title}</h3>
+                <p className="text-slate-400 text-xs font-medium">{vid.date}</p>
               </div>
             </div>
           ))}

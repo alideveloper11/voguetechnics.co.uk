@@ -45,13 +45,13 @@ export default async function Blog({ searchParams }: Props) {
         </div>
 
         {/* Blog Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-7xl mx-auto">
           {pageBlogs.map((blog) => {
             const imageUrl = (Array.isArray(blog.image) ? blog.image[0] : blog.image) || "https://images.unsplash.com/photo-1486496146582-9ff1a5bf0114?q=80&w=800&auto=format&fit=crop";
             return (
               <article key={blog.id} className="relative bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col group h-full">
                 {/* Image Container */}
-                <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
+                <div className="relative aspect-[16/8] overflow-hidden bg-slate-100">
                   <Image
                     src={imageUrl}
                     alt={blog.title}
@@ -63,33 +63,33 @@ export default async function Blog({ searchParams }: Props) {
                 </div>
 
                 {/* Content Container */}
-                <div className="p-8 flex-1 flex flex-col justify-between">
+                <div className="p-5 flex-1 flex flex-col justify-between">
                   <div>
-                    <div className="flex items-center gap-4 text-xs font-semibold text-slate-500 uppercase tracking-wider mb-4">
-                      <div className="flex items-center gap-1.5">
-                        <Calendar className="w-4 h-4 text-primary" />
+                    <div className="flex items-center gap-3 text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">
+                      <div className="flex items-center gap-1">
+                        <Calendar className="w-3.5 h-3.5 text-primary" />
                         {blog.date}
                       </div>
-                      <div className="flex items-center gap-1.5">
-                        <User className="w-4 h-4 text-primary" />
+                      <div className="flex items-center gap-1">
+                        <User className="w-3.5 h-3.5 text-primary" />
                         {blog.author}
                       </div>
                     </div>
 
-                    <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors leading-snug">
+                    <h3 className="text-base font-bold text-slate-900 mb-2 group-hover:text-primary transition-colors leading-snug line-clamp-2">
                       <Link href={`/blog/${blog.slug}`} className="focus:outline-none before:absolute before:inset-0">
                         {blog.title}
                       </Link>
                     </h3>
 
-                    <p className="text-slate-600 line-clamp-3 leading-relaxed mb-6">
+                    <p className="text-sm text-slate-600 line-clamp-2 leading-relaxed mb-3">
                       {blog.excerpt}
                     </p>
                   </div>
 
                   {/* Read More Link */}
-                  <div className="flex items-center text-primary font-bold text-sm uppercase tracking-wider group-hover:translate-x-2 transition-transform self-start">
-                    Read Article <ArrowRight className="w-4 h-4 ml-2" />
+                  <div className="flex items-center text-primary font-bold text-xs uppercase tracking-wider group-hover:translate-x-2 transition-transform self-start">
+                    Read Article <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
                   </div>
                 </div>
               </article>

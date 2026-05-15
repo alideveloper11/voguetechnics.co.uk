@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React from "react";
 import Image from "next/image";
@@ -50,23 +50,6 @@ export default function EngineRepairPage() {
               <RegSearch />
             </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 14 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.05 }}
-              className="max-w-4xl mx-auto text-slate-300 leading-relaxed font-medium space-y-6 text-sm md:text-base"
-            >
-              <p>
-                Engine problems rarely wait for a convenient moment. Whether it is a warning light that will not clear, an oil
-                leak that keeps returning, or an engine that has seized without much warning   the moment something goes wrong,
-                you need a specialist who knows your vehicle, not a general garage working from a generic checklist.
-              </p>
-              <p>
-                At Vogue Technics, engine repair is our sole focus. We diagnose and repair engines on Range Rover, Land Rover,
-                Jaguar, Audi, and BMW   using OEM-specification parts, with a written quote agreed before any work begins, and a
-                six-month warranty on every repair we complete. Based in , with UK-wide collection available.
-              </p>
-            </motion.div>
 
             <div className="flex flex-col lg:flex-row gap-4 justify-center items-center mt-10">
               <Link
@@ -105,18 +88,12 @@ export default function EngineRepairPage() {
             </p>
           </div>
 
-          <div className="max-w-5xl mx-auto bg-slate-50 border border-slate-100 rounded-[3rem] p-10 md:p-12 shadow-sm">
-            <p className="text-slate-600 leading-relaxed font-medium text-sm md:text-base">
-              A persistent warning light with oil pressure, temperature, or boost-related fault codes is one of the clearest signs
-              that something needs investigating properly. Engine misfires affecting performance across one or multiple cylinders,
-              oil leaks from gaskets, cam covers, or the sump, overheating caused by cooling system failure, timing chain noise on
-              cold start, head gasket failure indicated by white smoke or coolant loss, and complete engine seizure following oil
-              starvation   these are all faults we diagnose and repair every week across five of the most technically demanding
-              vehicle platforms on the road.
+          <div className="max-w-5xl mx-auto bg-slate-50 border border-slate-100 rounded-[3rem] p-8 md:p-10 shadow-sm">
+            <p className="text-slate-600 leading-relaxed font-medium text-sm">
+              Warning lights with oil pressure or boost fault codes, engine misfires, oil leaks, overheating, timing chain noise, white smoke from head gasket failure, and engine seizure — these are faults we diagnose and repair every week across the most technically demanding prestige platforms.
             </p>
-            <p className="text-slate-600 leading-relaxed font-medium text-sm md:text-base mt-6">
-              The longer any of these are left, the more the damage spreads and the more the repair costs. A specialist diagnostic
-              is always the most cost-effective first step.
+            <p className="text-slate-600 leading-relaxed font-medium text-sm mt-4">
+              The longer any of these are left, the more expensive the repair becomes. A specialist diagnostic is always the most cost-effective first step.
             </p>
             <div className="pt-8">
               <Link
@@ -194,7 +171,7 @@ export default function EngineRepairPage() {
             <div className="w-24 h-1.5 bg-primary mx-auto rounded-full"></div>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
                 title: "Range Rover Engine Repair",
@@ -249,15 +226,11 @@ export default function EngineRepairPage() {
             ].map((item) => (
               <div
                 key={item.title}
-                className="bg-slate-50 border border-slate-100 rounded-[2.5rem] p-10 hover:bg-white hover:shadow-2xl transition-all duration-500"
+                className="bg-slate-50 border border-slate-100 rounded-[2.5rem] p-6 hover:bg-white hover:shadow-2xl transition-all duration-500"
               >
-                <h3 className="text-xl font-extrabold text-slate-900 uppercase tracking-tight italic mb-6">{item.title}</h3>
-                <div className="space-y-5 text-slate-600 leading-relaxed font-medium text-sm md:text-base">
-                  {item.text.map((t) => (
-                    <p key={t}>{t}</p>
-                  ))}
-                </div>
-                <div className="pt-8 flex flex-wrap gap-4">
+                <h3 className="text-xl font-extrabold text-slate-900 uppercase tracking-tight italic mb-3">{item.title}</h3>
+                <p className="text-slate-600 leading-relaxed font-medium text-sm line-clamp-4">{item.text[0]}</p>
+                <div className="pt-4 flex flex-wrap gap-4">
                   <Link href={item.href} className="inline-flex items-center gap-2 text-primary font-black text-xs tracking-widest uppercase">
                     {item.cta} <ArrowRight className="w-4 h-4" />
                   </Link>
@@ -291,12 +264,12 @@ export default function EngineRepairPage() {
               { icon: <CheckCircle2 className="w-5 h-5" />, title: "Six-Month Warranty", text: "All engine repair work is backed by a minimum six-month warranty on parts and labour." },
               { icon: <Wrench className="w-5 h-5" />, title: "UK-Wide Collection", text: "Based in , we collect and deliver across the UK on all major engine work." },
             ].map((item) => (
-              <div key={item.title} className="bg-white/5 border border-white/10 rounded-[2.5rem] p-10 hover:bg-white/10 transition-all duration-500">
+              <div key={item.title} className="bg-white/5 border border-white/10 rounded-[2.5rem] p-6 hover:bg-white/10 transition-all duration-500">
                 <div className="flex items-start gap-4">
                   <div className="bg-primary/20 text-primary p-2 rounded-xl flex-shrink-0">{item.icon}</div>
-                  <div className="space-y-3">
-                    <h3 className="font-extrabold uppercase tracking-tight italic text-sm md:text-base">{item.title}</h3>
-                    <p className="text-slate-300 leading-relaxed font-medium text-sm md:text-base">{item.text}</p>
+                  <div className="space-y-2 min-w-0">
+                    <h3 className="font-extrabold uppercase tracking-tight italic text-sm">{item.title}</h3>
+                    <p className="text-slate-300 font-medium text-sm line-clamp-3">{item.text}</p>
                   </div>
                 </div>
               </div>
@@ -319,11 +292,11 @@ export default function EngineRepairPage() {
                 "Step 4   Repair to OEM Specification   carried out by specialists using quality parts, with updates throughout.",
                 "Step 5   Quality Check and Return   full post-repair inspection and road test before handover.",
               ].map((text, idx) => (
-                <div key={idx} className="bg-white/5 border border-white/10 rounded-[2.5rem] p-10 hover:bg-white/10 transition-all duration-500">
-                  <div className="w-12 h-12 rounded-2xl bg-primary text-white flex items-center justify-center font-black text-lg mb-6 shadow-lg">
+                <div key={idx} className="bg-white/5 border border-white/10 rounded-[2.5rem] p-6 hover:bg-white/10 transition-all duration-500">
+                  <div className="w-10 h-10 rounded-2xl bg-primary text-white flex items-center justify-center font-black text-base mb-3 shadow-lg">
                     {idx + 1}
                   </div>
-                  <p className="text-slate-200 leading-relaxed font-medium text-sm md:text-base">{text}</p>
+                  <p className="text-slate-200 font-medium text-sm line-clamp-3">{text}</p>
                 </div>
               ))}
             </div>
@@ -369,13 +342,13 @@ export default function EngineRepairPage() {
       />
 
       {/* Final CTA */}
-      <section className="py-24 bg-primary relative overflow-hidden">
+      <section className="py-12 bg-primary relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-[100px] pointer-events-none"></div>
         <div className="container mx-auto px-4 lg:px-8 text-center relative z-10">
-          <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-8 uppercase tracking-tight italic leading-tight">
+          <h2 className="text-xl md:text-3xl font-extrabold text-white mb-4 uppercase tracking-tight italic leading-tight">
             Let&apos;s Get Your <span className="text-slate-950">Engine Sorted</span>
           </h2>
-          <p className="text-emerald-100 text-sm md:text-base mb-14 max-w-3xl mx-auto font-medium leading-relaxed">
+          <p className="text-emerald-100 text-sm md:text-base mb-6 max-w-3xl mx-auto font-medium leading-relaxed">
             Whatever your vehicle, whatever the fault   do not leave it and do not settle for a garage that does not specialise in
             your platform.
           </p>
@@ -383,25 +356,25 @@ export default function EngineRepairPage() {
           <div className="flex flex-col lg:flex-row gap-6 justify-center items-center">
             <Link
               href="/contact-us"
-              className="bg-slate-950 text-white font-black px-12 py-6 rounded-[2rem] shadow-2xl hover:bg-slate-900 transition-all uppercase tracking-[0.2em] text-xs md:text-sm flex items-center gap-4"
+              className="bg-slate-950 text-white font-black px-7 py-3 rounded-xl shadow-2xl hover:bg-slate-900 transition-all uppercase tracking-[0.2em] text-xs md:text-sm flex items-center gap-4"
             >
               Request a Free Engine Repair Quote <ArrowRight className="w-6 h-6 text-primary" />
             </Link>
             <a
               href="tel:01375531355"
-              className="bg-white text-slate-950 font-black px-12 py-6 rounded-[2rem] shadow-2xl hover:bg-slate-50 transition-all uppercase tracking-[0.2em] text-xs md:text-sm border-4 border-slate-950/10"
+              className="bg-white text-slate-950 font-black px-7 py-3 rounded-xl shadow-2xl hover:bg-slate-50 transition-all uppercase tracking-[0.2em] text-xs md:text-sm border-4 border-slate-950/10"
             >
               Call Us and Speak to a Specialist
             </a>
             <Link
               href="/services/engine-health-check"
-              className="bg-white/20 text-white font-black px-12 py-6 rounded-[2rem] shadow-2xl hover:bg-white/25 transition-all uppercase tracking-[0.2em] text-xs md:text-sm border border-white/20"
+              className="bg-white/20 text-white font-black px-7 py-3 rounded-xl shadow-2xl hover:bg-white/25 transition-all uppercase tracking-[0.2em] text-xs md:text-sm border border-white/20"
             >
               Book a Diagnostic at Our  Workshop
             </Link>
           </div>
 
-          <div className="mt-16 text-white/90 font-black uppercase tracking-widest text-[0.65rem]">
+          <div className="mt-8 text-white/90 font-black uppercase tracking-widest text-[0.65rem]">
             Vogue Technics | Engine Repair Specialists |  | UK-Wide Collection &nbsp; Range Rover • Land Rover • Jaguar
             • Audi • BMW
           </div>
@@ -413,4 +386,5 @@ export default function EngineRepairPage() {
     </main>
   );
 }
+
 

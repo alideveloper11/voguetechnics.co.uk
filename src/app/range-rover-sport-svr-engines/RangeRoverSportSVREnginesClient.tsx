@@ -153,19 +153,6 @@ export default function RangeRoverSportSVREnginesClient() {
               <RegSearch className="max-w-3xl" />
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.22 }}
-              className="mt-7 max-w-4xl text-sm leading-relaxed text-slate-300 md:text-base space-y-4"
-            >
-              <p>
-                The Range Rover Sport SVR is not just any SUV. It's a 575bhp, 5.0-litre supercharged V8 machine built to perform at a level most vehicles simply can't match. When that engine starts playing up   whether it's a supercharger whine, a sudden loss of power, or something more serious   you need specialists who truly understand what's under that bonnet.
-              </p>
-              <p>
-                At Vogue Technics, based in , we work exclusively on Land Rover and Range Rover engines. The Sport SVR's AJ133 5.0 V8 supercharged unit is one we know inside out   every known fault, every wear pattern, every rebuild consideration. If your SVR needs an engine rebuild, repair, replacement, or anything in between, you're in exactly the right hands.
-              </p>
-            </motion.div>
           </div>
         </div>
       </section>
@@ -176,23 +163,23 @@ export default function RangeRoverSportSVREnginesClient() {
             <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
               Why Vogue Technics Is the Right Choice for Your Range Rover Sport SVR Engine
             </h2>
-            <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
-                <h3 className="font-bold text-slate-900">SVR-Specific Expertise, Not Generic Engine Work</h3>
-                <p className="mt-3 text-slate-700 leading-relaxed">
-                  Our technicians work solely on Land Rover and Range Rover platforms. The 5.0-litre AJ133 supercharged unit found in the Sport SVR has its own set of known failure points   supercharger bearing wear, timing chain stretch, oil consumption issues, and carbon build-up on intake valves, to name a few. We've seen every one of them, repeatedly. That accumulated knowledge translates directly into better, faster, more reliable work on your vehicle.
+            <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-5">
+              <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-5">
+                <h3 className="font-bold text-slate-900 text-sm">SVR-Specific Expertise</h3>
+                <p className="mt-2 text-sm text-slate-700 leading-relaxed line-clamp-3">
+                  The AJ133 has known failure points — supercharger wear, timing chain stretch, oil consumption, intake carbon build-up. We've seen every one, repeatedly, and know exactly how to fix them.
                 </p>
               </div>
-              <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
-                <h3 className="font-bold text-slate-900">25 Years of Land Rover Engine Experience</h3>
-                <p className="mt-3 text-slate-700 leading-relaxed">
-                  Vogue Technics has been operating for over 25 years. In that time, we've rebuilt and replaced more Land Rover and Range Rover engines than most garages will see in a lifetime. Our reputation across , and the wider UK has been earned one satisfied customer at a time   because the work we do holds up long after the vehicle leaves our workshop.
+              <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-5">
+                <h3 className="font-bold text-slate-900 text-sm">25 Years of Engine Experience</h3>
+                <p className="mt-2 text-sm text-slate-700 leading-relaxed line-clamp-3">
+                  More Land Rover and Range Rover engines rebuilt than most garages will see in a lifetime. Our reputation across the UK has been earned one satisfied customer at a time.
                 </p>
               </div>
-              <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
-                <h3 className="font-bold text-slate-900">Upfront Quotes, Honest Advice</h3>
-                <p className="mt-3 text-slate-700 leading-relaxed">
-                  SVR engine work can be a significant investment, and we respect that. We give every customer a clear, itemised quote before any work begins   no vague estimates, no bill that doubles by collection day. If we think a repair is more sensible than a full rebuild for your situation, we'll tell you that honestly.
+              <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-5">
+                <h3 className="font-bold text-slate-900 text-sm">Upfront Quotes, Honest Advice</h3>
+                <p className="mt-2 text-sm text-slate-700 leading-relaxed line-clamp-3">
+                  Clear, itemised quote before work begins — no vague estimates, no bill that doubles on collection. If repair is more sensible than rebuild, we'll say so.
                 </p>
               </div>
             </div>
@@ -210,20 +197,20 @@ export default function RangeRoverSportSVREnginesClient() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {services.map((service) => (
               <div
                 key={service.title}
-                className="rounded-[2rem] border border-slate-200 bg-white p-7 shadow-sm flex flex-col justify-between"
+                className="rounded-[1.5rem] border border-slate-200 bg-white p-5 shadow-sm flex flex-col justify-between"
               >
                 <div>
-                  <h3 className="text-xl font-bold text-slate-900">{service.title}</h3>
-                  <p className="mt-4 text-slate-700 leading-relaxed">{service.body}</p>
+                  <h3 className="text-base font-bold text-slate-900">{service.title}</h3>
+                  <p className="mt-3 text-sm text-slate-700 leading-relaxed line-clamp-4">{service.body}</p>
                 </div>
-                <div className="pt-6">
+                <div className="pt-4">
                   <Link
                     href={`/services/${service.slug}`}
-                    className="inline-flex items-center justify-center w-full bg-primary text-white font-bold py-3 px-6 rounded-xl hover:bg-emerald-600 transition-colors"
+                    className="inline-flex items-center justify-center w-full bg-primary text-white font-bold py-2 px-4 text-sm rounded-xl hover:bg-emerald-600 transition-colors"
                   >
                     Explore More
                   </Link>
@@ -244,23 +231,23 @@ export default function RangeRoverSportSVREnginesClient() {
               <p>
                 We know that being without a vehicle like the SVR   whether it's your daily driver or weekend car   is genuinely frustrating. We work efficiently without ever compromising on the standard of work.
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
-                  <h3 className="font-bold text-slate-900">Engine Collection & Delivery Across the UK</h3>
-                  <p className="mt-3">
-                    Not able to bring your vehicle or engine to us in ? We offer a fully managed engine collection and return service covering the entire UK. Send us your unit, we rebuild or replace it, test it thoroughly, and return it ready to fit   or arrange installation through our approved fitter network if required.
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-5">
+                  <h3 className="font-bold text-slate-900 text-sm">UK-Wide Collection & Delivery</h3>
+                  <p className="mt-2 text-sm line-clamp-3">
+                    Can't get to us? We collect, rebuild, and return your engine fully tested — or arrange fitting through our approved fitter network nationwide.
                   </p>
                 </div>
-                <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
-                  <h3 className="font-bold text-slate-900">Fast, Realistic Turnaround Times</h3>
-                  <p className="mt-3">
-                    Most engine rebuilds on the SVR unit are completed within 5–10 working days. Repairs and replacements are frequently quicker. We give you a confirmed timeframe at booking   and we honour it. If anything changes, we tell you immediately.
+                <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-5">
+                  <h3 className="font-bold text-slate-900 text-sm">Fast, Realistic Turnaround</h3>
+                  <p className="mt-2 text-sm line-clamp-3">
+                    SVR rebuilds completed within 5–10 working days. Repairs and replacements often quicker. We give a confirmed timeframe and honour it.
                   </p>
                 </div>
-                <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
-                  <h3 className="font-bold text-slate-900">Written Warranty on Every Job</h3>
-                  <p className="mt-3">
-                    Every engine rebuild, replacement, and major repair at Vogue Technics comes with a written warranty. We put it in writing because we're confident in the quality of what we deliver. Ask us for full warranty terms when you enquire.
+                <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-5">
+                  <h3 className="font-bold text-slate-900 text-sm">Written Warranty on Every Job</h3>
+                  <p className="mt-2 text-sm line-clamp-3">
+                    Every rebuild, replacement, and major repair comes with a written warranty. Ask for full terms when you enquire.
                   </p>
                 </div>
               </div>

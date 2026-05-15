@@ -76,21 +76,6 @@ export default function JaguarXJEnginesPage() {
               <RegSearch className="max-w-3xl" />
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.22 }}
-              className="mt-7 max-w-4xl text-sm leading-relaxed text-slate-300 md:text-base space-y-4"
-            >
-              <p>
-                The Jaguar XJ is Jaguar&apos;s flagship saloon   engineered for refinement and long-distance comfort, and built around powerful V6 and V8
-                petrol and diesel engines across its generations.
-              </p>
-              <p>
-                At Vogue Technics in , we carry out Jaguar XJ engine rebuilds, targeted repairs and complete replacements with accurate
-                diagnosis, transparent pricing, and written warranty   plus UK-wide collection and delivery.
-              </p>
-            </motion.div>
           </div>
         </div>
       </section>

@@ -147,45 +147,34 @@ export default function RangeRoverEnginesClient() {
             >
               <RegSearch className="max-w-3xl" />
             </motion.div>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="mt-7 max-w-4xl text-sm leading-relaxed text-slate-300 md:text-base"
-            >
-              If your Range Rover is losing power, burning oil, or showing warning lights you can't ignore, you've landed in the right place. At Vogue Technics, we are ' most trusted Range Rover engine specialists, serving customers across  and the wider UK with over 25 years of hands-on experience working exclusively on Range Rover, Land Rover, and Jaguar engines.
-              <br />
-              <br />
-              We don't just fix engines   we restore confidence in your vehicle. Whether you need a full engine rebuild, a straightforward replacement, or an urgent head gasket repair, our team delivers precision workmanship backed by genuine warranties and transparent pricing.
-            </motion.p>
           </div>
         </div>
       </section>
 
       <section className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6">
-            <div className="rounded-[2rem] border border-slate-200 bg-slate-50 p-7 shadow-sm">
-              <h2 className="text-xl font-bold text-slate-900">Why Choose Vogue Technics as Your Range Rover Engine Specialist?</h2>
-              <p className="mt-4 text-slate-700 leading-relaxed">
+          <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-5">
+            <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-5 shadow-sm">
+              <h2 className="text-base font-bold text-slate-900">Why Choose Vogue Technics as Your Range Rover Engine Specialist?</h2>
+              <p className="mt-3 text-sm text-slate-700 leading-relaxed line-clamp-4">
                 When it comes to your Range Rover, cutting corners isn't an option. These vehicles are engineered to perform at the highest level, and they demand specialist knowledge that general mechanics simply don't have. At Vogue Technics, every technician on our team has been trained specifically on Range Rover engine systems   from the classic V8 to the modern 3.0 TDV6 and the turbocharged 2.0-litre Ingenium units.
               </p>
             </div>
-            <div className="rounded-[2rem] border border-slate-200 bg-slate-50 p-7 shadow-sm">
-              <h3 className="text-xl font-bold text-slate-900">25 Years of Dedicated Range Rover Engine Expertise</h3>
-              <p className="mt-4 text-slate-700 leading-relaxed">
+            <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-5 shadow-sm">
+              <h3 className="text-base font-bold text-slate-900">25 Years of Dedicated Range Rover Engine Expertise</h3>
+              <p className="mt-3 text-sm text-slate-700 leading-relaxed line-clamp-4">
                 Since we opened our doors in , we've built our entire reputation around one thing: getting Range Rover engines right. We've handled thousands of engine rebuilds, replacements, and repairs across every model   Sport, Evoque, Velar, Discovery, and Defender. That depth of experience means faster diagnosis, fewer return visits, and engines that last.
               </p>
             </div>
-            <div className="rounded-[2rem] border border-slate-200 bg-slate-50 p-7 shadow-sm">
-              <h3 className="text-xl font-bold text-slate-900">Tested, Guaranteed, and Warranty-Backed Engines</h3>
-              <p className="mt-4 text-slate-700 leading-relaxed">
+            <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-5 shadow-sm">
+              <h3 className="text-base font-bold text-slate-900">Tested, Guaranteed, and Warranty-Backed Engines</h3>
+              <p className="mt-3 text-sm text-slate-700 leading-relaxed line-clamp-4">
                 Every engine we supply   whether used or fully reconditioned   goes through a rigorous multi-point testing process before it leaves our workshop. All reconditioned Range Rover engines come with a minimum 6-month warranty, giving you full peace of mind long after the job is done. We only source from trusted suppliers, so you'll never receive an engine we wouldn't fit to our own vehicle.
               </p>
             </div>
-            <div className="rounded-[2rem] border border-slate-200 bg-slate-50 p-7 shadow-sm lg:col-span-3">
-              <h3 className="text-xl font-bold text-slate-900">Competitive, Transparent Pricing   No Hidden Costs</h3>
-              <p className="mt-4 text-slate-700 leading-relaxed">
+            <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-5 shadow-sm lg:col-span-3">
+              <h3 className="text-base font-bold text-slate-900">Competitive, Transparent Pricing   No Hidden Costs</h3>
+              <p className="mt-3 text-sm text-slate-700 leading-relaxed line-clamp-3">
                 We understand that engine work is a significant investment. That's why we offer some of the most affordable Range Rover engine prices in the UK, without compromising on quality. You'll receive a clear, itemised quote upfront   no surprises, no inflated labour charges, and no pressure to approve work you don't need.
               </p>
             </div>
@@ -203,17 +192,17 @@ export default function RangeRoverEnginesClient() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {services.map((service) => (
-              <div key={service.title} className="rounded-[2rem] border border-slate-200 bg-white p-7 shadow-sm flex flex-col justify-between">
+              <div key={service.title} className="rounded-[1.5rem] border border-slate-200 bg-white p-5 shadow-sm flex flex-col justify-between">
                 <div>
-                  <h3 className="text-xl font-bold text-slate-900">{service.title}</h3>
-                  <p className="mt-4 text-slate-700 leading-relaxed whitespace-pre-line">{service.body}</p>
+                  <h3 className="text-base font-bold text-slate-900 mb-2">{service.title}</h3>
+                  <p className="text-sm text-slate-700 leading-relaxed line-clamp-4">{service.body}</p>
                 </div>
-                <div className="pt-6">
+                <div className="pt-4">
                   <Link
                     href={`/services/${service.slug}`}
-                    className="inline-flex items-center justify-center w-full bg-primary text-white font-bold py-3 px-6 rounded-xl hover:bg-emerald-600 transition-colors"
+                    className="inline-flex items-center justify-center w-full bg-primary text-white font-bold py-2 px-4 text-sm rounded-xl hover:bg-emerald-600 transition-colors"
                   >
                     Explore More
                   </Link>
@@ -226,26 +215,24 @@ export default function RangeRoverEnginesClient() {
 
       <section className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="max-w-5xl mx-auto space-y-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-slate-900">Reconditioned & Used Range Rover Engines for Sale   , UK</h2>
-            <div className="space-y-5 text-slate-700 leading-relaxed">
-              <p>
-                If you're looking to buy a Range Rover engine online or collect locally from , our engine stock covers the full range of popular models and capacities. Whether it's a 3.0 Range Rover engine for sale, a 4.4 engine, a Range Rover diesel engine, or a Range Rover V8 reconditioned unit, we hold regular stock and can source specific engines quickly.
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-8">Reconditioned & Used Range Rover Engines for Sale   , UK</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
+              <h3 className="font-bold text-slate-900 mb-3">All Models & Capacities in Stock</h3>
+              <p className="text-sm text-slate-700 leading-relaxed">
+                We stock used and fully reconditioned engines covering every popular Range Rover variant — 3.0, 4.4, diesel, petrol, and V8 units. Whether you need a specific engine number or just a capacity, we source quickly and test before dispatch.
               </p>
-              <p>
-                Range Rover Sport Engines
-                <br />
-                The Range Rover Sport is one of our most common engine enquiries. We stock and supply Sport engines across all generations   from the early 4.4 V8 to the later 3.0 SDV6 and the current Ingenium diesel units.
+            </div>
+            <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
+              <h3 className="font-bold text-slate-900 mb-3">Sport, Evoque & Velar Engines</h3>
+              <p className="text-sm text-slate-700 leading-relaxed">
+                Range Rover Sport engines from the 4.4 V8 to the 3.0 SDV6 and Ingenium diesel. Evoque and Velar units in both used and reconditioned condition — all supplied with full test reports and warranty documentation.
               </p>
-              <p>
-                Range Rover Evoque Engines
-                <br />
-                Evoque engines, particularly the 2.0 diesel variants, are prone to specific wear patterns that require specialist knowledge. We supply both used and reconditioned Range Rover Evoque engines with full test reports and warranty documentation.
-              </p>
-              <p className="font-medium text-slate-800 border-l-4 border-primary pl-4 py-2 bg-slate-50 rounded-r-xl">
-                Fast UK Delivery & Local Fitting in 
-                <br />
-                We offer fast UK-wide engine delivery, and for customers in , and the surrounding areas   Thurrock, Basildon, Dartford, and beyond   we provide a complete engine supply and fit service at our fully equipped workshop. Drop your vehicle in, and we'll handle everything.
+            </div>
+            <div className="rounded-[1.5rem] border border-l-4 border-primary bg-slate-50 p-6">
+              <h3 className="font-bold text-slate-900 mb-3">Fast UK Delivery & Local Fitting</h3>
+              <p className="text-sm text-slate-700 leading-relaxed">
+                UK-wide engine delivery available on all stock units. For customers in  and the surrounding areas — Thurrock, Basildon, Dartford — we provide a complete supply and fit service at our fully equipped workshop.
               </p>
             </div>
           </div>

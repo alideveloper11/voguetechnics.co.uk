@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -148,19 +148,6 @@ export default function LandRoverDiscovery5EnginesClient() {
               <RegSearch className="max-w-3xl" />
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.22 }}
-              className="mt-7 max-w-4xl text-sm leading-relaxed text-slate-300 md:text-base space-y-4"
-            >
-              <p>
-                The Land Rover Discovery 5 represents the most refined and technologically advanced iteration of a nameplate that has defined British off-road motoring for decades. It rides well, tows impressively, and carries seven people in genuine comfort. But underneath that polished exterior, its Ingenium engines and 3.0 TDV6 units carry vulnerabilities that surface   often suddenly and expensively   once mileage climbs or servicing slips.
-              </p>
-              <p>
-                When your Discovery 5 develops an engine fault, the workshop you choose matters enormously. At Vogue Technics, based in , we work exclusively on Land Rover and Range Rover engines. Backed by over 25 years of hands-on specialist experience, we deliver Discovery 5 engine repair, rebuilds, and replacements that are done correctly the first time   and warranted in writing.
-              </p>
-            </motion.div>
           </div>
         </div>
       </section>
@@ -174,19 +161,19 @@ export default function LandRoverDiscovery5EnginesClient() {
             <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
                 <h3 className="font-bold text-slate-900">Land Rover Exclusivity   No Distractions, No Compromises</h3>
-                <p className="mt-3 text-slate-700 leading-relaxed">
+                <p className="mt-3 text-sm text-slate-700 leading-relaxed line-clamp-5">
                   Every technician in our  workshop is trained exclusively on Land Rover and Range Rover platforms. When your Discovery 5 comes through our doors, the people working on it have handled this exact engine, this exact fault, and this exact platform many times before.
                 </p>
               </div>
               <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
                 <h3 className="font-bold text-slate-900">Over 25 Years of Trusted Engine Work Across the UK</h3>
-                <p className="mt-3 text-slate-700 leading-relaxed">
+                <p className="mt-3 text-sm text-slate-700 leading-relaxed line-clamp-5">
                   Our reputation has come entirely from the quality of our work and the honesty of our approach. When we fix a Discovery 5 engine, it stays fixed.
                 </p>
               </div>
               <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
                 <h3 className="font-bold text-slate-900">Itemised Quotes Before Any Work Begins</h3>
-                <p className="mt-3 text-slate-700 leading-relaxed">
+                <p className="mt-3 text-sm text-slate-700 leading-relaxed line-clamp-5">
                   Before we touch your vehicle, you receive a full itemised quote covering every element of the job   parts, labour, and timescale. No surprises on collection day.
                 </p>
               </div>
@@ -207,17 +194,17 @@ export default function LandRoverDiscovery5EnginesClient() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
             {services.map((service) => (
               <div
                 key={service.title}
-                className="rounded-[2rem] border border-slate-200 bg-white p-7 shadow-sm flex flex-col justify-between"
+                className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm flex flex-col justify-between"
               >
                 <div>
-                  <h3 className="text-xl font-bold text-slate-900">{service.title}</h3>
-                  <p className="mt-4 text-slate-700 leading-relaxed">{service.body}</p>
+                  <h3 className="text-sm font-bold text-slate-900">{service.title}</h3>
+                  <p className="mt-2 text-xs text-slate-700 leading-relaxed line-clamp-4">{service.body}</p>
                 </div>
-                <div className="pt-6">
+                <div className="pt-3">
                   <Link
                     href={`/services/${service.slug}`}
                     className="inline-flex items-center justify-center w-full bg-primary text-white font-bold py-3 px-6 rounded-xl hover:bg-emerald-600 transition-colors"
@@ -319,9 +306,6 @@ export default function LandRoverDiscovery5EnginesClient() {
             <h2 className="text-3xl md:text-4xl font-extrabold leading-tight">
               Get Your Land Rover Discovery 5 Engine Sorted   Contact Vogue Technics Today
             </h2>
-            <p className="text-emerald-50 leading-relaxed max-w-3xl mx-auto">
-              Don't leave your Discovery 5 standing, and don't gamble its engine with a workshop that lacks genuine platform expertise. Call us today or complete our online enquiry form for a fast, no-obligation quote.
-            </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:01375531355"

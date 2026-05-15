@@ -148,22 +148,6 @@ export default function RangeRoverSportEnginesClient() {
               <RegSearch className="max-w-3xl" />
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.22 }}
-              className="mt-7 max-w-4xl text-sm leading-relaxed text-slate-300 md:text-base space-y-4"
-            >
-              <p>
-                There&apos;s a particular kind of frustration that comes with a Range Rover Sport engine problem. It&apos;s not just the inconvenience   it&apos;s the uncertainty. Who do you trust? What will it actually cost? Will the repair hold? At Vogue Technics, we&apos;ve been answering those questions honestly for over 25 years, working exclusively on Range Rover, Land Rover, and Jaguar engines from our specialist workshop .
-              </p>
-              <p>
-                We are not a general garage that occasionally handles prestige vehicles. Every technician on our team has been trained specifically on Range Rover Sport engine systems   from the early 2.7 TDV6 and 4.2 supercharged V8 through to the modern 3.0 SDV6 and 2.0 Ingenium units. That focused expertise is what separates us from the average independent garage, and it&apos;s why Sport owners travel from across , Kent, and the wider UK to have their engines looked after here.
-              </p>
-              <p>
-                Whether you need a complete engine rebuild, an urgent replacement, or specialist diagnosis on a fault nobody else has managed to fix   you&apos;re in the right place.
-              </p>
-            </motion.div>
           </div>
         </div>
       </section>
@@ -180,20 +164,20 @@ export default function RangeRoverSportEnginesClient() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {services.map((service) => (
               <div
                 key={service.title}
-                className="rounded-[2rem] border border-slate-200 bg-white p-7 shadow-sm flex flex-col justify-between"
+                className="rounded-[1.5rem] border border-slate-200 bg-white p-5 shadow-sm flex flex-col justify-between"
               >
                 <div>
-                  <h3 className="text-xl font-bold text-slate-900">{service.title}</h3>
-                  <p className="mt-4 text-slate-700 leading-relaxed">{service.body}</p>
+                  <h3 className="text-base font-bold text-slate-900">{service.title}</h3>
+                  <p className="mt-3 text-sm text-slate-700 leading-relaxed line-clamp-4">{service.body}</p>
                 </div>
-                <div className="pt-6">
+                <div className="pt-4">
                   <Link
                     href={`/services/${service.slug}`}
-                    className="inline-flex items-center justify-center w-full bg-primary text-white font-bold py-3 px-6 rounded-xl hover:bg-emerald-600 transition-colors"
+                    className="inline-flex items-center justify-center w-full bg-primary text-white font-bold py-2 px-4 text-sm rounded-xl hover:bg-emerald-600 transition-colors"
                   >
                     Explore More
                   </Link>
@@ -244,23 +228,23 @@ export default function RangeRoverSportEnginesClient() {
             <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
               Why Range Rover Sport Owners Choose Vogue Technics
             </h2>
-            <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm">
-                <h3 className="font-bold text-slate-900">25 Years of Focused Range Rover Engine Experience</h3>
-                <p className="mt-3 text-slate-700 leading-relaxed">
-                  We have spent a quarter of a century working exclusively on Range Rover and Land Rover engines. That depth of experience means faster, more accurate diagnosis, fewer return visits, and engine work that holds up properly over time. We&apos;ve seen virtually every failure mode these engines can produce   and we know exactly how to address each one correctly.
+            <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-5">
+              <div className="rounded-[1.5rem] border border-slate-200 bg-white p-5 shadow-sm">
+                <h3 className="font-bold text-slate-900 text-sm">25 Years of Range Rover Engine Experience</h3>
+                <p className="mt-2 text-sm text-slate-700 leading-relaxed line-clamp-3">
+                  A quarter century working exclusively on Range Rover and Land Rover engines means faster diagnosis, fewer return visits, and work that holds up over time.
                 </p>
               </div>
-              <div className="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm">
-                <h3 className="font-bold text-slate-900">Transparent Pricing   No Surprises, Ever</h3>
-                <p className="mt-3 text-slate-700 leading-relaxed">
-                  Every job at Vogue Technics starts with a clear, itemised quote. We explain what needs doing, why it needs doing, and what it will cost   before we touch your vehicle. There are no hidden labour charges, no unexpected parts invoices, and no pressure to approve work you&apos;re not comfortable with.
+              <div className="rounded-[1.5rem] border border-slate-200 bg-white p-5 shadow-sm">
+                <h3 className="font-bold text-slate-900 text-sm">Transparent Pricing — No Surprises</h3>
+                <p className="mt-2 text-sm text-slate-700 leading-relaxed line-clamp-3">
+                  Every job starts with a clear, itemised quote before we touch your vehicle. No hidden labour charges, no unexpected parts invoices.
                 </p>
               </div>
-              <div className="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm">
-                <h3 className="font-bold text-slate-900">All Reconditioned Engines Warranted for Minimum 6 Months</h3>
-                <p className="mt-3 text-slate-700 leading-relaxed">
-                  Every reconditioned engine we supply or fit carries a minimum 6-month warranty as standard. Extended warranty options are available for customers who want additional peace of mind. We stand behind every engine that leaves our workshop   because we built it, we tested it, and we&apos;re confident in it.
+              <div className="rounded-[1.5rem] border border-slate-200 bg-white p-5 shadow-sm">
+                <h3 className="font-bold text-slate-900 text-sm">Minimum 6-Month Warranty</h3>
+                <p className="mt-2 text-sm text-slate-700 leading-relaxed line-clamp-3">
+                  Every reconditioned engine carries a minimum 6-month warranty as standard. Extended options available. We stand behind every engine we build.
                 </p>
               </div>
             </div>

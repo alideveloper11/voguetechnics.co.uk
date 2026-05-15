@@ -81,21 +81,6 @@ export default function JaguarXKREnginesPage() {
               <RegSearch className="max-w-3xl" />
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.22 }}
-              className="mt-7 max-w-4xl text-sm leading-relaxed text-slate-300 md:text-base space-y-4"
-            >
-              <p>
-                The Jaguar XKR pairs XK refinement with supercharged V8 performance. When issues develop, the engine is far less forgiving of
-                guesswork   correct diagnosis and precision work matters.
-              </p>
-              <p>
-                Vogue Technics in  supply, rebuild and fit Jaguar XKR engines   including supercharger work   with transparent pricing,
-                UK-wide support, and written warranty terms agreed before work begins.
-              </p>
-            </motion.div>
           </div>
         </div>
       </section>

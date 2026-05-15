@@ -153,19 +153,6 @@ export default function RangeRoverVogueMk3EnginesClient() {
               <RegSearch className="max-w-3xl" />
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.22 }}
-              className="mt-7 max-w-4xl text-sm leading-relaxed text-slate-300 md:text-base space-y-4"
-            >
-              <p>
-                If you own a Range Rover Vogue MK3   the iconic L322, produced from 2002 to 2012   and you're facing engine trouble, you've found the right specialist. At Vogue Technics, based in , we work exclusively on Land Rover and Range Rover engines, and the MK3 Vogue is a model we know with a depth that only comes from over 25 years of dedicated, hands-on experience.
-              </p>
-              <p>
-                The L322 is a vehicle that rewards proper care and punishes shortcuts. Its engine range   spanning the 3.0 TD6, the 4.4 V8 petrol, the 4.4 TDV8 diesel, the 3.6 TDV8, and the 4.2 supercharged V8   each carries its own specific characteristics, known failure patterns, and service requirements. We know every one of them intimately. Whether your MK3 Vogue needs a timing chain replacement, a full engine rebuild, an urgent turbo fix, or a complete engine swap, we deliver the quality, transparency, and expertise this vehicle genuinely deserves.
-              </p>
-            </motion.div>
           </div>
         </div>
       </section>
@@ -176,23 +163,23 @@ export default function RangeRoverVogueMk3EnginesClient() {
             <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
               Why Trust Vogue Technics With Your Range Rover Vogue MK3 Engine?
             </h2>
-            <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm">
-                <h3 className="font-bold text-slate-900">MK3 Vogue Specialists   Not General Mechanics</h3>
-                <p className="mt-3 text-slate-700 leading-relaxed">
-                  Every technician at Vogue Technics has been trained specifically on Land Rover and Range Rover engine platforms. We don't service family hatchbacks between Range Rover jobs. The MK3 Vogue is a constant presence in our  workshop, and that daily familiarity with the L322's engine family translates directly into faster, more accurate diagnosis and repairs that hold up properly over time.
+            <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-5">
+              <div className="rounded-[1.5rem] border border-slate-200 bg-white p-5 shadow-sm">
+                <h3 className="font-bold text-slate-900 text-sm">MK3 Specialists, Not General Mechanics</h3>
+                <p className="mt-2 text-sm text-slate-700 leading-relaxed line-clamp-5">
+                  Every technician is trained solely on Land Rover and Range Rover platforms. Daily familiarity with the L322 means faster, more accurate diagnosis and repairs that hold up over time.
                 </p>
               </div>
-              <div className="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm">
-                <h3 className="font-bold text-slate-900">25 Years of Range Rover Engine Experience in </h3>
-                <p className="mt-3 text-slate-700 leading-relaxed">
-                  Since we first opened our doors, we've rebuilt and replaced thousands of engines for Range Rover owners across , Thurrock, Basildon, Dartford, and throughout the wider UK. Our reputation has been built entirely on the quality of our work and the honesty of our advice   not on marketing claims. When we rebuild your MK3 Vogue engine, it stays rebuilt.
+              <div className="rounded-[1.5rem] border border-slate-200 bg-white p-5 shadow-sm">
+                <h3 className="font-bold text-slate-900 text-sm">25 Years of Range Rover Experience</h3>
+                <p className="mt-2 text-sm text-slate-700 leading-relaxed line-clamp-5">
+                  Thousands of engines rebuilt for owners across Essex, Thurrock, Dartford, and the wider UK. Our reputation is built on the quality of our work — not marketing claims.
                 </p>
               </div>
-              <div className="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm">
-                <h3 className="font-bold text-slate-900">Transparent Pricing   Written Quotes Before Any Work Begins</h3>
-                <p className="mt-3 text-slate-700 leading-relaxed">
-                  Engine work on a Range Rover Vogue MK3 is a significant investment, and you deserve to know exactly what you're committing to before a single bolt is turned. We provide clear, itemised written quotes covering all parts, labour, and any ancillary work required   with no hidden additions, no vague estimates, and no pressure to approve anything you haven't requested.
+              <div className="rounded-[1.5rem] border border-slate-200 bg-white p-5 shadow-sm">
+                <h3 className="font-bold text-slate-900 text-sm">Transparent Pricing, Written Quotes</h3>
+                <p className="mt-2 text-sm text-slate-700 leading-relaxed line-clamp-5">
+                  Clear, itemised quotes covering all parts and labour before any work begins. No hidden additions, no vague estimates, no pressure.
                 </p>
               </div>
             </div>
@@ -212,20 +199,20 @@ export default function RangeRoverVogueMk3EnginesClient() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {services.map((service) => (
               <div
                 key={service.title}
-                className="rounded-[2rem] border border-slate-200 bg-slate-50 p-7 shadow-sm flex flex-col justify-between"
+                className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-5 shadow-sm flex flex-col justify-between"
               >
                 <div>
-                  <h3 className="text-xl font-bold text-slate-900">{service.title}</h3>
-                  <p className="mt-4 text-slate-700 leading-relaxed">{service.body}</p>
+                  <h3 className="text-base font-bold text-slate-900">{service.title}</h3>
+                  <p className="mt-3 text-sm text-slate-700 leading-relaxed line-clamp-4">{service.body}</p>
                 </div>
-                <div className="pt-6">
+                <div className="pt-4">
                   <Link
                     href={`/services/${service.slug}`}
-                    className="inline-flex items-center justify-center w-full bg-primary text-white font-bold py-3 px-6 rounded-xl hover:bg-emerald-600 transition-colors"
+                    className="inline-flex items-center justify-center w-full bg-primary text-white font-bold py-2 px-4 text-sm rounded-xl hover:bg-emerald-600 transition-colors"
                   >
                     Explore More
                   </Link>
@@ -247,22 +234,22 @@ export default function RangeRoverVogueMk3EnginesClient() {
                 The L322 is a vehicle of genuine engineering quality, but 25 years of working on this platform has given us a thorough understanding of where it falls short. Knowing the common failure patterns helps owners act before minor issues escalate into serious costs.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm">
-                  <h3 className="font-bold text-slate-900">Timing Chain Failure   Symptoms & Repair</h3>
-                  <p className="mt-3">
-                    Timing chain problems on the L322 are most prevalent on the 3.6 TDV8 and 4.4 TDV8 diesel engines. The most recognisable symptom is a cold-start rattle that clears within the first minute of running. As the chain stretches further, the rattle may persist longer, and the engine management light will often illuminate as cam and crank timing deviates from specification. Repair involves replacing the complete chain assembly   not just the chain itself.
+                <div className="rounded-[1.5rem] border border-slate-200 bg-white p-5 shadow-sm">
+                  <h3 className="font-bold text-slate-900 text-sm">Timing Chain Failure — Symptoms & Repair</h3>
+                  <p className="mt-2 text-sm line-clamp-4">
+                    Most prevalent on the 3.6 and 4.4 TDV8 diesels. A cold-start rattle that clears within the first minute is the key symptom. As the chain stretches, the engine management light illuminates. Repair involves replacing the complete chain assembly.
                   </p>
                 </div>
-                <div className="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm">
-                  <h3 className="font-bold text-slate-900">Engine Oil Leaks   Causes & Solutions</h3>
-                  <p className="mt-3">
-                    Oil leaks are one of the most frequently reported issues across all MK3 Vogue engine variants. The rear main seal is the most common source on higher-mileage examples, followed by rocker cover gaskets, sump gaskets, and oil cooler connections on diesel variants. Left unaddressed, persistent oil loss leads to bearing wear, overheating, and ultimately far more expensive internal damage.
+                <div className="rounded-[1.5rem] border border-slate-200 bg-white p-5 shadow-sm">
+                  <h3 className="font-bold text-slate-900 text-sm">Engine Oil Leaks — Causes & Solutions</h3>
+                  <p className="mt-2 text-sm line-clamp-4">
+                    The rear main seal is the most common source on higher-mileage L322s, followed by rocker cover gaskets, sump gaskets, and oil cooler connections on diesels. Persistent oil loss leads to bearing wear and overheating if left unaddressed.
                   </p>
                 </div>
-                <div className="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm">
-                  <h3 className="font-bold text-slate-900">EGR Valve Clogging & DPF Issues (Diesel)</h3>
-                  <p className="mt-3">
-                    The 3.6 TDV8 and 4.4 TDV8 diesel engines fitted to the MK3 Vogue are particularly susceptible to EGR valve clogging, especially on vehicles used predominantly for short urban journeys. A clogged EGR valve causes rough running, increased fuel consumption, black smoke under load, and progressive power loss. DPF blockage on later diesel L322 variants produces similar symptoms alongside a dedicated warning light.
+                <div className="rounded-[1.5rem] border border-slate-200 bg-white p-5 shadow-sm">
+                  <h3 className="font-bold text-slate-900 text-sm">EGR Valve Clogging & DPF Issues (Diesel)</h3>
+                  <p className="mt-2 text-sm line-clamp-4">
+                    Common on TDV8 diesels used for short urban journeys. A clogged EGR causes rough running, black smoke, and power loss. DPF blockage on later variants produces similar symptoms alongside a dedicated warning light.
                   </p>
                 </div>
               </div>

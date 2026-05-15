@@ -166,17 +166,6 @@ export default function Bmw1SeriesEnginesClient() {
               <RegSearch />
             </motion.div>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.22 }}
-              className="text-base md:text-lg text-slate-200 mb-8 max-w-4xl mx-auto leading-relaxed"
-            >
-              The BMW 1 Series is a driver&apos;s car in the truest sense   rear-wheel drive, precise, and genuinely engaging in a way that most
-              competitors in its class simply are not. When the engine develops a serious fault, that enjoyment disappears immediately and the
-              financial decisions that follow can feel genuinely daunting. At Vogue Technics, based in , we take that pressure off your
-              shoulders entirely.
-            </motion.p>
           </div>
         </div>
       </section>

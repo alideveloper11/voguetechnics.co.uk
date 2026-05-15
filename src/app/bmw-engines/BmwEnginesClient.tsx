@@ -280,29 +280,6 @@ export default function BmwEnginesClient() {
             <RegSearch />
           </motion.div>
 
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="text-base md:text-lg text-slate-200 mb-8 max-w-3xl mx-auto leading-relaxed">
-            RAC-approved, warranty-backed, and up to 40% cheaper than BMW main dealers. Call today for a free same-day quote.
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.28 }}
-            className="mb-10 flex flex-wrap justify-center gap-2"
-          >
-            {bmwTrustPoints.map((t) => (
-              <span
-                key={t}
-                className="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-bold tracking-wide text-slate-200"
-              >
-                {t}
-              </span>
-            ))}
-          </motion.div>
         </div>
       </div>
     </section>

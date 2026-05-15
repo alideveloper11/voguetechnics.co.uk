@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React from "react";
 import Image from "next/image";
@@ -50,24 +50,6 @@ export default function EngineSwapPage() {
               <RegSearch />
             </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 14 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.05 }}
-              className="max-w-4xl mx-auto text-slate-300 leading-relaxed font-medium space-y-6 text-sm md:text-base"
-            >
-              <p>
-                Sometimes a repair is not the answer. Sometimes the engine is beyond economic repair, the right replacement unit is
-                difficult to source, or the vehicle deserves something better than what came out of the factory. That is when an
-                engine swap becomes the most sensible conversation to have.
-              </p>
-              <p>
-                At Vogue Technics, we carry out engine swaps and engine conversions for Range Rover, Land Rover, Jaguar, Audi, and
-                BMW. Based in  with UK-wide collection available, we handle everything from a like-for-like engine change
-                to a full performance conversion   with the technical knowledge to advise you properly and the workshop capability
-                to carry it out to a high standard.
-              </p>
-            </motion.div>
 
             <div className="flex flex-col lg:flex-row gap-4 justify-center items-center mt-10">
               <Link
@@ -103,22 +85,12 @@ export default function EngineSwapPage() {
             <div className="w-24 h-1.5 bg-primary mx-auto rounded-full"></div>
           </div>
 
-          <div className="max-w-5xl mx-auto space-y-6 text-slate-600 leading-relaxed font-medium text-sm md:text-base bg-slate-50 border border-slate-100 rounded-[3rem] p-10 md:p-12">
+          <div className="max-w-5xl mx-auto space-y-4 text-slate-600 leading-relaxed font-medium text-sm bg-slate-50 border border-slate-100 rounded-[3rem] p-8 md:p-10">
             <p>
-              An engine swap is not always the first option   but in the right circumstances, it is absolutely the right one. There
-              are several situations where a swap makes more sense than a repair or standard replacement.
+              A swap makes sense when internal damage makes rebuild uneconomical, when you want to improve reliability or performance beyond what the original engine offers, or when quality replacement units of the same spec are scarce.
             </p>
             <p>
-              If your engine has seized, suffered catastrophic internal damage, or failed in a way that makes rebuild uneconomical,
-              a swap gives the vehicle a fresh start with a known, tested unit. If you own a classic Range Rover, a Defender, or an
-              older Discovery and want to improve reliability or performance beyond what the original engine can offer, a conversion
-              opens up options that a standard replacement cannot. And if you are working with a platform where sourced replacement
-              units of decent provenance are scarce, a compatible swap is often the most practical and cost-effective route forward.
-            </p>
-            <p>
-              The key is getting the right advice before committing to anything. Engine swaps vary enormously in complexity, cost,
-              and what they involve   and the first conversation should always be an honest one about whether a swap is genuinely the
-              right decision for your specific vehicle.
+              Engine swaps vary enormously in complexity and cost — the first conversation should always be an honest one about whether it's genuinely the right decision for your vehicle.
             </p>
             <div className="pt-6">
               <Link href="/contact-us" className="inline-flex items-center gap-2 text-primary font-black text-xs tracking-widest uppercase">
@@ -186,7 +158,7 @@ export default function EngineSwapPage() {
             <div className="w-24 h-1.5 bg-primary mx-auto rounded-full"></div>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
                 title: "Range Rover Engine Swap",
@@ -238,15 +210,11 @@ export default function EngineSwapPage() {
             ].map((item) => (
               <div
                 key={item.title}
-                className="bg-slate-50 border border-slate-100 rounded-[2.5rem] p-10 hover:bg-white hover:shadow-2xl transition-all duration-500"
+                className="bg-slate-50 border border-slate-100 rounded-[2.5rem] p-6 hover:bg-white hover:shadow-2xl transition-all duration-500"
               >
-                <h3 className="text-xl font-extrabold text-slate-900 uppercase tracking-tight italic mb-6">{item.title}</h3>
-                <div className="space-y-5 text-slate-600 leading-relaxed font-medium text-sm md:text-base">
-                  {item.text.map((t) => (
-                    <p key={t}>{t}</p>
-                  ))}
-                </div>
-                <div className="pt-8 flex flex-wrap gap-4">
+                <h3 className="text-xl font-extrabold text-slate-900 uppercase tracking-tight italic mb-3">{item.title}</h3>
+                <p className="text-slate-600 leading-relaxed font-medium text-sm line-clamp-4">{item.text[0]}</p>
+                <div className="pt-4 flex flex-wrap gap-4">
                   <Link href={item.href} className="inline-flex items-center gap-2 text-primary font-black text-xs tracking-widest uppercase">
                     {item.cta} <ArrowRight className="w-4 h-4" />
                   </Link>
@@ -279,12 +247,12 @@ export default function EngineSwapPage() {
               { icon: <CheckCircle2 className="w-5 h-5" />, title: "Six-Month Warranty as Standard", text: "All engine swap work carries a minimum six-month warranty covering parts and labour." },
               { icon: <RefreshCw className="w-5 h-5" />, title: "UK-Wide Collection Available", text: "Based in , we collect and deliver UK-wide on all engine swap and major conversion work." },
             ].map((item) => (
-              <div key={item.title} className="bg-white/5 border border-white/10 rounded-[2.5rem] p-10 hover:bg-white/10 transition-all duration-500">
+              <div key={item.title} className="bg-white/5 border border-white/10 rounded-[2.5rem] p-6 hover:bg-white/10 transition-all duration-500">
                 <div className="flex items-start gap-4">
                   <div className="bg-primary/20 text-primary p-2 rounded-xl flex-shrink-0">{item.icon}</div>
-                  <div className="space-y-3">
-                    <h3 className="font-extrabold uppercase tracking-tight italic text-sm md:text-base">{item.title}</h3>
-                    <p className="text-slate-300 leading-relaxed font-medium text-sm md:text-base">{item.text}</p>
+                  <div className="space-y-2 min-w-0">
+                    <h3 className="font-extrabold uppercase tracking-tight italic text-sm">{item.title}</h3>
+                    <p className="text-slate-300 font-medium text-sm line-clamp-3">{item.text}</p>
                   </div>
                 </div>
               </div>
@@ -337,13 +305,13 @@ export default function EngineSwapPage() {
       />
 
       {/* Final CTA */}
-      <section className="py-24 bg-primary relative overflow-hidden">
+      <section className="py-12 bg-primary relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-[100px] pointer-events-none"></div>
         <div className="container mx-auto px-4 lg:px-8 text-center relative z-10">
-          <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-8 uppercase tracking-tight italic leading-tight">
+          <h2 className="text-xl md:text-3xl font-extrabold text-white mb-4 uppercase tracking-tight italic leading-tight">
             Ready to Discuss <span className="text-slate-950">Your Engine Swap</span>?
           </h2>
-          <p className="text-emerald-100 text-sm md:text-base mb-14 max-w-3xl mx-auto font-medium leading-relaxed">
+          <p className="text-emerald-100 text-sm md:text-base mb-6 max-w-3xl mx-auto font-medium leading-relaxed">
             Whether you know exactly what you want or you are still weighing up the options, the right first step is a conversation
             with a specialist who will give you honest advice without any pressure.
           </p>
@@ -351,25 +319,25 @@ export default function EngineSwapPage() {
           <div className="flex flex-col lg:flex-row gap-6 justify-center items-center">
             <Link
               href="/contact-us"
-              className="bg-slate-950 text-white font-black px-12 py-6 rounded-[2rem] shadow-2xl hover:bg-slate-900 transition-all uppercase tracking-[0.2em] text-xs md:text-sm flex items-center gap-4"
+              className="bg-slate-950 text-white font-black px-7 py-3 rounded-xl shadow-2xl hover:bg-slate-900 transition-all uppercase tracking-[0.2em] text-xs md:text-sm flex items-center gap-4"
             >
               Request a Free Engine Swap Consultation <ArrowRight className="w-6 h-6 text-primary" />
             </Link>
             <a
               href="tel:01375531355"
-              className="bg-white text-slate-950 font-black px-12 py-6 rounded-[2rem] shadow-2xl hover:bg-slate-50 transition-all uppercase tracking-[0.2em] text-xs md:text-sm border-4 border-slate-950/10"
+              className="bg-white text-slate-950 font-black px-7 py-3 rounded-xl shadow-2xl hover:bg-slate-50 transition-all uppercase tracking-[0.2em] text-xs md:text-sm border-4 border-slate-950/10"
             >
               Call Us and Speak to a Specialist Today
             </a>
             <Link
               href="/contact-us"
-              className="bg-white/20 text-white font-black px-12 py-6 rounded-[2rem] shadow-2xl hover:bg-white/25 transition-all uppercase tracking-[0.2em] text-xs md:text-sm border border-white/20"
+              className="bg-white/20 text-white font-black px-7 py-3 rounded-xl shadow-2xl hover:bg-white/25 transition-all uppercase tracking-[0.2em] text-xs md:text-sm border border-white/20"
             >
               Get a Written Quote   No Obligation
             </Link>
           </div>
 
-          <div className="mt-16 text-white/90 font-black uppercase tracking-widest text-[0.65rem]">
+          <div className="mt-8 text-white/90 font-black uppercase tracking-widest text-[0.65rem]">
             Vogue Technics | Engine Swap Specialists |  | UK-Wide Collection &nbsp; Range Rover • Land Rover • Jaguar •
             Audi • BMW
           </div>
@@ -381,4 +349,5 @@ export default function EngineSwapPage() {
     </main>
   );
 }
+
 

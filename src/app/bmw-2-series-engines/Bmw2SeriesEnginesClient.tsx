@@ -133,27 +133,6 @@ export default function Bmw2SeriesEnginesClient() {
               <RegSearch />
             </motion.div>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.22 }}
-              className="text-base md:text-lg text-slate-200 mb-8 max-w-4xl mx-auto leading-relaxed"
-            >
-              If your BMW 2 Series has started showing signs of engine trouble   whether that&apos;s unusual smoke, a rattling timing chain, loss of
-              power, or a blown head gasket   you&apos;re in the right hands. At Vogue Technics, based in , we deliver specialist BMW 2
-              Series engine rebuild services to drivers across the United Kingdom. With over 25 years of hands-on experience and a workshop built
-              around precision engineering, we don&apos;t just fix engines   we restore them properly.
-            </motion.p>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.26 }}
-              className="text-base md:text-lg text-slate-200/90 max-w-4xl mx-auto leading-relaxed"
-            >
-              From a straightforward BMW 2 Series engine repair to a complete engine swap, every job we take on is handled with the same level of
-              care and technical accuracy.
-            </motion.p>
           </div>
         </div>
       </section>

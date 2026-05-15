@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -148,19 +148,6 @@ export default function LandRoverDiscovery3EnginesClient() {
               <RegSearch className="max-w-3xl" />
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.22 }}
-              className="mt-7 max-w-4xl text-sm leading-relaxed text-slate-300 md:text-base space-y-4"
-            >
-              <p>
-                The Land Rover Discovery 3 is a genuinely capable machine   comfortable on the motorway, composed off-road, and practical enough for family life. But its engines, particularly the 2.7 TDV6, carry well-documented vulnerabilities that catch owners off guard. Head gasket failures, timing chain wear, and turbo problems are not rare on the Discovery 3   they are predictable, and they require a specialist who knows exactly what they're dealing with.
-              </p>
-              <p>
-                At Vogue Technics, based in , we work exclusively on Land Rover and Range Rover engines. The Discovery 3 is one of the vehicles we know most thoroughly   every fault code, every failure pattern, every engineering quirk across the 2.7 TDV6 diesel, the 4.4 V8 petrol, and the 4.0 V6 petrol. Backed by over 25 years of hands-on experience, we deliver engine work that genuinely solves the problem   not a temporary fix that brings the vehicle back within months.
-              </p>
-            </motion.div>
           </div>
         </div>
       </section>
@@ -169,25 +156,22 @@ export default function LandRoverDiscovery3EnginesClient() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-bold text-slate-900">Why Discovery 3 Owners Trust Vogue Technics</h2>
-            <p className="mt-6 text-slate-700 leading-relaxed">
-              The Discovery 3 deserves more than a general garage. Its engines   particularly the 2.7 TDV6   are complex, and poor-quality repairs on this platform cost owners far more in the long run than a proper specialist job from the start.
-            </p>
             <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
                 <h3 className="font-bold text-slate-900">Land Rover Exclusivity   Every Single Day</h3>
-                <p className="mt-3 text-slate-700 leading-relaxed">
+                <p className="mt-3 text-sm text-slate-700 leading-relaxed line-clamp-5">
                   We don't divide our attention across makes and models. Every technician at Vogue Technics is trained and experienced specifically on Land Rover and Range Rover platforms. When your Discovery 3 comes into our  workshop, the people working on it have seen your exact problem dozens of times before   and they know precisely how to fix it correctly.
                 </p>
               </div>
               <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
                 <h3 className="font-bold text-slate-900">Over 25 Years Serving UK Discovery Owners</h3>
-                <p className="mt-3 text-slate-700 leading-relaxed">
+                <p className="mt-3 text-sm text-slate-700 leading-relaxed line-clamp-5">
                   Our track record in  and across the wider UK has been built entirely through results and reputation. We've rebuilt and replaced hundreds of Discovery 3 engines for owners from  to Scotland   and the reason so many of them return to us, and recommend us to others, is straightforward. When we fix an engine, it stays fixed.
                 </p>
               </div>
               <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
                 <h3 className="font-bold text-slate-900">Straight-Talking, Itemised Quotes</h3>
-                <p className="mt-3 text-slate-700 leading-relaxed">
+                <p className="mt-3 text-sm text-slate-700 leading-relaxed line-clamp-5">
                   Engine trouble is stressful enough without vague estimates and unexpected bills. Before any work begins, we give you a clear, itemised quote covering every element of the job. No surprises on collection day, no add-ons you didn't agree to. Just honest, transparent pricing from people who respect your time and your money.
                 </p>
               </div>
@@ -208,17 +192,17 @@ export default function LandRoverDiscovery3EnginesClient() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
             {services.map((service) => (
               <div
                 key={service.title}
-                className="rounded-[2rem] border border-slate-200 bg-white p-7 shadow-sm flex flex-col justify-between"
+                className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm flex flex-col justify-between"
               >
                 <div>
-                  <h3 className="text-xl font-bold text-slate-900">{service.title}</h3>
-                  <p className="mt-4 text-slate-700 leading-relaxed">{service.body}</p>
+                  <h3 className="text-sm font-bold text-slate-900">{service.title}</h3>
+                  <p className="mt-2 text-xs text-slate-700 leading-relaxed line-clamp-4">{service.body}</p>
                 </div>
-                <div className="pt-6">
+                <div className="pt-3">
                   <Link
                     href={`/services/${service.slug}`}
                     className="inline-flex items-center justify-center w-full bg-primary text-white font-bold py-3 px-6 rounded-xl hover:bg-emerald-600 transition-colors"
@@ -318,11 +302,6 @@ export default function LandRoverDiscovery3EnginesClient() {
             <h2 className="text-3xl md:text-4xl font-extrabold leading-tight">
               Book Your Land Rover Discovery 3 Engine Work Today
             </h2>
-            <p className="text-emerald-50 leading-relaxed max-w-3xl mx-auto">
-              Don't leave your Discovery 3 standing, and don't trust its engine to someone who isn't a genuine specialist. Vogue Technics has spent over 25 years earning the confidence of Land Rover owners across the United Kingdom   and we're ready to help you next.
-              <br />
-              Call us today or complete our online enquiry form for a fast, no-obligation quote. We're based in , and we work with Discovery 3 owners from Cornwall to the Scottish Highlands. Your Discovery 3 deserves the right hands   and these are them.
-            </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:01375531355"

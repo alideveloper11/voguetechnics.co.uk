@@ -63,17 +63,6 @@ export default function JaguarXK8EnginesPage() {
               <RegSearch className="max-w-3xl" />
             </motion.div>
 
-            <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.22 }} className="mt-7 max-w-4xl text-sm leading-relaxed text-slate-300 md:text-base space-y-4">
-              <p>
-                The Jaguar XK8 arrived in 1996 and immediately established itself as one of the most visually stunning and mechanically accomplished grand tourers of its era. Elegant, powerful, and unmistakably Jaguar   it brought the XK name back to the forefront of British performance motoring and built a loyal following that endures to this day.
-              </p>
-              <p>
-                At its heart sits the AJ‑V8   a sophisticated all‑aluminium V8 available in 4.0 and 4.2 litre forms across the XK8&apos;s production life. When properly maintained and correctly rebuilt, it is a genuinely rewarding engine. When neglected, it develops specific, well‑documented problems that require genuine specialist knowledge to resolve.
-              </p>
-              <p>
-                At Vogue Technics in , UK, we supply, rebuild, and fit Jaguar XK8 engines across all production years and variants   from 1997 through to 2006   covering both coupe and convertible models with honest assessments, quality rebuilds, and a transparent service from our dedicated workshop.
-              </p>
-            </motion.div>
           </div>
         </div>
       </section>

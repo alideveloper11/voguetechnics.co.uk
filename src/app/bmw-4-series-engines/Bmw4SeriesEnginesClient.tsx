@@ -135,29 +135,6 @@ export default function Bmw4SeriesEnginesClient() {
               <RegSearch />
             </motion.div>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.22 }}
-              className="text-base md:text-lg text-slate-200 mb-6 max-w-4xl mx-auto leading-relaxed"
-            >
-              The BMW 4 Series sits in a class of its own   a coupe, convertible, or Gran Coupé that delivers genuine driving pleasure alongside
-              everyday practicality. But beneath that elegant exterior, the engine families powering these cars carry well-documented vulnerabilities
-              that catch owners off guard, often at significant cost. Whether you drive an F32 420d with the N47&apos;s notorious timing chain concerns,
-              a G22 430i running the B48 petrol unit, or an F36 Gran Coupé with an N57 six-cylinder diesel, the principle remains the same   when the
-              engine needs attention, it needs a specialist.
-            </motion.p>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.26 }}
-              className="text-base md:text-lg text-slate-200/90 max-w-4xl mx-auto leading-relaxed"
-            >
-              At Vogue Technics, based in , we&apos;ve been working on BMW engines for over 25 years. We know the 4 Series engine families  
-              their strengths, their weaknesses, and exactly what&apos;s required to put them right. Whether you need a full BMW 4 Series engine rebuild,
-              a quality reconditioned replacement, or targeted repair work on a specific component, we bring the depth of knowledge and the standard
-              of workmanship this car genuinely deserves.
-            </motion.p>
           </div>
         </div>
       </section>

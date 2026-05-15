@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -148,19 +148,6 @@ export default function LandRoverDiscovery4EnginesClient() {
               <RegSearch className="max-w-3xl" />
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.22 }}
-              className="mt-7 max-w-4xl text-sm leading-relaxed text-slate-300 md:text-base space-y-4"
-            >
-              <p>
-                The Land Rover Discovery 4 earned its reputation as one of the most capable and well-rounded SUVs ever produced in Britain. Comfortable enough for motorway cruising, composed enough for serious off-road work, and practical enough for a busy family   it remains a deeply capable vehicle. But owning one past 80,000 miles often means confronting engine issues that many garages simply aren't equipped to handle correctly.
-              </p>
-              <p>
-                At Vogue Technics, based in , we work exclusively on Land Rover and Range Rover engines. The Discovery 4   whether it's running the 3.0 TDV6 diesel, the 2.7 TDV6, the 5.0 V8 petrol, or the 3.0 SDV6   is a vehicle we understand thoroughly. Every known failure point, every common fault pattern, every engineering nuance across the full engine range. Backed by over 25 years of hands-on specialist experience, we fix Discovery 4 engines properly   and we back every job with a written warranty.
-              </p>
-            </motion.div>
           </div>
         </div>
       </section>
@@ -172,19 +159,19 @@ export default function LandRoverDiscovery4EnginesClient() {
             <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
                 <h3 className="font-bold text-slate-900">Exclusive Land Rover and Range Rover Focus</h3>
-                <p className="mt-3 text-slate-700 leading-relaxed">
+                <p className="mt-3 text-sm text-slate-700 leading-relaxed line-clamp-5">
                   Every technician at Vogue Technics works solely on Land Rover and Range Rover vehicles. When your Discovery 4 arrives at our  workshop, every person who touches it has worked on this exact platform hundreds of times. That depth of experience shows in the quality of the finished job.
                 </p>
               </div>
               <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
                 <h3 className="font-bold text-slate-900">25 Years Building a Reputation Worth Having</h3>
-                <p className="mt-3 text-slate-700 leading-relaxed">
+                <p className="mt-3 text-sm text-slate-700 leading-relaxed line-clamp-5">
                   Our reputation has grown entirely through results   not marketing. We've rebuilt and replaced hundreds of Discovery 4 engines for owners across the UK. Customers return to us because the work holds. They refer their friends because they trust us completely.
                 </p>
               </div>
               <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
                 <h3 className="font-bold text-slate-900">Transparent Pricing   Quoted Before We Touch Anything</h3>
-                <p className="mt-3 text-slate-700 leading-relaxed">
+                <p className="mt-3 text-sm text-slate-700 leading-relaxed line-clamp-5">
                   Before any work begins at Vogue Technics, you receive a full itemised quote covering every element of the job. No vague estimates, no revised figures on collection day, no uncomfortable conversations about costs that weren't discussed upfront.
                 </p>
               </div>
@@ -205,17 +192,17 @@ export default function LandRoverDiscovery4EnginesClient() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
             {services.map((service) => (
               <div
                 key={service.title}
-                className="rounded-[2rem] border border-slate-200 bg-white p-7 shadow-sm flex flex-col justify-between"
+                className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm flex flex-col justify-between"
               >
                 <div>
-                  <h3 className="text-xl font-bold text-slate-900">{service.title}</h3>
-                  <p className="mt-4 text-slate-700 leading-relaxed">{service.body}</p>
+                  <h3 className="text-sm font-bold text-slate-900">{service.title}</h3>
+                  <p className="mt-2 text-xs text-slate-700 leading-relaxed line-clamp-4">{service.body}</p>
                 </div>
-                <div className="pt-6">
+                <div className="pt-3">
                   <Link
                     href={`/services/${service.slug}`}
                     className="inline-flex items-center justify-center w-full bg-primary text-white font-bold py-3 px-6 rounded-xl hover:bg-emerald-600 transition-colors"
@@ -315,9 +302,6 @@ export default function LandRoverDiscovery4EnginesClient() {
             <h2 className="text-3xl md:text-4xl font-extrabold leading-tight">
               Book Your Land Rover Discovery 4 Engine Work Today
             </h2>
-            <p className="text-emerald-50 leading-relaxed max-w-3xl mx-auto">
-              Don't leave your Discovery 4 standing, and don't risk it with a garage that lacks the specialist knowledge this vehicle demands. Vogue Technics has spent over 25 years earning the trust of Land Rover owners across the United Kingdom   and we're ready to help you next.
-            </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:01375531355"

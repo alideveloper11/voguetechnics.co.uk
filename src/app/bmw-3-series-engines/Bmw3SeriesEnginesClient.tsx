@@ -147,29 +147,6 @@ export default function Bmw3SeriesEnginesClient() {
               <RegSearch />
             </motion.div>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.22 }}
-              className="text-base md:text-lg text-slate-200 mb-6 max-w-4xl mx-auto leading-relaxed"
-            >
-              There&apos;s a reason the BMW 3 Series has been one of Britain&apos;s most popular executive cars for decades   it&apos;s an exceptionally
-              well-engineered machine that rewards proper maintenance with years of reliable, enjoyable driving. But when the engine develops a
-              serious problem, the experience shifts quickly. A rattling N47 timing chain on a cold  morning, a turbo that&apos;s gradually losing
-              boost, or a head gasket that&apos;s finally given up   these aren&apos;t issues you can drive around indefinitely, and they rarely resolve
-              themselves.
-            </motion.p>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.26 }}
-              className="text-base md:text-lg text-slate-200/90 max-w-4xl mx-auto leading-relaxed"
-            >
-              At Vogue Technics, based in , we carry out specialist BMW 3 Series engine rebuild work for owners right across the United
-              Kingdom. We&apos;ve been working on BMW engines for over 25 years   across multiple generations of the 3 Series, across every major engine
-              family from the N47 and B47 diesels through to the N55 and B58 petrol units   and we bring that depth of knowledge to every single job
-              that comes through our workshop doors.
-            </motion.p>
           </div>
         </div>
       </section>

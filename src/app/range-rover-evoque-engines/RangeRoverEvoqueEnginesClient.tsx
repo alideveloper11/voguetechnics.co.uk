@@ -142,17 +142,6 @@ export default function RangeRoverEvoqueEnginesClient() {
               <RegSearch className="max-w-3xl" />
             </motion.div>
 
-            <motion.p
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.22 }}
-              className="mt-7 max-w-4xl text-sm leading-relaxed text-slate-300 md:text-base"
-            >
-              Your Range Rover Evoque deserves better than a generic garage and a crossed-fingers approach. At Vogue Technics, we've spent over 25 years working exclusively on Land Rover and Range Rover engines   and the Evoque, with its range of 2.0 and 2.2 petrol and diesel units, is one of the models we know inside out. From a straightforward used engine supply to a full ground-up rebuild, we handle every job with the same level of care, precision, and honesty.
-              <br />
-              <br />
-              Based in , we serve customers across Thurrock, Basildon, Dartford, and throughout the UK. If you're searching for a Range Rover Evoque engine for sale, need an urgent replacement, or want a specialist you can actually trust   you've found the right place.
-            </motion.p>
           </div>
         </div>
       </section>
@@ -167,23 +156,23 @@ export default function RangeRoverEvoqueEnginesClient() {
               <p>
                 Whether you're driving a 2012 Evoque with the original 2.2 SD4 diesel or a 2020 model fitted with the newer 2.0 Ingenium unit, we stock and source engines across every generation. Our inventory covers used and fully reconditioned options for every popular Evoque engine variant, so you're never left waiting long.
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
-                  <h3 className="font-bold text-slate-900">2012–2015 Evoque Engines (2.2 SD4 & 2.0 Si4)</h3>
-                  <p className="mt-3">
-                    The early Evoque was offered with Land Rover's 2.2-litre SD4 diesel and the Ford-derived 2.0 Si4 petrol. Both are solid engines when properly maintained, but high-mileage units suffer from timing chain wear, turbo failure, and oil consumption issues. We supply tested 2012, 2013, 2014, and 2015 Range Rover Evoque engines in both used and reconditioned condition   all come with full documentation and warranty cover.
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-5">
+                  <h3 className="font-bold text-slate-900 text-sm">2012–2015 Evoque (2.2 SD4 & 2.0 Si4)</h3>
+                  <p className="mt-2 text-sm line-clamp-3">
+                    High-mileage units commonly suffer timing chain wear, turbo failure, and oil consumption. We supply tested used and reconditioned engines with full documentation and warranty.
                   </p>
                 </div>
-                <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
-                  <h3 className="font-bold text-slate-900">2016–2019 Evoque Engines (2.0 Ingenium)</h3>
-                  <p className="mt-3">
-                    From 2016, Land Rover replaced the Ford-sourced units with their in-house Ingenium engine family. The 2.0-litre Ingenium diesel and petrol engines offer improved efficiency but introduced their own set of known faults   particularly around injector seal failure and EGR issues on diesel variants. We stock 2016, 2017, 2018, and 2019 Evoque Ingenium engines ready to fit, fully tested before dispatch.
+                <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-5">
+                  <h3 className="font-bold text-slate-900 text-sm">2016–2019 Evoque (2.0 Ingenium)</h3>
+                  <p className="mt-2 text-sm line-clamp-3">
+                    Ingenium units brought known faults around injector seals and EGR on diesels. We stock fully tested 2016–2019 engines ready to fit or dispatch.
                   </p>
                 </div>
-                <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
-                  <h3 className="font-bold text-slate-900">2020 Evoque Engines (incl. 1.5 PHEV)</h3>
-                  <p className="mt-3">
-                    The second-generation Evoque brought Land Rover's 1.5-litre three-cylinder engine into the mix alongside the 2.0 Ingenium. We supply replacement engines for all 2020 Evoque variants, including the plug-in hybrid configuration. If your 2020 Evoque engine has failed or you're facing a costly main dealer quote, call us before you commit to anything.
+                <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-5">
+                  <h3 className="font-bold text-slate-900 text-sm">2020 Evoque (incl. 1.5 PHEV)</h3>
+                  <p className="mt-2 text-sm line-clamp-3">
+                    We supply replacement engines for all second-gen Evoque variants including the plug-in hybrid. Call us before committing to a main dealer quote.
                   </p>
                 </div>
               </div>
@@ -204,20 +193,20 @@ export default function RangeRoverEvoqueEnginesClient() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {services.map((service) => (
               <div
                 key={service.title}
-                className="rounded-[2rem] border border-slate-200 bg-white p-7 shadow-sm flex flex-col justify-between"
+                className="rounded-[1.5rem] border border-slate-200 bg-white p-5 shadow-sm flex flex-col justify-between"
               >
                 <div>
-                  <h3 className="text-xl font-bold text-slate-900">{service.title}</h3>
-                  <p className="mt-4 text-slate-700 leading-relaxed">{service.body}</p>
+                  <h3 className="text-base font-bold text-slate-900">{service.title}</h3>
+                  <p className="mt-3 text-sm text-slate-700 leading-relaxed line-clamp-4">{service.body}</p>
                 </div>
-                <div className="pt-6">
+                <div className="pt-4">
                   <Link
                     href={`/services/${service.slug}`}
-                    className="inline-flex items-center justify-center w-full bg-primary text-white font-bold py-3 px-6 rounded-xl hover:bg-emerald-600 transition-colors"
+                    className="inline-flex items-center justify-center w-full bg-primary text-white font-bold py-2 px-4 text-sm rounded-xl hover:bg-emerald-600 transition-colors"
                   >
                     Explore More
                   </Link>

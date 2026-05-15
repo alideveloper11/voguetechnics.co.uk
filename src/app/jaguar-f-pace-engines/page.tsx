@@ -60,14 +60,6 @@ export default function JaguarFPaceEnginesPage() {
             <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.12 }} className="mt-7">
               <RegSearch className="max-w-3xl" />
             </motion.div>
-            <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.22 }} className="mt-7 max-w-4xl text-sm leading-relaxed text-slate-300 md:text-base space-y-4">
-              <p>
-                The Jaguar F-Pace is one of the most technically demanding premium SUVs on British roads   from the 2.0-litre Ingenium engines through to the supercharged V6 and V8 variants. Each engine carries specific fault patterns and rebuild tolerances that only a genuine specialist understands from experience.
-              </p>
-              <p>
-                At Vogue Technics, based in , we carry out Jaguar F-Pace engine rebuilds, targeted repairs, reconditioned engine replacements, and full diagnostic assessments across the complete F-Pace range   with transparent, itemised quotes and written warranty.
-              </p>
-            </motion.div>
           </div>
         </div>
       </section>

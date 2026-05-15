@@ -80,21 +80,6 @@ export default function JaguarXEEnginesClient() {
               <RegSearch className="max-w-3xl" />
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.22 }}
-              className="mt-7 max-w-4xl text-sm leading-relaxed text-slate-300 md:text-base space-y-4"
-            >
-              <p>
-                The Jaguar XE was engineered to compete with the best compact executive saloons   but the Ingenium engine family carries
-                well-documented vulnerabilities that become more significant as mileage accumulates.
-              </p>
-              <p>
-                At Vogue Technics in , we carry out Jaguar XE engine rebuilds, targeted repairs, reconditioned engine replacements, and
-                thorough diagnostic assessments across the full XE range   with transparent quotes and written warranty.
-              </p>
-            </motion.div>
           </div>
         </div>
       </section>

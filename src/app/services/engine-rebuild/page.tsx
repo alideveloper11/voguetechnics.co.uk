@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React from "react";
 import Image from "next/image";
@@ -50,28 +50,6 @@ export default function EngineRebuildPage() {
               <RegSearch />
             </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 14 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.05 }}
-              className="max-w-4xl mx-auto text-slate-300 leading-relaxed font-medium space-y-6 text-sm md:text-base"
-            >
-              <p>
-                When an engine has reached the point where a repair is no longer the right answer, the conversation turns to two
-                options   rebuild or replace. Both have their place, and the right choice depends on your specific engine, its
-                condition, and what you want from the vehicle long term.
-              </p>
-              <p>
-                At Vogue Technics, we carry out full engine rebuilds and engine reconditioning for Range Rover, Land Rover, Jaguar,
-                Audi, and BMW. Every rebuild is carried out to OEM specification using quality parts throughout, every job is backed
-                by a minimum six-month warranty, and every written quote is agreed before a single component is removed. Based in
-                , with UK-wide collection available.
-              </p>
-              <p>
-                If you have been told your engine needs rebuilding   or if you are weighing up whether a rebuild or replacement
-                makes more sense   this page will give you the honest information you need to make the right decision.
-              </p>
-            </motion.div>
 
             <div className="flex flex-col lg:flex-row gap-4 justify-center items-center mt-10">
               <Link
@@ -124,10 +102,6 @@ export default function EngineRebuildPage() {
                 uneconomical, or where a quality replacement unit is available at a cost that compares favourably to the rebuild
                 work required. We source quality reconditioned and low-mileage engines for all five brands we cover, and we will
                 always advise you honestly on which route represents better value.
-              </p>
-              <p>
-                What we will never do is push you towards the more expensive option without a clear reason. You receive an honest
-                assessment, a written quote for both routes where applicable, and the decision is yours.
               </p>
               <div className="pt-2">
                 <Link href="/contact-us" className="inline-flex items-center gap-2 text-primary font-black text-xs tracking-widest uppercase">
@@ -225,7 +199,7 @@ export default function EngineRebuildPage() {
             <div className="w-24 h-1.5 bg-primary mx-auto rounded-full"></div>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
                 title: "Range Rover Engine Rebuild",
@@ -258,10 +232,10 @@ export default function EngineRebuildPage() {
                 href: "/bmw-engines",
               },
             ].map((item) => (
-              <div key={item.title} className="bg-slate-50 border border-slate-100 rounded-[2.5rem] p-10 hover:bg-white hover:shadow-2xl transition-all duration-500">
-                <h3 className="text-xl font-extrabold text-slate-900 uppercase tracking-tight italic mb-6">{item.title}</h3>
-                <p className="text-slate-600 leading-relaxed font-medium text-sm md:text-base">{item.body}</p>
-                <div className="pt-8 flex flex-wrap gap-4">
+              <div key={item.title} className="bg-slate-50 border border-slate-100 rounded-[2.5rem] p-6 hover:bg-white hover:shadow-2xl transition-all duration-500">
+                <h3 className="text-xl font-extrabold text-slate-900 uppercase tracking-tight italic mb-3">{item.title}</h3>
+                <p className="text-slate-600 leading-relaxed font-medium text-sm line-clamp-4">{item.body}</p>
+                <div className="pt-4 flex flex-wrap gap-4">
                   <Link href={item.href} className="inline-flex items-center gap-2 text-primary font-black text-xs tracking-widest uppercase">
                     Explore {item.title.split(" ")[0]} Engine Rebuild <ArrowRight className="w-4 h-4" />
                   </Link>
@@ -295,12 +269,12 @@ export default function EngineRebuildPage() {
               { icon: <RefreshCw className="w-5 h-5" />, title: "Honest Rebuild vs Replace Advice", text: "If replacement represents better value than rebuild, we will say so   and source the right unit accordingly." },
               { icon: <Wrench className="w-5 h-5" />, title: "UK-Wide Collection and Delivery", text: "Based in    we collect and deliver across the UK on all rebuild and replacement work." },
             ].map((item) => (
-              <div key={item.title} className="bg-white/5 border border-white/10 rounded-[2.5rem] p-10 hover:bg-white/10 transition-all duration-500">
+              <div key={item.title} className="bg-white/5 border border-white/10 rounded-[2.5rem] p-6 hover:bg-white/10 transition-all duration-500">
                 <div className="flex items-start gap-4">
                   <div className="bg-primary/20 text-primary p-2 rounded-xl flex-shrink-0">{item.icon}</div>
-                  <div className="space-y-3">
-                    <h3 className="font-extrabold uppercase tracking-tight italic text-sm md:text-base">{item.title}</h3>
-                    <p className="text-slate-300 leading-relaxed font-medium text-sm md:text-base">{item.text}</p>
+                  <div className="space-y-2 min-w-0">
+                    <h3 className="font-extrabold uppercase tracking-tight italic text-sm">{item.title}</h3>
+                    <p className="text-slate-300 font-medium text-sm line-clamp-3">{item.text}</p>
                   </div>
                 </div>
               </div>
@@ -324,11 +298,11 @@ export default function EngineRebuildPage() {
                 "Step 5   Testing and Quality Check   every rebuilt engine is run and tested before being refitted. Post-fit checks confirm correct operation before handover.",
                 "Step 6   Return with Warranty Documentation   your vehicle is returned fully tested with all warranty paperwork confirmed in writing.",
               ].map((text, idx) => (
-                <div key={idx} className="bg-white/5 border border-white/10 rounded-[2.5rem] p-10 hover:bg-white/10 transition-all duration-500">
-                  <div className="w-12 h-12 rounded-2xl bg-primary text-white flex items-center justify-center font-black text-lg mb-6 shadow-lg">
+                <div key={idx} className="bg-white/5 border border-white/10 rounded-[2.5rem] p-6 hover:bg-white/10 transition-all duration-500">
+                  <div className="w-10 h-10 rounded-2xl bg-primary text-white flex items-center justify-center font-black text-base mb-3 shadow-lg">
                     {idx + 1}
                   </div>
-                  <p className="text-slate-200 leading-relaxed font-medium text-sm md:text-base">{text}</p>
+                  <p className="text-slate-200 font-medium text-sm line-clamp-3">{text}</p>
                 </div>
               ))}
             </div>
@@ -370,38 +344,38 @@ export default function EngineRebuildPage() {
       />
 
       {/* Final CTA */}
-      <section className="py-24 bg-primary relative overflow-hidden">
+      <section className="py-12 bg-primary relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-[100px] pointer-events-none"></div>
         <div className="container mx-auto px-4 lg:px-8 text-center relative z-10">
-          <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-8 uppercase tracking-tight italic leading-tight">
+          <h2 className="text-xl md:text-3xl font-extrabold text-white mb-4 uppercase tracking-tight italic leading-tight">
             Ready to <span className="text-slate-950">Rebuild</span>?
           </h2>
-          <p className="text-emerald-100 text-sm md:text-base mb-14 max-w-3xl mx-auto font-medium leading-relaxed">
+          <p className="text-emerald-100 text-sm md:text-base mb-6 max-w-3xl mx-auto font-medium leading-relaxed">
             Get an honest assessment and a written quote, then choose the route that makes the most sense for your vehicle.
           </p>
 
           <div className="flex flex-col lg:flex-row gap-6 justify-center items-center">
             <Link
               href="/contact-us"
-              className="bg-slate-950 text-white font-black px-12 py-6 rounded-[2rem] shadow-2xl hover:bg-slate-900 transition-all uppercase tracking-[0.2em] text-xs md:text-sm flex items-center gap-4"
+              className="bg-slate-950 text-white font-black px-7 py-3 rounded-xl shadow-2xl hover:bg-slate-900 transition-all uppercase tracking-[0.2em] text-xs md:text-sm flex items-center gap-4"
             >
               Request a Free Engine Rebuild Quote   No Obligation <ArrowRight className="w-6 h-6 text-primary" />
             </Link>
             <a
               href="tel:01375531355"
-              className="bg-white text-slate-950 font-black px-12 py-6 rounded-[2rem] shadow-2xl hover:bg-slate-50 transition-all uppercase tracking-[0.2em] text-xs md:text-sm border-4 border-slate-950/10"
+              className="bg-white text-slate-950 font-black px-7 py-3 rounded-xl shadow-2xl hover:bg-slate-50 transition-all uppercase tracking-[0.2em] text-xs md:text-sm border-4 border-slate-950/10"
             >
               Call Us and Speak to a Specialist Today
             </a>
             <Link
               href="/contact-us"
-              className="bg-white/20 text-white font-black px-12 py-6 rounded-[2rem] shadow-2xl hover:bg-white/25 transition-all uppercase tracking-[0.2em] text-xs md:text-sm border border-white/20"
+              className="bg-white/20 text-white font-black px-7 py-3 rounded-xl shadow-2xl hover:bg-white/25 transition-all uppercase tracking-[0.2em] text-xs md:text-sm border border-white/20"
             >
               Book an Engine Assessment at Our  Workshop
             </Link>
           </div>
 
-          <div className="mt-16 text-white/90 font-black uppercase tracking-widest text-[0.65rem]">
+          <div className="mt-8 text-white/90 font-black uppercase tracking-widest text-[0.65rem]">
             Vogue Technics | Engine Rebuild Specialists |  | UK-Wide Collection &nbsp; Range Rover • Land Rover • Jaguar
             • Audi • BMW
           </div>
@@ -413,4 +387,5 @@ export default function EngineRebuildPage() {
     </main>
   );
 }
+
 

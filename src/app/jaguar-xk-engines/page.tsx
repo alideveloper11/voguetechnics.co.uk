@@ -76,21 +76,6 @@ export default function JaguarXKEnginesPage() {
               <RegSearch className="max-w-3xl" />
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.22 }}
-              className="mt-7 max-w-4xl text-sm leading-relaxed text-slate-300 md:text-base space-y-4"
-            >
-              <p>
-                The Jaguar XK is a grand tourer built around Jaguar V8 performance   and when engine issues develop, the right specialist approach
-                determines whether the fix lasts.
-              </p>
-              <p>
-                Vogue Technics in  supply, rebuild and fit Jaguar XK engines with accurate diagnosis, transparent pricing, and written
-                warranty   plus UK-wide collection and delivery.
-              </p>
-            </motion.div>
           </div>
         </div>
       </section>

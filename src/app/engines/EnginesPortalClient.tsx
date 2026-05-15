@@ -111,20 +111,6 @@ export default function EnginesPortalClient() {
               </Link>
             </motion.div>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="mt-5 max-w-5xl text-sm leading-relaxed text-slate-300 md:text-base"
-            >
-              At Vogue Technics, we do one thing and we do it to a standard that general garages simply cannot match. Based in , we are dedicated engine specialists working exclusively on five of the most demanding and rewarding vehicles on British roads   Range Rover, Land Rover, Jaguar, Audi, and BMW. Engine repair, engine rebuild, engine replacement, turbo replacement, timing chain replacement, head gasket repair   every service we offer is carried out by technicians who have spent years working on these specific platforms, not generalists applying broad mechanical knowledge to whatever comes through the door.
-              <br />
-              <br />
-              Over 25 years of engine work. OEM and OEM-specification parts throughout. A minimum six-month warranty on every major job. Written quotes agreed before a single component is touched.
-              <br />
-              <br />
-              If your engine needs attention   whatever the fault and wherever you are in the UK   you have found the right place.
-            </motion.p>
           </div>
         </div>
       </section>
@@ -145,14 +131,14 @@ export default function EnginesPortalClient() {
               </div>
             </div>
 
-            <div className="rounded-[2.5rem] border border-slate-200 bg-slate-50 p-8 shadow-sm">
-              <h3 className="text-xl font-bold text-slate-900">25 Years of Prestige Engine Experience</h3>
-              <div className="mt-4 space-y-4 text-slate-700 leading-relaxed">
+            <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6 shadow-sm">
+              <h3 className="text-lg font-bold text-slate-900 mb-3">25 Years of Prestige Engine Experience</h3>
+              <div className="space-y-3 text-slate-700 text-sm leading-relaxed">
                 <p>
-                  We have been operating from  for over two decades, and in that time we have built a reputation that reaches well beyond the local area. Jaguar XF Sportbrake owners travel from Scotland. BMW X5 owners come from Wales. Range Rover Sport customers arrange collection from the north of England   not because there are no garages closer to them, but because genuine specialist knowledge of these engine platforms is rarer than most owners realise until they start looking for it.
+                  Owners travel from across the UK — not because there are no garages closer, but because genuine specialist knowledge of these platforms is rarer than most realise until they start looking for it.
                 </p>
                 <p>
-                  Our technicians work on the engines we cover every day. The N47 rear-chain architecture. The TDV6 oil contamination failure pattern. The Ingenium timing chain vulnerability on early Discovery Sport and Evoque models. The N57 tensioner-led failure sequence. These are not engines that reward guesswork, and they are not engines that receive any at Vogue Technics.
+                  Our technicians work on the N47, TDV6, Ingenium, and N57 every day — every failure mode understood, every tolerance known. These engines do not reward guesswork, and they receive none here. Every job is backed by a minimum six-month warranty, confirmed in writing.
                 </p>
               </div>
             </div>
@@ -162,39 +148,33 @@ export default function EnginesPortalClient() {
 
       <section className="py-20 md:py-24 bg-slate-50 border-y border-slate-200">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <div className="rounded-[2rem] bg-white border border-slate-200 p-8 shadow-sm">
-              <h3 className="text-xl font-bold text-slate-900">OEM Standards   On Every Job, Without Exception</h3>
-              <p className="mt-4 text-slate-700 leading-relaxed">
-                There are no budget alternatives in our workshop. No pattern parts selected to protect a margin. No corners cut on components that will not be visible at the point of collection. Every engine rebuild, replacement, turbo fitment, head gasket repair, and timing chain job uses OEM or OEM-specification components   the same standard of part your vehicle was manufactured with, fitted to the same torque specifications the manufacturer defines.
-              </p>
-              <p className="mt-4 text-slate-700 leading-relaxed">
-                That is not a marketing position. It is the only way to carry out this work to a standard worth standing behind.
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div className="rounded-[1.5rem] bg-white border border-slate-200 p-6 shadow-sm">
+              <h3 className="text-base font-bold text-slate-900 mb-3">OEM Standards — On Every Job</h3>
+              <p className="text-slate-700 text-sm leading-relaxed line-clamp-5">
+                No budget parts, no shortcuts. Every rebuild, replacement, turbo fitment, head gasket, and timing chain job uses OEM or OEM-specification components — fitted to the torque specifications the manufacturer defines.
               </p>
             </div>
-            <div className="rounded-[2rem] bg-white border border-slate-200 p-8 shadow-sm">
-              <h3 className="text-xl font-bold text-slate-900">Written Quotes. No Additions. No Surprises.</h3>
-              <p className="mt-4 text-slate-700 leading-relaxed">
-                Engine work on a prestige vehicle is a significant financial decision, and we treat it as one. Every job at Vogue Technics begins with a thorough diagnostic assessment followed by a detailed written quote   covering every element of the work, every component to be used, and the complete cost. Nothing proceeds until you have reviewed and confirmed that quote.
-              </p>
-              <p className="mt-4 text-slate-700 leading-relaxed">
-                The figure you agree is the figure you pay. No additions appear mid-job. No unexpected costs surface when you come to collect.
+            <div className="rounded-[1.5rem] bg-white border border-slate-200 p-6 shadow-sm">
+              <h3 className="text-base font-bold text-slate-900 mb-3">Written Quotes. No Surprises.</h3>
+              <p className="text-slate-700 text-sm leading-relaxed line-clamp-4">
+                Every job begins with a thorough diagnostic and a detailed written quote covering all work and components. Nothing proceeds until you confirm it. The figure you agree is the figure you pay.
               </p>
             </div>
-            <div className="rounded-[2rem] bg-white border border-slate-200 p-8 shadow-sm">
-              <h3 className="text-xl font-bold text-slate-900">Over 25 Years. Warranty Standard.</h3>
-              <div className="mt-5 space-y-3">
+            <div className="rounded-[1.5rem] bg-white border border-slate-200 p-6 shadow-sm">
+              <h3 className="text-base font-bold text-slate-900 mb-3">Over 25 Years. Warranty Standard.</h3>
+              <div className="space-y-2">
                 {[
                   "Over 25 years of engine work.",
                   "OEM and OEM-specification parts throughout.",
-                  "A minimum six-month warranty on every major job.",
-                  "Written quotes agreed before a single component is touched.",
+                  "Six-month warranty on every major job.",
+                  "Written quotes before any work begins.",
                 ].map((t) => (
-                  <div key={t} className="flex items-start gap-3">
-                    <span className="mt-0.5 rounded-xl bg-primary/10 p-2 text-primary">
-                      <CheckCircle2 className="h-4 w-4" />
+                  <div key={t} className="flex items-start gap-2">
+                    <span className="mt-0.5 rounded-lg bg-primary/10 p-1.5 text-primary flex-shrink-0">
+                      <CheckCircle2 className="h-3.5 w-3.5" />
                     </span>
-                    <p className="text-slate-700 leading-relaxed">{t}</p>
+                    <p className="text-slate-700 text-sm leading-relaxed">{t}</p>
                   </div>
                 ))}
               </div>
@@ -213,59 +193,26 @@ export default function EnginesPortalClient() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              {
-                title: "Engine Repair",
-                slug: "engine-repair",
-                body: "Not every engine fault requires a full rebuild, and recommending one when a targeted repair will genuinely resolve the problem is something we simply do not do. Our engine repair service covers oil leaks, EGR faults, cooling system failures, misfires, sensor faults, cylinder head work, and more   diagnosed accurately, addressed completely, and priced honestly.",
-              },
-              {
-                title: "Engine Rebuild",
-                slug: "engine-rebuild",
-                body: "A specialist engine rebuild restores your original unit to OEM specification   every wear component replaced, every clearance measured and set correctly, every seal and gasket renewed. For vehicles with significant internal wear or damage, a rebuild carried out by specialists who know the platform often represents better long-term value than a replacement unit of uncertain history. Every rebuild we complete carries a minimum six-month warranty.",
-              },
-              {
-                title: "Engine Replacement",
-                slug: "engine-replacement",
-                body: "When rebuild is no longer the economical path forward, we source and fit quality reconditioned and low-mileage used engines across all five brands and all engine families we cover. Every unit is assessed and tested at our  workshop before installation   compression verified, oil condition checked, overall integrity confirmed. We do not fit engines we have not ourselves verified.",
-              },
-              {
-                title: "Head Gasket Replacement",
-                slug: "head-gasket-replacement",
-                body: "Coolant loss without an obvious external source, white exhaust smoke on a cold start that clears as the engine warms, an overheating warning that keeps returning despite top-ups   head gasket failure develops gradually and is frequently underestimated until it causes secondary damage. We carry out head gasket replacement across all platforms we cover, including combustion gas testing before quoting, cylinder head inspection and resurfacing where required, and full cooling system pressure testing before return.",
-              },
-              {
-                title: "Timing Chain Replacement",
-                slug: "timing-chain-replacement",
-                body: "A metallic cold-start rattle that owners frequently dismiss as normal is rarely that. On the Land Rover Ingenium, the BMW N47, the Jaguar 3.0 diesel, and the Audi 2.0 TDI, timing chain wear follows well-understood patterns   and a chain that has reached the point of rattling audibly has already progressed into territory where delay becomes expensive. We carry out complete timing chain replacement   chain, tensioners, guides, and sprockets replaced together as a system   across all affected platforms.",
-              },
-              {
-                title: "Timing Belt Replacement",
-                slug: "timing-belt-replacement",
-                body: "A timing belt does not gradually announce its failure the way a timing chain does. It simply breaks   and on an interference engine, the consequences are immediate, internal, and severe. Pistons meet valves. The damage that follows is rarely limited to a single component, and the repair bill that results is always significantly higher than the belt replacement that would have prevented it.\n\nTiming belt replacement at the correct manufacturer-specified interval is one of the most important preventative services a prestige vehicle owner can carry out   and one that is frequently deferred because the belt shows no obvious outward signs of wear before it fails. That is precisely why the interval exists.",
-              },
-              {
-                title: "Turbo Replacement",
-                slug: "turbo-replacement",
-                body: "Power loss under acceleration, black or blue smoke under load, a whistle or whine from the engine bay that appears under boost   turbocharger deterioration tends to make itself known clearly, and acting on those signs early prevents debris from entering the engine oil circuit and compounding the repair significantly. We source and fit OEM and remanufactured turbos across all platforms, with full oil system inspection and boost pressure verification on every fitment.",
-              },
-              {
-                title: "Engine Health Check & Diagnostics",
-                slug: "engine-health-check",
-                body: "Our engine health check goes well beyond a basic fault code read. We carry out a full mechanical and electronic assessment   compression testing across every cylinder, oil condition and contamination analysis, turbocharger condition and response, timing component assessment, and a complete electronic scan across all relevant control modules. You receive a written report in plain language: precise findings, honest recommendations, and a clear account of your engine's actual condition ranked by urgency.",
-              },
+              { title: "Engine Repair", slug: "engine-repair", body: "Targeted repairs for oil leaks, EGR faults, cooling failures, misfires, and cylinder head work — diagnosed accurately and priced honestly." },
+              { title: "Engine Rebuild", slug: "engine-rebuild", body: "Full strip-and-rebuild to OEM specification — every wear component replaced, every clearance set correctly. Six-month warranty as standard." },
+              { title: "Engine Replacement", slug: "engine-replacement", body: "Quality reconditioned and low-mileage units sourced, assessed, and fitted across all five brands. We verify every unit before installation." },
+              { title: "Head Gasket Replacement", slug: "head-gasket-replacement", body: "Combustion gas testing, cylinder head inspection, resurfacing where required, and full cooling system pressure testing before return." },
+              { title: "Timing Chain Replacement", slug: "timing-chain-replacement", body: "Chain, tensioners, guides, and sprockets replaced as a complete system across all affected platforms — Ingenium, N47, Jaguar 3.0, Audi TDI." },
+              { title: "Timing Belt Replacement", slug: "timing-belt-replacement", body: "Belt, tensioner, idlers, and water pump replaced to OEM specification at the correct interval — before failure, not after." },
+              { title: "Turbo Replacement", slug: "turbo-replacement", body: "OEM and remanufactured turbos fitted across all platforms, with full oil system inspection and boost pressure verification on every job." },
+              { title: "Engine Health Check", slug: "engine-health-check", body: "Full mechanical and electronic assessment — compression, oil condition, turbo, timing, and all control modules. Written report in plain language." },
             ].map((item) => (
-              <div key={item.title} className="rounded-[2rem] border border-slate-200 bg-slate-50 p-7 shadow-sm flex flex-col justify-between">
-                <h3 className="text-xl font-bold text-slate-900">{item.title}</h3>
-                <div className="mt-4 space-y-4 text-slate-700 leading-relaxed whitespace-pre-line">
-                  {item.body}
+              <div key={item.title} className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-8 shadow-sm flex flex-col justify-between">
+                <div>
+                  <h3 className="text-lg font-bold text-slate-900 mb-3">{item.title}</h3>
+                  <p className="text-slate-600 text-sm leading-relaxed line-clamp-5">{item.body}</p>
                 </div>
-
                 <div className="pt-6">
                   <Link
                     href={`/services/${item.slug}`}
-                    className="inline-flex items-center justify-center w-full bg-primary text-white font-bold py-3 px-6 rounded-xl hover:bg-primary-dark transition-colors"
+                    className="inline-flex items-center justify-center w-full bg-primary text-white font-bold py-2 px-4 rounded-xl hover:bg-primary-dark transition-colors text-sm"
                   >
                     Explore More
                   </Link>

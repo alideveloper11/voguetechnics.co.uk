@@ -7,6 +7,7 @@ import Link from "next/link";
 
 import Breadcrumbs from "@/components/common/Breadcrumbs";
 import FAQSection from "@/components/common/FAQSection";
+import ServiceGallery from "@/components/common/ServiceGallery";
 import PartnerLogos from "@/components/common/PartnerLogos";
 import NationwideSupportSection from "@/components/common/NationwideSupportSection";
 import RegSearch from "@/components/common/RegSearch";
@@ -76,28 +77,17 @@ export default function TimingChainReplacementPage() {
       </section>
 
       <ReviewsSection subtitle="Hear from our satisfied customers who have experienced our professional specialist engine services." />
+      <ServiceGallery
+        title="Timing Chain Replacement Work"
+        subtitle="A look at some of the timing chain replacement jobs carried out at our workshop."
+        images={[
+          { src: "/timming_chain/timing_chain%201.png", alt: "Timing chain replacement 1" },
+          { src: "/timming_chain/timing_chain%202.png", alt: "Timing chain replacement 2" },
+          { src: "/timming_chain/timing_chain%203.png", alt: "Timing chain replacement 3" },
+        ]}
+      />
 
-      {/* Gallery */}
-      <section className="py-16 bg-white border-b border-slate-100">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
-            {[
-              { src: "/images/gallery/2g.webp", alt: "Timing chain replacement workshop" },
-              { src: "/images/gallery/3g.webp", alt: "Engine service and diagnostic bay" },
-            ].map((img) => (
-              <div
-                key={img.src}
-                className="relative overflow-hidden rounded-[2.5rem] border border-slate-200 bg-slate-50 shadow-sm"
-              >
-                <div className="relative h-[240px] sm:h-[300px] lg:h-[320px]">
-                  <Image src={img.src} alt={img.alt} fill className="object-cover" sizes="(min-width: 1024px) 50vw, 100vw" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/35 via-transparent to-transparent" />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <NationwideSupportSection />
 
       {/* Signs */}
       <section className="py-24 bg-white">
@@ -348,7 +338,6 @@ export default function TimingChainReplacementPage() {
         </div>
       </section>
 
-      <NationwideSupportSection />
       <PartnerLogos />
     </main>
   );

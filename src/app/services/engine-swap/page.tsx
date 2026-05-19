@@ -10,6 +10,7 @@ import Breadcrumbs from "@/components/common/Breadcrumbs";
 import RegSearch from "@/components/common/RegSearch";
 import ReviewsSection from "@/components/common/ReviewsSection";
 import FAQSection from "@/components/common/FAQSection";
+import ServiceGallery from "@/components/common/ServiceGallery";
 import PartnerLogos from "@/components/common/PartnerLogos";
 import NationwideSupportSection from "@/components/common/NationwideSupportSection";
 
@@ -76,6 +77,18 @@ export default function EngineSwapPage() {
         </div>
       </section>
 
+      <ReviewsSection subtitle="Hear from our satisfied customers who have experienced our professional specialist engine services." />
+      <ServiceGallery
+        title="Engine Swap Work"
+        subtitle="A look at some of the engine swap jobs carried out at our workshop."
+        images={[
+          { src: "/engine_swap/engine_swap%201.png", alt: "Engine swap 1" },
+          { src: "/engine_swap/engine_swap%202.png", alt: "Engine swap 2" },
+          { src: "/engine_swap/engine_swap%203.png", alt: "Engine swap 3" },
+          { src: "/engine_swap/engine_swap%204.png", alt: "Engine swap 4" },
+        ]}
+      />
+
       {/* When does it make sense */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
@@ -101,6 +114,8 @@ export default function EngineSwapPage() {
           </div>
         </div>
       </section>
+
+      <NationwideSupportSection />
 
       {/* Cost */}
       <section className="py-24 bg-slate-50 border-y border-slate-100">
@@ -345,8 +360,6 @@ export default function EngineSwapPage() {
         </div>
       </section>
 
-      <ReviewsSection subtitle="Hear from our satisfied customers who have experienced our professional specialist engine services." />
-      <NationwideSupportSection />
       <PartnerLogos />
     </main>
   );

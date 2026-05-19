@@ -18,6 +18,7 @@ import Breadcrumbs from "@/components/common/Breadcrumbs";
 import RegSearch from "@/components/common/RegSearch";
 import ReviewsSection from "@/components/common/ReviewsSection";
 import FAQSection from "@/components/common/FAQSection";
+import ServiceGallery from "@/components/common/ServiceGallery";
 import PartnerLogos from "@/components/common/PartnerLogos";
 import NationwideSupportSection from "@/components/common/NationwideSupportSection";
 
@@ -79,6 +80,15 @@ export default function HeadGasketReplacementPage() {
       </section>
 
       <ReviewsSection subtitle="Hear from our satisfied customers who have experienced our professional specialist engine services." />
+      <ServiceGallery
+        title="Head Gasket Replacement Work"
+        subtitle="A look at some of the head gasket replacement jobs carried out at our workshop."
+        images={[
+          { src: "/head_gasket/head_gasket%201.png", alt: "Head gasket replacement 1" },
+          { src: "/head_gasket/head_gasket%202.png", alt: "Head gasket replacement 2" },
+          { src: "/head_gasket/head_gasket%203.png", alt: "Head gasket replacement 3" },
+        ]}
+      />
 
       {/* Symptoms */}
       <section className="py-24 bg-white">
@@ -148,6 +158,8 @@ export default function HeadGasketReplacementPage() {
           </div>
         </div>
       </section>
+
+      <NationwideSupportSection />
 
       {/* Why cannot delay */}
       <section className="py-24 bg-slate-50 border-y border-slate-100">
@@ -504,7 +516,6 @@ export default function HeadGasketReplacementPage() {
         </div>
       </section>
 
-      <NationwideSupportSection />
       <PartnerLogos />
     </main>
   );

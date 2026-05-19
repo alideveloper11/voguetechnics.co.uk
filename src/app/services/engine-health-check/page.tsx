@@ -10,6 +10,7 @@ import Breadcrumbs from "@/components/common/Breadcrumbs";
 import RegSearch from "@/components/common/RegSearch";
 import ReviewsSection from "@/components/common/ReviewsSection";
 import FAQSection from "@/components/common/FAQSection";
+import ServiceGallery from "@/components/common/ServiceGallery";
 import PartnerLogos from "@/components/common/PartnerLogos";
 import NationwideSupportSection from "@/components/common/NationwideSupportSection";
 
@@ -75,6 +76,18 @@ export default function EngineHealthCheckPage() {
           </div>
         </div>
       </section>
+
+      <ReviewsSection subtitle="Hear from our satisfied customers who have experienced our professional specialist engine services." />
+      <ServiceGallery
+        title="Engine Health Check Work"
+        subtitle="A look at some of the engine health checks and diagnostics carried out at our workshop."
+        images={[
+          { src: "/engine_repair/engine_repair%201.png", alt: "Engine health check 1" },
+          { src: "/engine_repair/engine_repair%202.png", alt: "Engine health check 2" },
+          { src: "/engine_repair/engine_repair%203.png", alt: "Engine health check 3" },
+          { src: "/engine_repair/engine_repair%204.png", alt: "Engine health check 4" },
+        ]}
+      />
 
       {/* What it covers */}
       <section className="py-24 bg-white">
@@ -339,7 +352,6 @@ export default function EngineHealthCheckPage() {
         </div>
       </section>
 
-      <ReviewsSection subtitle="Hear from our satisfied customers who have experienced our professional specialist engine services." />
       <NationwideSupportSection />
       <PartnerLogos />
     </main>

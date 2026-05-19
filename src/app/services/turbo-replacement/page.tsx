@@ -10,6 +10,7 @@ import Breadcrumbs from "@/components/common/Breadcrumbs";
 import RegSearch from "@/components/common/RegSearch";
 import ReviewsSection from "@/components/common/ReviewsSection";
 import FAQSection from "@/components/common/FAQSection";
+import ServiceGallery from "@/components/common/ServiceGallery";
 import PartnerLogos from "@/components/common/PartnerLogos";
 import NationwideSupportSection from "@/components/common/NationwideSupportSection";
 
@@ -75,6 +76,17 @@ export default function TurboReplacementPage() {
           </div>
         </div>
       </section>
+
+      <ReviewsSection subtitle="Hear from our satisfied customers who have experienced our professional specialist engine services." />
+      <ServiceGallery
+        title="Turbo Replacement Work"
+        subtitle="A look at some of the turbo replacement jobs carried out at our workshop."
+        images={[
+          { src: "/turbo_replacement/turbo_replacement%201.png", alt: "Turbo replacement 1" },
+          { src: "/turbo_replacement/turbo_replacement%202.png", alt: "Turbo replacement 2" },
+          { src: "/turbo_replacement/turbo_replacement%203.png", alt: "Turbo replacement 3" },
+        ]}
+      />
 
       {/* Signs */}
       <section className="py-24 bg-white">
@@ -173,6 +185,8 @@ export default function TurboReplacementPage() {
           </div>
         </div>
       </section>
+
+      <NationwideSupportSection />
 
       {/* Service */}
       <section className="py-24 bg-slate-50 border-y border-slate-100">
@@ -442,8 +456,6 @@ export default function TurboReplacementPage() {
         </div>
       </section>
 
-      <ReviewsSection subtitle="Hear from our satisfied customers who have experienced our professional specialist engine services." />
-      <NationwideSupportSection />
       <PartnerLogos />
     </main>
   );

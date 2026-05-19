@@ -10,6 +10,7 @@ import Breadcrumbs from "@/components/common/Breadcrumbs";
 import RegSearch from "@/components/common/RegSearch";
 import ReviewsSection from "@/components/common/ReviewsSection";
 import FAQSection from "@/components/common/FAQSection";
+import ServiceGallery from "@/components/common/ServiceGallery";
 import PartnerLogos from "@/components/common/PartnerLogos";
 import NationwideSupportSection from "@/components/common/NationwideSupportSection";
 
@@ -76,6 +77,17 @@ export default function TimingBeltReplacementPage() {
         </div>
       </section>
 
+      <ReviewsSection subtitle="Hear from our satisfied customers who have experienced our professional specialist engine services." />
+      <ServiceGallery
+        title="Timing Belt Replacement Work"
+        subtitle="A look at some of the timing belt replacement jobs carried out at our workshop."
+        images={[
+          { src: "/timming_belt/timing_belt%201.png", alt: "Timing belt replacement 1" },
+          { src: "/timming_belt/timing_belt%202.png", alt: "Timing belt replacement 2" },
+          { src: "/timming_belt/timing_belt%203.png", alt: "Timing belt replacement 3" },
+        ]}
+      />
+
       {/* Belt vs chain */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
@@ -101,6 +113,8 @@ export default function TimingBeltReplacementPage() {
           </div>
         </div>
       </section>
+
+      <NationwideSupportSection />
 
       {/* Warning signs */}
       <section className="py-24 bg-slate-50 border-y border-slate-100">
@@ -338,8 +352,6 @@ export default function TimingBeltReplacementPage() {
         </div>
       </section>
 
-      <ReviewsSection subtitle="Hear from our satisfied customers who have experienced our professional specialist engine services." />
-      <NationwideSupportSection />
       <PartnerLogos />
     </main>
   );

@@ -159,7 +159,7 @@ export default function HeadGasketReplacementPage() {
         </div>
       </section>
 
-      <NationwideSupportSection />
+      <NationwideSupportSection slug="head-gasket-replacement" />
 
       {/* Why cannot delay */}
       <section className="py-24 bg-slate-50 border-y border-slate-100">

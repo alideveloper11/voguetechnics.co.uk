@@ -161,7 +161,7 @@ export default function EngineRebuildPage() {
         </div>
       </section>
 
-      <NationwideSupportSection />
+      <NationwideSupportSection slug="engine-rebuild" />
 
       {/* What it covers */}
       <section className="py-24 bg-slate-50 border-y border-slate-100">

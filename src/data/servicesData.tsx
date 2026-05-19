@@ -5,6 +5,7 @@ export interface Service {
   title: string;
   slug: string;
   icon: React.ReactNode;
+  image?: string;
   shortDescription: string;
   longDescription: string;
   features: string[];
@@ -18,6 +19,7 @@ export const services: Service[] = [
     title: "Head Gasket Repair and Replacement",
     slug: "head-gasket-replacement",
     icon: <ShieldCheck className="w-6 h-6" />,
+    image: "/services/head_gasket.png",
     shortDescription: "White smoke, coolant loss, milky oil   head gasket failure is serious and often mishandled. We diagnose correctly and replace the gasket with full cylinder head inspection, new bolts, and a skim where required.",
     longDescription: "Our specialized head gasket replacement service ensures your engine's integrity. We use high-grade gaskets and precision tools to seal your engine, preventing leaks and maintaining optimal compression.",
     features: ["Pressure testing", "Precision surfacing", "Premium gaskets", "Full engine diagnostic"],
@@ -58,6 +60,7 @@ export const services: Service[] = [
     title: "Timing Chain Replacement",
     slug: "timing-chain-replacement",
     icon: <Activity className="w-6 h-6" />,
+    image: "/services/timing_chain_replacement.png",
     shortDescription: "That cold-start rattle is a classic warning sign of timing chain wear. We replace the full kit (chain, tensioners, guides) across affected JLR, Audi and BMW platforms to prevent serious internal damage.",
     longDescription: "A worn timing chain can lead to catastrophic engine failure. Our replacement service uses genuine or high-quality OEM chains and tensioners to ensure perfect synchronization of your engine's valves and pistons.",
     features: ["OEM spec chains", "New tensioners", "Guide rail inspection", "Precision timing setup"],
@@ -98,6 +101,7 @@ export const services: Service[] = [
     title: "Turbo Replacement",
     slug: "turbo-replacement",
     icon: <Zap className="w-6 h-6" />,
+    image: "/services/turbo_replacement.png",
     shortDescription: "Loss of power, black smoke, or a whistle under load often points to turbo failure. We supply and fit OEM/remanufactured units with a full oil system inspection before installation and a written quote upfront.",
     longDescription: "Restore your vehicle's acceleration and fuel efficiency with our turbo replacement service. We supply and fit high-performance turbos for all major makes and models.",
     features: ["Core balancing", "Oil feed cleaning", "Wastegate testing", "Performance calibration"],
@@ -138,6 +142,7 @@ export const services: Service[] = [
     title: "Engine Rebuild",
     slug: "engine-rebuild",
     icon: <Settings className="w-6 h-6" />,
+    image: "/services/engine_rebuild.png",
     shortDescription: "A full rebuild restores your original unit to OEM specification   wear items replaced, clearances set correctly, and seals renewed. A specialist rebuild is often better value than a replacement of uncertain history.",
     longDescription: "Our engine rebuild service involves stripping down your unit and replacing all worn internal components. We restore your engine to like-new condition with improved durability.",
     features: ["Full strip down", "New pistons & rings", "Bearing replacement", "Block machining"],
@@ -178,6 +183,7 @@ export const services: Service[] = [
     title: "Engine Repair",
     slug: "engine-repair",
     icon: <Wrench className="w-6 h-6" />,
+    image: "/services/engine_repair.png",
     shortDescription: "Not every fault needs a rebuild. With accurate diagnostics and targeted repair we can resolve leaks, cooling issues, misfires, sensor failures, EGR problems and more   across all five brands we cover.",
     longDescription: "From minor leaks to major mechanical issues, our engine repair service covers it all. Our specialist technicians use state-of-the-art diagnostics to identify and fix problems efficiently.",
     features: ["Advanced diagnostics", "Mechanical repairs", "Electrical troubleshooting", "Part replacement"],
@@ -218,6 +224,7 @@ export const services: Service[] = [
     title: "Engine Replacement",
     slug: "engine-replacement",
     icon: <RefreshCw className="w-6 h-6" />,
+    image: "/services/engine_replacement.png",
     shortDescription: "When a rebuild is no longer economical, we source and fit low-mileage used, reconditioned and remanufactured engines installed to OEM specification with full oil system preparation and warranty cover.",
     longDescription: "When an engine is beyond repair, our replacement service offers a cost-effective solution. We provide low-mileage used or fully reconditioned internal combustion engines to get you back on the road.",
     features: ["Full unit swap", "System integration", "Fluids & filter refresh", "Extensive testing"],
@@ -258,6 +265,7 @@ export const services: Service[] = [
     title: "Engine Swap",
     slug: "engine-swap",
     icon: <RefreshCw className="w-6 h-6" />,
+    image: "/services/engine_swap.png",
     shortDescription: "An engine swap goes beyond like-for-like. Upgrades and platform conversions require careful management of electronics and ancillaries   we carry out swap work across all five brands with the depth it demands.",
     longDescription: "Our engine swap service is perfect for those looking for an exact model replacement or a specialized upgrade. We handle the entire process from extraction to final configuration.",
     features: ["Precision removal", "Harness integration", "Cooling system check", "Performance tuning"],
@@ -298,6 +306,7 @@ export const services: Service[] = [
     title: "Timing Belt Replacement",
     slug: "timing-belt-replacement",
     icon: <Layers className="w-6 h-6" />,
+    image: "/services/timing_belt_Replacement.png",
     shortDescription: "A timing belt doesn’t warn before it fails. We replace belts/cambelts at the correct interval using the full kit (tensioner, idlers, and water pump where belt-driven) to prevent severe damage.",
     longDescription: "Prevent engine damage with our timely timing belt replacement service. We use high-quality belts and water pumps to ensure your engine runs smoothly for thousands of miles.",
     features: ["High-durability belts", "Water pump replacement", "Tensioner check", "Interval reset"],

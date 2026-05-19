@@ -121,7 +121,7 @@ export default function EngineRepairPage() {
         </div>
       </section>
 
-      <NationwideSupportSection />
+      <NationwideSupportSection slug="engine-repair" />
 
       {/* Services list */}
       <section className="py-24 bg-slate-50 border-y border-slate-100">

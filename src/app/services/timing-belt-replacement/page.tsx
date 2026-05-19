@@ -114,7 +114,7 @@ export default function TimingBeltReplacementPage() {
         </div>
       </section>
 
-      <NationwideSupportSection />
+      <NationwideSupportSection slug="timing-belt-replacement" />
 
       {/* Warning signs */}
       <section className="py-24 bg-slate-50 border-y border-slate-100">

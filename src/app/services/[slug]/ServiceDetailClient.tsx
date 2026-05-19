@@ -193,7 +193,7 @@ export default function ServiceDetailClient({ service, relatedServices }: Servic
       <ReviewsSection 
         subtitle={`Hear from our satisfied customers who have experienced our professional ${service.title.toLowerCase()} services.`}
       />
-      <NationwideSupportSection />
+      <NationwideSupportSection slug={service.slug} />
       <PartnerLogos />
     </main>
   );

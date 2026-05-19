@@ -83,8 +83,8 @@ export default function ReviewsSection({
     <section id="reviews" className="pt-24 pb-12 bg-slate-50 relative overflow-hidden">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="flex justify-center mb-6">
-            <h2 className="bg-primary text-white text-3xl md:text-5xl font-bold px-6 py-3 rounded-lg shadow-lg tracking-tight uppercase italic">
+          <div className="mb-6">
+            <h2 className="text-2xl md:text-4xl font-black text-slate-900 uppercase tracking-tighter italic">
               {title}
             </h2>
           </div>

@@ -17,7 +17,7 @@ const WorkshopSection = () => {
               <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center text-primary shadow-md border border-emerald-100">
                 <MapPin className="w-8 h-8 text-emerald-500" />
               </div>
-              <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
+              <h2 className="text-xl md:text-2xl lg:text-3xl font-extrabold text-slate-900 tracking-tight">
                 Visit Our Workshop
               </h2>
             </div>

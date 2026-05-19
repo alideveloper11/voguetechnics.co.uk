@@ -51,31 +51,27 @@ const findYourBmwCards = [
 ];
 
 const heroParagraphs = [
-  "The BMW 7 Series has always represented the pinnacle of what BMW does   a full-size luxury saloon engineered to the highest standards the brand produces, carrying engine technology that frequently previews what eventually filters down to the rest of the range. From the silken naturally aspirated V8s of the E38 generation to the twin-turbo V8s and inline-six units of the F01 and G11, the 7 Series engine lineup has always been ambitious, complex, and genuinely impressive in operation.",
-  "It is also, when things go wrong, genuinely demanding to work on correctly.",
-  "At Vogue Technics, based in , BMW 7 Series engine rebuilds, repairs, and replacements are work we approach with the depth of expertise that BMW's flagship demands. The N63 twin-turbo V8's thermal management challenges, the N57 diesel's timing chain vulnerabilities, the B58 straight-six's oil system sensitivities, the earlier M62 and N62 naturally aspirated V8 units   we understand these engines in practical, hands-on terms developed over more than 25 years of dedicated BMW engine work. If your 7 Series is experiencing engine trouble, you have found the right workshop.",
+  "The BMW 7 Series is a full-size luxury saloon with an engine lineup that has always been ambitious, complex, and genuinely impressive   from the naturally aspirated V8s of the E38 to the twin-turbo V8s and inline-six units of the F01 and G11.",
+  "At Vogue Technics, we approach BMW 7 Series engine rebuilds, repairs, and replacements with the depth of expertise BMW's flagship demands, backed by over 25 years of dedicated specialist work.",
 ];
 
 const whyChooseBlocks = [
   {
     title: "Flagship BMW Engines Require Flagship-Level Expertise",
     text: [
-      "The BMW 7 Series is not a vehicle where a generalist approach to engine work produces consistently good results. The N63 V8's unconventional hot-V turbocharger placement   with both turbos mounted inside the engine V rather than on the outside of the block   creates a thermal concentration that demands specific understanding of how heat moves through this engine under load. The N57 diesel's timing chain tensioner failure pattern, well-documented across BMW's diesel lineup, carries particular consequences in a 7 Series application where the engine is frequently run at sustained highway speeds for extended periods. The naturally aspirated N62 and M62 V8 units in earlier 7 Series generations present their own specific wear patterns and rebuild considerations.",
-      "None of these engines responds well to being treated as a generic rebuild job. Each requires the approach that comes from having worked on it repeatedly, understood its failure patterns from direct experience, and developed the discipline to address those patterns correctly during every rebuild or repair. That is precisely what we bring to every BMW 7 Series engine job.",
+      "N63, N57, N62, M62 — we bring direct hands-on knowledge to every 7 Series engine job, not generic rebuild procedures.",
     ],
   },
   {
     title: "Over 25 Years of BMW Engine Work From ",
     text: [
-      "Vogue Technics has operated from our  workshop for over a quarter of a century. In that time we have worked on BMW 7 Series engines across multiple generations   E38, E65, F01, F02, and G11   covering naturally aspirated and turbocharged petrol units, diesel variants, and the high-performance M and Alpina engines that represent the very top of the 7 Series range.",
-      "Our customer base across , London, and the wider UK is built almost entirely on referrals from owners who experienced our work directly and recommended us without hesitation. When we work on your 7 Series engine, the result reflects twenty-five years of accumulated knowledge applied specifically to your vehicle and its engine family.",
+      "E38 to G11 — our customer base is built almost entirely on referrals from owners who experienced our work directly.",
     ],
   },
   {
     title: "Fully Transparent Pricing   Agreed in Writing Before Any Work Starts",
     text: [
-      "Engine work on a BMW 7 Series flagship is a significant financial commitment, and we treat every enquiry with the seriousness and respect that warrants. Every quote we produce is fully itemised, clearly explained in plain language, and confirmed in writing before a single component is touched. No estimates that change between booking and collection. No additions that appear without prior agreement.",
-      "You know exactly what the work costs and exactly what it involves from the moment you commit. Contact us by phone or through our online enquiry form for a fast, no-obligation quote specific to your 7 Series generation, engine variant, and the nature of the work required.",
+      "Fully itemised quote confirmed in writing before a single component is touched — no changes without prior agreement.",
     ],
   },
 ];
@@ -87,77 +83,65 @@ const serviceSections = [
       {
         heading: "Head Gasket Replacement",
         text: [
-          "Head gasket failure across the BMW 7 Series engine range presents differently depending on which generation and engine variant you own. On the N63 twin-turbo V8   where thermal concentration inside the engine V is inherently higher than on conventionally turbocharged engines   head gasket stress under sustained load is a genuine and documented concern. On the N57 diesel variants, sustained high-speed operation at consistent boost places cumulative thermal stress on the head gasket that manifests over time at higher mileages.",
-          "The warning signs are consistent regardless of engine family. White or grey exhaust smoke that persists beyond a normal cold-start period, coolant that requires topping up without any identifiable external leak, oil that has developed a milky or contaminated appearance, or an engine temperature that trends higher than it historically has   any of these symptoms requires prompt investigation on a 7 Series engine.",
-          "We carry out BMW 7 Series head gasket replacement using OEM-grade sealing components throughout, with a full cylinder head inspection covering surface flatness measurement, crack testing, and complete structural integrity assessment before any reassembly begins. A head gasket repair done to the correct standard lasts. Done inadequately, it creates the same problem at a shorter interval   and we have no interest in seeing your vehicle back for the same reason twice.",
+          "Head gasket failure across the BMW 7 Series presents differently depending on the engine. On the N63 twin-turbo V8, thermal concentration creates documented head gasket stress; on the N57 diesel, high-speed sustained use accumulates cumulative thermal stress.",
+          "We use OEM-grade sealing components with a full cylinder head inspection covering flatness measurement, crack testing, and structural assessment before reassembly.",
         ],
       },
       {
         heading: "Timing Chain Replacement",
         text: [
-          "Timing chain concerns affect the BMW 7 Series across multiple engine families   most acutely the N57 diesel units in the 730d and 740d variants, but also the N63 petrol V8 and certain earlier generation units where chain and tensioner wear becomes a significant factor at elevated mileages.",
-          "On the N57 in a 7 Series application, the sustained high-speed motorway operation that characterises a great deal of 7 Series use means the timing chain system accumulates operational hours at consistent load   translating to tensioner wear that can present earlier in calendar terms than mileage alone would suggest. The failure progression follows the same pattern seen across all N57 applications   a cold-start rattle that clears within a few seconds is the definitive early warning, followed by camshaft timing fault codes and rough cold idle as the condition develops further.",
-          "Do not continue driving a 7 Series diesel that produces a cold-start rattle. The consequences of N57 timing chain failure are severe, rapid, and expensive.",
-          "We carry out BMW 7 Series timing chain replacement as a complete system job   chain, tensioners, guides, and sprockets replaced together, without exception. Replacing only the chain while leaving worn tensioners and guides in place is a false economy that produces a repeat failure on a compressed timeline.",
+          "Timing chain concerns affect the BMW 7 Series most acutely on the N57 diesel 730d and 740d variants. Sustained high-speed motorway use accelerates tensioner wear   a cold-start rattle that clears within a few seconds is the definitive early warning.",
+          "We carry out timing chain replacement as a complete system job   chain, tensioners, guides, and sprockets replaced together without exception.",
         ],
       },
       {
         heading: "Timing Chain Repair",
         text: [
-          "Where BMW 7 Series timing chain failure has already occurred or secondary valve train damage has developed alongside primary chain wear, our timing chain repair service addresses the full scope of damage rather than the presenting fault alone.",
-          "We carry out a comprehensive assessment of all timing-related components following chain failure   checking for bent valves, damaged guides, sprocket wear, and any secondary damage to the cylinder head caused by incorrect valve timing operation. Every affected component is identified, documented, and replaced before the engine is reassembled and valve timing is confirmed to factory specification. The vehicle does not leave our workshop until the timing system is operating correctly and cleanly across all relevant fault code channels.",
+          "Where timing chain failure has already occurred, our repair service addresses the full scope of damage. We check for bent valves, damaged guides, sprocket wear, and secondary cylinder head damage, then confirm factory valve timing before the vehicle leaves our workshop.",
         ],
       },
       {
         heading: "Turbo Replacement",
         text: [
-          "Turbocharger work on the BMW 7 Series covers a wider range of scenarios than on most vehicles, reflecting the breadth of engine options across its generations. The N63 twin-turbo V8 in the 750i and 750Li presents the most specific challenges   with both turbos mounted inside the engine V, oil feed contamination from a failing turbo does not remain contained within a single unit. It circulates through the shared oil system and reaches the second turbo, the main oil circuit, and potentially the wider engine before the failure is even diagnosed.",
-          "The N57 diesel's twin-turbo system in 730d and 740d applications carries the shared oil circuit contamination risk common to all biturbo setups, with the additional consideration that 7 Series diesel examples typically carry higher mileages than equivalent 5 Series applications given the vehicle's primary role as long-distance executive transport.",
-          "We source and fit quality replacement turbochargers for all BMW 7 Series engine variants, with full post-installation testing covering boost pressure, oil feed integrity, and fault-free operation across all turbo stages. We assess the complete turbo system on every job   addressing only the presenting failure without examining what that failure has done to the wider system is incomplete work, and incomplete work is not something we deliver.",
+          "The N63 twin-turbo V8 presents the most specific challenges   with both turbos inside the engine V, oil feed contamination from a failing turbo circulates through the shared oil system before the failure is even diagnosed.",
+          "We source and fit quality replacement turbochargers for all 7 Series variants with full post-installation testing. We assess the complete turbo system on every job, not just the presenting failure.",
         ],
       },
       {
         heading: "Engine Rebuild",
         text: [
-          "A full BMW 7 Series engine rebuild is the most comprehensive solution available   and for a flagship saloon that has accumulated significant mileage in demanding conditions, it is frequently the most cost-effective long-term investment the owner can make.",
-          "We strip the engine completely   whether that is an N63 twin-turbo V8, an N57 diesel, a B58 straight-six, an N62 naturally aspirated V8, or an M62 from an earlier generation   measure every internal component against factory tolerances using precision equipment, identify and replace everything outside specification, and reassemble with the precision that a BMW flagship demands as a minimum standard.",
-          "Bearings, rings, seals, gaskets, oil system components   everything that influences long-term reliability and performance under the conditions a 7 Series engine actually operates in is assessed, addressed, and either replaced or confirmed as serviceable with documented measurement data behind that decision. The result is a 7 Series that drives as it should   with the refinement, the quietness, and the effortless performance delivery that defines this car at its best.",
+          "A full BMW 7 Series engine rebuild is frequently the most cost-effective long-term investment for a flagship saloon with significant mileage. We strip completely, measure every component against factory tolerances, replace everything outside specification, and reassemble to the precision a BMW flagship demands.",
         ],
       },
       {
         heading: "Engine Repair",
         text: [
-          "Not every BMW 7 Series engine problem requires a full rebuild, and we will never recommend one when a more targeted repair is the genuinely appropriate solution. Our BMW 7 Series engine repair service begins with thorough diagnostic work   comprehensive electronic fault scanning across all engine management systems, compression testing, oil condition analysis, and systematic physical inspection   so that the work carried out addresses the actual fault with precision and economy.",
-          "Oil leaks from ageing seals and gaskets, bearing wear on higher-mileage units, VANOS system faults on N-series petrol engines, EGR system issues on diesel variants, valve train faults, injector concerns, and sensor failures all fall within our standard engine repair scope. We identify the root cause and address it directly   not the most visible symptom on the surface.",
+          "Not every BMW 7 Series engine problem requires a full rebuild. Our repair service begins with thorough diagnostic work   fault scanning, compression testing, oil analysis, and systematic inspection   so the work addresses the actual fault with precision.",
         ],
       },
       {
         heading: "Engine Replacement",
         text: [
-          "When internal damage has progressed beyond economical repair, or when a comprehensive assessment confirms that a quality replacement unit represents the most practical and cost-effective path forward, we supply and fit reconditioned and low-mileage used BMW 7 Series engines across all variants and generations. Every replacement engine is sourced from verified, trusted suppliers and assessed for condition and provenance before installation begins.",
-          "We carry out the full installation process   removal of the failed unit, complete installation of the replacement engine, all ancillary reconnections including cooling, fuel, electrical, and exhaust systems, and a comprehensive post-installation diagnostic session covering all engine management systems before the vehicle returns to the road. You do not collect your 7 Series until we are satisfied that every system connected to the engine is operating correctly.",
+          "When internal damage has progressed beyond economical repair, we supply and fit reconditioned and low-mileage used BMW 7 Series engines across all variants. Every replacement is sourced from verified suppliers and assessed before installation begins.",
         ],
       },
       {
         heading: "Engine Swap",
         text: [
-          "Our BMW 7 Series engine swap service covers scenarios where a direct like-for-like replacement is not the objective   whether that involves fitting a newer engine variant into an earlier chassis, moving to a different fuel type, or addressing a situation where the original engine family is no longer the most appropriate solution for the vehicle's intended use.",
-          "Every engine swap on a BMW 7 Series involves considerations that go well beyond the mechanical installation itself. ECU calibration to match the replacement engine's management requirements, drivetrain integration where the replacement unit differs from the original in output or configuration, ancillary mounting adaptations, and post-swap diagnostic verification across all connected systems are all addressed as standard elements of our swap service   not optional additions. We carry out engine swaps properly, from start to finish, with no shortcuts at any stage.",
+          "Our BMW 7 Series engine swap service covers scenarios where a direct like-for-like replacement is not the objective. ECU calibration, drivetrain integration, ancillary mounting adaptations, and post-swap diagnostic verification are all addressed as standard   no shortcuts at any stage.",
         ],
       },
       {
         heading: "Timing Belt Replacement",
         text: [
-          "Certain BMW 7 Series variants   particularly those from earlier production generations in the E38 and E65 ranges   incorporate timing belt components within the valve train system. A timing belt provides considerably less advance warning before failure than a chain. When it fails, engine damage is immediate and typically total, with valve-to-piston contact occurring before the engine can be shut down safely.",
-          "We carry timing belt kits for all applicable 7 Series engine configurations. We strongly recommend replacement at or ahead of BMW's specified service intervals on every applicable vehicle   and we would always advise erring on the earlier side on any vehicle where the complete service history cannot be verified with certainty. The cost of a timing belt replacement is a fraction of the cost of the engine damage that follows a belt failure.",
+          "Certain BMW 7 Series variants incorporate timing belt components within the valve train system. When a belt fails, engine damage is immediate and typically total. We carry timing belt kits for all applicable configurations and strongly recommend replacement at or ahead of BMW's specified service intervals.",
         ],
       },
       {
         heading: "Engine Health Check",
         text: [
-          "Not entirely certain what is wrong with your 7 Series? Or considering purchasing a used example   particularly a higher-mileage N63 or N57 variant   and wanting an honest, independent assessment of the engine's true condition before committing to the purchase? Our BMW 7 Series engine health check provides a complete picture of the engine's current state across every measurable parameter.",
-          "The service covers full compression testing across all cylinders, oil condition and contamination analysis, comprehensive electronic diagnostic scanning across all engine management and turbo-related fault codes, a detailed physical inspection of the timing chain system and all accessible valve train components, turbocharger assessment where applicable, and a thorough visual inspection of the engine bay including cooling system, oil system, and all associated ancillaries.",
-          "You receive a written report with clear, honest findings and straightforward recommendations. No manufactured urgency, no upselling towards services the vehicle does not need, no deliberately vague language designed to generate additional work. Just the accurate, complete information you need to make a properly informed decision about one of the most sophisticated saloons BMW has ever produced.",
+          "Our BMW 7 Series engine health check covers full compression testing, oil analysis, comprehensive electronic diagnostic scanning, timing chain inspection, and turbocharger assessment where applicable.",
+          "You receive a written report with clear, honest findings and straightforward recommendations   no upselling, no manufactured urgency.",
         ],
       },
     ],
@@ -168,19 +152,19 @@ const serviceSections = [
       {
         heading: "Engine Collection & Return   Full UK Coverage",
         text: [
-          "Not within practical reach of our  workshop? That presents no obstacle whatsoever. We operate a fully managed engine collection and delivery service covering the entire United Kingdom. Send your unit to us and we will return it rebuilt, repaired, or replaced   fully tested, correctly configured, and ready to install. For customers who need the finished engine installed locally, we work with a trusted network of approved fitting partners across the UK whose standard of work we are confident .",
+          "Not within reach of our workshop? We operate a fully managed engine collection and delivery service covering the entire United Kingdom. Send your unit to us and we will return it rebuilt, repaired, or replaced   fully tested and ready to install.",
         ],
       },
       {
         heading: "Confirmed Turnaround Times   Agreed at Booking and Delivered",
         text: [
-          "Most BMW 7 Series engine rebuilds are completed within 5–10 working days from parts confirmation. Repairs and replacements are frequently completed more quickly, depending on the scope of work and parts availability. We confirm your specific timeframe at the point of booking and communicate proactively if anything changes   because leaving a customer to chase progress on their own vehicle is not how we operate.",
+          "Most BMW 7 Series engine rebuilds are completed within 5–10 working days from parts confirmation. We confirm your specific timeframe at the point of booking and communicate proactively if anything changes.",
         ],
       },
       {
         heading: "Written Warranty on Every Job   Without Exception",
         text: [
-          "Every engine rebuild, repair, and replacement that leaves Vogue Technics carries a written warranty. We provide it because our standard of work warrants it without qualification   and because every 7 Series owner who trusts us with their flagship engine deserves to drive away with complete and fully justified confidence in what has been done and what it means for the vehicle going forward.",
+          "Every engine rebuild, repair, and replacement carries a written warranty. We provide it because our standard of work warrants it   and every 7 Series owner who trusts us deserves complete confidence in what has been done.",
         ],
       },
     ],
@@ -295,7 +279,7 @@ export default function Bmw7SeriesEnginesClient() {
               {whyChooseBlocks.map((item) => (
                 <div
                   key={item.title}
-                  className="rounded-[2rem] border border-slate-200 bg-gradient-to-b from-white to-slate-50 p-8 shadow-sm"
+                  className="rounded-2xl border border-slate-200 bg-gradient-to-b from-white to-slate-50 p-5 shadow-sm"
                 >
                   <div className="flex items-start gap-3">
                     <span className="mt-1 inline-flex h-7 w-7 items-center justify-center rounded-lg bg-primary/10 text-primary">
@@ -349,32 +333,36 @@ export default function Bmw7SeriesEnginesClient() {
       </section>
 
       {/* SERVICES */}
-      <section className="py-14 md:py-20 bg-white border-y border-slate-100 relative overflow-hidden">
-        <div className="absolute bottom-0 left-0 w-[520px] h-[520px] bg-primary/10 blur-[160px] rounded-full -ml-64 -mb-64 pointer-events-none" />
-        <div className="container mx-auto px-4 lg:px-8 relative">
-          <div className="max-w-5xl mx-auto space-y-10">
-            {serviceSections.map((block) => (
-              <div
-                key={block.title}
-                className="rounded-[2.25rem] border border-slate-200 bg-gradient-to-b from-white to-slate-50 p-8 md:p-12 shadow-sm"
-              >
-                <h2 className="text-xl md:text-3xl font-extrabold text-slate-900 tracking-tight">{block.title}</h2>
-                <div className="mt-4 h-1 w-20 rounded-full bg-primary/80"></div>
-
-                <div className="mt-8 space-y-8">
-                  {block.paragraphs.map((p) => (
-                    <div key={p.heading} className="space-y-4">
-                      <h3 className="text-base md:text-lg font-extrabold text-slate-900 tracking-tight">
-                        <span className="inline-block mr-3 align-middle h-2.5 w-2.5 rounded-full bg-primary/80" />
-                        {p.heading}
-                      </h3>
-                      <div className="space-y-4 text-slate-700 leading-relaxed text-sm md:text-base">
-                        {p.text.map((t) => (
-                          <p key={t.slice(0, 70)}>{t}</p>
-                        ))}
-                      </div>
-                    </div>
-                  ))}
+      <section className="py-16 md:py-20 bg-slate-50">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-900">Our BMW 7 Series Engine Services</h2>
+            <div className="w-24 h-1 bg-primary mx-auto rounded-full mt-4"></div>
+            <p className="mt-6 text-slate-600 text-[1.05rem] leading-relaxed">
+              We offer a full spectrum of engine services tailored specifically to BMW 7 Series vehicles. Whatever your engine problem, we have the tools, parts, and expertise to solve it properly.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {[
+              { title: "Head Gasket Replacement", body: "OEM-grade head gasket repair for N63, N57, and N62 units — full cylinder head inspection and pressure testing included.", href: "/services/head-gasket-replacement" },
+              { title: "Timing Chain Replacement", body: "Full timing chain kit for N57 and applicable petrol units — chain, tensioners, guides, and sprockets replaced together.", href: "/services/timing-chain-replacement" },
+              { title: "Timing Belt Replacement", body: "Manufacturer-approved belts and tensioners for applicable 7 Series variants — water pump replacement recommended at the same time.", href: "/services/timing-belt-replacement" },
+              { title: "Turbo Replacement", body: "Quality replacement turbos for all 7 Series variants including N63 hot-V twin turbos — post-installation boost pressure and oil feed testing included.", href: "/services/turbo-replacement" },
+              { title: "Engine Rebuild", body: "Full strip-down and precision rebuild for N63, N57, N62, and B58 units — up to 40% less than a new engine.", href: "/services/engine-rebuild" },
+              { title: "Engine Repair", body: "Oil leaks, misfires, overheating, and warning lights diagnosed and resolved with transparent, fixed-price quotes.", href: "/services/engine-repair" },
+              { title: "Engine Replacement", body: "Low-mileage tested replacements fitted to the highest standard — UK-wide collection and delivery included.", href: "/services/engine-replacement" },
+              { title: "Engine Swap", body: "Performance upgrades and full engine swaps across all 7 Series variants — including ECU reconfiguration where required.", href: "/services/engine-swap" },
+              { title: "Engine Health Check", body: "Professional diagnostics covering fault codes, oil condition, coolant, and belt/chain inspection — full written report provided.", href: "/services/engine-health-check" },
+            ].map((s) => (
+              <div key={s.title} className="rounded-[1.5rem] border border-slate-200 bg-white p-5 shadow-sm flex flex-col justify-between">
+                <div>
+                  <h3 className="text-base font-bold text-slate-900 mb-2">{s.title}</h3>
+                  <p className="text-sm text-slate-700 leading-relaxed line-clamp-4">{s.body}</p>
+                </div>
+                <div className="pt-4">
+                  <Link href={s.href} className="inline-flex items-center justify-center w-full bg-primary text-white font-bold py-2 px-4 text-sm rounded-xl hover:bg-emerald-600 transition-colors">
+                    Explore More
+                  </Link>
                 </div>
               </div>
             ))}
@@ -396,26 +384,22 @@ export default function Bmw7SeriesEnginesClient() {
       <section className="py-20 bg-primary relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 blur-[120px] rounded-full -mr-48 -mt-48"></div>
         <div className="container mx-auto px-4 lg:px-8 text-center max-w-4xl space-y-8 relative z-10">
-          <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter italic leading-tight">
+          <h2 className="text-2xl md:text-3xl font-extrabold text-white leading-tight">
             Ready to get your BMW 7 Series back to the standard its engineering deserves?
           </h2>
-          <p className="text-emerald-100 text-base md:text-lg font-medium max-w-3xl mx-auto leading-relaxed">
-            Call Vogue Technics today or complete our online enquiry form for a fast, no-obligation quote. We are based in , and we serve BMW owners right across the United Kingdom. The 7 Series is BMW&apos;s flagship   and it deserves the
-            full attention of a workshop that understands precisely what that means.
-          </p>
 
-          <div className="flex flex-col md:flex-row gap-6 justify-center pt-4">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
             <Link
               href="/contact-us"
-              className="bg-slate-900 hover:bg-slate-800 text-white font-black py-5 px-10 md:px-12 rounded-[2rem] shadow-2xl transition-all transform hover:-translate-y-2 text-lg md:text-xl flex items-center justify-center gap-4 uppercase tracking-[0.2em]"
+              className="inline-flex items-center justify-center rounded-2xl bg-slate-900 px-8 py-4 font-bold text-white shadow-xl transition-all hover:bg-slate-800 hover:-translate-y-0.5"
             >
               Book online
             </Link>
             <a
               href="tel:01375531355"
-              className="bg-white text-slate-900 font-black py-5 px-10 md:px-12 rounded-[2rem] shadow-2xl transition-all transform hover:-translate-y-2 text-lg md:text-xl flex items-center justify-center gap-4 uppercase tracking-[0.2em] hover:bg-slate-100"
+              className="inline-flex items-center justify-center rounded-2xl bg-white px-8 py-4 font-bold text-slate-900 shadow-xl transition-all hover:bg-slate-50 hover:-translate-y-0.5"
             >
-              <Phone className="w-6 h-6 text-primary" /> 01375 531355
+              <Phone className="w-5 h-5 mr-2 text-primary" /> 01375 531355
             </a>
           </div>
         </div>

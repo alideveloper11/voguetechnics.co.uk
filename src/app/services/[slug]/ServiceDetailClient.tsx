@@ -6,6 +6,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { CheckCircle2, Phone, ArrowRight } from "lucide-react";
 import PartnerLogos from "@/components/common/PartnerLogos";
+import NationwideSupportSection from "@/components/common/NationwideSupportSection";
 import ReviewsSection from "@/components/common/ReviewsSection";
 import FAQSection from "@/components/common/FAQSection";
 import Breadcrumbs from "@/components/common/Breadcrumbs";
@@ -40,7 +41,7 @@ export default function ServiceDetailClient({ service, relatedServices }: Servic
             <div className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-primary/20 text-emerald-400 font-semibold tracking-wider text-sm mb-6 border border-primary/30 shadow-[0_0_15px_rgba(25,135,84,0.3)] uppercase">
               {service.icon} Specialist Care
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-8 tracking-tight uppercase leading-none italic">
+            <h1 className="text-xl md:text-2xl lg:text-3xl font-extrabold text-white mb-6 tracking-tight uppercase leading-tight italic">
               {service.title} <span className="text-primary italic">Detail</span>
             </h1>
             <p className="text-xl text-slate-300 max-w-2xl leading-relaxed font-medium mb-10">
@@ -192,6 +193,7 @@ export default function ServiceDetailClient({ service, relatedServices }: Servic
       <ReviewsSection 
         subtitle={`Hear from our satisfied customers who have experienced our professional ${service.title.toLowerCase()} services.`}
       />
+      <NationwideSupportSection />
       <PartnerLogos />
     </main>
   );

@@ -151,20 +151,20 @@ export default function Bmw4SeriesEnginesClient() {
               {[
                 {
                   title: "We Know Every Engine Variant the 4 Series Has Ever Used",
-                  text: "The 4 Series has run across two generations and multiple chassis variants   F32, F33, F36, G22, G23   with an engine range that spans four-cylinder petrols, six-cylinder diesels, and the high-performance S55 twin-turbo in the M4. Each engine family has its own characteristic failure patterns. The N47 diesel's timing chain vulnerability. The N20 petrol's oil consumption tendencies. The B47's EGR cooler sensitivity. The N57's turbocharger wear under sustained motorway loads. We know all of them   not from a technical bulletin, but from years of hands-on work.",
+                  text: "The 4 Series spans multiple chassis variants   F32, F33, F36, G22, G23   with an engine range covering four-cylinder petrols, six-cylinder diesels, and the S55 twin-turbo in the M4. We know every failure pattern across all of them from years of hands-on work.",
                 },
                 {
                   title: "25 Years of BMW Engine Expertise, Based in ",
-                  text: "Our reputation across the UK has been built entirely on the quality of our work over 25 years. BMW owners travel to us from London, the South East, the Midlands, and further afield   not because we're the closest option, but because they know the standard they'll receive. We've rebuilt and reconditioned more BMW 4 Series engines than most workshops will ever see. That accumulated experience shows in everything we do.",
+                  text: "Our reputation across the UK has been built entirely on the quality of our work over 25 years. We've rebuilt and reconditioned more BMW 4 Series engines than most workshops will ever see.",
                 },
                 {
                   title: "Fully Transparent Pricing   Every Time",
-                  text: "Engine work on a premium BMW deserves complete financial clarity. Before we touch your car, you'll receive a fully itemised quote detailing exactly what work is planned, what parts will be used, and what the total cost will be. No vague estimates, no additions that appear at collection. Call us today or submit an online enquiry and we'll come back to you promptly with an honest, detailed quote.",
+                  text: "Before we touch your car, you'll receive a fully itemised quote detailing exactly what work is planned and what the total cost will be. No vague estimates, no additions that appear at collection.",
                 },
               ].map((item) => (
                 <div
                   key={item.title}
-                  className="rounded-[2rem] border border-slate-200 bg-gradient-to-b from-white to-slate-50 p-8 shadow-sm"
+                  className="rounded-2xl border border-slate-200 bg-gradient-to-b from-white to-slate-50 p-5 shadow-sm"
                 >
                   <div className="flex items-start gap-3">
                     <span className="mt-1 inline-flex h-7 w-7 items-center justify-center rounded-lg bg-primary/10 text-primary">
@@ -212,6 +212,44 @@ export default function Bmw4SeriesEnginesClient() {
         </div>
       </section>
 
+      {/* SERVICES */}
+      <section className="py-16 md:py-20 bg-slate-50">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-900">Our BMW 4 Series Engine Services</h2>
+            <div className="w-24 h-1 bg-primary mx-auto rounded-full mt-4"></div>
+            <p className="mt-6 text-slate-600 text-[1.05rem] leading-relaxed">
+              We offer a full spectrum of engine services tailored specifically to BMW 4 Series vehicles. Whatever your engine problem, we have the tools, parts, and expertise to solve it properly.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {[
+              { title: "Head Gasket Replacement", body: "OEM-grade head gasket repair for N47 and B47 units — full cylinder head inspection and pressure testing included.", href: "/services/head-gasket-replacement" },
+              { title: "Timing Chain Replacement", body: "Full timing chain kit for N47D20, N57, and B47 units — chain, tensioners, guides, and sprockets replaced together.", href: "/services/timing-chain-replacement" },
+              { title: "Timing Belt Replacement", body: "Manufacturer-approved belts and tensioners for applicable 4 Series petrol variants — water pump replacement recommended at the same time.", href: "/services/timing-belt-replacement" },
+              { title: "Turbo Replacement", body: "Quality replacement turbos for all 4 Series variants — post-installation boost pressure and oil feed testing included.", href: "/services/turbo-replacement" },
+              { title: "Engine Rebuild", body: "Full strip-down and precision rebuild covering pistons, bearings, seals, and gaskets — up to 40% less than a new engine.", href: "/services/engine-rebuild" },
+              { title: "Engine Repair", body: "Oil leaks, misfires, overheating, and warning lights diagnosed and resolved with transparent, fixed-price quotes.", href: "/services/engine-repair" },
+              { title: "Engine Replacement", body: "Low-mileage tested replacements fitted to the highest standard — UK-wide collection and delivery included.", href: "/services/engine-replacement" },
+              { title: "Engine Swap", body: "Performance upgrades and full engine swaps across all 4 Series variants — including ECU reconfiguration where required.", href: "/services/engine-swap" },
+              { title: "Engine Health Check", body: "Professional diagnostics covering fault codes, oil condition, coolant, and belt/chain inspection — full written report provided.", href: "/services/engine-health-check" },
+            ].map((s) => (
+              <div key={s.title} className="rounded-[1.5rem] border border-slate-200 bg-white p-5 shadow-sm flex flex-col justify-between">
+                <div>
+                  <h3 className="text-base font-bold text-slate-900 mb-2">{s.title}</h3>
+                  <p className="text-sm text-slate-700 leading-relaxed line-clamp-4">{s.body}</p>
+                </div>
+                <div className="pt-4">
+                  <Link href={s.href} className="inline-flex items-center justify-center w-full bg-primary text-white font-bold py-2 px-4 text-sm rounded-xl hover:bg-emerald-600 transition-colors">
+                    Explore More
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <FAQSection
         title={
           <>
@@ -224,27 +262,22 @@ export default function Bmw4SeriesEnginesClient() {
       <section className="py-20 bg-primary relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 blur-[120px] rounded-full -mr-48 -mt-48"></div>
         <div className="container mx-auto px-4 lg:px-8 text-center max-w-4xl space-y-8 relative z-10">
-          <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter italic leading-tight">
+          <h2 className="text-2xl md:text-3xl font-extrabold text-white leading-tight">
             Ready to get your BMW 4 Series back performing as it should?
           </h2>
-          <p className="text-emerald-100 text-base md:text-lg font-medium max-w-3xl mx-auto leading-relaxed">
-            Call Vogue Technics today or use our online enquiry form for a fast, honest, no-obligation quote. We&apos;re based in , and we
-            serve BMW 4 Series owners right across the United Kingdom. Whatever the variant, whatever the engine, whatever the problem   we have the
-            expertise to fix it properly.
-          </p>
 
-          <div className="flex flex-col md:flex-row gap-6 justify-center pt-4">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
             <Link
               href="/contact-us"
-              className="bg-slate-900 hover:bg-slate-800 text-white font-black py-5 px-10 md:px-12 rounded-[2rem] shadow-2xl transition-all transform hover:-translate-y-2 text-lg md:text-xl flex items-center justify-center gap-4 uppercase tracking-[0.2em]"
+              className="inline-flex items-center justify-center rounded-2xl bg-slate-900 px-8 py-4 font-bold text-white shadow-xl transition-all hover:bg-slate-800 hover:-translate-y-0.5"
             >
               Book online
             </Link>
             <a
               href="tel:01375531355"
-              className="bg-white text-slate-900 font-black py-5 px-10 md:px-12 rounded-[2rem] shadow-2xl transition-all transform hover:-translate-y-2 text-lg md:text-xl flex items-center justify-center gap-4 uppercase tracking-[0.2em] hover:bg-slate-100"
+              className="inline-flex items-center justify-center rounded-2xl bg-white px-8 py-4 font-bold text-slate-900 shadow-xl transition-all hover:bg-slate-50 hover:-translate-y-0.5"
             >
-              <Phone className="w-6 h-6 text-primary" /> 01375 531355
+              <Phone className="w-5 h-5 mr-2 text-primary" /> 01375 531355
             </a>
           </div>
         </div>

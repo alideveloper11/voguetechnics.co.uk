@@ -11,6 +11,7 @@ import RegSearch from "@/components/common/RegSearch";
 import ReviewsSection from "@/components/common/ReviewsSection";
 import FAQSection from "@/components/common/FAQSection";
 import PartnerLogos from "@/components/common/PartnerLogos";
+import NationwideSupportSection from "@/components/common/NationwideSupportSection";
 
 export default function EngineHealthCheckPage() {
   return (
@@ -40,7 +41,7 @@ export default function EngineHealthCheckPage() {
             <motion.h1
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white mb-8 uppercase tracking-tight leading-tight italic"
+              className="text-xl md:text-2xl lg:text-3xl font-extrabold text-white mb-6 uppercase tracking-tight leading-tight italic"
             >
               Engine Health Check Specialists{" "}
               <span className="text-primary italic">for Range Rover, Land Rover, Jaguar, Audi &amp; BMW</span>
@@ -54,19 +55,19 @@ export default function EngineHealthCheckPage() {
             <div className="flex flex-col lg:flex-row gap-4 justify-center items-center mt-10">
               <Link
                 href="/contact-us"
-                className="bg-primary text-white font-black px-10 py-5 rounded-[2rem] shadow-2xl hover:brightness-110 transition-all uppercase tracking-[0.2em] text-xs md:text-sm inline-flex items-center gap-3"
+                className="bg-primary text-white font-black px-6 py-3 rounded-2xl shadow-2xl hover:brightness-110 transition-all uppercase tracking-[0.2em] text-xs md:text-sm inline-flex items-center gap-3"
               >
-                Book an Engine Health Check <ArrowRight className="w-5 h-5" />
+                Get Quote <ArrowRight className="w-5 h-5" />
               </Link>
               <a
                 href="tel:01375531355"
-                className="bg-white text-slate-950 font-black px-10 py-5 rounded-[2rem] shadow-2xl hover:bg-slate-50 transition-all uppercase tracking-[0.2em] text-xs md:text-sm border-4 border-slate-950/10"
+                className="inline-flex items-center justify-center bg-white text-slate-950 font-black px-6 py-3 rounded-2xl shadow-2xl hover:bg-slate-50 transition-all uppercase tracking-[0.2em] text-xs md:text-sm border-4 border-slate-950/10"
               >
                 Call Us Today
               </a>
               <Link
                 href="/contact-us"
-                className="bg-white/15 text-white font-black px-10 py-5 rounded-[2rem] shadow-2xl hover:bg-white/20 transition-all uppercase tracking-[0.2em] text-xs md:text-sm border border-white/20"
+                className="bg-white/15 text-white font-black px-6 py-3 rounded-2xl shadow-2xl hover:bg-white/20 transition-all uppercase tracking-[0.2em] text-xs md:text-sm border border-white/20"
               >
                 Get a Written Report
               </Link>
@@ -313,21 +314,21 @@ export default function EngineHealthCheckPage() {
           <div className="flex flex-col lg:flex-row gap-6 justify-center items-center">
             <Link
               href="/contact-us"
-              className="bg-slate-950 text-white font-black px-7 py-3 rounded-xl shadow-2xl hover:bg-slate-900 transition-all uppercase tracking-[0.2em] text-xs md:text-sm flex items-center gap-4"
+              className="bg-slate-950 text-white font-black px-4 py-2 rounded-xl shadow-2xl hover:bg-slate-900 transition-all uppercase tracking-[0.2em] text-xs"
             >
-              Book an Engine Health Check <ArrowRight className="w-6 h-6 text-primary" />
+              Request Quote
             </Link>
             <a
               href="tel:01375531355"
-              className="bg-white text-slate-950 font-black px-7 py-3 rounded-xl shadow-2xl hover:bg-slate-50 transition-all uppercase tracking-[0.2em] text-xs md:text-sm border-4 border-slate-950/10"
+              className="bg-white text-slate-950 font-black px-4 py-2 rounded-xl shadow-2xl hover:bg-slate-50 transition-all uppercase tracking-[0.2em] text-xs border-4 border-slate-950/10"
             >
-              Call Us and Speak to a Specialist
+              Call Us
             </a>
             <Link
               href="/contact-us"
-              className="bg-white/20 text-white font-black px-7 py-3 rounded-xl shadow-2xl hover:bg-white/25 transition-all uppercase tracking-[0.2em] text-xs md:text-sm border border-white/20"
+              className="bg-white/20 text-white font-black px-4 py-2 rounded-xl shadow-2xl hover:bg-white/25 transition-all uppercase tracking-[0.2em] text-xs border border-white/20"
             >
-              Request a Written Quote
+              Book Inspection
             </Link>
           </div>
 
@@ -339,6 +340,7 @@ export default function EngineHealthCheckPage() {
       </section>
 
       <ReviewsSection subtitle="Hear from our satisfied customers who have experienced our professional specialist engine services." />
+      <NationwideSupportSection />
       <PartnerLogos />
     </main>
   );

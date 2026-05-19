@@ -169,20 +169,20 @@ export default function Bmw3SeriesEnginesClient() {
               {[
                 {
                   title: "We Know the BMW 3 Series Engine Families in Genuine Depth",
-                  text: "The 3 Series has been powered by a wide range of engines across its generations   the N47 and B47 diesel families, the N20 and B48 four-cylinder petrols, and the N55 and B58 inline-six petrol units, each with their own architecture, their own known vulnerabilities, and their own correct repair procedures. The N47 diesel in particular   infamous for its rear-mounted timing chain   has been one of the most discussed and most mishandled engines in the UK independent workshop sector. We've rebuilt more of them than most garages have seen, and we understand precisely what it takes to resolve N47 timing chain failure properly and permanently.",
+                  text: "From the N47 diesel to the B58 inline-six petrol, we've rebuilt more 3 Series engines than most garages have ever seen.",
                 },
                 {
                   title: "Over 25 Years of Specialist BMW Engine Experience",
-                  text: "Our workshop in  has been carrying out BMW 3 Series engine rebuilds, repairs, and replacements since the E46 was the current model. That's a span of experience that covers every significant generation of the 3 Series   E46, E90, F30, and G20   and every major powertrain variant sold in the UK market. Our reputation has never been built on advertising spend. It's been built on results that hold up, prices that are honest, and a team that communicates clearly throughout every job.",
+                  text: "Covering E46, E90, F30, and G20 generations — our reputation is built on results that hold up and prices that are honest.",
                 },
                 {
                   title: "Transparent Pricing and Honest Recommendations",
-                  text: "Engine work on a premium vehicle like the BMW 3 Series carries a financial weight that's hard to ignore. We take that seriously. Every customer receives a clear, itemised quote before any work begins   no vague estimates, no exploratory charges, no revision of costs mid-job without prior discussion. If our diagnostic process turns up something unexpected, we tell you before we act on it. Always.",
+                  text: "Clear, itemised quotes before any work begins — no vague estimates, no surprise charges at collection.",
                 },
               ].map((item) => (
                 <div
                   key={item.title}
-                  className="rounded-[2rem] border border-slate-200 bg-gradient-to-b from-white to-slate-50 p-8 shadow-sm"
+                  className="rounded-2xl border border-slate-200 bg-gradient-to-b from-white to-slate-50 p-5 shadow-sm"
                 >
                   <div className="flex items-start gap-3">
                     <span className="mt-1 inline-flex h-7 w-7 items-center justify-center rounded-lg bg-primary/10 text-primary">
@@ -232,112 +232,35 @@ export default function Bmw3SeriesEnginesClient() {
       </section>
 
       {/* SERVICES */}
-      <section className="py-24 bg-slate-50 border-y border-slate-100">
+      <section className="py-16 md:py-20 bg-slate-50">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="max-w-5xl mx-auto space-y-10">
-            <div className="rounded-[2.25rem] border border-slate-200 bg-gradient-to-b from-white to-slate-50 p-8 md:p-12 shadow-sm">
-              <h2 className="text-2xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
-                Our BMW 3 Series Engine Services
-              </h2>
-              <p className="mt-5 text-slate-700 leading-relaxed">
-                From a precise targeted repair to a complete BMW 3 Series engine rebuild, every service we carry out is approached with the same
-                level of technical rigour and professional care. Each service below deserves its own attention   and that&apos;s exactly what we give it.
-              </p>
-            </div>
-
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-900">Our BMW 3 Series Engine Services</h2>
+            <div className="w-24 h-1 bg-primary mx-auto rounded-full mt-4"></div>
+            <p className="mt-6 text-slate-600 text-[1.05rem] leading-relaxed">
+              We offer a full spectrum of engine services tailored specifically to BMW 3 Series vehicles. Whatever your engine problem, we have the tools, parts, and expertise to solve it properly.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {[
-              {
-                title: "Head Gasket Replacement",
-                body: [
-                  "Head gasket failure on the BMW 3 Series is a problem that demands immediate action. The symptoms are familiar to anyone who has encountered them   white or bluish exhaust smoke that lingers longer than it should, coolant levels that drop without any visible external leak, or an engine temperature gauge that creeps higher than normal under ordinary driving conditions. These are not symptoms to monitor cautiously over a few more weeks. They are symptoms to act on today.",
-                  "Left unaddressed, a failing head gasket allows combustion gases into the cooling system and coolant into the combustion chambers. The cylinder head warps. The damage compounds. What began as a head gasket replacement becomes a cylinder head skim, or worse, a full engine rebuild.",
-                  "We carry out BMW 3 Series head gasket replacement using OEM-grade sealing components, with a full cooling system inspection and pressure test completed as part of every job. The engine does not return to service until we are satisfied the repair is complete and the seal is holding correctly under operating pressure.",
-                ],
-                href: "/services/head-gasket-replacement",
-              },
-              {
-                title: "Timing Chain Replacement",
-                body: [
-                  "If there is a single engine issue that defines the BMW 3 Series ownership experience for hundreds of thousands of UK drivers, it is N47 timing chain failure. The N47D20 diesel engine   fitted across a wide range of E90 and F30 3 Series models   positions its timing chain at the rear of the engine, driven directly off the crankshaft. It is an engineering decision that makes replacement significantly more labour-intensive than a front-mounted chain, and it is a design that has proven genuinely susceptible to accelerated wear.",
-                  "The cold-start rattle is the warning most owners notice first. A brief metallic clatter that disappears after a few seconds of running. Many dismiss it. By the time it becomes persistent, the chain has typically stretched well beyond safe limits. When it snaps   and on a neglected N47, it will snap   the internal damage is catastrophic and the engine is rarely economically salvageable.",
-                  "We carry out complete BMW 3 Series timing chain replacement as a full system job: chain, tensioners, guides, and sprockets all replaced together. Replacing the chain alone while leaving worn guides and tensioners in place is a compromise we will not make, because it leads directly back to the same failure within a fraction of the original mileage. If your 3 Series diesel is showing any timing chain symptoms, contact us before the situation deteriorates further.",
-                ],
-                href: "/services/timing-chain-replacement",
-              },
-              {
-                title: "Timing Belt Replacement",
-                body: [
-                  "Certain BMW 3 Series petrol variants   particularly earlier N20-engined models   use a timing belt rather than a chain as part of their valvetrain system. A timing belt offers no warning before it fails. There is no rattle, no gradual deterioration in performance, no amber warning light. It simply breaks, and the engine destruction that follows is instant   bent valves, damaged pistons, and in most cases an engine that cannot be saved at a cost that makes sense.",
-                  "We carry out BMW 3 Series timing belt replacement using manufacturer-specified belt kits and recommend replacement at or before the stated service interval without exception. If you&apos;ve purchased a used 3 Series petrol and cannot confirm when the belt was last changed, this is not something to defer. Book an inspection with us and we&apos;ll assess its condition and advise you honestly.",
-                ],
-                href: "/services/timing-belt-replacement",
-              },
-              {
-                title: "Turbo Replacement",
-                body: [
-                  "The turbocharged engines across the BMW 3 Series range   both diesel and petrol   rely on the turbocharger to deliver the performance and efficiency these cars are known for. When the turbo begins to fail, the signs are gradual at first and then increasingly difficult to ignore. Reduced power under load, an increase in exhaust smoke, oil consumption that&apos;s crept upward over recent months, or an audible whine or whistle under acceleration   any of these warrant immediate investigation.",
-                  "Continuing to drive on a failing turbo risks oil contamination throughout the engine, which significantly increases the scope and cost of the repair. We carry out BMW 3 Series turbo replacement using quality units matched to your specific engine variant, with every installation followed by post-fitting testing under operating conditions to confirm correct boost pressure and oil supply before the vehicle is handed back.",
-                ],
-                href: "/services/turbo-replacement",
-              },
-              {
-                title: "Engine Rebuild",
-                body: [
-                  "A full BMW 3 Series engine rebuild is the definitive solution for a unit that has accumulated widespread internal wear   typically on higher-mileage engines where pistons, bearings, cylinder walls, and the cylinder head all show signs of degradation that go beyond what targeted repairs can address economically.",
-                  "Rather than spending money sequentially on individual faults in an engine that is fundamentally tired, a thorough rebuild addresses everything in a single, comprehensive process. We strip the engine completely, assess every internal component individually against manufacturer tolerances, replace all worn or damaged parts with quality components, and reassemble to factory specifications. The rebuilt engine is tested before refitting.",
-                  "The result is a unit that performs and behaves like a fresh engine   because functionally, it is one. At a cost that is a fraction of sourcing a new engine or replacing the vehicle.",
-                ],
-                href: "/services/engine-rebuild",
-              },
-              {
-                title: "Engine Repair",
-                body: [
-                  "Not every BMW 3 Series engine problem requires a full rebuild, and recommending one when it isn't warranted is not something we do. Our diagnostic approach is methodical and honest   we identify the actual root cause of the fault before any repair work begins, so you pay only for what genuinely needs attention.",
-                  "Engine repairs we carry out regularly on the BMW 3 Series include EGR valve work, oil leak rectification from various seals and gaskets, injector seal failures, bearing replacements, valve train repairs, sensor and management system faults, and cylinder head work following overheating events. Whatever the fault, our approach is consistent: find the cause precisely, fix it properly, and ensure it doesn't return.",
-                ],
-                href: "/services/engine-repair",
-              },
-              {
-                title: "Engine Replacement",
-                body: [
-                  "When multiple internal components have failed simultaneously, or when the cumulative cost of a rebuild exceeds what makes financial sense for the vehicle, a BMW 3 Series engine replacement is often the most practical and cost-effective route forward.",
-                  "We supply and fit quality reconditioned BMW 3 Series engines and carefully selected low-mileage used engines sourced from trusted UK suppliers across all major engine variants   N47, B47, N55, B58, N20, and B48. Every unit is inspected and bench-tested before installation. We explain the cost difference between a reconditioned and a used unit honestly, give you our genuine recommendation based on your vehicle&apos;s condition and your budget, and let you make the decision with complete information.",
-                ],
-                href: "/services/engine-replacement",
-              },
-              {
-                title: "Engine Swap",
-                body: [
-                  "Whether you're fitting a lower-mileage engine variant into your existing 3 Series bodyshell, upgrading from a diesel to a petrol powertrain, or undertaking a more ambitious performance conversion, a BMW 3 Series engine swap is a technically complex job that demands careful execution at every stage.",
-                  "Our engine swap service covers the complete process from start to finish   sourcing the right donor unit, managing all mounting configurations, ancillary connections, and wiring integration, post-swap ECU calibration, and full diagnostic testing before handover. We don't hand a vehicle back until every system is communicating correctly and the engine is performing exactly as it should under real driving conditions.",
-                ],
-                href: "/services/engine-swap",
-              },
-              {
-                title: "Engine Health Check",
-                body: [
-                  "Perhaps your 3 Series is running slightly differently but there's no obvious fault you can point to. Or perhaps you're considering buying a used BMW 3 Series and want a professional, impartial assessment of the engine's condition before you commit to the purchase. Either scenario is exactly what our BMW 3 Series engine health check is designed for.",
-                  "The check covers full diagnostic scanning for stored and pending fault codes, compression testing across all cylinders, oil condition and contamination analysis, coolant system inspection, and a thorough visual assessment of all accessible engine components. At the end, you receive a clear written report with our honest findings and practical recommendations. No alarmism, no upselling, no vague concerns designed to generate unnecessary work. Just a straightforward professional assessment you can rely on entirely.",
-                ],
-                href: "/services/engine-health-check",
-              },
+              { title: "Head Gasket Replacement", body: "OEM-grade head gasket repair for N47 and B47 units — full cylinder head inspection and pressure testing included.", href: "/services/head-gasket-replacement" },
+              { title: "Timing Chain Replacement", body: "Full timing chain kit for N47D20 and B47 units — chain, tensioners, guides, and sprockets replaced together.", href: "/services/timing-chain-replacement" },
+              { title: "Timing Belt Replacement", body: "Manufacturer-approved belts and tensioners for applicable 3 Series petrol variants — water pump replacement recommended at the same time.", href: "/services/timing-belt-replacement" },
+              { title: "Turbo Replacement", body: "Quality replacement turbos for all 3 Series variants — post-installation boost pressure and oil feed testing included.", href: "/services/turbo-replacement" },
+              { title: "Engine Rebuild", body: "Full strip-down and precision rebuild covering pistons, bearings, seals, and gaskets — up to 40% less than a new engine.", href: "/services/engine-rebuild" },
+              { title: "Engine Repair", body: "Oil leaks, misfires, overheating, and warning lights diagnosed and resolved with transparent, fixed-price quotes.", href: "/services/engine-repair" },
+              { title: "Engine Replacement", body: "Low-mileage tested replacements fitted to the highest standard — UK-wide collection and delivery included.", href: "/services/engine-replacement" },
+              { title: "Engine Swap", body: "Performance upgrades and full engine swaps across all 3 Series variants — including ECU reconfiguration where required.", href: "/services/engine-swap" },
+              { title: "Engine Health Check", body: "Professional diagnostics covering fault codes, oil condition, coolant, and belt/chain inspection — full written report provided.", href: "/services/engine-health-check" },
             ].map((s) => (
-              <div
-                key={s.title}
-                className="rounded-[2.25rem] border border-slate-200 bg-gradient-to-b from-white to-slate-50 p-8 md:p-12 shadow-sm"
-              >
-                <h3 className="text-xl md:text-2xl font-extrabold text-slate-900 tracking-tight">{s.title}</h3>
-                <div className="mt-4 space-y-4 text-slate-700 leading-relaxed">
-                  {s.body.map((p) => (
-                    <p key={p.slice(0, 70)}>{p}</p>
-                  ))}
+              <div key={s.title} className="rounded-[1.5rem] border border-slate-200 bg-white p-5 shadow-sm flex flex-col justify-between">
+                <div>
+                  <h3 className="text-base font-bold text-slate-900 mb-2">{s.title}</h3>
+                  <p className="text-sm text-slate-700 leading-relaxed line-clamp-4">{s.body}</p>
                 </div>
-                <div className="mt-6">
-                  <Link
-                    href={s.href}
-                    className="inline-flex items-center justify-center rounded-2xl bg-primary px-6 py-3 text-white font-extrabold text-xs tracking-[0.14em] hover:bg-primary/90 transition-colors"
-                  >
-                    Explore More <ArrowRight className="w-4 h-4 ml-2" />
+                <div className="pt-4">
+                  <Link href={s.href} className="inline-flex items-center justify-center w-full bg-primary text-white font-bold py-2 px-4 text-sm rounded-xl hover:bg-emerald-600 transition-colors">
+                    Explore More
                   </Link>
                 </div>
               </div>
@@ -363,19 +286,14 @@ export default function Bmw3SeriesEnginesClient() {
               <div className="rounded-[1.75rem] border border-slate-200 bg-white p-7">
                 <h3 className="font-extrabold text-slate-900 tracking-tight">Engine Collection &amp; Delivery Across the UK</h3>
                 <p className="mt-3 text-slate-700 leading-relaxed">
-                  We offer a fully managed engine collection and delivery service covering the whole of Great Britain. If your 3 Series can&apos;t make
-                  it to    or if the engine has already failed and the car isn&apos;t driveable   we collect your old unit, carry out the rebuild or
-                  replacement at our workshop, and return the finished engine fully tested, properly packaged, and ready to fit. We can also connect
-                  you with approved installation partners nationwide if you need the fitting handled locally.
+                  We offer a fully managed engine collection and delivery service covering the whole of Great Britain. We collect your old unit, carry out the rebuild or
+                  replacement at our workshop, and return the finished engine fully tested and ready to fit.
                 </p>
               </div>
               <div className="rounded-[1.75rem] border border-slate-200 bg-white p-7">
                 <h3 className="font-extrabold text-slate-900 tracking-tight">Realistic Turnaround Times   Confirmed and Kept</h3>
                 <p className="mt-3 text-slate-700 leading-relaxed">
-                  Most BMW 3 Series engine rebuilds are completed within 5–10 working days. Targeted repairs and engine replacements are often
-                  completed faster. We give you a genuine, considered timeframe at the point of booking   not an optimistic figure designed to secure
-                  your business   and we consistently deliver on it. You&apos;ll receive updates throughout the process so you&apos;re never left wondering
-                  where your engine is.
+                  Most BMW 3 Series engine rebuilds are completed within 5–10 working days. We give you a genuine, considered timeframe at the point of booking and consistently deliver on it.
                 </p>
               </div>
             </div>
@@ -397,29 +315,22 @@ export default function Bmw3SeriesEnginesClient() {
       <section className="py-20 bg-primary relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 blur-[120px] rounded-full -mr-48 -mt-48"></div>
         <div className="container mx-auto px-4 lg:px-8 text-center max-w-4xl space-y-8 relative z-10">
-          <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter italic leading-tight">
-            Ready to get your BMW 3 Series back on the road   properly handled?
+          <h2 className="text-2xl md:text-3xl font-extrabold text-white leading-tight">
+            Ready to get your BMW 3 Series back on the road — properly handled?
           </h2>
-          <p className="text-emerald-100 text-base md:text-lg font-medium max-w-3xl mx-auto leading-relaxed">
-            Ready to get your BMW 3 Series back on the road   properly rebuilt, honestly priced, and backed by a written warranty? Call Vogue
-            Technics today or complete our online enquiry form for a fast, no-obligation quote. We&apos;re based in , and we serve BMW 3
-            Series owners right across the United Kingdom.
-            <br />
-            Twenty-five years of BMW engine expertise. One workshop. Every 3 Series engine, handled properly.
-          </p>
 
-          <div className="flex flex-col md:flex-row gap-6 justify-center pt-4">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
             <Link
               href="/contact-us"
-              className="bg-slate-900 hover:bg-slate-800 text-white font-black py-5 px-10 md:px-12 rounded-[2rem] shadow-2xl transition-all transform hover:-translate-y-2 text-lg md:text-xl flex items-center justify-center gap-4 uppercase tracking-[0.2em]"
+              className="inline-flex items-center justify-center rounded-2xl bg-slate-900 px-8 py-4 font-bold text-white shadow-xl transition-all hover:bg-slate-800 hover:-translate-y-0.5"
             >
               Book online
             </Link>
             <a
               href="tel:01375531355"
-              className="bg-white text-slate-900 font-black py-5 px-10 md:px-12 rounded-[2rem] shadow-2xl transition-all transform hover:-translate-y-2 text-lg md:text-xl flex items-center justify-center gap-4 uppercase tracking-[0.2em] hover:bg-slate-100"
+              className="inline-flex items-center justify-center rounded-2xl bg-white px-8 py-4 font-bold text-slate-900 shadow-xl transition-all hover:bg-slate-50 hover:-translate-y-0.5"
             >
-              <Phone className="w-6 h-6 text-primary" /> 01375 531355
+              <Phone className="w-5 h-5 mr-2 text-primary" /> 01375 531355
             </a>
           </div>
         </div>

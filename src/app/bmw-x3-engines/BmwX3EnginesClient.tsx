@@ -129,91 +129,21 @@ export default function BmwX3EnginesClient() {
               transition={{ delay: 0.1 }}
               className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-emerald-50 tracking-tight mb-6 leading-tight"
             >
-              <span className="text-primary italic">BMW X3</span> Engine Rebuild   Specialist Engine Repairs, Rebuilds
-              &amp; Replacements Across the UK
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 via-green-400 to-lime-300">
+                BMW X3 Engine Rebuild
+              </span>{" "}
+              Expert Reconditioning, Repair &amp; Replacement Across the UK
             </motion.h1>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="text-lg md:text-xl text-slate-200 leading-relaxed mb-8"
-            >
-              The BMW X3 has earned its place as one of the most capable and enduring premium SUVs on British roads.
-              Whether you own an E83, an F25, or a G01, the X3 is built to cover serious mileage   but even the
-              best-engineered diesel eventually reaches a point where the engine needs professional attention. When
-              that point arrives, the garage you choose matters enormously.
-            </motion.p>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.25 }}
-              className="text-base md:text-lg text-slate-200 leading-relaxed mb-10"
-            >
-              At Vogue Technics, based in , we carry out BMW X3 engine rebuilds, targeted repairs, and
-              complete engine replacements across the full X3 range. We work on every engine family fitted to the X3  
-              from the four-cylinder N47 and B47 diesel units through to the inline-six N57 and B57 engines fitted to
-              the xDrive30d and xDrive35d variants. These are not engines that reward guesswork, and they are not
-              engines we approach without the specific knowledge each one demands.
-            </motion.p>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="text-base md:text-lg text-slate-200 leading-relaxed mb-10"
-            >
-              With over 25 years of BMW engine experience and a workshop in  that serves owners across the entire
-              United Kingdom, we are the specialist choice when your X3 needs more than a general garage can offer.
-            </motion.p>
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.35 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+              transition={{ delay: 0.18 }}
+              className="flex justify-center mt-6 mb-8 w-full"
             >
-              <Link
-                href="/contact-us"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-white font-bold px-8 py-4 rounded-full shadow-lg transition-all duration-300 hover:shadow-primary/25"
-              >
-                Get a Free Quote <ArrowRight className="w-5 h-5" />
-              </Link>
-              <Link
-                href="tel:+441375898109"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/15 text-white font-bold px-8 py-4 rounded-full border border-white/20 backdrop-blur transition-all duration-300"
-              >
-                <Phone className="w-5 h-5" /> Call Now
-              </Link>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-              className="mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm text-slate-200"
-            >
-              {[
-                "Over 25 Years BMW Experience",
-                "Written, Itemised Quotes",
-                "UK-Wide Collection & Return",
-                "Written Warranty Included",
-              ].map((item) => (
-                <span key={item} className="inline-flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-300" />
-                  {item}
-                </span>
-              ))}
+              <RegSearch />
             </motion.div>
           </div>
-        </div>
-      </section>
-
-      {/* Reg Search */}
-      <section className="py-10 bg-white border-b border-slate-100">
-        <div className="container mx-auto px-4 lg:px-8">
-          <RegSearch />
         </div>
       </section>
 
@@ -266,25 +196,24 @@ export default function BmwX3EnginesClient() {
                 {
                   title: "We Know Every Engine Fitted to the BMW X3",
                   text: [
-                    "The X3 has been produced across three chassis generations   E83, F25, and G01   and across that production run it has been fitted with a wide range of engines. The N47D20 four-cylinder diesel with its rear-mounted timing chain. The N57D30 inline-six diesel with its documented timing chain tensioner vulnerabilities, EGR cooler cracking risks, and swirl flap failure patterns. The later B47D20 and B57D30 units with their front-mounted chains and refined but still demanding engineering. The N20, N55, and B48 petrol variants with their own distinct fault characteristics.",
-                    "Each of these engines has specific failure modes, specific rebuild requirements, and specific tolerances that must be understood and respected. Our technicians work across all of them   consistently, not occasionally.",
+                    "The X3 has been produced across three chassis generations   E83, F25, and G01   with engines spanning the N47D20, N57D30, B47D20, B57D30, N20, N55, and B48 families. Each has specific failure modes and rebuild requirements. Our technicians work across all of them   consistently, not occasionally.",
                   ],
                 },
                 {
                   title: "Over 25 Years of BMW Engine Work From ",
                   text: [
-                    "Vogue Technics has been operating from  for over two decades, building a reputation across , London, and the wider UK entirely through the quality of our work and the honesty of our advice. BMW X3 owners come to us from across the country because genuine specialist knowledge of this range   particularly the N57 inline-six   is harder to find than most owners realise until they start looking.",
+                    "Vogue Technics has been operating for over two decades, building a reputation entirely through the quality of our work. BMW X3 owners come to us from across the country because genuine specialist knowledge of this range   particularly the N57 inline-six   is harder to find than most owners realise.",
                   ],
                 },
                 {
                   title: "Transparent Quotes, No Hidden Costs",
                   text: [
-                    "Engine work on a premium BMW SUV is a significant financial commitment, and we treat it as one. Every job at Vogue Technics begins with a clear, itemised quote before any work is authorised   no vague estimates, no costs that appear later in the process. You know exactly what the job involves and what it costs before we start. Contact us by phone or online enquiry for your fast, no-obligation quote.",
+                    "Every job at Vogue Technics begins with a clear, itemised quote before any work is authorised. No vague estimates, no costs that appear later in the process   you know exactly what the job involves and what it costs before we start.",
                   ],
                 },
               ].map((block) => (
-                <div key={block.title} className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
-                  <h3 className="text-lg font-extrabold text-slate-900 mb-4">{block.title}</h3>
+                <div key={block.title} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+                  <h3 className="text-base font-extrabold text-slate-900 mb-4">{block.title}</h3>
                   <div className="space-y-4 text-slate-700 leading-relaxed">
                     {block.text.map((p) => (
                       <p key={p}>{p}</p>
@@ -298,88 +227,39 @@ export default function BmwX3EnginesClient() {
       </section>
 
       {/* SERVICES */}
-      <section className="py-24 bg-white">
+      <section className="py-16 md:py-20 bg-slate-50">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
-                Our <span className="text-primary italic">BMW X3</span> Engine Services
-              </h2>
-            </div>
-
-            <div className="space-y-8">
-              {[
-                {
-                  title: "Head Gasket Replacement",
-                  paragraphs: [
-                    "Head gasket failure on BMW X3 diesel engines   particularly the N47 and N57 units   is more common than many owners expect, and it tends to develop gradually rather than catastrophically. Coolant loss without a visible external leak, white or grey smoke on cold start that clears as the engine warms, or an overheating warning that keeps returning despite coolant top-ups   these are the tell-tale signs that demand immediate professional assessment.",
-                    "The N57 inline-six is particularly susceptible to head gasket stress due to its higher thermal loading, and a failed gasket on this engine can allow coolant into the combustion chambers with severe consequences if left unaddressed. We replace head gaskets across all X3 engine variants using OEM-grade components, resurface cylinder heads where required, and pressure-test the cooling system fully before returning the vehicle. Early intervention is always the right decision.",
-                  ],
-                },
-                {
-                  title: "Timing Chain Replacement & Repair",
-                  paragraphs: [
-                    "Timing chain problems affect the BMW X3 diesel range in two distinct ways depending on the engine   and understanding the difference is essential to getting the repair right.",
-                    "On the N47D20, the timing chain sits at the rear of the engine block   a design that makes replacement a labour-intensive job requiring genuine familiarity with the engine's architecture. The chain stretches with use and wear, typically producing a cold-start rattle that owners frequently dismiss as normal. It is not. A jumped or snapped N47 timing chain causes immediate and severe internal engine damage.",
-                    "On the N57D30 inline-six, the failure mode is different. The timing chain tensioner loses hydraulic pressure before the chain itself becomes critically worn   presenting as subtle symptoms like a slight hesitation at low revs or a timing-related fault code that appears intermittently. By the time the chain rattles audibly on an N57, the problem has already progressed significantly.",
-                    "We carry out BMW X3 timing chain replacement on both N47 and N57 engines as complete system jobs   chain, tensioners, guides, and sprockets replaced together. We also carry out timing chain work on B47 and B57 units where required. If your X3 has a cold-start rattle or a timing-related fault code, contact us without delay.",
-                  ],
-                },
-                {
-                  title: "Turbo Replacement & Turbocharger Repair",
-                  paragraphs: [
-                    "Turbocharger problems across the BMW X3 diesel range typically manifest as power loss under acceleration, black or blue smoke under load, a whistling or rattling sound from the engine bay, or sluggish throttle response that has developed gradually rather than suddenly. On the N57 inline-six, wastegate actuator wear is a particularly common cause of inconsistent power delivery   affecting boost control before the turbo fails more completely.",
-                    "We source quality replacement turbos for all X3 diesel engine variants   N47, N57, B47, and B57   specified correctly for each application. Every replacement includes correct fitment to manufacturer torque specifications, oil feed and return line inspection and replacement where necessary, and full boost pressure verification post-installation. A turbocharger left to deteriorate risks sending metal debris into the engine oil circuit, compounding the repair significantly   early action is always the right call.",
-                  ],
-                },
-                {
-                  title: "Engine Rebuild",
-                  paragraphs: [
-                    "A BMW X3 engine rebuild is not a uniform process   and any workshop that approaches it as one is already starting from the wrong position. The X3 has been fitted with meaningfully different engines across its three chassis generations, and the rebuild requirements vary significantly between them. An N47D20 four-cylinder rebuild and an N57D30 inline-six rebuild are not the same job in terms of complexity, precision demands, time, or the specific knowledge required to execute either one correctly.",
-                    "At Vogue Technics, every BMW X3 engine rebuild begins the same way regardless of variant   with a complete strip-down and a methodical, individual assessment of every internal component under proper workshop conditions. Nothing is assumed to be serviceable based on visual appearance alone. Bearings, piston rings, valve seats, thrust washers, seals, and gaskets are all measured and assessed against BMW's factory tolerances for that specific engine code. Anything that falls outside of those tolerances is replaced   without compromise and without that decision being hidden from you in the final bill.",
-                    "The N57 inline-six demands particular respect during the rebuild process. Its six-cylinder architecture, higher output, and more complex internal geometry mean that reassembly to the correct factory specifications requires a level of precision and familiarity that only comes from having worked on these engines consistently over time. We have. The result   regardless of whether the engine is a four-cylinder B47 or a full inline-six N57   is a unit rebuilt to perform and last at the standard the X3 was originally engineered to deliver.",
-                  ],
-                },
-                {
-                  title: "Engine Repair",
-                  paragraphs: [
-                    "Not every BMW X3 engine problem requires a full rebuild, and recommending one when a targeted repair will genuinely resolve the issue is something we simply do not do. Our engine repair service is built around accurate diagnosis first   because the quality of the repair depends entirely on the accuracy of the diagnosis that precedes it.",
-                    "We carry out thorough diagnostic work using proper workshop equipment and genuine knowledge of the fault patterns specific to each X3 engine family. The N47's rear timing chain issues present differently to the N57's tensioner-led failure mode. An EGR fault on an N57 inline-six has different root cause characteristics to the same code on a B47 four-cylinder. A turbo wastegate actuator problem on the xDrive30d manifests in ways that a generic BMW diesel diagnosis misses entirely. Getting the diagnosis right is what determines whether the repair resolves the problem permanently   or simply clears the fault code until the underlying issue resurfaces.",
-                    "Once we have identified the precise fault, we address it directly and completely. Whether the problem is bearing wear, an oil leak from a deteriorating seal, valve damage, injector seat carbon build-up, a swirl flap fragment causing sensor interference, or an EGR-related fault that has been generating codes for months   we carry out the repair correctly, with components specified for the exact engine being worked on. You pay for what your BMW X3 engine actually requires. Nothing beyond that is recommended, and nothing beyond that is charged.",
-                  ],
-                },
-                {
-                  title: "Engine Replacement",
-                  paragraphs: [
-                    "There are circumstances where engine replacement is the more sensible and cost-effective decision   and we say so clearly when the evidence points that way. When multiple systems have failed simultaneously, when the extent of internal damage from a timing chain failure or turbo disintegration makes a rebuild impractical, or when the overall condition of the engine identified during initial assessment makes replacement more commercially sensible relative to the vehicle's value   replacement is the honest recommendation and the right one.",
-                    "We source reconditioned BMW X3 engines from trusted UK suppliers across all engine families   N47, N57, B47, B57, N20, N55, and B48   with verified mileage histories appropriate to the variant being replaced. Every unit undergoes thorough pre-installation testing at our  workshop before anything is fitted to your vehicle. Compression is checked across all cylinders, oil condition is assessed, and the overall integrity of the unit is verified before installation begins. On inline-six N57 and B57 units, we carry out additional assessments given the complexity and value of these engines.",
-                    "We do not fit engines we have not verified. Our name goes on every job we complete, and that means every reconditioned unit we install has been assessed to a standard we are confident standing behind   not simply accepted from a supplier and bolted .",
-                  ],
-                },
-                {
-                  title: "Engine Health Check",
-                  paragraphs: [
-                    "The BMW X3 engine health check at Vogue Technics is structured around the specific engines fitted to each chassis generation   which means the assessment you receive is genuinely relevant to your vehicle, not a generic diagnostic process applied uniformly across every BMW that comes through the door.",
-                    "For four-cylinder N47 and B47 diesel engines, the health check focuses particularly on timing chain condition, oil feed system integrity, turbocharger response, and EGR system performance   the areas where these engines most commonly develop problems that are well established by the time obvious symptoms appear.",
-                    "For inline-six N57 and B57 engines, the assessment goes further. Timing chain tensioner hydraulic pressure behaviour is evaluated alongside chain condition   because on the N57, tensioner failure precedes chain failure and presents with subtler early symptoms. EGR cooler condition is assessed for signs of internal coolant weeping. Swirl flap integrity is checked visually and through inlet manifold pressure response. Oil separator condition is evaluated alongside overall oil consumption behaviour.",
-                    "Across all variants, the health check includes compression testing across every cylinder, oil condition and contamination analysis, full electronic diagnostic scanning across all relevant control modules, turbocharger condition and response assessment, and a detailed visual inspection of all accessible engine components, fluid systems, hoses, and ancillaries.",
-                    "You receive a written report in plain, direct language at the end of the process. Precise findings. Honest recommendations. A clear account of your engine's actual condition   ranked by urgency, explained without technical evasion, and presented without any upselling agenda. If the engine is in good health, the report will say so. If something is developing beneath the surface   a tensioner showing early signs of pressure drop, an EGR cooler weeping traces of coolant, a turbo with early bearing wear   you will know exactly what it is, what it means for the engine's future reliability, and what addressing it involves. The information you need to make a fully informed decision about your BMW X3, clearly and honestly presented.",
-                  ],
-                },
-              ].map((item) => (
-                <div
-                  key={item.title}
-                  className="rounded-[2rem] border border-slate-200 bg-gradient-to-b from-white to-slate-50 p-8 shadow-sm"
-                >
-                  <h3 className="text-xl md:text-2xl font-extrabold text-slate-900 mb-4">{item.title}</h3>
-                  <div className="space-y-4 text-slate-700 leading-relaxed">
-                    {item.paragraphs.map((p) => (
-                      <p key={p}>{p}</p>
-                    ))}
-                  </div>
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-900">Our BMW X3 Engine Services</h2>
+            <div className="w-24 h-1 bg-primary mx-auto rounded-full mt-4"></div>
+            <p className="mt-6 text-slate-600 text-[1.05rem] leading-relaxed">
+              We offer a full spectrum of engine services tailored specifically to BMW X3 vehicles. Whatever your engine problem, we have the tools, parts, and expertise to solve it properly.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {[
+              { title: "Head Gasket Replacement", body: "OEM-grade head gasket repair for N47, N57, B47, and B57 units — full cylinder head inspection and pressure testing included.", href: "/services/head-gasket-replacement" },
+              { title: "Timing Chain Replacement", body: "Full timing chain kit for N47D20, N57D30, B47, and B57 units — chain, tensioners, guides, and sprockets replaced together.", href: "/services/timing-chain-replacement" },
+              { title: "Timing Belt Replacement", body: "Manufacturer-approved belts and tensioners for applicable X3 variants — water pump replacement recommended at the same time.", href: "/services/timing-belt-replacement" },
+              { title: "Turbo Replacement", body: "Quality replacement turbos for all X3 diesel and petrol variants — post-installation boost pressure and oil feed testing included.", href: "/services/turbo-replacement" },
+              { title: "Engine Rebuild", body: "Full strip-down and precision rebuild for N47, N57, B47, and B57 units — up to 40% less than a new engine.", href: "/services/engine-rebuild" },
+              { title: "Engine Repair", body: "Oil leaks, misfires, overheating, and warning lights diagnosed and resolved with transparent, fixed-price quotes.", href: "/services/engine-repair" },
+              { title: "Engine Replacement", body: "Low-mileage tested replacements fitted to the highest standard — UK-wide collection and delivery included.", href: "/services/engine-replacement" },
+              { title: "Engine Swap", body: "Performance upgrades and full engine swaps across all X3 variants — including ECU reconfiguration where required.", href: "/services/engine-swap" },
+              { title: "Engine Health Check", body: "Professional diagnostics covering fault codes, oil condition, coolant, and belt/chain inspection — full written report provided.", href: "/services/engine-health-check" },
+            ].map((s) => (
+              <div key={s.title} className="rounded-[1.5rem] border border-slate-200 bg-white p-5 shadow-sm flex flex-col justify-between">
+                <div>
+                  <h3 className="text-base font-bold text-slate-900 mb-2">{s.title}</h3>
+                  <p className="text-sm text-slate-700 leading-relaxed line-clamp-4">{s.body}</p>
                 </div>
-              ))}
-            </div>
+                <div className="pt-4">
+                  <Link href={s.href} className="inline-flex items-center justify-center w-full bg-primary text-white font-bold py-2 px-4 text-sm rounded-xl hover:bg-emerald-600 transition-colors">
+                    Explore More
+                  </Link>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -390,19 +270,16 @@ export default function BmwX3EnginesClient() {
           <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
             {[
               {
-                title: "UK-Wide BMW X3 Engine Service From Our  Workshop",
+                title: "UK-Wide BMW X3 Engine Service From Our Workshop",
                 paragraphs: [
-                  "Being without your BMW X3   particularly if it serves as your primary vehicle   is a real and costly disruption. We work efficiently, communicate clearly at every stage, and deliver on the timeframes we commit to.",
-                  "Engine Collection & Return Delivery Nationwide",
-                  "Cannot reach our  workshop? That is not a barrier. We offer engine collection and return delivery covering the whole of the United Kingdom. Send your unit to us and it comes back rebuilt, repaired, or replaced   fully tested and ready to install. For customers who prefer local fitting, we can connect you with our network of approved BMW installers across the country.",
-                  "Written Warranty on Every Engine Job",
-                  "Every rebuild, replacement, and major repair completed at Vogue Technics is backed by a written warranty   whether the engine is a four-cylinder N47 or a full inline-six N57. We are confident in the standard of our work, and we want you to have that same confidence before you commit. Warranty terms are explained clearly at the point of booking, without ambiguity or small print.",
+                  "We collect and return engines across the whole of the UK — send your unit to us and it comes back rebuilt, repaired, or replaced, fully tested and ready to install.",
+                  "Most X3 engine rebuilds are completed within 5–10 working days. Every job carries a written warranty.",
                 ],
               },
               {
-                title: "Ready to get your BMW X3 back on the road   properly rebuilt and properly warranted?",
+                title: "Ready to get your BMW X3 back on the road?",
                 paragraphs: [
-                  "Call Vogue Technics today or submit an online enquiry for a fast, honest, no-obligation quote. We are based in , and we serve BMW X3 owners right across the United Kingdom. Whatever your engine, whatever the problem   trust the specialists who know the full X3 range inside and out.",
+                  "Contact Vogue Technics for a fast, no-obligation quote. We serve BMW X3 owners right across the United Kingdom.",
                 ],
                 cta: true,
               },

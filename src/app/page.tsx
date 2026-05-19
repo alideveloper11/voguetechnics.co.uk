@@ -347,12 +347,12 @@ export default function Home() {
                 transition={{ duration: 0.5, delay: idx * 0.05 }}
                 className="group bg-white border border-slate-200 rounded-[1.5rem] overflow-hidden flex flex-col shadow-sm hover:shadow-xl transition-shadow duration-300"
               >
-                <div className="relative h-64 w-full overflow-hidden bg-slate-50">
+                <div className="relative h-56 w-full overflow-hidden">
                   <Image
                     src={service.image}
                     alt={service.title}
                     fill
-                    className="object-contain group-hover:scale-105 transition-transform duration-500"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
 

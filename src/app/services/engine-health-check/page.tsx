@@ -352,7 +352,7 @@ export default function EngineHealthCheckPage() {
         </div>
       </section>
 
-      <NationwideSupportSection />
+      <NationwideSupportSection slug="engine-health-check" />
       <PartnerLogos />
     </main>
   );

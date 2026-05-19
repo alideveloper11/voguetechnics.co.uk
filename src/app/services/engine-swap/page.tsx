@@ -115,7 +115,7 @@ export default function EngineSwapPage() {
         </div>
       </section>
 
-      <NationwideSupportSection />
+      <NationwideSupportSection slug="engine-swap" />
 
       {/* Cost */}
       <section className="py-24 bg-slate-50 border-y border-slate-100">

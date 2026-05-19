@@ -114,7 +114,7 @@ export default function EngineReplacementPage() {
         </div>
       </section>
 
-      <NationwideSupportSection />
+      <NationwideSupportSection slug="engine-replacement" />
 
       {/* What service covers */}
       <section className="py-24 bg-slate-50 border-y border-slate-100">

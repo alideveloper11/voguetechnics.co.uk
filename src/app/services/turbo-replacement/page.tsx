@@ -186,7 +186,7 @@ export default function TurboReplacementPage() {
         </div>
       </section>
 
-      <NationwideSupportSection />
+      <NationwideSupportSection slug="turbo-replacement" />
 
       {/* Service */}
       <section className="py-24 bg-slate-50 border-y border-slate-100">

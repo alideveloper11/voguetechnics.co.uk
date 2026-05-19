@@ -87,7 +87,7 @@ export default function TimingChainReplacementPage() {
         ]}
       />
 
-      <NationwideSupportSection />
+      <NationwideSupportSection slug="timing-chain-replacement" />
 
       {/* Signs */}
       <section className="py-24 bg-white">

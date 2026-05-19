@@ -2,8 +2,11 @@
 
 import { Send, RotateCw } from "lucide-react";
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
+import { submitContact } from "@/app/actions/submitContact";
 
 export default function ContactForm() {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -53,12 +56,21 @@ export default function ContactForm() {
     setStatus("loading");
 
     try {
-      console.log("Submitting form:", { ...formData });
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      setStatus("success");
-      setFormData({ name: "", email: "", phone: "", postCode: "", regNumber: "", issue: "" });
-      generateCaptcha();
+      const { ok, message } = await submitContact({
+        name: formData.name,
+        phone: formData.phone,
+        email: formData.email,
+        reg: formData.regNumber,
+        postcode: formData.postCode,
+        message: formData.issue,
+        browser: navigator.userAgent,
+      });
+      if (ok) {
+        router.push("/quote-success");
+      } else {
+        console.error("Submission error:", message);
+        setStatus("error");
+      }
     } catch (error) {
       console.error("Submission error:", error);
       setStatus("error");

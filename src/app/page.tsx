@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CheckCircle2, Clock, Search, ShieldCheck, Star, Wrench } from "lucide-react";
+import { CheckCircle2, Clock, ShieldCheck, Star, Wrench } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import PartnerLogos from "@/components/common/PartnerLogos";
@@ -10,6 +10,7 @@ import ReviewsSection from "@/components/common/ReviewsSection";
 import FAQSection from "@/components/common/FAQSection";
 import PrecisionEngineSection from "@/components/common/PrecisionEngineSection";
 import EngineSpecialistsSection from "@/components/common/EngineSpecialistsSection";
+import RegSearch from "@/components/common/RegSearch";
 import { useEffect, useMemo, useRef, useState } from "react";
 
 export default function Home() {
@@ -172,40 +173,14 @@ export default function Home() {
             </h1>
           </motion.div>
 
-          {/* Registration Search Box (Glassmorphic) */}
+          {/* Registration Search Box */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="w-full max-w-2xl glass-dark p-4 md:p-5 rounded-3xl shadow-2xl relative"
+            className="w-full max-w-2xl"
           >
-            <form className="flex flex-col sm:flex-row gap-4">
-              <div className="flex-1 flex overflow-hidden rounded-xl border-2 border-slate-300 bg-[#eeb318] shadow-inner transition-transform focus-within:ring-2 focus-within:ring-white/50 focus-within:ring-offset-2 focus-within:ring-offset-slate-900">
-                <div className="bg-[#0033A0] flex flex-col items-center justify-center px-3 py-2 w-16 md:w-20 shrink-0 border-r border-[#0033A0]/50 shadow-[inset_-5px_0_15px_rgba(0,0,0,0.2)]">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" className="w-8 md:w-10 h-auto mb-1 rounded-sm shadow-sm">
-                    <clipPath id="t"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath>
-                    <path d="M0,0 v30 h60 v-30 z" fill="#012169"/>
-                    <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" strokeWidth="6"/>
-                    <path d="M0,0 L60,30 M60,0 L0,30" clipPath="url(#t)" stroke="#C8102E" strokeWidth="4"/>
-                    <path d="M30,0 v30 M0,15 h60" stroke="#fff" strokeWidth="10"/>
-                    <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" strokeWidth="6"/>
-                  </svg>
-                  <span className="text-[#FACC15] font-bold text-xs md:text-sm tracking-widest leading-none">UK</span>
-                </div>
-                <input
-                  type="text"
-                  placeholder="ENTER VEHICLE REG NUMBER"
-                  className="w-full bg-transparent text-slate-800 font-bold text-xl md:text-2xl px-2 sm:px-4 py-3 focus:outline-none placeholder:text-[10px] sm:placeholder:text-xs md:placeholder:text-base placeholder:tracking-normal uppercase tracking-widest placeholder:text-slate-500"
-                />
-              </div>
-              <button className="bg-primary hover:bg-primary-dark text-white font-bold py-2.5 px-5 rounded-xl shadow-[0_0_20px_rgba(25,135,84,0.4)] transition-all transform hover:-translate-y-1 flex items-center justify-center gap-1.5 whitespace-nowrap text-sm">
-                <Search className="w-4 h-4" />
-                FIND ENGINE
-              </button>
-            </form>
-            <div className="mt-4 text-center text-sm text-slate-400">
-              Don't have the Reg? <Link href="/contact-us" className="text-primary hover:text-white transition-colors">Find vehicle manually</Link>
-            </div>
+            <RegSearch />
           </motion.div>
 
         </div>
@@ -574,7 +549,7 @@ export default function Home() {
               Call 01375 531355
             </a>
             <Link
-              href="/contact-us"
+              href="/get-quote"
               className="inline-flex items-center justify-center bg-white border-2 border-primary text-primary font-bold py-3 px-6 rounded-xl hover:bg-primary hover:text-white transition-colors"
             >
               Get Quote

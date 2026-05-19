@@ -102,7 +102,7 @@ export default function EngineSpecialistsSection() {
               Performance Upgrades For All Models.
             </p>
             <Link
-              href="/contact-us"
+              href="/get-quote"
               className="inline-flex items-center gap-2 bg-primary text-white font-black px-5 py-2.5 rounded-xl text-xs whitespace-nowrap hover:brightness-110 transition-all uppercase tracking-widest"
             >
               Get A Quote <ArrowRight className="w-4 h-4" />

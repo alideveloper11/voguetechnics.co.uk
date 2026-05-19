@@ -3927,7 +3927,7 @@ export default async function DynamicServicePage({ params }: { params: Promise<{
                             </h2>
                           </div>
                           <Link
-                            href="/contact-us"
+                            href="/get-quote"
                             className="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-bold text-slate-900 shadow-sm hover:border-primary/30 transition-colors"
                           >
                             Get a quote

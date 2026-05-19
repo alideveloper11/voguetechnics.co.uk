@@ -315,7 +315,7 @@ export default function VicProfilePage() {
                     >
                        <MessageCircle className="w-8 h-8" /> WhatsApp
                     </a>
-                    <Link href="/contact-us" className="flex items-center justify-center gap-4 bg-slate-900 text-white font-black px-12 py-8 rounded-[2.5rem] shadow-2xl hover:bg-slate-800 transition-all uppercase tracking-widest text-2xl transform hover:-translate-y-2 flex-1">
+                    <Link href="/get-quote" className="flex items-center justify-center gap-4 bg-slate-900 text-white font-black px-12 py-8 rounded-[2.5rem] shadow-2xl hover:bg-slate-800 transition-all uppercase tracking-widest text-2xl transform hover:-translate-y-2 flex-1">
                        <Activity className="w-8 h-8" /> Get Quote
                     </Link>
                  </div>

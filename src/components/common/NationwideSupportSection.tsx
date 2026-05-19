@@ -35,7 +35,7 @@ const NationwideSupportSection = () => {
 
             <div className="pt-2">
               <Link
-                href="/contact-us"
+                href="/get-quote"
                 className="inline-flex items-center justify-center bg-emerald-700 hover:bg-emerald-800 text-white font-bold py-2.5 px-6 rounded-xl transition-colors text-sm"
               >
                 Get Quote

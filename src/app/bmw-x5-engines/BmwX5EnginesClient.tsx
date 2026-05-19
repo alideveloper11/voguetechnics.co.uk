@@ -302,7 +302,7 @@ export default function BmwX5EnginesClient() {
                 {"cta" in block && block.cta ? (
                   <div className="mt-6 flex flex-col sm:flex-row gap-3">
                     <Link
-                      href="/contact-us"
+                      href="/get-quote"
                       className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-white font-bold px-6 py-3 rounded-full shadow-md transition-all duration-300"
                     >
                       Get a Free Quote <ArrowRight className="w-4 h-4" />

@@ -448,9 +448,9 @@ export default function AudiEnginesClient() {
                       className="w-full bg-transparent text-slate-900 font-extrabold text-lg md:text-3xl px-2 sm:px-3 py-5 focus:outline-none placeholder:text-[10px] sm:placeholder:text-xs md:placeholder:text-sm placeholder:tracking-normal uppercase tracking-[0.15em] md:tracking-[0.25em] text-center placeholder:text-slate-600/70"
                     />
                   </div>
-                  <button type="button" className="w-full bg-primary hover:bg-emerald-500 text-white font-black py-5 px-6 rounded-2xl shadow-lg transition-all flex justify-center items-center gap-3 transform hover:-translate-y-1">
+                  <Link href="/get-quote" className="w-full bg-primary hover:bg-emerald-500 text-white font-black py-5 px-6 rounded-2xl shadow-lg transition-all flex justify-center items-center gap-3 transform hover:-translate-y-1">
                     <Search className="w-6 h-6" /> GET FREE QUOTE
-                  </button>
+                  </Link>
                 </form>
                 <div className="mt-10 pt-10 border-t border-slate-800">
                    <p className="text-slate-500 text-xs mb-4 uppercase tracking-[0.3em] font-bold">Expert Support Line</p>
@@ -580,7 +580,7 @@ export default function AudiEnginesClient() {
           <p className="text-2xl md:text-4xl text-emerald-100 max-w-3xl mx-auto font-black mb-16 uppercase tracking-[0.2em]">
             WRITTEN WARRANTY INCLUDED
           </p>
-          <Link href="/contact-us" className="inline-flex items-center gap-4 bg-slate-900 text-white font-black py-8 px-20 rounded-[3rem] text-2xl shadow-2xl hover:bg-slate-800 transition-all transform hover:scale-110 uppercase tracking-[0.25em]">
+          <Link href="/get-quote" className="inline-flex items-center gap-4 bg-slate-900 text-white font-black py-8 px-20 rounded-[3rem] text-2xl shadow-2xl hover:bg-slate-800 transition-all transform hover:scale-110 uppercase tracking-[0.25em]">
              Get Quote Now <ArrowRight className="w-8 h-8 text-primary" />
           </Link>
         </div>

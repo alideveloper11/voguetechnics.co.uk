@@ -11,12 +11,12 @@ import RegSearch from "@/components/common/RegSearch";
 import FAQSection from "@/components/common/FAQSection";
 
 const landRoverModels = [
-  { title: "Land Rover Defender Engines", link: "/land-rover-defender-engines" },
-  { title: "Land Rover Discovery 3 Engines", link: "/land-rover-discovery-3-engines" },
-  { title: "Land Rover Discovery 4 Engines", link: "/land-rover-discovery-4-engines" },
-  { title: "Land Rover Discovery 5 Engines", link: "/land-rover-discovery-5-engines" },
-  { title: "Land Rover Discovery Sport Engines", link: "/land-rover-discovery-sport-engines" },
-  { title: "Land Rover Freelander 2 Engines", link: "/land-rover-freelander-2-engines" },
+  { title: "Land Rover Defender Engines", link: "/land-rover-defender-engines", description: "Iconic off-road engine specialists — rebuilds, repairs and replacements for all Defender variants." },
+  { title: "Land Rover Discovery 3 Engines", link: "/land-rover-discovery-3-engines", description: "Disc 3 engine solutions covering TDV6 and V8 — accurate diagnosis and long-term reliability." },
+  { title: "Land Rover Discovery 4 Engines", link: "/land-rover-discovery-4-engines", description: "Discovery 4 engine experts — SDV6/TDV6 rebuilds, timing issues and full replacements." },
+  { title: "Land Rover Discovery 5 Engines", link: "/land-rover-discovery-5-engines", description: "Disc 5 engine specialists covering 2.0 Si4 and 3.0 SDV6 variants with warranty-backed work." },
+  { title: "Land Rover Discovery Sport Engines", link: "/land-rover-discovery-sport-engines", description: "Discovery Sport engine repairs and rebuilds — covering the Ingenium diesel and petrol range." },
+  { title: "Land Rover Freelander 2 Engines", link: "/land-rover-freelander-2-engines", description: "Freelander 2 engine solutions — TD4 diesel rebuilds, repairs and replacements with warranty." },
 ];
 
 const landRoverEngineSizes = [
@@ -226,33 +226,46 @@ export default function LandRoverEnginesClient() {
       </section>
 
       {/* LAND ROVER MODELS GRID */}
-      <section className="py-16 md:py-20 bg-white">
+      <section className="py-24 bg-slate-50">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-slate-900">Find your <span className="text-primary">Land Rover</span></h2>
-            <div className="w-24 h-1 bg-primary mx-auto rounded-full mt-4"></div>
-            <p className="text-slate-500 mt-4 text-base font-medium">Durable engines for rugged Defender and Discovery models</p>
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-2xl md:text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">
+              Find your <span className="text-primary">Land Rover</span>
+            </h2>
+            <p className="text-slate-700 mt-2 text-sm md:text-base">
+              Durable engines for rugged Defender and Discovery models
+            </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {landRoverModels.map((model, idx) => (
               <motion.div
                 key={idx}
-                whileHover={{ y: -4, scale: 1.01 }}
-                className="group h-full"
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.3, delay: idx * 0.02 }}
               >
-                <Link href={model.link} className="block h-full">
-                  <div className="bg-slate-50 border border-slate-200 rounded-xl p-3 hover:bg-white hover:border-primary/30 hover:shadow-[0_10px_30px_-15px_rgba(0,0,0,0.12)] transition-all duration-500 flex flex-col items-center text-center space-y-2.5 relative overflow-hidden h-full group">
-                    <div className="w-full aspect-[4/3] bg-white rounded-lg flex items-center justify-center border border-slate-200 group-hover:border-primary/30 transition-all duration-500 shadow-sm group-hover:scale-105">
-                      <span className="text-[0.5rem] font-black uppercase tracking-[0.3em] text-slate-300">LR Image Space</span>
+                <Link href={model.link} className="group block h-full">
+                  <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-xl hover:border-primary/50 transition-all duration-300 h-full flex flex-col justify-between relative overflow-hidden">
+                    <div className="flex items-center justify-between gap-4">
+                      <div className="inline-flex items-center rounded-xl border border-slate-200 bg-slate-50 px-2 py-1.5">
+                        <Image src="/land_rover.png" alt="Land Rover" width={80} height={40} className="h-8 w-auto object-contain" />
+                      </div>
+                      <span className="text-[10px] font-extrabold tracking-widest uppercase text-primary/90">Engines</span>
                     </div>
-                    <div className="flex-grow">
-                      <h3 className="text-xs font-bold text-slate-900 group-hover:text-primary transition-colors leading-snug">
+
+                    <div className="mt-4">
+                      <h3 className="text-base md:text-lg font-extrabold text-slate-900 mb-2 group-hover:text-primary transition-colors leading-snug tracking-tight">
                         {model.title}
                       </h3>
+                      <p className="text-sm text-slate-700 leading-relaxed">
+                        {model.description}
+                      </p>
                     </div>
-                    <div className="flex items-center gap-1 text-primary font-bold text-[10px] uppercase tracking-widest">
-                      Read more <ArrowRight className="w-3 h-3" />
+
+                    <div className="flex items-center text-primary font-extrabold text-[0.7rem] mt-6 group-hover:translate-x-2 transition-transform tracking-widest">
+                      Read more <ArrowRight className="w-4 h-4 ml-2" />
                     </div>
                   </div>
                 </Link>

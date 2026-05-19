@@ -10,12 +10,12 @@ import RegSearch from "@/components/common/RegSearch";
 import FAQSection from "@/components/common/FAQSection";
 
 const rangeRoverModels = [
-  { title: "Range Rover Evoque Engines", link: "/range-rover-evoque-engines" },
-  { title: "Range Rover Sport Engines", link: "/range-rover-sport-engines" },
-  { title: "Range Rover Velar Engines", link: "/range-rover-velar-engines" },
-  { title: "Range Rover Vogue MK4 Engines", link: "/range-rover-vogue-new-mk-4-engines" },
-  { title: "Range Rover Vogue MK3 Engines", link: "/range-rover-vogue-old-mk-3-engines" },
-  { title: "Range Rover Sport SVR", link: "/range-rover-sport-svr-engines" },
+  { title: "Range Rover Evoque Engines", link: "/range-rover-evoque-engines", description: "Compact luxury SUV engine specialists — repairs, rebuilds and replacements with warranty-backed results." },
+  { title: "Range Rover Sport Engines", link: "/range-rover-sport-engines", description: "Performance SUV engine solutions from timing chain work to full engine rebuilds across all Sport variants." },
+  { title: "Range Rover Velar Engines", link: "/range-rover-velar-engines", description: "Velar engine specialists covering diesel and petrol variants — clearly quoted and warranty-backed." },
+  { title: "Range Rover Vogue MK4 Engines", link: "/range-rover-vogue-new-mk-4-engines", description: "Fourth-gen Vogue engine experts — rebuilds, replacements and major repairs done properly." },
+  { title: "Range Rover Vogue MK3 Engines", link: "/range-rover-vogue-old-mk-3-engines", description: "Classic Vogue engine solutions — specialist diagnosis, rebuilds and replacements across all variants." },
+  { title: "Range Rover Sport SVR", link: "/range-rover-sport-svr-engines", description: "High-performance SVR engine specialists — precision diagnosis and premium rebuild service." },
 ];
 
 export default function RangeRoverEnginesClient() {
@@ -114,20 +114,22 @@ export default function RangeRoverEnginesClient() {
             className="object-cover opacity-30 mix-blend-overlay"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/85 to-slate-900/50" />
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/60 via-slate-900/80 to-slate-950" />
         </div>
 
         <div className="container relative z-10 mx-auto px-4 lg:px-8">
           <Breadcrumbs items={[{ name: "Range Rover Engines", href: "/range-rover-engines" }]} />
           
-          <div className="max-w-5xl pt-8">
-            <motion.span
+          <div className="max-w-4xl mx-auto pt-8 text-center">
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/20 px-4 py-2 text-xs font-black uppercase tracking-[0.2em] text-emerald-300 shadow-[0_0_22px_rgba(25,135,84,0.22)]"
+              className="flex justify-center"
             >
-              Range Rover Engine Specialist   , UK
-            </motion.span>
+              <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/20 px-4 py-2 text-xs font-black uppercase tracking-[0.2em] text-emerald-300 shadow-[0_0_22px_rgba(25,135,84,0.22)]">
+                Range Rover Engine Specialist   , UK
+              </span>
+            </motion.div>
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -145,7 +147,7 @@ export default function RangeRoverEnginesClient() {
               transition={{ delay: 0.2 }}
               className="mt-7"
             >
-              <RegSearch className="max-w-3xl" />
+              <RegSearch className="max-w-3xl mx-auto" />
             </motion.div>
           </div>
         </div>
@@ -302,41 +304,45 @@ export default function RangeRoverEnginesClient() {
       </section>
 
       {/* RANGE ROVER MODELS GRID */}
-      <section className="py-16 md:py-20 bg-white relative overflow-hidden">
+      <section className="py-24 bg-slate-50">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="text-center max-w-4xl mx-auto mb-10 md:mb-12 px-4">
-            <h2 className="text-2xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
-              Find your <span className="text-primary italic">Range Rover</span>
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-2xl md:text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">
+              Find your <span className="text-primary">Range Rover</span>
             </h2>
-            <p className="text-slate-600 mt-4 text-sm md:text-base font-medium">
+            <p className="text-slate-700 mt-2 text-sm md:text-base">
               Replacement engines for the entire Range Rover range
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 md:gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {rangeRoverModels.map((model, idx) => (
               <motion.div
                 key={idx}
-                whileHover={{ y: -8, scale: 1.01 }}
-                className="group h-full"
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.3, delay: idx * 0.02 }}
               >
-                <Link href={model.link} className="block h-full">
-                  <div className="bg-slate-50 border border-slate-200 rounded-[1.5rem] p-4 md:p-5 hover:bg-white hover:border-primary/30 hover:shadow-[0_18px_40px_-20px_rgba(0,0,0,0.12)] transition-all duration-500 flex flex-col items-center text-center space-y-4 relative overflow-hidden h-full group">
-                    <div className="w-full aspect-square bg-white rounded-[1.2rem] flex items-center justify-center border border-slate-200 group-hover:border-primary/30 transition-all duration-500 shadow-sm">
-                      <Image
-                        src="/images/brands/range-rover.svg"
-                        alt="Range Rover"
-                        width={360}
-                        height={120}
-                        className="h-auto w-[68%] max-w-[200px] opacity-90"
-                      />
+                <Link href={model.link} className="group block h-full">
+                  <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-xl hover:border-primary/50 transition-all duration-300 h-full flex flex-col justify-between relative overflow-hidden">
+                    <div className="flex items-center justify-between gap-4">
+                      <div className="inline-flex items-center rounded-xl border border-slate-200 bg-slate-50 px-2 py-1.5">
+                        <Image src="/range_rover.png" alt="Range Rover" width={80} height={40} className="h-8 w-auto object-contain" />
+                      </div>
+                      <span className="text-[10px] font-extrabold tracking-widest uppercase text-primary/90">Engines</span>
                     </div>
-                    <div className="flex-grow">
-                      <h3 className="text-sm md:text-base font-extrabold text-slate-900 group-hover:text-primary transition-colors tracking-tight leading-snug">
+
+                    <div className="mt-4">
+                      <h3 className="text-base md:text-lg font-extrabold text-slate-900 mb-2 group-hover:text-primary transition-colors leading-snug tracking-tight">
                         {model.title}
                       </h3>
+                      <p className="text-sm text-slate-700 leading-relaxed">
+                        {model.description}
+                      </p>
                     </div>
-                    <div className="flex items-center text-primary font-bold text-[0.7rem] uppercase tracking-[0.18em] group-hover:gap-3 transition-all">
+
+                    <div className="flex items-center text-primary font-extrabold text-[0.7rem] mt-6 group-hover:translate-x-2 transition-transform tracking-widest">
                       Read more <ArrowRight className="w-4 h-4 ml-2" />
                     </div>
                   </div>

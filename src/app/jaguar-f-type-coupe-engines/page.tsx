@@ -60,11 +60,11 @@ export default function JaguarFTypeCoupeEnginesPage() {
             ]}
           />
 
-          <div className="max-w-5xl pt-8">
+          <div className="max-w-3xl mx-auto text-center pt-8">
             <motion.h1
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-3xl font-black leading-[1.08] tracking-tight text-white md:text-5xl"
+              className="text-2xl font-black leading-[1.1] tracking-tight text-white md:text-4xl"
             >
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-300 to-green-400">
                 Jaguar F‑Type Coupe Engine
@@ -76,7 +76,7 @@ export default function JaguarFTypeCoupeEnginesPage() {
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.12 }}
-              className="mt-7"
+              className="mt-6 flex justify-center"
             >
               <RegSearch className="max-w-3xl" />
             </motion.div>
@@ -164,14 +164,14 @@ export default function JaguarFTypeCoupeEnginesPage() {
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:01375531355"
-                className="inline-flex items-center justify-center rounded-2xl bg-white px-8 py-4 font-bold text-primary shadow-xl transition-all hover:bg-slate-50 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99]"
+                className="inline-flex items-center justify-center rounded-2xl bg-white px-5 py-2.5 text-sm font-bold text-primary shadow-xl transition-all hover:bg-slate-50 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99]"
               >
                 <Phone className="w-5 h-5 mr-2" />
                 Call 01375 531355
               </a>
               <Link
                 href="/contact-us"
-                className="inline-flex items-center justify-center rounded-2xl bg-slate-900 px-8 py-4 font-bold text-white shadow-xl transition-all hover:bg-slate-800 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99]"
+                className="inline-flex items-center justify-center rounded-2xl bg-slate-900 px-5 py-2.5 text-sm font-bold text-white shadow-xl transition-all hover:bg-slate-800 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99]"
               >
                 Request a Quote
               </Link>

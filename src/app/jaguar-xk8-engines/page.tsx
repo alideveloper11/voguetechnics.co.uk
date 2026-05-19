@@ -53,13 +53,13 @@ export default function JaguarXK8EnginesPage() {
 
         <div className="container relative z-10 mx-auto px-4 lg:px-8">
           <Breadcrumbs items={[{ name: "Jaguar Engines", href: "/jaguar-engines" }, { name: "Jaguar XK8 Engines", href: "/jaguar-xk8-engines" }]} />
-          <div className="max-w-5xl pt-8">
-            <motion.h1 initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} className="text-3xl font-black leading-[1.08] tracking-tight text-white md:text-5xl">
+          <div className="max-w-3xl mx-auto text-center pt-8">
+            <motion.h1 initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} className="text-2xl font-black leading-[1.1] tracking-tight text-white md:text-4xl">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-300 to-green-400">Jaguar XK8 Engine</span>{" "}
                 Reconditioned, Rebuilt & Used Supply and Fit Across the UK
             </motion.h1>
 
-            <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.12 }} className="mt-7">
+            <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.12 }} className="mt-6 flex justify-center">
               <RegSearch className="max-w-3xl" />
             </motion.div>
 
@@ -112,11 +112,11 @@ export default function JaguarXK8EnginesPage() {
               Contact our specialists in  today. Whether you need same-day diagnostics, a Nikasil repair, a fully reconditioned 4.0 or 4.2 litre V8, or an emergency fitting slot   we&apos;re here with straight answers and genuine specialist knowledge.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:01375531355" className="inline-flex items-center justify-center rounded-2xl bg-white px-8 py-4 font-bold text-primary shadow-xl transition-all hover:bg-slate-50 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99]">
+              <a href="tel:01375531355" className="inline-flex items-center justify-center rounded-2xl bg-white px-5 py-2.5 text-sm font-bold text-primary shadow-xl transition-all hover:bg-slate-50 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99]">
                 <Phone className="w-5 h-5 mr-2" />
                 Call 01375 531355
               </a>
-              <Link href="/contact-us" className="inline-flex items-center justify-center rounded-2xl bg-slate-900 px-8 py-4 font-bold text-white shadow-xl transition-all hover:bg-slate-800 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99]">
+              <Link href="/contact-us" className="inline-flex items-center justify-center rounded-2xl bg-slate-900 px-5 py-2.5 text-sm font-bold text-white shadow-xl transition-all hover:bg-slate-800 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99]">
                 Request a Quote
               </Link>
             </div>

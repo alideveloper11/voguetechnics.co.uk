@@ -10,6 +10,7 @@ import Breadcrumbs from "@/components/common/Breadcrumbs";
 import RegSearch from "@/components/common/RegSearch";
 import ReviewsSection from "@/components/common/ReviewsSection";
 import FAQSection from "@/components/common/FAQSection";
+import ServiceGallery from "@/components/common/ServiceGallery";
 import PartnerLogos from "@/components/common/PartnerLogos";
 import NationwideSupportSection from "@/components/common/NationwideSupportSection";
 
@@ -75,6 +76,17 @@ export default function EngineRebuildPage() {
           </div>
         </div>
       </section>
+
+      <ReviewsSection subtitle="Hear from our satisfied customers who have experienced our professional specialist engine services." />
+      <ServiceGallery
+        title="Engine Rebuild Work"
+        subtitle="A look at some of the engine rebuild jobs carried out at our workshop."
+        images={[
+          { src: "/engine_rebuild/engine_rebuild%201.png", alt: "Engine rebuild 1" },
+          { src: "/engine_rebuild/engine_rebuild%202.png", alt: "Engine rebuild 2" },
+          { src: "/engine_rebuild/engine_rebuild%203.png", alt: "Engine rebuild 3" },
+        ]}
+      />
 
       {/* Rebuild or replace */}
       <section className="py-24 bg-white">
@@ -148,6 +160,8 @@ export default function EngineRebuildPage() {
           </div>
         </div>
       </section>
+
+      <NationwideSupportSection />
 
       {/* What it covers */}
       <section className="py-24 bg-slate-50 border-y border-slate-100">
@@ -383,8 +397,6 @@ export default function EngineRebuildPage() {
         </div>
       </section>
 
-      <ReviewsSection subtitle="Hear from our satisfied customers who have experienced our professional specialist engine services." />
-      <NationwideSupportSection />
       <PartnerLogos />
     </main>
   );

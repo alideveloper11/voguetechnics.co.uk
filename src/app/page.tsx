@@ -26,49 +26,49 @@ export default function Home() {
     {
       title: "Head Gasket Replacement",
       slug: "head-gasket-replacement",
-      image: "/images/gallery/1g.webp",
+      image: "/head_gasket/head_gasket%201.png",
       body: "A blown head gasket is one of the most serious engine faults a vehicle can develop. We carry out thorough inspections, pressure testing, and full replacement using quality gasket kits suited to your specific engine.",
     },
     {
       title: "Timing Chain Replacement",
       slug: "timing-chain-replacement",
-      image: "/images/gallery/2g.webp",
+      image: "/timming_chain/timing_chain%201.png",
       body: "Timing chain wear is a known issue across several Range Rover and Land Rover variants. We replace chains, tensioners, and guides to factory spec, restoring timing integrity and preventing catastrophic failure.",
     },
     {
       title: "Turbo Replacement",
       slug: "turbo-replacement",
-      image: "/images/gallery/3g.webp",
+      image: "/turbo_replacement/turbo_replacement%201.png",
       body: "A failing turbocharger robs your engine of performance and can cause serious secondary damage. We diagnose faults accurately and fit quality turbos matched correctly to your engine variant.",
     },
     {
       title: "Engine Rebuild",
       slug: "engine-rebuild",
-      image: "/images/land-rover-engine-rebuild.webp",
+      image: "/engine_rebuild/engine_rebuild%201.png",
       body: "A full engine rebuild is the right solution when internal wear or damage is beyond simple repair. We strip, inspect, machine, and reassemble to manufacturer tolerances — precision work done properly.",
     },
     {
       title: "Engine Repair",
       slug: "engine-repair",
-      image: "/images/gallery/4g.webp",
+      image: "/engine_repair/engine_repair%201.png",
       body: "Not every engine problem requires a full rebuild. Many faults can be resolved with targeted repairs at significantly lower cost. We assess honestly and recommend only what's genuinely needed.",
     },
     {
       title: "Engine Replacement",
       slug: "engine-replacement",
-      image: "/images/supply-and-fit-service.webp",
+      image: "/engine_replacement/engine_replacement%201.png",
       body: "When an engine is beyond economical repair, replacement is often the most cost-effective path. We source quality-checked replacement engines and handle the full swap including all ancillaries and testing.",
     },
     {
       title: "Engine Swap",
       slug: "engine-swap",
-      image: "/images/gallery/5g.webp",
+      image: "/engine_swap/engine_swap%201.png",
       body: "Looking to upgrade or convert between engine types? Our engine swap service covers planning, sourcing, and fitment in full — with honest advice on compatibility and costs before any work begins.",
     },
     {
       title: "Timing Belt Replacement",
       slug: "timing-belt-replacement",
-      image: "/images/gallery/6g.webp",
+      image: "/timming_belt/timing_belt%201.png",
       body: "Missed timing belt replacement intervals can have devastating consequences. We replace belts, tensioners, and water pumps as a complete service — done once and done right.",
     },
     {
@@ -372,12 +372,12 @@ export default function Home() {
                 transition={{ duration: 0.5, delay: idx * 0.05 }}
                 className="group bg-white border border-slate-200 rounded-[1.5rem] overflow-hidden flex flex-col shadow-sm hover:shadow-xl transition-shadow duration-300"
               >
-                <div className="relative h-40 w-full overflow-hidden">
+                <div className="relative h-64 w-full overflow-hidden bg-slate-50">
                   <Image
                     src={service.image}
                     alt={service.title}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="object-contain group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
 

@@ -7,6 +7,7 @@ import PartnerLogos from "@/components/common/PartnerLogos";
 import { motion } from "framer-motion";
 import Breadcrumbs from "@/components/common/Breadcrumbs";
 import RegSearch from "@/components/common/RegSearch";
+import HeroTrustLabels from "@/components/common/HeroTrustLabels";
 import FAQSection from "@/components/common/FAQSection";
 
 const audiModels = [
@@ -175,10 +176,10 @@ export default function AudiEnginesClient() {
             src="/images/car_bgg.jpg"
             alt="Audi Engine Specialist"
             fill
-            className="object-cover opacity-40 mix-blend-overlay"
+            className="object-cover opacity-65 mix-blend-overlay"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/75 via-slate-900/25 to-transparent" />
         </div>
 
         <div className="container relative z-10 mx-auto px-4 lg:px-8">
@@ -209,9 +210,10 @@ export default function AudiEnginesClient() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.18 }}
-              className="flex justify-center mt-6 mb-8 w-full"
+              className="mt-6 mb-8 flex w-full flex-col items-center justify-center"
             >
               <RegSearch />
+            <HeroTrustLabels className="mt-4" />
             </motion.div>
 
           </div>

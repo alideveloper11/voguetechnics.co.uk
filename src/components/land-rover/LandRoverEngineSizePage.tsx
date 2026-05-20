@@ -3,8 +3,10 @@ import Link from "next/link";
 import { CheckCircle2, Phone, ShieldCheck, Wrench } from "lucide-react";
 import Breadcrumbs from "@/components/common/Breadcrumbs";
 import RegSearch from "@/components/common/RegSearch";
+import HeroTrustLabels from "@/components/common/HeroTrustLabels";
 import NationwideSupportSection from "@/components/common/NationwideSupportSection";
 import PrecisionEngineSection from "@/components/common/PrecisionEngineSection";
+import EngineSizeContentSection from "@/components/common/EngineSizeContentSection";
 import ReviewsSection from "@/components/common/ReviewsSection";
 import WorkshopSection from "@/components/common/WorkshopSection";
 import FAQSection from "@/components/common/FAQSection";
@@ -24,10 +26,10 @@ export default function LandRoverEngineSizePage({ data }: LandRoverEngineSizePag
             src="/images/car_bgg.jpg"
             alt={`${data.title} specialist`}
             fill
-            className="object-cover opacity-30 mix-blend-overlay"
+            className="object-cover opacity-65 mix-blend-overlay"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/85 to-slate-900/50" />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/70 via-slate-900/35 to-slate-900/10" />
         </div>
 
         <div className="container relative z-10 mx-auto px-4 lg:px-8">
@@ -64,6 +66,7 @@ export default function LandRoverEngineSizePage({ data }: LandRoverEngineSizePag
             </div>
 
             <RegSearch className="mt-8 w-full max-w-3xl" />
+            <HeroTrustLabels className="mt-4" />
           </div>
         </div>
       </section>
@@ -126,6 +129,8 @@ export default function LandRoverEngineSizePage({ data }: LandRoverEngineSizePag
           </div>
         </div>
       </section>
+
+      <EngineSizeContentSection blocks={data.contentSections} />
 
       <NationwideSupportSection slug={data.slug} />
       <PrecisionEngineSection data={data.precision} />

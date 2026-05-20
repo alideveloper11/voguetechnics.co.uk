@@ -7,6 +7,7 @@ import PartnerLogos from "@/components/common/PartnerLogos";
 import { motion } from "framer-motion";
 import Breadcrumbs from "@/components/common/Breadcrumbs";
 import RegSearch from "@/components/common/RegSearch";
+import HeroTrustLabels from "@/components/common/HeroTrustLabels";
 import FAQSection from "@/components/common/FAQSection";
 import PopularEngineSizes from "@/components/common/PopularEngineSizes";
 import rangeRoverPopularEngineSizes from "@/data/rangeRoverPopularEngineSizes";
@@ -113,10 +114,10 @@ export default function RangeRoverEnginesClient() {
             src="/images/car_bgg.jpg"
             alt="Range Rover engine specialist in "
             fill
-            className="object-cover opacity-30 mix-blend-overlay"
+            className="object-cover opacity-65 mix-blend-overlay"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/60 via-slate-900/80 to-slate-950" />
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/55 via-slate-900/35 to-slate-950/70" />
         </div>
 
         <div className="container relative z-10 mx-auto px-4 lg:px-8">
@@ -150,6 +151,7 @@ export default function RangeRoverEnginesClient() {
               className="mt-7"
             >
               <RegSearch className="max-w-3xl mx-auto" />
+            <HeroTrustLabels className="mt-4" />
             </motion.div>
           </div>
         </div>

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
 import { Activity, ArrowRight, CheckCircle2, Gauge, ShieldCheck, Wrench } from "lucide-react";
@@ -11,6 +11,7 @@ import ServiceGallery from "@/components/common/ServiceGallery";
 import PartnerLogos from "@/components/common/PartnerLogos";
 import NationwideSupportSection from "@/components/common/NationwideSupportSection";
 import RegSearch from "@/components/common/RegSearch";
+import HeroTrustLabels from "@/components/common/HeroTrustLabels";
 import ReviewsSection from "@/components/common/ReviewsSection";
 
 export default function TimingChainReplacementPage() {
@@ -26,7 +27,7 @@ export default function TimingChainReplacementPage() {
             className="object-cover opacity-20 filter grayscale"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/75 via-slate-900/15 to-transparent" />
         </div>
 
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
@@ -47,8 +48,9 @@ export default function TimingChainReplacementPage() {
               <span className="text-primary italic">for Range Rover, Land Rover, Jaguar, Audi &amp; BMW</span>
             </motion.h1>
 
-            <div className="flex justify-center w-full max-w-2xl mx-auto mb-10">
+            <div className="flex w-full max-w-2xl mx-auto mb-10 flex-col items-center">
               <RegSearch />
+            <HeroTrustLabels className="mt-4" />
             </div>
 
 

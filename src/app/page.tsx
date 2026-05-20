@@ -11,6 +11,7 @@ import FAQSection from "@/components/common/FAQSection";
 import PrecisionEngineSection from "@/components/common/PrecisionEngineSection";
 import EngineSpecialistsSection from "@/components/common/EngineSpecialistsSection";
 import RegSearch from "@/components/common/RegSearch";
+import HeroTrustLabels from "@/components/common/HeroTrustLabels";
 import { useEffect, useMemo, useRef, useState } from "react";
 
 export default function Home() {
@@ -155,7 +156,7 @@ export default function Home() {
             priority
           />
           <div className="absolute inset-0 bg-slate-900/50" />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/75 via-slate-900/15 to-transparent" />
         </div>
 
         <div className="container relative z-10 mx-auto px-4 lg:px-8 flex flex-col items-center">
@@ -181,6 +182,7 @@ export default function Home() {
             className="w-full max-w-2xl"
           >
             <RegSearch />
+            <HeroTrustLabels className="mt-4" />
           </motion.div>
 
         </div>

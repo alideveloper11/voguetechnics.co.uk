@@ -3890,10 +3890,10 @@ export default async function DynamicServicePage({ params }: { params: Promise<{
               src="/images/car_bgg.jpg"
               alt={audiOverride.h1}
               fill
-              className="object-cover opacity-40 mix-blend-overlay"
+              className="object-cover opacity-65 mix-blend-overlay"
               priority
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/75 to-transparent" />
           </div>
           <div className="container mx-auto relative z-10 max-w-4xl text-center">
             <Breadcrumbs items={[{ name: "Audi Engines", href: "/audi-engines" }, { name: audiOverride.h1, href: `/${slug}` }]} />
@@ -4051,10 +4051,10 @@ export default async function DynamicServicePage({ params }: { params: Promise<{
             src="/images/car_bgg.jpg"
             alt={formattedTitle}
             fill
-            className="object-cover opacity-40 mix-blend-overlay"
+            className="object-cover opacity-65 mix-blend-overlay"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/75 to-transparent" />
         </div>
         <div className="container mx-auto relative z-10 max-w-4xl text-center">
           <Breadcrumbs items={[{ name: formattedTitle, href: `/${slug}` }]} />

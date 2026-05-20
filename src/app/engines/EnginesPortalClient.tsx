@@ -7,6 +7,7 @@ import Image from "next/image";
 import PartnerLogos from "@/components/common/PartnerLogos";
 import Breadcrumbs from "@/components/common/Breadcrumbs";
 import FAQSection from "@/components/common/FAQSection";
+import HeroTrustLabels from "@/components/common/HeroTrustLabels";
 
 export default function EnginesPortalClient() {
   const faqs = [
@@ -45,10 +46,10 @@ export default function EnginesPortalClient() {
             src="/images/car_bgg.jpg"
             alt="Vogue Technics engine specialists"
             fill
-            className="object-cover opacity-40 mix-blend-overlay"
+            className="object-cover opacity-65 mix-blend-overlay"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/80 to-slate-900/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/70 via-slate-900/35 to-slate-900/10" />
         </div>
 
         <div className="container relative z-10 mx-auto px-4 lg:px-8">
@@ -110,6 +111,8 @@ export default function EnginesPortalClient() {
                 Book an Engine Inspection
               </Link>
             </motion.div>
+
+            <HeroTrustLabels align="start" className="mt-4" />
 
           </div>
         </div>

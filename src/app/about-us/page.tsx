@@ -54,9 +54,9 @@ export default function About() {
             alt="Vogue Technics workshop background"
             fill
             priority
-            className="object-cover opacity-25 mix-blend-overlay"
+            className="object-cover opacity-65 mix-blend-overlay"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/80 to-slate-900/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/70 via-slate-900/35 to-slate-900/10" />
         </div>
 
         <div className="container relative z-10 mx-auto px-4 lg:px-8">

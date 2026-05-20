@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2, Shield, Search, Phone, Wrench, Award, Car, Gauge, Activity, Zap } from "lucide-react";
@@ -10,6 +10,7 @@ import ReviewsSection from "@/components/common/ReviewsSection";
 import FAQSection from "@/components/common/FAQSection";
 import Breadcrumbs from "@/components/common/Breadcrumbs";
 import RegSearch from "@/components/common/RegSearch";
+import HeroTrustLabels from "@/components/common/HeroTrustLabels";
 import PartnerLogos from "@/components/common/PartnerLogos";
 
 const allEngineModels = [
@@ -61,7 +62,7 @@ export default function ServicesPage() {
     <main className="bg-white min-h-screen">
       {/* Hero Header */}
       <section className="bg-slate-900 text-white pt-32 pb-24 relative overflow-hidden">
-        <div className="absolute inset-0 z-0 opacity-30">
+        <div className="absolute inset-0 z-0 opacity-65">
           <Image
             src="/images/car_bgg.jpg"
             alt="Vogue Technics Workshop"
@@ -69,7 +70,7 @@ export default function ServicesPage() {
             className="object-cover filter grayscale"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/35 to-slate-900/10" />
         </div>
         <div className="container mx-auto px-4 lg:px-8 relative z-10 text-center">
             <Breadcrumbs items={[{ name: "Services", href: "/services" }]} />
@@ -90,8 +91,9 @@ export default function ServicesPage() {
               for Range Rover, Land Rover, Jaguar, Audi &amp; BMW
             </span>
           </motion.h1>
-          <div className="flex justify-center w-full max-w-2xl mx-auto mb-10">
+          <div className="flex w-full max-w-2xl mx-auto mb-10 flex-col items-center">
              <RegSearch />
+            <HeroTrustLabels className="mt-4" />
           </div>
         </div>
       </section>

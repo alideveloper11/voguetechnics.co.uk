@@ -6,6 +6,7 @@ import { Phone, Star } from "lucide-react";
 import { motion } from "framer-motion";
 import Breadcrumbs from "@/components/common/Breadcrumbs";
 import RegSearch from "@/components/common/RegSearch";
+import HeroTrustLabels from "@/components/common/HeroTrustLabels";
 import FAQSection from "@/components/common/FAQSection";
 import PartnerLogos from "@/components/common/PartnerLogos";
 import EngineCodesTable from "@/components/common/EngineCodesTable";
@@ -124,10 +125,10 @@ export default function RangeRoverSportSVREnginesClient({ engineCodes }: RangeRo
             src="/images/car_bgg.jpg"
             alt="Range Rover Sport SVR engine specialist in "
             fill
-            className="object-cover opacity-30 mix-blend-overlay"
+            className="object-cover opacity-65 mix-blend-overlay"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/85 to-slate-900/50" />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/70 via-slate-900/35 to-slate-900/10" />
         </div>
 
         <div className="container relative z-10 mx-auto px-4 lg:px-8">
@@ -157,6 +158,7 @@ export default function RangeRoverSportSVREnginesClient({ engineCodes }: RangeRo
               className="mt-7"
             >
               <RegSearch className="max-w-3xl" />
+            <HeroTrustLabels className="mt-4" />
             </motion.div>
 
           </div>

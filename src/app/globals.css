@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: var(--font-outfit), sans-serif;
+  --font-sans: var(--font-inter), Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --color-primary: #198754;
   --color-primary-dark: #146c43;
   --color-accent: #f59e0b;
@@ -28,12 +28,84 @@
 :root {
   --background: #f8fafc;
   --foreground: #0f172a;
+  --type-body: clamp(0.9375rem, 0.9rem + 0.18vw, 1rem);
+  --type-small: 0.875rem;
+  --type-h1: clamp(2.25rem, 1.75rem + 2.1vw, 4rem);
+  --type-h2: clamp(1.75rem, 1.45rem + 1.25vw, 2.75rem);
+  --type-h3: clamp(1.35rem, 1.18rem + 0.75vw, 2rem);
+  --type-h4: clamp(1.125rem, 1.02rem + 0.45vw, 1.5rem);
+  --type-h5: 1.0625rem;
+  --type-h6: 1rem;
+  --leading-body: 1.7;
+  --leading-heading: 1.14;
+}
+
+html {
+  font-size: 16px;
+  text-size-adjust: 100%;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+  font-size: var(--type-body);
+  line-height: var(--leading-body);
+  letter-spacing: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+  font-family: var(--font-sans);
+  font-weight: 800;
+  line-height: var(--leading-heading);
+  letter-spacing: 0 !important;
+  text-wrap: balance;
+}
+
+body h1 {
+  font-size: var(--type-h1) !important;
+}
+
+body h2 {
+  font-size: var(--type-h2) !important;
+}
+
+body h3 {
+  font-size: var(--type-h3) !important;
+}
+
+body h4 {
+  font-size: var(--type-h4) !important;
+}
+
+body h5 {
+  font-size: var(--type-h5) !important;
+}
+
+body h6 {
+  font-size: var(--type-h6) !important;
+}
+
+body p,
+body li {
+  letter-spacing: 0;
+}
+
+body p {
+  line-height: var(--leading-body);
+}
+
+body small {
+  font-size: var(--type-small);
+  line-height: 1.5;
 }
 
 /* Blog HTML content styling */

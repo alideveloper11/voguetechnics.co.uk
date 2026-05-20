@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React from "react";
 import Image from "next/image";
@@ -16,6 +16,7 @@ import {
 
 import Breadcrumbs from "@/components/common/Breadcrumbs";
 import RegSearch from "@/components/common/RegSearch";
+import HeroTrustLabels from "@/components/common/HeroTrustLabels";
 import ReviewsSection from "@/components/common/ReviewsSection";
 import FAQSection from "@/components/common/FAQSection";
 import ServiceGallery from "@/components/common/ServiceGallery";
@@ -35,7 +36,7 @@ export default function HeadGasketReplacementPage() {
             className="object-cover opacity-20 filter grayscale"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/75 via-slate-900/15 to-transparent" />
         </div>
 
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
@@ -56,8 +57,9 @@ export default function HeadGasketReplacementPage() {
               <span className="text-primary italic">for Range Rover, Land Rover, Jaguar, Audi &amp; BMW</span>
             </motion.h1>
 
-            <div className="flex justify-center w-full max-w-2xl mx-auto mb-10">
+            <div className="flex w-full max-w-2xl mx-auto mb-10 flex-col items-center">
               <RegSearch />
+            <HeroTrustLabels className="mt-4" />
             </div>
 
 

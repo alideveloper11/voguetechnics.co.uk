@@ -1,4 +1,5 @@
 import type { PrecisionEngineSectionData } from "@/components/common/PrecisionEngineSection";
+import type { EngineSizeContentBlock } from "@/components/common/EngineSizeContentSection";
 
 export type LandRoverEngineSizePageData = {
   slug: string;
@@ -11,6 +12,7 @@ export type LandRoverEngineSizePageData = {
   commonIssues: string[];
   serviceHighlights: string[];
   precision: PrecisionEngineSectionData;
+  contentSections?: EngineSizeContentBlock[];
   faqs: Array<{ question: string; answer: string }>;
 };
 
@@ -43,6 +45,25 @@ const landRoverEngineSizePages: Record<string, LandRoverEngineSizePageData> = {
     commonIssues: ["Timing chain noise or stretch", "Turbocharger wear and boost faults", "EGR/DPF related diesel issues", "Oil dilution or coolant loss", "Sensor and fuel-system faults"],
     serviceHighlights: ["Used and reconditioned 2.0 engines", "Timing chain and turbo replacement", "Engine rebuilds to measured tolerances", "Supply-only or full supply and fit", "UK-wide collection and delivery"],
     precision: buildLandRoverPrecision("Land Rover 2.0 Engines", "2.0"),
+    contentSections: [
+      {
+        heading: "Buy Recon & Second Hand Land Rover 2.0 Engines",
+        kicker: "Vogue Technics",
+        paragraphs: [
+          "If you are looking to replace the engine in your Land Rover, there are many intricate details that need to be checked closely to achieve a proper engine replacement. The replacement unit must match the vehicle, engine code, ancillaries and control systems so the completed work is reliable.",
+          "Finding the exact replacement engine for your vehicle is specialist work. Vogue Technics can help confirm the correct Land Rover 2.0 engine for your registration, advise whether a used, second hand or reconditioned engine is the right option, and supply or fit the unit with warranty-backed workmanship.",
+          "The Land Rover 2.0 engine is a compact and efficient 2.0-litre unit used across modern Land Rover platforms. When matched correctly to the existing vehicle specification, it can be a strong replacement option for Land Rover owners.",
+        ],
+      },
+      {
+        heading: "How to Determine the Size of the Engine?",
+        paragraphs: [
+          "Engine size is determined by the amount of space inside the engine cylinders. This is where the fuel and air mixture is compressed, combusted and ignited to create the energy that moves the vehicle.",
+          "In simple terms, the combined volume of all cylinders gives the engine capacity, usually shown in litres. Cylinder count and engine design also affect how the engine delivers power, torque and fuel efficiency.",
+          "A common misconception is that bigger is always better. Modern engine technology allows smaller engines, such as the Land Rover 2.0, to deliver improved fuel efficiency while still producing strong power and torque figures when maintained and matched correctly.",
+        ],
+      },
+    ],
     faqs: [
       {
         question: "Do you supply Land Rover 2.0 engines?",
@@ -71,6 +92,25 @@ const landRoverEngineSizePages: Record<string, LandRoverEngineSizePageData> = {
     commonIssues: ["Timing chain wear", "Turbo and actuator faults", "Crankshaft or bottom-end wear", "Coolant leaks and overheating", "Injector and fuel-system faults"],
     serviceHighlights: ["3.0 engine rebuild and replacement", "Used and reconditioned units", "Timing chain replacement", "Turbo and fuel-system diagnosis", "Written warranty on major work"],
     precision: buildLandRoverPrecision("Land Rover 3.0 Engines", "3.0"),
+    contentSections: [
+      {
+        heading: "Buy Recon & Second Hand Land Rover 3.0 Engines",
+        kicker: "Vogue Technics",
+        paragraphs: [
+          "If you are looking to replace the engine in your Land Rover, there are many intricate details that need to be monitored closely to achieve a proper engine replacement. The replacement unit must match the vehicle, engine code, ancillaries and control systems so the completed work is reliable.",
+          "Finding the exact replacement engine for your vehicle is specialist work. Vogue Technics can help confirm the correct Land Rover 3.0 engine for your registration, advise whether a used, second hand or reconditioned engine is the right option, and supply or fit the unit with warranty-backed workmanship.",
+          "The Land Rover 3.0 engine is a capable and efficient 3.0-litre unit used across popular Land Rover platforms. When matched correctly to the existing vehicle specification, it can be a strong replacement option for Land Rover owners.",
+        ],
+      },
+      {
+        heading: "How to Determine the Size of the Engine?",
+        paragraphs: [
+          "Engine size is determined by the amount of space inside the engine cylinders. This is where the fuel and air mixture is compressed, combusted and ignited to create the energy that moves the vehicle.",
+          "In simple terms, the combined volume of all cylinders gives the engine capacity, usually shown in litres. Cylinder count and engine design also affect how the engine delivers power, torque and fuel efficiency.",
+          "A common misconception is that bigger is always better. Modern engine technology allows engines to deliver improved fuel efficiency while still producing strong power and torque figures when maintained and matched correctly.",
+        ],
+      },
+    ],
     faqs: [
       {
         question: "How much does a Land Rover 3.0 engine replacement cost?",
@@ -99,6 +139,25 @@ const landRoverEngineSizePages: Record<string, LandRoverEngineSizePageData> = {
     commonIssues: ["Timing chain and guide wear", "Turbocharger failure on TDV8 units", "Oil leaks and pressure concerns", "Cooling system faults", "High-mileage internal wear"],
     serviceHighlights: ["4.4 TDV8 rebuilds", "Used and reconditioned V8 engines", "Turbo replacement and oil-feed checks", "Supply-only and supply-and-fit", "Transparent written quotes"],
     precision: buildLandRoverPrecision("Land Rover 4.4 Engines", "4.4"),
+    contentSections: [
+      {
+        heading: "Buy Recon & Second Hand Land Rover 4.4 Engines",
+        kicker: "Vogue Technics",
+        paragraphs: [
+          "If you are looking to replace the engine in your Land Rover, there are many intricate details that need to be checked closely to achieve a proper engine replacement. The replacement unit must match the vehicle, engine code, ancillaries, turbo setup and control systems so the finished repair is reliable.",
+          "Finding the exact replacement engine for your vehicle is specialist work. Vogue Technics can help confirm the correct Land Rover 4.4 engine for your registration, advise whether a used, second hand or reconditioned engine is the right option, and supply or fit the unit with warranty-backed workmanship.",
+          "The Land Rover 4.4 engine is a powerful V8 unit used across premium Land Rover and shared JLR platforms. When matched correctly to the existing vehicle specification, it can be a strong replacement option for TDV8 and V8 Land Rover owners.",
+        ],
+      },
+      {
+        heading: "How to Determine the Size of the Engine?",
+        paragraphs: [
+          "Engine size is determined by the amount of space inside the engine cylinders. This is where the fuel and air mixture is compressed, combusted and ignited to create the energy that moves the vehicle.",
+          "In simple terms, the combined volume of all cylinders gives the engine capacity, usually shown in litres. Cylinder count, turbocharging and engine design also affect how the engine delivers power, torque and fuel efficiency.",
+          "A common misconception is that bigger is always better. Modern engine technology allows engines to deliver improved fuel efficiency while still producing strong power and torque figures when maintained and matched correctly.",
+        ],
+      },
+    ],
     faqs: [
       {
         question: "Do you work on Land Rover 4.4 TDV8 engines?",
@@ -127,6 +186,25 @@ const landRoverEngineSizePages: Record<string, LandRoverEngineSizePageData> = {
     commonIssues: ["Timing chain rattle or guide wear", "Cooling and overheating faults", "Oil consumption or leaks", "Head gasket stress", "Carbon build-up and fuelling issues"],
     serviceHighlights: ["5.0 V8 rebuilds and repairs", "AJ133 engine support", "Timing chain and cooling checks", "Replacement engines supplied and fitted", "Warranty-backed workmanship"],
     precision: buildLandRoverPrecision("Land Rover 5.0 Engines", "5.0"),
+    contentSections: [
+      {
+        heading: "Buy Recon & Second Hand Land Rover 5.0 Engines",
+        kicker: "Vogue Technics",
+        paragraphs: [
+          "If you are looking to replace the engine in your Land Rover, there are many intricate details that need to be checked closely to achieve a proper engine replacement. The replacement unit must match the vehicle, engine code, ancillaries, supercharger equipment where fitted, and control systems so the completed work performs correctly.",
+          "Finding the exact replacement engine for your vehicle is specialist work. Vogue Technics can help confirm the correct Land Rover 5.0 engine for your registration, advise whether a used, second hand or reconditioned engine is the right option, and supply or fit the unit with warranty-backed workmanship.",
+          "The Land Rover 5.0 engine is a high-performance V8 unit used across powerful Land Rover models, including supercharged applications. When matched correctly to the existing vehicle specification, it can be a strong replacement option for Land Rover owners who need dependable performance.",
+        ],
+      },
+      {
+        heading: "How to Determine the Size of the Engine?",
+        paragraphs: [
+          "Engine size is determined by the amount of space inside the engine cylinders. This is where the fuel and air mixture is compressed, combusted and ignited to create the energy that moves the vehicle.",
+          "In simple terms, the combined volume of all cylinders gives the engine capacity, usually shown in litres. Cylinder count, induction type and engine design also affect how the engine delivers power, torque and fuel efficiency.",
+          "A common misconception is that bigger is always better. Modern engine technology allows engines to deliver improved fuel efficiency while still producing strong power and torque figures when maintained and matched correctly.",
+        ],
+      },
+    ],
     faqs: [
       {
         question: "Do you rebuild Land Rover 5.0 V8 engines?",

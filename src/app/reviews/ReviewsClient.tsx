@@ -235,10 +235,10 @@ export default function ReviewsClient() {
             src="/images/car_bgg.jpg"
             alt="Vogue Technics customer reviews"
             fill
-            className="object-cover opacity-25 mix-blend-overlay"
+            className="object-cover opacity-65 mix-blend-overlay"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/85 to-slate-900/50" />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/70 via-slate-900/35 to-slate-900/10" />
         </div>
 
         <div className="container relative z-10 mx-auto px-4 lg:px-8">

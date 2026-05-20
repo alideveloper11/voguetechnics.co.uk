@@ -8,6 +8,12 @@ import Breadcrumbs from "@/components/common/Breadcrumbs";
 import RegSearch from "@/components/common/RegSearch";
 import FAQSection from "@/components/common/FAQSection";
 import PartnerLogos from "@/components/common/PartnerLogos";
+import EngineCodesTable from "@/components/common/EngineCodesTable";
+import type { EngineCodesEntry } from "@/data/engineCodes";
+
+type RangeRoverSportEnginesClientProps = {
+  engineCodes?: EngineCodesEntry | null;
+};
 
 const services = [
   {
@@ -104,7 +110,7 @@ const faqs = [
   },
 ];
 
-export default function RangeRoverSportEnginesClient() {
+export default function RangeRoverSportEnginesClient({ engineCodes }: RangeRoverSportEnginesClientProps) {
   return (
     <div className="bg-white min-h-screen">
       <section className="relative overflow-hidden bg-slate-900 pt-32 pb-24">
@@ -187,6 +193,8 @@ export default function RangeRoverSportEnginesClient() {
           </div>
         </div>
       </section>
+
+      {engineCodes ? <EngineCodesTable title={engineCodes.title} rows={engineCodes.rows} /> : null}
 
       <section className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4 lg:px-8">

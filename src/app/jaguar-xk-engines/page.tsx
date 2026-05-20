@@ -8,6 +8,10 @@ import Breadcrumbs from "@/components/common/Breadcrumbs";
 import RegSearch from "@/components/common/RegSearch";
 import FAQSection from "@/components/common/FAQSection";
 import PartnerLogos from "@/components/common/PartnerLogos";
+import EngineCodesTable from "@/components/common/EngineCodesTable";
+import { getEngineCodesEntry } from "@/data/engineCodes";
+
+const engineCodes = getEngineCodesEntry("jaguar-xk-engines");
 
 const faqs = [
   {
@@ -98,6 +102,8 @@ export default function JaguarXKEnginesPage() {
           </div>
         </div>
       </section>
+
+      {engineCodes ? <EngineCodesTable title={engineCodes.title} rows={engineCodes.rows} /> : null}
 
       <FAQSection
         title={

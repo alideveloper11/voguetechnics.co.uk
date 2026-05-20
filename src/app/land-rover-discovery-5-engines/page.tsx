@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { getEngineCodesEntry } from "@/data/engineCodes";
 import LandRoverDiscovery5EnginesClient from "./LandRoverDiscovery5EnginesClient";
 
 export const metadata: Metadata = {
@@ -9,6 +10,6 @@ export const metadata: Metadata = {
 };
 
 export default function LandRoverDiscovery5EnginesPage() {
-  return <LandRoverDiscovery5EnginesClient />;
+  return <LandRoverDiscovery5EnginesClient engineCodes={getEngineCodesEntry("land-rover-discovery-5-engines")} />;
 }
 

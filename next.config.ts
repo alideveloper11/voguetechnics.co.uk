@@ -62,7 +62,6 @@ const nextConfig: NextConfig = {
 
       // Range Rover SVR pages → /range-rover-engines
       { source: '/range-rover-svr-aj133-engines',  destination: '/range-rover-engines', permanent: true },
-      { source: '/range-rover-sport-svr-engines',  destination: '/range-rover-engines', permanent: true },
 
       // BMW X5 specific model pages → /bmw-engines
       { source: '/bmw-x5-xdrive-30d-engines', destination: '/bmw-engines', permanent: true },
@@ -328,7 +327,6 @@ const nextConfig: NextConfig = {
       { source: '/bmw-b47c20a-engines', destination: '/bmw-engines', permanent: true },
 
       // RANGE-ROVER redirects
-      { source: '/range-rover-3', destination: '/range-rover-engines', permanent: true },
       { source: '/range-rover-276dt-engines', destination: '/range-rover-engines', permanent: true },
       { source: '/range-rover-8', destination: '/range-rover-engines', permanent: true },
       { source: '/range-rover-204dtd-engines', destination: '/range-rover-engines', permanent: true },
@@ -337,7 +335,6 @@ const nextConfig: NextConfig = {
       { source: '/range-rover-224dt-engines', destination: '/range-rover-engines', permanent: true },
       { source: '/range-rover-368dt-engines', destination: '/range-rover-engines', permanent: true },
       { source: '/range-rover-448pn-engines', destination: '/range-rover-engines', permanent: true },
-      { source: '/range-rover-5', destination: '/range-rover-engines', permanent: true },
       { source: '/range-rover-428ps-engines', destination: '/range-rover-engines', permanent: true },
       { source: '/range-rover-9', destination: '/range-rover-engines', permanent: true },
       { source: '/range-rover-6', destination: '/range-rover-engines', permanent: true },
@@ -346,7 +343,6 @@ const nextConfig: NextConfig = {
       { source: '/range-rover-30ddtx-engines', destination: '/range-rover-engines', permanent: true },
       { source: '/range-rover-306ps-engines', destination: '/range-rover-engines', permanent: true },
       { source: '/range-rover-204dta-engines', destination: '/range-rover-engines', permanent: true },
-      { source: '/range-rover-2', destination: '/range-rover-engines', permanent: true },
       { source: '/range-rover-7', destination: '/range-rover-engines', permanent: true },
       { source: '/range-rover-pt204-engines', destination: '/range-rover-engines', permanent: true },
       { source: '/range-rover-204pt-engines', destination: '/range-rover-engines', permanent: true },
@@ -358,17 +354,14 @@ const nextConfig: NextConfig = {
       { source: '/land-rover-30hd0d-engines', destination: '/land-rover-engines', permanent: true },
       { source: '/land-rover-306dt-engines', destination: '/land-rover-engines', permanent: true },
       { source: '/land-rover-zsd-422-engines', destination: '/land-rover-engines', permanent: true },
-      { source: '/land-rover-3', destination: '/land-rover-engines', permanent: true },
       { source: '/land-rover-306ps-engines', destination: '/land-rover-engines', permanent: true },
       { source: '/land-rover-204dta-engines', destination: '/land-rover-engines', permanent: true },
       { source: '/land-rover-224dt-engines', destination: '/land-rover-engines', permanent: true },
       { source: '/land-rover-406pn-engines', destination: '/land-rover-engines', permanent: true },
-      { source: '/land-rover-2', destination: '/land-rover-engines', permanent: true },
       { source: '/land-rover-204pt-engines', destination: '/land-rover-engines', permanent: true },
       { source: '/land-rover-204dtd-engines', destination: '/land-rover-engines', permanent: true },
       { source: '/land-rover-7', destination: '/land-rover-engines', permanent: true },
       { source: '/land-rover-4', destination: '/land-rover-engines', permanent: true },
-      { source: '/land-rover-5', destination: '/land-rover-engines', permanent: true },
       { source: '/land-rover-6', destination: '/land-rover-engines', permanent: true },
       { source: '/land-rover-448pn-engines', destination: '/land-rover-engines', permanent: true },
       { source: '/land-rover-8', destination: '/land-rover-engines', permanent: true },

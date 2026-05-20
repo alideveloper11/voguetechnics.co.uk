@@ -7,7 +7,8 @@ import ReviewsSection from "@/components/common/ReviewsSection";
 import { notFound } from "next/navigation";
 import Breadcrumbs from "@/components/common/Breadcrumbs";
 import FAQSection from "@/components/common/FAQSection";
-import RegSearch from "@/components/common/RegSearch";
+import EngineCodesTable, { type EngineRow } from "@/components/common/EngineCodesTable";
+import engineCodesData from "@/data/engineCodesData.json";
 
 type ModelPageContent = {
   metaTitle: string;
@@ -27,6 +28,13 @@ type EngineSizeSpec = {
   complexityNote: string;
   priceGuide: string;
 };
+
+type EngineCodesEntry = {
+  title: string;
+  rows: EngineRow[];
+};
+
+const engineCodesBySlug = engineCodesData as Record<string, EngineCodesEntry>;
 
 const audiEngineSizeSpecs: EngineSizeSpec[] = [
   {
@@ -3813,6 +3821,10 @@ function getAudiModelContent(slug: string): ModelPageContent | null {
   return audiModelContent[slug] ?? null;
 }
 
+function getEngineCodesContent(slug: string): EngineCodesEntry | null {
+  return engineCodesBySlug[slug] ?? null;
+}
+
 // Utility to format slug into title ("audi-a1-engines" -> "Audi A1 Engines")
 function formatTitle(slug: string): string {
   if (!slug) return "";
@@ -3868,6 +3880,7 @@ export default async function DynamicServicePage({ params }: { params: Promise<{
   const extractedPartName = isPart ? formattedTitle : slug.split('-').slice(-1)[0] === 'engines' ? formatTitle(slug.split('-').slice(-2, -1)[0]) : 'Part';
 
   const audiOverride = getAudiModelContent(slug);
+  const engineCodesContent = getEngineCodesContent(slug);
   if (audiOverride) {
     return (
       <div className="bg-white min-h-screen">
@@ -3964,6 +3977,13 @@ export default async function DynamicServicePage({ params }: { params: Promise<{
                       </section>
                     ) : null}
 
+                    {engineCodesContent ? (
+                      <EngineCodesTable
+                        title={engineCodesContent.title}
+                        rows={engineCodesContent.rows}
+                      />
+                    ) : null}
+
                     {mainSections.length > 0 && (
                       <div className="space-y-4">
                         <h2 className="text-lg font-extrabold text-slate-900 px-1">Our Engine Services</h2>
@@ -4050,7 +4070,7 @@ export default async function DynamicServicePage({ params }: { params: Promise<{
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a href="tel:01375 531355" className="bg-primary hover:bg-primary-dark text-white font-bold py-4 px-8 rounded-xl shadow-[0_0_20px_rgba(25,135,84,0.4)] transition-all flex items-center gap-2 w-full sm:w-auto justify-center">
-              <Phone className="w-5 h-5" /> Let's Talk: 01375 531355
+              <Phone className="w-5 h-5" /> Let&apos;s Talk: 01375 531355
             </a>
             <Link href="/contact-us" className="bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl border border-white/20 transition-all w-full sm:w-auto justify-center flex items-center">
               Request a Quote
@@ -4156,6 +4176,13 @@ export default async function DynamicServicePage({ params }: { params: Promise<{
           
         </div>
       </div>
+
+      {engineCodesContent ? (
+        <EngineCodesTable
+          title={engineCodesContent.title}
+          rows={engineCodesContent.rows}
+        />
+      ) : null}
 
       <ReviewsSection 
         title="What Our Customers Say" 

@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { getEngineCodesEntry } from "@/data/engineCodes";
 import RangeRoverVelarEnginesClient from "./RangeRoverVelarEnginesClient";
 
 export const metadata: Metadata = {
@@ -9,6 +10,6 @@ export const metadata: Metadata = {
 };
 
 export default function RangeRoverVelarEnginesPage() {
-  return <RangeRoverVelarEnginesClient />;
+  return <RangeRoverVelarEnginesClient engineCodes={getEngineCodesEntry("range-rover-velar-engines")} />;
 }
 

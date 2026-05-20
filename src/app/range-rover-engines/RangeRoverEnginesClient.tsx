@@ -8,6 +8,8 @@ import { motion } from "framer-motion";
 import Breadcrumbs from "@/components/common/Breadcrumbs";
 import RegSearch from "@/components/common/RegSearch";
 import FAQSection from "@/components/common/FAQSection";
+import PopularEngineSizes from "@/components/common/PopularEngineSizes";
+import rangeRoverPopularEngineSizes from "@/data/rangeRoverPopularEngineSizes";
 
 const rangeRoverModels = [
   { title: "Range Rover Evoque Engines", link: "/range-rover-evoque-engines", description: "Compact luxury SUV engine specialists — repairs, rebuilds and replacements with warranty-backed results." },
@@ -183,6 +185,8 @@ export default function RangeRoverEnginesClient() {
           </div>
         </div>
       </section>
+
+      <PopularEngineSizes items={rangeRoverPopularEngineSizes} />
 
       <section className="py-16 md:py-20 bg-slate-50">
         <div className="container mx-auto px-4 lg:px-8">

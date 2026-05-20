@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { getEngineCodesEntry } from "@/data/engineCodes";
 import JaguarXEEnginesClient from "./JaguarXEEnginesClient";
 
 export const metadata: Metadata = {
@@ -9,6 +10,6 @@ export const metadata: Metadata = {
 };
 
 export default function JaguarXEEnginesPage() {
-  return <JaguarXEEnginesClient />;
+  return <JaguarXEEnginesClient engineCodes={getEngineCodesEntry("jaguar-xe-engines")} />;
 }
 

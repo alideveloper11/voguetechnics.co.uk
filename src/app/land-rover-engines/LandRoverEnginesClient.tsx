@@ -9,6 +9,8 @@ import { motion } from "framer-motion";
 import Breadcrumbs from "@/components/common/Breadcrumbs";
 import RegSearch from "@/components/common/RegSearch";
 import FAQSection from "@/components/common/FAQSection";
+import PopularEngineSizes from "@/components/common/PopularEngineSizes";
+import landRoverPopularEngineSizes from "@/data/landRoverPopularEngineSizes";
 
 const landRoverModels = [
   { title: "Land Rover Defender Engines", link: "/land-rover-defender-engines", description: "Iconic off-road engine specialists — rebuilds, repairs and replacements for all Defender variants." },
@@ -98,6 +100,8 @@ export default function LandRoverEnginesClient() {
         title="What Our Customers Say" 
         subtitle="Hear from our satisfied customers who have experienced our professional Land Rover engine services." 
       />
+
+      <PopularEngineSizes items={landRoverPopularEngineSizes} />
 
       {/* EXPERIENCE SECTION */}
       <section className="py-16 md:py-20 bg-white border-b border-slate-100 overflow-hidden">

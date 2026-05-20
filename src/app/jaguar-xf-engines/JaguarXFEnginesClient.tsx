@@ -8,6 +8,12 @@ import Breadcrumbs from "@/components/common/Breadcrumbs";
 import RegSearch from "@/components/common/RegSearch";
 import FAQSection from "@/components/common/FAQSection";
 import PartnerLogos from "@/components/common/PartnerLogos";
+import EngineCodesTable from "@/components/common/EngineCodesTable";
+import type { EngineCodesEntry } from "@/data/engineCodes";
+
+type JaguarXFEnginesClientProps = {
+  engineCodes?: EngineCodesEntry | null;
+};
 
 const faqs = [
   {
@@ -37,7 +43,7 @@ const faqs = [
   },
 ];
 
-export default function JaguarXFEnginesClient() {
+export default function JaguarXFEnginesClient({ engineCodes }: JaguarXFEnginesClientProps) {
   return (
     <div className="bg-white min-h-screen">
       <section className="relative overflow-hidden bg-slate-900 pt-32 pb-24">
@@ -108,6 +114,8 @@ export default function JaguarXFEnginesClient() {
           </div>
         </div>
       </section>
+
+      {engineCodes ? <EngineCodesTable title={engineCodes.title} rows={engineCodes.rows} /> : null}
 
       <FAQSection
         title={

@@ -8,6 +8,10 @@ import Breadcrumbs from "@/components/common/Breadcrumbs";
 import RegSearch from "@/components/common/RegSearch";
 import FAQSection from "@/components/common/FAQSection";
 import PartnerLogos from "@/components/common/PartnerLogos";
+import EngineCodesTable from "@/components/common/EngineCodesTable";
+import { getEngineCodesEntry } from "@/data/engineCodes";
+
+const engineCodes = getEngineCodesEntry("jaguar-f-type-coupe-engines");
 
 const faqs = [
   {
@@ -121,6 +125,8 @@ export default function JaguarFTypeCoupeEnginesPage() {
           </div>
         </div>
       </section>
+
+      {engineCodes ? <EngineCodesTable title={engineCodes.title} rows={engineCodes.rows} /> : null}
 
       <section className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4 lg:px-8">

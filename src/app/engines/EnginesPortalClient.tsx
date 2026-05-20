@@ -198,6 +198,7 @@ export default function EnginesPortalClient() {
               { title: "Engine Repair", slug: "engine-repair", body: "Targeted repairs for oil leaks, EGR faults, cooling failures, misfires, and cylinder head work — diagnosed accurately and priced honestly." },
               { title: "Engine Rebuild", slug: "engine-rebuild", body: "Full strip-and-rebuild to OEM specification — every wear component replaced, every clearance set correctly. Six-month warranty as standard." },
               { title: "Engine Replacement", slug: "engine-replacement", body: "Quality reconditioned and low-mileage units sourced, assessed, and fitted across all five brands. We verify every unit before installation." },
+              { title: "Engine Swap", slug: "engine-swap", body: "Full engine swap service across all five brands — wiring loom mapping, ECU adaptation, and system integration handled by our specialists." },
               { title: "Head Gasket Replacement", slug: "head-gasket-replacement", body: "Combustion gas testing, cylinder head inspection, resurfacing where required, and full cooling system pressure testing before return." },
               { title: "Timing Chain Replacement", slug: "timing-chain-replacement", body: "Chain, tensioners, guides, and sprockets replaced as a complete system across all affected platforms — Ingenium, N47, Jaguar 3.0, Audi TDI." },
               { title: "Timing Belt Replacement", slug: "timing-belt-replacement", body: "Belt, tensioner, idlers, and water pump replaced to OEM specification at the correct interval — before failure, not after." },
@@ -357,11 +358,11 @@ export default function EnginesPortalClient() {
             transition={{ delay: 0.2 }}
             className="flex flex-col md:flex-row gap-8 justify-center items-center"
           >
-            <a href="tel:01375531355" className="bg-white text-primary font-black py-6 px-16 rounded-[2rem] shadow-2xl transition-all transform hover:-translate-y-2 hover:bg-slate-50 text-xl uppercase tracking-widest min-w-[320px]">
+            <a href="tel:01375531355" className="bg-white text-primary font-black py-3.5 px-10 rounded-2xl shadow-2xl transition-all transform hover:-translate-y-2 hover:bg-slate-50 text-sm uppercase tracking-widest">
               CALL 01375 531355
             </a>
-            <Link href="/contact-us" className="bg-slate-900 text-white font-black py-6 px-16 rounded-[2rem] shadow-2xl transition-all transform hover:-translate-y-2 hover:bg-slate-800 text-xl uppercase tracking-widest min-w-[320px] border border-white/10">
-              REQUEST A FREE ENGINE QUOTE
+            <Link href="/contact-us" className="bg-slate-900 text-white font-black py-3.5 px-10 rounded-2xl shadow-2xl transition-all transform hover:-translate-y-2 hover:bg-slate-800 text-sm uppercase tracking-widest border border-white/10">
+              REQUEST QUOTE
             </Link>
           </motion.div>
         </div>

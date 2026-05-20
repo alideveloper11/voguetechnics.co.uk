@@ -247,4 +247,167 @@ export const nationwideSupportData: Record<string, NationwideSupportEntry> = {
     ),
     buttonText: "Book a Health Check",
   },
+
+  "range-rover-2": {
+    headingMain: "Nationwide Range Rover 2.0 Support &",
+    headingHighlight: "OEM Parts Excellence",
+    paragraph1: (
+      <>
+        Our Range Rover 2.0 engine service includes UK-wide collection and delivery, with regular
+        support across <strong>London, Essex, Kent</strong> and surrounding areas. We confirm the
+        exact 2.0 engine code before quoting, covering Ingenium diesel and petrol platforms with
+        repair, rebuild and replacement options.
+      </>
+    ),
+    paragraph2: (
+      <>
+        Every 2.0 job is matched to the correct parts route, from timing chains and turbo parts to
+        cooling and fuel-system components. We use <strong>OEM or quality-matched parts</strong>{" "}
+        and back major engine work with written warranty terms.
+      </>
+    ),
+    buttonText: "Get a 2.0 Engine Quote",
+  },
+
+  "range-rover-3": {
+    headingMain: "Nationwide Range Rover 3.0 Support &",
+    headingHighlight: "OEM Parts Excellence",
+    paragraph1: (
+      <>
+        Our Range Rover 3.0 engine service supports TDV6, SDV6, petrol and related JLR platforms
+        across the UK, with collection available from <strong>London, Essex, Kent</strong> and
+        beyond. We identify the exact engine code and failure pattern before recommending rebuild,
+        repair or replacement.
+      </>
+    ),
+    paragraph2: (
+      <>
+        We source the correct <strong>OEM or quality-matched components</strong> for timing, turbo,
+        cooling, fuel and bottom-end work, then complete the repair with diagnostic checks, road
+        testing and written warranty cover.
+      </>
+    ),
+    buttonText: "Get a 3.0 Engine Quote",
+  },
+
+  "range-rover-4.4": {
+    headingMain: "Nationwide Range Rover 4.4 Support &",
+    headingHighlight: "OEM Parts Excellence",
+    paragraph1: (
+      <>
+        Our Range Rover 4.4 engine service covers TDV8 and V8 applications nationwide, including
+        secure collection from <strong>London, Essex, Kent</strong> and surrounding areas. We check
+        timing, oil pressure, turbo condition and cooling system health before any major repair is
+        agreed.
+      </>
+    ),
+    paragraph2: (
+      <>
+        For 4.4 rebuilds and replacements, we use <strong>OEM or quality-matched parts</strong>{" "}
+        selected for the exact V8 platform, with clear written quotes, final road testing and
+        warranty terms on major engine work.
+      </>
+    ),
+    buttonText: "Get a 4.4 Engine Quote",
+  },
+
+  "range-rover-5": {
+    headingMain: "Nationwide Range Rover 5.0 Support &",
+    headingHighlight: "OEM Parts Excellence",
+    paragraph1: (
+      <>
+        Our Range Rover 5.0 engine service supports supercharged and naturally aspirated V8 models,
+        with UK-wide collection and regular coverage across <strong>London, Essex, Kent</strong>.
+        We inspect timing chains, cooling, oiling and supercharger-related faults before quoting.
+      </>
+    ),
+    paragraph2: (
+      <>
+        Each 5.0 V8 repair or replacement is built around the correct engine code and parts
+        specification, using <strong>OEM or quality-matched components</strong> with diagnostic
+        verification, road testing and written warranty.
+      </>
+    ),
+    buttonText: "Get a 5.0 Engine Quote",
+  },
+
+  "land-rover-2": {
+    headingMain: "Nationwide Land Rover 2.0 Support &",
+    headingHighlight: "OEM Parts Excellence",
+    paragraph1: (
+      <>
+        Our Land Rover 2.0 engine service covers Ingenium diesel and petrol applications across the
+        UK, with collection and delivery available from <strong>London, Essex, Kent</strong> and
+        beyond. We confirm the exact engine code before advising on repair, rebuild or replacement.
+      </>
+    ),
+    paragraph2: (
+      <>
+        From timing chain and turbo repairs to cooling, fuel and emissions-related work, we use{" "}
+        <strong>OEM or quality-matched parts</strong> selected for the 2.0 Land Rover platform and
+        back major work with written warranty.
+      </>
+    ),
+    buttonText: "Get a 2.0 Engine Quote",
+  },
+
+  "land-rover-3": {
+    headingMain: "Nationwide Land Rover 3.0 Support &",
+    headingHighlight: "OEM Parts Excellence",
+    paragraph1: (
+      <>
+        Our Land Rover 3.0 engine service supports TDV6, SDV6 and newer 3.0 platforms nationwide,
+        with secure collection from <strong>London, Essex, Kent</strong> and surrounding areas. We
+        assess timing, crankshaft, turbo, injector and cooling concerns before recommending a route.
+      </>
+    ),
+    paragraph2: (
+      <>
+        Every 3.0 rebuild, repair or replacement is quoted against the exact engine code, using{" "}
+        <strong>OEM or quality-matched components</strong> and completed with diagnostic checks,
+        road testing and written warranty terms.
+      </>
+    ),
+    buttonText: "Get a 3.0 Engine Quote",
+  },
+
+  "land-rover-4.4": {
+    headingMain: "Nationwide Land Rover 4.4 Support &",
+    headingHighlight: "OEM Parts Excellence",
+    paragraph1: (
+      <>
+        Our Land Rover 4.4 engine service covers V8 petrol and diesel applications with UK-wide
+        logistics, including collection from <strong>London, Essex, Kent</strong> and nearby areas.
+        We inspect timing, oil pressure, turbo systems, cooling and internal wear before quoting.
+      </>
+    ),
+    paragraph2: (
+      <>
+        We match each 4.4 engine job to the correct parts specification, using{" "}
+        <strong>OEM or quality-matched parts</strong> for rebuilds, repairs and replacements, then
+        verify the completed work with road testing and warranty documentation.
+      </>
+    ),
+    buttonText: "Get a 4.4 Engine Quote",
+  },
+
+  "land-rover-5": {
+    headingMain: "Nationwide Land Rover 5.0 Support &",
+    headingHighlight: "OEM Parts Excellence",
+    paragraph1: (
+      <>
+        Our Land Rover 5.0 engine service supports AJ133 and related V8 platforms nationwide, with
+        collection available from <strong>London, Essex, Kent</strong> and surrounding areas. We
+        check timing chains, oiling, cooling, fuel systems and internal wear before quoting.
+      </>
+    ),
+    paragraph2: (
+      <>
+        For 5.0 V8 repairs, rebuilds and replacement engines, we use{" "}
+        <strong>OEM or quality-matched parts</strong> selected for the exact platform, followed by
+        diagnostic verification, road testing and written warranty terms.
+      </>
+    ),
+    buttonText: "Get a 5.0 Engine Quote",
+  },
 };

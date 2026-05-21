@@ -188,7 +188,10 @@ export default function RangeRoverEnginesClient() {
         </div>
       </section>
 
-      <PopularEngineSizes items={rangeRoverPopularEngineSizes} />
+      <PopularEngineSizes
+        items={rangeRoverPopularEngineSizes}
+        subtitle="Range Rover engines span the 2.0 Ingenium four-cylinder through to the 5.0 AJ133 supercharged V8 — each platform carries specific vulnerabilities and requires a different approach to rebuild, repair or replacement. Select your engine size below for detailed specialist information on your exact variant."
+      />
 
       <section className="py-16 md:py-20 bg-slate-50">
         <div className="container mx-auto px-4 lg:px-8">

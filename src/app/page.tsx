@@ -28,49 +28,49 @@ export default function Home() {
     {
       title: "Head Gasket Replacement",
       slug: "head-gasket-replacement",
-      image: "/head_gasket/head_gasket%201.png",
+      image: "/services/head_gasket.png",
       body: "A blown head gasket is one of the most serious engine faults a vehicle can develop. We carry out thorough inspections, pressure testing, and full replacement using quality gasket kits suited to your specific engine.",
     },
     {
       title: "Timing Chain Replacement",
       slug: "timing-chain-replacement",
-      image: "/timming_chain/timing_chain%201.png",
+      image: "/services/timing_chain_replacement.png",
       body: "Timing chain wear is a known issue across several Range Rover and Land Rover variants. We replace chains, tensioners, and guides to factory spec, restoring timing integrity and preventing catastrophic failure.",
     },
     {
       title: "Turbo Replacement",
       slug: "turbo-replacement",
-      image: "/turbo_replacement/turbo_replacement%201.png",
+      image: "/services/turbo_replacement.png",
       body: "A failing turbocharger robs your engine of performance and can cause serious secondary damage. We diagnose faults accurately and fit quality turbos matched correctly to your engine variant.",
     },
     {
       title: "Engine Rebuild",
       slug: "engine-rebuild",
-      image: "/engine_rebuild/engine_rebuild%201.png",
+      image: "/services/engine_rebuild.png",
       body: "A full engine rebuild is the right solution when internal wear or damage is beyond simple repair. We strip, inspect, machine, and reassemble to manufacturer tolerances — precision work done properly.",
     },
     {
       title: "Engine Repair",
       slug: "engine-repair",
-      image: "/engine_repair/engine_repair%201.png",
+      image: "/services/engine_repair.png",
       body: "Not every engine problem requires a full rebuild. Many faults can be resolved with targeted repairs at significantly lower cost. We assess honestly and recommend only what's genuinely needed.",
     },
     {
       title: "Engine Replacement",
       slug: "engine-replacement",
-      image: "/engine_replacement/engine_replacement%201.png",
+      image: "/services/engine_replacement.png",
       body: "When an engine is beyond economical repair, replacement is often the most cost-effective path. We source quality-checked replacement engines and handle the full swap including all ancillaries and testing.",
     },
     {
       title: "Engine Swap",
       slug: "engine-swap",
-      image: "/engine_swap/engine_swap%201.png",
+      image: "/services/engine_swap.png",
       body: "Looking to upgrade or convert between engine types? Our engine swap service covers planning, sourcing, and fitment in full — with honest advice on compatibility and costs before any work begins.",
     },
     {
       title: "Timing Belt Replacement",
       slug: "timing-belt-replacement",
-      image: "/timming_belt/timing_belt%201.png",
+      image: "/services/timing_belt_Replacement.jpeg",
       body: "Missed timing belt replacement intervals can have devastating consequences. We replace belts, tensioners, and water pumps as a complete service — done once and done right.",
     },
     {
@@ -227,7 +227,7 @@ export default function Home() {
               <div className="hidden lg:grid grid-cols-2 gap-4 mt-6">
                 <div className="relative rounded-3xl overflow-hidden shadow-xl h-[180px]">
                   <Image
-                    src="/images/gallery/3g.webp"
+                    src="/images/gallery/3g.jpeg"
                     alt="Workshop diagnostics and inspection"
                     fill
                     className="object-cover"
@@ -272,7 +272,7 @@ export default function Home() {
                 </div>
                 <div className="relative rounded-3xl overflow-hidden shadow-xl h-[180px]">
                   <Image
-                    src="/images/gallery/9g.webp"
+                    src="/images/gallery/9g.jpeg"
                     alt="Range Rover service center"
                     fill
                     className="object-cover"

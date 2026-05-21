@@ -306,7 +306,7 @@ export const services: Service[] = [
     title: "Timing Belt Replacement",
     slug: "timing-belt-replacement",
     icon: <Layers className="w-6 h-6" />,
-    image: "/services/timing_belt_Replacement.png",
+    image: "/services/timing_belt_Replacement.jpeg",
     shortDescription: "A timing belt doesn’t warn before it fails. We replace belts/cambelts at the correct interval using the full kit (tensioner, idlers, and water pump where belt-driven) to prevent severe damage.",
     longDescription: "Prevent engine damage with our timely timing belt replacement service. We use high-quality belts and water pumps to ensure your engine runs smoothly for thousands of miles.",
     features: ["High-durability belts", "Water pump replacement", "Tensioner check", "Interval reset"],
@@ -346,6 +346,7 @@ export const services: Service[] = [
   {
     title: "Engine Diagnostics and Health Check",
     slug: "engine-health-check",
+    image: "/images/expert-mechanicss.webp",
     icon: <Gauge className="w-6 h-6" />,
     shortDescription: "For warning lights, unusual noises or performance drops, our health check goes beyond basic code reads with a full mechanical and electronic assessment plus a written report of everything we find.",
     longDescription: "Our engine health check identifies potential issues before they become expensive failures. We check compression, diagnostics, and overall mechanical performance.",

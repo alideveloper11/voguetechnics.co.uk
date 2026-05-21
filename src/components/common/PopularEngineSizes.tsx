@@ -8,12 +8,14 @@ export type PopularEngineSizeItem = {
 
 type PopularEngineSizesProps = {
   title?: string;
+  subtitle?: string;
   items: PopularEngineSizeItem[];
   className?: string;
 };
 
 export default function PopularEngineSizes({
   title = "Popular Engine Sizes",
+  subtitle,
   items,
   className = "",
 }: PopularEngineSizesProps) {
@@ -25,6 +27,17 @@ export default function PopularEngineSizes({
         <h2 className="text-center text-3xl md:text-5xl font-extrabold tracking-normal text-black">
           {title}
         </h2>
+        <div className="w-16 h-1 bg-primary mx-auto mt-4 rounded-full" />
+        {subtitle && (
+          <div className="mt-8 max-w-3xl mx-auto">
+            <div className="relative bg-white rounded-2xl shadow-sm px-8 py-6 border-l-4 border-primary">
+              <span className="absolute -top-3 left-8 text-5xl text-primary/20 font-serif leading-none select-none">&ldquo;</span>
+              <p className="text-slate-700 text-base md:text-lg leading-relaxed font-medium italic">
+                {subtitle}
+              </p>
+            </div>
+          </div>
+        )}
 
         <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {items.map((item) => (

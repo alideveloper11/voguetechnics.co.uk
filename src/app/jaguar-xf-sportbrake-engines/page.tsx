@@ -6,8 +6,13 @@ import { Phone } from "lucide-react";
 import { motion } from "framer-motion";
 import Breadcrumbs from "@/components/common/Breadcrumbs";
 import RegSearch from "@/components/common/RegSearch";
+import HeroTrustLabels from "@/components/common/HeroTrustLabels";
 import FAQSection from "@/components/common/FAQSection";
 import PartnerLogos from "@/components/common/PartnerLogos";
+import EngineCodesTable from "@/components/common/EngineCodesTable";
+import { getEngineCodesEntry } from "@/data/engineCodes";
+
+const engineCodes = getEngineCodesEntry("jaguar-xf-sportbrake-engines");
 
 const faqs = [
   {
@@ -28,7 +33,7 @@ const faqs = [
   {
     question: "Can you collect my engine from anywhere in the UK?",
     answer:
-      "Yes. We offer UK-wide collection and delivery so you can access our Grays workshop expertise from anywhere in the country.",
+      "Yes. We offer UK-wide collection and delivery so you can access our  workshop expertise from anywhere in the country.",
   },
 ];
 
@@ -39,12 +44,12 @@ export default function JaguarXFSportbrakeEnginesPage() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/car_bgg.jpg"
-            alt="Jaguar XF Sportbrake engine specialists in Grays"
+            alt="Jaguar XF Sportbrake engine specialists in "
             fill
-            className="object-cover opacity-30 mix-blend-overlay"
+            className="object-cover opacity-65 mix-blend-overlay"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/85 to-slate-900/50" />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/70 via-slate-900/35 to-slate-900/10" />
         </div>
 
         <div className="container relative z-10 mx-auto px-4 lg:px-8">
@@ -55,42 +60,28 @@ export default function JaguarXFSportbrakeEnginesPage() {
             ]}
           />
 
-          <div className="max-w-5xl pt-8">
+          <div className="max-w-3xl mx-auto text-center pt-8">
             <motion.h1
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-3xl font-black leading-[1.08] tracking-tight text-white md:text-5xl"
+              className="text-2xl font-black leading-[1.1] tracking-tight text-white md:text-4xl"
             >
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-300 to-green-400">
                 Jaguar XF Sportbrake Engine
               </span>{" "}
-              — Supply, Repair, Rebuild & Fit Across the UK
+                Supply, Repair, Rebuild & Fit Across the UK
             </motion.h1>
 
             <motion.div
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.12 }}
-              className="mt-7"
+              className="mt-6 flex justify-center"
             >
               <RegSearch className="max-w-3xl" />
+            <HeroTrustLabels className="mt-4" />
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.22 }}
-              className="mt-7 max-w-4xl text-sm leading-relaxed text-slate-300 md:text-base space-y-4"
-            >
-              <p>
-                The Jaguar XF Sportbrake is a practical, high-mileage-friendly estate — but that also means engines often see heavier use over time.
-                When faults develop, specialist diagnosis and the correct repair route matters.
-              </p>
-              <p>
-                At Vogue Technics in Grays, Essex, we specialise in Jaguar XF Sportbrake engine rebuilds, targeted repairs and complete replacements
-                across the full range — including Ingenium and V6 variants — with transparent pricing and written warranty.
-              </p>
-            </motion.div>
           </div>
         </div>
       </section>
@@ -104,7 +95,7 @@ export default function JaguarXFSportbrakeEnginesPage() {
             </div>
             <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
               <h3 className="font-bold text-slate-900">Diagnostics Before Decisions</h3>
-              <p className="mt-3 text-slate-700 leading-relaxed">Same‑day diagnostics available in Grays to pinpoint the exact fault.</p>
+              <p className="mt-3 text-slate-700 leading-relaxed">Same‑day diagnostics available in  to pinpoint the exact fault.</p>
             </div>
             <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
               <h3 className="font-bold text-slate-900">Supply & Fit Available</h3>
@@ -114,10 +105,12 @@ export default function JaguarXFSportbrakeEnginesPage() {
         </div>
       </section>
 
+      {engineCodes ? <EngineCodesTable title={engineCodes.title} rows={engineCodes.rows} /> : null}
+
       <FAQSection
         title={
           <>
-            Frequently Asked Questions — <span className="text-primary italic">Jaguar XF Sportbrake Engine</span>
+            Frequently Asked Questions   <span className="text-primary italic">Jaguar XF Sportbrake Engine</span>
           </>
         }
         items={faqs}
@@ -128,19 +121,19 @@ export default function JaguarXFSportbrakeEnginesPage() {
           <div className="max-w-5xl mx-auto text-center space-y-6">
             <h2 className="text-3xl md:text-4xl font-extrabold leading-tight">Need an XF Sportbrake engine solution?</h2>
             <p className="text-emerald-50 leading-relaxed max-w-4xl mx-auto">
-              Call our Grays workshop for diagnostics, supply-only, or a complete supply and fit booking.
+              Call our  workshop for diagnostics, supply-only, or a complete supply and fit booking.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:01375531355"
-                className="inline-flex items-center justify-center rounded-2xl bg-white px-8 py-4 font-bold text-primary shadow-xl transition-all hover:bg-slate-50 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99]"
+                className="inline-flex items-center justify-center rounded-2xl bg-white px-5 py-2.5 text-sm font-bold text-primary shadow-xl transition-all hover:bg-slate-50 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99]"
               >
                 <Phone className="w-5 h-5 mr-2" />
                 Call 01375 531355
               </a>
               <Link
                 href="/contact-us"
-                className="inline-flex items-center justify-center rounded-2xl bg-slate-900 px-8 py-4 font-bold text-white shadow-xl transition-all hover:bg-slate-800 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99]"
+                className="inline-flex items-center justify-center rounded-2xl bg-slate-900 px-5 py-2.5 text-sm font-bold text-white shadow-xl transition-all hover:bg-slate-800 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99]"
               >
                 Request a Quote
               </Link>

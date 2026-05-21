@@ -4,6 +4,7 @@ import Breadcrumbs from "@/components/common/Breadcrumbs";
 import FAQSection from "@/components/common/FAQSection";
 import PartnerLogos from "@/components/common/PartnerLogos";
 import RegSearch from "@/components/common/RegSearch";
+import HeroTrustLabels from "@/components/common/HeroTrustLabels";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2, Phone } from "lucide-react";
 import Image from "next/image";
@@ -62,22 +63,22 @@ const faqs = [
   {
     question: "Which BMW 5 Series engine has the most problems?",
     answer:
-      "The N47D20C four-cylinder diesel — fitted to F10 518d and 520d models — is the most frequently flagged for timing chain failure. The N63B44 V8 in the 550i is well known for oil consumption issues. The N57 six-cylinder diesel is generally more reliable but is susceptible to swirl flap failure and EGR faults on higher-mileage examples. All are manageable with the right specialist.",
+      "The N47D20C four-cylinder diesel   fitted to F10 518d and 520d models   is the most frequently flagged for timing chain failure. The N63B44 V8 in the 550i is well known for oil consumption issues. The N57 six-cylinder diesel is generally more reliable but is susceptible to swirl flap failure and EGR faults on higher-mileage examples. All are manageable with the right specialist.",
   },
   {
     question: "Is it worth rebuilding a BMW 5 Series engine?",
     answer:
-      "In most cases, yes — particularly for F10 and G30 examples in otherwise good condition. A quality rebuild extends the vehicle's useful life considerably and costs significantly less than replacing the car. For E60 generation vehicles, the rebuild-versus-replace decision depends more on overall vehicle condition — we'll advise honestly when you contact us.",
+      "In most cases, yes   particularly for F10 and G30 examples in otherwise good condition. A quality rebuild extends the vehicle's useful life considerably and costs significantly less than replacing the car. For E60 generation vehicles, the rebuild-versus-replace decision depends more on overall vehicle condition   we'll advise honestly when you contact us.",
   },
   {
-    question: "Do you cover all 5 Series generations — E60, F10, G30?",
+    question: "Do you cover all 5 Series generations   E60, F10, G30?",
     answer:
-      "Yes — we work across all three generations, every engine family, both diesel and petrol, including the high-performance M5 variants.",
+      "Yes   we work across all three generations, every engine family, both diesel and petrol, including the high-performance M5 variants.",
   },
   {
     question: "Can you supply and fit a replacement engine as well as rebuild my existing one?",
     answer:
-      "Both services are available at our Grays, Essex workshop. We can also arrange professional installation through our approved UK fitter network for owners based elsewhere in the country.",
+      "Both services are available at our  workshop. We can also arrange professional installation through our approved UK fitter network for owners based elsewhere in the country.",
   },
   {
     question: "How long does a BMW 5 Series engine replacement take?",
@@ -96,10 +97,10 @@ export default function Bmw5SeriesEnginesClient() {
             src="/images/car_bgg.jpg"
             alt="BMW 5 Series Engine Specialists"
             fill
-            className="object-cover opacity-40 mix-blend-overlay"
+            className="object-cover opacity-65 mix-blend-overlay"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/75 via-slate-900/25 to-transparent" />
         </div>
 
         <div className="container relative z-10 mx-auto px-4 lg:px-8">
@@ -128,49 +129,19 @@ export default function Bmw5SeriesEnginesClient() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 via-green-400 to-lime-300">
                 BMW 5 Series Engine Rebuild
               </span>{" "}
-              — Expert Reconditioning, Repair &amp; Replacement Across the UK
+                Expert Reconditioning, Repair &amp; Replacement Across the UK
             </motion.h1>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.18 }}
-              className="flex justify-center mt-6 mb-8 w-full"
+              className="mt-6 mb-8 flex w-full flex-col items-center justify-center"
             >
               <RegSearch />
+            <HeroTrustLabels className="mt-4" />
             </motion.div>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.22 }}
-              className="text-base md:text-lg text-slate-200 mb-6 max-w-4xl mx-auto leading-relaxed"
-            >
-              The BMW 5 Series has been one of Britain&apos;s most popular executive cars for decades — and for good reason. Whether you drive an F10
-              530d, a G30 520d, an older E60 525d, or a high-performance F10 M5, the engineering underneath you is sophisticated, capable, and —
-              when it develops problems — demanding of genuine specialist knowledge.
-            </motion.p>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.26 }}
-              className="text-base md:text-lg text-slate-200/90 max-w-4xl mx-auto leading-relaxed"
-            >
-              The 5 Series spans three distinct generations and an enormous range of engine families. The N47&apos;s rear-mounted timing chain in the F10
-              diesel. The N57&apos;s swirl flap vulnerability across the 530d and 535d. The N63&apos;s well-documented oil consumption issues in the 550i. The
-              S63&apos;s extraordinary rebuild complexity in the M5. Each engine has its own failure patterns, its own rebuild requirements, and its own
-              specific demands. A generic approach to any of them produces generic results — which is precisely why 5 Series owners across the UK
-              bring their cars to us.
-            </motion.p>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="text-base md:text-lg text-slate-200/90 max-w-4xl mx-auto leading-relaxed"
-            >
-              At Vogue Technics, based in Grays, Essex, we&apos;ve worked on BMW 5 Series engines across every generation and every engine family for over
-              25 years. Whatever your variant, whatever your problem, you&apos;ve found the right specialist.
-            </motion.p>
           </div>
         </div>
       </section>
@@ -188,20 +159,20 @@ export default function Bmw5SeriesEnginesClient() {
               {[
                 {
                   title: "We Know Every Engine the 5 Series Has Ever Used",
-                  text: "The breadth of the BMW 5 Series engine range is genuinely impressive — and genuinely demanding for anyone trying to service it properly. From the M47N2 four-cylinder diesel in the E60 520d through to the B57D30B six-cylinder diesel in the G30 540d xDrive, from the N20B20 four-cylinder petrol in the F10 520i to the twin-turbo S63B44 V8 in the M5 — every one of these engines has distinct characteristics, distinct failure modes, and distinct rebuild requirements. We cover all of them. Not as a list of capabilities on a website, but as the result of 25 years of direct, hands-on work across every significant engine code the 5 Series has carried. When your car comes into our Grays workshop, the technician working on it has seen that engine before — many times.",
+                  text: "From the N47 diesel to the S63B44 V8 in the M5 — 25 years of hands-on work across every significant engine code.",
                 },
                 {
                   title: "Three Generations, One Specialist",
-                  text: "The E60/E61, F10/F11, and G30/G31 generations each represent a distinct engineering era — with different engine families, different failure patterns, and different rebuild considerations. F10 520d owners face the N47's rear-mounted timing chain as their primary concern. G30 530d owners are dealing with B57 EGR sensitivity and swirl flap risk. E60 535d owners are working with the M57TU2 twin-turbo diesel — a capable but demanding unit that requires very specific knowledge during rebuild. We understand these generational differences in practice, not just on paper. That's what genuine 5 Series expertise looks like.",
+                  text: "E60, F10, and G30 — we know each generation's engine families and failure patterns in genuine depth.",
                 },
                 {
-                  title: "Honest Pricing — Fully Itemised Before We Begin",
-                  text: "Engine work on an executive BMW deserves complete financial clarity. Before any work starts, you'll receive a fully itemised quote covering all parts, labour, and ancillary requirements. No vague figures, no additions at collection. Call us or submit an online enquiry and we'll come back to you promptly with an honest, detailed breakdown.",
+                  title: "Honest Pricing   Fully Itemised Before We Begin",
+                  text: "Fully itemised quote before any work starts — no vague figures, no additions at collection.",
                 },
               ].map((item) => (
                 <div
                   key={item.title}
-                  className="rounded-[2rem] border border-slate-200 bg-gradient-to-b from-white to-slate-50 p-8 shadow-sm"
+                  className="rounded-2xl border border-slate-200 bg-gradient-to-b from-white to-slate-50 p-5 shadow-sm"
                 >
                   <div className="flex items-start gap-3">
                     <span className="mt-1 inline-flex h-7 w-7 items-center justify-center rounded-lg bg-primary/10 text-primary">
@@ -250,11 +221,49 @@ export default function Bmw5SeriesEnginesClient() {
         </div>
       </section>
 
+      {/* SERVICES */}
+      <section className="py-16 md:py-20 bg-slate-50">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-900">Our BMW 5 Series Engine Services</h2>
+            <div className="w-24 h-1 bg-primary mx-auto rounded-full mt-4"></div>
+            <p className="mt-6 text-slate-600 text-[1.05rem] leading-relaxed">
+              We offer a full spectrum of engine services tailored specifically to BMW 5 Series vehicles. Whatever your engine problem, we have the tools, parts, and expertise to solve it properly.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {[
+              { title: "Head Gasket Replacement", body: "OEM-grade head gasket repair for N47, N57, and N63 units — full cylinder head inspection and pressure testing included.", href: "/services/head-gasket-replacement" },
+              { title: "Timing Chain Replacement", body: "Full timing chain kit for N47D20C, N57, and applicable petrol units — chain, tensioners, guides, and sprockets replaced together.", href: "/services/timing-chain-replacement" },
+              { title: "Timing Belt Replacement", body: "Manufacturer-approved belts and tensioners for applicable 5 Series petrol variants — water pump replacement recommended at the same time.", href: "/services/timing-belt-replacement" },
+              { title: "Turbo Replacement", body: "Quality replacement turbos for all 5 Series variants — post-installation boost pressure and oil feed testing included.", href: "/services/turbo-replacement" },
+              { title: "Engine Rebuild", body: "Full strip-down and precision rebuild covering pistons, bearings, seals, and gaskets — up to 40% less than a new engine.", href: "/services/engine-rebuild" },
+              { title: "Engine Repair", body: "Oil leaks, misfires, overheating, and warning lights diagnosed and resolved with transparent, fixed-price quotes.", href: "/services/engine-repair" },
+              { title: "Engine Replacement", body: "Low-mileage tested replacements fitted to the highest standard — UK-wide collection and delivery included.", href: "/services/engine-replacement" },
+              { title: "Engine Swap", body: "Performance upgrades and full engine swaps across all 5 Series variants — including ECU reconfiguration where required.", href: "/services/engine-swap" },
+              { title: "Engine Health Check", body: "Professional diagnostics covering fault codes, oil condition, coolant, and belt/chain inspection — full written report provided.", href: "/services/engine-health-check" },
+            ].map((s) => (
+              <div key={s.title} className="rounded-[1.5rem] border border-slate-200 bg-white p-5 shadow-sm flex flex-col justify-between">
+                <div>
+                  <h3 className="text-base font-bold text-slate-900 mb-2">{s.title}</h3>
+                  <p className="text-sm text-slate-700 leading-relaxed line-clamp-4">{s.body}</p>
+                </div>
+                <div className="pt-4">
+                  <Link href={s.href} className="inline-flex items-center justify-center w-full bg-primary text-white font-bold py-2 px-4 text-sm rounded-xl hover:bg-emerald-600 transition-colors">
+                    Explore More
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <FAQSection
         title={
           <>
-            Frequently Asked Questions — <span className="text-primary italic">BMW 5 Series Engine Rebuild &amp; Repair</span>
+            Frequently Asked Questions   <span className="text-primary italic">BMW 5 Series Engine Rebuild &amp; Repair</span>
           </>
         }
         items={faqs}
@@ -264,26 +273,22 @@ export default function Bmw5SeriesEnginesClient() {
       <section className="py-20 bg-primary relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 blur-[120px] rounded-full -mr-48 -mt-48"></div>
         <div className="container mx-auto px-4 lg:px-8 text-center max-w-4xl space-y-8 relative z-10">
-          <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter italic leading-tight">
+          <h2 className="text-2xl md:text-3xl font-extrabold text-white leading-tight">
             Ready to give your BMW 5 Series the specialist attention it deserves?
           </h2>
-          <p className="text-emerald-100 text-base md:text-lg font-medium max-w-3xl mx-auto leading-relaxed">
-            Call Vogue Technics today or use our online enquiry form for a fast, honest, no-obligation quote. We&apos;re based in Grays, Essex, and we
-            work with BMW 5 Series owners across the entire United Kingdom — every generation, every engine, every problem, done properly.
-          </p>
 
-          <div className="flex flex-col md:flex-row gap-6 justify-center pt-4">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
             <Link
               href="/contact-us"
-              className="bg-slate-900 hover:bg-slate-800 text-white font-black py-5 px-10 md:px-12 rounded-[2rem] shadow-2xl transition-all transform hover:-translate-y-2 text-lg md:text-xl flex items-center justify-center gap-4 uppercase tracking-[0.2em]"
+              className="inline-flex items-center justify-center rounded-2xl bg-slate-900 px-8 py-4 font-bold text-white shadow-xl transition-all hover:bg-slate-800 hover:-translate-y-0.5"
             >
               Book online
             </Link>
             <a
               href="tel:01375531355"
-              className="bg-white text-slate-900 font-black py-5 px-10 md:px-12 rounded-[2rem] shadow-2xl transition-all transform hover:-translate-y-2 text-lg md:text-xl flex items-center justify-center gap-4 uppercase tracking-[0.2em] hover:bg-slate-100"
+              className="inline-flex items-center justify-center rounded-2xl bg-white px-8 py-4 font-bold text-slate-900 shadow-xl transition-all hover:bg-slate-50 hover:-translate-y-0.5"
             >
-              <Phone className="w-6 h-6 text-primary" /> 01375 531355
+              <Phone className="w-5 h-5 mr-2 text-primary" /> 01375 531355
             </a>
           </div>
         </div>

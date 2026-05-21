@@ -46,9 +46,14 @@ export default function Ancillaries() {
               href={`/${part.toLowerCase().replace(/ /g, "-")}`}
               className="group bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:border-primary/50 transition-all duration-300 h-full flex flex-col relative overflow-hidden transform hover:-translate-y-1"
             >
-              <div className="relative z-10 w-full aspect-[4/3] bg-slate-100 rounded-xl mb-6 flex flex-col items-center justify-center overflow-hidden group-hover:bg-slate-200/50 transition-colors">
-                {/* ADD YOUR REAL IMAGES HERE -> <Image src={`/images/parts/${part}.jpg`} alt={part} fill className="object-cover" /> */}
-                <span className="text-slate-400 text-xs font-semibold tracking-widest uppercase">Image Space</span>
+              <div className="relative z-10 w-full aspect-[4/3] rounded-xl mb-6 overflow-hidden">
+                <Image
+                  src={`/images/anc/${part.toLowerCase().replace(/ /g, "-")}.webp`}
+                  alt={part}
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  sizes="(min-width: 1280px) 25vw, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                />
               </div>
               
               <div className="flex-1 flex flex-col justify-between">
@@ -75,7 +80,7 @@ export default function Ancillaries() {
               Find our comprehensive range of ancillaries to provide unbeatable value and great quality for your Land Rover or Range Rover. Whether you want to ensure it brings back the kick in your ride or simply gives you reliability miles ahead, our online store has your model covered from EGR valves to superchargers, all specially designed.
             </p>
             <p className="text-slate-600 leading-relaxed">
-              Right here at Vogue Technics, we fully understand the value of having your vehicle keep up its performance without necessarily having to step up. In short, that is where the quality of our parts comes in. Our parts are second to none when it comes to restoring your vehicle to its original performance. Click here to browse the full range of ancillaries and take the first steps in bringing your vehicle back to life.
+              Right here at Vogue Technics, we fully understand the value of having your vehicle keep up its performance without necessarily having to step up. In short, that is where the quality of our parts comes . Our parts are second to none when it comes to restoring your vehicle to its original performance. Click here to browse the full range of ancillaries and take the first steps in bringing your vehicle back to life.
             </p>
             <p className="text-slate-600 leading-relaxed">
               Our quality and level of commitment to customer satisfaction make us the first call for Land Rover and Range Rover ancillaries. Return your car to life - go to checkout now and feel the quality.

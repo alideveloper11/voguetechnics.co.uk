@@ -4,6 +4,7 @@ import Breadcrumbs from "@/components/common/Breadcrumbs";
 import FAQSection from "@/components/common/FAQSection";
 import PartnerLogos from "@/components/common/PartnerLogos";
 import RegSearch from "@/components/common/RegSearch";
+import HeroTrustLabels from "@/components/common/HeroTrustLabels";
 import { motion } from "framer-motion";
 import { ArrowRight, Phone, Star } from "lucide-react";
 import Image from "next/image";
@@ -90,10 +91,10 @@ export default function BmwEngineModelPageClient(props: BmwEngineModelPageProps)
             src="/images/car_bgg.jpg"
             alt="BMW Engine Specialists"
             fill
-            className="object-cover opacity-40 mix-blend-overlay"
+            className="object-cover opacity-65 mix-blend-overlay"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/75 via-slate-900/25 to-transparent" />
         </div>
 
         <div className="container relative z-10 mx-auto px-4 lg:px-8">
@@ -124,24 +125,12 @@ export default function BmwEngineModelPageClient(props: BmwEngineModelPageProps)
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.18 }}
-              className="flex justify-center mt-6 mb-8 w-full"
+              className="mt-6 mb-8 flex w-full flex-col items-center justify-center"
             >
               <RegSearch />
+            <HeroTrustLabels className="mt-4" />
             </motion.div>
 
-            <div className="max-w-4xl mx-auto space-y-4">
-              {heroIntroParagraphs.map((p) => (
-                <motion.p
-                  key={p.slice(0, 40)}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.22 }}
-                  className="text-base md:text-lg text-slate-200 leading-relaxed"
-                >
-                  {p}
-                </motion.p>
-              ))}
-            </div>
           </div>
         </div>
       </section>
@@ -287,7 +276,7 @@ export default function BmwEngineModelPageClient(props: BmwEngineModelPageProps)
             <span className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-slate-50 p-2">
               <BmwRoundelMark />
             </span>
-            Vogue Technics | Grays, Essex | UK-Wide Service
+            Vogue Technics |  | UK-Wide Service
           </div>
         </div>
       </section>

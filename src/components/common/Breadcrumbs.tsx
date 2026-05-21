@@ -18,7 +18,7 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
     <motion.nav 
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
-      className="flex items-center space-x-2 text-sm text-slate-400 mb-8 overflow-x-auto whitespace-nowrap lg:overflow-visible pb-2 lg:pb-0 font-medium tracking-tight"
+      className="mb-8 flex flex-wrap items-center gap-x-2 gap-y-2 overflow-hidden text-sm font-medium tracking-tight text-slate-400"
     >
       <Link
         href="/"
@@ -29,14 +29,16 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
       </Link>
       
       {items.map((item, index) => (
-        <div key={item.href} className="flex items-center space-x-2 shrink-0">
+        <div key={item.href} className="flex min-w-0 items-center gap-2">
           <ChevronRight className="w-4 h-4 text-slate-200" />
           {index === items.length - 1 ? (
-            <span className="text-primary font-black uppercase tracking-widest text-[0.7rem] px-2 py-0.5 bg-emerald-50 rounded-lg">{item.name}</span>
+            <span className="max-w-[180px] truncate rounded-lg bg-emerald-50 px-2 py-0.5 text-[0.7rem] font-black uppercase tracking-widest text-primary sm:max-w-none">
+              {item.name}
+            </span>
           ) : (
             <Link
               href={item.href}
-              className="hover:text-primary transition-colors uppercase tracking-widest text-[0.7rem] font-bold"
+              className="max-w-[170px] truncate text-[0.7rem] font-bold uppercase tracking-widest transition-colors hover:text-primary sm:max-w-none"
             >
               {item.name}
             </Link>

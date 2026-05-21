@@ -6,21 +6,28 @@ import { Phone, Star } from "lucide-react";
 import { motion } from "framer-motion";
 import Breadcrumbs from "@/components/common/Breadcrumbs";
 import RegSearch from "@/components/common/RegSearch";
+import HeroTrustLabels from "@/components/common/HeroTrustLabels";
 import FAQSection from "@/components/common/FAQSection";
 import PartnerLogos from "@/components/common/PartnerLogos";
+import EngineCodesTable from "@/components/common/EngineCodesTable";
+import type { EngineCodesEntry } from "@/data/engineCodes";
+
+type LandRoverDiscovery4EnginesClientProps = {
+  engineCodes?: EngineCodesEntry | null;
+};
 
 const services = [
   {
     title: "Head Gasket Replacement",
     slug: "head-gasket-replacement",
     body:
-      "Head gasket failure on the Discovery 4 3.0 TDV6 is one of the most common serious faults we see in our Essex workshop. Coolant contaminating the oil, persistent overheating, white exhaust smoke, or a sweet smell from the engine bay are all signals that demand immediate attention. We replace Discovery 4 head gaskets using OEM-grade components, machining the head surface where necessary to guarantee a clean, durable seal. Early action saves the engine — and saves you a significantly larger bill.",
+      "Head gasket failure on the Discovery 4 3.0 TDV6 is one of the most common serious faults we see in our  workshop. Coolant contaminating the oil, persistent overheating, white exhaust smoke, or a sweet smell from the engine bay are all signals that demand immediate attention. We replace Discovery 4 head gaskets using OEM-grade components, machining the head surface where necessary to guarantee a clean, durable seal. Early action saves the engine   and saves you a significantly larger bill.",
   },
   {
     title: "Timing Chain Replacement",
     slug: "timing-chain-replacement",
     body:
-      "The 3.0 TDV6's timing chain system is a known weak point, particularly on vehicles where oil change intervals have been stretched or where the engine has accumulated significant mileage. The tell-tale rattle on cold start is the warning — and it's a warning that should never be ignored. We replace the complete timing chain kit as a system: chain, tensioners, guides, and sprockets together. We don't take shortcuts.",
+      "The 3.0 TDV6's timing chain system is a known weak point, particularly on vehicles where oil change intervals have been stretched or where the engine has accumulated significant mileage. The tell-tale rattle on cold start is the warning   and it's a warning that should never be ignored. We replace the complete timing chain kit as a system: chain, tensioners, guides, and sprockets together. We don't take shortcuts.",
   },
   {
     title: "Turbo Replacement",
@@ -32,19 +39,19 @@ const services = [
     title: "Timing Belt Replacement",
     slug: "timing-belt-replacement",
     body:
-      "Certain Discovery 4 engine configurations incorporate a timing belt as part of their valve train. A belt gives no warning when it's approaching failure — it simply snaps, and the engine is destroyed in the same instant. We carry timing belts and complete replacement kits for all applicable Discovery 4 variants and recommend replacement at or before the manufacturer's specified intervals.",
+      "Certain Discovery 4 engine configurations incorporate a timing belt as part of their valve train. A belt gives no warning when it's approaching failure   it simply snaps, and the engine is destroyed in the same instant. We carry timing belts and complete replacement kits for all applicable Discovery 4 variants and recommend replacement at or before the manufacturer's specified intervals.",
   },
   {
     title: "Engine Rebuild",
     slug: "engine-rebuild",
     body:
-      "When a Discovery 4 engine has accumulated high mileage or suffered wear across multiple components, a full rebuild is frequently the most cost-effective decision an owner can make. We strip the engine completely, inspect every component individually, replace everything that falls outside tolerance, and rebuild to factory specifications. The result is an engine that performs as it was designed to — with a written warranty and at a fraction of the cost of sourcing a replacement vehicle.",
+      "When a Discovery 4 engine has accumulated high mileage or suffered wear across multiple components, a full rebuild is frequently the most cost-effective decision an owner can make. We strip the engine completely, inspect every component individually, replace everything that falls outside tolerance, and rebuild to factory specifications. The result is an engine that performs as it was designed to   with a written warranty and at a fraction of the cost of sourcing a replacement vehicle.",
   },
   {
     title: "Engine Repair",
     slug: "engine-repair",
     body:
-      "Not every Discovery 4 engine problem demands a full rebuild. Our diagnostic team identifies precisely what's wrong, so you pay only for what genuinely needs doing. Oil leaks, bearing wear, EGR faults, injector problems, valve damage, sensor failures — we handle every level of engine repair with accuracy and complete honesty.",
+      "Not every Discovery 4 engine problem demands a full rebuild. Our diagnostic team identifies precisely what's wrong, so you pay only for what genuinely needs doing. Oil leaks, bearing wear, EGR faults, injector problems, valve damage, sensor failures   we handle every level of engine repair with accuracy and complete honesty.",
   },
   {
     title: "Engine Replacement",
@@ -56,7 +63,7 @@ const services = [
     title: "Engine Swap",
     slug: "engine-swap",
     body:
-      "Considering a powertrain upgrade on your Discovery 4 — whether that's moving from the 2.7 TDV6 to the more capable 3.0 SDV6, or exploring a more significant conversion? Our engine swap service covers mounts, ancillaries, wiring integration, ECU mapping, and post-swap diagnostics. Done properly, by specialists who have carried out these conversions multiple times before.",
+      "Considering a powertrain upgrade on your Discovery 4   whether that's moving from the 2.7 TDV6 to the more capable 3.0 SDV6, or exploring a more significant conversion? Our engine swap service covers mounts, ancillaries, wiring integration, ECU mapping, and post-swap diagnostics. Done properly, by specialists who have carried out these conversions multiple times before.",
   },
   {
     title: "Engine Health Check",
@@ -80,12 +87,12 @@ const faqs = [
   {
     question: "Is it worth rebuilding a Discovery 4 engine?",
     answer:
-      "In most cases, yes — particularly when the vehicle is otherwise in sound condition. A quality rebuild at Vogue Technics is significantly cheaper than sourcing a replacement Discovery 4 at current market prices, and comes with a written warranty that a used vehicle purchase never will.",
+      "In most cases, yes   particularly when the vehicle is otherwise in sound condition. A quality rebuild at Vogue Technics is significantly cheaper than sourcing a replacement Discovery 4 at current market prices, and comes with a written warranty that a used vehicle purchase never will.",
   },
   {
     question: "Do you supply reconditioned Discovery 4 engines for sale in the UK?",
     answer:
-      "Yes. We supply quality reconditioned and low-mileage used Discovery 4 engines for all variants — 2.7 TDV6, 3.0 TDV6, SDV6, and 5.0 V8 petrol. Contact us for current availability and pricing.",
+      "Yes. We supply quality reconditioned and low-mileage used Discovery 4 engines for all variants   2.7 TDV6, 3.0 TDV6, SDV6, and 5.0 V8 petrol. Contact us for current availability and pricing.",
   },
   {
     question: "How much does a Discovery 4 engine replacement cost?",
@@ -98,25 +105,25 @@ const faqs = [
       "Engine repairs and straightforward replacements typically take 3–7 working days. Full rebuilds take 5–10 working days depending on parts availability. We confirm your exact timeline at the point of booking and we honour it without exception.",
   },
   {
-    question: "Can you collect my engine if I'm based outside Essex?",
+    question: "Can you collect my engine if I'm based outside ?",
     answer:
-      "Absolutely. We collect engines from across the entire UK. Distance is not a barrier to accessing our specialist service — we handle the logistics and return your engine fully tested and ready to fit.",
+      "Absolutely. We collect engines from across the entire UK. Distance is not a barrier to accessing our specialist service   we handle the logistics and return your engine fully tested and ready to fit.",
   },
 ];
 
-export default function LandRoverDiscovery4EnginesClient() {
+export default function LandRoverDiscovery4EnginesClient({ engineCodes }: LandRoverDiscovery4EnginesClientProps) {
   return (
     <div className="bg-white min-h-screen">
       <section className="relative overflow-hidden bg-slate-900 pt-32 pb-24">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/car_bgg.jpg"
-            alt="Land Rover Discovery 4 engine specialist in Grays"
+            alt="Land Rover Discovery 4 engine specialist in "
             fill
-            className="object-cover opacity-30 mix-blend-overlay"
+            className="object-cover opacity-65 mix-blend-overlay"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/85 to-slate-900/50" />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/70 via-slate-900/35 to-slate-900/10" />
         </div>
 
         <div className="container relative z-10 mx-auto px-4 lg:px-8">
@@ -136,7 +143,7 @@ export default function LandRoverDiscovery4EnginesClient() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-300 to-green-400">
                 Land Rover Discovery 4 Engine Specialists
               </span>{" "}
-              — Rebuilds, Repairs & Replacements Across the UK
+                Rebuilds, Repairs & Replacements Across the UK
             </motion.h1>
 
             <motion.div
@@ -146,21 +153,9 @@ export default function LandRoverDiscovery4EnginesClient() {
               className="mt-7"
             >
               <RegSearch className="max-w-3xl" />
+            <HeroTrustLabels className="mt-4" />
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.22 }}
-              className="mt-7 max-w-4xl text-sm leading-relaxed text-slate-300 md:text-base space-y-4"
-            >
-              <p>
-                The Land Rover Discovery 4 earned its reputation as one of the most capable and well-rounded SUVs ever produced in Britain. Comfortable enough for motorway cruising, composed enough for serious off-road work, and practical enough for a busy family — it remains a deeply capable vehicle. But owning one past 80,000 miles often means confronting engine issues that many garages simply aren't equipped to handle correctly.
-              </p>
-              <p>
-                At Vogue Technics, based in Grays, Essex, we work exclusively on Land Rover and Range Rover engines. The Discovery 4 — whether it's running the 3.0 TDV6 diesel, the 2.7 TDV6, the 5.0 V8 petrol, or the 3.0 SDV6 — is a vehicle we understand thoroughly. Every known failure point, every common fault pattern, every engineering nuance across the full engine range. Backed by over 25 years of hands-on specialist experience, we fix Discovery 4 engines properly — and we back every job with a written warranty.
-              </p>
-            </motion.div>
           </div>
         </div>
       </section>
@@ -172,19 +167,19 @@ export default function LandRoverDiscovery4EnginesClient() {
             <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
                 <h3 className="font-bold text-slate-900">Exclusive Land Rover and Range Rover Focus</h3>
-                <p className="mt-3 text-slate-700 leading-relaxed">
-                  Every technician at Vogue Technics works solely on Land Rover and Range Rover vehicles. When your Discovery 4 arrives at our Grays workshop, every person who touches it has worked on this exact platform hundreds of times. That depth of experience shows in the quality of the finished job.
+                <p className="mt-3 text-sm text-slate-700 leading-relaxed line-clamp-5">
+                  Every technician at Vogue Technics works solely on Land Rover and Range Rover vehicles. When your Discovery 4 arrives at our  workshop, every person who touches it has worked on this exact platform hundreds of times. That depth of experience shows in the quality of the finished job.
                 </p>
               </div>
               <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
                 <h3 className="font-bold text-slate-900">25 Years Building a Reputation Worth Having</h3>
-                <p className="mt-3 text-slate-700 leading-relaxed">
-                  Our reputation has grown entirely through results — not marketing. We've rebuilt and replaced hundreds of Discovery 4 engines for owners across the UK. Customers return to us because the work holds. They refer their friends because they trust us completely.
+                <p className="mt-3 text-sm text-slate-700 leading-relaxed line-clamp-5">
+                  Our reputation has grown entirely through results   not marketing. We've rebuilt and replaced hundreds of Discovery 4 engines for owners across the UK. Customers return to us because the work holds. They refer their friends because they trust us completely.
                 </p>
               </div>
               <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
-                <h3 className="font-bold text-slate-900">Transparent Pricing — Quoted Before We Touch Anything</h3>
-                <p className="mt-3 text-slate-700 leading-relaxed">
+                <h3 className="font-bold text-slate-900">Transparent Pricing   Quoted Before We Touch Anything</h3>
+                <p className="mt-3 text-sm text-slate-700 leading-relaxed line-clamp-5">
                   Before any work begins at Vogue Technics, you receive a full itemised quote covering every element of the job. No vague estimates, no revised figures on collection day, no uncomfortable conversations about costs that weren't discussed upfront.
                 </p>
               </div>
@@ -192,6 +187,8 @@ export default function LandRoverDiscovery4EnginesClient() {
           </div>
         </div>
       </section>
+
+      {engineCodes ? <EngineCodesTable title={engineCodes.title} rows={engineCodes.rows} /> : null}
 
       <section className="py-16 md:py-20 bg-slate-50">
         <div className="container mx-auto px-4 lg:px-8">
@@ -201,21 +198,21 @@ export default function LandRoverDiscovery4EnginesClient() {
             </h2>
             <div className="w-24 h-1 bg-primary mx-auto rounded-full mt-4"></div>
             <p className="mt-6 text-slate-600 text-[1.05rem] leading-relaxed">
-              Beyond the most common faults, we handle every level of Discovery 4 engine work — from a targeted repair through to a complete engine replacement or conversion.
+              Beyond the most common faults, we handle every level of Discovery 4 engine work   from a targeted repair through to a complete engine replacement or conversion.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
             {services.map((service) => (
               <div
                 key={service.title}
-                className="rounded-[2rem] border border-slate-200 bg-white p-7 shadow-sm flex flex-col justify-between"
+                className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm flex flex-col justify-between"
               >
                 <div>
-                  <h3 className="text-xl font-bold text-slate-900">{service.title}</h3>
-                  <p className="mt-4 text-slate-700 leading-relaxed">{service.body}</p>
+                  <h3 className="text-sm font-bold text-slate-900">{service.title}</h3>
+                  <p className="mt-2 text-xs text-slate-700 leading-relaxed line-clamp-4">{service.body}</p>
                 </div>
-                <div className="pt-6">
+                <div className="pt-3">
                   <Link
                     href={`/services/${service.slug}`}
                     className="inline-flex items-center justify-center w-full bg-primary text-white font-bold py-3 px-6 rounded-xl hover:bg-emerald-600 transition-colors"
@@ -233,7 +230,7 @@ export default function LandRoverDiscovery4EnginesClient() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
-              UK-Wide Collection, Delivery & Local Service From Grays, Essex
+              UK-Wide Collection, Delivery & Local Service From 
             </h2>
             <div className="mt-6 space-y-6 text-slate-700 leading-relaxed">
               <p>
@@ -243,13 +240,13 @@ export default function LandRoverDiscovery4EnginesClient() {
                 <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
                   <h3 className="font-bold text-slate-900">Engine Collection & Delivery Across the UK</h3>
                   <p className="mt-3">
-                    We operate a UK-wide engine collection and delivery service — remove your engine, send it to our Essex workshop, and we return it rebuilt, repaired, or replaced, fully tested and ready to install. We can also connect you with our network of approved local fitters.
+                    We operate a UK-wide engine collection and delivery service   remove your engine, send it to our  workshop, and we return it rebuilt, repaired, or replaced, fully tested and ready to install. We can also connect you with our network of approved local fitters.
                   </p>
                 </div>
                 <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
                   <h3 className="font-bold text-slate-900">Written Warranty on Every Engine Job</h3>
                   <p className="mt-3">
-                    Every engine rebuild, replacement, and major repair completed at Vogue Technics is backed by a written warranty. We stand fully behind our work — because our standards mean we can do so with complete confidence.
+                    Every engine rebuild, replacement, and major repair completed at Vogue Technics is backed by a written warranty. We stand fully behind our work   because our standards mean we can do so with complete confidence.
                   </p>
                 </div>
               </div>
@@ -274,17 +271,17 @@ export default function LandRoverDiscovery4EnginesClient() {
               {
                 quote:
                   '"My Discovery 4 3.0 TDV6 had been looked at by two different garages before I contacted Vogue Technics. They diagnosed the real problem correctly within hours, gave me a transparent quote, and returned the vehicle in better condition than I\'d hoped for. Outstanding."',
-                by: "— Michael T., Cambridge",
+                by: "  Michael T., Cambridge",
               },
               {
                 quote:
                   '"Sent my Discovery 4 engine down from Newcastle after a timing chain failure. It came back rebuilt to an exceptional standard, properly packaged, and arrived two days ahead of the estimated date. Brilliant service from start to finish."',
-                by: "— Graham S., Newcastle",
+                by: "  Graham S., Newcastle",
               },
               {
                 quote:
                   '"I was facing quotes of £6,500 to £8,000 for a Discovery 4 engine replacement from main dealers and independent garages locally. Vogue Technics completed the job professionally, with a warranty included, for considerably less. I wish I\'d called them first."',
-                by: "— Rachel P., Oxford",
+                by: "  Rachel P., Oxford",
               },
             ].map((t) => (
               <div
@@ -305,7 +302,7 @@ export default function LandRoverDiscovery4EnginesClient() {
       </section>
 
       <FAQSection
-        title={<>Frequently Asked Questions — <span className="text-primary italic">Land Rover Discovery 4 Engines</span></>}
+        title={<>Frequently Asked Questions   <span className="text-primary italic">Land Rover Discovery 4 Engines</span></>}
         items={faqs}
       />
 
@@ -315,9 +312,6 @@ export default function LandRoverDiscovery4EnginesClient() {
             <h2 className="text-3xl md:text-4xl font-extrabold leading-tight">
               Book Your Land Rover Discovery 4 Engine Work Today
             </h2>
-            <p className="text-emerald-50 leading-relaxed max-w-3xl mx-auto">
-              Don't leave your Discovery 4 standing, and don't risk it with a garage that lacks the specialist knowledge this vehicle demands. Vogue Technics has spent over 25 years earning the trust of Land Rover owners across the United Kingdom — and we're ready to help you next.
-            </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:01375531355"

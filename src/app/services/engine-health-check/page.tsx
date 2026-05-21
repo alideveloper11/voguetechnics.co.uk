@@ -8,9 +8,12 @@ import { ArrowRight, CheckCircle2, Gauge, Wrench, Activity, FileText, ShieldChec
 
 import Breadcrumbs from "@/components/common/Breadcrumbs";
 import RegSearch from "@/components/common/RegSearch";
+import HeroTrustLabels from "@/components/common/HeroTrustLabels";
 import ReviewsSection from "@/components/common/ReviewsSection";
 import FAQSection from "@/components/common/FAQSection";
+import ServiceGallery from "@/components/common/ServiceGallery";
 import PartnerLogos from "@/components/common/PartnerLogos";
+import NationwideSupportSection from "@/components/common/NationwideSupportSection";
 
 export default function EngineHealthCheckPage() {
   return (
@@ -25,7 +28,7 @@ export default function EngineHealthCheckPage() {
             className="object-cover opacity-20 filter grayscale"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/75 via-slate-900/15 to-transparent" />
         </div>
 
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
@@ -40,55 +43,34 @@ export default function EngineHealthCheckPage() {
             <motion.h1
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white mb-8 uppercase tracking-tight leading-tight italic"
+              className="text-xl md:text-2xl lg:text-3xl font-extrabold text-white mb-6 uppercase tracking-tight leading-tight italic"
             >
               Engine Health Check Specialists{" "}
               <span className="text-primary italic">for Range Rover, Land Rover, Jaguar, Audi &amp; BMW</span>
             </motion.h1>
 
-            <div className="flex justify-center w-full max-w-2xl mx-auto mb-10">
+            <div className="flex w-full max-w-2xl mx-auto mb-10 flex-col items-center">
               <RegSearch />
+            <HeroTrustLabels className="mt-4" />
             </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 14 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.05 }}
-              className="max-w-4xl mx-auto text-slate-300 leading-relaxed font-medium space-y-6 text-sm md:text-base"
-            >
-              <p>
-                Most engine problems are not sudden. They develop slowly — a fault code that clears itself, an oil level that drops
-                slightly faster than expected, a noise that appears on cold start and disappears after a few minutes. By the time
-                the warning light stays on permanently, the damage has often already taken hold.
-              </p>
-              <p>
-                An engine health check from Vogue Technics gives you a complete, honest picture of your engine&apos;s condition —
-                before a small fault becomes an expensive repair, before you purchase a vehicle with hidden problems, or simply
-                because you want to know your engine is in good shape before a long journey or a change of ownership.
-              </p>
-              <p>
-                We carry out engine health checks across Range Rover, Land Rover, Jaguar, Audi, and BMW — using professional
-                diagnostic equipment, mechanical inspection, and a written report covering everything we find. Based in Grays,
-                Essex, with UK-wide collection available.
-              </p>
-            </motion.div>
 
             <div className="flex flex-col lg:flex-row gap-4 justify-center items-center mt-10">
               <Link
-                href="/contact-us"
-                className="bg-primary text-white font-black px-10 py-5 rounded-[2rem] shadow-2xl hover:brightness-110 transition-all uppercase tracking-[0.2em] text-xs md:text-sm inline-flex items-center gap-3"
+                href="/get-quote"
+                className="bg-primary text-white font-black px-6 py-3 rounded-2xl shadow-2xl hover:brightness-110 transition-all uppercase tracking-[0.2em] text-xs md:text-sm inline-flex items-center gap-3"
               >
-                Book an Engine Health Check <ArrowRight className="w-5 h-5" />
+                Get Quote <ArrowRight className="w-5 h-5" />
               </Link>
               <a
                 href="tel:01375531355"
-                className="bg-white text-slate-950 font-black px-10 py-5 rounded-[2rem] shadow-2xl hover:bg-slate-50 transition-all uppercase tracking-[0.2em] text-xs md:text-sm border-4 border-slate-950/10"
+                className="inline-flex items-center justify-center bg-white text-slate-950 font-black px-6 py-3 rounded-2xl shadow-2xl hover:bg-slate-50 transition-all uppercase tracking-[0.2em] text-xs md:text-sm border-4 border-slate-950/10"
               >
                 Call Us Today
               </a>
               <Link
                 href="/contact-us"
-                className="bg-white/15 text-white font-black px-10 py-5 rounded-[2rem] shadow-2xl hover:bg-white/20 transition-all uppercase tracking-[0.2em] text-xs md:text-sm border border-white/20"
+                className="bg-white/15 text-white font-black px-6 py-3 rounded-2xl shadow-2xl hover:bg-white/20 transition-all uppercase tracking-[0.2em] text-xs md:text-sm border border-white/20"
               >
                 Get a Written Report
               </Link>
@@ -96,6 +78,18 @@ export default function EngineHealthCheckPage() {
           </div>
         </div>
       </section>
+
+      <ReviewsSection subtitle="Hear from our satisfied customers who have experienced our professional specialist engine services." />
+      <ServiceGallery
+        title="Engine Health Check Work"
+        subtitle="A look at some of the engine health checks and diagnostics carried out at our workshop."
+        images={[
+          { src: "/engine_repair/engine_repair%201.png", alt: "Engine health check 1" },
+          { src: "/engine_repair/engine_repair%202.png", alt: "Engine health check 2" },
+          { src: "/engine_repair/engine_repair%203.png", alt: "Engine health check 3" },
+          { src: "/engine_repair/engine_repair%204.png", alt: "Engine health check 4" },
+        ]}
+      />
 
       {/* What it covers */}
       <section className="py-24 bg-white">
@@ -146,18 +140,12 @@ export default function EngineHealthCheckPage() {
             <div className="w-24 h-1.5 bg-primary mx-auto rounded-full"></div>
           </div>
 
-          <div className="max-w-5xl mx-auto space-y-6 text-slate-600 leading-relaxed font-medium text-sm md:text-base bg-white border border-slate-100 rounded-[3rem] p-10 md:p-12 shadow-sm">
+          <div className="max-w-5xl mx-auto space-y-4 text-slate-600 leading-relaxed font-medium text-sm bg-white border border-slate-100 rounded-[3rem] p-8 md:p-10 shadow-sm">
             <p>
-              There are several situations where an engine health check is not just useful — it is essential.
+              A health check is essential when a warning light has appeared, when you're buying a used prestige vehicle and want confidence before committing, or when your engine has started consuming more oil, running roughly, or making noises that weren't there before.
             </p>
             <p>
-              If a warning light has appeared and cleared, or appeared and stayed on, a proper diagnostic is the only way to
-              understand what the engine management system has recorded and why. If you are buying a used prestige vehicle and
-              want confidence in its mechanical condition before committing, a pre-purchase engine check could save you from a very
-              expensive mistake. If your engine has started consuming more oil than usual, running roughly at idle, or producing
-              noises that were not there six months ago — these are exactly the symptoms a health check is designed to investigate.
-              And if your vehicle is coming up to a high mileage service interval and you want to understand what condition the
-              engine is actually in, a health check gives you that clarity before the service begins.
+              It's also the right step before a high-mileage service interval — giving you clarity on the engine's actual condition before work begins.
             </p>
             <div className="pt-6">
               <Link href="/contact-us" className="inline-flex items-center gap-2 text-primary font-black text-xs tracking-widest uppercase">
@@ -178,12 +166,12 @@ export default function EngineHealthCheckPage() {
             <div className="w-24 h-1.5 bg-primary mx-auto rounded-full"></div>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
                 title: "Range Rover Engine Health Check",
                 body:
-                  "The Range Rover's engine complexity makes a thorough health check more valuable than on almost any other vehicle. Hidden faults on TDV6, SDV6, TDV8, and Ingenium platforms can develop quietly and expensively — and a generic diagnostic tool will not reach the depth of data these systems hold. Our check covers full fault code reading across all JLR-specific diagnostic channels, oil leak checks, overheating history, timing chain assessment on Ingenium platforms, V8 health assessment, misfire investigation, and turbo inspection. You receive a written report covering everything found.",
+                  "The Range Rover's engine complexity makes a thorough health check more valuable than on almost any other vehicle. Hidden faults on TDV6, SDV6, TDV8, and Ingenium platforms can develop quietly and expensively   and a generic diagnostic tool will not reach the depth of data these systems hold. Our check covers full fault code reading across all JLR-specific diagnostic channels, oil leak checks, overheating history, timing chain assessment on Ingenium platforms, V8 health assessment, misfire investigation, and turbo inspection. You receive a written report covering everything found.",
                 href: "/range-rover-engines",
               },
               {
@@ -201,7 +189,7 @@ export default function EngineHealthCheckPage() {
               {
                 title: "Audi Engine Health Check",
                 body:
-                  "Audi engines carry fault patterns that vary considerably between TDI diesel and TFSI petrol platforms — and understanding early signs requires diagnostic depth. Our checks cover full diagnostics, oil consumption data, timing condition on affected platforms, turbo health and boost verification, compression testing where oil consumption or misfire symptoms are present, and cooling system condition.",
+                  "Audi engines carry fault patterns that vary considerably between TDI diesel and TFSI petrol platforms   and understanding early signs requires diagnostic depth. Our checks cover full diagnostics, oil consumption data, timing condition on affected platforms, turbo health and boost verification, compression testing where oil consumption or misfire symptoms are present, and cooling system condition.",
                 href: "/audi-engines",
               },
               {
@@ -211,10 +199,10 @@ export default function EngineHealthCheckPage() {
                 href: "/bmw-engines",
               },
             ].map((item) => (
-              <div key={item.title} className="bg-slate-50 border border-slate-100 rounded-[2.5rem] p-10 hover:bg-white hover:shadow-2xl transition-all duration-500">
-                <h3 className="text-xl font-extrabold text-slate-900 uppercase tracking-tight italic mb-6">{item.title}</h3>
-                <p className="text-slate-600 leading-relaxed font-medium text-sm md:text-base">{item.body}</p>
-                <div className="pt-8 flex flex-wrap gap-4">
+              <div key={item.title} className="bg-slate-50 border border-slate-100 rounded-[2.5rem] p-6 hover:bg-white hover:shadow-2xl transition-all duration-500">
+                <h3 className="text-xl font-extrabold text-slate-900 uppercase tracking-tight italic mb-3">{item.title}</h3>
+                <p className="text-slate-600 leading-relaxed font-medium text-sm line-clamp-4">{item.body}</p>
+                <div className="pt-4 flex flex-wrap gap-4">
                   <Link href={item.href} className="inline-flex items-center gap-2 text-primary font-black text-xs tracking-widest uppercase">
                     Explore {item.title.split(" ")[0]} Health Check <ArrowRight className="w-4 h-4" />
                   </Link>
@@ -245,16 +233,16 @@ export default function EngineHealthCheckPage() {
               { title: "Written Report on Every Check", text: "You receive a clear written report covering findings, fault codes, and recommended actions." },
               { title: "Honest Findings, No Upselling", text: "If your engine is in good health, we tell you that. If a fault is developing, we explain it clearly." },
               { title: "Platform-Specific Knowledge", text: "Every technician carries out health checks on platforms they know in depth." },
-              { title: "UK-Wide Collection Available", text: "Based in Grays, Essex, we collect and deliver across the UK on health checks and follow-up work." },
+              { title: "UK-Wide Collection Available", text: "Based in , we collect and deliver across the UK on health checks and follow-up work." },
             ].map((item) => (
-              <div key={item.title} className="bg-white/5 border border-white/10 rounded-[2.5rem] p-10 hover:bg-white/10 transition-all duration-500">
+              <div key={item.title} className="bg-white/5 border border-white/10 rounded-[2.5rem] p-6 hover:bg-white/10 transition-all duration-500">
                 <div className="flex items-start gap-4">
                   <div className="bg-primary/20 text-primary p-2 rounded-xl flex-shrink-0">
                     <CheckCircle2 className="w-5 h-5" />
                   </div>
-                  <div className="space-y-3">
-                    <h3 className="font-extrabold uppercase tracking-tight italic text-sm md:text-base">{item.title}</h3>
-                    <p className="text-slate-300 leading-relaxed font-medium text-sm md:text-base">{item.text}</p>
+                  <div className="space-y-2 min-w-0">
+                    <h3 className="font-extrabold uppercase tracking-tight italic text-sm">{item.title}</h3>
+                    <p className="text-slate-300 font-medium text-sm line-clamp-3">{item.text}</p>
                   </div>
                 </div>
               </div>
@@ -271,17 +259,17 @@ export default function EngineHealthCheckPage() {
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {[
-                "Step 1 — Book Your Check — call us or complete our online form with your vehicle details and any symptoms you have noticed.",
-                "Step 2 — Drop Off or Collection — visit our Grays, Essex workshop or arrange collection anywhere in the UK.",
-                "Step 3 — Full Engine Health Assessment — diagnostic scan, mechanical inspection, compression and cooling system checks carried out by a platform specialist.",
-                "Step 4 — Written Report — you receive a full written report covering all findings, fault codes, and clearly explained recommendations.",
-                "Step 5 — Next Steps on Your Terms — if a repair is needed, we quote separately. No pressure, no obligation.",
+                "Step 1   Book Your Check   call us or complete our online form with your vehicle details and any symptoms you have noticed.",
+                "Step 2   Drop Off or Collection   visit our  workshop or arrange collection anywhere in the UK.",
+                "Step 3   Full Engine Health Assessment   diagnostic scan, mechanical inspection, compression and cooling system checks carried out by a platform specialist.",
+                "Step 4   Written Report   you receive a full written report covering all findings, fault codes, and clearly explained recommendations.",
+                "Step 5   Next Steps on Your Terms   if a repair is needed, we quote separately. No pressure, no obligation.",
               ].map((text, idx) => (
-                <div key={idx} className="bg-white/5 border border-white/10 rounded-[2.5rem] p-10 hover:bg-white/10 transition-all duration-500">
-                  <div className="w-12 h-12 rounded-2xl bg-primary text-white flex items-center justify-center font-black text-lg mb-6 shadow-lg">
+                <div key={idx} className="bg-white/5 border border-white/10 rounded-[2.5rem] p-6 hover:bg-white/10 transition-all duration-500">
+                  <div className="w-10 h-10 rounded-2xl bg-primary text-white flex items-center justify-center font-black text-base mb-3 shadow-lg">
                     {idx + 1}
                   </div>
-                  <p className="text-slate-200 leading-relaxed font-medium text-sm md:text-base">{text}</p>
+                  <p className="text-slate-200 font-medium text-sm line-clamp-3">{text}</p>
                 </div>
               ))}
             </div>
@@ -311,7 +299,7 @@ export default function EngineHealthCheckPage() {
           {
             question: "Is this the same as a basic diagnostic scan?",
             answer:
-              "No. Our health check goes considerably further than a fault code read — it includes mechanical inspection, compression testing where appropriate, cooling and turbo assessment, and a written report.",
+              "No. Our health check goes considerably further than a fault code read   it includes mechanical inspection, compression testing where appropriate, cooling and turbo assessment, and a written report.",
           },
           {
             question: "What if a fault is found during the check?",
@@ -321,54 +309,55 @@ export default function EngineHealthCheckPage() {
           {
             question: "Do you carry out pre-purchase engine checks?",
             answer:
-              "Yes — pre-purchase engine checks are one of our most requested services across all five vehicle brands we cover.",
+              "Yes   pre-purchase engine checks are one of our most requested services across all five vehicle brands we cover.",
           },
         ]}
       />
 
       {/* Final CTA */}
-      <section className="py-24 bg-primary relative overflow-hidden">
+      <section className="py-12 bg-primary relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-[100px] pointer-events-none"></div>
         <div className="container mx-auto px-4 lg:px-8 text-center relative z-10">
-          <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-8 uppercase tracking-tight italic leading-tight">
+          <h2 className="text-xl md:text-3xl font-extrabold text-white mb-4 uppercase tracking-tight italic leading-tight">
             Know Your Engine. <span className="text-slate-950">Book Today.</span>
           </h2>
-          <p className="text-emerald-100 text-sm md:text-base mb-14 max-w-3xl mx-auto font-medium leading-relaxed">
+          <p className="text-emerald-100 text-sm md:text-base mb-6 max-w-3xl mx-auto font-medium leading-relaxed">
             Do not wait for a warning light to tell you something is wrong. An engine health check from Vogue Technics gives you the
-            full picture — clearly, honestly, and in writing.
+            full picture   clearly, honestly, and in writing.
           </p>
 
           <div className="flex flex-col lg:flex-row gap-6 justify-center items-center">
             <Link
-              href="/contact-us"
-              className="bg-slate-950 text-white font-black px-12 py-6 rounded-[2rem] shadow-2xl hover:bg-slate-900 transition-all uppercase tracking-[0.2em] text-xs md:text-sm flex items-center gap-4"
+              href="/get-quote"
+              className="bg-slate-950 text-white font-black px-4 py-2 rounded-xl shadow-2xl hover:bg-slate-900 transition-all uppercase tracking-[0.2em] text-xs"
             >
-              Book an Engine Health Check <ArrowRight className="w-6 h-6 text-primary" />
+              Request Quote
             </Link>
             <a
               href="tel:01375531355"
-              className="bg-white text-slate-950 font-black px-12 py-6 rounded-[2rem] shadow-2xl hover:bg-slate-50 transition-all uppercase tracking-[0.2em] text-xs md:text-sm border-4 border-slate-950/10"
+              className="bg-white text-slate-950 font-black px-4 py-2 rounded-xl shadow-2xl hover:bg-slate-50 transition-all uppercase tracking-[0.2em] text-xs border-4 border-slate-950/10"
             >
-              Call Us and Speak to a Specialist
+              Call Us
             </a>
             <Link
               href="/contact-us"
-              className="bg-white/20 text-white font-black px-12 py-6 rounded-[2rem] shadow-2xl hover:bg-white/25 transition-all uppercase tracking-[0.2em] text-xs md:text-sm border border-white/20"
+              className="bg-white/20 text-white font-black px-4 py-2 rounded-xl shadow-2xl hover:bg-white/25 transition-all uppercase tracking-[0.2em] text-xs border border-white/20"
             >
-              Request a Written Quote
+              Book Inspection
             </Link>
           </div>
 
-          <div className="mt-16 text-white/90 font-black uppercase tracking-widest text-[0.65rem]">
-            Vogue Technics | Engine Health Check Specialists | Grays, Essex | UK-Wide Collection &nbsp; Range Rover • Land Rover •
+          <div className="mt-8 text-white/90 font-black uppercase tracking-widest text-[0.65rem]">
+            Vogue Technics | Engine Health Check Specialists |  | UK-Wide Collection &nbsp; Range Rover • Land Rover •
             Jaguar • Audi • BMW
           </div>
         </div>
       </section>
 
-      <ReviewsSection subtitle="Hear from our satisfied customers who have experienced our professional specialist engine services." />
+      <NationwideSupportSection slug="engine-health-check" />
       <PartnerLogos />
     </main>
   );
 }
+
 

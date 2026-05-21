@@ -17,7 +17,7 @@ const WorkshopSection = () => {
               <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center text-primary shadow-md border border-emerald-100">
                 <MapPin className="w-8 h-8 text-emerald-500" />
               </div>
-              <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
+              <h2 className="text-xl md:text-2xl lg:text-3xl font-extrabold text-slate-900 tracking-tight">
                 Visit Our Workshop
               </h2>
             </div>
@@ -27,7 +27,7 @@ const WorkshopSection = () => {
                 <h3 className="text-emerald-600 font-bold uppercase tracking-widest text-xs border-b-2 border-emerald-100 pb-2 inline-block">Address</h3>
                 <p className="text-slate-700 font-semibold text-lg leading-snug">
                   Unit 1D Hedley Ave <br />
-                  Grays RM20 4EL <br />
+                   RM20 4EL <br />
                   United Kingdom
                 </p>
               </div>
@@ -80,7 +80,7 @@ const WorkshopSection = () => {
               {/* GOOGLE MAPS STYLE CARD */}
               <div className="absolute top-6 left-6 bg-white/95 backdrop-blur-sm p-5 rounded-[2rem] shadow-2xl border border-white/20 max-w-[240px] hidden md:block">
                  <div className="font-black text-slate-900 text-base leading-tight">Vogue Technics</div>
-                 <div className="text-[0.65rem] text-slate-500 mt-2 font-bold leading-relaxed uppercase tracking-tight">Unit 1D Hedley Ave, Grays RM20 4EL</div>
+                 <div className="text-[0.65rem] text-slate-500 mt-2 font-bold leading-relaxed uppercase tracking-tight">Unit 1D Hedley Ave,  RM20 4EL</div>
                  <div className="flex items-center gap-2 mt-3 pt-3 border-t border-slate-100">
                     <div className="flex text-orange-400">
                       <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>

@@ -44,13 +44,13 @@ export const authors: Author[] = [
     name: "Vic",
     slug: "vic",
     role: "Senior Workshop Manager & JLR Engine Specialist",
-    location: "Vogue Technics, Grays, Essex",
+    location: "Vogue Technics, ",
     image: "https://images.unsplash.com/photo-1556155092-490a1ba16284?q=80&w=800&auto=format&fit=crop", // Senior engineer placeholder
     shortBio: "Senior Workshop Manager with 20+ years expertise, exclusively focused on Jaguar Land Rover engine remanufacturing for the past 15 years.",
     detailedBio: [
-      "Vic has spent over two decades working on some of the most technically demanding engines in the automotive industry — and for the past 15 years, his focus has been exclusively on Jaguar Land Rover vehicles.",
-      "As Senior Workshop Manager at Vogue Technics in Grays, Essex, he oversees every engine rebuild that leaves the workshop, setting the standard for quality, precision and transparency that the business is known for.",
-      "His specialist knowledge covers the full range of JLR engine families — from the 2.0L Ingenium diesel and petrol units through to the high-performance 5.0L AJ133 supercharged engine fitted to the Range Rover SVR. Working on these engines every day gives Vic a level of hands-on familiarity with their tolerances, failure points and assembly requirements that cannot be replicated by a general mechanic."
+      "Vic has spent over two decades working on some of the most technically demanding engines in the automotive industry   and for the past 15 years, his focus has been exclusively on Jaguar Land Rover vehicles.",
+      "As Senior Workshop Manager at Vogue Technics in , he oversees every engine rebuild that leaves the workshop, setting the standard for quality, precision and transparency that the business is known for.",
+      "His specialist knowledge covers the full range of JLR engine families   from the 2.0L Ingenium diesel and petrol units through to the high-performance 5.0L AJ133 supercharged engine fitted to the Range Rover SVR. Working on these engines every day gives Vic a level of hands-on familiarity with their tolerances, failure points and assembly requirements that cannot be replicated by a general mechanic."
     ],
     quote: "If you cannot show the customer what you are doing, you should not be doing it.",
     experience: "20+ Years Experience",

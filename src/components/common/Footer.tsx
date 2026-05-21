@@ -93,7 +93,7 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex gap-3 text-slate-400">
                 <MapPin className="w-5 h-5 shrink-0 text-primary mt-0.5" />
-                <span>UNIT 1D Hedley Avenue, Grays,<br/>Essex RM20 4EL</span>
+                <span>UNIT 1D Hedley Avenue<br/>RM20 4EL</span>
               </li>
               <li>
                 <a href="tel:01375 531355" className="flex items-center gap-3 text-slate-400 hover:text-white transition-colors">

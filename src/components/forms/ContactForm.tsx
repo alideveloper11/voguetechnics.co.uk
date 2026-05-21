@@ -2,9 +2,76 @@
 
 import { Send, RotateCw } from "lucide-react";
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
+import { submitContact } from "@/app/actions/submitContact";
+
+type FormData = {
+  name: string;
+  email: string;
+  phone: string;
+  postCode: string;
+  regNumber: string;
+  issue: string;
+};
+
+type FormErrors = Partial<Record<keyof FormData, string>>;
+type TouchedFields = Partial<Record<keyof FormData, boolean>>;
+
+function formatUSPhone(raw: string): string {
+  const d = raw.replace(/\D/g, "").slice(0, 10);
+  if (d.length === 0) return "";
+  if (d.length <= 3) return `(${d}`;
+  if (d.length <= 6) return `(${d.slice(0, 3)}) ${d.slice(3)}`;
+  return `(${d.slice(0, 3)}) ${d.slice(3, 6)}-${d.slice(6)}`;
+}
+
+function validateField(name: keyof FormData, value: string): string {
+  switch (name) {
+    case "name":
+      if (!value.trim()) return "Name is required.";
+      if (value.trim().length < 2) return "Name must be at least 2 characters.";
+      if (!/^[a-zA-Z\s'\-]+$/.test(value.trim())) return "Name can only contain letters.";
+      return "";
+    case "email":
+      if (!value.trim()) return "Email address is required.";
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim())) return "Please enter a valid email address.";
+      return "";
+    case "phone":
+      if (!value) return "Phone number is required.";
+      if (value.length !== 10) return "Please enter a valid 10-digit US phone number.";
+      return "";
+    case "postCode":
+      if (!value.trim()) return "Post code is required.";
+      if (!/^[A-Z]{1,2}\d[A-Z\d]?\s?\d[A-Z]{2}$/i.test(value.trim())) return "Please enter a valid UK post code (e.g. RM20 4EL).";
+      return "";
+    case "regNumber":
+      return "";
+    case "issue":
+      if (!value.trim()) return "Please describe the issue with your vehicle.";
+      if (value.trim().length < 10) return "Please provide a bit more detail (at least 10 characters).";
+      return "";
+    default:
+      return "";
+  }
+}
+
+function validateAll(data: FormData): FormErrors {
+  const errors: FormErrors = {};
+  (Object.keys(data) as (keyof FormData)[]).forEach((key) => {
+    const msg = validateField(key, data[key]);
+    if (msg) errors[key] = msg;
+  });
+  return errors;
+}
+
+const inputBase =
+  "w-full bg-slate-50 border rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:border-transparent transition-all";
+const inputValid = "border-slate-200 focus:ring-primary";
+const inputError = "border-red-400 focus:ring-red-400 bg-red-50";
 
 export default function ContactForm() {
-  const [formData, setFormData] = useState({
+  const router = useRouter();
+  const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
     phone: "",
@@ -12,8 +79,9 @@ export default function ContactForm() {
     regNumber: "",
     issue: "",
   });
+  const [errors, setErrors] = useState<FormErrors>({});
+  const [touched, setTouched] = useState<TouchedFields>({});
 
-  // Math Captcha State
   const [captcha, setCaptcha] = useState({ num1: 0, num2: 0, sum: 0 });
   const [userCaptchaAnswer, setUserCaptchaAnswer] = useState("");
   const [captchaError, setCaptchaError] = useState(false);
@@ -33,17 +101,54 @@ export default function ContactForm() {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    const key = name as keyof FormData;
+
+    let processed = value;
+
+    if (key === "regNumber") {
+      processed = value.replace(/[^a-zA-Z0-9\s]/g, "").toUpperCase();
+    }
+
+    setFormData((prev) => ({ ...prev, [key]: processed }));
+
+    if (touched[key]) {
+      setErrors((prev) => ({ ...prev, [key]: validateField(key, processed) }));
+    }
+  };
+
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const raw = e.target.value.replace(/\D/g, "").slice(0, 10);
+    setFormData((prev) => ({ ...prev, phone: raw }));
+    if (touched.phone) {
+      setErrors((prev) => ({ ...prev, phone: validateField("phone", raw) }));
+    }
+  };
+
+  const handleBlur = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const key = e.target.name as keyof FormData;
+    setTouched((prev) => ({ ...prev, [key]: true }));
+    setErrors((prev) => ({ ...prev, [key]: validateField(key, formData[key]) }));
   };
 
   const handleCaptchaChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setUserCaptchaAnswer(e.target.value);
+    const value = e.target.value.replace(/[^0-9]/g, "");
+    setUserCaptchaAnswer(value);
     setCaptchaError(false);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
+    const allTouched: TouchedFields = Object.fromEntries(
+      Object.keys(formData).map((k) => [k, true])
+    );
+    setTouched(allTouched);
+
+    const validationErrors = validateAll(formData);
+    setErrors(validationErrors);
+
+    if (Object.keys(validationErrors).length > 0) return;
+
     if (parseInt(userCaptchaAnswer) !== captcha.sum) {
       setCaptchaError(true);
       return;
@@ -52,17 +157,29 @@ export default function ContactForm() {
     setStatus("loading");
 
     try {
-      console.log("Submitting form:", { ...formData });
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      setStatus("success");
-      setFormData({ name: "", email: "", phone: "", postCode: "", regNumber: "", issue: "" });
-      generateCaptcha();
+      const { ok, message } = await submitContact({
+        name: formData.name,
+        phone: `+1${formData.phone}`,
+        email: formData.email,
+        reg: formData.regNumber,
+        postcode: formData.postCode,
+        message: formData.issue,
+        browser: navigator.userAgent,
+      });
+      if (ok) {
+        router.push("/quote-success");
+      } else {
+        console.error("Submission error:", message);
+        setStatus("error");
+      }
     } catch (error) {
       console.error("Submission error:", error);
       setStatus("error");
     }
   };
+
+  const fieldClass = (key: keyof FormData) =>
+    `${inputBase} ${touched[key] && errors[key] ? inputError : inputValid}`;
 
   if (status === "success") {
     return (
@@ -72,7 +189,7 @@ export default function ContactForm() {
         </div>
         <h3 className="text-2xl font-bold text-slate-900">Message Sent!</h3>
         <p className="text-slate-600">Thank you for your enquiry. Our team will get back to you shortly.</p>
-        <button 
+        <button
           onClick={() => setStatus("idle")}
           className="mt-6 text-primary font-bold hover:underline"
         >
@@ -85,115 +202,142 @@ export default function ContactForm() {
   return (
     <div className="bg-white rounded-3xl p-8 md:p-12 border border-slate-200 shadow-[0_20px_50px_rgba(0,0,0,0.05)]">
       <h3 className="text-2xl font-bold text-slate-900 mb-8">Send a Message</h3>
-      
-      <form onSubmit={handleSubmit} className="space-y-6">
+
+      <form onSubmit={handleSubmit} noValidate className="space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="space-y-2">
+          <div className="space-y-1">
             <label className="text-sm font-semibold text-slate-700">Name*</label>
-            <input 
+            <input
               name="name"
-              type="text" 
-              required
+              type="text"
               value={formData.name}
               onChange={handleChange}
-              className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all" 
-              placeholder="John Doe" 
+              onBlur={handleBlur}
+              className={fieldClass("name")}
+              placeholder="John Doe"
             />
+            {touched.name && errors.name && (
+              <p className="text-red-500 text-xs font-medium">{errors.name}</p>
+            )}
           </div>
-          <div className="space-y-2">
+          <div className="space-y-1">
             <label className="text-sm font-semibold text-slate-700">Email Address*</label>
-            <input 
+            <input
               name="email"
-              type="email" 
-              required
+              type="email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all" 
-              placeholder="john@example.com" 
+              onBlur={handleBlur}
+              className={fieldClass("email")}
+              placeholder="john@example.com"
             />
+            {touched.email && errors.email && (
+              <p className="text-red-500 text-xs font-medium">{errors.email}</p>
+            )}
           </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="space-y-2">
+          <div className="space-y-1">
             <label className="text-sm font-semibold text-slate-700">Phone Number*</label>
-            <input 
-              name="phone"
-              type="tel" 
-              required
-              value={formData.phone}
-              onChange={handleChange}
-              className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all" 
-              placeholder="07900 000000" 
-            />
+            <div className={`flex items-stretch border rounded-xl overflow-hidden transition-all ${touched.phone && errors.phone ? "border-red-400 bg-red-50" : "border-slate-200 bg-slate-50"} focus-within:ring-2 ${touched.phone && errors.phone ? "focus-within:ring-red-400" : "focus-within:ring-primary"}`}>
+              <span className="flex items-center px-3 bg-slate-100 border-r border-slate-200 text-slate-600 font-bold text-sm select-none shrink-0">
+                +1
+              </span>
+              <input
+                name="phone"
+                type="tel"
+                inputMode="numeric"
+                value={formatUSPhone(formData.phone)}
+                onChange={handlePhoneChange}
+                onBlur={handleBlur}
+                className="flex-1 bg-transparent px-4 py-3 focus:outline-none text-slate-900"
+                placeholder="(555) 000-0000"
+                maxLength={14}
+              />
+            </div>
+            {touched.phone && errors.phone && (
+              <p className="text-red-500 text-xs font-medium">{errors.phone}</p>
+            )}
           </div>
-          <div className="space-y-2">
+          <div className="space-y-1">
             <label className="text-sm font-semibold text-slate-700">Post Code*</label>
-            <input 
+            <input
               name="postCode"
-              type="text" 
-              required
+              type="text"
               value={formData.postCode}
               onChange={handleChange}
-              className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all uppercase" 
-              placeholder="RM20 4EL" 
+              onBlur={handleBlur}
+              className={`${fieldClass("postCode")} uppercase`}
+              placeholder="RM20 4EL"
             />
+            {touched.postCode && errors.postCode && (
+              <p className="text-red-500 text-xs font-medium">{errors.postCode}</p>
+            )}
           </div>
         </div>
 
-        <div className="space-y-2">
-          <label className="text-sm font-semibold text-slate-700">Registration Number (Optional)</label>
-          <input 
+        <div className="space-y-1">
+          <label className="text-sm font-semibold text-slate-700">
+            Registration Number <span className="text-slate-400 font-normal">(Optional)</span>
+          </label>
+          <input
             name="regNumber"
-            type="text" 
+            type="text"
             value={formData.regNumber}
             onChange={handleChange}
-            className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all uppercase placeholder-normal" 
-            placeholder="AB12 CDE" 
+            onBlur={handleBlur}
+            className={`${fieldClass("regNumber")} uppercase tracking-widest`}
+            placeholder="AB12 CDE"
+            maxLength={10}
           />
+          <p className="text-slate-400 text-xs">Alphanumeric only — auto-converted to uppercase.</p>
         </div>
 
-        <div className="space-y-2">
+        <div className="space-y-1">
           <label className="text-sm font-semibold text-slate-700">Issue With Vehicle*</label>
-          <textarea 
+          <textarea
             name="issue"
-            rows={4} 
-            required
+            rows={4}
             value={formData.issue}
             onChange={handleChange}
-            className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none" 
-            placeholder="Please describe the issue with your vehicle..."></textarea>
+            onBlur={handleBlur}
+            className={`${touched.issue && errors.issue ? `${inputBase} ${inputError}` : `${inputBase} ${inputValid}`} resize-none`}
+            placeholder="Please describe the issue with your vehicle..."
+          />
+          {touched.issue && errors.issue && (
+            <p className="text-red-500 text-xs font-medium">{errors.issue}</p>
+          )}
         </div>
 
-        {/* Custom Math Captcha Section */}
-        <div className="relative overflow-hidden bg-slate-100 rounded-xl p-6 border border-slate-200">
-          {/* Watermark Pattern */}
+        {/* Math Captcha */}
+        <div className="relative overflow-hidden bg-slate-100 rounded-xl py-3 px-4 border border-slate-200">
           <div className="absolute inset-0 opacity-[0.03] pointer-events-none select-none flex flex-wrap gap-4 p-2 text-[10px] font-bold uppercase rotate-[-10deg]">
             {Array.from({ length: 20 }).map((_, i) => (
               <span key={i}>CAPTCHA</span>
             ))}
           </div>
-
-          <div className="relative z-10 flex flex-col items-center justify-center space-y-4">
-            <div className="text-[#0D2447]/70 font-medium text-lg">
-              What is {captcha.num1} + {captcha.num2}?
-            </div>
-            
-            <div className="flex items-center gap-3">
-              <input 
-                type="text" 
+          <div className="relative z-10 flex flex-col gap-1.5">
+            <div className="flex items-center gap-3 w-full">
+              <span className="text-[#0D2447]/70 font-medium text-sm whitespace-nowrap shrink-0">
+                What is {captcha.num1} + {captcha.num2}?
+              </span>
+              <input
+                type="text"
                 value={userCaptchaAnswer}
                 onChange={handleCaptchaChange}
-                placeholder="Robot Captcha Here"
-                className={`w-48 bg-white border ${captchaError ? 'border-red-500 shadow-[0_0_5px_rgba(239,68,68,0.3)]' : 'border-slate-200'} rounded-lg px-4 py-2.5 text-center focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-slate-400`}
+                placeholder="Your answer"
+                inputMode="numeric"
+                pattern="[0-9]*"
+                className={`flex-1 min-w-0 bg-white border ${captchaError ? "border-red-500 shadow-[0_0_5px_rgba(239,68,68,0.3)]" : "border-slate-200"} rounded-lg px-3 py-1.5 text-center text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-slate-400`}
               />
-              <button 
+              <button
                 type="button"
                 onClick={generateCaptcha}
-                className="p-2.5 bg-white border border-slate-200 rounded-lg text-emerald-600 hover:bg-slate-50 transition-colors shadow-sm"
+                className="shrink-0 p-1.5 bg-white border border-slate-200 rounded-lg text-emerald-600 hover:bg-slate-50 transition-colors shadow-sm"
                 title="Refresh Captcha"
               >
-                <RotateCw className="w-5 h-5" />
+                <RotateCw className="w-4 h-4" />
               </button>
             </div>
             {captchaError && (
@@ -202,14 +346,15 @@ export default function ContactForm() {
           </div>
         </div>
 
-        <button 
-          type="submit" 
+        <button
+          type="submit"
           disabled={status === "loading"}
           className="w-full bg-slate-900 hover:bg-primary text-white font-bold text-lg py-4 rounded-xl shadow-lg hover:shadow-[0_10px_20px_rgba(25,135,84,0.3)] transition-all transform hover:-translate-y-1 flex justify-center items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {status === "loading" ? "Sending..." : "Send Message"}
           <Send className="w-5 h-5" />
         </button>
+
         {status === "error" && (
           <p className="text-red-500 text-sm text-center">Something went wrong. Please try again.</p>
         )}

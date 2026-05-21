@@ -10,15 +10,15 @@ export const metadata: Metadata = {
 
 export default function Gallery() {
   const images = [
-    { src: "/images/gallery/1g.webp", alt: "Vogue Technics Facility" },
-    { src: "/images/gallery/2g.webp", alt: "Vogue Technics Engine Rebuild" },
-    { src: "/images/gallery/3g.webp", alt: "Land Rover Diagnostics" },
+    { src: "/images/gallery/1g.jpeg", alt: "Vogue Technics Facility" },
+    { src: "/images/gallery/2g.jpeg", alt: "Vogue Technics Engine Rebuild" },
+    { src: "/images/gallery/3g.jpeg", alt: "Land Rover Diagnostics" },
     { src: "/images/gallery/4g.webp", alt: "Range Rover Workshop" },
     { src: "/images/gallery/5g.webp", alt: "Premium Engine Components" },
     { src: "/images/gallery/6g.webp", alt: "Vogue Technics Mechanics" },
     { src: "/images/gallery/7g.webp", alt: "Reconditioned Engine Bay" },
     { src: "/images/gallery/8g.webp", alt: "Specialist Tools In Use" },
-    { src: "/images/gallery/9g.webp", alt: "Range Rover Service Center" },
+    { src: "/images/gallery/9g.jpeg", alt: "Range Rover Service Center" },
     { src: "/images/gallery/10g.webp", alt: "Vogue Technics Operations" },
     { src: "/images/gallery/11g.webp", alt: "Quality Assurance Testing" },
     { src: "/images/gallery/12g.webp", alt: "Land Rover Engine Remanufacturing" },
@@ -28,6 +28,11 @@ export default function Gallery() {
     { src: "/images/gallery/16g.webp", alt: "Professional Diagnostic Bay" },
     { src: "/images/gallery/17g.webp", alt: "Vogue Technics Engineering" },
     { src: "/images/gallery/18g.webp", alt: "UK Range Rover Specialists" },
+    { src: "/images/gallery/19g.jpeg", alt: "Vogue Technics Workshop" },
+    { src: "/images/gallery/20g.jpeg", alt: "Engine Remanufacturing Process" },
+    { src: "/images/gallery/21g.jpeg", alt: "Land Rover Specialist Work" },
+    { src: "/images/gallery/22g.jpeg", alt: "Range Rover Repair Bay" },
+    { src: "/images/gallery/23g.jpeg", alt: "Vogue Technics Team" },
   ];
 
   return (

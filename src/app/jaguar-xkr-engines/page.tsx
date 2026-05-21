@@ -6,8 +6,13 @@ import { Phone } from "lucide-react";
 import { motion } from "framer-motion";
 import Breadcrumbs from "@/components/common/Breadcrumbs";
 import RegSearch from "@/components/common/RegSearch";
+import HeroTrustLabels from "@/components/common/HeroTrustLabels";
 import FAQSection from "@/components/common/FAQSection";
 import PartnerLogos from "@/components/common/PartnerLogos";
+import EngineCodesTable from "@/components/common/EngineCodesTable";
+import { getEngineCodesEntry } from "@/data/engineCodes";
+
+const engineCodes = getEngineCodesEntry("jaguar-xkr-engines");
 
 const faqs = [
   {
@@ -28,7 +33,7 @@ const faqs = [
   {
     question: "Do you offer UK-wide collection and delivery?",
     answer:
-      "Yes. We offer UK-wide collection and delivery so you can access our Grays workshop expertise from anywhere in the country.",
+      "Yes. We offer UK-wide collection and delivery so you can access our  workshop expertise from anywhere in the country.",
   },
   {
     question: "Do you provide written warranty on engine work?",
@@ -44,12 +49,12 @@ export default function JaguarXKREnginesPage() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/car_bgg.jpg"
-            alt="Jaguar XKR engine specialists in Grays"
+            alt="Jaguar XKR engine specialists in "
             fill
-            className="object-cover opacity-30 mix-blend-overlay"
+            className="object-cover opacity-65 mix-blend-overlay"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/85 to-slate-900/50" />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/70 via-slate-900/35 to-slate-900/10" />
         </div>
 
         <div className="container relative z-10 mx-auto px-4 lg:px-8">
@@ -60,42 +65,28 @@ export default function JaguarXKREnginesPage() {
             ]}
           />
 
-          <div className="max-w-5xl pt-8">
+          <div className="max-w-3xl mx-auto text-center pt-8">
             <motion.h1
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-3xl font-black leading-[1.08] tracking-tight text-white md:text-5xl"
+              className="text-2xl font-black leading-[1.1] tracking-tight text-white md:text-4xl"
             >
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-300 to-green-400">
                 Jaguar XKR Engine
               </span>{" "}
-              — Supercharged V8 Supply, Rebuild & Fit Across the UK
+                Supercharged V8 Supply, Rebuild & Fit Across the UK
             </motion.h1>
 
             <motion.div
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.12 }}
-              className="mt-7"
+              className="mt-6 flex justify-center"
             >
               <RegSearch className="max-w-3xl" />
+            <HeroTrustLabels className="mt-4" />
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.22 }}
-              className="mt-7 max-w-4xl text-sm leading-relaxed text-slate-300 md:text-base space-y-4"
-            >
-              <p>
-                The Jaguar XKR pairs XK refinement with supercharged V8 performance. When issues develop, the engine is far less forgiving of
-                guesswork — correct diagnosis and precision work matters.
-              </p>
-              <p>
-                Vogue Technics in Grays, Essex supply, rebuild and fit Jaguar XKR engines — including supercharger work — with transparent pricing,
-                UK-wide support, and written warranty terms agreed before work begins.
-              </p>
-            </motion.div>
           </div>
         </div>
       </section>
@@ -108,7 +99,7 @@ export default function JaguarXKREnginesPage() {
               <p className="mt-3 text-slate-700 leading-relaxed">Engines supplied tested, documented, and covered by warranty terms.</p>
             </div>
             <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
-              <h3 className="font-bold text-slate-900">Diagnostics in Grays</h3>
+              <h3 className="font-bold text-slate-900">Diagnostics in </h3>
               <p className="mt-3 text-slate-700 leading-relaxed">Same‑day diagnostics to confirm the exact failure before replacement decisions.</p>
             </div>
             <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
@@ -119,10 +110,12 @@ export default function JaguarXKREnginesPage() {
         </div>
       </section>
 
+      {engineCodes ? <EngineCodesTable title={engineCodes.title} rows={engineCodes.rows} /> : null}
+
       <FAQSection
         title={
           <>
-            Frequently Asked Questions — <span className="text-primary italic">Jaguar XKR Engine</span>
+            Frequently Asked Questions   <span className="text-primary italic">Jaguar XKR Engine</span>
           </>
         }
         items={faqs}
@@ -133,19 +126,19 @@ export default function JaguarXKREnginesPage() {
           <div className="max-w-5xl mx-auto text-center space-y-6">
             <h2 className="text-3xl md:text-4xl font-extrabold leading-tight">Need an XKR engine quote?</h2>
             <p className="text-emerald-50 leading-relaxed max-w-4xl mx-auto">
-              Call our Grays team to confirm your engine code and get a clear quote for supply, rebuild, or replacement.
+              Call our  team to confirm your engine code and get a clear quote for supply, rebuild, or replacement.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:01375531355"
-                className="inline-flex items-center justify-center rounded-2xl bg-white px-8 py-4 font-bold text-primary shadow-xl transition-all hover:bg-slate-50 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99]"
+                className="inline-flex items-center justify-center rounded-2xl bg-white px-5 py-2.5 text-sm font-bold text-primary shadow-xl transition-all hover:bg-slate-50 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99]"
               >
                 <Phone className="w-5 h-5 mr-2" />
                 Call 01375 531355
               </a>
               <Link
                 href="/contact-us"
-                className="inline-flex items-center justify-center rounded-2xl bg-slate-900 px-8 py-4 font-bold text-white shadow-xl transition-all hover:bg-slate-800 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99]"
+                className="inline-flex items-center justify-center rounded-2xl bg-slate-900 px-5 py-2.5 text-sm font-bold text-white shadow-xl transition-all hover:bg-slate-800 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99]"
               >
                 Request a Quote
               </Link>

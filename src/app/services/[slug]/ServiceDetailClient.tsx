@@ -6,10 +6,12 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { CheckCircle2, Phone, ArrowRight } from "lucide-react";
 import PartnerLogos from "@/components/common/PartnerLogos";
+import NationwideSupportSection from "@/components/common/NationwideSupportSection";
 import ReviewsSection from "@/components/common/ReviewsSection";
 import FAQSection from "@/components/common/FAQSection";
 import Breadcrumbs from "@/components/common/Breadcrumbs";
 import RegSearch from "@/components/common/RegSearch";
+import HeroTrustLabels from "@/components/common/HeroTrustLabels";
 import { Service } from "@/data/servicesData";
 
 interface ServiceDetailClientProps {
@@ -29,7 +31,7 @@ export default function ServiceDetailClient({ service, relatedServices }: Servic
             fill
             className="object-cover opacity-20 filter grayscale"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/75 via-slate-900/15 to-transparent" />
         </div>
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <Breadcrumbs items={[
@@ -40,7 +42,7 @@ export default function ServiceDetailClient({ service, relatedServices }: Servic
             <div className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-primary/20 text-emerald-400 font-semibold tracking-wider text-sm mb-6 border border-primary/30 shadow-[0_0_15px_rgba(25,135,84,0.3)] uppercase">
               {service.icon} Specialist Care
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-8 tracking-tight uppercase leading-none italic">
+            <h1 className="text-xl md:text-2xl lg:text-3xl font-extrabold text-white mb-6 tracking-tight uppercase leading-tight italic">
               {service.title} <span className="text-primary italic">Detail</span>
             </h1>
             <p className="text-xl text-slate-300 max-w-2xl leading-relaxed font-medium mb-10">
@@ -48,6 +50,7 @@ export default function ServiceDetailClient({ service, relatedServices }: Servic
             </p>
             <div className="flex justify-start w-full">
               <RegSearch />
+            <HeroTrustLabels className="mt-4" />
             </div>
           </div>
         </div>
@@ -128,7 +131,7 @@ export default function ServiceDetailClient({ service, relatedServices }: Servic
                        <a href="tel:01375531355" className="w-full bg-slate-900 hover:bg-slate-800 text-white font-black py-5 px-8 rounded-2xl shadow-xl transition-all flex justify-center items-center gap-4 uppercase tracking-[0.2em] text-sm group">
                           <Phone className="w-5 h-5 text-primary group-hover:scale-110 transition-transform" /> 01375 531355
                        </a>
-                       <p className="text-slate-400 text-[0.6rem] text-center font-bold uppercase tracking-widest">Available Mon—Sat: 8am — 6pm</p>
+                       <p className="text-slate-400 text-[0.6rem] text-center font-bold uppercase tracking-widest">Available Mon Sat: 8am   6pm</p>
                     </div>
                  </div>
 
@@ -192,6 +195,7 @@ export default function ServiceDetailClient({ service, relatedServices }: Servic
       <ReviewsSection 
         subtitle={`Hear from our satisfied customers who have experienced our professional ${service.title.toLowerCase()} services.`}
       />
+      <NationwideSupportSection slug={service.slug} />
       <PartnerLogos />
     </main>
   );

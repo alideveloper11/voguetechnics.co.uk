@@ -1,18 +1,36 @@
 "use client";
 
 import { Search } from "lucide-react";
-import Link from "next/link";
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 interface RegSearchProps {
   className?: string;
 }
 
 export default function RegSearch({ className = "" }: RegSearchProps) {
+  const [reg, setReg] = useState("");
+  const [error, setError] = useState("");
+  const router = useRouter();
+
+  const handleSearch = () => {
+    const trimmed = reg.trim();
+    if (!trimmed) {
+      setError("Please enter a registration number.");
+      return;
+    }
+    if (!/^[A-Z0-9]{1,8}$/.test(trimmed)) {
+      setError("Registration must be alphanumeric only (max 8 characters).");
+      return;
+    }
+    setError("");
+    router.push(`/get-quote?reg=${encodeURIComponent(trimmed)}`);
+  };
+
   return (
-    <div className={`w-full max-w-2xl bg-slate-900/80 backdrop-blur-md p-6 md:p-8 rounded-[2.5rem] border border-white/10 shadow-2xl relative ${className}`}>
-      <form className="flex flex-col sm:flex-row gap-4">
-        <div className="flex-1 flex overflow-hidden rounded-2xl border-2 border-slate-300 bg-[#eeb318] shadow-inner transition-transform focus-within:ring-2 focus-within:ring-white/50 focus-within:ring-offset-2 focus-within:ring-offset-slate-900">
+    <div className={`w-full max-w-2xl bg-slate-900/80 backdrop-blur-md p-4 md:p-5 rounded-[2.5rem] border border-white/10 shadow-2xl relative ${className}`}>
+      <div className="flex flex-col sm:flex-row gap-4">
+        <div className={`flex-1 flex overflow-hidden rounded-2xl border-2 bg-[#eeb318] shadow-inner transition-transform focus-within:ring-2 focus-within:ring-white/50 focus-within:ring-offset-2 focus-within:ring-offset-slate-900 ${error ? "border-red-400" : "border-slate-300"}`}>
           <div className="bg-[#0033A0] flex flex-col items-center justify-center px-4 py-2 w-20 md:w-24 shrink-0 border-r border-[#0033A0]/50 shadow-[inset_-5px_0_15px_rgba(0,0,0,0.2)]">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" className="w-10 md:w-12 h-auto mb-1 rounded-sm shadow-sm">
               <clipPath id="t"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath>
@@ -26,18 +44,38 @@ export default function RegSearch({ className = "" }: RegSearchProps) {
           </div>
           <input
             type="text"
+            value={reg}
+            onChange={(e) => {
+              setReg(e.target.value.replace(/[^A-Za-z0-9]/g, "").toUpperCase().slice(0, 8));
+              if (error) setError("");
+            }}
+            onKeyDown={(e) => e.key === "Enter" && handleSearch()}
             placeholder="ENTER VEHICLE REG NUMBER"
+            maxLength={8}
             className="w-full bg-transparent text-slate-900 font-black text-lg md:text-xl px-2 sm:px-4 py-3 sm:py-4 focus:outline-none placeholder:text-[10px] sm:placeholder:text-xs md:placeholder:text-sm lg:placeholder:text-base placeholder:tracking-normal uppercase lg:tracking-wider placeholder:text-slate-500"
           />
         </div>
-        <button className="bg-primary hover:bg-emerald-600 text-white font-black py-4 px-8 rounded-2xl shadow-[0_10px_30px_rgba(25,135,84,0.3)] transition-all transform hover:-translate-y-1 flex items-center justify-center gap-3 whitespace-nowrap uppercase tracking-widest">
-          <Search className="w-6 h-6" />
+        <button
+          type="button"
+          onClick={handleSearch}
+          className="bg-primary hover:bg-emerald-600 text-white font-black py-2.5 px-5 rounded-2xl shadow-[0_10px_30px_rgba(25,135,84,0.3)] transition-all transform hover:-translate-y-1 flex items-center justify-center gap-1.5 whitespace-nowrap uppercase tracking-widest text-sm"
+        >
+          <Search className="w-4 h-4" />
           FIND ENGINE
         </button>
-      </form>
+      </div>
+      {error && (
+        <p className="mt-2 text-center text-[11px] font-semibold text-red-400">{error}</p>
+      )}
       <div className="mt-4 text-center text-sm">
-        <span className="text-slate-400">Don't have the Reg? </span>
-        <Link href="/contact-us" className="text-primary font-bold hover:text-white transition-colors underline underline-offset-4">Find vehicle manually</Link>
+        <span className="text-slate-400">Don&apos;t have the Reg? </span>
+        <button
+          type="button"
+          onClick={() => router.push("/get-quote")}
+          className="text-primary font-bold hover:text-white transition-colors underline underline-offset-4"
+        >
+          Get a quote manually
+        </button>
       </div>
     </div>
   );

@@ -4,6 +4,12 @@ import { Send, RotateCw } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { submitContact } from "@/app/actions/submitContact";
+import {
+  formatUKPhone,
+  stripPhoneDigits,
+  toUKInternational,
+  validateUKPhoneDigits,
+} from "@/lib/ukPhone";
 
 type FormData = {
   name: string;
@@ -17,14 +23,6 @@ type FormData = {
 type FormErrors = Partial<Record<keyof FormData, string>>;
 type TouchedFields = Partial<Record<keyof FormData, boolean>>;
 
-function formatUSPhone(raw: string): string {
-  const d = raw.replace(/\D/g, "").slice(0, 10);
-  if (d.length === 0) return "";
-  if (d.length <= 3) return `(${d}`;
-  if (d.length <= 6) return `(${d.slice(0, 3)}) ${d.slice(3)}`;
-  return `(${d.slice(0, 3)}) ${d.slice(3, 6)}-${d.slice(6)}`;
-}
-
 function validateField(name: keyof FormData, value: string): string {
   switch (name) {
     case "name":
@@ -37,9 +35,7 @@ function validateField(name: keyof FormData, value: string): string {
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim())) return "Please enter a valid email address.";
       return "";
     case "phone":
-      if (!value) return "Phone number is required.";
-      if (value.length !== 10) return "Please enter a valid 10-digit US phone number.";
-      return "";
+      return validateUKPhoneDigits(value);
     case "postCode":
       if (!value.trim()) return "Post code is required.";
       if (!/^[A-Z]{1,2}\d[A-Z\d]?\s?\d[A-Z]{2}$/i.test(value.trim())) return "Please enter a valid UK post code (e.g. RM20 4EL).";
@@ -117,7 +113,7 @@ export default function ContactForm() {
   };
 
   const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const raw = e.target.value.replace(/\D/g, "").slice(0, 10);
+    const raw = stripPhoneDigits(e.target.value);
     setFormData((prev) => ({ ...prev, phone: raw }));
     if (touched.phone) {
       setErrors((prev) => ({ ...prev, phone: validateField("phone", raw) }));
@@ -159,7 +155,7 @@ export default function ContactForm() {
     try {
       const { ok, message } = await submitContact({
         name: formData.name,
-        phone: `+1${formData.phone}`,
+        phone: toUKInternational(formData.phone),
         email: formData.email,
         reg: formData.regNumber,
         postcode: formData.postCode,
@@ -242,18 +238,17 @@ export default function ContactForm() {
             <label className="text-sm font-semibold text-slate-700">Phone Number*</label>
             <div className={`flex items-stretch border rounded-xl overflow-hidden transition-all ${touched.phone && errors.phone ? "border-red-400 bg-red-50" : "border-slate-200 bg-slate-50"} focus-within:ring-2 ${touched.phone && errors.phone ? "focus-within:ring-red-400" : "focus-within:ring-primary"}`}>
               <span className="flex items-center px-3 bg-slate-100 border-r border-slate-200 text-slate-600 font-bold text-sm select-none shrink-0">
-                +1
+                +44
               </span>
               <input
                 name="phone"
                 type="tel"
                 inputMode="numeric"
-                value={formatUSPhone(formData.phone)}
+                value={formatUKPhone(formData.phone)}
                 onChange={handlePhoneChange}
                 onBlur={handleBlur}
                 className="flex-1 bg-transparent px-4 py-3 focus:outline-none text-slate-900"
-                placeholder="(555) 000-0000"
-                maxLength={14}
+                placeholder="07123 456789"
               />
             </div>
             {touched.phone && errors.phone && (

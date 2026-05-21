@@ -5,19 +5,17 @@ import { useRouter } from "next/navigation";
 import { RotateCw } from "lucide-react";
 import { submitQuote } from "@/app/actions/submitQuote";
 import type { VehicleResult } from "@/app/actions/lookupVehicle";
+import {
+  formatUKPhone,
+  stripPhoneDigits,
+  toUKInternational,
+  validateUKPhoneDigits,
+} from "@/lib/ukPhone";
 
 function randomMath() {
   const a = Math.floor(Math.random() * 10) + 1;
   const b = Math.floor(Math.random() * 10) + 1;
   return { a, b, answer: a + b };
-}
-
-function formatUSPhone(raw: string): string {
-  const d = raw.replace(/\D/g, "").slice(0, 10);
-  if (d.length === 0) return "";
-  if (d.length <= 3) return `(${d}`;
-  if (d.length <= 6) return `(${d.slice(0, 3)}) ${d.slice(3)}`;
-  return `(${d.slice(0, 3)}) ${d.slice(3, 6)}-${d.slice(6)}`;
 }
 
 const whyChooseUs = [
@@ -48,9 +46,7 @@ function validateField(name: keyof FormFields, value: string): string {
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value.trim())) return "Enter a valid email address.";
       return "";
     case "phone":
-      if (!value) return "Phone number is required.";
-      if (value.length !== 10) return "Please enter a valid 10-digit US phone number.";
-      return "";
+      return validateUKPhoneDigits(value);
     case "postcode":
       if (!value.trim()) return "Postcode is required.";
       if (!/^[A-Z]{1,2}\d[A-Z\d]?\s?\d[A-Z]{2}$/i.test(value.trim())) return "Enter a valid UK postcode (e.g. RM20 4EL).";
@@ -122,7 +118,7 @@ export default function GetQuoteForm({ initialReg = "", showNotFound = false, ve
   };
 
   const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const raw = e.target.value.replace(/\D/g, "").slice(0, 10);
+    const raw = stripPhoneDigits(e.target.value);
     setForm((prev) => ({ ...prev, phone: raw }));
     if (touched.phone) {
       setFieldErrors((prev) => ({ ...prev, phone: validateField("phone", raw) }));
@@ -157,7 +153,7 @@ export default function GetQuoteForm({ initialReg = "", showNotFound = false, ve
     setSubmitting(true);
     const { ok, message } = await submitQuote({
       ...form,
-      phone: `+1${form.phone}`,
+      phone: toUKInternational(form.phone),
       browser: navigator.userAgent,
       vehicle: vehicleInfo?.data,
     });
@@ -267,17 +263,16 @@ export default function GetQuoteForm({ initialReg = "", showNotFound = false, ve
               <p className="mb-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500">Phone Number <span className="text-red-500">*</span></p>
               <div className={`flex items-stretch overflow-hidden rounded-xl border ${inputBorder("phone")} ${touched.phone && fieldErrors.phone ? "bg-red-50" : "bg-slate-50"} focus-within:ring-2 ${touched.phone && fieldErrors.phone ? "focus-within:ring-red-400" : "focus-within:ring-primary/30"}`}>
                 <span className="flex items-center px-3 bg-slate-100 border-r border-slate-200 text-slate-600 font-bold text-sm select-none shrink-0">
-                  +1
+                  +44
                 </span>
                 <input
                   name="phone"
                   type="tel"
                   inputMode="numeric"
-                  value={formatUSPhone(form.phone)}
+                  value={formatUKPhone(form.phone)}
                   onChange={handlePhoneChange}
                   onBlur={handleBlur}
-                  placeholder="(555) 000-0000"
-                  maxLength={14}
+                  placeholder="07123 456789"
                   className="flex-1 bg-transparent px-3 py-2.5 text-[13.5px] text-slate-700 placeholder:text-slate-400 focus:outline-none"
                 />
               </div>

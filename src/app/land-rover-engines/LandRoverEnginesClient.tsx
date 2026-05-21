@@ -103,7 +103,10 @@ export default function LandRoverEnginesClient() {
         subtitle="Hear from our satisfied customers who have experienced our professional Land Rover engine services." 
       />
 
-      <PopularEngineSizes items={landRoverPopularEngineSizes} />
+      <PopularEngineSizes
+        items={landRoverPopularEngineSizes}
+        subtitle="Land Rover engines range from the compact 2.0 Ingenium through to the powerful 4.4 TDV8 and 5.0 V8 — each with its own known failure points and repair requirements. Select your engine size below for specialist rebuild, repair and replacement information specific to your variant."
+      />
 
       {/* EXPERIENCE SECTION */}
       <section className="py-16 md:py-20 bg-white border-b border-slate-100 overflow-hidden">

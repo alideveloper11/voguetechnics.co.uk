@@ -59,7 +59,7 @@ export default function ServicesSection({ limit, showTitle = true, sectionClassN
             >
               {/* Service Image */}
               {service.image && (
-                <div className="relative w-full h-48 shrink-0">
+                <div className="relative w-full h-56 shrink-0">
                   <Image
                     src={service.image}
                     alt={service.title}
@@ -71,7 +71,7 @@ export default function ServicesSection({ limit, showTitle = true, sectionClassN
               )}
 
               {/* Card Content */}
-              <div className="p-5 flex flex-col justify-between flex-1">
+              <div className="p-4 flex flex-col justify-between flex-1">
                 {/* Service Icon Container */}
                 <div className="relative z-10">
                   <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center text-primary shadow-sm mb-3 group-hover:bg-primary group-hover:text-white transition-all duration-500 transform group-hover:rotate-6 group-hover:scale-110">

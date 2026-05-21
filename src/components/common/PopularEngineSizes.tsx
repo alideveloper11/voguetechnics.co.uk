@@ -8,12 +8,14 @@ export type PopularEngineSizeItem = {
 
 type PopularEngineSizesProps = {
   title?: string;
+  subtitle?: string;
   items: PopularEngineSizeItem[];
   className?: string;
 };
 
 export default function PopularEngineSizes({
   title = "Popular Engine Sizes",
+  subtitle,
   items,
   className = "",
 }: PopularEngineSizesProps) {
@@ -25,6 +27,11 @@ export default function PopularEngineSizes({
         <h2 className="text-center text-3xl md:text-5xl font-extrabold tracking-normal text-black">
           {title}
         </h2>
+        {subtitle && (
+          <p className="mt-4 text-center text-base md:text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            {subtitle}
+          </p>
+        )}
 
         <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {items.map((item) => (

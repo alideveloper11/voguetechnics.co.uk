@@ -199,7 +199,7 @@ function ReviewCard({ review, idx }: { review: (typeof reviews)[0]; idx: number 
 
       {/* Text — flex-1 fills remaining space so bottom section stays aligned */}
       <div className="relative z-10 mt-3 flex flex-1 flex-col">
-        <p className={`flex-1 text-xs leading-relaxed text-slate-700 ${expanded ? "" : "line-clamp-3"}`}>
+        <p className={`text-xs leading-relaxed text-slate-700 ${expanded ? "" : "line-clamp-3"}`}>
           &ldquo;{review.text}&rdquo;
         </p>
         <button

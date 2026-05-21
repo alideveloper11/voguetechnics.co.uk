@@ -12,6 +12,14 @@ function randomMath() {
   return { a, b, answer: a + b };
 }
 
+function formatUSPhone(raw: string): string {
+  const d = raw.replace(/\D/g, "").slice(0, 10);
+  if (d.length === 0) return "";
+  if (d.length <= 3) return `(${d}`;
+  if (d.length <= 6) return `(${d.slice(0, 3)}) ${d.slice(3)}`;
+  return `(${d.slice(0, 3)}) ${d.slice(3, 6)}-${d.slice(6)}`;
+}
+
 const whyChooseUs = [
   "Engine Specialists With Over 20 Years Of Experience.",
   "Competitive Prices With Up To 24 Month Warranty.",
@@ -22,40 +30,46 @@ const whyChooseUs = [
 
 type FormFields = { reg: string; name: string; email: string; phone: string; postcode: string; issue: string };
 type FieldErrors = Partial<Record<keyof FormFields, string>>;
+type TouchedFields = Partial<Record<keyof FormFields, boolean>>;
 
-function validate(form: FormFields): FieldErrors {
+function validateField(name: keyof FormFields, value: string): string {
+  switch (name) {
+    case "reg":
+      if (value && !/^[A-Z0-9\s]{1,10}$/.test(value))
+        return "Registration must be alphanumeric only.";
+      return "";
+    case "name":
+      if (!value.trim()) return "Full name is required.";
+      if (value.trim().length < 2) return "Name is too short.";
+      if (!/^[A-Za-z\s'\-]+$/.test(value.trim())) return "Name can only contain letters.";
+      return "";
+    case "email":
+      if (!value.trim()) return "Email address is required.";
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value.trim())) return "Enter a valid email address.";
+      return "";
+    case "phone":
+      if (!value) return "Phone number is required.";
+      if (value.length !== 10) return "Please enter a valid 10-digit US phone number.";
+      return "";
+    case "postcode":
+      if (!value.trim()) return "Postcode is required.";
+      if (!/^[A-Z]{1,2}\d[A-Z\d]?\s?\d[A-Z]{2}$/i.test(value.trim())) return "Enter a valid UK postcode (e.g. RM20 4EL).";
+      return "";
+    case "issue":
+      if (!value.trim()) return "Please describe the issue with your vehicle.";
+      if (value.trim().length < 10) return "Please provide more detail (at least 10 characters).";
+      return "";
+    default:
+      return "";
+  }
+}
+
+function validateAll(form: FormFields): FieldErrors {
   const errors: FieldErrors = {};
-
-  if (form.reg && !/^[A-Z0-9]{1,8}$/.test(form.reg))
-    errors.reg = "Registration must be alphanumeric only (max 8 characters).";
-
-  if (!form.name.trim())
-    errors.name = "Full name is required.";
-  else if (form.name.trim().length < 2)
-    errors.name = "Name is too short.";
-  else if (!/^[A-Za-z\s'\-]+$/.test(form.name))
-    errors.name = "Name can only contain letters.";
-
-  if (!form.email.trim())
-    errors.email = "Email address is required.";
-  else if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(form.email))
-    errors.email = "Enter a valid email address.";
-
-  if (!form.phone.trim())
-    errors.phone = "Phone number is required.";
-  else if (form.phone.replace(/\D/g, "").length < 10)
-    errors.phone = "Enter a valid phone number.";
-
-  if (!form.postcode.trim())
-    errors.postcode = "Postcode is required.";
-  else if (!/^[A-Z0-9][A-Z0-9\s]{1,7}$/i.test(form.postcode.trim()))
-    errors.postcode = "Enter a valid UK postcode.";
-
-  if (!form.issue.trim())
-    errors.issue = "Please describe the issue with your vehicle.";
-  else if (form.issue.trim().length < 10)
-    errors.issue = "Please provide more detail (at least 10 characters).";
-
+  (Object.keys(form) as (keyof FormFields)[]).forEach((key) => {
+    const msg = validateField(key, form[key]);
+    if (msg) errors[key] = msg;
+  });
   return errors;
 }
 
@@ -79,6 +93,7 @@ export default function GetQuoteForm({ initialReg = "", showNotFound = false, ve
     reg: initialReg, name: "", email: "", phone: "", postcode: "", issue: "",
   });
   const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
+  const [touched, setTouched] = useState<TouchedFields>({});
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState("");
 
@@ -92,23 +107,41 @@ export default function GetQuoteForm({ initialReg = "", showNotFound = false, ve
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
+    const key = name as keyof FormFields;
     let filtered = value;
 
-    if (name === "reg")
-      filtered = value.replace(/[^A-Za-z0-9]/g, "").toUpperCase().slice(0, 8);
-    else if (name === "postcode")
+    if (key === "reg")
+      filtered = value.replace(/[^A-Za-z0-9\s]/g, "").toUpperCase().slice(0, 10);
+    else if (key === "postcode")
       filtered = value.replace(/[^A-Za-z0-9\s]/g, "").toUpperCase();
 
-    setForm((prev) => ({ ...prev, [name]: filtered }));
-    if (fieldErrors[name as keyof FormFields]) {
-      setFieldErrors((prev) => ({ ...prev, [name]: undefined }));
+    setForm((prev) => ({ ...prev, [key]: filtered }));
+    if (touched[key]) {
+      setFieldErrors((prev) => ({ ...prev, [key]: validateField(key, filtered) }));
     }
+  };
+
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const raw = e.target.value.replace(/\D/g, "").slice(0, 10);
+    setForm((prev) => ({ ...prev, phone: raw }));
+    if (touched.phone) {
+      setFieldErrors((prev) => ({ ...prev, phone: validateField("phone", raw) }));
+    }
+  };
+
+  const handleBlur = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const key = e.target.name as keyof FormFields;
+    setTouched((prev) => ({ ...prev, [key]: true }));
+    setFieldErrors((prev) => ({ ...prev, [key]: validateField(key, form[key]) }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const errors = validate(form);
+    const allTouched: TouchedFields = Object.fromEntries(Object.keys(form).map((k) => [k, true]));
+    setTouched(allTouched);
+
+    const errors = validateAll(form);
     if (Object.keys(errors).length > 0) {
       setFieldErrors(errors);
       return;
@@ -124,6 +157,7 @@ export default function GetQuoteForm({ initialReg = "", showNotFound = false, ve
     setSubmitting(true);
     const { ok, message } = await submitQuote({
       ...form,
+      phone: `+1${form.phone}`,
       browser: navigator.userAgent,
       vehicle: vehicleInfo?.data,
     });
@@ -136,11 +170,14 @@ export default function GetQuoteForm({ initialReg = "", showNotFound = false, ve
   };
 
   const inputBorder = (field: keyof FormFields) =>
-    fieldErrors[field] ? "border-red-400" : "border-slate-200";
+    touched[field] && fieldErrors[field] ? "border-red-400" : "border-slate-200";
+
+  const inputBg = (field: keyof FormFields) =>
+    touched[field] && fieldErrors[field] ? "bg-red-50" : "bg-slate-50";
 
   const FieldError = ({ field }: { field: keyof FormFields }) =>
-    fieldErrors[field] ? (
-      <p className="mt-1 text-[11px] text-red-500">{fieldErrors[field]}</p>
+    touched[field] && fieldErrors[field] ? (
+      <p className="mt-1 text-[11px] text-red-500 font-medium">{fieldErrors[field]}</p>
     ) : null;
 
   return (
@@ -184,14 +221,15 @@ export default function GetQuoteForm({ initialReg = "", showNotFound = false, ve
           {/* Vehicle Registration */}
           <div>
             <p className="mb-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500">Vehicle Registration</p>
-            <div className={`flex items-center overflow-hidden rounded-xl border-2 bg-[#FAFAE8] ${fieldErrors.reg ? "border-red-400" : "border-[#e5e5b0]"}`}>
-              <div className={`flex items-center justify-center px-3 py-3 text-xl border-r ${fieldErrors.reg ? "border-red-400" : "border-[#e5e5b0]"}`}>
+            <div className={`flex items-center overflow-hidden rounded-xl border-2 bg-[#FAFAE8] ${touched.reg && fieldErrors.reg ? "border-red-400" : "border-[#e5e5b0]"}`}>
+              <div className={`flex items-center justify-center px-3 py-3 text-xl border-r ${touched.reg && fieldErrors.reg ? "border-red-400" : "border-[#e5e5b0]"}`}>
                 🇬🇧
               </div>
               <input
                 name="reg"
                 value={form.reg}
                 onChange={handleChange}
+                onBlur={handleBlur}
                 placeholder="ENTER REG"
                 className="flex-1 bg-transparent px-4 py-3 text-[15px] font-bold uppercase tracking-widest text-slate-700 placeholder:text-slate-400 focus:outline-none"
               />
@@ -203,21 +241,21 @@ export default function GetQuoteForm({ initialReg = "", showNotFound = false, ve
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div>
               <p className="mb-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500">Full Name <span className="text-red-500">*</span></p>
-              <div className={`flex items-center gap-2 rounded-xl border px-3 py-2.5 bg-slate-50 ${inputBorder("name")}`}>
+              <div className={`flex items-center gap-2 rounded-xl border px-3 py-2.5 ${inputBg("name")} ${inputBorder("name")}`}>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
                 </svg>
-                <input name="name" value={form.name} onChange={handleChange} placeholder="Enter Full Name" className="flex-1 bg-transparent text-[13.5px] text-slate-700 placeholder:text-slate-400 focus:outline-none" />
+                <input name="name" value={form.name} onChange={handleChange} onBlur={handleBlur} placeholder="Enter Full Name" className="flex-1 bg-transparent text-[13.5px] text-slate-700 placeholder:text-slate-400 focus:outline-none" />
               </div>
               <FieldError field="name" />
             </div>
             <div>
               <p className="mb-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500">Email Address <span className="text-red-500">*</span></p>
-              <div className={`flex items-center gap-2 rounded-xl border px-3 py-2.5 bg-slate-50 ${inputBorder("email")}`}>
+              <div className={`flex items-center gap-2 rounded-xl border px-3 py-2.5 ${inputBg("email")} ${inputBorder("email")}`}>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
                 </svg>
-                <input type="email" name="email" value={form.email} onChange={handleChange} placeholder="Enter Email Address" className="flex-1 bg-transparent text-[13.5px] text-slate-700 placeholder:text-slate-400 focus:outline-none" />
+                <input type="email" name="email" value={form.email} onChange={handleChange} onBlur={handleBlur} placeholder="Enter Email Address" className="flex-1 bg-transparent text-[13.5px] text-slate-700 placeholder:text-slate-400 focus:outline-none" />
               </div>
               <FieldError field="email" />
             </div>
@@ -227,21 +265,31 @@ export default function GetQuoteForm({ initialReg = "", showNotFound = false, ve
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div>
               <p className="mb-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500">Phone Number <span className="text-red-500">*</span></p>
-              <div className={`flex items-center gap-2 rounded-xl border px-3 py-2.5 bg-slate-50 ${inputBorder("phone")}`}>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.78a16 16 0 0 0 6 6l.94-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
-                </svg>
-                <input name="phone" value={form.phone} onChange={handleChange} placeholder="07900 000000" className="flex-1 bg-transparent text-[13.5px] text-slate-700 placeholder:text-slate-400 focus:outline-none" />
+              <div className={`flex items-stretch overflow-hidden rounded-xl border ${inputBorder("phone")} ${touched.phone && fieldErrors.phone ? "bg-red-50" : "bg-slate-50"} focus-within:ring-2 ${touched.phone && fieldErrors.phone ? "focus-within:ring-red-400" : "focus-within:ring-primary/30"}`}>
+                <span className="flex items-center px-3 bg-slate-100 border-r border-slate-200 text-slate-600 font-bold text-sm select-none shrink-0">
+                  +1
+                </span>
+                <input
+                  name="phone"
+                  type="tel"
+                  inputMode="numeric"
+                  value={formatUSPhone(form.phone)}
+                  onChange={handlePhoneChange}
+                  onBlur={handleBlur}
+                  placeholder="(555) 000-0000"
+                  maxLength={14}
+                  className="flex-1 bg-transparent px-3 py-2.5 text-[13.5px] text-slate-700 placeholder:text-slate-400 focus:outline-none"
+                />
               </div>
               <FieldError field="phone" />
             </div>
             <div>
               <p className="mb-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500">Post Code <span className="text-red-500">*</span></p>
-              <div className={`flex items-center gap-2 rounded-xl border px-3 py-2.5 bg-slate-50 ${inputBorder("postcode")}`}>
+              <div className={`flex items-center gap-2 rounded-xl border px-3 py-2.5 ${inputBg("postcode")} ${inputBorder("postcode")}`}>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
                 </svg>
-                <input name="postcode" value={form.postcode} onChange={handleChange} placeholder="RM20 4EL" className="flex-1 bg-transparent text-[13.5px] text-slate-700 placeholder:text-slate-400 focus:outline-none" />
+                <input name="postcode" value={form.postcode} onChange={handleChange} onBlur={handleBlur} placeholder="RM20 4EL" className="flex-1 bg-transparent text-[13.5px] text-slate-700 placeholder:text-slate-400 focus:outline-none uppercase" />
               </div>
               <FieldError field="postcode" />
             </div>
@@ -254,9 +302,10 @@ export default function GetQuoteForm({ initialReg = "", showNotFound = false, ve
               name="issue"
               value={form.issue}
               onChange={handleChange}
+              onBlur={handleBlur}
               rows={4}
               placeholder="Describe your vehicle's issue in as much detail as possible..."
-              className={`w-full rounded-xl border px-3 py-2.5 text-[13.5px] text-slate-700 bg-slate-50 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-primary/30 resize-none ${inputBorder("issue")}`}
+              className={`w-full rounded-xl border px-3 py-2.5 text-[13.5px] text-slate-700 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-primary/30 resize-none ${inputBg("issue")} ${inputBorder("issue")}`}
             />
             <FieldError field="issue" />
           </div>

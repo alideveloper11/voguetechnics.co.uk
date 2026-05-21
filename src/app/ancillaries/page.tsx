@@ -46,9 +46,14 @@ export default function Ancillaries() {
               href={`/${part.toLowerCase().replace(/ /g, "-")}`}
               className="group bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:border-primary/50 transition-all duration-300 h-full flex flex-col relative overflow-hidden transform hover:-translate-y-1"
             >
-              <div className="relative z-10 w-full aspect-[4/3] bg-slate-100 rounded-xl mb-6 flex flex-col items-center justify-center overflow-hidden group-hover:bg-slate-200/50 transition-colors">
-                {/* ADD YOUR REAL IMAGES HERE -> <Image src={`/images/parts/${part}.jpg`} alt={part} fill className="object-cover" /> */}
-                <span className="text-slate-400 text-xs font-semibold tracking-widest uppercase">Image Space</span>
+              <div className="relative z-10 w-full aspect-[4/3] rounded-xl mb-6 overflow-hidden">
+                <Image
+                  src={`/images/anc/${part.toLowerCase().replace(/ /g, "-")}.webp`}
+                  alt={part}
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  sizes="(min-width: 1280px) 25vw, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                />
               </div>
               
               <div className="flex-1 flex flex-col justify-between">

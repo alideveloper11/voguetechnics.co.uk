@@ -54,9 +54,9 @@ export default function About() {
             alt="Vogue Technics workshop background"
             fill
             priority
-            className="object-cover opacity-65 mix-blend-overlay"
+            className="object-cover opacity-90"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/70 via-slate-900/35 to-slate-900/10" />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/50 via-slate-900/20 to-slate-900/5" />
         </div>
 
         <div className="container relative z-10 mx-auto px-4 lg:px-8">
@@ -78,16 +78,21 @@ export default function About() {
               </p>
             </div>
 
-            <div className="rounded-[2rem] border border-white/10 bg-white/5 p-6 backdrop-blur-xl shadow-[0_30px_60px_-35px_rgba(0,0,0,0.6)]">
+            <div className="rounded-[2rem] border border-white/20 bg-slate-900/75 p-6 backdrop-blur-xl shadow-2xl">
+              <p className="mb-4 text-[10px] font-black uppercase tracking-[0.25em] text-emerald-400">Why Choose Us</p>
               <div className="space-y-4">
                 {trustPoints.map((point) => (
                   <div key={point} className="flex items-start gap-3">
-                    <span className="mt-0.5 rounded-xl bg-primary/20 p-2 text-emerald-300">
+                    <span className="mt-0.5 shrink-0 rounded-xl bg-primary/25 p-2 text-emerald-300">
                       <CheckCircle2 className="h-4 w-4" />
                     </span>
                     <p className="text-sm leading-relaxed text-slate-200">{point}</p>
                   </div>
                 ))}
+              </div>
+              <div className="mt-5 border-t border-white/10 pt-4 flex items-center gap-2">
+                <Award className="h-4 w-4 text-emerald-400 shrink-0" />
+                <span className="text-xs font-bold text-slate-300">IGA Member · RAC Approved · Trading Standards</span>
               </div>
             </div>
           </div>
@@ -97,7 +102,7 @@ export default function About() {
       <section className="py-20 md:py-24 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
-            <div className="space-y-6">
+            <div>
               <div className="relative overflow-hidden rounded-[2.5rem] shadow-2xl">
                 <div className="relative h-[380px] md:h-[460px]">
                   <Image
@@ -114,24 +119,13 @@ export default function About() {
                   </div>
                 </div>
               </div>
-
-              <div className="grid gap-4 sm:grid-cols-3">
-                {highlights.map((item) => (
-                  <div key={item.title} className="rounded-[2rem] border border-slate-200 bg-slate-50 p-6 shadow-sm">
-                    <div className="mb-4 inline-flex rounded-2xl bg-primary/10 p-3 text-primary">{item.icon}</div>
-                    <h3 className="text-lg font-bold text-slate-900">{item.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-slate-600">{item.text}</p>
-                  </div>
-                ))}
-              </div>
             </div>
 
-            <div className="space-y-10">
+            <div className="space-y-5">
               <div>
                 <h2 className="text-3xl font-bold text-slate-900 md:text-4xl">Our Story Since 2004</h2>
                 <div className="mt-4 h-1 w-24 rounded-full bg-primary" />
               </div>
-
               <div className="space-y-5 text-[1.05rem] leading-relaxed text-slate-700">
                 <p>
                   Vic didn't set out to build a business. He set out to do the job properly. After spending years working his way through automotive workshops around    learning the trade, developing his diagnostic instincts, and quietly becoming the person colleagues turned to when an engine job got complicated   he realised that the kind of work he wanted to do simply wasn't possible inside a main dealer structure. The targets, the time constraints, the pressure to upsell   none of it left room for the level of care he believed every engine deserved.
@@ -139,14 +133,27 @@ export default function About() {
                 <p>
                   It was Land Rovers and Range Rovers that drew him in most. Not because they were fashionable, but because the engines themselves were genuinely complex, often misunderstood, and poorly served by generalist workshops. The TDV6 needed specialist knowledge. The V8 variants demanded attention to tolerances that most garages weren't equipped to assess, let alone correct. Vic saw a genuine need that wasn't being met.
                 </p>
-                <p>
-                  He opened Vogue Technics in , with a clear idea of what it would be: a workshop that operated at main dealer level but without the main dealer overheads or the main dealer attitude to pricing. The early months were lean. There was no marketing budget, no advertising campaign, no grand opening. The first customers came through word of mouth   people who had been recommended by a friend, or who had already been let down somewhere else and needed someone they could actually trust.
-                </p>
-                <p>
-                  That reputation grew steadily, one rebuilt engine at a time. Customers came back. They sent their colleagues, their partners, their parents. By the time Vogue Technics had been running for a few years, the business was operating almost entirely on referrals and returning customers. That's still largely true today. It's not something Vic planned. It's something that happened because the work was good and the people were treated fairly   and that, in his view, is the only kind of growth worth having.
-                </p>
               </div>
             </div>
+          </div>
+
+          <div className="mt-8 space-y-5 text-[1.05rem] leading-relaxed text-slate-700">
+            <p>
+              He opened Vogue Technics in , with a clear idea of what it would be: a workshop that operated at main dealer level but without the main dealer overheads or the main dealer attitude to pricing. The early months were lean. There was no marketing budget, no advertising campaign, no grand opening. The first customers came through word of mouth   people who had been recommended by a friend, or who had already been let down somewhere else and needed someone they could actually trust.
+            </p>
+            <p>
+              That reputation grew steadily, one rebuilt engine at a time. Customers came back. They sent their colleagues, their partners, their parents. By the time Vogue Technics had been running for a few years, the business was operating almost entirely on referrals and returning customers. That's still largely true today. It's not something Vic planned. It's something that happened because the work was good and the people were treated fairly   and that, in his view, is the only kind of growth worth having.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-6 sm:grid-cols-3">
+            {highlights.map((item) => (
+              <div key={item.title} className="rounded-[2rem] border border-slate-200 bg-slate-50 p-6 shadow-sm">
+                <div className="mb-4 inline-flex rounded-2xl bg-primary/10 p-3 text-primary">{item.icon}</div>
+                <h3 className="text-lg font-bold text-slate-900">{item.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-slate-600">{item.text}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

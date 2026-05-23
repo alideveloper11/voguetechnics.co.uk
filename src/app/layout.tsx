@@ -3,6 +3,10 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/common/Header";
 import Footer from "@/components/common/Footer";
+import {
+  GoogleTagManagerBody,
+  GoogleTagManagerHead,
+} from "@/components/analytics/GoogleTagManager";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -37,12 +41,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} h-full antialiased scroll-smooth`} suppressHydrationWarning={true}>
+      <head>
+        <GoogleTagManagerHead />
+      </head>
       <body className="min-h-full flex flex-col bg-slate-50 text-slate-900 selection:bg-primary selection:text-white" suppressHydrationWarning={true}>
         <Header />
         <main className="flex-1 w-full flex flex-col">
           {children}
         </main>
         <Footer />
+        <GoogleTagManagerBody />
       </body>
     </html>
   );

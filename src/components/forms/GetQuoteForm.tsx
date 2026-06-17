@@ -32,6 +32,7 @@ type TouchedFields = Partial<Record<keyof FormFields, boolean>>;
 function validateField(name: keyof FormFields, value: string): string {
   switch (name) {
     case "reg":
+      if (!value.trim()) return "Registration number is required.";
       if (value && !/^[A-Z0-9\s]{1,10}$/.test(value))
         return "Registration must be alphanumeric only.";
       return "";
@@ -215,7 +216,7 @@ export default function GetQuoteForm({ initialReg = "", showNotFound = false, ve
 
           {/* Vehicle Registration */}
           <div>
-            <p className="mb-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500">Vehicle Registration</p>
+            <p className="mb-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500">Vehicle Registration <span className="text-red-500">*</span></p>
             <div className={`flex items-center overflow-hidden rounded-xl border-2 bg-[#FAFAE8] ${touched.reg && fieldErrors.reg ? "border-red-400" : "border-[#e5e5b0]"}`}>
               <div className={`flex items-center justify-center px-3 py-3 text-xl border-r ${touched.reg && fieldErrors.reg ? "border-red-400" : "border-[#e5e5b0]"}`}>
                 🇬🇧

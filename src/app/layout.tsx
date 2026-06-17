@@ -33,7 +33,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full antialiased scroll-smooth" suppressHydrationWarning={true}>
+    <html
+      lang="en"
+      className="h-full antialiased scroll-smooth"
+      data-scroll-behavior="smooth"
+      suppressHydrationWarning={true}
+    >
       <head>
         <GoogleTagManagerHead />
       </head>

@@ -106,10 +106,11 @@ export default function GetQuoteForm({ initialReg = "", showNotFound = false, ve
     const key = name as keyof FormFields;
     let filtered = value;
 
-    if (key === "reg")
+    if (key === "reg") {
       filtered = value.replace(/[^A-Za-z0-9\s]/g, "").toUpperCase().slice(0, 10);
-    else if (key === "postcode")
+    } else if (key === "postcode") {
       filtered = value.replace(/[^A-Za-z0-9\s]/g, "").toUpperCase();
+    }
 
     setForm((prev) => ({ ...prev, [key]: filtered }));
     if (touched[key]) {
@@ -158,6 +159,7 @@ export default function GetQuoteForm({ initialReg = "", showNotFound = false, ve
       vehicle: vehicleInfo?.data,
     });
     setSubmitting(false);
+
     if (ok) {
       router.push("/quote-success");
     } else {
@@ -178,10 +180,7 @@ export default function GetQuoteForm({ initialReg = "", showNotFound = false, ve
 
   return (
     <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_360px]">
-
-      {/* Form card */}
       <div className="rounded-2xl bg-white p-6 shadow-sm sm:p-8 border border-slate-100">
-
         {vehicleInfo && (
           <div className="mb-6 flex items-start gap-4 rounded-xl border border-slate-200 bg-slate-50 px-5 py-4" style={{ borderLeft: "4px solid #198754" }}>
             <div className="mt-0.5 shrink-0">
@@ -213,13 +212,11 @@ export default function GetQuoteForm({ initialReg = "", showNotFound = false, ve
         )}
 
         <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-5">
-
-          {/* Vehicle Registration */}
           <div>
             <p className="mb-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500">Vehicle Registration <span className="text-red-500">*</span></p>
             <div className={`flex items-center overflow-hidden rounded-xl border-2 bg-[#FAFAE8] ${touched.reg && fieldErrors.reg ? "border-red-400" : "border-[#e5e5b0]"}`}>
-              <div className={`flex items-center justify-center px-3 py-3 text-xl border-r ${touched.reg && fieldErrors.reg ? "border-red-400" : "border-[#e5e5b0]"}`}>
-                🇬🇧
+              <div className={`flex items-center justify-center px-3 py-3 text-xl font-black border-r ${touched.reg && fieldErrors.reg ? "border-red-400" : "border-[#e5e5b0]"}`}>
+                UK
               </div>
               <input
                 name="reg"
@@ -233,7 +230,6 @@ export default function GetQuoteForm({ initialReg = "", showNotFound = false, ve
             <FieldError field="reg" />
           </div>
 
-          {/* Name + Email */}
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div>
               <p className="mb-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500">Full Name <span className="text-red-500">*</span></p>
@@ -257,7 +253,6 @@ export default function GetQuoteForm({ initialReg = "", showNotFound = false, ve
             </div>
           </div>
 
-          {/* Phone + Postcode */}
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div>
               <p className="mb-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500">Phone Number <span className="text-red-500">*</span></p>
@@ -287,7 +282,6 @@ export default function GetQuoteForm({ initialReg = "", showNotFound = false, ve
             </div>
           </div>
 
-          {/* Issue */}
           <div>
             <p className="mb-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500">Issue With Vehicle <span className="text-red-500">*</span></p>
             <textarea
@@ -302,7 +296,6 @@ export default function GetQuoteForm({ initialReg = "", showNotFound = false, ve
             <FieldError field="issue" />
           </div>
 
-          {/* Math Captcha */}
           <div className="relative overflow-hidden bg-slate-100 rounded-xl py-3 px-4 border border-slate-200">
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none select-none flex flex-wrap gap-4 p-2 text-[10px] font-bold uppercase rotate-[-10deg]">
               {Array.from({ length: 20 }).map((_, i) => (
@@ -329,23 +322,19 @@ export default function GetQuoteForm({ initialReg = "", showNotFound = false, ve
             </div>
           </div>
 
-          {/* Submit */}
           <button
             type="submit"
             disabled={submitting}
             className="w-full rounded-xl py-4 text-[13px] font-black uppercase tracking-widest text-white bg-primary hover:bg-primary-dark transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
           >
-            {submitting ? "Submitting…" : "Submit Quote Request"}
+            {submitting ? "Submitting..." : "Submit Quote Request"}
           </button>
 
           <p className="text-center text-[11px] text-slate-400">By submitting, you agree to our contact terms. We never share your data.</p>
-
         </form>
       </div>
 
-      {/* Sidebar */}
       <div className="flex flex-col gap-4">
-
         <div className="rounded-2xl bg-white p-6 shadow-sm border border-slate-100">
           <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.22em] text-primary">Why Choose Us</p>
           <ul className="flex flex-col gap-3">
@@ -364,7 +353,7 @@ export default function GetQuoteForm({ initialReg = "", showNotFound = false, ve
 
         <div className="rounded-2xl p-6 bg-[#0c0c0c]">
           <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.22em] text-primary">Prefer To Call?</p>
-          <p className="mb-5 text-[13px] leading-relaxed text-white/70">Speak directly with one of our engine specialists. Mon–Fri 9am–6pm, Sat 9am–2pm.</p>
+          <p className="mb-5 text-[13px] leading-relaxed text-white/70">Speak directly with one of our engine specialists. Mon-Fri 9am-6pm, Sat 9am-2pm.</p>
           <div className="flex flex-col gap-3">
             <a href="tel:01375531355" className="flex items-center gap-3 text-[15px] font-bold text-white hover:text-primary transition-colors">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#198754" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -386,7 +375,6 @@ export default function GetQuoteForm({ initialReg = "", showNotFound = false, ve
             </div>
           </div>
         </div>
-
       </div>
     </div>
   );

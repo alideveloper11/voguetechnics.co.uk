@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // 0. Jaguar model URL normalization
@@ -25,9 +25,9 @@ export function middleware(request: NextRequest) {
   // 1. Blog Tag/Category/Author/Page Pattern Cleanup
   // Redirects low-value legacy WordPress taxonomy pages to the main blog
   if (
-    pathname.startsWith('/blog/tag') || 
-    pathname.startsWith('/blog/category') || 
-    pathname.startsWith('/blog/author') || 
+    pathname.startsWith('/blog/tag') ||
+    pathname.startsWith('/blog/category') ||
+    pathname.startsWith('/blog/author') ||
     pathname.startsWith('/blog/page')
   ) {
     return NextResponse.redirect(new URL('/blog', request.url), 308); // Permanent Redirect

@@ -7,7 +7,6 @@ import { submitContact } from "@/app/actions/submitContact";
 import {
   formatUKPhone,
   stripPhoneDigits,
-  toUKInternational,
   validateUKPhoneDigits,
 } from "@/lib/ukPhone";
 
@@ -41,6 +40,7 @@ function validateField(name: keyof FormData, value: string): string {
       if (!/^[A-Z]{1,2}\d[A-Z\d]?\s?\d[A-Z]{2}$/i.test(value.trim())) return "Please enter a valid UK post code (e.g. RM20 4EL).";
       return "";
     case "regNumber":
+      if (!value.trim()) return "Registration number is required.";
       return "";
     case "issue":
       if (!value.trim()) return "Please describe the issue with your vehicle.";
@@ -155,7 +155,7 @@ export default function ContactForm() {
     try {
       const { ok, message } = await submitContact({
         name: formData.name,
-        phone: toUKInternational(formData.phone),
+        phone: formData.phone,
         email: formData.email,
         reg: formData.regNumber,
         postcode: formData.postCode,
@@ -200,6 +200,23 @@ export default function ContactForm() {
       <h3 className="text-2xl font-bold text-slate-900 mb-8">Send a Message</h3>
 
       <form onSubmit={handleSubmit} noValidate className="space-y-6">
+        <div className="space-y-1">
+          <label className="text-sm font-semibold text-slate-700">
+            Registration Number*
+          </label>
+          <input
+            name="regNumber"
+            type="text"
+            value={formData.regNumber}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            className={`${fieldClass("regNumber")} uppercase tracking-widest`}
+            placeholder="AB12 CDE"
+            maxLength={10}
+          />
+          <p className="text-slate-400 text-xs">Alphanumeric only — auto-converted to uppercase.</p>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-1">
             <label className="text-sm font-semibold text-slate-700">Name*</label>
@@ -237,9 +254,6 @@ export default function ContactForm() {
           <div className="space-y-1">
             <label className="text-sm font-semibold text-slate-700">Phone Number*</label>
             <div className={`flex items-stretch border rounded-xl overflow-hidden transition-all ${touched.phone && errors.phone ? "border-red-400 bg-red-50" : "border-slate-200 bg-slate-50"} focus-within:ring-2 ${touched.phone && errors.phone ? "focus-within:ring-red-400" : "focus-within:ring-primary"}`}>
-              <span className="flex items-center px-3 bg-slate-100 border-r border-slate-200 text-slate-600 font-bold text-sm select-none shrink-0">
-                +44
-              </span>
               <input
                 name="phone"
                 type="tel"
@@ -270,23 +284,6 @@ export default function ContactForm() {
               <p className="text-red-500 text-xs font-medium">{errors.postCode}</p>
             )}
           </div>
-        </div>
-
-        <div className="space-y-1">
-          <label className="text-sm font-semibold text-slate-700">
-            Registration Number <span className="text-slate-400 font-normal">(Optional)</span>
-          </label>
-          <input
-            name="regNumber"
-            type="text"
-            value={formData.regNumber}
-            onChange={handleChange}
-            onBlur={handleBlur}
-            className={`${fieldClass("regNumber")} uppercase tracking-widest`}
-            placeholder="AB12 CDE"
-            maxLength={10}
-          />
-          <p className="text-slate-400 text-xs">Alphanumeric only — auto-converted to uppercase.</p>
         </div>
 
         <div className="space-y-1">

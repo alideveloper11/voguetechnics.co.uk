@@ -15,12 +15,6 @@ export function formatUKPhone(raw: string): string {
 export function validateUKPhoneDigits(digits: string): string {
   if (!digits) return "Phone number is required.";
   if (digits.length < UK_PHONE_MIN_DIGITS)
-    return `Please enter a valid UK phone number (minimum ${UK_PHONE_MIN_DIGITS} digits).`;
+    return `Please enter a valid phone number (minimum ${UK_PHONE_MIN_DIGITS} digits).`;
   return "";
-}
-
-export function toUKInternational(digits: string): string {
-  const d = digits.replace(/\D/g, "");
-  const national = d.startsWith("0") ? d.slice(1) : d;
-  return `+44${national}`;
 }

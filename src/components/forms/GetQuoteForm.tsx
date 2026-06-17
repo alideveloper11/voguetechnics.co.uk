@@ -8,7 +8,6 @@ import type { VehicleResult } from "@/app/actions/lookupVehicle";
 import {
   formatUKPhone,
   stripPhoneDigits,
-  toUKInternational,
   validateUKPhoneDigits,
 } from "@/lib/ukPhone";
 
@@ -153,7 +152,7 @@ export default function GetQuoteForm({ initialReg = "", showNotFound = false, ve
     setSubmitting(true);
     const { ok, message } = await submitQuote({
       ...form,
-      phone: toUKInternational(form.phone),
+      phone: form.phone,
       browser: navigator.userAgent,
       vehicle: vehicleInfo?.data,
     });
@@ -262,9 +261,6 @@ export default function GetQuoteForm({ initialReg = "", showNotFound = false, ve
             <div>
               <p className="mb-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500">Phone Number <span className="text-red-500">*</span></p>
               <div className={`flex items-stretch overflow-hidden rounded-xl border ${inputBorder("phone")} ${touched.phone && fieldErrors.phone ? "bg-red-50" : "bg-slate-50"} focus-within:ring-2 ${touched.phone && fieldErrors.phone ? "focus-within:ring-red-400" : "focus-within:ring-primary/30"}`}>
-                <span className="flex items-center px-3 bg-slate-100 border-r border-slate-200 text-slate-600 font-bold text-sm select-none shrink-0">
-                  +44
-                </span>
                 <input
                   name="phone"
                   type="tel"

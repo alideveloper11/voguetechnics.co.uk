@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/common/Header";
 import Footer from "@/components/common/Footer";
@@ -7,12 +6,6 @@ import {
   GoogleTagManagerBody,
   GoogleTagManagerHead,
 } from "@/components/analytics/GoogleTagManager";
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: {
@@ -40,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} h-full antialiased scroll-smooth`} suppressHydrationWarning={true}>
+    <html lang="en" className="h-full antialiased scroll-smooth" suppressHydrationWarning={true}>
       <head>
         <GoogleTagManagerHead />
       </head>

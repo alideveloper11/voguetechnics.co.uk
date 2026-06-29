@@ -1,6 +1,5 @@
-"use client";
-
-import { motion } from "framer-motion";
+import type { Metadata } from "next";
+import { pageMetadata } from "@/data/pageMetadata";
 import { Activity, ArrowRight, CheckCircle2, Gauge, ShieldCheck, Wrench } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -13,6 +12,8 @@ import NationwideSupportSection from "@/components/common/NationwideSupportSecti
 import RegSearch from "@/components/common/RegSearch";
 import HeroTrustLabels from "@/components/common/HeroTrustLabels";
 import ReviewsSection from "@/components/common/ReviewsSection";
+
+export const metadata: Metadata = pageMetadata.serviceTimingChainReplacement;
 
 export default function TimingChainReplacementPage() {
   return (
@@ -39,14 +40,12 @@ export default function TimingChainReplacementPage() {
           />
 
           <div className="max-w-5xl mx-auto text-center">
-            <motion.h1
-              initial={{ opacity: 0, y: 14 }}
-              animate={{ opacity: 1, y: 0 }}
+            <h1
               className="text-xl md:text-2xl lg:text-3xl font-extrabold text-white mb-6 uppercase tracking-tight leading-tight italic"
             >
               Timing Chain Replacement Specialists{" "}
               <span className="text-primary italic">for Range Rover, Land Rover, Jaguar, Audi &amp; BMW</span>
-            </motion.h1>
+            </h1>
 
             <div className="flex w-full max-w-2xl mx-auto mb-10 flex-col items-center">
               <RegSearch />
@@ -103,10 +102,10 @@ export default function TimingChainReplacementPage() {
 
           <div className="max-w-5xl mx-auto space-y-4 text-slate-600 leading-relaxed font-medium text-sm bg-slate-50 border border-slate-100 rounded-[3rem] p-8 md:p-10">
             <p>
-              The most recognised symptom is a metallic rattling on cold start that fades as the engine warms — this is chain slack against the tensioner before oil pressure builds. Never dismiss it as normal.
+              The most recognised symptom is a metallic rattling on cold start that fades as the engine warms Ã¢â‚¬â€ this is chain slack against the tensioner before oil pressure builds. Never dismiss it as normal.
             </p>
             <p>
-              Other signs include a check engine light with timing-related fault codes, rough running or misfires, and noticeable power loss. If any of these apply, the timing chain needs specialist attention now — not after the next service.
+              Other signs include a check engine light with timing-related fault codes, rough running or misfires, and noticeable power loss. If any of these apply, the timing chain needs specialist attention now Ã¢â‚¬â€ not after the next service.
             </p>
             <div className="pt-6">
               <Link href="/contact-us" className="inline-flex items-center gap-2 text-primary font-black text-xs tracking-widest uppercase">
@@ -129,7 +128,7 @@ export default function TimingChainReplacementPage() {
 
           <div className="max-w-5xl mx-auto space-y-4 text-slate-600 leading-relaxed font-medium text-sm bg-white border border-slate-100 rounded-[3rem] p-8 md:p-10 shadow-sm">
             <p>
-              On interference engines — which covers most modern prestige platforms — a snapped or jumped chain causes pistons and valves to collide, resulting in bent valves, damaged pistons, and often a destroyed cylinder head. A timing chain job becomes a full engine rebuild.
+              On interference engines Ã¢â‚¬â€ which covers most modern prestige platforms Ã¢â‚¬â€ a snapped or jumped chain causes pistons and valves to collide, resulting in bent valves, damaged pistons, and often a destroyed cylinder head. A timing chain job becomes a full engine rebuild.
             </p>
             <p>
               Acting on the warning signs early is always significantly cheaper than dealing with the failure.
@@ -334,8 +333,8 @@ export default function TimingChainReplacementPage() {
           </div>
 
           <div className="mt-8 text-white/90 font-black uppercase tracking-widest text-[0.65rem]">
-            Vogue Technics | Timing Chain Replacement Specialists |  | UK-Wide Collection &nbsp; Range Rover • Land Rover
-            • Jaguar • Audi • BMW
+            Vogue Technics | Timing Chain Replacement Specialists |  | UK-Wide Collection &nbsp; Range Rover Ã¢â‚¬Â¢ Land Rover
+            Ã¢â‚¬Â¢ Jaguar Ã¢â‚¬Â¢ Audi Ã¢â‚¬Â¢ BMW
           </div>
         </div>
       </section>
@@ -344,5 +343,11 @@ export default function TimingChainReplacementPage() {
     </main>
   );
 }
+
+
+
+
+
+
 
 

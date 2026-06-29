@@ -1,12 +1,10 @@
 import { Metadata } from "next";
+import { pageMetadata } from "@/data/pageMetadata";
 import Image from "next/image";
 import LatestVideos from "@/components/common/LatestVideos";
 import Breadcrumbs from "@/components/common/Breadcrumbs";
 
-export const metadata: Metadata = {
-  title: "Gallery | Vogue Technics",
-  description: "Explore our state-of-the-art facility, expertly remanufactured engines, and behind-the-scenes precision engineering at Vogue Technics.",
-};
+export const metadata: Metadata = pageMetadata.gallery;
 
 export default function Gallery() {
   const images = [

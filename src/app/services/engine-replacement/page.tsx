@@ -1,9 +1,8 @@
-"use client";
-
+import type { Metadata } from "next";
+import { pageMetadata } from "@/data/pageMetadata";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2, Wrench, Gauge, ShieldCheck, RefreshCw, FileText } from "lucide-react";
 
 import Breadcrumbs from "@/components/common/Breadcrumbs";
@@ -14,6 +13,8 @@ import FAQSection from "@/components/common/FAQSection";
 import ServiceGallery from "@/components/common/ServiceGallery";
 import PartnerLogos from "@/components/common/PartnerLogos";
 import NationwideSupportSection from "@/components/common/NationwideSupportSection";
+
+export const metadata: Metadata = pageMetadata.serviceEngineReplacement;
 
 export default function EngineReplacementPage() {
   return (
@@ -40,14 +41,12 @@ export default function EngineReplacementPage() {
           />
 
           <div className="max-w-5xl mx-auto text-center">
-            <motion.h1
-              initial={{ opacity: 0, y: 14 }}
-              animate={{ opacity: 1, y: 0 }}
+            <h1
               className="text-xl md:text-2xl lg:text-3xl font-extrabold text-white mb-6 uppercase tracking-tight leading-tight italic"
             >
               Engine Replacement Specialists{" "}
               <span className="text-primary italic">for Range Rover, Land Rover, Jaguar, Audi &amp; BMW</span>
-            </motion.h1>
+            </h1>
 
             <div className="flex w-full max-w-2xl mx-auto mb-10 flex-col items-center">
               <RegSearch />
@@ -102,7 +101,7 @@ export default function EngineReplacementPage() {
 
           <div className="max-w-5xl mx-auto space-y-4 text-slate-600 leading-relaxed font-medium text-sm bg-slate-50 border border-slate-100 rounded-[3rem] p-8 md:p-10">
             <p>
-              Replacement makes sense when damage is extensive enough that rebuild cost exceeds the value it would deliver — a seized engine, cracked block, or bores worn beyond machining are typical examples.
+              Replacement makes sense when damage is extensive enough that rebuild cost exceeds the value it would deliver Ã¢â‚¬â€ a seized engine, cracked block, or bores worn beyond machining are typical examples.
             </p>
             <p>
               It also applies when a quality low-mileage or reconditioned unit is available at a cost that compares favourably to the rebuild. Where rebuild is the better option, we'll say so and quote for both.
@@ -287,7 +286,7 @@ export default function EngineReplacementPage() {
           {
             question: "What is the difference between a used engine and a reconditioned engine?",
             answer:
-              "A used engine is a removed unit of known mileage, tested and inspected before fitting. A reconditioned engine has been stripped, worn components replaced, and reassembled to specification. We advise on which option suits your vehicle’s age, mileage, and intended use.",
+              "A used engine is a removed unit of known mileage, tested and inspected before fitting. A reconditioned engine has been stripped, worn components replaced, and reassembled to specification. We advise on which option suits your vehicleÃ¢â‚¬â„¢s age, mileage, and intended use.",
           },
           {
             question: "Do you provide a warranty on replacement engines?",
@@ -340,8 +339,8 @@ export default function EngineReplacementPage() {
           </div>
 
           <div className="mt-8 text-white/90 font-black uppercase tracking-widest text-[0.65rem]">
-            Vogue Technics | Engine Replacement Specialists |  | UK-Wide Collection &nbsp; Range Rover • Land Rover •
-            Jaguar • Audi • BMW
+            Vogue Technics | Engine Replacement Specialists |  | UK-Wide Collection &nbsp; Range Rover Ã¢â‚¬Â¢ Land Rover Ã¢â‚¬Â¢
+            Jaguar Ã¢â‚¬Â¢ Audi Ã¢â‚¬Â¢ BMW
           </div>
         </div>
       </section>
@@ -350,5 +349,11 @@ export default function EngineReplacementPage() {
     </main>
   );
 }
+
+
+
+
+
+
 
 

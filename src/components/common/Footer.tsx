@@ -93,7 +93,14 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex gap-3 text-slate-400">
                 <MapPin className="w-5 h-5 shrink-0 text-primary mt-0.5" />
-                <span>UNIT 1D Hedley Avenue<br/>RM20 4EL</span>
+                <a
+                  href="https://maps.app.goo.gl/tiNJLUomDx9SSNXX7"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:text-white transition-colors"
+                >
+                  UNIT 1D Hedley Avenue<br />RM20 4EL
+                </a>
               </li>
               <li>
                 <a href="tel:01375 531355" className="flex items-center gap-3 text-slate-400 hover:text-white transition-colors">
@@ -113,9 +120,23 @@ export default function Footer() {
 
         <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
           <p>© {currentYear} Vogue Technics. All Rights Reserved.</p>
-          <div className="flex gap-4">
-            <Link href="/terms-and-conditions" className="hover:text-white transition-colors">Terms & Conditions</Link>
-            <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
+          <div className="flex flex-col md:flex-row items-center gap-4">
+            <div className="flex gap-4">
+              <Link href="/terms-and-conditions" className="hover:text-white transition-colors">Terms & Conditions</Link>
+              <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            </div>
+            <span className="hidden md:inline text-slate-700">|</span>
+            <span className="flex items-center gap-1.5">
+              Powered by
+              <a
+                href="https://4xcode.com"
+                target="_blank"
+                rel="noreferrer"
+                className="font-semibold text-white hover:text-primary transition-colors"
+              >
+                4xcode
+              </a>
+            </span>
           </div>
         </div>
       </div>

@@ -22,6 +22,18 @@ export function proxy(request: NextRequest) {
     return NextResponse.redirect(new URL('/jaguar-xj-engines', request.url), 308);
   }
 
+  // Legacy numeric Range Rover URLs are handled here instead of next.config redirects
+  // to avoid a typed-route generation bug in Next.js 16.
+  if (
+    pathname === '/range-rover-4' ||
+    pathname === '/range-rover-6' ||
+    pathname === '/range-rover-7' ||
+    pathname === '/range-rover-8' ||
+    pathname === '/range-rover-9'
+  ) {
+    return NextResponse.redirect(new URL('/range-rover-engines', request.url), 308);
+  }
+
   // 1. Blog Tag/Category/Author/Page Pattern Cleanup
   // Redirects low-value legacy WordPress taxonomy pages to the main blog
   if (

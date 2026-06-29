@@ -30,6 +30,7 @@ import React from "react";
 export const metadata: Metadata = {
   title: "Vic | Senior Workshop Manager & JLR Engine Specialist | Vogue Technics",
   description: "Senior Technical expert with 20+ years of experience, exclusively focused on Jaguar Land Rover engine remanufacturing for the past 15 years.",
+  alternates: { canonical: "/vic" },
 };
 
 export default function VicProfilePage() {

@@ -2,9 +2,9 @@ import { CheckCircle2 } from "lucide-react";
 
 const heroTrustLabels = [
   "Save Up to 40% when you enquire online",
-  "Free Expert Technical Advice about your engine problems",
-  "Advanced Engine Diagnostics and Fitting Services",
-  "Vehicle Recovery service available",
+  "24/7 Delivery or Collection Facility",
+  "Low Priced Premium Quality Services",
+  "24 Months Warranty Available ",
 ];
 
 type HeroTrustLabelsProps = {

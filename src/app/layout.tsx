@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/common/Header";
 import Footer from "@/components/common/Footer";
+import { HOME_DESCRIPTION, HOME_TITLE } from "@/data/pageMetadata";
 import {
   GoogleTagManagerBody,
   GoogleTagManagerHead,
@@ -9,17 +10,17 @@ import {
 
 export const metadata: Metadata = {
   title: {
-    default: "Superior Range Rover Engines - Reconditioned & Used | Vogue Technics",
+    default: HOME_TITLE,
     template: "%s | Vogue Technics",
   },
-  description: "Experience the Vogue Technics difference with top-quality reconditioned and used Range Rover engines. Our expert service, extensive stock, and great deals will get your vehicle back on the road in no time.",
+  description: HOME_DESCRIPTION,
   metadataBase: new URL("https://www.voguetechnics.co.uk"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Superior Range Rover Engines - Reconditioned & Used | Vogue Technics",
-    description: "Experience the Vogue Technics difference with top-quality reconditioned and used Range Rover engines.",
+    title: HOME_TITLE,
+    description: HOME_DESCRIPTION,
     url: "https://www.voguetechnics.co.uk",
     siteName: "Vogue Technics",
     locale: "en_GB",

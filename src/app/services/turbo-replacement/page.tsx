@@ -1,9 +1,8 @@
-"use client";
-
+import type { Metadata } from "next";
+import { pageMetadata } from "@/data/pageMetadata";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2, Gauge, Wrench, Zap, Activity, Cloud } from "lucide-react";
 
 import Breadcrumbs from "@/components/common/Breadcrumbs";
@@ -14,6 +13,8 @@ import FAQSection from "@/components/common/FAQSection";
 import ServiceGallery from "@/components/common/ServiceGallery";
 import PartnerLogos from "@/components/common/PartnerLogos";
 import NationwideSupportSection from "@/components/common/NationwideSupportSection";
+
+export const metadata: Metadata = pageMetadata.serviceTurboReplacement;
 
 export default function TurboReplacementPage() {
   return (
@@ -40,14 +41,12 @@ export default function TurboReplacementPage() {
           />
 
           <div className="max-w-5xl mx-auto text-center">
-            <motion.h1
-              initial={{ opacity: 0, y: 14 }}
-              animate={{ opacity: 1, y: 0 }}
+            <h1
               className="text-xl md:text-2xl lg:text-3xl font-extrabold text-white mb-6 uppercase tracking-tight leading-tight italic"
             >
               Turbo Replacement Specialists{" "}
               <span className="text-primary italic">for Range Rover, Land Rover, Jaguar, Audi &amp; BMW</span>
-            </motion.h1>
+            </h1>
 
             <div className="flex w-full max-w-2xl mx-auto mb-10 flex-col items-center">
               <RegSearch />
@@ -170,7 +169,7 @@ export default function TurboReplacementPage() {
             <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
               <div className="space-y-3">
                 <h3 className="text-xl md:text-2xl font-extrabold uppercase tracking-tight italic">
-                  Don’t wait until it becomes an engine repair.
+                  DonÃ¢â‚¬â„¢t wait until it becomes an engine repair.
                 </h3>
                 <p className="text-slate-300 font-medium leading-relaxed text-sm md:text-base">
                   The longer a failing turbo runs, the greater the risk of oil contamination spreading into the engine. Acting now
@@ -452,8 +451,8 @@ export default function TurboReplacementPage() {
           </div>
 
           <div className="mt-8 text-white/90 font-black uppercase tracking-widest text-[0.65rem]">
-            Vogue Technics | Turbo Replacement Specialists |  | UK-Wide Collection &nbsp; Range Rover • Land Rover •
-            Jaguar • Audi • BMW
+            Vogue Technics | Turbo Replacement Specialists |  | UK-Wide Collection &nbsp; Range Rover Ã¢â‚¬Â¢ Land Rover Ã¢â‚¬Â¢
+            Jaguar Ã¢â‚¬Â¢ Audi Ã¢â‚¬Â¢ BMW
           </div>
         </div>
       </section>
@@ -462,5 +461,11 @@ export default function TurboReplacementPage() {
     </main>
   );
 }
+
+
+
+
+
+
 
 

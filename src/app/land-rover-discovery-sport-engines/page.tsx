@@ -1,13 +1,9 @@
 import { Metadata } from "next";
+import { pageMetadata } from "@/data/pageMetadata";
 import { getEngineCodesEntry } from "@/data/engineCodes";
 import LandRoverDiscoverySportEnginesClient from "./LandRoverDiscoverySportEnginesClient";
 
-export const metadata: Metadata = {
-  title: "Land Rover Discovery Sport Engine Repair, Rebuild & Replacement   Specialists in ",
-  description:
-    "Vogue Technics are Land Rover Discovery Sport engine specialists . Ingenium and Td4 repairs, rebuilds, replacements, timing chains/belts, turbos, head gaskets and health checks   transparent pricing and written warranty.",
-  alternates: { canonical: "/land-rover-discovery-sport-engines" },
-};
+export const metadata: Metadata = pageMetadata.discoverySport;
 
 export default function LandRoverDiscoverySportEnginesPage() {
   return <LandRoverDiscoverySportEnginesClient engineCodes={getEngineCodesEntry("land-rover-discovery-sport-engines")} />;

@@ -11,6 +11,7 @@ const PER_PAGE = 18;
 export const metadata: Metadata = {
   title: "Blog & News | Vogue Technics",
   description: "Read our latest news, updates, and expert advice on Range Rover and Land Rover engine remanufacturing and maintenance.",
+  alternates: { canonical: "/blog" },
 };
 
 type Props = {

@@ -25,11 +25,16 @@ const WorkshopSection = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
               <div className="space-y-4">
                 <h3 className="text-emerald-600 font-bold uppercase tracking-widest text-xs border-b-2 border-emerald-100 pb-2 inline-block">Address</h3>
-                <p className="text-slate-700 font-semibold text-lg leading-snug">
+                <a
+                  href="https://maps.app.goo.gl/tiNJLUomDx9SSNXX7"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-block text-slate-700 font-semibold text-lg leading-snug transition-colors hover:text-emerald-600"
+                >
                   Unit 1D Hedley Ave <br />
-                   RM20 4EL <br />
+                  RM20 4EL <br />
                   United Kingdom
-                </p>
+                </a>
               </div>
 
               <div className="space-y-4">
@@ -88,7 +93,12 @@ const WorkshopSection = () => {
                     <span className="text-[0.65rem] text-slate-400 font-bold">4.9 (159)</span>
                  </div>
                  <div className="mt-4">
-                    <a href="https://maps.google.com/?q=Vogue+Technics+RM20+4EL" target="_blank" className="flex items-center justify-center gap-2 bg-emerald-50 text-emerald-600 font-black text-[0.65rem] py-2 px-4 rounded-xl hover:bg-emerald-600 hover:text-white transition-all uppercase tracking-widest">
+                    <a
+                      href="https://maps.app.goo.gl/tiNJLUomDx9SSNXX7"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex items-center justify-center gap-2 bg-emerald-50 text-emerald-600 font-black text-[0.65rem] py-2 px-4 rounded-xl hover:bg-emerald-600 hover:text-white transition-all uppercase tracking-widest"
+                    >
                        Directions
                     </a>
                  </div>

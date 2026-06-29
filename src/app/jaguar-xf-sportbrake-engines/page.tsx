@@ -1,9 +1,8 @@
-"use client";
-
+import type { Metadata } from "next";
+import { pageMetadata } from "@/data/pageMetadata";
 import Image from "next/image";
 import Link from "next/link";
 import { Phone } from "lucide-react";
-import { motion } from "framer-motion";
 import Breadcrumbs from "@/components/common/Breadcrumbs";
 import RegSearch from "@/components/common/RegSearch";
 import HeroTrustLabels from "@/components/common/HeroTrustLabels";
@@ -11,6 +10,8 @@ import FAQSection from "@/components/common/FAQSection";
 import PartnerLogos from "@/components/common/PartnerLogos";
 import EngineCodesTable from "@/components/common/EngineCodesTable";
 import { getEngineCodesEntry } from "@/data/engineCodes";
+
+export const metadata: Metadata = pageMetadata.jaguarXfSportbrake;
 
 const engineCodes = getEngineCodesEntry("jaguar-xf-sportbrake-engines");
 
@@ -61,26 +62,21 @@ export default function JaguarXFSportbrakeEnginesPage() {
           />
 
           <div className="max-w-3xl mx-auto text-center pt-8">
-            <motion.h1
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
+            <h1
               className="text-2xl font-black leading-[1.1] tracking-tight text-white md:text-4xl"
             >
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-300 to-green-400">
                 Jaguar XF Sportbrake Engine
               </span>{" "}
                 Supply, Repair, Rebuild & Fit Across the UK
-            </motion.h1>
+            </h1>
 
-            <motion.div
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.12 }}
+            <div
               className="mt-6 flex justify-center"
             >
               <RegSearch className="max-w-3xl" />
             <HeroTrustLabels className="mt-4" />
-            </motion.div>
+            </div>
 
           </div>
         </div>
@@ -95,7 +91,7 @@ export default function JaguarXFSportbrakeEnginesPage() {
             </div>
             <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
               <h3 className="font-bold text-slate-900">Diagnostics Before Decisions</h3>
-              <p className="mt-3 text-slate-700 leading-relaxed">Same‑day diagnostics available in  to pinpoint the exact fault.</p>
+              <p className="mt-3 text-slate-700 leading-relaxed">SameÃ¢â‚¬â€˜day diagnostics available in  to pinpoint the exact fault.</p>
             </div>
             <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
               <h3 className="font-bold text-slate-900">Supply & Fit Available</h3>
@@ -146,4 +142,10 @@ export default function JaguarXFSportbrakeEnginesPage() {
     </div>
   );
 }
+
+
+
+
+
+
 

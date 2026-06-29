@@ -1,15 +1,12 @@
 import { Metadata } from "next";
+import { pageMetadata } from "@/data/pageMetadata";
 import Image from "next/image";
 import Link from "next/link";
 import { Award, CheckCircle2, Clock3, Quote, ShieldCheck, Wrench } from "lucide-react";
 import Breadcrumbs from "@/components/common/Breadcrumbs";
 import PartnerLogos from "@/components/common/PartnerLogos";
 
-export const metadata: Metadata = {
-  title: "About Vogue Technics | Range Rover & Land Rover Engine Specialists   ",
-  description:
-    "Vogue Technics are independent Range Rover and Land Rover engine rebuild specialists based . IGA member, RAC Approved, Trading Standards accredited. Serving , Thurrock, and South East London since 2004. Main dealer expertise, independent pricing.",
-};
+export const metadata: Metadata = pageMetadata.aboutUs;
 
 const trustPoints = [
   "Independent Land Rover and Range Rover engine specialists since 2004.",
@@ -92,7 +89,7 @@ export default function About() {
               </div>
               <div className="mt-5 border-t border-white/10 pt-4 flex items-center gap-2">
                 <Award className="h-4 w-4 text-emerald-400 shrink-0" />
-                <span className="text-xs font-bold text-slate-300">IGA Member · RAC Approved · Trading Standards</span>
+                <span className="text-xs font-bold text-slate-300">IGA Member Ãƒâ€šÃ‚Â· RAC Approved Ãƒâ€šÃ‚Â· Trading Standards</span>
               </div>
             </div>
           </div>
@@ -164,13 +161,22 @@ export default function About() {
             <div className="rounded-[2.5rem] bg-white p-8 shadow-sm border border-slate-200">
               <h2 className="text-3xl font-bold text-slate-900 md:text-4xl">Meet Vic   The Man Behind Vogue Technics</h2>
               <div className="mt-4 h-1 w-24 rounded-full bg-primary" />
+              
               <div className="mt-6 space-y-4 text-sm leading-relaxed text-slate-700">
                 <p>
                   Vic has been working on engines for over two decades, specialising in Land Rover's TDV6 and SDV8 units, Jaguar's supercharged V8, and the Ingenium diesel family. He is one of a small number of independent technicians in the South East with the equipment and experience to handle full engine rebuilds on these vehicles.
                 </p>
                 <p>
-                  What sets Vic apart isn't just technical knowledge — it's his approach. He looks beyond symptoms to understand why an engine failed and what it would take to fix it properly. If a vehicle isn't worth the spend, he'll say so. Customers tend to appreciate the honesty.
+                  What sets Vic apart isn't just technical knowledge ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â it's his approach. He looks beyond symptoms to understand why an engine failed and what it would take to fix it properly. If a vehicle isn't worth the spend, he'll say so. Customers tend to appreciate the honesty.
                 </p>
+              </div>
+              <div className="mt-6">
+                <Link
+                  href="/vic"
+                  className="inline-flex items-center justify-center rounded-2xl bg-primary px-5 py-3 text-sm font-bold text-white shadow-sm transition-colors hover:bg-primary/90"
+                >
+                  View Vic Profile
+                </Link>
               </div>
             </div>
 
@@ -179,7 +185,7 @@ export default function About() {
                 <Quote className="h-4 w-4" /> A Word From Vic
               </span>
               <blockquote className="mt-6 text-base leading-relaxed text-slate-100 md:text-lg">
-                "We'll tell you exactly what's wrong, what it will cost, and what we're going to do. We'll use the right parts and take the time it takes. If the numbers don't add up for you, we'll say so. That's how we've worked since 2004. Every vehicle that comes through our doors gets the same level of care — whether it's a diagnostic check or a complete engine rebuild. We don't cut corners, and we don't tell people what they want to hear."
+                "We'll tell you exactly what's wrong, what it will cost, and what we're going to do. We'll use the right parts and take the time it takes. If the numbers don't add up for you, we'll say so. That's how we've worked since 2004. Every vehicle that comes through our doors gets the same level of care ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â whether it's a diagnostic check or a complete engine rebuild. We don't cut corners, and we don't tell people what they want to hear."
               </blockquote>
               <p className="mt-6 text-sm font-bold uppercase tracking-[0.2em] text-emerald-300">
                 Vic, Owner & Lead Technician, Vogue Technics

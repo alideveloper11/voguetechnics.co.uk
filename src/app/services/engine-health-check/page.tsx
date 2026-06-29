@@ -1,9 +1,8 @@
-"use client";
-
+import type { Metadata } from "next";
+import { pageMetadata } from "@/data/pageMetadata";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2, Gauge, Wrench, Activity, FileText, ShieldCheck } from "lucide-react";
 
 import Breadcrumbs from "@/components/common/Breadcrumbs";
@@ -14,6 +13,8 @@ import FAQSection from "@/components/common/FAQSection";
 import ServiceGallery from "@/components/common/ServiceGallery";
 import PartnerLogos from "@/components/common/PartnerLogos";
 import NationwideSupportSection from "@/components/common/NationwideSupportSection";
+
+export const metadata: Metadata = pageMetadata.serviceEngineHealthCheck;
 
 export default function EngineHealthCheckPage() {
   return (
@@ -40,14 +41,12 @@ export default function EngineHealthCheckPage() {
           />
 
           <div className="max-w-5xl mx-auto text-center">
-            <motion.h1
-              initial={{ opacity: 0, y: 14 }}
-              animate={{ opacity: 1, y: 0 }}
+            <h1
               className="text-xl md:text-2xl lg:text-3xl font-extrabold text-white mb-6 uppercase tracking-tight leading-tight italic"
             >
               Engine Health Check Specialists{" "}
               <span className="text-primary italic">for Range Rover, Land Rover, Jaguar, Audi &amp; BMW</span>
-            </motion.h1>
+            </h1>
 
             <div className="flex w-full max-w-2xl mx-auto mb-10 flex-col items-center">
               <RegSearch />
@@ -145,7 +144,7 @@ export default function EngineHealthCheckPage() {
               A health check is essential when a warning light has appeared, when you're buying a used prestige vehicle and want confidence before committing, or when your engine has started consuming more oil, running roughly, or making noises that weren't there before.
             </p>
             <p>
-              It's also the right step before a high-mileage service interval — giving you clarity on the engine's actual condition before work begins.
+              It's also the right step before a high-mileage service interval Ã¢â‚¬â€ giving you clarity on the engine's actual condition before work begins.
             </p>
             <div className="pt-6">
               <Link href="/contact-us" className="inline-flex items-center gap-2 text-primary font-black text-xs tracking-widest uppercase">
@@ -348,8 +347,8 @@ export default function EngineHealthCheckPage() {
           </div>
 
           <div className="mt-8 text-white/90 font-black uppercase tracking-widest text-[0.65rem]">
-            Vogue Technics | Engine Health Check Specialists |  | UK-Wide Collection &nbsp; Range Rover • Land Rover •
-            Jaguar • Audi • BMW
+            Vogue Technics | Engine Health Check Specialists |  | UK-Wide Collection &nbsp; Range Rover Ã¢â‚¬Â¢ Land Rover Ã¢â‚¬Â¢
+            Jaguar Ã¢â‚¬Â¢ Audi Ã¢â‚¬Â¢ BMW
           </div>
         </div>
       </section>
@@ -359,5 +358,11 @@ export default function EngineHealthCheckPage() {
     </main>
   );
 }
+
+
+
+
+
+
 
 

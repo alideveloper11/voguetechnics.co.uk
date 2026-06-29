@@ -1,13 +1,9 @@
 import { Metadata } from "next";
+import { pageMetadata } from "@/data/pageMetadata";
 import { getEngineCodesEntry } from "@/data/engineCodes";
 import JaguarXEEnginesClient from "./JaguarXEEnginesClient";
 
-export const metadata: Metadata = {
-  title: "Jaguar XE Engine Rebuild   Specialist Engine Repairs, Reconditioning & Replacements Across the UK",
-  description:
-    "Jaguar XE engine specialists . Vogue Technics provide diagnostics, repairs, rebuilds and reconditioned engine replacements across the full XE range with written warranty and UK-wide support.",
-  alternates: { canonical: "/jaguar-xe-engines" },
-};
+export const metadata: Metadata = pageMetadata.jaguarXe;
 
 export default function JaguarXEEnginesPage() {
   return <JaguarXEEnginesClient engineCodes={getEngineCodesEntry("jaguar-xe-engines")} />;

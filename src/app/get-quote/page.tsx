@@ -6,6 +6,7 @@ import { lookupVehicle } from "@/app/actions/lookupVehicle";
 export const metadata: Metadata = {
   title: "Get a Free Quote | Vogue Technics",
   description: "Request a free, no-obligation quote for engine repair, replacement, rebuild, or any specialist service. BMW, Jaguar, Land Rover & more.",
+  alternates: { canonical: "/get-quote" },
 };
 
 interface Props {

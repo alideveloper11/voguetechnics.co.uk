@@ -1,12 +1,10 @@
 import { Metadata } from "next";
+import { pageMetadata } from "@/data/pageMetadata";
 import { Mail, MapPin, Phone, Clock } from "lucide-react";
 import ContactForm from "@/components/forms/ContactForm";
 import Breadcrumbs from "@/components/common/Breadcrumbs";
 
-export const metadata: Metadata = {
-  title: "Contact Us | Vogue Technics",
-  description: "Get in touch with Vogue Technics for engine repair, replacements, or inquiries. Call us at 01375 531355 or visit our workshop.",
-};
+export const metadata: Metadata = pageMetadata.contactUs;
 
 export default function Contact() {
   return (

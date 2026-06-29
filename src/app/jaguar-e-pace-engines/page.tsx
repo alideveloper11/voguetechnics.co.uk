@@ -1,9 +1,8 @@
-"use client";
-
+import type { Metadata } from "next";
+import { pageMetadata } from "@/data/pageMetadata";
 import Image from "next/image";
 import Link from "next/link";
 import { Phone } from "lucide-react";
-import { motion } from "framer-motion";
 import Breadcrumbs from "@/components/common/Breadcrumbs";
 import RegSearch from "@/components/common/RegSearch";
 import HeroTrustLabels from "@/components/common/HeroTrustLabels";
@@ -11,6 +10,8 @@ import FAQSection from "@/components/common/FAQSection";
 import PartnerLogos from "@/components/common/PartnerLogos";
 import EngineCodesTable from "@/components/common/EngineCodesTable";
 import { getEngineCodesEntry } from "@/data/engineCodes";
+
+export const metadata: Metadata = pageMetadata.jaguarEPace;
 
 const engineCodes = getEngineCodesEntry("jaguar-e-pace-engines");
 
@@ -43,7 +44,7 @@ const faqs = [
   {
     question: "How long does a Jaguar E-Pace engine rebuild take?",
     answer:
-      "Most Ingenium rebuilds are typically completed within 7–10 working days depending on parts required and the extent of internal work identified during strip-down.",
+      "Most Ingenium rebuilds are typically completed within 7Ã¢â‚¬â€œ10 working days depending on parts required and the extent of internal work identified during strip-down.",
   },
   {
     question: "Can you collect my engine from anywhere in the UK?",
@@ -63,14 +64,14 @@ export default function JaguarEPaceEnginesPage() {
         <div className="container relative z-10 mx-auto px-4 lg:px-8">
           <Breadcrumbs items={[{ name: "Jaguar Engines", href: "/jaguar-engines" }, { name: "Jaguar E-Pace Engines", href: "/jaguar-e-pace-engines" }]} />
           <div className="max-w-3xl mx-auto text-center pt-8">
-            <motion.h1 initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} className="text-2xl font-black leading-[1.1] tracking-tight text-white md:text-4xl">
+            <h1 className="text-2xl font-black leading-[1.1] tracking-tight text-white md:text-4xl">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-300 to-green-400">Jaguar E-Pace Engine Rebuild</span>{" "}
                 Ingenium 2.0 Supply, Reconditioning & Fit Across the UK
-            </motion.h1>
-            <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.12 }} className="mt-6 flex justify-center">
+            </h1>
+            <div className="mt-6 flex justify-center">
               <RegSearch className="max-w-3xl" />
             <HeroTrustLabels className="mt-4" />
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -148,12 +149,12 @@ export default function JaguarEPaceEnginesPage() {
         </div>
       </section>
 
-      <FAQSection title={<>Frequently Asked Questions   <span className="text-primary italic">Jaguar E‑Pace</span></>} items={faqs} />
+      <FAQSection title={<>Frequently Asked Questions   <span className="text-primary italic">Jaguar EÃ¢â‚¬â€˜Pace</span></>} items={faqs} />
 
       <section className="py-16 md:py-20 bg-primary text-white">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-5xl mx-auto text-center space-y-6">
-            <h2 className="text-2xl md:text-3xl font-extrabold leading-tight">Need an E‑Pace Ingenium rebuild?</h2>
+            <h2 className="text-2xl md:text-3xl font-extrabold leading-tight">Need an EÃ¢â‚¬â€˜Pace Ingenium rebuild?</h2>
             
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <a href="tel:01375531355" className="inline-flex items-center justify-center rounded-2xl bg-white px-5 py-2.5 text-sm font-bold text-primary shadow-xl transition-all hover:bg-slate-50 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99]">
@@ -172,4 +173,10 @@ export default function JaguarEPaceEnginesPage() {
     </div>
   );
 }
+
+
+
+
+
+
 

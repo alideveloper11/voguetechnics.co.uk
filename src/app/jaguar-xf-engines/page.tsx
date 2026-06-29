@@ -1,13 +1,9 @@
 import { Metadata } from "next";
+import { pageMetadata } from "@/data/pageMetadata";
 import { getEngineCodesEntry } from "@/data/engineCodes";
 import JaguarXFEnginesClient from "./JaguarXFEnginesClient";
 
-export const metadata: Metadata = {
-  title: "Jaguar XF Engine Rebuild   Specialist Engine Repairs, Reconditioning & Replacements Across the UK",
-  description:
-    "Jaguar XF engine specialists . Vogue Technics carry out diagnostics, repairs, rebuilds and reconditioned engine replacements across both XF generations with written warranty and UK-wide support.",
-  alternates: { canonical: "/jaguar-xf-engines" },
-};
+export const metadata: Metadata = pageMetadata.jaguarXf;
 
 export default function JaguarXFEnginesPage() {
   return <JaguarXFEnginesClient engineCodes={getEngineCodesEntry("jaguar-xf-engines")} />;

@@ -1,9 +1,8 @@
-"use client";
-
+import type { Metadata } from "next";
+import { pageMetadata } from "@/data/pageMetadata";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2, Gauge, Wrench, Activity, ShieldCheck } from "lucide-react";
 
 import Breadcrumbs from "@/components/common/Breadcrumbs";
@@ -14,6 +13,8 @@ import FAQSection from "@/components/common/FAQSection";
 import ServiceGallery from "@/components/common/ServiceGallery";
 import PartnerLogos from "@/components/common/PartnerLogos";
 import NationwideSupportSection from "@/components/common/NationwideSupportSection";
+
+export const metadata: Metadata = pageMetadata.serviceEngineRepair;
 
 export default function EngineRepairPage() {
   return (
@@ -40,14 +41,12 @@ export default function EngineRepairPage() {
           />
 
           <div className="max-w-5xl mx-auto text-center">
-            <motion.h1
-              initial={{ opacity: 0, y: 14 }}
-              animate={{ opacity: 1, y: 0 }}
+            <h1
               className="text-xl md:text-2xl lg:text-3xl font-extrabold text-white mb-6 uppercase tracking-tight leading-tight italic"
             >
               Specialist Engine Repair{" "}
               <span className="text-primary italic">for Range Rover, Land Rover, Jaguar, Audi &amp; BMW</span>
-            </motion.h1>
+            </h1>
 
             <div className="flex w-full max-w-2xl mx-auto mb-10 flex-col items-center">
               <RegSearch />
@@ -106,7 +105,7 @@ export default function EngineRepairPage() {
 
           <div className="max-w-5xl mx-auto bg-slate-50 border border-slate-100 rounded-[3rem] p-8 md:p-10 shadow-sm">
             <p className="text-slate-600 leading-relaxed font-medium text-sm">
-              Warning lights with oil pressure or boost fault codes, engine misfires, oil leaks, overheating, timing chain noise, white smoke from head gasket failure, and engine seizure — these are faults we diagnose and repair every week across the most technically demanding prestige platforms.
+              Warning lights with oil pressure or boost fault codes, engine misfires, oil leaks, overheating, timing chain noise, white smoke from head gasket failure, and engine seizure Ã¢â‚¬â€ these are faults we diagnose and repair every week across the most technically demanding prestige platforms.
             </p>
             <p className="text-slate-600 leading-relaxed font-medium text-sm mt-4">
               The longer any of these are left, the more expensive the repair becomes. A specialist diagnostic is always the most cost-effective first step.
@@ -393,8 +392,8 @@ export default function EngineRepairPage() {
           </div>
 
           <div className="mt-8 text-white/90 font-black uppercase tracking-widest text-[0.65rem]">
-            Vogue Technics | Engine Repair Specialists |  | UK-Wide Collection &nbsp; Range Rover • Land Rover • Jaguar
-            • Audi • BMW
+            Vogue Technics | Engine Repair Specialists |  | UK-Wide Collection &nbsp; Range Rover Ã¢â‚¬Â¢ Land Rover Ã¢â‚¬Â¢ Jaguar
+            Ã¢â‚¬Â¢ Audi Ã¢â‚¬Â¢ BMW
           </div>
         </div>
       </section>
@@ -403,5 +402,11 @@ export default function EngineRepairPage() {
     </main>
   );
 }
+
+
+
+
+
+
 
 

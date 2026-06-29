@@ -1,14 +1,8 @@
 import { Metadata } from "next";
+import { pageMetadata } from "@/data/pageMetadata";
 import AudiEnginesClient from "./AudiEnginesClient";
 
-export const metadata: Metadata = {
-  title: "Audi Engine Replacement UK – Expert Rebuilds, Repairs & Reconditioned Engines in ",
-  description:
-    "Audi engine replacement, rebuild and repair specialists . Vogue Technics supply used and reconditioned Audi engines with written warranty and UK-wide support.",
-  alternates: {
-    canonical: "/audi-engines",
-  },
-};
+export const metadata: Metadata = pageMetadata.audiEngines;
 
 export default function AudiEnginesPage() {
   return <AudiEnginesClient />;

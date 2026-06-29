@@ -1,9 +1,8 @@
-"use client";
-
+import type { Metadata } from "next";
+import { pageMetadata } from "@/data/pageMetadata";
 import Image from "next/image";
 import Link from "next/link";
 import { Phone } from "lucide-react";
-import { motion } from "framer-motion";
 import Breadcrumbs from "@/components/common/Breadcrumbs";
 import RegSearch from "@/components/common/RegSearch";
 import HeroTrustLabels from "@/components/common/HeroTrustLabels";
@@ -11,6 +10,8 @@ import FAQSection from "@/components/common/FAQSection";
 import PartnerLogos from "@/components/common/PartnerLogos";
 import EngineCodesTable from "@/components/common/EngineCodesTable";
 import { getEngineCodesEntry } from "@/data/engineCodes";
+
+export const metadata: Metadata = pageMetadata.jaguarFTypeCoupe;
 
 const engineCodes = getEngineCodesEntry("jaguar-f-type-coupe-engines");
 
@@ -66,26 +67,21 @@ export default function JaguarFTypeCoupeEnginesPage() {
           />
 
           <div className="max-w-3xl mx-auto text-center pt-8">
-            <motion.h1
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
+            <h1
               className="text-2xl font-black leading-[1.1] tracking-tight text-white md:text-4xl"
             >
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-300 to-green-400">
-                Jaguar F‑Type Coupe Engine
+                Jaguar FÃ¢â‚¬â€˜Type Coupe Engine
               </span>{" "}
                 Specialist Engine Repairs, Supercharger Rebuilds & Replacements Across the UK
-            </motion.h1>
+            </h1>
 
-            <motion.div
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.12 }}
+            <div
               className="mt-6 flex justify-center"
             >
               <RegSearch className="max-w-3xl" />
             <HeroTrustLabels className="mt-4" />
-            </motion.div>
+            </div>
 
           </div>
         </div>
@@ -140,7 +136,7 @@ export default function JaguarFTypeCoupeEnginesPage() {
               </p>
             </div>
             <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
-              <h3 className="font-bold text-slate-900">Same‑Day Diagnostics ()</h3>
+              <h3 className="font-bold text-slate-900">SameÃ¢â‚¬â€˜Day Diagnostics ()</h3>
               <p className="mt-3 text-slate-700 leading-relaxed">Accurate diagnosis first   then clear options for repair, rebuild, or replacement.</p>
             </div>
             <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
@@ -156,7 +152,7 @@ export default function JaguarFTypeCoupeEnginesPage() {
       <FAQSection
         title={
           <>
-            Frequently Asked Questions   <span className="text-primary italic">Jaguar F‑Type Coupe Engine</span>
+            Frequently Asked Questions   <span className="text-primary italic">Jaguar FÃ¢â‚¬â€˜Type Coupe Engine</span>
           </>
         }
         items={faqs}
@@ -165,9 +161,9 @@ export default function JaguarFTypeCoupeEnginesPage() {
       <section className="py-16 md:py-20 bg-primary text-white">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-5xl mx-auto text-center space-y-6">
-            <h2 className="text-3xl md:text-4xl font-extrabold leading-tight">Need help with your Jaguar F‑Type Coupe engine?</h2>
+            <h2 className="text-3xl md:text-4xl font-extrabold leading-tight">Need help with your Jaguar FÃ¢â‚¬â€˜Type Coupe engine?</h2>
             <p className="text-emerald-50 leading-relaxed max-w-4xl mx-auto">
-              Call our  specialists for same‑day diagnostics, a tested engine supply, or a fast‑track replacement slot.
+              Call our  specialists for sameÃ¢â‚¬â€˜day diagnostics, a tested engine supply, or a fastÃ¢â‚¬â€˜track replacement slot.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -192,4 +188,10 @@ export default function JaguarFTypeCoupeEnginesPage() {
     </div>
   );
 }
+
+
+
+
+
+
 

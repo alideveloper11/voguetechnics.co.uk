@@ -18,6 +18,96 @@ export const coverageAreas: CoverageArea[] = [
       "Kent coverage for Dartford, Gravesend, Maidstone and Sevenoaks customers who need a specialist engine workshop rather than a general garage.",
   },
   {
+    slug: "surrey",
+    name: "Surrey",
+    description:
+      "Surrey engine repair, rebuild and replacement support for Guildford, Woking, Epsom and nearby towns, with collection arranged through our specialist workshop process.",
+  },
+  {
+    slug: "bedfordshire",
+    name: "Bedfordshire",
+    description:
+      "Bedfordshire engine repair, rebuild and replacement support for Bedford, Luton, Dunstable and nearby towns, with collection, supply-and-fit and workshop-backed diagnostics.",
+  },
+  {
+    slug: "cambridgeshire",
+    name: "Cambridgeshire",
+    description:
+      "Cambridgeshire engine repair, rebuild and replacement support for Cambridge, Peterborough, Huntingdon and nearby towns, with collection, supply-and-fit and nationwide engine delivery.",
+  },
+  {
+    slug: "cheshire",
+    name: "Cheshire",
+    description:
+      "Cheshire engine repair, rebuild and replacement support with UK-wide collection, supply-and-fit and warranty-backed specialist engine work for Range Rover, Land Rover, Jaguar and BMW owners.",
+  },
+  {
+    slug: "dorset",
+    name: "Dorset",
+    description:
+      "Dorset engine repair, rebuild and replacement support for Bournemouth, Poole, Dorchester and nearby towns, with collection planning, supply-and-fit and workshop-backed specialist support.",
+  },
+  {
+    slug: "wiltshire",
+    name: "Wiltshire",
+    description:
+      "Wiltshire engine repair, rebuild and replacement support with UK-wide delivery, collection options and workshop-backed specialist support for Range Rover, Land Rover, Jaguar and BMW owners.",
+  },
+  {
+    slug: "greater-manchester",
+    name: "Greater Manchester",
+    description:
+      "Greater Manchester engine repair, rebuild and replacement support for Manchester, Salford, Bolton and nearby towns, with collection options, supply-and-fit and workshop-backed specialist support.",
+  },
+  {
+    slug: "rutland",
+    name: "Rutland",
+    description:
+      "Rutland engine repair, rebuild and replacement support for Oakham, Uppingham and surrounding towns, with collection options, supply-and-fit and workshop-backed specialist support.",
+  },
+  {
+    slug: "northamptonshire",
+    name: "Northamptonshire",
+    description:
+      "Northamptonshire engine repair, rebuild and replacement support for Northampton, Kettering, Corby and surrounding towns, with collection options, supply-and-fit and workshop-backed specialist support.",
+  },
+  {
+    slug: "west-yorkshire",
+    name: "West Yorkshire",
+    description:
+      "West Yorkshire engine repair, rebuild and replacement support for Leeds, Bradford, Wakefield and surrounding towns, with collection options, supply-and-fit and workshop-backed specialist support.",
+  },
+  {
+    slug: "gloucestershire",
+    name: "Gloucestershire",
+    description:
+      "Gloucestershire engine repair, rebuild and replacement support for Gloucester, Cheltenham, Stroud and surrounding towns, with collection options, supply-and-fit and workshop-backed specialist support.",
+  },
+  {
+    slug: "west-midlands",
+    name: "West Midlands",
+    description:
+      "West Midlands engine repair, rebuild and replacement support for Birmingham, Coventry, Wolverhampton and surrounding areas, with collection options, supply-and-fit and workshop-backed specialist support.",
+  },
+  {
+    slug: "lincolnshire",
+    name: "Lincolnshire",
+    description:
+      "Lincolnshire engine repair, rebuild and replacement support for Lincoln, Grimsby, Scunthorpe and surrounding towns, with collection options, supply-and-fit and workshop-backed specialist support.",
+  },
+  {
+    slug: "east-riding-of-yorkshire",
+    name: "East Riding of Yorkshire",
+    description:
+      "East Riding of Yorkshire engine repair, rebuild and replacement support for Hull, Beverley, Bridlington and surrounding towns, with collection options, supply-and-fit and workshop-backed specialist support.",
+  },
+  {
+    slug: "isle-of-wight",
+    name: "Isle of Wight",
+    description:
+      "Isle of Wight engine repair, rebuild and replacement support with collection options, supply-and-fit and workshop-backed specialist support for Range Rover, Land Rover, Jaguar and BMW owners.",
+  },
+  {
     slug: "london",
     name: "London",
     description:
@@ -69,97 +159,107 @@ export const coverageAreas: CoverageArea[] = [
 
 export const areaFaqs = [
   {
-    question: "Do you provide collection across all the areas you list?",
+    question: "Which areas do you cover?",
     answer:
-      "Yes. We can arrange collection and delivery for customers across the areas we cover, with UK-wide support available for the right job.",
+      "We support customers across our listed counties and regularly help drivers further afield as well. If your area is not shown in the grid, contact us with your postcode and we will confirm the best route for your job.",
+  },
+  {
+    question: "Do you deliver and fit engines nationwide?",
+    answer:
+      "Yes. We can support supply-only, supply-and-fit and workshop-based installation routes depending on the engine, the vehicle condition and your location.",
+  },
+  {
+    question: "Can you collect my vehicle?",
+    answer:
+      "In many cases, yes. Collection, delivery and recovery support can often be arranged for major engine jobs, and we confirm the practical logistics before anything is booked in.",
+  },
+  {
+    question: "Is the warranty valid outside your local area?",
+    answer:
+      "Yes. Where a warranty is provided, the written coverage applies according to the agreed terms regardless of where you are based.",
+  },
+  {
+    question: "Do you only work on Range Rover and Land Rover engines?",
+    answer:
+      "No. We also support Jaguar and selected BMW engine work through the same specialist workshop team, using the same diagnosis-first process and written quoting approach.",
   },
   {
     question: "Can I get a quote before booking collection?",
     answer:
-      "Yes. Send us your registration number and location and we will advise the next step before anything is booked in.",
-  },
-  {
-    question: "Do you only work with local customers?",
-    answer:
-      "No. The area pages are there to show where we regularly work, but our workshop also supports customers from further afield.",
-  },
-  {
-    question: "Can you handle engine rebuilds and replacements for my area?",
-    answer:
-      "Yes. The same specialist engine rebuild, repair, replacement and fitting services are available regardless of location.",
+      "Yes. Send us the registration, the fault symptoms and your location first and we will advise the right next step before transport or workshop intake is arranged.",
   },
 ];
 
 export const areasIntro = {
   heading: "Choose Your Area",
   description:
-    "Select a county or area to see the kind of support we provide in that location. Dedicated detail pages can sit on top of this structure later.",
+    "Pick your county to see the kind of specialist engine support we provide in that location, including local coverage, collection options and workshop-backed repair, rebuild or replacement routes.",
 };
 
 export const areasLandingSections = {
   specialistsSection: {
-    title: "The Specialists Behind Every Job",
+    title: "Engine Specialists, Not a General Garage",
     eyebrow: "Engine Specialists",
     intro:
-      "There is a meaningful difference between a garage that has worked on a platform a handful of times and a specialist team that has rebuilt dozens of them.",
-    supportingTitle: "25 Years of Prestige Engine Experience",
+      "We do not dabble in engines. Vogue Technics focuses on major engine work for Range Rover, Land Rover, Jaguar and BMW vehicles, and that specialist focus is why customers across our coverage areas trust us with rebuilds, replacements and repair work that many general garages are not equipped to handle properly.",
+    supportingTitle: "25+ Years of Specialist Engine Experience",
     supportingParagraphs: [
-      "Owners travel from across the UK because genuine specialist knowledge of these platforms is rarer than most people expect until they start looking for it.",
-      "Every job is approached with the same discipline: accurate assessment, correct parts, written quotes, and warranty-backed work where applicable.",
+      "Every job starts with honest diagnosis, clear advice and a written quote before any work begins, whether the answer is a targeted repair, a full rebuild or a complete replacement.",
+      "Our workshop approach stays the same wherever the customer is based: accurate assessment, correct parts, transparent pricing and warranty-backed work where applicable.",
     ],
     checklistItems: [
-      "OEM or OEM-specification parts throughout.",
+      "Thousands of engines rebuilt, supplied and fitted.",
       "Written quotes before any work begins.",
-      "Six-month warranty on major jobs.",
+      "Warranty-backed major work where applicable.",
     ],
   },
   ukWideServiceSection: {
     title: "UK-Wide Service From Our Workshop",
     paragraphs: [
-      "Being based in the workshop puts us within straightforward reach of London, the Home Counties, Kent, and the wider South East. But a significant proportion of our customers are not local, and that is not a barrier.",
-      "We offer engine collection and return delivery covering the whole of the United Kingdom. Your engine comes to us, the work is carried out to the same standard regardless of your location, and it comes back fully tested and covered by our written warranty.",
-      "Distance is not a reason to compromise on the quality of specialist support you use.",
+      "Everything we do runs through our dedicated workshop, where diagnostics, machining, engine preparation and fitting are handled under one roof by technicians who work on these platforms every day.",
+      "We support customers across our listed coverage areas and throughout the UK with workshop-based installation, supply-only options, collection planning and engine delivery where the job allows it.",
+      "Distance is not a reason to compromise on specialist support. The same standards, the same written quoting process and the same attention to detail apply whether you are nearby or further afield.",
     ],
     panelTitle: "Whatever the engine, whatever the fault",
     panelParagraph:
-      "Whatever the engine, whatever the fault, whatever the platform, do not leave it to a garage that works from general experience and hope for the best result. We bring dedicated engine experience to every job that comes through our doors.",
+      "Whatever the engine, whatever the fault, whatever the platform, we diagnose it properly and quote it honestly before any work begins.",
   },
   engineRepairCostSection: {
     title: "Engine Repair Cost What You Need to Know",
     paragraphs: [
-      "Engine repair cost is one of the most searched questions in this space, and one of the most difficult to answer honestly without first understanding what the engine actually needs.",
-      "A targeted engine repair addressing a specific fault sits at a very different price point to a full engine rebuild or replacement. Turbo replacement cost varies by platform and unit specification. Head gasket repair cost depends on the extent of cylinder head damage found during inspection. Timing chain replacement cost changes depending on whether tensioners, guides, and associated components require renewal alongside the chain.",
-      "What we can tell you is that our pricing reflects independent specialist expertise, significantly below main dealer rates for the same quality of work and the same quality of parts. We will always provide a detailed written quote following a proper diagnostic, so the figure you receive is based on what your engine actually needs, not a generalised estimate that shifts when the work begins.",
-      "The cost of a proper repair carried out once is always less than the cost of an inadequate repair carried out twice, with additional damage in between.",
+      "Engine work is a significant decision, and any honest price starts with understanding what the engine actually needs. The final figure depends on the platform, the fault, the extent of the damage and whether the right answer is repair, rebuild or replacement.",
+      "A targeted repair sits at a very different price point to a full rebuild or a complete replacement unit. Timing chain, turbocharger and head gasket jobs also vary depending on the components that need replacing alongside the main fault.",
+      "What we can tell you is that our pricing reflects specialist independent expertise rather than main-dealer overhead. We provide written quotes based on proper diagnosis, so the figure you receive is based on the vehicle in front of us rather than a vague estimate that changes once work starts.",
+      "The most expensive route is usually doing the wrong repair first. We would rather explain the correct job clearly, price it properly and do it once.",
     ],
     quoteTitle: "Request a Written Quote No Obligation",
     quoteText:
-      "Send your registration and symptoms and we’ll come back with honest initial advice and the right next step.",
+      "Send your registration, symptoms and location and we will come back with honest initial advice and the right next step.",
   },
 };
 
 export const areasLandingContent = {
   hero: {
-    title: "Areas Covered",
+    title: "Reconditioned Range Rover Engines & Areas Covered",
     subtitle:
-      "Explore the locations we regularly serve for specialist engine repair, rebuilds, replacements, diagnostics and collection support across the UK.",
+      "Vogue Technics provides specialist Range Rover, Land Rover, Jaguar and BMW engine repair, rebuild, replacement and supply-and-fit support across our coverage areas and throughout the UK, backed by OEM-quality parts, written quotes and warranty-backed workmanship.",
   },
   coverage: {
     label: "Local Coverage",
     heading: "Choose Your Area",
     description:
-      "Select a county or area to see the kind of support we provide in that location. Each location page is written for the specific area so the content stays relevant, search-friendly and useful for customers looking for collection, repair or replacement support.",
+      "Pick your county to see the kind of specialist engine support we provide in that location. Each area page is written around local coverage, collection options and the workshop-backed repair, rebuild or replacement routes available for that region.",
   },
   reviews: {
     title: "What Customers Say About Our Coverage",
     subtitle:
-      "Customers value clear communication, collection support and straight answers wherever they are based.",
+      "Customers value clear communication, specialist diagnosis and the way we manage major engine work wherever they are based.",
   },
   overview: {
-    title: "Specialist engine support with wider UK reach",
+    title: "Specialist Engine Support With Wider UK Reach",
     paragraphs: [
-      "Whether you are local to the workshop or further away, the process stays the same. We diagnose accurately, quote clearly and arrange collection where it makes sense for the job.",
-      "Use the areas section above to understand where we operate most often, then contact us for an engine repair, rebuild or replacement quote.",
+      "Whether you are close to the workshop or further away, the process stays the same: diagnose accurately, explain the right route clearly, quote in writing and carry out the work to the same specialist standard.",
+      "Use the area section above to find the county page closest to you, then contact us for advice on engine repair, rebuild, replacement, supply-only or supply-and-fit support.",
     ],
   },
 };

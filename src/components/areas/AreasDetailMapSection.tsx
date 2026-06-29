@@ -17,6 +17,7 @@ export default function AreasDetailMapSection({
 }: AreasDetailMapSectionProps) {
   const mapQuery = encodeURIComponent(`${areaName} UK ${places[0] ?? ""}`.trim());
   const embedSrc = `https://www.google.com/maps?q=${mapQuery}&output=embed`;
+  const otherAreas = allAreas.filter((area) => area.slug !== areaSlug);
 
   return (
     <section className="bg-white py-16 md:py-20">
@@ -76,30 +77,20 @@ export default function AreasDetailMapSection({
               Other locations
             </h3>
             <p className="mt-2 text-xs leading-6 text-slate-600">
-              Browse the full set of area pages from this section. The current area is highlighted.
+              Browse the full set of area pages from this section.
             </p>
 
-            <div className="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-1">
-              {allAreas.map((area) => {
-                const active = area.slug === areaSlug;
-
-                return (
-                  <Link
-                    key={area.slug}
-                    href={`/areas/${area.slug}`}
-                    className={`flex items-center justify-between rounded-xl border px-4 py-3 transition-colors ${
-                      active
-                        ? "border-primary bg-primary/10 text-primary"
-                        : "border-slate-200 bg-white text-slate-700 hover:border-primary/30 hover:bg-slate-50"
-                    }`}
-                  >
-                    <span className="text-sm font-bold">{area.name}</span>
-                    <span className="text-[10px] font-black uppercase tracking-[0.18em]">
-                      {active ? "Current" : "Open"}
-                    </span>
-                  </Link>
-                );
-              })}
+            <div className="mt-4 grid grid-cols-2 gap-2">
+              {otherAreas.map((area) => (
+                <Link
+                  key={area.slug}
+                  href={`/areas/${area.slug}`}
+                  className="flex items-center justify-between rounded-xl border border-slate-200 bg-white px-4 py-3 text-slate-700 transition-colors hover:border-primary/30 hover:bg-slate-50"
+                >
+                  <span className="text-sm font-bold">{area.name}</span>
+                  <ArrowRight className="h-3.5 w-3.5 shrink-0 text-primary" />
+                </Link>
+              ))}
             </div>
           </div>
         </div>

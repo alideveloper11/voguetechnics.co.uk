@@ -1,7 +1,7 @@
 "use client";
 
 import { Send, RotateCw } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { submitContact } from "@/app/actions/submitContact";
 import {
@@ -41,6 +41,8 @@ function validateField(name: keyof FormData, value: string): string {
       return "";
     case "regNumber":
       if (!value.trim()) return "Registration number is required.";
+      if (!/^[A-Z0-9\s]{1,8}$/i.test(value.trim())) return "Registration must be alphanumeric only.";
+      if (value.replace(/\s/g, "").length > 7) return "Registration must be 7 characters or fewer.";
       return "";
     case "issue":
       if (!value.trim()) return "Please describe the issue with your vehicle.";
@@ -78,22 +80,23 @@ export default function ContactForm() {
   const [errors, setErrors] = useState<FormErrors>({});
   const [touched, setTouched] = useState<TouchedFields>({});
 
-  const [captcha, setCaptcha] = useState({ num1: 0, num2: 0, sum: 0 });
+  const [captcha, setCaptcha] = useState(() => {
+    const num1 = Math.floor(Math.random() * 10) + 1;
+    const num2 = Math.floor(Math.random() * 10) + 1;
+    return { num1, num2, sum: num1 + num2 };
+  });
   const [userCaptchaAnswer, setUserCaptchaAnswer] = useState("");
   const [captchaError, setCaptchaError] = useState(false);
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [submitError, setSubmitError] = useState("");
 
-  useEffect(() => {
-    generateCaptcha();
-  }, []);
-
-  const generateCaptcha = () => {
+  function generateCaptcha() {
     const n1 = Math.floor(Math.random() * 10) + 1;
     const n2 = Math.floor(Math.random() * 10) + 1;
     setCaptcha({ num1: n1, num2: n2, sum: n1 + n2 });
     setUserCaptchaAnswer("");
     setCaptchaError(false);
-  };
+  }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -103,6 +106,8 @@ export default function ContactForm() {
 
     if (key === "regNumber") {
       processed = value.replace(/[^a-zA-Z0-9\s]/g, "").toUpperCase();
+    } else if (key === "postCode") {
+      processed = value.replace(/[^A-Za-z0-9\s]/g, "").toUpperCase();
     }
 
     setFormData((prev) => ({ ...prev, [key]: processed }));
@@ -150,6 +155,7 @@ export default function ContactForm() {
       return;
     }
 
+    setSubmitError("");
     setStatus("loading");
 
     try {
@@ -166,10 +172,12 @@ export default function ContactForm() {
         router.push("/quote-success");
       } else {
         console.error("Submission error:", message);
+        setSubmitError(message ?? "Something went wrong. Please try again.");
         setStatus("error");
       }
     } catch (error) {
       console.error("Submission error:", error);
+      setSubmitError("Something went wrong. Please try again.");
       setStatus("error");
     }
   };
@@ -212,7 +220,7 @@ export default function ContactForm() {
             onBlur={handleBlur}
             className={`${fieldClass("regNumber")} uppercase tracking-widest`}
             placeholder="AB12 CDE"
-            maxLength={10}
+            maxLength={8}
           />
           <p className="text-slate-400 text-xs">Alphanumeric only — auto-converted to uppercase.</p>
         </div>
@@ -348,7 +356,7 @@ export default function ContactForm() {
         </button>
 
         {status === "error" && (
-          <p className="text-red-500 text-sm text-center">Something went wrong. Please try again.</p>
+          <p className="text-red-500 text-sm text-center">{submitError || "Something went wrong. Please try again."}</p>
         )}
       </form>
     </div>

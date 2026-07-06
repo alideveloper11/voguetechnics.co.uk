@@ -1,6 +1,10 @@
 "use server";
-
-const CONTACT_API_URL = "https://portal.rangerovergarage.co.uk/api/quote";
+import {
+  buildPortalQuotePayload,
+  getPortalConfig,
+  parseJsonResponse,
+  submitPortalQuote,
+} from "@/lib/voguePortal";
 
 export interface ContactPayload {
   name: string;
@@ -13,34 +17,31 @@ export interface ContactPayload {
 }
 
 export async function submitContact(data: ContactPayload): Promise<{ ok: boolean; message?: string }> {
-  const username = process.env.PORTAL_USERNAME ?? "";
-  const password = process.env.PORTAL_PASSWORD ?? "";
+  const { websiteSlug, isConfigured } = getPortalConfig();
 
-  const fields: Record<string, string> = {
-    website_name: "voguetechnics",
-    name:         data.name,
-    phone:        data.phone,
-    email:        data.email,
-    postcode:     data.postcode,
-    vrm:          data.reg,
-    issue:        data.message,
-    browser:      data.browser,
-    ip_address:   "Client-Side",
-  };
+  if (!isConfigured) {
+    return { ok: false, message: "Server configuration error: Portal credentials missing" };
+  }
 
-  const formData = new FormData();
-  Object.entries(fields).forEach(([key, value]) => formData.append(key, value));
+  const payload = buildPortalQuotePayload(
+    {
+      vrm: data.reg,
+      name: data.name,
+      email: data.email,
+      phone: data.phone,
+      postcode: data.postcode,
+      issue: data.message,
+    },
+    websiteSlug
+  );
 
   try {
-    const res = await fetch(CONTACT_API_URL, {
-      method: "POST",
-      headers: { username, password },
-      body: formData,
-    });
-    const json = await res.json().catch(() => null);
+    const res = await submitPortalQuote(payload);
+    const json = await parseJsonResponse(res);
     const message: string | undefined = json?.message;
-    if (res.ok && json?.success) return { ok: true, message };
-    return { ok: false, message: message ?? "Something went wrong. Please try again or call us directly." };
+
+    if (res.ok && json?.success !== false) return { ok: true, message };
+    return { ok: false, message: message ?? "Failed to submit contact inquiry to portal" };
   } catch {
     return { ok: false, message: "Something went wrong. Please try again or call us directly." };
   }

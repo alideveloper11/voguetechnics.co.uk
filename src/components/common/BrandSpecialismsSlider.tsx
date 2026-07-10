@@ -81,7 +81,7 @@ export default function BrandSpecialismsSlider({ brands }: BrandSpecialismsSlide
       onFocusCapture={() => setIsPaused(true)}
       onBlurCapture={() => setIsPaused(false)}
     >
-      <div className="pointer-events-none absolute -top-16 -right-20 h-64 w-64 rounded-full bg-primary/10 blur-[80px]" />
+      <div className="pointer-events-none absolute -top-16 -right-20 h-64 w-64 " />
 
       <div
         ref={trackRef}

@@ -22,6 +22,10 @@ type FormData = {
 type FormErrors = Partial<Record<keyof FormData, string>>;
 type TouchedFields = Partial<Record<keyof FormData, boolean>>;
 
+type ContactFormProps = {
+  variant?: "default" | "sidebar";
+};
+
 function validateField(name: keyof FormData, value: string): string {
   switch (name) {
     case "name":
@@ -67,7 +71,7 @@ const inputBase =
 const inputValid = "border-slate-200 focus:ring-primary";
 const inputError = "border-red-400 focus:ring-red-400 bg-red-50";
 
-export default function ContactForm() {
+export default function ContactForm({ variant = "default" }: ContactFormProps) {
   const router = useRouter();
   const [formData, setFormData] = useState<FormData>({
     name: "",
@@ -88,6 +92,8 @@ export default function ContactForm() {
   const [userCaptchaAnswer, setUserCaptchaAnswer] = useState("");
   const [captchaError, setCaptchaError] = useState(false);
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+
+  const isSidebar = variant === "sidebar";
   const [submitError, setSubmitError] = useState("");
 
   function generateCaptcha() {
@@ -204,161 +210,179 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="bg-white rounded-3xl p-8 md:p-12 border border-slate-200 shadow-[0_20px_50px_rgba(0,0,0,0.05)]">
-      <h3 className="text-2xl font-bold text-slate-900 mb-8">Send a Message</h3>
+    <div
+      className={`relative flex flex-col w-full  rounded-3xl max-w-xl mx-auto lg:max-w-none lg:mx-0 box-border ${
+        isSidebar ? "max-w-full" : "lg:w-full"
+      }`}
+    >
+      <div className={`bg-white rounded-3xl border border-slate-200  w-full ${
+        isSidebar ? "px-5 py-6" : "p-8 md:p-12"
+      }`}>
+        <h3 className={`font-bold text-slate-900 ${isSidebar ? "text-xl mb-6" : "text-2xl mb-8"}`}>
+          Send a Message
+        </h3>
 
-      <form onSubmit={handleSubmit} noValidate className="space-y-6">
-        <div className="space-y-1">
-          <label className="text-sm font-semibold text-slate-700">
-            Registration Number*
-          </label>
-          <input
-            name="regNumber"
-            type="text"
-            value={formData.regNumber}
-            onChange={handleChange}
-            onBlur={handleBlur}
-            className={`${fieldClass("regNumber")} uppercase tracking-widest`}
-            placeholder="AB12 CDE"
-            maxLength={8}
-          />
-          <p className="text-slate-400 text-xs">Alphanumeric only — auto-converted to uppercase.</p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="space-y-1">
-            <label className="text-sm font-semibold text-slate-700">Name*</label>
-            <input
-              name="name"
-              type="text"
-              value={formData.name}
-              onChange={handleChange}
-              onBlur={handleBlur}
-              className={fieldClass("name")}
-              placeholder="John Doe"
-            />
-            {touched.name && errors.name && (
-              <p className="text-red-500 text-xs font-medium">{errors.name}</p>
-            )}
-          </div>
-          <div className="space-y-1">
-            <label className="text-sm font-semibold text-slate-700">Email Address*</label>
-            <input
-              name="email"
-              type="email"
-              value={formData.email}
-              onChange={handleChange}
-              onBlur={handleBlur}
-              className={fieldClass("email")}
-              placeholder="john@example.com"
-            />
-            {touched.email && errors.email && (
-              <p className="text-red-500 text-xs font-medium">{errors.email}</p>
-            )}
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="space-y-1">
-            <label className="text-sm font-semibold text-slate-700">Phone Number*</label>
-            <div className={`flex items-stretch border rounded-xl overflow-hidden transition-all ${touched.phone && errors.phone ? "border-red-400 bg-red-50" : "border-slate-200 bg-slate-50"} focus-within:ring-2 ${touched.phone && errors.phone ? "focus-within:ring-red-400" : "focus-within:ring-primary"}`}>
-              <input
-                name="phone"
-                type="tel"
-                inputMode="numeric"
-                value={formatUKPhone(formData.phone)}
-                onChange={handlePhoneChange}
-                onBlur={handleBlur}
-                className="flex-1 bg-transparent px-4 py-3 focus:outline-none text-slate-900"
-                placeholder="07123 456789"
-              />
-            </div>
-            {touched.phone && errors.phone && (
-              <p className="text-red-500 text-xs font-medium">{errors.phone}</p>
-            )}
-          </div>
-          <div className="space-y-1">
-            <label className="text-sm font-semibold text-slate-700">Post Code*</label>
-            <input
-              name="postCode"
-              type="text"
-              value={formData.postCode}
-              onChange={handleChange}
-              onBlur={handleBlur}
-              className={`${fieldClass("postCode")} uppercase`}
-              placeholder="RM20 4EL"
-            />
-            {touched.postCode && errors.postCode && (
-              <p className="text-red-500 text-xs font-medium">{errors.postCode}</p>
-            )}
-          </div>
-        </div>
-
-        <div className="space-y-1">
-          <label className="text-sm font-semibold text-slate-700">Issue With Vehicle*</label>
-          <textarea
-            name="issue"
-            rows={4}
-            value={formData.issue}
-            onChange={handleChange}
-            onBlur={handleBlur}
-            className={`${touched.issue && errors.issue ? `${inputBase} ${inputError}` : `${inputBase} ${inputValid}`} resize-none`}
-            placeholder="Please describe the issue with your vehicle..."
-          />
-          {touched.issue && errors.issue && (
-            <p className="text-red-500 text-xs font-medium">{errors.issue}</p>
-          )}
-        </div>
-
-        {/* Math Captcha */}
-        <div className="relative overflow-hidden bg-slate-100 rounded-xl py-3 px-4 border border-slate-200">
-          <div className="absolute inset-0 opacity-[0.03] pointer-events-none select-none flex flex-wrap gap-4 p-2 text-[10px] font-bold uppercase rotate-[-10deg]">
-            {Array.from({ length: 20 }).map((_, i) => (
-              <span key={i}>CAPTCHA</span>
-            ))}
-          </div>
-          <div className="relative z-10 flex flex-col gap-1.5">
-            <div className="flex items-center gap-3 w-full">
-              <span className="text-[#0D2447]/70 font-medium text-sm whitespace-nowrap shrink-0">
-                What is {captcha.num1} + {captcha.num2}?
-              </span>
-              <input
-                type="text"
-                value={userCaptchaAnswer}
-                onChange={handleCaptchaChange}
-                placeholder="Your answer"
-                inputMode="numeric"
-                pattern="[0-9]*"
-                className={`flex-1 min-w-0 bg-white border ${captchaError ? "border-red-500 shadow-[0_0_5px_rgba(239,68,68,0.3)]" : "border-slate-200"} rounded-lg px-3 py-1.5 text-center text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-slate-400`}
-              />
-              <button
-                type="button"
-                onClick={generateCaptcha}
-                className="shrink-0 p-1.5 bg-white border border-slate-200 rounded-lg text-emerald-600 hover:bg-slate-50 transition-colors shadow-sm"
-                title="Refresh Captcha"
-              >
-                <RotateCw className="w-4 h-4" />
-              </button>
-            </div>
-            {captchaError && (
-              <p className="text-red-500 text-xs font-semibold">Incorrect answer, please try again.</p>
-            )}
-          </div>
-        </div>
-
-        <button
-          type="submit"
-          disabled={status === "loading"}
-          className="w-full bg-slate-900 hover:bg-primary text-white font-bold text-lg py-4 rounded-xl shadow-lg hover:shadow-[0_10px_20px_rgba(25,135,84,0.3)] transition-all transform hover:-translate-y-1 flex justify-center items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+        <form
+          onSubmit={handleSubmit}
+          noValidate
+          className={`flex flex-col box-border ${isSidebar ? "gap-4" : "space-y-6"}`}
         >
-          {status === "loading" ? "Sending..." : "Send Message"}
-          <Send className="w-5 h-5" />
-        </button>
+          {/* Registration Number Field */}
+          <div className="space-y-1">
+            <label className="text-sm font-semibold text-slate-700">
+              Registration Number*
+            </label>
+            <input
+              name="regNumber"
+              type="text"
+              value={formData.regNumber}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              className={`${fieldClass("regNumber")} uppercase tracking-widest ${isSidebar ? "py-2 px-3" : ""}`}
+              placeholder="AB12 CDE"
+              maxLength={8}
+            />
+            {!isSidebar && <p className="text-slate-400 text-xs">Alphanumeric only — auto-converted to uppercase.</p>}
+          </div>
 
-        {status === "error" && (
-          <p className="text-red-500 text-sm text-center">{submitError || "Something went wrong. Please try again."}</p>
-        )}
-      </form>
+          {/* Name & Email Stack/Grid */}
+          <div className={`grid grid-cols-1 gap-6 ${isSidebar ? "sm:grid-cols-1 gap-4" : "md:grid-cols-2"}`}>
+            <div className="space-y-1">
+              <label className="text-sm font-semibold text-slate-700">Name*</label>
+              <input
+                name="name"
+                type="text"
+                value={formData.name}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                className={`${fieldClass("name")} ${isSidebar ? "py-2 px-3" : ""}`}
+                placeholder="John Doe"
+              />
+              {touched.name && errors.name && (
+                <p className="text-red-500 text-xs font-medium">{errors.name}</p>
+              )}
+            </div>
+            <div className="space-y-1">
+              <label className="text-sm font-semibold text-slate-700">Email Address*</label>
+              <input
+                name="email"
+                type="email"
+                value={formData.email}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                className={`${fieldClass("email")} ${isSidebar ? "py-2 px-3" : ""}`}
+                placeholder="john@example.com"
+              />
+              {touched.email && errors.email && (
+                <p className="text-red-500 text-xs font-medium">{errors.email}</p>
+              )}
+            </div>
+          </div>
+
+          {/* Phone Number & Post Code Stack/Grid */}
+          <div className={`grid grid-cols-1 gap-6 ${isSidebar ? "sm:grid-cols-1 gap-4" : "md:grid-cols-2"}`}>
+            <div className="space-y-1">
+              <label className="text-sm font-semibold text-slate-700">Phone Number*</label>
+              <div className={`flex items-stretch border rounded-xl overflow-hidden transition-all ${touched.phone && errors.phone ? "border-red-400 bg-red-50" : "border-slate-200 bg-slate-50"} focus-within:ring-2 ${touched.phone && errors.phone ? "focus-within:ring-red-400" : "focus-within:ring-primary"}`}>
+                <input
+                  name="phone"
+                  type="tel"
+                  inputMode="numeric"
+                  value={formatUKPhone(formData.phone)}
+                  onChange={handlePhoneChange}
+                  onBlur={handleBlur}
+                  className={`flex-1 bg-transparent px-4 focus:outline-none text-slate-900 ${isSidebar ? "py-2" : "py-3"}`}
+                  placeholder="07123 456789"
+                />
+              </div>
+              {touched.phone && errors.phone && (
+                <p className="text-red-500 text-xs font-medium">{errors.phone}</p>
+              )}
+            </div>
+            <div className="space-y-1">
+              <label className="text-sm font-semibold text-slate-700">Post Code*</label>
+              <input
+                name="postCode"
+                type="text"
+                value={formData.postCode}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                className={`${fieldClass("postCode")} uppercase ${isSidebar ? "py-2 px-3" : ""}`}
+                placeholder="RM20 4EL"
+              />
+              {touched.postCode && errors.postCode && (
+                <p className="text-red-500 text-xs font-medium">{errors.postCode}</p>
+              )}
+            </div>
+          </div>
+
+          {/* Issue Area Field */}
+          <div className="space-y-1">
+            <label className="text-sm font-semibold text-slate-700">Issue With Vehicle*</label>
+            <textarea
+              name="issue"
+              rows={isSidebar ? 3 : 4}
+              value={formData.issue}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              className={`${touched.issue && errors.issue ? `${inputBase} ${inputError}` : `${inputBase} ${inputValid}`} resize-none ${isSidebar ? "py-2 px-3" : ""}`}
+              placeholder="Please describe the issue with your vehicle..."
+            />
+            {touched.issue && errors.issue && (
+              <p className="text-red-500 text-xs font-medium">{errors.issue}</p>
+            )}
+          </div>
+
+          {/* Math Captcha Validation Card */}
+          <div className="relative overflow-hidden bg-slate-100 rounded-xl py-3 px-4 border border-slate-200">
+            <div className="relative z-10 flex flex-col gap-1.5">
+              <div className="flex items-center gap-3 w-full">
+                <span className="text-[#0D2447]/70 font-medium text-sm whitespace-nowrap shrink-0">
+                  What is {captcha.num1} + {captcha.num2}?
+                </span>
+                <input
+                  type="text"
+                  value={userCaptchaAnswer}
+                  onChange={handleCaptchaChange}
+                  placeholder="Your answer"
+                  inputMode="numeric"
+                  pattern="[0-9]*"
+                  className={`flex-1 min-w-0 bg-white border ${captchaError ? "border-red-500 shadow-[0_0_5px_rgba(239,68,68,0.3)]" : "border-slate-200"} rounded-lg px-3 py-1.5 text-center text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-slate-400`}
+                />
+                <button
+                  type="button"
+                  onClick={generateCaptcha}
+                  className="shrink-0 p-1.5 bg-white border border-slate-200 rounded-lg text-emerald-600 hover:bg-slate-50 transition-colors shadow-sm"
+                  title="Refresh Captcha"
+                >
+                  <RotateCw className="w-4 h-4" />
+                </button>
+              </div>
+              {captchaError && (
+                <p className="text-red-500 text-xs font-semibold">Incorrect answer, please try again.</p>
+              )}
+            </div>
+          </div>
+
+          {/* Form Actions Action Submission Button */}
+          <div className="flex flex-col gap-2 w-full pt-1">
+            <button
+              type="submit"
+              disabled={status === "loading"}
+              className={`w-full bg-slate-900 hover:bg-primary text-white font-bold rounded-xl shadow-lg hover:shadow-[0_10px_20px_rgba(25,135,84,0.3)] transition-all transform hover:-translate-y-1 flex justify-center items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed ${
+                isSidebar ? "py-3 text-base" : "py-4 text-lg"
+              }`}
+            >
+              {status === "loading" ? "Sending..." : "Send Message"}
+              <Send className="w-5 h-5" />
+            </button>
+
+            {status === "error" && (
+              <p className="text-red-500 text-sm text-center">{submitError || "Something went wrong. Please try again."}</p>
+            )}
+          </div>
+        </form>
+      </div>
     </div>
   );
 }

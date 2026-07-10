@@ -285,7 +285,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="bg-primary py-20 md:py-24 text-center text-white">
+      <section className="bg-primary py-18 md:py-14 text-center text-white">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="mx-auto max-w-4xl">
             <h2 className="text-3xl font-extrabold leading-tight md:text-5xl">

@@ -16,12 +16,30 @@ import BrandSpecialismsSlider from "@/components/common/BrandSpecialismsSlider";
 
 export default function Home() {
   const features = [
-    { text: "Over 20 years of specialist engine experience.", icon: <Star className="w-5 h-5 text-accent" /> },
-    { text: "Honest diagnostics every time.", icon: <ShieldCheck className="w-5 h-5 text-accent" /> },
-    { text: "OEM and quality uprated parts as standard.", icon: <Wrench className="w-5 h-5 text-accent" /> },
-    { text: "Warranty-backed repairs.", icon: <CheckCircle2 className="w-5 h-5 text-accent" /> },
-    { text: "Transparent, fixed pricing before work begins.", icon: <Clock className="w-5 h-5 text-accent" /> },
-    { text: "A real alternative to the main dealer.", icon: <CheckCircle2 className="w-5 h-5 text-accent" /> },
+    {
+      text: "Over 20 years of specialist engine experience.",
+      icon: <Star className="w-5 h-5 text-accent" />,
+    },
+    {
+      text: "Honest diagnostics every time.",
+      icon: <ShieldCheck className="w-5 h-5 text-accent" />,
+    },
+    {
+      text: "OEM and quality uprated parts as standard.",
+      icon: <Wrench className="w-5 h-5 text-accent" />,
+    },
+    {
+      text: "Warranty-backed repairs.",
+      icon: <CheckCircle2 className="w-5 h-5 text-accent" />,
+    },
+    {
+      text: "Transparent, fixed pricing before work begins.",
+      icon: <Clock className="w-5 h-5 text-accent" />,
+    },
+    {
+      text: "A real alternative to the main dealer.",
+      icon: <CheckCircle2 className="w-5 h-5 text-accent" />,
+    },
   ];
 
   const engineServices = [
@@ -109,7 +127,6 @@ export default function Home() {
     },
   ];
 
-
   const faqs = [
     {
       question: "How much does a Range Rover engine rebuild cost?",
@@ -127,7 +144,8 @@ export default function Home() {
         "Yes. All engine work carried out at Vogue Technics is covered by a warranty. The warranty period and terms depend on the nature of the work   we'll confirm the specifics in writing as part of your quote. We stand behind the quality of our workmanship.",
     },
     {
-      question: "Do I need to use a main dealer for my Range Rover engine, or will an independent specialist void my warranty?",
+      question:
+        "Do I need to use a main dealer for my Range Rover engine, or will an independent specialist void my warranty?",
       answer:
         "Using an independent specialist does not automatically void your manufacturer warranty, provided the work is carried out to the correct standard using appropriate parts   which is exactly what we do. Once your vehicle is outside its manufacturer warranty period, there's no obligation to use a main dealer at all, and the cost savings of using a quality independent specialist like Vogue Technics can be very significant.",
     },
@@ -137,7 +155,8 @@ export default function Home() {
         "Yes. If your engine assessment indicates that repair isn't economically viable, we can source a low-mileage, quality-checked replacement engine for your specific vehicle variant. We handle the full supply and fitment process, including all ancillaries and post-fitment testing.",
     },
     {
-      question: "Do you only work on vehicles in , or do customers travel to you from further afield?",
+      question:
+        "Do you only work on vehicles in , or do customers travel to you from further afield?",
       answer:
         "We're based in , and our local customers come from across Thurrock, Dartford, Basildon, Romford, and East London. However, we also regularly work on vehicles brought to us from further across the UK. When customers need a genuine specialist for their Range Rover or Land Rover engine, they're often willing to travel   and we're well set up to accommodate that.",
     },
@@ -184,7 +203,6 @@ export default function Home() {
             <RegSearch />
             <HeroTrustLabels className="mt-4" />
           </motion.div>
-
         </div>
       </section>
 
@@ -192,8 +210,6 @@ export default function Home() {
         title="What Our Customers Say"
         subtitle="Hear from our satisfied customers who have experienced our professional engine services."
       />
-
-
 
       {/* WHY CHOOSE US & CONTENT SECTION */}
       <section className="py-20 bg-white relative overflow-hidden">
@@ -217,8 +233,12 @@ export default function Home() {
                     sizes="(min-width: 1024px) 50vw, 100vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent flex flex-col justify-end p-8">
-                    <div className="text-white font-bold text-2xl mb-2">Expert Technicians</div>
-                    <div className="text-slate-300 text-sm">State of the art repairs and diagnostics</div>
+                    <div className="text-white font-bold text-2xl mb-2">
+                      Expert Technicians
+                    </div>
+                    <div className="text-slate-300 text-sm">
+                      State of the art repairs and diagnostics
+                    </div>
                   </div>
                 </div>
               </motion.div>
@@ -281,28 +301,51 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            
+
             <div className="w-full lg:w-1/2 space-y-6">
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 leading-tight">
                 Why Vogue Technics?
               </h2>
 
               <div className="space-y-4 text-slate-600 text-[1.05rem] leading-relaxed">
-
                 <p>
-                  Vogue Technics has been one of 's most respected independent engine specialists since we first opened our doors . We didn't set out to be everything to everyone. From day one, our focus has been singular   engine work, done properly, on the vehicles that demand proper expertise. That focus is what's built our reputation, and it's what keeps customers returning and referring us to friends and family across Thurrock, Dartford, Romford, Basildon, and beyond.
+                  Vogue Technics has been one of 's most respected independent
+                  engine specialists since we first opened our doors . We didn't
+                  set out to be everything to everyone. From day one, our focus
+                  has been singular engine work, done properly, on the vehicles
+                  that demand proper expertise. That focus is what's built our
+                  reputation, and it's what keeps customers returning and
+                  referring us to friends and family across Thurrock, Dartford,
+                  Romford, Basildon, and beyond.
                 </p>
                 <p>
-                  Range Rovers and Land Rovers are at the core of what we do. The TDV6, SDV8, SDV6, Ingenium diesel, and supercharged V8 are engines we know like the backs of our hands. We've rebuilt them from the bottom end up, replaced cylinder heads, tackled timing chain failures, and resolved turbo problems that other workshops couldn't diagnose. That depth of hands-on experience simply cannot be replicated   it comes from years of working on nothing else.
+                  Range Rovers and Land Rovers are at the core of what we do.
+                  The TDV6, SDV8, SDV6, Ingenium diesel, and supercharged V8 are
+                  engines we know like the backs of our hands. We've rebuilt
+                  them from the bottom end up, replaced cylinder heads, tackled
+                  timing chain failures, and resolved turbo problems that other
+                  workshops couldn't diagnose. That depth of hands-on experience
+                  simply cannot be replicated it comes from years of working on
+                  nothing else.
                 </p>
                 <p>
-                  Being an IGA member means we're held to a professional standard that protects you as a customer. Every job is quoted transparently before work begins. Every repair is explained in plain English. And every engine that leaves our workshop is tested, signed off, and covered by a warranty. There are no hidden surprises on your invoice and no vague explanations when you call to ask how your vehicle is getting on.
+                  Being an IGA member means we're held to a professional
+                  standard that protects you as a customer. Every job is quoted
+                  transparently before work begins. Every repair is explained in
+                  plain English. And every engine that leaves our workshop is
+                  tested, signed off, and covered by a warranty. There are no
+                  hidden surprises on your invoice and no vague explanations
+                  when you call to ask how your vehicle is getting on.
                 </p>
                 <p>
-                  Customers drive to us from across South  and East London not because we're the closest option, but because they've learned   or been told by someone they trust   that Vogue Technics is the right option. We're the independent specialist that gives you main dealer knowledge without the main dealer price tag.
+                  Customers drive to us from across South and East London not
+                  because we're the closest option, but because they've learned
+                  or been told by someone they trust that Vogue Technics is the
+                  right option. We're the independent specialist that gives you
+                  main dealer knowledge without the main dealer price tag.
                 </p>
               </div>
-              
+
               <div className="pt-6 space-y-4">
                 {features.map((feature, idx) => (
                   <motion.div
@@ -316,7 +359,9 @@ export default function Home() {
                     <div className="bg-white p-2 text-primary shadow-sm rounded-lg flex-shrink-0">
                       {feature.icon}
                     </div>
-                    <span className="font-medium text-slate-800">{feature.text}</span>
+                    <span className="font-medium text-slate-800">
+                      {feature.text}
+                    </span>
                   </motion.div>
                 ))}
               </div>
@@ -329,13 +374,18 @@ export default function Home() {
       <section className="py-20 bg-white relative overflow-hidden">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Our Engine Services</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              Our Engine Services
+            </h2>
             <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
           </div>
 
           <div className="max-w-3xl mx-auto text-center mb-12">
             <p className="text-slate-600 text-[1.05rem] leading-relaxed">
-              We cover the full spectrum of engine work, from a routine engine health check through to a complete engine rebuild or replacement. Every service is carried out by experienced technicians who understand the specific demands of the engines we work on.
+              We cover the full spectrum of engine work, from a routine engine
+              health check through to a complete engine rebuild or replacement.
+              Every service is carried out by experienced technicians who
+              understand the specific demands of the engines we work on.
             </p>
           </div>
 
@@ -382,7 +432,9 @@ export default function Home() {
       <section className="py-20 bg-slate-50 relative">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Vehicle Brands We Specialise In</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              Vehicle Brands We Specialise In
+            </h2>
             <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
           </div>
 
@@ -396,30 +448,61 @@ export default function Home() {
       {/* TRUSTED */}
       <section className="py-16 bg-white relative overflow-hidden">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">Trusted by Customers Across the UK</h2>
+          {/* Header Block */}
+          <div className="text-center max-w-full mx-auto mb-10">
+            <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900 mb-4">
+              Trusted by Customers Across the UK
+            </h2>
             <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
           </div>
 
-          <div className="max-w-3xl mx-auto text-slate-600 text-[0.95rem] leading-relaxed space-y-4">
+          {/* Full-width text wrapper changes max-w-3xl to max-w-full */}
+          <div className="max-w-full mx-auto text-slate-600 text-[1.05rem] leading-relaxed space-y-6">
             <p>
-              Vogue Technics has been building its reputation one engine at a time since we established our workshop over twenty years ago. Thousands of engine repairs, rebuilds, and replacements later, the majority of our new customers still arrive through word of mouth — the most meaningful endorsement in our trade.
+              Vogue Technics has been building its pristine industry reputation
+              one engine at a time since we established our engineering workshop
+              over twenty years ago. Thousands of complex engine repairs,
+              complete rebuilds, and vehicle replacements later, the vast
+              majority of our new client base still arrives through direct
+              personal recommendations and word of mouth. To us, a referral from
+              a satisfied vehicle owner is the absolute highest and most
+              meaningful endorsement available in our trade, and we work
+              tirelessly to earn that trust every single day.
             </p>
             <p>
-              We hold a consistently high rating on Google Reviews and Trustpilot, and as an IGA-accredited workshop we operate to a professional code of practice that gives you additional peace of mind. Whether you found us searching for a Range Rover engine specialist or were referred by a friend in Thurrock, Dartford, Romford, or Basildon — you'll receive the same honest, expert care every time.
+              We hold a consistently exceptional feedback score on Google
+              Reviews and Trustpilot, acting as an independent benchmark of our
+              transparent service standards. As an officially IGA-accredited
+              workshop (Independent Garage Association), we operate to a strict
+              professional code of practice that provides complete consumer
+              protection and additional peace of mind. Our advanced facilities
+              rival the infrastructure of main dealerships, yet we remain
+              committed to offering local accountability and highly competitive,
+              independent pricing models.
+            </p>
+            <p>
+              Whether you discovered our workshop while searching online for a
+              certified Range Rover engine specialist or were referred directly
+              by an existing client in Thurrock, Dartford, Romford, or Basildon
+              — you will receive the exact same honest, precision-guided
+              technical care every time. From initial computerized diagnostics
+              down to final multi-point quality testing, our dedication to your
+              passenger safety and vehicle mechanical performance remains
+              entirely unmatched throughout the UK.
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+          {/* Call to Actions Buttons */}
+          <div className="max-w-full mx-auto mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:01375531355"
-              className="inline-flex items-center justify-center bg-primary text-white font-bold py-3 px-6 rounded-xl hover:bg-primary-dark transition-colors"
+              className="inline-flex items-center justify-center bg-primary text-white font-bold py-3 px-8 rounded-xl hover:bg-primary-dark transition-colors shadow-md transform hover:scale-[1.02]"
             >
               Call 01375 531355
             </a>
             <Link
               href="/get-quote"
-              className="inline-flex items-center justify-center bg-white border-2 border-primary text-primary font-bold py-3 px-6 rounded-xl hover:bg-primary hover:text-white transition-colors"
+              className="inline-flex items-center justify-center bg-white border-2 border-primary text-primary font-bold py-3 px-8 rounded-xl hover:bg-primary hover:text-white transition-colors shadow-sm transform hover:scale-[1.02]"
             >
               Get Quote
             </Link>
@@ -437,10 +520,31 @@ export default function Home() {
               Ready to Talk About Your Engine? Let's Get Started.
             </h2>
             <p className="text-slate-600 text-[1.05rem] leading-relaxed">
-              If your Range Rover, Land Rover, Jaguar, Audi, or BMW is giving you engine trouble, don't leave it sitting on a driveway while you weigh up your options. The longer most engine faults are left, the more expensive they become to resolve.
+              If your Range Rover, Land Rover, Jaguar, Audi, or BMW is giving
+              you engine trouble, don't leave it sitting on a driveway while you
+              weigh up your options. The longer most engine faults are left, the
+              more expensive they become to resolve. Minor oil leaks, timing
+              chain rattles, or warning lights can quickly escalate into severe
+              structural failures if ignored, turning a straightforward repair
+              into a costly overhaul.
               <br />
               <br />
-              Call the Vogue Technics team today or submit an online quote request and we'll come back to you promptly with an honest assessment of where things stand. No pressure, no jargon   just straightforward advice from people who genuinely know these engines.
+              Whether you are facing complete engine failure, a loss of power, a
+              persistent mechanical noise, or you simply need a specialist
+              second opinion before committing to high main-dealer prices, we
+              are here to help. Our workshop is fully equipped with
+              manufacturer-level diagnostic systems, allowing us to pinpoint
+              hidden system issues and identify the exact root cause of your
+              vehicle's fault with complete precision.
+              <br />
+              <br />
+              Call the Vogue Technics team today or submit an online quote
+              request and we'll come back to you promptly with an honest
+              assessment of where things stand. No pressure, no jargon — just
+              straightforward advice from specialist technicians who genuinely
+              know these engines inside and out. We'll outline your options
+              clearly so you can make an informed choice and get your vehicle
+              back on the road safely.
             </p>
           </div>
         </div>

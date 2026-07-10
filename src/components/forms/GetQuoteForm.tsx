@@ -35,6 +35,8 @@ function validateField(name: keyof FormFields, value: string): string {
       if (!value.trim()) return "Registration number is required.";
       if (value && !/^[A-Z0-9\s]{1,10}$/.test(value))
         return "Registration must be alphanumeric only.";
+      if (value.replace(/\s/g, "").length > 7)
+        return "Registration must be 7 characters or fewer.";
       return "";
     case "name":
       if (!value.trim()) return "Full name is required.";

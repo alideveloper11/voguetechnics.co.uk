@@ -36,6 +36,8 @@ async function getSingleBlog(slug: string) {
         id: String(localMatch.id),
         slug: localMatch.slug,
         title: localMatch.title,
+        metaTitle: localMatch.metaTitle || localMatch.title,
+        metaDescription: localMatch.metaDescription || localMatch.excerpt,
         excerpt: localMatch.excerpt,
         content: localMatch.content,
         image: imagesArray[0]?.image || "",
@@ -54,8 +56,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!blog) return {};
 
   return {
-    title: `${blog.title} | Vogue Technics`,
-    description: blog.excerpt,
+    title: `${blog.metaTitle} | Vogue Technics`,
+    description: blog.metaDescription || blog.excerpt || "",
     alternates: { canonical: `/blog/${slug}` },
   };
 }

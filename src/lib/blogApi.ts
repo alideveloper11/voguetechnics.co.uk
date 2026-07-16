@@ -23,13 +23,15 @@ export type Blog = {
   title: string;
   excerpt: string;
   content?: string;
+  metaTitle?: string;
+  metaDescription?: string;
+  keyword?: string;
   image: string;
   images: BlogImage[];
   date?: string;
   category?: string;
   author?: string;
 };
-
 
 function normalise(raw: any): Blog {
   return {
@@ -66,7 +68,6 @@ export async function getBlogs(): Promise<Blog[]> {
 
     const data = await res.json();
 
-
     const blogsArray = Array.isArray(data) ? data : [];
 
     return blogsArray.map(normalise);
@@ -75,7 +76,6 @@ export async function getBlogs(): Promise<Blog[]> {
     return [];
   }
 }
-
 
 export async function fetchBlog(slug: string): Promise<Blog | null> {
   const { base, auth } = getConfig();
@@ -91,7 +91,8 @@ export async function fetchBlog(slug: string): Promise<Blog | null> {
   });
 
   if (res.status === 404) return null;
-  if (!res.ok) throw new Error(`Failed to fetch blog: ${res.status} (url: ${url})`);
+  if (!res.ok)
+    throw new Error(`Failed to fetch blog: ${res.status} (url: ${url})`);
 
   let data: unknown;
   try {
@@ -100,11 +101,10 @@ export async function fetchBlog(slug: string): Promise<Blog | null> {
     throw new Error("Blog response is not valid JSON");
   }
 
-
-  const raw = data && typeof data === "object" && (data as any).data
-
-    ? (data as any).data
-    : data;
+  const raw =
+    data && typeof data === "object" && (data as any).data
+      ? (data as any).data
+      : data;
 
   return normalise(raw);
 }

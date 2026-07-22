@@ -1,9 +1,7 @@
-"use client";
-
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import Reveal from "@/components/common/Reveal";
 import { CheckCircle2, Phone, ArrowRight } from "lucide-react";
 import PartnerLogos from "@/components/common/PartnerLogos";
 import NationwideSupportSection from "@/components/common/NationwideSupportSection";
@@ -26,7 +24,7 @@ export default function ServiceDetailClient({ service, relatedServices }: Servic
       <section className="bg-slate-900 border-b border-slate-800 py-24 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/car_bgg.jpg"
+            src="/images/car_bgg.webp"
             alt={service.title}
             fill
             className="object-cover opacity-20 filter grayscale"
@@ -71,18 +69,16 @@ export default function ServiceDetailClient({ service, relatedServices }: Servic
                  
                  <div className="grid grid-cols-1 gap-8">
                     {service.detailedParagraphs.map((para, idx) => (
-                      <motion.div 
+                      <Reveal
                         key={idx}
-                        initial={{ opacity: 0, y: 10 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: idx * 0.1 }}
+                        distance={10}
+                        delay={idx * 0.1}
                         className={`p-8 rounded-[2rem] ${idx % 2 === 0 ? 'bg-slate-50 border border-slate-100' : 'bg-white border border-slate-50 shadow-sm'}`}
                       >
                          <p className="text-slate-600 text-base md:text-lg leading-relaxed font-medium">
                             {para}
                          </p>
-                      </motion.div>
+                      </Reveal>
                     ))}
                  </div>
                </div>
@@ -166,12 +162,11 @@ export default function ServiceDetailClient({ service, relatedServices }: Servic
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                  {service.preFaqParagraphs.map((para, idx) => (
-                    <motion.div 
+                    <Reveal
                       key={idx}
-                      initial={{ opacity: 0, scale: 0.95 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: idx * 0.1 }}
+                      variant="scale"
+                      distance={0.95}
+                      delay={idx * 0.1}
                       className="bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500 group"
                     >
                        <div className="w-12 h-12 bg-slate-900 text-primary rounded-2xl mb-6 flex items-center justify-center font-black text-xl group-hover:bg-primary group-hover:text-white transition-colors duration-500">
@@ -180,7 +175,7 @@ export default function ServiceDetailClient({ service, relatedServices }: Servic
                        <p className="text-slate-600 text-sm md:text-base leading-relaxed font-semibold">
                           {para}
                        </p>
-                    </motion.div>
+                    </Reveal>
                  ))}
               </div>
            </div>

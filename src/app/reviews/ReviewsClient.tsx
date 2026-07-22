@@ -1,7 +1,7 @@
 "use client";
 
 import { Star, CheckCircle, Quote, MapPin, ArrowRight, ShieldCheck, Award, Phone } from "lucide-react";
-import { motion } from "framer-motion";
+import Reveal from "@/components/common/Reveal";
 import Image from "next/image";
 import Link from "next/link";
 import Breadcrumbs from "@/components/common/Breadcrumbs";
@@ -157,11 +157,10 @@ function ReviewCard({ review, idx }: { review: (typeof reviews)[0]; idx: number 
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6, delay: idx * 0.05 }}
+    <Reveal
+      distance={30}
+      duration={0.6}
+      delay={idx * 0.05}
       className="group relative flex flex-col rounded-[1.5rem] border border-slate-200 bg-white p-4 shadow-sm transition-all duration-500 hover:border-primary/20 hover:shadow-2xl hover:-translate-y-0.5"
     >
       <div className="absolute right-4 top-4 text-slate-100 transition-colors duration-500 group-hover:text-primary/10">
@@ -222,7 +221,7 @@ function ReviewCard({ review, idx }: { review: (typeof reviews)[0]; idx: number 
           <span className="text-[0.65rem] font-black uppercase tracking-[0.18em]">Five out of Five</span>
         </div>
       </div>
-    </motion.div>
+    </Reveal>
   );
 }
 
@@ -232,7 +231,7 @@ export default function ReviewsClient() {
       <section className="relative overflow-hidden bg-slate-900 pt-32 pb-24">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/car_bgg.jpg"
+            src="/images/car_bgg.webp"
             alt="Vogue Technics customer reviews"
             fill
             className="object-cover opacity-65 mix-blend-overlay"
@@ -245,31 +244,26 @@ export default function ReviewsClient() {
           <Breadcrumbs items={[{ name: "Customer Reviews", href: "/reviews" }]} />
 
           <div className="max-w-5xl pt-10">
-            <motion.span
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/20 px-4 py-2 text-xs font-black uppercase tracking-[0.2em] text-emerald-300 shadow-[0_0_22px_rgba(25,135,84,0.22)]"
+            <span
+              className="animate-fade-in-x inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/20 px-4 py-2 text-xs font-black uppercase tracking-[0.2em] text-emerald-300 shadow-[0_0_22px_rgba(25,135,84,0.22)]"
+              style={{ "--fade-x": "-20px" } as React.CSSProperties}
             >
               <Award className="w-4 h-4" /> Trusted Specialists
-            </motion.span>
+            </span>
 
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="mt-6 text-4xl font-black leading-[1.05] tracking-tight text-white md:text-6xl"
+            <h1
+              className="animate-fade-up mt-6 text-4xl font-black leading-[1.05] tracking-tight text-white md:text-6xl"
+              style={{ "--fade-y": "30px", "--fade-duration": "0.8s" } as React.CSSProperties}
             >
               What Our Customers Say About Vogue Technics
-            </motion.h1>
+            </h1>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="mt-6 max-w-4xl text-base leading-relaxed text-slate-300 md:text-lg"
+            <p
+              className="animate-fade-up mt-6 max-w-4xl text-base leading-relaxed text-slate-300 md:text-lg"
+              style={{ "--fade-delay": "0.2s" } as React.CSSProperties}
             >
               These are real reviews from real customers   Range Rover owners, Land Rover drivers, Jaguar enthusiasts, and Audi and BMW owners who came to us with engine problems and left with their vehicles running properly and their confidence restored. Across Google Reviews and Trustpilot, Vogue Technics holds a rating of 4.9 out of 5 from over 380 verified reviews. Read what our customers have to say, and see why drivers across  and beyond keep choosing us.
-            </motion.p>
+            </p>
           </div>
         </div>
       </section>

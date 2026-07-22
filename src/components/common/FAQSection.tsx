@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, HelpCircle } from "lucide-react";
 
 const faqs = [
@@ -69,20 +68,17 @@ const FAQItem = ({ question, answer, isOpen, onClick }: { question: string, answ
         </div>
         <ChevronDown className={`w-6 h-6 text-slate-400 transition-transform duration-300 shrink-0 ${isOpen ? 'rotate-180 text-primary' : 'rotate-0'}`} />
       </button>
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-          >
-            <div className="px-6 md:px-8 pb-8 text-slate-600 leading-relaxed text-base md:pl-20">
-              {answer}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <div
+        className={`grid transition-[grid-template-rows,opacity] duration-300 ease-in-out ${
+          isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+        }`}
+      >
+        <div className="overflow-hidden">
+          <div className="px-6 md:px-8 pb-8 text-slate-600 leading-relaxed text-base md:pl-20">
+            {answer}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

@@ -1,6 +1,4 @@
-"use client";
-
-import { motion } from "framer-motion";
+import Reveal from "@/components/common/Reveal";
 
 type Highlight = {
   title: string;
@@ -42,12 +40,11 @@ export default function AreasDetailHighlightsSection({
 
         <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
           {highlights.map((highlight, index) => (
-            <motion.article
+            <Reveal
               key={highlight.title}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.35, delay: index * 0.08 }}
+              distance={16}
+              duration={0.35}
+              delay={index * 0.08}
               className="rounded-2xl border border-slate-200 bg-slate-50 p-5 shadow-sm"
             >
               <h3 className="text-base font-black tracking-tight text-slate-900">
@@ -56,7 +53,7 @@ export default function AreasDetailHighlightsSection({
               <p className="mt-2 text-sm leading-6 text-slate-600">
                 {highlight.description}
               </p>
-            </motion.article>
+            </Reveal>
           ))}
         </div>
       </div>

@@ -44,7 +44,7 @@ const faqs = [
   {
     question: "How long does a Jaguar E-Pace engine rebuild take?",
     answer:
-      "Most Ingenium rebuilds are typically completed within 7Ã¢â‚¬â€œ10 working days depending on parts required and the extent of internal work identified during strip-down.",
+      "Most Ingenium rebuilds are typically completed within 7–10 working days depending on parts required and the extent of internal work identified during strip-down.",
   },
   {
     question: "Can you collect my engine from anywhere in the UK?",
@@ -58,7 +58,7 @@ export default function JaguarEPaceEnginesPage() {
     <div className="bg-white min-h-screen">
       <section className="relative overflow-hidden bg-slate-900 pt-32 pb-24">
         <div className="absolute inset-0 z-0">
-          <Image src="/images/car_bgg.jpg" alt="Jaguar E-Pace engine rebuild specialists in " fill className="object-cover opacity-65 mix-blend-overlay" priority />
+          <Image src="/images/car_bgg.webp" alt="Jaguar E-Pace engine rebuild specialists in " fill className="object-cover opacity-65 mix-blend-overlay" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-slate-950/70 via-slate-900/35 to-slate-900/10" />
         </div>
         <div className="container relative z-10 mx-auto px-4 lg:px-8">
@@ -68,7 +68,7 @@ export default function JaguarEPaceEnginesPage() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-300 to-green-400">Jaguar E-Pace Engine Rebuild</span>{" "}
                 Ingenium 2.0 Supply, Reconditioning & Fit Across the UK
             </h1>
-            <div className="mt-6 flex justify-center">
+            <div className="mt-6 flex flex-col items-center">
               <RegSearch className="max-w-3xl" />
             <HeroTrustLabels className="mt-4" />
             </div>
@@ -149,12 +149,12 @@ export default function JaguarEPaceEnginesPage() {
         </div>
       </section>
 
-      <FAQSection title={<>Frequently Asked Questions   <span className="text-primary italic">Jaguar EÃ¢â‚¬â€˜Pace</span></>} items={faqs} />
+      <FAQSection title={<>Frequently Asked Questions   <span className="text-primary italic">Jaguar E-Pace</span></>} items={faqs} />
 
       <section className="py-16 md:py-20 bg-primary text-white">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-5xl mx-auto text-center space-y-6">
-            <h2 className="text-2xl md:text-3xl font-extrabold leading-tight">Need an EÃ¢â‚¬â€˜Pace Ingenium rebuild?</h2>
+            <h2 className="text-2xl md:text-3xl font-extrabold leading-tight">Need an E-Pace Ingenium rebuild?</h2>
             
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <a href="tel:01375531355" className="inline-flex items-center justify-center rounded-2xl bg-white px-5 py-2.5 text-sm font-bold text-primary shadow-xl transition-all hover:bg-slate-50 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99]">

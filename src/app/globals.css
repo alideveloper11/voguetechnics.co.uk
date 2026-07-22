@@ -25,6 +25,67 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+/*
+ * CSS replacements for framer-motion's one-time "fade in on mount" pattern
+ * (initial={{opacity:0, y/x/scale}} animate={{opacity:1, y/x/scale: 0/1}}).
+ * Distance/scale/duration/delay are tuned per-use via CSS custom properties
+ * set inline, so one keyframe set covers every variant with zero JS.
+ */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(var(--fade-y, 20px));
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-x {
+  from {
+    opacity: 0;
+    transform: translateX(var(--fade-x, -20px));
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-in-scale {
+  from {
+    opacity: 0;
+    transform: scale(var(--fade-scale, 0.95));
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@utility animate-fade-up {
+  animation: fade-in-up var(--fade-duration, 0.5s) var(--fade-ease, ease-out) var(--fade-delay, 0s) both;
+}
+
+@utility animate-fade-in-x {
+  animation: fade-in-x var(--fade-duration, 0.5s) var(--fade-ease, ease-out) var(--fade-delay, 0s) both;
+}
+
+@utility animate-fade-scale {
+  animation: fade-in-scale var(--fade-duration, 0.5s) var(--fade-ease, ease-out) var(--fade-delay, 0s) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up,
+  .animate-fade-in-x,
+  .animate-fade-scale {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
 :root {
   --background: #f8fafc;
   --foreground: #0f172a;

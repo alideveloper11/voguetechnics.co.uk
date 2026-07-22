@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
 
@@ -11,7 +12,13 @@ export default function Footer() {
           {/* Brand Info */}
           <div className="space-y-4">
             <Link href="/" className="inline-block">
-              <img src="/images/logo.png" alt="Vogue Technics" className="h-12 w-auto object-contain brightness-0 invert opacity-90 hover:opacity-100 transition-opacity" />
+              <Image
+                src="/images/logo.png"
+                alt="Vogue Technics"
+                width={142}
+                height={35}
+                className="h-12 w-auto object-contain brightness-0 invert opacity-90 hover:opacity-100 transition-opacity"
+              />
             </Link>
             <p className="text-slate-400 mt-4 max-w-sm">
               Experience the Vogue Technics difference with top-quality reconditioned and used Range Rover engines. Our expert service will get your vehicle back on the road.

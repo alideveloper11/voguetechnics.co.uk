@@ -1,11 +1,8 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { ArrowRight, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { services } from "@/data/servicesData";
-import React from 'react';
+import Reveal from "@/components/common/Reveal";
 
 interface ServicesSectionProps {
   limit?: number;
@@ -21,40 +18,26 @@ export default function ServicesSection({ limit, showTitle = true, sectionClassN
       <div className="container mx-auto px-4 lg:px-8">
         {showTitle && (
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <motion.h2 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6 uppercase tracking-tight italic leading-none"
-            >
-              Our Specialist <span className="text-primary italic">Services</span>
-            </motion.h2>
-            <motion.div 
-              initial={{ opacity: 0, width: 0 }}
-              whileInView={{ opacity: 1, width: 96 }}
-              viewport={{ once: true }}
-              className="h-1 bg-primary mx-auto rounded-full mb-8"
-            ></motion.div>
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="text-slate-600 text-lg font-medium"
-            >
-              Vogue Technics provides a full suite of engine specialty services to keep your vehicle in peak condition.
-            </motion.p>
+            <Reveal className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6 uppercase tracking-tight italic leading-none">
+              <h2>
+                Our Specialist <span className="text-primary italic">Services</span>
+              </h2>
+            </Reveal>
+            <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-8"></div>
+            <Reveal delay={0.1} className="text-slate-600 text-lg font-medium">
+              <p>
+                Vogue Technics provides a full suite of engine specialty services to keep your vehicle in peak condition.
+              </p>
+            </Reveal>
           </div>
         )}
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {displayedServices.map((service, idx) => (
-            <motion.div
+            <Reveal
               key={service.slug}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
+              delay={idx * 0.1}
+              duration={0.5}
               className="group relative bg-slate-50 border border-slate-100 rounded-[1.5rem] hover:bg-white hover:shadow-2xl hover:border-primary/20 transition-all duration-500 overflow-hidden flex flex-col h-full"
             >
               {/* Service Image */}
@@ -97,25 +80,21 @@ export default function ServicesSection({ limit, showTitle = true, sectionClassN
                 {/* Background Accent */}
                 <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-primary/5 rounded-full group-hover:scale-150 transition-transform duration-700 opacity-0 group-hover:opacity-100 blur-2xl"></div>
               </div>
-            </motion.div>
+            </Reveal>
           ))}
         </div>
 
         {limit && (
           <div className="mt-16 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
-              <Link 
-                href="/services" 
+            <Reveal>
+              <Link
+                href="/services"
                 className="inline-flex items-center gap-3 bg-white border-2 border-primary text-primary px-10 py-5 rounded-2xl font-black text-sm tracking-widest uppercase hover:bg-primary hover:text-white transition-all shadow-lg hover:-translate-y-1 active:scale-95 group"
               >
                 <span>View All 9 Specialist Services</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
-            </motion.div>
+            </Reveal>
           </div>
         )}
       </div>

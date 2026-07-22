@@ -1,8 +1,5 @@
-"use client";
-
 import { ChevronRight, Home } from "lucide-react";
 import Link from "next/link";
-import { motion } from "framer-motion";
 
 interface BreadcrumbItem {
   name: string;
@@ -15,10 +12,9 @@ interface BreadcrumbsProps {
 
 export default function Breadcrumbs({ items }: BreadcrumbsProps) {
   return (
-    <motion.nav 
-      initial={{ opacity: 0, y: -10 }}
-      animate={{ opacity: 1, y: 0 }}
-      className="mb-8 flex flex-wrap items-center gap-x-2 gap-y-2 overflow-hidden text-sm font-medium tracking-tight text-slate-400"
+    <nav
+      className="animate-fade-up mb-8 flex flex-wrap items-center gap-x-2 gap-y-2 overflow-hidden text-sm font-medium tracking-tight text-slate-400"
+      style={{ "--fade-y": "-10px" } as React.CSSProperties}
     >
       <Link
         href="/"
@@ -45,6 +41,6 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
           )}
         </div>
       ))}
-    </motion.nav>
+    </nav>
   );
 }

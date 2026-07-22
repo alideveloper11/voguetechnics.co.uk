@@ -23,7 +23,7 @@ export default function EngineRebuildPage() {
       <section className="bg-slate-900 border-b border-slate-800 py-24 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/car_bgg.jpg"
+            src="/images/car_bgg.webp"
             alt="Engine rebuild specialists"
             fill
             className="object-cover opacity-20 filter grayscale"
@@ -83,9 +83,9 @@ export default function EngineRebuildPage() {
         title="Engine Rebuild Work"
         subtitle="A look at some of the engine rebuild jobs carried out at our workshop."
         images={[
-          { src: "/engine_rebuild/engine_rebuild%201.png", alt: "Engine rebuild 1" },
-          { src: "/engine_rebuild/engine_rebuild%202.png", alt: "Engine rebuild 2" },
-          { src: "/engine_rebuild/engine_rebuild%203.png", alt: "Engine rebuild 3" },
+          { src: "/engine_rebuild/engine_rebuild%201.webp", alt: "Engine rebuild 1" },
+          { src: "/engine_rebuild/engine_rebuild%202.webp", alt: "Engine rebuild 2" },
+          { src: "/engine_rebuild/engine_rebuild%203.webp", alt: "Engine rebuild 3" },
         ]}
       />
 
@@ -392,8 +392,8 @@ export default function EngineRebuildPage() {
           </div>
 
           <div className="mt-8 text-white/90 font-black uppercase tracking-widest text-[0.65rem]">
-            Vogue Technics | Engine Rebuild Specialists |  | UK-Wide Collection &nbsp; Range Rover Ã¢â‚¬Â¢ Land Rover Ã¢â‚¬Â¢ Jaguar
-            Ã¢â‚¬Â¢ Audi Ã¢â‚¬Â¢ BMW
+            Vogue Technics | Engine Rebuild Specialists |  | UK-Wide Collection &nbsp; Range Rover • Land Rover • Jaguar
+            • Audi • BMW
           </div>
         </div>
       </section>

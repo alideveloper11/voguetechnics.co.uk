@@ -72,10 +72,6 @@ function sanitizeContent(html: string): string {
     .trim();
 }
 
-function stripFigures(html: string): string {
-  return html.replace(/<figure[\s\S]*?<\/figure>/gi, "");
-}
-
 function splitIntoThree(html: string): [string, string, string] {
   const parts = html.split(/(?=<h2\b)/i).filter((s) => s.trim());
   const total = parts.length;
@@ -101,8 +97,7 @@ export default async function BlogDetail({ params }: Props) {
   if (!blog) notFound();
 
   const clean = sanitizeContent(blog.content || "");
-  const textOnly = stripFigures(clean);
-  const [sec1, sec2, sec3] = splitIntoThree(textOnly);
+  const [sec1, sec2, sec3] = splitIntoThree(clean);
 
   const bannerImage = blog.image || blog.images?.[0]?.image || "";
   const extraImages = blog.images?.slice(1) || [];

@@ -23,7 +23,7 @@ export default function EngineHealthCheckPage() {
       <section className="bg-slate-900 border-b border-slate-800 py-24 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/car_bgg.jpg"
+            src="/images/car_bgg.webp"
             alt="Engine health check specialists"
             fill
             className="object-cover opacity-20 filter grayscale"
@@ -83,10 +83,10 @@ export default function EngineHealthCheckPage() {
         title="Engine Health Check Work"
         subtitle="A look at some of the engine health checks and diagnostics carried out at our workshop."
         images={[
-          { src: "/engine_repair/engine_repair%201.png", alt: "Engine health check 1" },
-          { src: "/engine_repair/engine_repair%202.png", alt: "Engine health check 2" },
-          { src: "/engine_repair/engine_repair%203.png", alt: "Engine health check 3" },
-          { src: "/engine_repair/engine_repair%204.png", alt: "Engine health check 4" },
+          { src: "/engine_repair/engine_repair%201.webp", alt: "Engine health check 1" },
+          { src: "/engine_repair/engine_repair%202.webp", alt: "Engine health check 2" },
+          { src: "/engine_repair/engine_repair%203.webp", alt: "Engine health check 3" },
+          { src: "/engine_repair/engine_repair%204.webp", alt: "Engine health check 4" },
         ]}
       />
 
@@ -144,7 +144,7 @@ export default function EngineHealthCheckPage() {
               A health check is essential when a warning light has appeared, when you're buying a used prestige vehicle and want confidence before committing, or when your engine has started consuming more oil, running roughly, or making noises that weren't there before.
             </p>
             <p>
-              It's also the right step before a high-mileage service interval Ã¢â‚¬â€ giving you clarity on the engine's actual condition before work begins.
+              It's also the right step before a high-mileage service interval — giving you clarity on the engine's actual condition before work begins.
             </p>
             <div className="pt-6">
               <Link href="/contact-us" className="inline-flex items-center gap-2 text-primary font-black text-xs tracking-widest uppercase">
@@ -347,8 +347,8 @@ export default function EngineHealthCheckPage() {
           </div>
 
           <div className="mt-8 text-white/90 font-black uppercase tracking-widest text-[0.65rem]">
-            Vogue Technics | Engine Health Check Specialists |  | UK-Wide Collection &nbsp; Range Rover Ã¢â‚¬Â¢ Land Rover Ã¢â‚¬Â¢
-            Jaguar Ã¢â‚¬Â¢ Audi Ã¢â‚¬Â¢ BMW
+            Vogue Technics | Engine Health Check Specialists |  | UK-Wide Collection &nbsp; Range Rover • Land Rover •
+            Jaguar • Audi • BMW
           </div>
         </div>
       </section>

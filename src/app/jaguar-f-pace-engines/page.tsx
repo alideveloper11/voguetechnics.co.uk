@@ -39,7 +39,7 @@ const faqs = [
   {
     question: "How long does a rebuild take?",
     answer:
-      "Ingenium rebuilds typically take 7Ã¢â‚¬â€œ10 working days. Larger V6/V8 jobs can take longer depending on parts and machining requirements. We confirm timelines at booking and keep you updated.",
+      "Ingenium rebuilds typically take 7–10 working days. Larger V6/V8 jobs can take longer depending on parts and machining requirements. We confirm timelines at booking and keep you updated.",
   },
   {
     question: "Can you collect my engine from anywhere in the UK?",
@@ -53,7 +53,7 @@ export default function JaguarFPaceEnginesPage() {
     <div className="bg-white min-h-screen">
       <section className="relative overflow-hidden bg-slate-900 pt-32 pb-24">
         <div className="absolute inset-0 z-0">
-          <Image src="/images/car_bgg.jpg" alt="Jaguar F-Pace engine specialists in " fill className="object-cover opacity-65 mix-blend-overlay" priority />
+          <Image src="/images/car_bgg.webp" alt="Jaguar F-Pace engine specialists in " fill className="object-cover opacity-65 mix-blend-overlay" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-slate-950/70 via-slate-900/35 to-slate-900/10" />
         </div>
         <div className="container relative z-10 mx-auto px-4 lg:px-8">
@@ -63,7 +63,7 @@ export default function JaguarFPaceEnginesPage() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-300 to-green-400">Jaguar F-Pace Engine</span>{" "}
                 Supply, Rebuild & Fit by Specialist Engineers in 
             </h1>
-            <div className="mt-6 flex justify-center">
+            <div className="mt-6 flex flex-col items-center">
               <RegSearch className="max-w-3xl" />
             <HeroTrustLabels className="mt-4" />
             </div>
@@ -105,10 +105,10 @@ export default function JaguarFPaceEnginesPage() {
                 same specialist process and returned with clear documentation and warranty terms.
               </p>
               <div className="mt-6 rounded-2xl border border-slate-200 bg-slate-50 p-5">
-                <div className="text-slate-800 font-black tracking-wide">Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦Ã¢Ëœâ€¦</div>
+                <div className="text-slate-800 font-black tracking-wide">★★★★★</div>
                 <p className="mt-3 text-slate-700 leading-relaxed italic">
-                  Ã¢â‚¬Å“The turbocharger on my F-Pace went without much warningÃ¢â‚¬Â¦ Vogue Technics arranged collection from Yorkshire, the diagnostic report was
-                  clear, and the work has been faultless since.Ã¢â‚¬Â
+                  “The turbocharger on my F-Pace went without much warning… Vogue Technics arranged collection from Yorkshire, the diagnostic report was
+                  clear, and the work has been faultless since.”
                 </p>
                 <div className="mt-4 text-sm font-bold text-slate-900">Sarah L.   Jaguar F-Pace 3.0 V6 Diesel</div>
               </div>
@@ -137,21 +137,21 @@ export default function JaguarFPaceEnginesPage() {
             <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
               <h3 className="font-bold text-slate-900">Emergency fitting slots</h3>
               <p className="mt-3 text-slate-700 leading-relaxed">
-                SameÃ¢â‚¬â€˜day diagnostics + priority sourcing available for urgent failures.
+                Same-day diagnostics + priority sourcing available for urgent failures.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <FAQSection title={<>Frequently Asked Questions   <span className="text-primary italic">Jaguar FÃ¢â‚¬â€˜Pace Engine</span></>} items={faqs} />
+      <FAQSection title={<>Frequently Asked Questions   <span className="text-primary italic">Jaguar F-Pace Engine</span></>} items={faqs} />
 
       <section className="py-16 md:py-20 bg-primary text-white">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-5xl mx-auto text-center space-y-6">
-            <h2 className="text-3xl md:text-4xl font-extrabold leading-tight">Need help with your FÃ¢â‚¬â€˜Pace engine?</h2>
+            <h2 className="text-3xl md:text-4xl font-extrabold leading-tight">Need help with your F-Pace engine?</h2>
             <p className="text-emerald-50 leading-relaxed max-w-4xl mx-auto">
-              Call our  team for a fast, noÃ¢â‚¬â€˜obligation quote   supplyÃ¢â‚¬â€˜only or supply & fit, with warranty cover.
+              Call our  team for a fast, no-obligation quote   supply-only or supply & fit, with warranty cover.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <a href="tel:01375531355" className="inline-flex items-center justify-center rounded-2xl bg-white px-5 py-2.5 text-sm font-bold text-primary shadow-xl transition-all hover:bg-slate-50 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99]">

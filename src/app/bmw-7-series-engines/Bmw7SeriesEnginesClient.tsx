@@ -1,11 +1,8 @@
-"use client";
-
 import Breadcrumbs from "@/components/common/Breadcrumbs";
 import FAQSection from "@/components/common/FAQSection";
 import PartnerLogos from "@/components/common/PartnerLogos";
 import RegSearch from "@/components/common/RegSearch";
 import HeroTrustLabels from "@/components/common/HeroTrustLabels";
-import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -217,7 +214,7 @@ export default function Bmw7SeriesEnginesClient() {
       <section className="relative min-h-[70vh] flex flex-col justify-center overflow-hidden bg-slate-900 pt-32 pb-20">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/car_bgg.jpg"
+            src="/images/car_bgg.webp"
             alt="BMW 7 Series Engine Specialists"
             fill
             className="object-cover opacity-65 mix-blend-overlay"
@@ -235,35 +232,29 @@ export default function Bmw7SeriesEnginesClient() {
           />
 
           <div className="text-center max-w-5xl mx-auto">
-            <motion.span
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="inline-block py-1.5 px-4 rounded-full bg-primary/20 text-emerald-300 font-semibold tracking-wide text-sm mb-6 border border-primary/30 shadow-[0_0_15px_rgba(25,135,84,0.25)]"
+            <span
+              className="animate-fade-up inline-block py-1.5 px-4 rounded-full bg-primary/20 text-emerald-300 font-semibold tracking-wide text-sm mb-6 border border-primary/30 shadow-[0_0_15px_rgba(25,135,84,0.25)]"
             >
               BMW 7 Series Specialists (UK)
-            </motion.span>
+            </span>
 
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-emerald-50 tracking-tight mb-6 leading-tight"
+            <h1
+              className="animate-fade-up text-3xl md:text-4xl lg:text-5xl font-extrabold text-emerald-50 tracking-tight mb-6 leading-tight"
+              style={{ "--fade-delay": "0.1s" } as React.CSSProperties}
             >
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 via-green-400 to-lime-300">
                 BMW 7 Series Engine Rebuild
               </span>{" "}
                 Flagship Specialist, Full Reconditioning &amp; Engine Services Across the UK
-            </motion.h1>
+            </h1>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.18 }}
-              className="mt-6 mb-8 flex w-full flex-col items-center justify-center"
+            <div
+              className="animate-fade-up mt-6 mb-8 flex w-full flex-col items-center justify-center"
+              style={{ "--fade-delay": "0.18s" } as React.CSSProperties}
             >
               <RegSearch />
             <HeroTrustLabels className="mt-4" />
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>

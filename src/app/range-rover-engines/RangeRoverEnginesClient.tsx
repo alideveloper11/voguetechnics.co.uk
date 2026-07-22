@@ -1,10 +1,8 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, Phone, Star } from "lucide-react";
 import PartnerLogos from "@/components/common/PartnerLogos";
-import { motion } from "framer-motion";
+import Reveal from "@/components/common/Reveal";
 import Breadcrumbs from "@/components/common/Breadcrumbs";
 import RegSearch from "@/components/common/RegSearch";
 import HeroTrustLabels from "@/components/common/HeroTrustLabels";
@@ -111,7 +109,7 @@ export default function RangeRoverEnginesClient() {
       <section className="relative overflow-hidden bg-slate-900 pt-32 pb-24">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/car_bgg.jpg"
+            src="/images/car_bgg.webp"
             alt="Range Rover engine specialist in "
             fill
             className="object-cover opacity-65 mix-blend-overlay"
@@ -124,35 +122,29 @@ export default function RangeRoverEnginesClient() {
           <Breadcrumbs items={[{ name: "Range Rover Engines", href: "/range-rover-engines" }]} />
           
           <div className="max-w-4xl mx-auto pt-8 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="flex justify-center"
+            <div
+              className="animate-fade-up flex justify-center"
             >
               <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/20 px-4 py-2 text-xs font-black uppercase tracking-[0.2em] text-emerald-300 shadow-[0_0_22px_rgba(25,135,84,0.22)]">
                 Range Rover Engine Specialist   , UK
               </span>
-            </motion.div>
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              className="mt-6 text-3xl font-black leading-[1.08] tracking-tight text-white md:text-5xl"
+            </div>
+            <h1
+              className="animate-fade-up mt-6 text-3xl font-black leading-[1.08] tracking-tight text-white md:text-5xl"
+              style={{ "--fade-delay": "0.1s" } as React.CSSProperties}
             >
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-300 to-green-400">
                 Range Rover Engine Specialist in , UK
               </span>{" "}
               – Expert Rebuilds, Repairs & Replacements
-            </motion.h1>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="mt-7"
+            </h1>
+            <div
+              className="animate-fade-up mt-7"
+              style={{ "--fade-delay": "0.2s" } as React.CSSProperties}
             >
               <RegSearch className="max-w-3xl mx-auto" />
             <HeroTrustLabels className="mt-4" />
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -289,12 +281,10 @@ export default function RangeRoverEnginesClient() {
                 by: "  James T., Basildon",
               },
             ].map((t, idx) => (
-              <motion.div
+              <Reveal
                 key={t.by}
-                initial={{ opacity: 0, y: 12 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.05 * idx }}
+                distance={12}
+                delay={0.05 * idx}
                 className="h-full"
               >
                 <div className="h-full rounded-[2rem] border border-white/10 bg-white/5 p-7 shadow-[0_25px_60px_-30px_rgba(0,0,0,0.8)] backdrop-blur-md">
@@ -306,7 +296,7 @@ export default function RangeRoverEnginesClient() {
                   <p className="mt-4 text-slate-100/90 leading-relaxed italic">{t.quote}</p>
                   <p className="mt-5 text-xs font-bold uppercase tracking-[0.18em] text-slate-300/70">{t.by}</p>
                 </div>
-              </motion.div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -326,12 +316,12 @@ export default function RangeRoverEnginesClient() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {rangeRoverModels.map((model, idx) => (
-              <motion.div
+              <Reveal
                 key={idx}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.3, delay: idx * 0.02 }}
+                variant="scale"
+                distance={0.95}
+                duration={0.3}
+                delay={idx * 0.02}
               >
                 <Link href={model.link} className="group block h-full">
                   <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-xl hover:border-primary/50 transition-all duration-300 h-full flex flex-col justify-between relative overflow-hidden">
@@ -356,7 +346,7 @@ export default function RangeRoverEnginesClient() {
                     </div>
                   </div>
                 </Link>
-              </motion.div>
+              </Reveal>
             ))}
           </div>
         </div>

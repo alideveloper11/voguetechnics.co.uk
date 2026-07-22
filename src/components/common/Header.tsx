@@ -1,8 +1,8 @@
 "use client";
 
 import clsx from "clsx";
-import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown, Menu, Phone, X } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation"; // Added to track current URL
 import { useEffect, useState } from "react";
@@ -51,9 +51,12 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 shrink-0">
             <div className="py-2">
-              <img
+              <Image
                 src="/images/logo.png"
                 alt="Vogue Technics"
+                width={142}
+                height={35}
+                priority
                 className="h-10 md:h-12 w-auto object-contain brightness-0 invert"
               />
             </div>
@@ -154,15 +157,14 @@ export default function Header() {
       </div>
 
       {/* Mobile Drawer Dropdown Panel */}
-      <AnimatePresence>
-        {mobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -15 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -15 }}
-            transition={{ duration: 0.25, ease: "easeInOut" }}
-            className="lg:hidden bg-[#146c43] border-b border-[#146c43] absolute top-full left-0 w-full h-[calc(100vh-100%)] overflow-y-auto shadow-2xl [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
-          >
+      <div
+        aria-hidden={!mobileMenuOpen}
+        inert={!mobileMenuOpen}
+        className={clsx(
+          "lg:hidden bg-[#146c43] border-b border-[#146c43] absolute top-full left-0 w-full h-[calc(100vh-100%)] overflow-y-auto shadow-2xl transition-all duration-250 ease-in-out [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]",
+          mobileMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 pointer-events-none"
+        )}
+      >
             <div className="flex flex-col p-4 space-y-4 text-white">
               <div className="flex flex-col space-y-2 pb-4 border-b border-white/20">
                 <Link
@@ -252,9 +254,7 @@ export default function Header() {
                 </a>
               </div>
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      </div>
     </header>
   );
 }

@@ -1,9 +1,6 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { Phone } from "lucide-react";
-import { motion } from "framer-motion";
 import Breadcrumbs from "@/components/common/Breadcrumbs";
 import RegSearch from "@/components/common/RegSearch";
 import HeroTrustLabels from "@/components/common/HeroTrustLabels";
@@ -50,7 +47,7 @@ export default function JaguarXFEnginesClient({ engineCodes }: JaguarXFEnginesCl
       <section className="relative overflow-hidden bg-slate-900 pt-32 pb-24">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/car_bgg.jpg"
+            src="/images/car_bgg.webp"
             alt="Jaguar XF engine specialists in "
             fill
             className="object-cover opacity-65 mix-blend-overlay"
@@ -67,26 +64,23 @@ export default function JaguarXFEnginesClient({ engineCodes }: JaguarXFEnginesCl
             ]}
           />
           <div className="max-w-3xl mx-auto text-center pt-8">
-            <motion.h1
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="text-2xl font-black leading-[1.1] tracking-tight text-white md:text-4xl"
+            <h1
+              className="animate-fade-up text-2xl font-black leading-[1.1] tracking-tight text-white md:text-4xl"
+              style={{ "--fade-y": "18px" } as React.CSSProperties}
             >
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-300 to-green-400">
                 Jaguar XF Engine Rebuild
               </span>{" "}
                 Specialist Engine Repairs, Reconditioning & Replacements Across the UK
-            </motion.h1>
+            </h1>
 
-            <motion.div
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.12 }}
-              className="mt-6 flex justify-center"
+            <div
+              className="mt-6 flex flex-col items-center animate-fade-up"
+              style={{ "--fade-y": "18px", "--fade-delay": "0.12s" } as React.CSSProperties}
             >
               <RegSearch className="max-w-3xl" />
             <HeroTrustLabels className="mt-4" />
-            </motion.div>
+            </div>
 
           </div>
         </div>

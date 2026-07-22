@@ -49,7 +49,7 @@ export default function JaguarXKREnginesPage() {
       <section className="relative overflow-hidden bg-slate-900 pt-32 pb-24">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/car_bgg.jpg"
+            src="/images/car_bgg.webp"
             alt="Jaguar XKR engine specialists in "
             fill
             className="object-cover opacity-65 mix-blend-overlay"
@@ -77,7 +77,7 @@ export default function JaguarXKREnginesPage() {
             </h1>
 
             <div
-              className="mt-6 flex justify-center"
+              className="mt-6 flex flex-col items-center"
             >
               <RegSearch className="max-w-3xl" />
             <HeroTrustLabels className="mt-4" />
@@ -96,7 +96,7 @@ export default function JaguarXKREnginesPage() {
             </div>
             <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
               <h3 className="font-bold text-slate-900">Diagnostics in </h3>
-              <p className="mt-3 text-slate-700 leading-relaxed">SameÃ¢â‚¬â€˜day diagnostics to confirm the exact failure before replacement decisions.</p>
+              <p className="mt-3 text-slate-700 leading-relaxed">Same-day diagnostics to confirm the exact failure before replacement decisions.</p>
             </div>
             <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
               <h3 className="font-bold text-slate-900">Supply & Fit Available</h3>

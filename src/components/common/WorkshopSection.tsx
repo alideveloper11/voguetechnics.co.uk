@@ -1,9 +1,6 @@
-"use client";
-
 import { MapPin, Phone, Mail, Clock, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
 
 const WorkshopSection = () => {
   return (
@@ -70,16 +67,15 @@ const WorkshopSection = () => {
 
           {/* RIGHT SIDE: MAP & CONTACT */}
           <div className="w-full lg:w-1/2 relative flex justify-center lg:justify-end">
-            <motion.div 
-              style={{ rotate: 2 }}
-              whileHover={{ rotate: 0 }}
-              className="relative w-full max-w-[550px] aspect-[16/11] rounded-[3rem] overflow-hidden shadow-2xl border-[12px] border-white transition-all duration-700 bg-white"
+            <div
+              className="relative w-full max-w-[550px] aspect-[16/11] rounded-[3rem] overflow-hidden shadow-2xl border-[12px] border-white transition-transform duration-700 bg-white rotate-2 hover:rotate-0"
             >
-              <Image 
-                src="/images/workshop_map.png" 
-                alt="Vogue Technics Workshop Location" 
-                fill 
-                className="object-cover" 
+              <Image
+                src="/images/workshop_map.png"
+                alt="Vogue Technics Workshop Location"
+                fill
+                sizes="(min-width: 1024px) 550px, 100vw"
+                className="object-cover"
               />
               
               {/* GOOGLE MAPS STYLE CARD */}
@@ -103,7 +99,7 @@ const WorkshopSection = () => {
                     </a>
                  </div>
               </div>
-            </motion.div>
+            </div>
           </div>
 
         </div>

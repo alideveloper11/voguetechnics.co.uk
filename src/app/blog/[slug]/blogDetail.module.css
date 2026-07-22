@@ -142,6 +142,25 @@
   border: 1px solid #e2e8f0;
 }
 
+/* FIGURES — the API wraps inline images as <figure class="image"><img></figure>;
+   reset the browser default margin so the img's own margin controls spacing. */
+.blogContent figure {
+  margin: 0;
+}
+
+.blogContent figure img {
+  margin: 2.5rem auto;
+  display: block;
+}
+
+.blogContent figcaption {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #64748b; /* slate-500 */
+  margin-top: -1.5rem;
+  margin-bottom: 2rem;
+}
+
 /* BLOCKQUOTE */
 .blogContent blockquote {
   border-left: 4px solid #0284c7;

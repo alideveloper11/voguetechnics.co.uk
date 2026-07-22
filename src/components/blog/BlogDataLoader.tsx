@@ -7,6 +7,7 @@ import {
   ChevronRight,
   Calendar,
   User,
+  ImageOff,
 } from "lucide-react";
 import localBlogs from "@/data/blogs.json";
 import { getBlogs } from "@/lib/blogApi";
@@ -77,15 +78,23 @@ export default async function BlogDataLoader({ currentPage }: LoaderProps) {
               className="relative bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col group h-full"
             >
               {/* Image Container */}
-              <div className="relative aspect-[16/8] overflow-hidden bg-slate-100">
-                <Image
-                  src={imageUrl}
-                  alt={blog.title}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="relative aspect-video overflow-hidden bg-slate-100">
+                {imageUrl ? (
+                  <>
+                    <Image
+                      src={imageUrl}
+                      alt={blog.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </>
+                ) : (
+                  <div className="absolute inset-0 flex items-center justify-center text-slate-300">
+                    <ImageOff className="w-10 h-10" />
+                  </div>
+                )}
               </div>
 
               {/* Content Container */}

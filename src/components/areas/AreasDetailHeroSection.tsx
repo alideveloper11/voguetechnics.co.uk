@@ -17,7 +17,7 @@ export default function AreasDetailHeroSection({ area }: AreasDetailHeroSectionP
     <section className="relative overflow-hidden bg-white pt-28 pb-20">
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/car_bgg.jpg"
+          src="/images/car_bgg.webp"
           alt={area.name}
           fill
           priority

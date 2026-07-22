@@ -86,6 +86,7 @@ export default function VicProfilePage() {
                   src={author.image}
                   alt={author.name}
                   fill
+                  sizes="(min-width: 768px) 320px, 224px"
                   className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
                 />
               </div>

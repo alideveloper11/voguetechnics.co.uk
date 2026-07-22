@@ -23,7 +23,7 @@ export default function LandRoverEngineSizePage({ data }: LandRoverEngineSizePag
       <section className="relative overflow-hidden bg-slate-900 pt-32 pb-24">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/car_bgg.jpg"
+            src="/images/car_bgg.webp"
             alt={`${data.title} specialist`}
             fill
             className="object-cover opacity-65 mix-blend-overlay"

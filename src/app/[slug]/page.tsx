@@ -7,8 +7,7 @@ import ReviewsSection from "@/components/common/ReviewsSection";
 import { notFound } from "next/navigation";
 import Breadcrumbs from "@/components/common/Breadcrumbs";
 import FAQSection from "@/components/common/FAQSection";
-import EngineCodesTable, { type EngineRow } from "@/components/common/EngineCodesTable";
-import engineCodesData from "@/data/engineCodesData.json";
+import RegNumberInput from "@/components/common/RegNumberInput";
 
 type ModelPageContent = {
   metaTitle: string;
@@ -28,13 +27,6 @@ type EngineSizeSpec = {
   complexityNote: string;
   priceGuide: string;
 };
-
-type EngineCodesEntry = {
-  title: string;
-  rows: EngineRow[];
-};
-
-const engineCodesBySlug = engineCodesData as Record<string, EngineCodesEntry>;
 
 const audiEngineSizeSpecs: EngineSizeSpec[] = [
   {
@@ -3821,8 +3813,44 @@ function getAudiModelContent(slug: string): ModelPageContent | null {
   return audiModelContent[slug] ?? null;
 }
 
-function getEngineCodesContent(slug: string): EngineCodesEntry | null {
-  return engineCodesBySlug[slug] ?? null;
+// Ancillary part pages linked from /ancillaries — keep in sync with src/app/ancillaries/page.tsx
+const ancillaryPartSlugs = new Set([
+  "alternator", "crankshaft-pulley", "cylinder-heads", "exhaust-manifold",
+  "inlet-manifold", "oil-pump", "power-steering-pump", "starter-motor",
+  "torque-converter", "turbo", "water-pump", "flywheel",
+  "timing-belt", "supercharger", "gearboxes", "diesel-injector",
+  "egr-valve", "high-pressure-fuel-pump", "dpf-filter", "rear-diff",
+  "catalytic-converter", "head-gasket", "timing-chain", "nox-sensor",
+  "transmission",
+]);
+
+// Generic "-engines" pages linked from elsewhere on the site that don't have
+// hardcoded content in audiModelContent (e.g. BMW X2 trims,
+// Land Rover engine-size variants) — keep in sync with the linking pages.
+const additionalEngineSlugs = new Set([
+  "bmw-x2-sdrive18d-engines",
+  "bmw-x2-sdrive20d-engines",
+  "bmw-x2-xdrive18d-engines",
+  "bmw-x2-xdrive20d-engines",
+  "bmw-x2-xdrive25d-engines",
+  "bmw-x2-sdrive18i-engines",
+  "bmw-x2-xdrive25e-engines",
+  "bmw-525i-engines",
+  "land-rover-2-0-engines",
+  "land-rover-2-2-engines",
+  "land-rover-2-7-engines",
+  "land-rover-3-0-engines",
+  "land-rover-4-0-engines",
+  "land-rover-4-4-engines",
+  "land-rover-5-0-engines",
+]);
+
+function isDefinedSlug(slug: string): boolean {
+  return (
+    slug in audiModelContent ||
+    ancillaryPartSlugs.has(slug) ||
+    additionalEngineSlugs.has(slug)
+  );
 }
 
 // Utility to format slug into title ("audi-a1-engines" -> "Audi A1 Engines")
@@ -3836,6 +3864,11 @@ function formatTitle(slug: string): string {
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
+
+  if (!isDefinedSlug(slug)) {
+    return { title: "Page Not Found | Vogue Technics" };
+  }
+
   const formattedTitle = formatTitle(slug);
 
   const audiOverride = getAudiModelContent(slug);
@@ -3869,9 +3902,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function DynamicServicePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  
-  // Protect against weird URLs
-  if (!slug || slug.length > 80) {
+
+  // Only render pages we actually have content for — everything else 404s.
+  if (!slug || slug.length > 80 || !isDefinedSlug(slug)) {
     notFound();
   }
 
@@ -3880,14 +3913,13 @@ export default async function DynamicServicePage({ params }: { params: Promise<{
   const extractedPartName = isPart ? formattedTitle : slug.split('-').slice(-1)[0] === 'engines' ? formatTitle(slug.split('-').slice(-2, -1)[0]) : 'Part';
 
   const audiOverride = getAudiModelContent(slug);
-  const engineCodesContent = getEngineCodesContent(slug);
   if (audiOverride) {
     return (
       <div className="bg-white min-h-screen">
         <div className="bg-slate-900 text-white pt-32 pb-20 px-4 relative overflow-hidden">
           <div className="absolute inset-0 z-0 bg-[#146c43]/20">
             <Image
-              src="/images/car_bgg.jpg"
+              src="/images/car_bgg.webp"
               alt={audiOverride.h1}
               fill
               className="object-cover opacity-65 mix-blend-overlay"
@@ -3977,13 +4009,6 @@ export default async function DynamicServicePage({ params }: { params: Promise<{
                       </section>
                     ) : null}
 
-                    {engineCodesContent ? (
-                      <EngineCodesTable
-                        title={engineCodesContent.title}
-                        rows={engineCodesContent.rows}
-                      />
-                    ) : null}
-
                     {mainSections.length > 0 && (
                       <div className="space-y-4">
                         <h2 className="text-lg font-extrabold text-slate-900 px-1">Our Engine Services</h2>
@@ -4048,7 +4073,7 @@ export default async function DynamicServicePage({ params }: { params: Promise<{
       <div className="bg-slate-900 text-white pt-32 pb-20 px-4 relative overflow-hidden">
         <div className="absolute inset-0 z-0 bg-[#146c43]/20">
           <Image
-            src="/images/car_bgg.jpg"
+            src="/images/car_bgg.webp"
             alt={formattedTitle}
             fill
             className="object-cover opacity-65 mix-blend-overlay"
@@ -4153,11 +4178,7 @@ export default async function DynamicServicePage({ params }: { params: Promise<{
                        </svg>
                        <span className="text-[#FACC15] font-bold text-[10px] tracking-widest leading-none">UK</span>
                      </div>
-                     <input 
-                       type="text" 
-                       placeholder="AB12 CDE" 
-                       className="w-full bg-transparent text-slate-800 font-bold text-lg px-3 py-3 focus:outline-none placeholder:text-slate-600 uppercase tracking-widest"
-                     />
+                     <RegNumberInput />
                    </div>
                  </div>
                  
@@ -4177,14 +4198,7 @@ export default async function DynamicServicePage({ params }: { params: Promise<{
         </div>
       </div>
 
-      {engineCodesContent ? (
-        <EngineCodesTable
-          title={engineCodesContent.title}
-          rows={engineCodesContent.rows}
-        />
-      ) : null}
-
-      <ReviewsSection 
+      <ReviewsSection
         title="What Our Customers Say" 
         subtitle={`Hear from our satisfied customers who have experienced our professional ${formattedTitle.toLowerCase()} services.`}
       />

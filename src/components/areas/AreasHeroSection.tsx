@@ -15,7 +15,7 @@ export default function AreasHeroSection({ title, subtitle }: AreasHeroSectionPr
     <section className="relative overflow-hidden bg-white pt-28 pb-20">
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/car_bgg.jpg"
+          src="/images/car_bgg.webp"
           alt="Areas covered by Vogue Technics"
           fill
           priority

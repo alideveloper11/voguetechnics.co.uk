@@ -15,32 +15,32 @@ const faqs = [
   {
     question: "What engine is fitted to the Jaguar XK8?",
     answer:
-      "The Jaguar XK8 uses the AJÃ¢â‚¬â€˜V8 allÃ¢â‚¬â€˜aluminium V8 engine family throughout its production run from 1997 to 2006. Earlier models carry the 4.0 litre AJ27 unit, while models from 2003 onwards use the improved 4.2 litre AJ34. Both are naturally aspirated V8 petrol engines   the supercharged XKR variant uses the same blocks in boosted form.",
+      "The Jaguar XK8 uses the AJ-V8 all-aluminium V8 engine family throughout its production run from 1997 to 2006. Earlier models carry the 4.0 litre AJ27 unit, while models from 2003 onwards use the improved 4.2 litre AJ34. Both are naturally aspirated V8 petrol engines   the supercharged XKR variant uses the same blocks in boosted form.",
   },
   {
     question: "What is the Nikasil problem on the Jaguar XK8?",
     answer:
-      "Nikasil is a hard, lowÃ¢â‚¬â€˜friction cylinder bore coating used on early XK8 4.0 litre engines. In the UK, highÃ¢â‚¬â€˜sulphur fuel caused the coating to degrade   leading to bore wear, compression loss, increased oil consumption, and eventually engine failure. It primarily affects 4.0 litre engines produced before approximately 2001.",
+      "Nikasil is a hard, low-friction cylinder bore coating used on early XK8 4.0 litre engines. In the UK, high-sulphur fuel caused the coating to degrade   leading to bore wear, compression loss, increased oil consumption, and eventually engine failure. It primarily affects 4.0 litre engines produced before approximately 2001.",
   },
   {
     question: "What is failsafe engine mode on the Jaguar XK8?",
     answer:
-      "Failsafe engine mode is a protective ECU response triggered when the system detects a fault that could cause engine damage. It limits power output and can be triggered by a range of faults   from sensors and fuelling issues through to more serious internal problems. Our sameÃ¢â‚¬â€˜day diagnostics identifies the specific cause before any repair is recommended.",
+      "Failsafe engine mode is a protective ECU response triggered when the system detects a fault that could cause engine damage. It limits power output and can be triggered by a range of faults   from sensors and fuelling issues through to more serious internal problems. Our same-day diagnostics identifies the specific cause before any repair is recommended.",
   },
   {
     question: "How much does a Jaguar XK8 engine rebuild cost?",
     answer:
-      "Rebuild costs vary depending on engine variant (4.0 or 4.2), the extent of internal wear, and which components require replacement or machining. A NikasilÃ¢â‚¬â€˜affected 4.0 litre rebuild is typically more involved than a standard 4.2 litre rebuild. We provide fully transparent, itemised quotes before any work begins.",
+      "Rebuild costs vary depending on engine variant (4.0 or 4.2), the extent of internal wear, and which components require replacement or machining. A Nikasil-affected 4.0 litre rebuild is typically more involved than a standard 4.2 litre rebuild. We provide fully transparent, itemised quotes before any work begins.",
   },
   {
     question: "Do you offer Jaguar XK8 engine supply and fit near me?",
     answer:
-      "Our complete supply and fit service is based at our  workshop . For customers further afield, we offer UKÃ¢â‚¬â€˜wide delivery with full technical support. Emergency fitting slots and sameÃ¢â‚¬â€˜day diagnostics are available for urgent cases.",
+      "Our complete supply and fit service is based at our  workshop . For customers further afield, we offer UK-wide delivery with full technical support. Emergency fitting slots and same-day diagnostics are available for urgent cases.",
   },
   {
     question: "What engine oil does the Jaguar XK8 take?",
     answer:
-      "The XK8 4.0 litre engine typically requires a 10WÃ¢â‚¬â€˜30 or 10WÃ¢â‚¬â€˜40 fully synthetic oil meeting the relevant Jaguar specification. The 4.2 litre engine generally uses a 5WÃ¢â‚¬â€˜30 fully synthetic oil. Always verify against your specific production year and engine number.",
+      "The XK8 4.0 litre engine typically requires a 10W-30 or 10W-40 fully synthetic oil meeting the relevant Jaguar specification. The 4.2 litre engine generally uses a 5W-30 fully synthetic oil. Always verify against your specific production year and engine number.",
   },
 ];
 
@@ -49,7 +49,7 @@ export default function JaguarXK8EnginesPage() {
     <div className="bg-white min-h-screen">
       <section className="relative overflow-hidden bg-slate-900 pt-32 pb-24">
         <div className="absolute inset-0 z-0">
-          <Image src="/images/car_bgg.jpg" alt="Jaguar XK8 engine specialists in " fill className="object-cover opacity-65 mix-blend-overlay" priority />
+          <Image src="/images/car_bgg.webp" alt="Jaguar XK8 engine specialists in " fill className="object-cover opacity-65 mix-blend-overlay" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-slate-950/70 via-slate-900/35 to-slate-900/10" />
         </div>
 
@@ -76,7 +76,7 @@ export default function JaguarXK8EnginesPage() {
             <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
               <h2 className="text-2xl md:text-3xl font-bold text-slate-900">Jaguar XK8 Engine Supply   Reconditioned, Remanufactured & Used Units</h2>
               <p className="mt-4 text-slate-700 leading-relaxed">
-                We stock and supply Jaguar XK8 engines across both the 4.0 and 4.2 litre AJÃ¢â‚¬â€˜V8 variants. Every unit   reconditioned, remanufactured, or used   is fully tested, properly documented, and dispatched with warranty cover from our  workshop.
+                We stock and supply Jaguar XK8 engines across both the 4.0 and 4.2 litre AJ-V8 variants. Every unit   reconditioned, remanufactured, or used   is fully tested, properly documented, and dispatched with warranty cover from our  workshop.
               </p>
             </div>
 
@@ -84,7 +84,7 @@ export default function JaguarXK8EnginesPage() {
               <div className="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm">
                 <h3 className="font-bold text-slate-900">Reconditioned XK8 4.0 Litre V8 Engine   1997 to 2002</h3>
                 <p className="mt-3 text-slate-700 leading-relaxed">
-                  The 4.0 litre AJ27 V8 is most closely associated with Nikasil bore problems on early production. When rebuilt correctly   with Nikasil addressed and the timing chain, tensioner, oil pump, and water pump attended to   this engine is transformed into a reliable, longÃ¢â‚¬â€˜lasting unit.
+                  The 4.0 litre AJ27 V8 is most closely associated with Nikasil bore problems on early production. When rebuilt correctly   with Nikasil addressed and the timing chain, tensioner, oil pump, and water pump attended to   this engine is transformed into a reliable, long-lasting unit.
                 </p>
               </div>
               <div className="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm">

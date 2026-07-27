@@ -1,7 +1,70 @@
 import type { NextConfig } from "next";
 
+// GTM's container fires Google Analytics, Google Ads conversion tracking
+// (doubleclick.net) and Microsoft Clarity today — confirmed by actually
+// loading the site and checking the console for CSP violations, since
+// GTM's tag config lives in the dashboard, not this codebase. GTM can add
+// further tags at any time without a code deploy; a brand new vendor (e.g.
+// Meta Pixel, Hotjar) would need a matching addition here when it's added.
+const isDev = process.env.NODE_ENV !== "production";
+
+const contentSecurityPolicy = [
+  "default-src 'self'",
+  // 'unsafe-inline' is required for the GTM bootstrap snippet and the
+  // JSON-LD structured data script. A nonce-based policy would remove this,
+  // but requires per-request middleware, which forces every page to render
+  // dynamically instead of using this site's static generation.
+  // 'unsafe-eval' is added only in dev: React's dev-mode tooling (error
+  // overlay, Fast Refresh) uses eval() for stack traces; production React
+  // never calls eval(), so this is not relaxed in the deployed build.
+  `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""} https://*.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://*.doubleclick.net https://*.clarity.ms`,
+  // Inline styles are required for the CSS custom properties used by
+  // Tailwind-authored components and inline style props throughout the app.
+  "style-src 'self' 'unsafe-inline'",
+  // Google Ads' remarketing/conversion pixels fire from country-specific
+  // TLDs (google.com.pk, google.co.uk, etc.) depending on visitor locale,
+  // which isn't practical to allow-list host by host — img-src is the
+  // lowest-risk directive to broaden, so it's opened to any HTTPS source.
+  "img-src 'self' data: blob: https:",
+  "font-src 'self' data:",
+  // ws:/wss: is only needed in dev for Next.js's Fast Refresh HMR socket.
+  `connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.doubleclick.net https://*.google.com https://*.clarity.ms${isDev ? " ws: wss:" : ""}`,
+  "frame-src 'self' https://www.youtube.com https://*.googletagmanager.com",
+  "object-src 'none'",
+  "base-uri 'self'",
+  "form-action 'self'",
+  "frame-ancestors 'self'",
+  "upgrade-insecure-requests",
+].join("; ");
+
 const nextConfig: NextConfig = {
   /* config options here */
+
+  async headers() {
+    return [
+      {
+        source: "/(.*)",
+        headers: [
+          { key: "Content-Security-Policy", value: contentSecurityPolicy },
+          {
+            key: "Strict-Transport-Security",
+            value: "max-age=63072000; includeSubDomains; preload",
+          },
+          { key: "X-Frame-Options", value: "SAMEORIGIN" },
+          { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          {
+            key: "Referrer-Policy",
+            value: "strict-origin-when-cross-origin",
+          },
+          {
+            key: "Permissions-Policy",
+            value: "camera=(), microphone=(), geolocation=()",
+          },
+        ],
+      },
+    ];
+  },
 
   images: {
     remotePatterns: [
@@ -27,6 +90,14 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // Canonicalize the apex/non-www domain to www — matches the www
+      // canonical URLs already used across metadata/sitemap generation.
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "voguetechnics.co.uk" }],
+        destination: "https://www.voguetechnics.co.uk/:path*",
+        permanent: true,
+      },
       {
         source: "/about",
         destination: "/about-us",

@@ -14,14 +14,14 @@ const buildMetadata = (
   },
 });
 
-export const HOME_TITLE = "Reconditioned & Used Engines UK | Supply & Fit";
+export const HOME_TITLE = "Reconditioned & Used Engines UK | Vogue Technics";
 export const HOME_DESCRIPTION =
-  "Quality reconditioned, rebuilt & low-mileage used engines for BMW, Audi, Jaguar, Land Rover & Range Rover. Fitted UK-wide with warranty. Enter your reg for a price.";
+  "Vogue Technics offers expert engine rebuilds, repairs, and replacements across the UK. 20+ years' experience, warranty-backed work. Get a quote.";
 
 export const pageMetadata = {
   aboutUs: buildMetadata(
-    "About Vogue Technics | UK Engine Specialists",
-    "Meet the team behind Vogue Technics — multi-brand engine reconditioning, rebuilds & fitting trusted by drivers across the UK. Find out why customers choose us.",
+    "About Us | Vogue Technics Engine Specialists",
+    "Discover Vogue Technics' 20+ years reconditioning and fitting engines across the UK. Learn what makes us a trusted, warranty-backed specialist.",
     "/about-us",
   ),
   contactUs: buildMetadata(
@@ -30,8 +30,8 @@ export const pageMetadata = {
     "/contact-us",
   ),
   engines: buildMetadata(
-    "Engines for Sale UK | Reconditioned, Rebuilt & Used",
-    "Browse reconditioned, remanufactured & low-mileage used engines for every major brand. Tested, warrantied and fitted UK-wide. Enter your reg for an instant price.",
+    "Engines for Sale | Reconditioned & Used | Vogue Technics",
+    "Browse our full range of reconditioned and used engines for all makes and models. Expert fitting, warranty, and UK-wide delivery. Get a quote.",
     "/engines",
   ),
   servicesMain: buildMetadata(
@@ -65,8 +65,8 @@ export const pageMetadata = {
     "/audi-engines",
   ),
   jaguarEngines: buildMetadata(
-    "Jaguar Engines for Sale | Reconditioned & Fitted",
-    "Rebuilt Jaguar engines for XE, XF, XJ, F-Pace and F-Type — Ingenium, V6 and supercharged V8. Tested units, supplied and fitted across the UK. Request a quote.",
+    "Jaguar Engines | Reconditioned & Used | Vogue Technics",
+    "Shop quality reconditioned and used Jaguar engines with expert fitting, warranty, and UK-wide delivery. Get your free, no-obligation quote.",
     "/jaguar-engines",
   ),
   landRoverEngines: buildMetadata(
@@ -75,13 +75,13 @@ export const pageMetadata = {
     "/land-rover-engines",
   ),
   rangeRoverEngines: buildMetadata(
-    "Range Rover Engines | Reconditioned & Used UK",
-    "Rebuilt and low-mileage Range Rover engines for Sport, Evoque, Velar, Vogue and SVR. Diesel and supercharged petrol, fitted nationwide. Enter your reg for a price.",
+    "Range Rover Engines | Reconditioned & Used | Vogue Technics",
+    "Shop quality reconditioned and used Range Rover engines for all models. Expert fitting, warranty, and UK-wide delivery. Get your free quote.",
     "/range-rover-engines",
   ),
   rangeRoverSport: buildMetadata(
-    "Range Rover Sport Engines | Recon & Used UK",
-    "TDV6, SDV6 and V8 Range Rover Sport engines rebuilt to OEM spec or supplied low-mileage. Tested, warrantied and fitted nationwide. Request your Sport engine price.",
+    "Range Rover Sport Engines | Vogue Technics",
+    "Buy quality reconditioned and used Range Rover Sport engines with expert fitting, warranty, and UK-wide delivery. Get your free quote today.",
     "/range-rover-sport-engines",
   ),
   rangeRoverSportSvr: buildMetadata(
@@ -95,13 +95,13 @@ export const pageMetadata = {
     "/range-rover-evoque-engines",
   ),
   rangeRoverVelar: buildMetadata(
-    "Range Rover Velar Engines | Rebuilt & Fitted UK",
-    "Diesel and petrol Velar engines remanufactured to OEM standard, with collection and delivery anywhere in the UK. Warranty included. Get your Velar engine quote.",
+    "Range Rover Velar Engines | Reconditioned & Used | Vogue Technics",
+    "Shop dependable reconditioned and used Range Rover Velar engines with expert fitting, warranty, and UK-wide delivery. Request a free quote.",
     "/range-rover-velar-engines",
   ),
   rangeRoverVogueMk4: buildMetadata(
-    "Range Rover Vogue MK4 Engines | Recon UK",
-    "Replacement engines for the latest Vogue MK4 — TDV6, SDV8 and supercharged petrol, rebuilt and fitted with warranty. Avoid dealer prices. Request a quote.",
+    "Range Rover Vogue New Engines | Vogue Technics",
+    "Explore new and reconditioned Range Rover Vogue engines, expertly fitted with warranty backing. Get UK-wide delivery and a free quote today.",
     "/range-rover-vogue-new-mk-4-engines",
   ),
   rangeRoverVogueMk3: buildMetadata(
@@ -145,8 +145,8 @@ export const pageMetadata = {
     "/land-rover-discovery-4-engines",
   ),
   discovery5: buildMetadata(
-    "Discovery 5 Engines | Recon & Replacement UK",
-    "Ingenium and TDV6 Discovery 5 (L462) engines remanufactured to factory standard and fitted with warranty across the UK. Avoid dealer costs. Request a quote.",
+    "Land Rover Discovery 5 Engines | Vogue Technics",
+    "Find reliable reconditioned and used Land Rover Discovery 5 engines, expertly fitted with warranty and UK-wide delivery. Request your quote today.",
     "/land-rover-discovery-5-engines",
   ),
   discoverySport: buildMetadata(
@@ -315,8 +315,8 @@ export const pageMetadata = {
     "/services/engine-health-check",
   ),
   serviceHeadGasketReplacement: buildMetadata(
-    "Head Gasket Repair & Replacement UK | Quote",
-    "Fix blown head gaskets, overheating and white smoke fast. Expert repair and replacement for BMW, Audi, Jaguar and Land Rover. Request your free quote today.",
+    "Head Gasket Replacement Service | Vogue Technics",
+    "Spot the signs of a blown head gasket early and get it fixed properly. Expert replacement with OEM-grade parts and warranty. Request a quote.",
     "/services/head-gasket-replacement",
   ),
   serviceTimingBeltReplacement: buildMetadata(
@@ -330,8 +330,8 @@ export const pageMetadata = {
     "/services/timing-chain-replacement",
   ),
   serviceTurboReplacement: buildMetadata(
-    "Turbo Repairs & Replacement UK | Get a Quote",
-    "Lost power or blowing smoke? Turbocharger repairs and replacements for BMW, Audi, Jaguar and Land Rover, fitted with warranty. Get your turbo quote today.",
+    "Turbo Replacement Service | Vogue Technics",
+    "Fix a failing turbo fast with our expert turbo replacement service. Quality parts, warranty-backed workmanship, and UK-wide fitting. Get a quote.",
     "/services/turbo-replacement",
   ),
 } as const;

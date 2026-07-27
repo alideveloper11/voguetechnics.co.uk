@@ -1,7 +1,7 @@
 "use client";
 
 import { Send, RotateCw } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { submitContact } from "@/app/actions/submitContact";
 import {
@@ -84,11 +84,11 @@ export default function ContactForm({ variant = "default" }: ContactFormProps) {
   const [errors, setErrors] = useState<FormErrors>({});
   const [touched, setTouched] = useState<TouchedFields>({});
 
-  const [captcha, setCaptcha] = useState(() => {
-    const num1 = Math.floor(Math.random() * 10) + 1;
-    const num2 = Math.floor(Math.random() * 10) + 1;
-    return { num1, num2, sum: num1 + num2 };
-  });
+  // Fixed placeholder on first render so server and client markup match;
+  // randomized client-side in the effect below once mounted, since
+  // Math.random() in the initial render caused a hydration mismatch
+  // (server and client each computed different numbers).
+  const [captcha, setCaptcha] = useState({ num1: 1, num2: 1, sum: 2 });
   const [userCaptchaAnswer, setUserCaptchaAnswer] = useState("");
   const [captchaError, setCaptchaError] = useState(false);
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -103,6 +103,12 @@ export default function ContactForm({ variant = "default" }: ContactFormProps) {
     setUserCaptchaAnswer("");
     setCaptchaError(false);
   }
+
+  // Runs once, client-side only, after hydration — safe to randomize here.
+  useEffect(() => {
+    generateCaptcha();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;

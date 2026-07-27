@@ -1,10 +1,8 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { CheckCircle2, Shield, Search, Phone, Clock, Wrench, Award, Star, Activity, ArrowRight } from "lucide-react";
 import PartnerLogos from "@/components/common/PartnerLogos";
-import { motion } from "framer-motion";
+import Reveal from "@/components/common/Reveal";
 import Breadcrumbs from "@/components/common/Breadcrumbs";
 import RegSearch from "@/components/common/RegSearch";
 import HeroTrustLabels from "@/components/common/HeroTrustLabels";
@@ -173,7 +171,7 @@ export default function AudiEnginesClient() {
       <section className="relative min-h-[70vh] flex flex-col justify-center overflow-hidden bg-slate-900 pt-32 pb-20">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/car_bgg.jpg"
+            src="/images/car_bgg.webp"
             alt="Audi Engine Specialist"
             fill
             className="object-cover opacity-65 mix-blend-overlay"
@@ -186,35 +184,29 @@ export default function AudiEnginesClient() {
           <Breadcrumbs items={[{ name: "Audi Engines", href: "/audi-engines" }]} />
           
           <div className="text-center max-w-4xl mx-auto">
-            <motion.span 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="inline-block py-1.5 px-4 rounded-full bg-primary/20 text-emerald-300 font-semibold tracking-wide text-sm mb-6 border border-primary/30 shadow-[0_0_15px_rgba(25,135,84,0.25)]"
+            <span
+              className="animate-fade-up inline-block py-1.5 px-4 rounded-full bg-primary/20 text-emerald-300 font-semibold tracking-wide text-sm mb-6 border border-primary/30 shadow-[0_0_15px_rgba(25,135,84,0.25)]"
             >
               Audi Specialist
-            </motion.span>
-            <motion.h1 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight mb-6 leading-tight"
+            </span>
+            <h1
+              className="animate-fade-up text-3xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight mb-6 leading-tight"
+              style={{ "--fade-delay": "0.1s" } as React.CSSProperties}
             >
               Audi Engine Replacement (UK)
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-300 to-green-400 font-extrabold">
-                Expert rebuilds, repairs & reconditioned engines in 
+                Expert rebuilds, repairs & reconditioned engines in
               </span>
-            </motion.h1>
+            </h1>
 
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.18 }}
-              className="mt-6 mb-8 flex w-full flex-col items-center justify-center"
+            <div
+              className="animate-fade-up mt-6 mb-8 flex w-full flex-col items-center justify-center"
+              style={{ "--fade-delay": "0.18s" } as React.CSSProperties}
             >
               <RegSearch />
             <HeroTrustLabels className="mt-4" />
-            </motion.div>
+            </div>
 
           </div>
         </div>
@@ -306,12 +298,12 @@ export default function AudiEnginesClient() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {audiModels.map((model, idx) => (
-              <motion.div
+              <Reveal
                 key={idx}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.3, delay: idx * 0.02 }}
+                variant="scale"
+                distance={0.95}
+                duration={0.3}
+                delay={idx * 0.02}
               >
                 <Link href={model.link} className="group block h-full">
                   <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-xl hover:border-primary/50 transition-all duration-300 h-full flex flex-col justify-between relative overflow-hidden">
@@ -346,7 +338,7 @@ export default function AudiEnginesClient() {
                     </div>
                   </div>
                 </Link>
-              </motion.div>
+              </Reveal>
             ))}
           </div>
 
@@ -363,21 +355,19 @@ export default function AudiEnginesClient() {
 
             <div className="flex flex-wrap justify-center gap-3 lg:gap-5">
               {audiEngineSizes.map((engine, idx) => (
-                <motion.div
+                <Reveal
                   key={idx}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: idx * 0.02 }}
+                  distance={10}
+                  delay={idx * 0.02}
                 >
-                  <Link 
+                  <Link
                     href={engine.link}
                     className="bg-white border-2 border-slate-100 text-slate-800 hover:text-white hover:bg-primary hover:border-primary px-6 py-4 rounded-2xl font-bold transition-all shadow-sm flex items-center gap-3 text-sm md:text-lg group hover:shadow-lg transform hover:-translate-y-1"
                   >
                     <Activity className="w-5 h-5 text-primary group-hover:text-white transition-colors" />
                     {engine.title}
                   </Link>
-                </motion.div>
+                </Reveal>
               ))}
             </div>
           </div>
@@ -476,9 +466,8 @@ export default function AudiEnginesClient() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Used */}
-            <motion.div 
-              whileHover={{ y: -10 }}
-              className="bg-white border-2 border-slate-100 rounded-[2.5rem] p-12 space-y-8 shadow-sm hover:shadow-2xl transition-all duration-500 border-b-8 hover:border-b-primary group">
+            <div
+              className="bg-white border-2 border-slate-100 rounded-[2.5rem] p-12 space-y-8 shadow-sm hover:shadow-2xl transition-all duration-500 border-b-8 hover:border-b-primary group hover:-translate-y-2.5">
               <div className="w-20 h-20 bg-primary/10 rounded-3xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500 shadow-inner">
                 <Clock className="w-10 h-10" />
               </div>
@@ -494,12 +483,11 @@ export default function AudiEnginesClient() {
                   <CheckCircle2 className="w-6 h-6 text-primary" /> Quality Inspected
                 </li>
               </ul>
-            </motion.div>
+            </div>
 
             {/* Reconditioned */}
-            <motion.div 
-              whileHover={{ y: -10 }}
-              className="bg-slate-900 border-2 border-slate-800 rounded-[2.5rem] p-12 space-y-8 shadow-2xl relative z-10 border-b-8 border-b-primary">
+            <div
+              className="bg-slate-900 border-2 border-slate-800 rounded-[2.5rem] p-12 space-y-8 shadow-2xl relative z-10 border-b-8 border-b-primary transition-transform duration-500 hover:-translate-y-2.5">
               <div className="absolute top-8 right-8 text-primary">
                 <Star className="w-10 h-10 fill-primary" />
               </div>
@@ -518,12 +506,11 @@ export default function AudiEnginesClient() {
                   <CheckCircle2 className="w-6 h-6 text-primary" /> Elite Fitting Service
                 </li>
               </ul>
-            </motion.div>
+            </div>
 
             {/* Rebuilt */}
-            <motion.div 
-              whileHover={{ y: -10 }}
-              className="bg-white border-2 border-slate-100 rounded-[2.5rem] p-12 space-y-8 shadow-sm hover:shadow-2xl transition-all duration-500 border-b-8 hover:border-b-primary group">
+            <div
+              className="bg-white border-2 border-slate-100 rounded-[2.5rem] p-12 space-y-8 shadow-sm hover:shadow-2xl transition-all duration-500 border-b-8 hover:border-b-primary group hover:-translate-y-2.5">
               <div className="w-20 h-20 bg-primary/10 rounded-3xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500 shadow-inner">
                 <Award className="w-10 h-10" />
               </div>
@@ -539,7 +526,7 @@ export default function AudiEnginesClient() {
                   <CheckCircle2 className="w-6 h-6 text-primary" /> Peak Power Stock
                 </li>
               </ul>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -547,10 +534,8 @@ export default function AudiEnginesClient() {
       {/* EXTENDED WARRANTY CALLOUT */}
       <section className="pb-24 pt-12 bg-slate-900 overflow-hidden relative">
         <div className="container mx-auto px-4 lg:px-8">
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+          <Reveal
+            distance={30}
             className="bg-white/5 border-2 border-primary/40 rounded-[3rem] p-8 md:p-16 text-center relative overflow-hidden group shadow-2XL"
           >
             <div className="absolute top-0 right-0 w-80 h-80 bg-primary/10 blur-[100px] rounded-full -mr-40 -mt-40 pointer-events-none"></div>
@@ -567,7 +552,7 @@ export default function AudiEnginesClient() {
                 We also offer <span className="text-white font-bold">up to 24 months warranty</span>, sourced directly from main dealers. Please note, this option comes at a higher cost due to the extended protection and premium coverage.
               </p>
             </div>
-          </motion.div>
+          </Reveal>
         </div>
       </section>
 
@@ -575,10 +560,9 @@ export default function AudiEnginesClient() {
       <section className="py-24 bg-primary relative overflow-hidden">
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-white/10 blur-[180px] rounded-full -mr-72 -mt-72 pointer-events-none"></div>
         <div className="container mx-auto px-4 text-center relative z-10">
-          <motion.h2 
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            className="text-3xl md:text-7xl font-black text-white mb-8 uppercase tracking-tighter italic leading-none">Save Up to <br/><span className="text-slate-900 underline decoration-[12px] underline-offset-[16px] decoration-white/30">40%</span></motion.h2>
+          <Reveal variant="scale" distance={0.9} className="text-3xl md:text-7xl font-black text-white mb-8 uppercase tracking-tighter italic leading-none">
+            <h2>Save Up to <br/><span className="text-slate-900 underline decoration-[12px] underline-offset-[16px] decoration-white/30">40%</span></h2>
+          </Reveal>
           <p className="text-2xl md:text-4xl text-emerald-100 max-w-3xl mx-auto font-black mb-16 uppercase tracking-[0.2em]">
             WRITTEN WARRANTY INCLUDED
           </p>

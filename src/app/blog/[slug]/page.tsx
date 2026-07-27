@@ -56,7 +56,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!blog) return {};
 
   return {
-    title: `${blog.metaTitle} | Vogue Technics`,
+    title: { absolute: `${blog.metaTitle} | Vogue Technics` },
     description: blog.metaDescription || blog.excerpt || "",
     alternates: { canonical: `/blog/${slug}` },
   };
@@ -70,10 +70,6 @@ function sanitizeContent(html: string): string {
     .replace(/<div[^>]*class="[^"]*prose[^"]*"[^>]*>/g, "")
     .replace(/<\/div>\s*$/, "")
     .trim();
-}
-
-function stripFigures(html: string): string {
-  return html.replace(/<figure[\s\S]*?<\/figure>/gi, "");
 }
 
 function splitIntoThree(html: string): [string, string, string] {
@@ -101,8 +97,7 @@ export default async function BlogDetail({ params }: Props) {
   if (!blog) notFound();
 
   const clean = sanitizeContent(blog.content || "");
-  const textOnly = stripFigures(clean);
-  const [sec1, sec2, sec3] = splitIntoThree(textOnly);
+  const [sec1, sec2, sec3] = splitIntoThree(clean);
 
   const bannerImage = blog.image || blog.images?.[0]?.image || "";
   const extraImages = blog.images?.slice(1) || [];

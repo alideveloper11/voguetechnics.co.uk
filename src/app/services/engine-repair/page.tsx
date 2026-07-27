@@ -13,6 +13,7 @@ import FAQSection from "@/components/common/FAQSection";
 import ServiceGallery from "@/components/common/ServiceGallery";
 import PartnerLogos from "@/components/common/PartnerLogos";
 import NationwideSupportSection from "@/components/common/NationwideSupportSection";
+import WarrantyPartsExcellence from "@/components/common/WarrantyPartsExcellence";
 
 export const metadata: Metadata = pageMetadata.serviceEngineRepair;
 
@@ -23,7 +24,7 @@ export default function EngineRepairPage() {
       <section className="bg-slate-900 border-b border-slate-800 py-24 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/car_bgg.jpg"
+            src="/images/car_bgg.webp"
             alt="Specialist engine repair"
             fill
             className="object-cover opacity-20 filter grayscale"
@@ -83,10 +84,10 @@ export default function EngineRepairPage() {
         title="Engine Repair Work"
         subtitle="A look at some of the engine repair jobs carried out at our workshop."
         images={[
-          { src: "/engine_repair/engine_repair%201.png", alt: "Engine repair 1" },
-          { src: "/engine_repair/engine_repair%202.png", alt: "Engine repair 2" },
-          { src: "/engine_repair/engine_repair%203.png", alt: "Engine repair 3" },
-          { src: "/engine_repair/engine_repair%204.png", alt: "Engine repair 4" },
+          { src: "/engine_repair/engine_repair%201.webp", alt: "Engine repair 1" },
+          { src: "/engine_repair/engine_repair%202.webp", alt: "Engine repair 2" },
+          { src: "/engine_repair/engine_repair%203.webp", alt: "Engine repair 3" },
+          { src: "/engine_repair/engine_repair%204.webp", alt: "Engine repair 4" },
         ]}
       />
 
@@ -105,7 +106,7 @@ export default function EngineRepairPage() {
 
           <div className="max-w-5xl mx-auto bg-slate-50 border border-slate-100 rounded-[3rem] p-8 md:p-10 shadow-sm">
             <p className="text-slate-600 leading-relaxed font-medium text-sm">
-              Warning lights with oil pressure or boost fault codes, engine misfires, oil leaks, overheating, timing chain noise, white smoke from head gasket failure, and engine seizure Ã¢â‚¬â€ these are faults we diagnose and repair every week across the most technically demanding prestige platforms.
+              Warning lights with oil pressure or boost fault codes, engine misfires, oil leaks, overheating, timing chain noise, white smoke from head gasket failure, and engine seizure — these are faults we diagnose and repair every week across the most technically demanding prestige platforms.
             </p>
             <p className="text-slate-600 leading-relaxed font-medium text-sm mt-4">
               The longer any of these are left, the more expensive the repair becomes. A specialist diagnostic is always the most cost-effective first step.
@@ -175,6 +176,12 @@ export default function EngineRepairPage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 lg:px-8">
+          <WarrantyPartsExcellence />
         </div>
       </section>
 
@@ -392,8 +399,8 @@ export default function EngineRepairPage() {
           </div>
 
           <div className="mt-8 text-white/90 font-black uppercase tracking-widest text-[0.65rem]">
-            Vogue Technics | Engine Repair Specialists |  | UK-Wide Collection &nbsp; Range Rover Ã¢â‚¬Â¢ Land Rover Ã¢â‚¬Â¢ Jaguar
-            Ã¢â‚¬Â¢ Audi Ã¢â‚¬Â¢ BMW
+            Vogue Technics | Engine Repair Specialists |  | UK-Wide Collection &nbsp; Range Rover • Land Rover • Jaguar
+            • Audi • BMW
           </div>
         </div>
       </section>

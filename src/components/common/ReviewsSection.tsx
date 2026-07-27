@@ -1,7 +1,7 @@
 "use client";
 
 import { Star, CheckCircle, ArrowRight } from "lucide-react";
-import { motion } from "framer-motion";
+import Reveal from "@/components/common/Reveal";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -33,11 +33,10 @@ function ReviewCard({ review, idx }: { review: (typeof reviews)[0]; idx: number 
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: idx * 0.1 }}
+    <Reveal
+      distance={20}
+      delay={idx * 0.1}
+      duration={0.5}
       className="bg-white p-5 rounded-[1.5rem] shadow-xl border border-slate-100 flex flex-col justify-between hover:shadow-2xl transition-shadow duration-300"
     >
       <div>
@@ -66,7 +65,7 @@ function ReviewCard({ review, idx }: { review: (typeof reviews)[0]; idx: number 
           Verified
         </div>
       </div>
-    </motion.div>
+    </Reveal>
   );
 }
 

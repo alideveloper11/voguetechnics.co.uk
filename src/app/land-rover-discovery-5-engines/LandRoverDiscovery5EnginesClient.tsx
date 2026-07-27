@@ -1,13 +1,11 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { Phone, Star } from "lucide-react";
-import { motion } from "framer-motion";
 import Breadcrumbs from "@/components/common/Breadcrumbs";
 import RegSearch from "@/components/common/RegSearch";
 import HeroTrustLabels from "@/components/common/HeroTrustLabels";
 import FAQSection from "@/components/common/FAQSection";
+import WarrantyPartsExcellence from "@/components/common/WarrantyPartsExcellence";
 import PartnerLogos from "@/components/common/PartnerLogos";
 import EngineCodesTable from "@/components/common/EngineCodesTable";
 import type { EngineCodesEntry } from "@/data/engineCodes";
@@ -117,7 +115,7 @@ export default function LandRoverDiscovery5EnginesClient({ engineCodes }: LandRo
       <section className="relative overflow-hidden bg-slate-900 pt-32 pb-24">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/car_bgg.jpg"
+            src="/images/car_bgg.webp"
             alt="Land Rover Discovery 5 engine specialist in "
             fill
             className="object-cover opacity-65 mix-blend-overlay"
@@ -134,27 +132,24 @@ export default function LandRoverDiscovery5EnginesClient({ engineCodes }: LandRo
             ]}
           />
 
-          <div className="max-w-5xl pt-8">
-            <motion.h1
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="text-3xl font-black leading-[1.08] tracking-tight text-white md:text-5xl"
+          <div className="max-w-5xl mx-auto text-center pt-8">
+            <h1
+              className="animate-fade-up text-3xl font-black leading-[1.08] tracking-tight text-white md:text-5xl"
+              style={{ "--fade-y": "18px" } as React.CSSProperties}
             >
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-300 to-green-400">
                 Land Rover Discovery 5
               </span>{" "}
               Engine Repair, Rebuild & Replacement   Specialists in 
-            </motion.h1>
+            </h1>
 
-            <motion.div
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.12 }}
-              className="mt-7"
+            <div
+              className="animate-fade-up mt-7 flex flex-col items-center"
+              style={{ "--fade-y": "18px", "--fade-delay": "0.12s" } as React.CSSProperties}
             >
               <RegSearch className="max-w-3xl" />
             <HeroTrustLabels className="mt-4" />
-            </motion.div>
+            </div>
 
           </div>
         </div>
@@ -225,6 +220,12 @@ export default function LandRoverDiscovery5EnginesClient({ engineCodes }: LandRo
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4 lg:px-8">
+          <WarrantyPartsExcellence />
         </div>
       </section>
 

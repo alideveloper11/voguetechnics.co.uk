@@ -1,8 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
+import Reveal from "@/components/common/Reveal";
 
 type BrandSpecialism = {
   title: string;
@@ -93,12 +93,11 @@ export default function BrandSpecialismsSlider({ brands }: BrandSpecialismsSlide
         aria-label="Vehicle brands slider"
       >
         {brands.map((brand, idx) => (
-          <motion.div
+          <Reveal
             key={brand.href}
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.45, delay: idx * 0.03 }}
+            distance={16}
+            duration={0.45}
+            delay={idx * 0.03}
             className={[
               "snap-start shrink-0",
               "w-[88%] sm:w-[75%] md:w-[48%] lg:w-[42%] xl:w-[36%]",
@@ -124,7 +123,7 @@ export default function BrandSpecialismsSlider({ brands }: BrandSpecialismsSlide
                 Explore More
               </Link>
             </div>
-          </motion.div>
+          </Reveal>
         ))}
       </div>
 

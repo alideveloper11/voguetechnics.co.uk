@@ -1,11 +1,12 @@
 "use client";
 
-import { motion } from "framer-motion";
+import Reveal from "@/components/common/Reveal";
 import { ArrowRight, CheckCircle2, Shield, Search, Phone, Wrench, Award, Car, Gauge, Activity, Zap } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from 'react';
 import ServicesSection from "@/components/common/ServicesSection";
+import WarrantyPartsExcellence from "@/components/common/WarrantyPartsExcellence";
 import ReviewsSection from "@/components/common/ReviewsSection";
 import FAQSection from "@/components/common/FAQSection";
 import Breadcrumbs from "@/components/common/Breadcrumbs";
@@ -18,7 +19,7 @@ const allEngineModels = [
   { title: "Range Rover Evoque", link: "/range-rover-evoque-engines", brand: "Range Rover" },
   { title: "Range Rover Sport", link: "/range-rover-sport-engines", brand: "Range Rover" },
   { title: "Range Rover Velar", link: "/range-rover-velar-engines", brand: "Range Rover" },
-  { title: "Range Rover Vogue", link: "/range-rover-vogue-new-engines", brand: "Range Rover" },
+  { title: "Range Rover Vogue", link: "/range-rover-vogue-new-mk-4-engines", brand: "Range Rover" },
   // Land Rover
   { title: "Land Rover Defender", link: "/land-rover-defender-engines", brand: "Land Rover" },
   { title: "Land Rover Discovery", link: "/land-rover-discovery-5-engines", brand: "Land Rover" },
@@ -64,7 +65,7 @@ export default function ServicesPage() {
       <section className="bg-slate-900 text-white pt-32 pb-24 relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-65">
           <Image
-            src="/images/car_bgg.jpg"
+            src="/images/car_bgg.webp"
             alt="Vogue Technics Workshop"
             fill
             className="object-cover filter grayscale"
@@ -74,23 +75,20 @@ export default function ServicesPage() {
         </div>
         <div className="container mx-auto px-4 lg:px-8 relative z-10 text-center">
             <Breadcrumbs items={[{ name: "Services", href: "/services" }]} />
-            <motion.span 
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              className="inline-block py-1 px-4 rounded-full bg-primary/20 text-emerald-400 font-bold tracking-widest text-xs mb-8 border border-primary/30 shadow-lg uppercase"
+            <span
+              className="animate-fade-scale inline-block py-1 px-4 rounded-full bg-primary/20 text-emerald-400 font-bold tracking-widest text-xs mb-8 border border-primary/30 shadow-lg uppercase"
+              style={{ "--fade-scale": "0.9" } as React.CSSProperties}
             >
               Elite Engine Solutions
-            </motion.span>
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-3xl md:text-5xl lg:text-6xl font-extrabold mb-8 tracking-tight leading-tight uppercase italic"
+            </span>
+          <h1
+            className="animate-fade-up text-3xl md:text-5xl lg:text-6xl font-extrabold mb-8 tracking-tight leading-tight uppercase italic"
           >
             Engine Specialists <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-400 to-green-500">
               for Range Rover, Land Rover, Jaguar, Audi &amp; BMW
             </span>
-          </motion.h1>
+          </h1>
           <div className="flex w-full max-w-2xl mx-auto mb-10 flex-col items-center">
              <RegSearch />
             <HeroTrustLabels className="mt-4" />
@@ -181,6 +179,12 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 lg:px-8">
+          <WarrantyPartsExcellence />
+        </div>
+      </section>
+
       {/* ALL ENGINE MODELS MESH GRID */}
       <section className="py-24 bg-white relative overflow-hidden">
         <div className="container mx-auto px-4 lg:px-8">
@@ -204,12 +208,11 @@ export default function ServicesPage() {
 
            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
              {filteredModels.map((model, idx) => (
-               <motion.div
+               <Reveal
                  key={model.title}
-                 initial={{ opacity: 0, scale: 0.95 }}
-                 whileInView={{ opacity: 1, scale: 1 }}
-                 viewport={{ once: true }}
-                 transition={{ delay: idx * 0.01 }}
+                 variant="scale"
+                 distance={0.95}
+                 delay={idx * 0.01}
                >
                  <Link href={model.link} className="group flex items-center justify-between p-5 bg-slate-50 border border-slate-100 rounded-2xl hover:bg-white hover:border-primary hover:shadow-xl transition-all h-full">
                     <div className="flex flex-col">
@@ -218,7 +221,7 @@ export default function ServicesPage() {
                     </div>
                     <ArrowRight className="w-4 h-4 text-slate-300 group-hover:text-primary group-hover:translate-x-1 transition-all" />
                  </Link>
-               </motion.div>
+               </Reveal>
              ))}
            </div>
         </div>

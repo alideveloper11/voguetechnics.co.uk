@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { CheckCircle2, Clock, ShieldCheck, Star, Wrench } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -13,6 +10,8 @@ import EngineSpecialistsSection from "@/components/common/EngineSpecialistsSecti
 import RegSearch from "@/components/common/RegSearch";
 import HeroTrustLabels from "@/components/common/HeroTrustLabels";
 import BrandSpecialismsSlider from "@/components/common/BrandSpecialismsSlider";
+import Reveal from "@/components/common/Reveal";
+import WarrantyPartsExcellence from "@/components/common/WarrantyPartsExcellence";
 
 export default function Home() {
   const features = [
@@ -88,7 +87,7 @@ export default function Home() {
     {
       title: "Timing Belt Replacement",
       slug: "timing-belt-replacement",
-      image: "/services/timing_belt_Replacement.jpeg",
+      image: "/services/timing_belt_Replacement.webp",
       body: "Missed timing belt replacement intervals can have devastating consequences. We replace belts, tensioners, and water pumps as a complete service — done once and done right.",
     },
     {
@@ -168,7 +167,7 @@ export default function Home() {
       <section className="relative min-h-[90vh] flex flex-col justify-center overflow-hidden bg-slate-900 pt-28 md:pt-32 pb-28 md:pb-32">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/car_bgg.jpg"
+            src="/images/car_bgg.webp"
             alt="Range Rover Dynamic Background"
             fill
             className="object-cover"
@@ -179,11 +178,9 @@ export default function Home() {
         </div>
 
         <div className="container relative z-10 mx-auto px-4 lg:px-8 flex flex-col items-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-center max-w-4xl mx-auto mb-10"
+          <div
+            className="animate-fade-up text-center max-w-4xl mx-auto mb-10"
+            style={{ "--fade-y": "30px", "--fade-duration": "0.8s" } as React.CSSProperties}
           >
             <h1 className="text-xl md:text-2xl lg:text-4xl font-bold text-white tracking-tight mb-4 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-300 to-green-400">
@@ -191,18 +188,16 @@ export default function Home() {
               </span>{" "}
               Range Rover & Land Rover Engine Specialists
             </h1>
-          </motion.div>
+          </div>
 
           {/* Registration Search Box */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="w-full max-w-2xl"
+          <div
+            className="animate-fade-scale w-full max-w-2xl"
+            style={{ "--fade-scale": "0.95", "--fade-duration": "0.6s", "--fade-delay": "0.2s" } as React.CSSProperties}
           >
             <RegSearch />
             <HeroTrustLabels className="mt-4" />
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -217,11 +212,10 @@ export default function Home() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-16 items-start">
             <div className="w-full lg:w-1/2">
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7 }}
+              <Reveal
+                variant="x"
+                distance={-30}
+                duration={0.7}
                 className="relative rounded-3xl overflow-hidden shadow-2xl"
               >
                 <div className="relative h-[340px] sm:h-[380px] md:h-[420px] lg:h-[520px]">
@@ -241,13 +235,13 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </Reveal>
 
               {/* Fill leftover space on desktop with gallery images */}
               <div className="hidden lg:grid grid-cols-2 gap-4 mt-6">
                 <div className="relative rounded-3xl overflow-hidden shadow-xl h-[180px]">
                   <Image
-                    src="/images/gallery/3g.jpeg"
+                    src="/images/gallery/3g.webp"
                     alt="Workshop diagnostics and inspection"
                     fill
                     className="object-cover"
@@ -292,7 +286,7 @@ export default function Home() {
                 </div>
                 <div className="relative rounded-3xl overflow-hidden shadow-xl h-[180px]">
                   <Image
-                    src="/images/gallery/9g.jpeg"
+                    src="/images/gallery/9g.webp"
                     alt="Range Rover service center"
                     fill
                     className="object-cover"
@@ -348,11 +342,9 @@ export default function Home() {
 
               <div className="pt-6 space-y-4">
                 {features.map((feature, idx) => (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: idx * 0.1 }}
+                  <Reveal
+                    distance={10}
+                    delay={idx * 0.1}
                     key={idx}
                     className="flex items-center gap-4 bg-slate-50 p-4 rounded-xl border border-slate-100 hover:border-primary/30 transition-colors shadow-sm"
                   >
@@ -362,11 +354,17 @@ export default function Home() {
                     <span className="font-medium text-slate-800">
                       {feature.text}
                     </span>
-                  </motion.div>
+                  </Reveal>
                 ))}
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 lg:px-8">
+          <WarrantyPartsExcellence />
         </div>
       </section>
 
@@ -391,12 +389,10 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {engineServices.map((service, idx) => (
-              <motion.div
+              <Reveal
                 key={service.slug}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.05 }}
+                duration={0.5}
+                delay={idx * 0.05}
                 className="group bg-white border border-slate-200 rounded-[1.5rem] overflow-hidden flex flex-col shadow-sm hover:shadow-xl transition-shadow duration-300"
               >
                 <div className="relative h-56 w-full overflow-hidden">
@@ -404,6 +400,7 @@ export default function Home() {
                     src={service.image}
                     alt={service.title}
                     fill
+                    sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
@@ -422,7 +419,7 @@ export default function Home() {
                     View Details
                   </Link>
                 </div>
-              </motion.div>
+              </Reveal>
             ))}
           </div>
         </div>

@@ -35,12 +35,12 @@ export async function generateMetadata({
 
   if (!area) {
     return {
-      title: "Area Not Found | Vogue Technics",
+      title: { absolute: "Area Not Found | Vogue Technics" },
     };
   }
 
   return {
-    title: area.metaTitle,
+    title: { absolute: area.metaTitle },
     description: area.metaDescription,
     alternates: {
       canonical: `/areas/${slug}`,

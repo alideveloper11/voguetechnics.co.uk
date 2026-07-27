@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     if (!service) return { title: "Service Not Found" };
     
     return {
-      title: `${service.title} | Specialist Engine Repair | Vogue Technics`,
+      title: { absolute: `${service.title} | Specialist Engine Repair | Vogue Technics` },
       description: service.shortDescription,
       alternates: { canonical: `/services/${slug}` },
     };

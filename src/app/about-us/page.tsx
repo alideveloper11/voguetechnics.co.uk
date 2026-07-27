@@ -47,7 +47,7 @@ export default function About() {
       <section className="relative overflow-hidden bg-slate-900 pt-32 pb-24 text-white">
         <div className="absolute inset-0">
           <Image
-            src="/images/car_bgg.jpg"
+            src="/images/car_bgg.webp"
             alt="Vogue Technics workshop background"
             fill
             priority
@@ -89,7 +89,7 @@ export default function About() {
               </div>
               <div className="mt-5 border-t border-white/10 pt-4 flex items-center gap-2">
                 <Award className="h-4 w-4 text-emerald-400 shrink-0" />
-                <span className="text-xs font-bold text-slate-300">IGA Member Ãƒâ€šÃ‚Â· RAC Approved Ãƒâ€šÃ‚Â· Trading Standards</span>
+                <span className="text-xs font-bold text-slate-300">IGA Member · RAC Approved · Trading Standards</span>
               </div>
             </div>
           </div>
@@ -167,7 +167,7 @@ export default function About() {
                   Vic has been working on engines for over two decades, specialising in Land Rover's TDV6 and SDV8 units, Jaguar's supercharged V8, and the Ingenium diesel family. He is one of a small number of independent technicians in the South East with the equipment and experience to handle full engine rebuilds on these vehicles.
                 </p>
                 <p>
-                  What sets Vic apart isn't just technical knowledge ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â it's his approach. He looks beyond symptoms to understand why an engine failed and what it would take to fix it properly. If a vehicle isn't worth the spend, he'll say so. Customers tend to appreciate the honesty.
+                  What sets Vic apart isn't just technical knowledge — it's his approach. He looks beyond symptoms to understand why an engine failed and what it would take to fix it properly. If a vehicle isn't worth the spend, he'll say so. Customers tend to appreciate the honesty.
                 </p>
               </div>
               <div className="mt-6">
@@ -185,7 +185,7 @@ export default function About() {
                 <Quote className="h-4 w-4" /> A Word From Vic
               </span>
               <blockquote className="mt-6 text-base leading-relaxed text-slate-100 md:text-lg">
-                "We'll tell you exactly what's wrong, what it will cost, and what we're going to do. We'll use the right parts and take the time it takes. If the numbers don't add up for you, we'll say so. That's how we've worked since 2004. Every vehicle that comes through our doors gets the same level of care ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â whether it's a diagnostic check or a complete engine rebuild. We don't cut corners, and we don't tell people what they want to hear."
+                "We'll tell you exactly what's wrong, what it will cost, and what we're going to do. We'll use the right parts and take the time it takes. If the numbers don't add up for you, we'll say so. That's how we've worked since 2004. Every vehicle that comes through our doors gets the same level of care — whether it's a diagnostic check or a complete engine rebuild. We don't cut corners, and we don't tell people what they want to hear."
               </blockquote>
               <p className="mt-6 text-sm font-bold uppercase tracking-[0.2em] text-emerald-300">
                 Vic, Owner & Lead Technician, Vogue Technics

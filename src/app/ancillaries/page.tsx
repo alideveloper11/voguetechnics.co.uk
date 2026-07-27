@@ -92,11 +92,11 @@ export default function Ancillaries() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-slate-600">
               <div className="space-y-2 bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-primary/20 transition-colors">
                 <h4 className="text-lg font-bold text-slate-800">EGR Valve</h4>
-                <p className="text-sm leading-relaxed">Keep your engine running smoothly and efficiently with our range of EGR valves, including the Range Rover Evoque EGR Valve and Land Rover Discovery 3 EGR Valve. Perfect for reducing emissions and improving your vehicleÃ¢â‚¬â„¢s environmental performance. Order yours today!</p>
+                <p className="text-sm leading-relaxed">Keep your engine running smoothly and efficiently with our range of EGR valves, including the Range Rover Evoque EGR Valve and Land Rover Discovery 3 EGR Valve. Perfect for reducing emissions and improving your vehicle's environmental performance. Order yours today!</p>
               </div>
               <div className="space-y-2 bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-primary/20 transition-colors">
                 <h4 className="text-lg font-bold text-slate-800">Supercharger</h4>
-                <p className="text-sm leading-relaxed">Boost your engineÃ¢â‚¬â„¢s power with a high-quality supercharger. Our selection includes the Range Rover Sport Supercharger, designed to enhance your driving experience. Feel the power with a simple installation that promises remarkable performance enhancements.</p>
+                <p className="text-sm leading-relaxed">Boost your engine's power with a high-quality supercharger. Our selection includes the Range Rover Sport Supercharger, designed to enhance your driving experience. Feel the power with a simple installation that promises remarkable performance enhancements.</p>
               </div>
               <div className="space-y-2 bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-primary/20 transition-colors">
                 <h4 className="text-lg font-bold text-slate-800">Turbo</h4>
@@ -116,7 +116,7 @@ export default function Ancillaries() {
               </div>
               <div className="space-y-2 bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-primary/20 transition-colors">
                 <h4 className="text-lg font-bold text-slate-800">Alternator</h4>
-                <p className="text-sm leading-relaxed">Keep your vehicleÃ¢â‚¬â„¢s electrical systems running perfectly with our efficient alternators. Check out the Range Rover Evoque Alternator and the Land Rover Discovery 3 Alternator for dependable power delivery.</p>
+                <p className="text-sm leading-relaxed">Keep your vehicle's electrical systems running perfectly with our efficient alternators. Check out the Range Rover Evoque Alternator and the Land Rover Discovery 3 Alternator for dependable power delivery.</p>
               </div>
               <div className="space-y-2 bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-primary/20 transition-colors">
                 <h4 className="text-lg font-bold text-slate-800">Starter Motor</h4>

@@ -1,10 +1,7 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Phone } from "lucide-react";
 import PartnerLogos from "@/components/common/PartnerLogos";
-import { motion } from "framer-motion";
 import Breadcrumbs from "@/components/common/Breadcrumbs";
 import RegSearch from "@/components/common/RegSearch";
 import HeroTrustLabels from "@/components/common/HeroTrustLabels";
@@ -203,7 +200,7 @@ export default function JaguarEnginesClient() {
       <section className="relative overflow-hidden bg-slate-900 pt-32 pb-24">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/car_bgg.jpg"
+            src="/images/car_bgg.webp"
             alt="Jaguar engine specialists in "
             fill
             className="object-cover opacity-65 mix-blend-overlay"
@@ -216,31 +213,25 @@ export default function JaguarEnginesClient() {
           <Breadcrumbs items={[{ name: "Jaguar Engines", href: "/jaguar-engines" }]} />
           
           <div className="max-w-5xl pt-8">
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="text-3xl font-black leading-[1.08] tracking-tight text-white md:text-5xl"
+            <h1
+              className="animate-fade-up text-3xl font-black leading-[1.08] tracking-tight text-white md:text-5xl"
             >
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-300 to-green-400">
                 Jaguar Engine Rebuild Specialists
               </span>{" "}
               |  | UK-Wide Service
-            </motion.h1>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.12 }}
-              className="mt-7"
+            </h1>
+            <div
+              className="animate-fade-up mt-7"
+              style={{ "--fade-delay": "0.12s" } as React.CSSProperties}
             >
               <RegSearch className="max-w-3xl" />
             <HeroTrustLabels className="mt-4" />
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.38 }}
-              className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"
+            <div
+              className="animate-fade-up mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"
+              style={{ "--fade-delay": "0.38s" } as React.CSSProperties}
             >
               {keyStats.map((s) => (
                 <div
@@ -253,7 +244,7 @@ export default function JaguarEnginesClient() {
                   </div>
                 </div>
               ))}
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -443,10 +434,9 @@ export default function JaguarEnginesClient() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
             {jaguarModels.map((model, idx) => (
-              <motion.div
+              <div
                 key={idx}
-                whileHover={{ y: -8, scale: 1.01 }}
-                className="group h-full"
+                className="group h-full transition-transform duration-200 hover:-translate-y-2 hover:scale-[1.01]"
               >
                 <Link href={model.link} className="block h-full">
                   <div className="bg-slate-50 border border-slate-200 rounded-[1.5rem] p-5 hover:bg-white hover:border-primary/30 hover:shadow-[0_18px_40px_-20px_rgba(0,0,0,0.12)] transition-all duration-500 flex flex-col space-y-4 relative overflow-hidden h-full">
@@ -463,7 +453,7 @@ export default function JaguarEnginesClient() {
                     </div>
                   </div>
                 </Link>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

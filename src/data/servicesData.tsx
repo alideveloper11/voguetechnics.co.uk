@@ -306,7 +306,7 @@ export const services: Service[] = [
     title: "Timing Belt Replacement",
     slug: "timing-belt-replacement",
     icon: <Layers className="w-6 h-6" />,
-    image: "/services/timing_belt_Replacement.jpeg",
+    image: "/services/timing_belt_Replacement.webp",
     shortDescription: "A timing belt doesn’t warn before it fails. We replace belts/cambelts at the correct interval using the full kit (tensioner, idlers, and water pump where belt-driven) to prevent severe damage.",
     longDescription: "Prevent engine damage with our timely timing belt replacement service. We use high-quality belts and water pumps to ensure your engine runs smoothly for thousands of miles.",
     features: ["High-durability belts", "Water pump replacement", "Tensioner check", "Interval reset"],

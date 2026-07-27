@@ -1,6 +1,5 @@
-"use client";
-
-import { motion } from "framer-motion";
+import Reveal from "@/components/common/Reveal";
+import WarrantyPartsExcellence from "@/components/common/WarrantyPartsExcellence";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -43,7 +42,7 @@ export default function EnginesPortalClient() {
       <section className="relative overflow-hidden bg-slate-900 pt-32 pb-24">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/car_bgg.jpg"
+            src="/images/car_bgg.webp"
             alt="Vogue Technics engine specialists"
             fill
             className="object-cover opacity-65 mix-blend-overlay"
@@ -56,41 +55,33 @@ export default function EnginesPortalClient() {
           <Breadcrumbs items={[{ name: "Our Engines", href: "/engines" }]} />
           
           <div className="max-w-5xl pt-8">
-            <motion.span
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/20 px-4 py-2 text-xs font-black uppercase tracking-[0.2em] text-emerald-300 shadow-[0_0_22px_rgba(25,135,84,0.22)]"
+            <span
+              className="animate-fade-up inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/20 px-4 py-2 text-xs font-black uppercase tracking-[0.2em] text-emerald-300 shadow-[0_0_22px_rgba(25,135,84,0.22)]"
             >
-              Engine Specialists   
-            </motion.span>
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              className="mt-6 text-3xl font-black leading-[1.08] tracking-tight text-white md:text-5xl"
+              Engine Specialists
+            </span>
+            <h1
+              className="animate-fade-up mt-6 text-3xl font-black leading-[1.08] tracking-tight text-white md:text-5xl"
+              style={{ "--fade-delay": "0.1s" } as React.CSSProperties}
             >
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-300 to-green-400">
                 Engine Repair, Rebuild & Replacement Specialists
               </span>{" "}
-                Vogue Technics, 
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="mt-5 max-w-4xl text-sm leading-relaxed text-slate-300 md:text-base"
+                Vogue Technics,
+            </h1>
+            <p
+              className="animate-fade-up mt-5 max-w-4xl text-sm leading-relaxed text-slate-300 md:text-base"
+              style={{ "--fade-delay": "0.2s" } as React.CSSProperties}
             >
               Some engine problems announce themselves loudly. Others build quietly over weeks and months   a slight drop in power here, an occasional rattle on a cold morning there   until the point where the damage is serious and the decision about what to do next cannot be deferred any longer.
               <br />
               <br />
               At that point, the garage you choose is everything.
-            </motion.p>
+            </p>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.25 }}
-              className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center"
+            <div
+              className="animate-fade-up mt-7 flex flex-col gap-3 sm:flex-row sm:items-center"
+              style={{ "--fade-delay": "0.25s" } as React.CSSProperties}
             >
               <Link
                 href="/contact-us"
@@ -110,7 +101,7 @@ export default function EnginesPortalClient() {
               >
                 Book an Engine Inspection
               </Link>
-            </motion.div>
+            </div>
 
             <HeroTrustLabels align="start" className="mt-4" />
 
@@ -183,6 +174,12 @@ export default function EnginesPortalClient() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-20 bg-white">
+        <div className="container mx-auto px-4 lg:px-8">
+          <WarrantyPartsExcellence />
         </div>
       </section>
 
@@ -337,28 +334,16 @@ export default function EnginesPortalClient() {
 
       <section className="py-24 bg-primary relative overflow-hidden">
         <div className="container mx-auto px-4 lg:px-8 text-center relative z-10">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-2xl md:text-4xl font-black text-white mb-6 tracking-tighter uppercase italic"
-          >
-            Vogue Technics | Engine Specialists |  | UK-Wide Collection Available
-          </motion.h2>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-sm md:text-base text-emerald-50 mb-10 max-w-3xl mx-auto font-medium"
-          >
-            Range Rover • Land Rover • Jaguar • Audi • BMW
-          </motion.p>
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
+          <Reveal className="text-2xl md:text-4xl font-black text-white mb-6 tracking-tighter uppercase italic">
+            <h2>Vogue Technics | Engine Specialists |  | UK-Wide Collection Available</h2>
+          </Reveal>
+          <Reveal delay={0.1} className="text-sm md:text-base text-emerald-50 mb-10 max-w-3xl mx-auto font-medium">
+            <p>Range Rover • Land Rover • Jaguar • Audi • BMW</p>
+          </Reveal>
+          <Reveal
+            variant="scale"
+            distance={0.9}
+            delay={0.2}
             className="flex flex-col md:flex-row gap-8 justify-center items-center"
           >
             <a href="tel:01375531355" className="bg-white text-primary font-black py-3.5 px-10 rounded-2xl shadow-2xl transition-all transform hover:-translate-y-2 hover:bg-slate-50 text-sm uppercase tracking-widest">
@@ -367,7 +352,7 @@ export default function EnginesPortalClient() {
             <Link href="/contact-us" className="bg-slate-900 text-white font-black py-3.5 px-10 rounded-2xl shadow-2xl transition-all transform hover:-translate-y-2 hover:bg-slate-800 text-sm uppercase tracking-widest border border-white/10">
               REQUEST QUOTE
             </Link>
-          </motion.div>
+          </Reveal>
         </div>
 
         {/* Decorative elements */}

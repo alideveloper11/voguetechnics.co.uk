@@ -13,6 +13,7 @@ import FAQSection from "@/components/common/FAQSection";
 import ServiceGallery from "@/components/common/ServiceGallery";
 import PartnerLogos from "@/components/common/PartnerLogos";
 import NationwideSupportSection from "@/components/common/NationwideSupportSection";
+import WarrantyPartsExcellence from "@/components/common/WarrantyPartsExcellence";
 
 export const metadata: Metadata = pageMetadata.serviceTurboReplacement;
 
@@ -23,7 +24,7 @@ export default function TurboReplacementPage() {
       <section className="bg-slate-900 border-b border-slate-800 py-24 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/car_bgg.jpg"
+            src="/images/car_bgg.webp"
             alt="Turbo replacement specialists"
             fill
             className="object-cover opacity-20 filter grayscale"
@@ -83,9 +84,9 @@ export default function TurboReplacementPage() {
         title="Turbo Replacement Work"
         subtitle="A look at some of the turbo replacement jobs carried out at our workshop."
         images={[
-          { src: "/turbo_replacement/turbo_replacement%201.png", alt: "Turbo replacement 1" },
-          { src: "/turbo_replacement/turbo_replacement%202.png", alt: "Turbo replacement 2" },
-          { src: "/turbo_replacement/turbo_replacement%203.png", alt: "Turbo replacement 3" },
+          { src: "/turbo_replacement/turbo_replacement%201.webp", alt: "Turbo replacement 1" },
+          { src: "/turbo_replacement/turbo_replacement%202.webp", alt: "Turbo replacement 2" },
+          { src: "/turbo_replacement/turbo_replacement%203.webp", alt: "Turbo replacement 3" },
         ]}
       />
 
@@ -169,7 +170,7 @@ export default function TurboReplacementPage() {
             <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
               <div className="space-y-3">
                 <h3 className="text-xl md:text-2xl font-extrabold uppercase tracking-tight italic">
-                  DonÃ¢â‚¬â„¢t wait until it becomes an engine repair.
+                  Don't wait until it becomes an engine repair.
                 </h3>
                 <p className="text-slate-300 font-medium leading-relaxed text-sm md:text-base">
                   The longer a failing turbo runs, the greater the risk of oil contamination spreading into the engine. Acting now
@@ -240,6 +241,12 @@ export default function TurboReplacementPage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 lg:px-8">
+          <WarrantyPartsExcellence />
         </div>
       </section>
 
@@ -451,8 +458,8 @@ export default function TurboReplacementPage() {
           </div>
 
           <div className="mt-8 text-white/90 font-black uppercase tracking-widest text-[0.65rem]">
-            Vogue Technics | Turbo Replacement Specialists |  | UK-Wide Collection &nbsp; Range Rover Ã¢â‚¬Â¢ Land Rover Ã¢â‚¬Â¢
-            Jaguar Ã¢â‚¬Â¢ Audi Ã¢â‚¬Â¢ BMW
+            Vogue Technics | Turbo Replacement Specialists |  | UK-Wide Collection &nbsp; Range Rover • Land Rover •
+            Jaguar • Audi • BMW
           </div>
         </div>
       </section>

@@ -1,11 +1,10 @@
-"use client";
-
 import Breadcrumbs from "@/components/common/Breadcrumbs";
 import FAQSection from "@/components/common/FAQSection";
+import WarrantyPartsExcellence from "@/components/common/WarrantyPartsExcellence";
 import PartnerLogos from "@/components/common/PartnerLogos";
 import RegSearch from "@/components/common/RegSearch";
 import HeroTrustLabels from "@/components/common/HeroTrustLabels";
-import { motion } from "framer-motion";
+import Reveal from "@/components/common/Reveal";
 import { ArrowRight, CheckCircle2, Phone, Star } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -120,7 +119,7 @@ export default function Bmw1SeriesEnginesClient() {
       <section className="relative min-h-[70vh] flex flex-col justify-center overflow-hidden bg-slate-900 pt-32 pb-20">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/car_bgg.jpg"
+            src="/images/car_bgg.webp"
             alt="BMW 1 Series Engine Specialists"
             fill
             className="object-cover opacity-65 mix-blend-overlay"
@@ -138,35 +137,27 @@ export default function Bmw1SeriesEnginesClient() {
           />
 
           <div className="text-center max-w-5xl mx-auto">
-            <motion.span
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="inline-block py-1.5 px-4 rounded-full bg-primary/20 text-emerald-300 font-semibold tracking-wide text-sm mb-6 border border-primary/30 shadow-[0_0_15px_rgba(25,135,84,0.25)]"
-            >
+            <span className="animate-fade-up inline-block py-1.5 px-4 rounded-full bg-primary/20 text-emerald-300 font-semibold tracking-wide text-sm mb-6 border border-primary/30 shadow-[0_0_15px_rgba(25,135,84,0.25)]">
               BMW 1 Series Specialists (UK)
-            </motion.span>
+            </span>
 
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-emerald-50 tracking-tight mb-6 leading-tight"
+            <h1
+              className="animate-fade-up text-3xl md:text-4xl lg:text-5xl font-extrabold text-emerald-50 tracking-tight mb-6 leading-tight"
+              style={{ "--fade-delay": "0.1s" } as React.CSSProperties}
             >
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 via-green-400 to-lime-300">
                 BMW 1 Series Engine Rebuild
               </span>{" "}
                 Specialist Repairs, Replacements &amp; Reconditioning Across the UK
-            </motion.h1>
+            </h1>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.18 }}
-              className="mt-6 mb-8 flex w-full flex-col items-center justify-center"
+            <div
+              className="animate-fade-up mt-6 mb-8 flex w-full flex-col items-center justify-center"
+              style={{ "--fade-delay": "0.18s" } as React.CSSProperties}
             >
               <RegSearch />
             <HeroTrustLabels className="mt-4" />
-            </motion.div>
+            </div>
 
           </div>
         </div>
@@ -236,6 +227,12 @@ export default function Bmw1SeriesEnginesClient() {
         </div>
       </section>
 
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4 lg:px-8">
+          <WarrantyPartsExcellence />
+        </div>
+      </section>
+
       {/* FIND YOUR BMW (1 SERIES VARIANTS) */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
@@ -247,13 +244,7 @@ export default function Bmw1SeriesEnginesClient() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {modelCards.map((m, idx) => (
-              <motion.div
-                key={m.title}
-                initial={{ opacity: 0, y: 12 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.25, delay: idx * 0.02 }}
-              >
+              <Reveal key={m.title} duration={0.25} delay={idx * 0.02} distance={12}>
                 <Link href={m.href} className="group block h-full">
                   <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-xl hover:border-primary/50 transition-all duration-300 h-full">
                     <div className="flex items-center justify-center mb-5">
@@ -269,7 +260,7 @@ export default function Bmw1SeriesEnginesClient() {
                     </div>
                   </div>
                 </Link>
-              </motion.div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -365,12 +356,10 @@ export default function Bmw1SeriesEnginesClient() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {reviews.map((t, idx) => (
-              <motion.div
+              <Reveal
                 key={t.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.45, delay: idx * 0.08 }}
+                duration={0.45}
+                delay={idx * 0.08}
                 className="bg-white p-8 rounded-[2rem] shadow-xl border border-slate-100 flex flex-col justify-between hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
               >
                 <div>
@@ -387,7 +376,7 @@ export default function Bmw1SeriesEnginesClient() {
                 <div className="border-t border-slate-50 pt-6">
                   <h4 className="font-bold text-slate-900 text-sm md:text-base uppercase tracking-tight">{t.name}</h4>
                 </div>
-              </motion.div>
+              </Reveal>
             ))}
           </div>
         </div>

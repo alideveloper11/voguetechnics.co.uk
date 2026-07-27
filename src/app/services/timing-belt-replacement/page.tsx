@@ -13,6 +13,7 @@ import FAQSection from "@/components/common/FAQSection";
 import ServiceGallery from "@/components/common/ServiceGallery";
 import PartnerLogos from "@/components/common/PartnerLogos";
 import NationwideSupportSection from "@/components/common/NationwideSupportSection";
+import WarrantyPartsExcellence from "@/components/common/WarrantyPartsExcellence";
 
 export const metadata: Metadata = pageMetadata.serviceTimingBeltReplacement;
 
@@ -23,7 +24,7 @@ export default function TimingBeltReplacementPage() {
       <section className="bg-slate-900 border-b border-slate-800 py-24 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/car_bgg.jpg"
+            src="/images/car_bgg.webp"
             alt="Timing belt replacement specialists"
             fill
             className="object-cover opacity-20 filter grayscale"
@@ -83,9 +84,9 @@ export default function TimingBeltReplacementPage() {
         title="Timing Belt Replacement Work"
         subtitle="A look at some of the timing belt replacement jobs carried out at our workshop."
         images={[
-          { src: "/timming_belt/timing_belt%201.png", alt: "Timing belt replacement 1" },
-          { src: "/timming_belt/timing_belt%202.png", alt: "Timing belt replacement 2" },
-          { src: "/timming_belt/timing_belt%203.png", alt: "Timing belt replacement 3" },
+          { src: "/timming_belt/timing_belt%201.webp", alt: "Timing belt replacement 1" },
+          { src: "/timming_belt/timing_belt%202.webp", alt: "Timing belt replacement 2" },
+          { src: "/timming_belt/timing_belt%203.webp", alt: "Timing belt replacement 3" },
         ]}
       />
 
@@ -101,7 +102,7 @@ export default function TimingBeltReplacementPage() {
 
           <div className="max-w-5xl mx-auto space-y-4 text-slate-600 leading-relaxed font-medium text-sm bg-slate-50 border border-slate-100 rounded-[3rem] p-8 md:p-10">
             <p>
-              A timing belt (cambelt) is a rubber belt that degrades over time and must be replaced at set mileage or age intervals. A timing chain does the same job but is metal, oil-lubricated, and designed to last the engine's lifetime Ã¢â‚¬â€ though it can wear on certain platforms.
+              A timing belt (cambelt) is a rubber belt that degrades over time and must be replaced at set mileage or age intervals. A timing chain does the same job but is metal, oil-lubricated, and designed to last the engine's lifetime — though it can wear on certain platforms.
             </p>
             <p>
               Many modern JLR, Audi, and BMW engines use timing chains, but several older diesel platforms still use a belt. We'll confirm which your vehicle has at the point of enquiry, free of charge.
@@ -163,6 +164,12 @@ export default function TimingBeltReplacementPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 lg:px-8">
+          <WarrantyPartsExcellence />
         </div>
       </section>
 
@@ -347,8 +354,8 @@ export default function TimingBeltReplacementPage() {
           </div>
 
           <div className="mt-8 text-white/90 font-black uppercase tracking-widest text-[0.65rem]">
-            Vogue Technics | Timing Belt Replacement Specialists |  | UK-Wide Collection &nbsp; Range Rover Ã¢â‚¬Â¢ Land Rover
-            Ã¢â‚¬Â¢ Jaguar Ã¢â‚¬Â¢ Audi Ã¢â‚¬Â¢ BMW
+            Vogue Technics | Timing Belt Replacement Specialists |  | UK-Wide Collection &nbsp; Range Rover • Land Rover
+            • Jaguar • Audi • BMW
           </div>
         </div>
       </section>

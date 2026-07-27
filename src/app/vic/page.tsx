@@ -28,7 +28,7 @@ import React from "react";
 
 // THIS IS NOW THE MAIN /VIC ROUTE
 export const metadata: Metadata = {
-  title: "Vic | Senior Workshop Manager & JLR Engine Specialist | Vogue Technics",
+  title: { absolute: "Vic | Senior Workshop Manager & JLR Engine Specialist | Vogue Technics" },
   description: "Senior Technical expert with 20+ years of experience, exclusively focused on Jaguar Land Rover engine remanufacturing for the past 15 years.",
   alternates: { canonical: "/vic" },
 };
@@ -86,6 +86,7 @@ export default function VicProfilePage() {
                   src={author.image}
                   alt={author.name}
                   fill
+                  sizes="(min-width: 768px) 320px, 224px"
                   className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
                 />
               </div>

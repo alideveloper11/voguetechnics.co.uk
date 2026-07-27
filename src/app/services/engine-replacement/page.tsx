@@ -13,6 +13,7 @@ import FAQSection from "@/components/common/FAQSection";
 import ServiceGallery from "@/components/common/ServiceGallery";
 import PartnerLogos from "@/components/common/PartnerLogos";
 import NationwideSupportSection from "@/components/common/NationwideSupportSection";
+import WarrantyPartsExcellence from "@/components/common/WarrantyPartsExcellence";
 
 export const metadata: Metadata = pageMetadata.serviceEngineReplacement;
 
@@ -23,7 +24,7 @@ export default function EngineReplacementPage() {
       <section className="bg-slate-900 border-b border-slate-800 py-24 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/car_bgg.jpg"
+            src="/images/car_bgg.webp"
             alt="Engine replacement specialists"
             fill
             className="object-cover opacity-20 filter grayscale"
@@ -83,9 +84,9 @@ export default function EngineReplacementPage() {
         title="Engine Replacement Work"
         subtitle="A look at some of the engine replacement jobs carried out at our workshop."
         images={[
-          { src: "/engine_replacement/engine_replacement%201.png", alt: "Engine replacement 1" },
-          { src: "/engine_replacement/engine_replacement%202.png", alt: "Engine replacement 2" },
-          { src: "/engine_replacement/engine_replacement%203.png", alt: "Engine replacement 3" },
+          { src: "/engine_replacement/engine_replacement%201.webp", alt: "Engine replacement 1" },
+          { src: "/engine_replacement/engine_replacement%202.webp", alt: "Engine replacement 2" },
+          { src: "/engine_replacement/engine_replacement%203.webp", alt: "Engine replacement 3" },
         ]}
       />
 
@@ -101,7 +102,7 @@ export default function EngineReplacementPage() {
 
           <div className="max-w-5xl mx-auto space-y-4 text-slate-600 leading-relaxed font-medium text-sm bg-slate-50 border border-slate-100 rounded-[3rem] p-8 md:p-10">
             <p>
-              Replacement makes sense when damage is extensive enough that rebuild cost exceeds the value it would deliver Ã¢â‚¬â€ a seized engine, cracked block, or bores worn beyond machining are typical examples.
+              Replacement makes sense when damage is extensive enough that rebuild cost exceeds the value it would deliver — a seized engine, cracked block, or bores worn beyond machining are typical examples.
             </p>
             <p>
               It also applies when a quality low-mileage or reconditioned unit is available at a cost that compares favourably to the rebuild. Where rebuild is the better option, we'll say so and quote for both.
@@ -148,6 +149,12 @@ export default function EngineReplacementPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 lg:px-8">
+          <WarrantyPartsExcellence />
         </div>
       </section>
 
@@ -286,7 +293,7 @@ export default function EngineReplacementPage() {
           {
             question: "What is the difference between a used engine and a reconditioned engine?",
             answer:
-              "A used engine is a removed unit of known mileage, tested and inspected before fitting. A reconditioned engine has been stripped, worn components replaced, and reassembled to specification. We advise on which option suits your vehicleÃ¢â‚¬â„¢s age, mileage, and intended use.",
+              "A used engine is a removed unit of known mileage, tested and inspected before fitting. A reconditioned engine has been stripped, worn components replaced, and reassembled to specification. We advise on which option suits your vehicle's age, mileage, and intended use.",
           },
           {
             question: "Do you provide a warranty on replacement engines?",
@@ -339,8 +346,8 @@ export default function EngineReplacementPage() {
           </div>
 
           <div className="mt-8 text-white/90 font-black uppercase tracking-widest text-[0.65rem]">
-            Vogue Technics | Engine Replacement Specialists |  | UK-Wide Collection &nbsp; Range Rover Ã¢â‚¬Â¢ Land Rover Ã¢â‚¬Â¢
-            Jaguar Ã¢â‚¬Â¢ Audi Ã¢â‚¬Â¢ BMW
+            Vogue Technics | Engine Replacement Specialists |  | UK-Wide Collection &nbsp; Range Rover • Land Rover •
+            Jaguar • Audi • BMW
           </div>
         </div>
       </section>

@@ -1,11 +1,9 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { CheckCircle2, Shield, Search, Phone, Clock, Wrench, Award, Star, Activity, ArrowRight, AlertTriangle, Settings } from "lucide-react";
 import PartnerLogos from "@/components/common/PartnerLogos";
 import ReviewsSection from "@/components/common/ReviewsSection";
-import { motion } from "framer-motion";
+import Reveal from "@/components/common/Reveal";
 import Breadcrumbs from "@/components/common/Breadcrumbs";
 import RegSearch from "@/components/common/RegSearch";
 import HeroTrustLabels from "@/components/common/HeroTrustLabels";
@@ -50,7 +48,7 @@ export default function LandRoverEnginesClient() {
       <section className="relative min-h-[70vh] flex flex-col justify-center overflow-hidden bg-slate-900 pt-32 pb-20">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/car_bgg.jpg"
+            src="/images/car_bgg.webp"
             alt="Land Rover Engine Specialist"
             fill
             className="object-cover opacity-65 mix-blend-overlay"
@@ -63,36 +61,28 @@ export default function LandRoverEnginesClient() {
           <Breadcrumbs items={[{ name: "Land Rover Engines", href: "/land-rover-engines" }]} />
           
           <div className="text-center max-w-4xl mx-auto">
-            <motion.span 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="inline-block py-1 px-3 rounded-full bg-primary/20 text-emerald-400 font-semibold tracking-wider text-sm mb-6 border border-primary/30 shadow-[0_0_15px_rgba(25,135,84,0.3)] uppercase">
+            <span
+            className="animate-fade-up inline-block py-1 px-3 rounded-full bg-primary/20 text-emerald-400 font-semibold tracking-wider text-sm mb-6 border border-primary/30 shadow-[0_0_15px_rgba(25,135,84,0.3)] uppercase">
             Land Rover Specialist
-          </motion.span>
-            <motion.h1 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight mb-8 leading-tight uppercase">
+          </span>
+            <h1
+              className="animate-fade-up text-3xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight mb-8 leading-tight uppercase"
+              style={{ "--fade-delay": "0.1s" } as React.CSSProperties}>
               Elite <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-400 to-green-500 italic">Land Rover</span> <br />
               Engine Rebuild Specialists
-            </motion.h1>
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+            </h1>
+            <p
+              className="animate-fade-up text-lg md:text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed"
+              style={{ "--fade-delay": "0.2s" } as React.CSSProperties}>
               Vogue Technics delivers expert engine reconditioning and seamless replacements for all Land Rover models nationwide.
-            </motion.p>
-          
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="mt-8 flex w-full flex-col items-center justify-center">
+            </p>
+
+          <div
+            className="animate-fade-up mt-8 flex w-full flex-col items-center justify-center"
+            style={{ "--fade-delay": "0.3s" } as React.CSSProperties}>
             <RegSearch />
             <HeroTrustLabels className="mt-4" />
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
@@ -248,12 +238,12 @@ export default function LandRoverEnginesClient() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {landRoverModels.map((model, idx) => (
-              <motion.div
+              <Reveal
                 key={idx}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.3, delay: idx * 0.02 }}
+                variant="scale"
+                distance={0.95}
+                duration={0.3}
+                delay={idx * 0.02}
               >
                 <Link href={model.link} className="group block h-full">
                   <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-xl hover:border-primary/50 transition-all duration-300 h-full flex flex-col justify-between relative overflow-hidden">
@@ -278,7 +268,7 @@ export default function LandRoverEnginesClient() {
                     </div>
                   </div>
                 </Link>
-              </motion.div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -366,10 +356,8 @@ export default function LandRoverEnginesClient() {
       {/* EXTENDED WARRANTY CALLOUT */}
       <section className="pb-24 pt-12 bg-slate-900 overflow-hidden relative">
         <div className="container mx-auto px-4 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+          <Reveal
+            distance={30}
             className="bg-white/5 border-2 border-primary/40 rounded-[1.5rem] p-6 md:p-10 text-center relative overflow-hidden group shadow-2xl"
           >
             <div className="absolute top-0 right-0 w-80 h-80 bg-primary/10 blur-[100px] rounded-full -mr-40 -mt-40 pointer-events-none"></div>
@@ -386,7 +374,7 @@ export default function LandRoverEnginesClient() {
                 We also offer <span className="text-white font-bold">up to 24 months warranty</span>, sourced directly from main dealers. Please note, this option comes at a higher cost due to the extended protection and premium coverage.
               </p>
             </div>
-          </motion.div>
+          </Reveal>
         </div>
       </section>
 

@@ -13,6 +13,7 @@ import FAQSection from "@/components/common/FAQSection";
 import ServiceGallery from "@/components/common/ServiceGallery";
 import PartnerLogos from "@/components/common/PartnerLogos";
 import NationwideSupportSection from "@/components/common/NationwideSupportSection";
+import WarrantyPartsExcellence from "@/components/common/WarrantyPartsExcellence";
 
 export const metadata: Metadata = pageMetadata.serviceEngineSwap;
 
@@ -23,7 +24,7 @@ export default function EngineSwapPage() {
       <section className="bg-slate-900 border-b border-slate-800 py-24 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/car_bgg.jpg"
+            src="/images/car_bgg.webp"
             alt="Engine swap specialists"
             fill
             className="object-cover opacity-20 filter grayscale"
@@ -83,10 +84,10 @@ export default function EngineSwapPage() {
         title="Engine Swap Work"
         subtitle="A look at some of the engine swap jobs carried out at our workshop."
         images={[
-          { src: "/engine_swap/engine_swap%201.png", alt: "Engine swap 1" },
-          { src: "/engine_swap/engine_swap%202.png", alt: "Engine swap 2" },
-          { src: "/engine_swap/engine_swap%203.png", alt: "Engine swap 3" },
-          { src: "/engine_swap/engine_swap%204.png", alt: "Engine swap 4" },
+          { src: "/engine_swap/engine_swap%201.webp", alt: "Engine swap 1" },
+          { src: "/engine_swap/engine_swap%202.webp", alt: "Engine swap 2" },
+          { src: "/engine_swap/engine_swap%203.webp", alt: "Engine swap 3" },
+          { src: "/engine_swap/engine_swap%204.webp", alt: "Engine swap 4" },
         ]}
       />
 
@@ -105,7 +106,7 @@ export default function EngineSwapPage() {
               A swap makes sense when internal damage makes rebuild uneconomical, when you want to improve reliability or performance beyond what the original engine offers, or when quality replacement units of the same spec are scarce.
             </p>
             <p>
-              Engine swaps vary enormously in complexity and cost Ã¢â‚¬â€ the first conversation should always be an honest one about whether it's genuinely the right decision for your vehicle.
+              Engine swaps vary enormously in complexity and cost — the first conversation should always be an honest one about whether it's genuinely the right decision for your vehicle.
             </p>
             <div className="pt-6">
               <Link href="/contact-us" className="inline-flex items-center gap-2 text-primary font-black text-xs tracking-widest uppercase">
@@ -152,7 +153,7 @@ export default function EngineSwapPage() {
                 Request a Written Engine Swap Quote Today
               </h3>
               <p className="text-slate-300 font-medium leading-relaxed text-sm md:text-base mb-8">
-                Tell us your vehicle, your objective, and any symptoms or history   weÃ¢â‚¬â„¢ll advise honestly on feasibility and cost.
+                Tell us your vehicle, your objective, and any symptoms or history   we'll advise honestly on feasibility and cost.
               </p>
               <Link
                 href="/contact-us"
@@ -162,6 +163,12 @@ export default function EngineSwapPage() {
               </Link>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 lg:px-8">
+          <WarrantyPartsExcellence />
         </div>
       </section>
 
@@ -355,8 +362,8 @@ export default function EngineSwapPage() {
           </div>
 
           <div className="mt-8 text-white/90 font-black uppercase tracking-widest text-[0.65rem]">
-            Vogue Technics | Engine Swap Specialists |  | UK-Wide Collection &nbsp; Range Rover Ã¢â‚¬Â¢ Land Rover Ã¢â‚¬Â¢ Jaguar Ã¢â‚¬Â¢
-            Audi Ã¢â‚¬Â¢ BMW
+            Vogue Technics | Engine Swap Specialists |  | UK-Wide Collection &nbsp; Range Rover • Land Rover • Jaguar •
+            Audi • BMW
           </div>
         </div>
       </section>

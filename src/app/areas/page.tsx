@@ -18,7 +18,7 @@ import EngineRepairCostSection from "@/components/common/EngineRepairCostSection
 import { areasLandingSections } from "@/components/areas/areasPageData";
 
 export const metadata: Metadata = {
-  title: "Areas Covered | Vogue Technics",
+  title: { absolute: "Areas Covered | Vogue Technics" },
   description:
     "Explore the areas covered by Vogue Technics for specialist engine repair, rebuilds, replacements, and collection support across the UK.",
   alternates: {

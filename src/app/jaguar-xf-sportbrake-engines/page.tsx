@@ -7,6 +7,7 @@ import Breadcrumbs from "@/components/common/Breadcrumbs";
 import RegSearch from "@/components/common/RegSearch";
 import HeroTrustLabels from "@/components/common/HeroTrustLabels";
 import FAQSection from "@/components/common/FAQSection";
+import WarrantyPartsExcellence from "@/components/common/WarrantyPartsExcellence";
 import PartnerLogos from "@/components/common/PartnerLogos";
 import EngineCodesTable from "@/components/common/EngineCodesTable";
 import { getEngineCodesEntry } from "@/data/engineCodes";
@@ -44,7 +45,7 @@ export default function JaguarXFSportbrakeEnginesPage() {
       <section className="relative overflow-hidden bg-slate-900 pt-32 pb-24">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/car_bgg.jpg"
+            src="/images/car_bgg.webp"
             alt="Jaguar XF Sportbrake engine specialists in "
             fill
             className="object-cover opacity-65 mix-blend-overlay"
@@ -72,7 +73,7 @@ export default function JaguarXFSportbrakeEnginesPage() {
             </h1>
 
             <div
-              className="mt-6 flex justify-center"
+              className="mt-6 flex flex-col items-center"
             >
               <RegSearch className="max-w-3xl" />
             <HeroTrustLabels className="mt-4" />
@@ -91,7 +92,7 @@ export default function JaguarXFSportbrakeEnginesPage() {
             </div>
             <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
               <h3 className="font-bold text-slate-900">Diagnostics Before Decisions</h3>
-              <p className="mt-3 text-slate-700 leading-relaxed">SameÃ¢â‚¬â€˜day diagnostics available in  to pinpoint the exact fault.</p>
+              <p className="mt-3 text-slate-700 leading-relaxed">Same-day diagnostics available in  to pinpoint the exact fault.</p>
             </div>
             <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
               <h3 className="font-bold text-slate-900">Supply & Fit Available</h3>
@@ -102,6 +103,12 @@ export default function JaguarXFSportbrakeEnginesPage() {
       </section>
 
       {engineCodes ? <EngineCodesTable title={engineCodes.title} rows={engineCodes.rows} /> : null}
+
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4 lg:px-8">
+          <WarrantyPartsExcellence />
+        </div>
+      </section>
 
       <FAQSection
         title={

@@ -13,6 +13,7 @@ import FAQSection from "@/components/common/FAQSection";
 import ServiceGallery from "@/components/common/ServiceGallery";
 import PartnerLogos from "@/components/common/PartnerLogos";
 import NationwideSupportSection from "@/components/common/NationwideSupportSection";
+import WarrantyPartsExcellence from "@/components/common/WarrantyPartsExcellence";
 
 export const metadata: Metadata = pageMetadata.serviceHeadGasketReplacement;
 
@@ -23,7 +24,7 @@ export default function HeadGasketReplacementPage() {
       <section className="bg-slate-900 border-b border-slate-800 py-24 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/car_bgg.jpg"
+            src="/images/car_bgg.webp"
             alt="Head gasket repair specialists"
             fill
             className="object-cover opacity-20 filter grayscale"
@@ -77,9 +78,9 @@ export default function HeadGasketReplacementPage() {
         title="Head Gasket Replacement Work"
         subtitle="A look at some of the head gasket replacement jobs carried out at our workshop."
         images={[
-          { src: "/head_gasket/head_gasket%201.png", alt: "Head gasket replacement 1" },
-          { src: "/head_gasket/head_gasket%202.png", alt: "Head gasket replacement 2" },
-          { src: "/head_gasket/head_gasket%203.png", alt: "Head gasket replacement 3" },
+          { src: "/head_gasket/head_gasket%201.webp", alt: "Head gasket replacement 1" },
+          { src: "/head_gasket/head_gasket%202.webp", alt: "Head gasket replacement 2" },
+          { src: "/head_gasket/head_gasket%203.webp", alt: "Head gasket replacement 3" },
         ]}
       />
 
@@ -196,6 +197,12 @@ export default function HeadGasketReplacementPage() {
               </Link>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 lg:px-8">
+          <WarrantyPartsExcellence />
         </div>
       </section>
 
@@ -503,8 +510,8 @@ export default function HeadGasketReplacementPage() {
           </div>
 
           <div className="mt-8 text-white/90 font-black uppercase tracking-widest text-[0.65rem]">
-            Vogue Technics | Head Gasket Repair Specialists |  | UK-Wide Collection &nbsp; Range Rover Ã¢â‚¬Â¢ Land Rover Ã¢â‚¬Â¢
-            Jaguar Ã¢â‚¬Â¢ Audi Ã¢â‚¬Â¢ BMW
+            Vogue Technics | Head Gasket Repair Specialists |  | UK-Wide Collection &nbsp; Range Rover • Land Rover •
+            Jaguar • Audi • BMW
           </div>
         </div>
       </section>

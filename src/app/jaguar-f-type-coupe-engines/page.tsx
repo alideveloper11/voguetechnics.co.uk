@@ -7,6 +7,7 @@ import Breadcrumbs from "@/components/common/Breadcrumbs";
 import RegSearch from "@/components/common/RegSearch";
 import HeroTrustLabels from "@/components/common/HeroTrustLabels";
 import FAQSection from "@/components/common/FAQSection";
+import WarrantyPartsExcellence from "@/components/common/WarrantyPartsExcellence";
 import PartnerLogos from "@/components/common/PartnerLogos";
 import EngineCodesTable from "@/components/common/EngineCodesTable";
 import { getEngineCodesEntry } from "@/data/engineCodes";
@@ -49,7 +50,7 @@ export default function JaguarFTypeCoupeEnginesPage() {
       <section className="relative overflow-hidden bg-slate-900 pt-32 pb-24">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/car_bgg.jpg"
+            src="/images/car_bgg.webp"
             alt="Jaguar F-Type Coupe engine specialists in "
             fill
             className="object-cover opacity-65 mix-blend-overlay"
@@ -71,13 +72,13 @@ export default function JaguarFTypeCoupeEnginesPage() {
               className="text-2xl font-black leading-[1.1] tracking-tight text-white md:text-4xl"
             >
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-300 to-green-400">
-                Jaguar FÃ¢â‚¬â€˜Type Coupe Engine
+                Jaguar F-Type Coupe Engine
               </span>{" "}
                 Specialist Engine Repairs, Supercharger Rebuilds & Replacements Across the UK
             </h1>
 
             <div
-              className="mt-6 flex justify-center"
+              className="mt-6 flex flex-col items-center"
             >
               <RegSearch className="max-w-3xl" />
             <HeroTrustLabels className="mt-4" />
@@ -136,7 +137,7 @@ export default function JaguarFTypeCoupeEnginesPage() {
               </p>
             </div>
             <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
-              <h3 className="font-bold text-slate-900">SameÃ¢â‚¬â€˜Day Diagnostics ()</h3>
+              <h3 className="font-bold text-slate-900">Same-Day Diagnostics ()</h3>
               <p className="mt-3 text-slate-700 leading-relaxed">Accurate diagnosis first   then clear options for repair, rebuild, or replacement.</p>
             </div>
             <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6">
@@ -149,10 +150,16 @@ export default function JaguarFTypeCoupeEnginesPage() {
         </div>
       </section>
 
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4 lg:px-8">
+          <WarrantyPartsExcellence />
+        </div>
+      </section>
+
       <FAQSection
         title={
           <>
-            Frequently Asked Questions   <span className="text-primary italic">Jaguar FÃ¢â‚¬â€˜Type Coupe Engine</span>
+            Frequently Asked Questions   <span className="text-primary italic">Jaguar F-Type Coupe Engine</span>
           </>
         }
         items={faqs}
@@ -161,9 +168,9 @@ export default function JaguarFTypeCoupeEnginesPage() {
       <section className="py-16 md:py-20 bg-primary text-white">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-5xl mx-auto text-center space-y-6">
-            <h2 className="text-3xl md:text-4xl font-extrabold leading-tight">Need help with your Jaguar FÃ¢â‚¬â€˜Type Coupe engine?</h2>
+            <h2 className="text-3xl md:text-4xl font-extrabold leading-tight">Need help with your Jaguar F-Type Coupe engine?</h2>
             <p className="text-emerald-50 leading-relaxed max-w-4xl mx-auto">
-              Call our  specialists for sameÃ¢â‚¬â€˜day diagnostics, a tested engine supply, or a fastÃ¢â‚¬â€˜track replacement slot.
+              Call our  specialists for same-day diagnostics, a tested engine supply, or a fast-track replacement slot.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <a

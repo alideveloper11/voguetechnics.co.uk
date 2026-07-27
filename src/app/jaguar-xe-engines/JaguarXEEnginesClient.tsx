@@ -1,13 +1,11 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { Phone } from "lucide-react";
-import { motion } from "framer-motion";
 import Breadcrumbs from "@/components/common/Breadcrumbs";
 import RegSearch from "@/components/common/RegSearch";
 import HeroTrustLabels from "@/components/common/HeroTrustLabels";
 import FAQSection from "@/components/common/FAQSection";
+import WarrantyPartsExcellence from "@/components/common/WarrantyPartsExcellence";
 import PartnerLogos from "@/components/common/PartnerLogos";
 import EngineCodesTable from "@/components/common/EngineCodesTable";
 import type { EngineCodesEntry } from "@/data/engineCodes";
@@ -50,7 +48,7 @@ export default function JaguarXEEnginesClient({ engineCodes }: JaguarXEEnginesCl
       <section className="relative overflow-hidden bg-slate-900 pt-32 pb-24">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/car_bgg.jpg"
+            src="/images/car_bgg.webp"
             alt="Jaguar XE engine specialists in "
             fill
             className="object-cover opacity-65 mix-blend-overlay"
@@ -67,26 +65,23 @@ export default function JaguarXEEnginesClient({ engineCodes }: JaguarXEEnginesCl
             ]}
           />
           <div className="max-w-3xl mx-auto text-center pt-8">
-            <motion.h1
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="text-2xl font-black leading-[1.1] tracking-tight text-white md:text-4xl"
+            <h1
+              className="animate-fade-up text-2xl font-black leading-[1.1] tracking-tight text-white md:text-4xl"
+              style={{ "--fade-y": "18px" } as React.CSSProperties}
             >
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-300 to-green-400">
                 Jaguar XE Engine Rebuild
               </span>{" "}
                 Specialist Engine Repairs, Reconditioning & Replacements Across the UK
-            </motion.h1>
+            </h1>
 
-            <motion.div
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.12 }}
-              className="mt-6 flex justify-center"
+            <div
+              className="mt-6 flex flex-col items-center animate-fade-up"
+              style={{ "--fade-y": "18px", "--fade-delay": "0.12s" } as React.CSSProperties}
             >
               <RegSearch className="max-w-3xl" />
             <HeroTrustLabels className="mt-4" />
-            </motion.div>
+            </div>
 
           </div>
         </div>
@@ -118,6 +113,12 @@ export default function JaguarXEEnginesClient({ engineCodes }: JaguarXEEnginesCl
       </section>
 
       {engineCodes ? <EngineCodesTable title={engineCodes.title} rows={engineCodes.rows} /> : null}
+
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4 lg:px-8">
+          <WarrantyPartsExcellence />
+        </div>
+      </section>
 
       <FAQSection
         title={

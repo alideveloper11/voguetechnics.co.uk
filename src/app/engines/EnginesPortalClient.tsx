@@ -1,4 +1,5 @@
 import Reveal from "@/components/common/Reveal";
+import WarrantyPartsExcellence from "@/components/common/WarrantyPartsExcellence";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -173,6 +174,12 @@ export default function EnginesPortalClient() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-20 bg-white">
+        <div className="container mx-auto px-4 lg:px-8">
+          <WarrantyPartsExcellence />
         </div>
       </section>
 

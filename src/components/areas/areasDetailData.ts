@@ -1262,9 +1262,9 @@ export const areaDetails: AreaDetail[] = [
   {
     slug: "greater-manchester",
     name: "Greater Manchester",
-    metaTitle: "Reconditioned Range Rover Engines Greater Manchester | Areas Covered | Vogue Technics",
+    metaTitle: "Engine Replacement in Greater Manchester | Vogue Technics",
     metaDescription:
-      "Looking for Reconditioned Range Rover Engines Greater Manchester? Vogue Technics provides expert engine repair, rebuild, replacement and supply-and-fit services for Range Rover, Land Rover and BMW vehicles across Greater Manchester and surrounding areas. Get a free quote today.",
+      "Vogue Technics provides expert engine rebuilds and replacements across Greater Manchester, backed by warranty and honest, transparent pricing.",
     heroSubtitle:
       "Vogue Technics provides specialist Range Rover, Land Rover, Jaguar and BMW engine repair, rebuild, replacement and supply-and-fit support for Greater Manchester drivers, delivering dealer-level expertise at a fair price.",
     overviewHeading: "Why Greater Manchester drivers choose Vogue Technics",
@@ -2156,9 +2156,9 @@ export const areaDetails: AreaDetail[] = [
   {
     slug: "lincolnshire",
     name: "Lincolnshire",
-    metaTitle: "Reconditioned Range Rover Engines Lincolnshire | Areas Covered | Vogue Technics",
+    metaTitle: "Engine Replacement in Lincolnshire | Vogue Technics",
     metaDescription:
-      "Looking for Reconditioned Range Rover Engines Lincolnshire? Vogue Technics provides engine repair, rebuild, replacement and supply-and-fit services across Lincolnshire and surrounding areas, backed by 25+ years of specialist experience and warranty protection.",
+      "Need an engine rebuild or replacement in Lincolnshire? Vogue Technics offers expert fitting, warranty-backed work, and fast local service.",
     heroSubtitle:
       "Vogue Technics provides specialist Range Rover, Land Rover and BMW engine solutions for customers across Lincolnshire, backed by nationwide support, collection options, OEM-quality parts and warranty-backed workmanship.",
     overviewHeading: "Why Lincolnshire drivers choose Vogue Technics",

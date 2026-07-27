@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: "Privacy Policy | Vogue Technics Engine Specialists",
-    description: "Our privacy policy explains how Vogue Technics collects, uses and protects your personal data in line with UK GDPR and data protection law.",
+    title: { absolute: "Privacy Policy | Vogue Technics" },
+    description: "Read how Vogue Technics collects, uses, and protects your personal data. Clear, transparent privacy practices for every website visitor and customer.",
     alternates: {
         canonical: "/privacy-policy",
     },

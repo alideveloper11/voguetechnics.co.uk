@@ -4,6 +4,7 @@ import Link from "next/link";
 import Reveal from "@/components/common/Reveal";
 import { CheckCircle2, Phone, ArrowRight } from "lucide-react";
 import PartnerLogos from "@/components/common/PartnerLogos";
+import WarrantyPartsExcellence from "@/components/common/WarrantyPartsExcellence";
 import NationwideSupportSection from "@/components/common/NationwideSupportSection";
 import ReviewsSection from "@/components/common/ReviewsSection";
 import FAQSection from "@/components/common/FAQSection";
@@ -112,6 +113,8 @@ export default function ServiceDetailClient({ service, relatedServices }: Servic
                  <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-32 -mt-32 blur-3xl pointer-events-none group-hover:scale-125 transition-transform duration-1000"></div>
                  <div className="absolute bottom-0 left-0 w-64 h-64 bg-black/10 rounded-full -ml-32 -mb-32 blur-3xl pointer-events-none"></div>
                </div>
+
+               <WarrantyPartsExcellence />
             </div>
 
             {/* Right Sidebar Form Column */}

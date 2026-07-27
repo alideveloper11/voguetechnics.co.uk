@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import TermsPage from "@/components/legal/TermsAndConditionsContent";
 
 export const metadata: Metadata = {
-  title: "Terms & Conditions | Vogue Technics Engine Specialists",
+  title: { absolute: "Terms & Conditions | Vogue Technics" },
   description:
-    "Read the full terms and conditions for engine rebuild, replacement and reconditioned engine services at Vogue Technics, Grays, Essex, UK.",
+    "Review the terms governing engine sales, fitting services, and warranties at Vogue Technics before making a purchase or booking a service.",
   alternates: {
     canonical: "/terms-and-conditions",
   },

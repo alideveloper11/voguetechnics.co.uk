@@ -12,6 +12,7 @@ import NationwideSupportSection from "@/components/common/NationwideSupportSecti
 import RegSearch from "@/components/common/RegSearch";
 import HeroTrustLabels from "@/components/common/HeroTrustLabels";
 import ReviewsSection from "@/components/common/ReviewsSection";
+import WarrantyPartsExcellence from "@/components/common/WarrantyPartsExcellence";
 
 export const metadata: Metadata = pageMetadata.serviceTimingChainReplacement;
 
@@ -134,6 +135,12 @@ export default function TimingChainReplacementPage() {
               Acting on the warning signs early is always significantly cheaper than dealing with the failure.
             </p>
           </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 lg:px-8">
+          <WarrantyPartsExcellence />
         </div>
       </section>
 

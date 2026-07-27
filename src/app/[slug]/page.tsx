@@ -8,6 +8,7 @@ import { notFound } from "next/navigation";
 import Breadcrumbs from "@/components/common/Breadcrumbs";
 import FAQSection from "@/components/common/FAQSection";
 import RegNumberInput from "@/components/common/RegNumberInput";
+import WarrantyPartsExcellence from "@/components/common/WarrantyPartsExcellence";
 
 type ModelPageContent = {
   metaTitle: string;
@@ -26,6 +27,8 @@ type EngineSizeSpec = {
   typicalApplications: string;
   complexityNote: string;
   priceGuide: string;
+  metaTitle: string;
+  metaDescription: string;
 };
 
 const audiEngineSizeSpecs: EngineSizeSpec[] = [
@@ -36,6 +39,8 @@ const audiEngineSizeSpecs: EngineSizeSpec[] = [
     typicalApplications: "A1 and compact Audi/VW Group platforms",
     complexityNote: "Modern small-displacement turbo engines depend on correct timing, oil quality, and precise diagnostics.",
     priceGuide: "£1,600–£2,800 (variant and damage dependent)",
+    metaTitle: "Audi 1.0 Engines | Reconditioned & Used | Vogue Technics",
+    metaDescription: "Find a dependable reconditioned or used Audi 1.0 engine at a great price. Expert fitting and UK-wide delivery available. Request a quote today.",
   },
   {
     slug: "audi-1-2-engines",
@@ -44,6 +49,8 @@ const audiEngineSizeSpecs: EngineSizeSpec[] = [
     typicalApplications: "compact Audi/VW Group platforms",
     complexityNote: "Small TFSI engines are sensitive to timing and lubrication issues   correct assessment prevents repeat faults.",
     priceGuide: "£1,600–£2,900",
+    metaTitle: "Audi 1.2 Engines | Reconditioned & Used | Vogue Technics",
+    metaDescription: "Shop affordable reconditioned and used Audi 1.2 engines, expertly fitted with UK-wide delivery. Get your free quote from Vogue Technics today.",
   },
   {
     slug: "audi-1-4-engines",
@@ -52,6 +59,8 @@ const audiEngineSizeSpecs: EngineSizeSpec[] = [
     typicalApplications: "A1, A3 and similar platforms",
     complexityNote: "Common failures are best solved by diagnosis-led repair rather than guesswork.",
     priceGuide: "£1,700–£3,200",
+    metaTitle: "Audi 1.4 Engines | Reconditioned & Used | Vogue Technics",
+    metaDescription: "Get a quality reconditioned or used Audi 1.4 engine at an affordable price. Expert fitting, UK delivery, and warranty included. Quote today.",
   },
   {
     slug: "audi-1-5-engines",
@@ -60,6 +69,8 @@ const audiEngineSizeSpecs: EngineSizeSpec[] = [
     typicalApplications: "newer compact/mid-size Audi platforms",
     complexityNote: "Efficient, high-output engines benefit from correct timing and cooling system integrity checks.",
     priceGuide: "£1,800–£3,400",
+    metaTitle: "Audi 1.5 Engines | Reconditioned & Used | Vogue Technics",
+    metaDescription: "Shop affordable reconditioned and used Audi 1.5 engines, expertly fitted with UK-wide delivery. Request your free quote from Vogue Technics.",
   },
   {
     slug: "audi-1-6-engines",
@@ -68,6 +79,8 @@ const audiEngineSizeSpecs: EngineSizeSpec[] = [
     typicalApplications: "A1/A3-era diesel variants and fleet use",
     complexityNote: "Diesel issues often involve EGR/boost and fuel delivery   accurate diagnostics keep repairs targeted.",
     priceGuide: "£1,800–£3,600",
+    metaTitle: "Audi 1.6 Engines | Reconditioned & Used | Vogue Technics",
+    metaDescription: "Shop dependable reconditioned and used Audi 1.6 engines with expert fitting and UK-wide delivery. Request your free, no-obligation quote now.",
   },
   {
     slug: "audi-1-8-engines",
@@ -76,6 +89,8 @@ const audiEngineSizeSpecs: EngineSizeSpec[] = [
     typicalApplications: "older performance and mid-range Audi platforms",
     complexityNote: "Known oil and turbo-related wear patterns need proper inspection to avoid repeat failure.",
     priceGuide: "£1,800–£3,800",
+    metaTitle: "Audi 1.8 Engines | Reconditioned & Used | Vogue Technics",
+    metaDescription: "Shop affordable reconditioned and used Audi 1.8 engines, expertly fitted with UK-wide delivery. Get your free quote from Vogue Technics now.",
   },
   {
     slug: "audi-2-0-engines",
@@ -84,6 +99,8 @@ const audiEngineSizeSpecs: EngineSizeSpec[] = [
     typicalApplications: "A3, A4, A5, Q3, Q5 and many other platforms",
     complexityNote: "The most common Audi displacement   faults vary by code, so diagnosis is everything.",
     priceGuide: "£1,900–£4,200",
+    metaTitle: "Audi 2.0 Engines | Reconditioned & Used | Vogue Technics",
+    metaDescription: "Buy quality reconditioned and used Audi 2.0 engines with expert fitting, warranty, and UK-wide delivery. Request your free quote today.",
   },
   {
     slug: "audi-2-5-engines",
@@ -92,6 +109,8 @@ const audiEngineSizeSpecs: EngineSizeSpec[] = [
     typicalApplications: "TT RS / RS models and performance platforms",
     complexityNote: "High-performance builds demand precision measurement, correct parts, and proven procedures.",
     priceGuide: "£3,500–£7,500",
+    metaTitle: "Audi 2.5 Engines | Reconditioned & Used | Vogue Technics",
+    metaDescription: "Shop reconditioned and used Audi 2.5 engines built to last. Expert fitting, competitive prices, and UK-wide delivery. Get your quote today.",
   },
   {
     slug: "audi-2-7-engines",
@@ -100,6 +119,8 @@ const audiEngineSizeSpecs: EngineSizeSpec[] = [
     typicalApplications: "older A6-era platforms and V6 applications",
     complexityNote: "V6 layouts increase labour complexity   replacing worn systems as a set prevents comeback jobs.",
     priceGuide: "£2,200–£4,800",
+    metaTitle: "Audi 2.7 Engines | Reconditioned & Used | Vogue Technics",
+    metaDescription: "Find quality reconditioned and used Audi 2.7 engines with expert fitting, warranty, and UK-wide delivery. Get your free quote today.",
   },
   {
     slug: "audi-2-8-engines",
@@ -108,6 +129,8 @@ const audiEngineSizeSpecs: EngineSizeSpec[] = [
     typicalApplications: "older V6 petrol Audi platforms",
     complexityNote: "Age-related seal wear, cooling issues and timing concerns should be assessed as a complete system.",
     priceGuide: "£2,200–£4,900",
+    metaTitle: "Audi 2.8 Engines | Reconditioned & Used | Vogue Technics",
+    metaDescription: "Shop quality reconditioned and used Audi 2.8 engines with expert fitting, warranty, and UK-wide delivery. Get your free quote today.",
   },
   {
     slug: "audi-2-9-engines",
@@ -116,6 +139,8 @@ const audiEngineSizeSpecs: EngineSizeSpec[] = [
     typicalApplications: "modern S/RS applications",
     complexityNote: "Twin-turbo systems require careful oil supply checks and calibrated post-repair validation.",
     priceGuide: "£3,000–£6,500",
+    metaTitle: "Audi 2.9 Engines | Reconditioned & Used | Vogue Technics",
+    metaDescription: "Find quality reconditioned and used Audi 2.9 engines with expert fitting and UK-wide delivery. Get a fast, no-obligation quote today.",
   },
   {
     slug: "audi-3-0-engines",
@@ -124,6 +149,8 @@ const audiEngineSizeSpecs: EngineSizeSpec[] = [
     typicalApplications: "A6, A7, Q7, performance V6 platforms",
     complexityNote: "Timing systems and oil/cooling integrity are critical   failures can escalate fast without early action.",
     priceGuide: "£2,400–£6,500",
+    metaTitle: "Audi 3.0 Engines | Reconditioned & Used | Vogue Technics",
+    metaDescription: "Find reliable reconditioned and used Audi 3.0 engines at competitive prices, expertly fitted with UK-wide delivery. Request a free quote today.",
   },
   {
     slug: "audi-3-2-engines",
@@ -132,6 +159,8 @@ const audiEngineSizeSpecs: EngineSizeSpec[] = [
     typicalApplications: "older performance and premium platforms",
     complexityNote: "Chain/timing behaviour and age-related wear need platform-aware diagnosis and proper parts.",
     priceGuide: "£2,600–£5,800",
+    metaTitle: "Audi 3.2 Engines | Reconditioned & Used | Vogue Technics",
+    metaDescription: "Buy a reliable reconditioned or used Audi 3.2 engine at a competitive price. Expert fitting and UK-wide delivery available. Get your quote.",
   },
   {
     slug: "audi-4-0-engines",
@@ -140,6 +169,8 @@ const audiEngineSizeSpecs: EngineSizeSpec[] = [
     typicalApplications: "S/RS and high-performance luxury platforms",
     complexityNote: "High heat loads mean cooling and oiling systems must be verified alongside the core repair.",
     priceGuide: "£4,000–£10,000+",
+    metaTitle: "Audi 4.0 Engines | Reconditioned & Used | Vogue Technics",
+    metaDescription: "Find a dependable reconditioned or used Audi 4.0 engine with expert fitting and UK-wide delivery. Request a fast, no-obligation quote today.",
   },
   {
     slug: "audi-4-1-engines",
@@ -148,6 +179,8 @@ const audiEngineSizeSpecs: EngineSizeSpec[] = [
     typicalApplications: "high-torque luxury platforms",
     complexityNote: "Complex V8 diesel systems need correct diagnostics to avoid replacing the wrong parts.",
     priceGuide: "£3,800–£9,500",
+    metaTitle: "Audi 4.1 Engines | Reconditioned & Used | Vogue Technics",
+    metaDescription: "Shop reliable reconditioned and used Audi 4.1 engines at competitive prices. Expert fitting and UK-wide delivery available. Get your quote now.",
   },
   {
     slug: "audi-4-2-engines",
@@ -156,6 +189,8 @@ const audiEngineSizeSpecs: EngineSizeSpec[] = [
     typicalApplications: "A8, RS models and premium V8 platforms",
     complexityNote: "V8 rebuild work is all about measurement, machining where needed, and correct reassembly tolerances.",
     priceGuide: "£4,500–£12,000+",
+    metaTitle: "Audi 4.2 Engines | Reconditioned & Used | Vogue Technics",
+    metaDescription: "Shop reliable reconditioned and used Audi 4.2 engines at competitive prices. Expert fitting and UK-wide delivery available. Request your quote now.",
   },
   {
     slug: "audi-5-0-engines",
@@ -164,6 +199,8 @@ const audiEngineSizeSpecs: EngineSizeSpec[] = [
     typicalApplications: "specialist performance platforms",
     complexityNote: "Low-volume engines require careful parts sourcing and specialist build discipline.",
     priceGuide: "£6,000–£14,000+",
+    metaTitle: "Audi 5.0 Engines | Reconditioned & Used | Vogue Technics",
+    metaDescription: "Find dependable reconditioned and used Audi 5.0 engines at great prices. Professional fitting and UK-wide delivery available. Get your quote today.",
   },
   {
     slug: "audi-5-2-engines",
@@ -172,6 +209,8 @@ const audiEngineSizeSpecs: EngineSizeSpec[] = [
     typicalApplications: "Audi R8 V10 and related platforms",
     complexityNote: "High-revving V10s demand precision machining, strict tolerances, and thorough post-build testing.",
     priceGuide: "£7,000–£16,000+",
+    metaTitle: "Audi 5.2 Engines | Reconditioned & Used | Vogue Technics",
+    metaDescription: "Buy a reliable reconditioned or used Audi 5.2 engine at a competitive rate. Expert fitting and UK-wide delivery available. Request a quote today.",
   },
   {
     slug: "audi-6-0-engines",
@@ -180,6 +219,8 @@ const audiEngineSizeSpecs: EngineSizeSpec[] = [
     typicalApplications: "A8 W12 and flagship platforms",
     complexityNote: "W12 engines are complex and labour intensive   only worth doing properly with full-system checks.",
     priceGuide: "£8,000–£20,000+",
+    metaTitle: "Audi 6.0 Engines | Reconditioned & Used | Vogue Technics",
+    metaDescription: "Source a high-performance reconditioned or used Audi 6.0 engine with expert fitting and UK-wide delivery. Get a free quote today.",
   },
   {
     slug: "audi-6-3-engines",
@@ -188,17 +229,15 @@ const audiEngineSizeSpecs: EngineSizeSpec[] = [
     typicalApplications: "flagship/luxury applications (variant dependent)",
     complexityNote: "High-complexity builds require specialist diagnostics, careful strip-down documentation and correct assembly processes.",
     priceGuide: "£8,500–£22,000+",
+    metaTitle: "Audi 6.3 Engines | Reconditioned & Used | Vogue Technics",
+    metaDescription: "Source a high-performance reconditioned or used Audi 6.3 engine with expert fitting and UK-wide delivery. Get a free quote today.",
   },
 ];
 
 function buildAudiEngineSizeContent(spec: EngineSizeSpec): ModelPageContent {
-  const metaTitle = `${spec.display}   Rebuild, Repair & Replacement | Vogue Technics ()`;
-  const metaDescription =
-    `${spec.display} specialists . Expert diagnostics, rebuilds, repairs and replacement engines for ${spec.exampleEngines}. UK-wide collection/delivery and written warranty available.`;
-
   return {
-    metaTitle,
-    metaDescription,
+    metaTitle: spec.metaTitle,
+    metaDescription: spec.metaDescription,
     h1: `${spec.display}   Engine Rebuild, Repair & Replacement Specialists in `,
     intro: [
       `${spec.display} cover a wide range of Audi platforms and generations   and the correct fix depends on accurate diagnosis, not guesswork.`,
@@ -264,9 +303,8 @@ const audiEngineSizeContent: Record<string, ModelPageContent> = Object.fromEntri
 const audiModelContent: Record<string, ModelPageContent> = {
   ...audiEngineSizeContent,
   "audi-a1-engines": {
-    metaTitle: "Audi A1 Engine Rebuild   Expert Engine Services Across the UK",
-    metaDescription:
-      "Audi A1 engine rebuild, repair and replacement specialists . Vogue Technics provide diagnostics, timing chain/belt work, turbo replacement and warranty-backed engine services UK-wide.",
+    metaTitle: "Audi A1 Engines | Reconditioned & Used | Vogue Technics",
+    metaDescription: "Buy quality reconditioned and used Audi A1 engines with expert fitting, warranty, and UK-wide delivery. Get your free quote today.",
     h1: "Audi A1 Engine Rebuild   Expert Engine Services Across the UK",
     intro: [
       "If your Audi A1 has started burning oil, losing power, or throwing up warning lights you can't ignore, you're in the right place. At Vogue Technics, based in , we specialise in precision engine work for Audi vehicles   and the A1 is one we know inside out.",
@@ -416,9 +454,8 @@ const audiModelContent: Record<string, ModelPageContent> = {
     ],
   },
   "audi-a1-sportback-engines": {
-    metaTitle: "Audi A1 Sportback Engine Rebuild   Specialist Engine Services Across the UK",
-    metaDescription:
-      "Audi A1 Sportback engine rebuild, repair and replacement specialists . Timing chain/belt, turbo and warranty-backed engine services with UK-wide collection and delivery.",
+    metaTitle: "Audi A1 Sportback Engines | Vogue Technics",
+    metaDescription: "Shop reconditioned and used Audi A1 Sportback engines at great prices. Expert fitting and UK-wide delivery available. Get a free quote today.",
     h1: "Audi A1 Sportback Engine Rebuild   Specialist Engine Services Across the UK",
     intro: [
       "If your Audi A1 Sportback has started letting you down   whether that's a sudden loss of power, an ominous rattling from the engine bay, or a dashboard full of warning lights   you need a specialist, not a generalist.",
@@ -572,9 +609,8 @@ const audiModelContent: Record<string, ModelPageContent> = {
     ],
   },
   "audi-a2-engines": {
-    metaTitle: "Audi A2 Engine Rebuild, Repair & Replacement   Specialist Service Across the UK",
-    metaDescription:
-      "Audi A2 engine rebuild, repair and replacement specialists . Accurate diagnostics, timing/cooling repairs, rebuilds and verified replacements with UK-wide collection and written warranty.",
+    metaTitle: "Audi A2 Engines | Reconditioned & Used | Vogue Technics",
+    metaDescription: "Find quality reconditioned and used Audi A2 engines with expert fitting, warranty, and UK-wide delivery. Request your free quote now.",
     h1: "Audi A2 Engine Rebuild, Repair & Replacement   Specialist Service Across the UK",
     intro: [
       "The Audi A2 is a genuinely unique car   lightweight, efficient, and engineered differently to almost anything else in its class. Owners tend to keep them for a long time, which means when the engine develops a serious fault, fixing it properly is usually the smartest choice.",
@@ -651,9 +687,8 @@ const audiModelContent: Record<string, ModelPageContent> = {
     ],
   },
   "audi-a3-engines": {
-    metaTitle: "Audi A3 Engine Rebuild   Specialist Engine Services for Every A3 Variant Across the UK",
-    metaDescription:
-      "Audi A3 engine rebuild, repair and replacement specialists . Timing chain/belt, turbo and warranty-backed services for all A3 variants with UK-wide collection and delivery.",
+    metaTitle: "Audi A3 Engines | Reconditioned & Used | Vogue Technics",
+    metaDescription: "Buy quality reconditioned and used Audi A3 engines with expert fitting, UK-wide delivery, and warranty. Get a fast, no-obligation quote today.",
     h1: "Audi A3 Engine Rebuild   Specialist Engine Services for Every A3 Variant Across the UK",
     intro: [
       "When your Audi A3 starts showing signs of serious engine trouble   whether that's a persistent misfire, a rattling timing chain, an overheating problem you can't shake, or simply an engine that's run its course   the worst thing you can do is hand it to someone who isn't genuinely familiar with it.",
@@ -806,9 +841,8 @@ const audiModelContent: Record<string, ModelPageContent> = {
     ],
   },
   "audi-a4-engines": {
-    metaTitle: "Audi A4 Engine Rebuild   Complete Engine Services for Every A4 Variant Across the UK",
-    metaDescription:
-      "Audi A4 engine rebuild, repair and replacement specialists . Timing chain/belt, turbo and warranty-backed services for Saloon, Avant, Allroad and Cabriolet with UK-wide support.",
+    metaTitle: "Audi A4 Engines | Reconditioned & Used | Vogue Technics",
+    metaDescription: "Buy dependable reconditioned and used Audi A4 engines with expert fitting, warranty, and UK-wide delivery. Request your free quote today.",
     h1: "Audi A4 Engine Rebuild   Complete Engine Services for Every A4 Variant Across the UK",
     intro: [
       "There's a particular kind of dread that comes with an Audi A4 that won't start properly, rattles on cold mornings, or suddenly loses power on the motorway. You know something serious is wrong   and you know that getting it wrong from here could cost you significantly more than getting it right.",
@@ -940,9 +974,8 @@ const audiModelContent: Record<string, ModelPageContent> = {
     ],
   },
   "audi-a4-allroad-engines": {
-    metaTitle: "Audi A4 Allroad Engine Repairs, Rebuilds & Replacements   Expert Service in ",
-    metaDescription:
-      "Audi A4 Allroad engine specialists . Diagnostics, repairs, rebuilds and replacements for 2.0 TFSI and 2.0 TDI variants with UK-wide support and written warranty.",
+    metaTitle: "Audi A4 Allroad Engines | Vogue Technics",
+    metaDescription: "Reconditioned and used Audi A4 Allroad engines at competitive prices. Expert fitting and UK-wide delivery available. Get your free quote today.",
     h1: "Audi A4 Allroad Engine Repairs, Rebuilds & Replacements   Expert Service in ",
     intro: [
       "The Audi A4 Allroad is a genuinely accomplished machine   refined, capable, and built to last. But even the most well-engineered cars develop engine problems over time, and when they do, where you take it matters enormously. A generic garage with no Audi experience can turn a manageable fault into a catastrophic one.",
@@ -1086,9 +1119,8 @@ const audiModelContent: Record<string, ModelPageContent> = {
     ],
   },
   "audi-a5-engines": {
-    metaTitle: "Audi A5 Engine Rebuild, Repair & Replacement   Trusted Specialists in ",
-    metaDescription:
-      "Audi A5 engine rebuild, repair and replacement specialists . Timing chain/belt, turbo and warranty-backed services for Coupe, Sportback and Cabriolet variants with UK-wide support.",
+    metaTitle: "Audi A5 Engines | Reconditioned & Used | Vogue Technics",
+    metaDescription: "Shop reliable reconditioned and used Audi A5 engines at competitive prices. Expert fitting and UK delivery available. Request your free quote now.",
     h1: "Audi A5 Engine Rebuild, Repair & Replacement   Trusted Specialists in ",
     intro: [
       "The Audi A5 is a car that earns genuine loyalty. Whether you drive the Coupe, Sportback, Cabriolet, or Convertible, it delivers a blend of style, performance, and everyday usability that's hard to match at the price.",
@@ -1229,9 +1261,8 @@ const audiModelContent: Record<string, ModelPageContent> = {
     ],
   },
   "audi-a5-convertible-engines": {
-    metaTitle: "Audi A5 Convertible Engine Rebuild, Repair & Replacement   Expert Service in ",
-    metaDescription:
-      "Audi A5 Convertible (Cabriolet) engine specialists . Repairs, rebuilds, replacements, timing chain/belt and turbo work with UK-wide support and written warranty.",
+    metaTitle: "Audi A5 Convertible Engines | Vogue Technics",
+    metaDescription: "Shop reconditioned and used Audi A5 Convertible engines built to last, with expert fitting and UK-wide delivery. Get a free quote today.",
     h1: "Audi A5 Convertible Engine Rebuild, Repair & Replacement   Expert Service in ",
     intro: [
       "The Audi A5 Cabriolet is a genuinely special car. Open-top motoring with Audi's trademark refinement, a beautifully finished interior, and an engine range that delivers real driving pleasure   it's a vehicle people become attached to. Which is exactly why, when the engine develops a serious fault, the instinct is to fix it properly rather than walk away.",
@@ -1371,9 +1402,8 @@ const audiModelContent: Record<string, ModelPageContent> = {
     ],
   },
   "audi-a6-engines": {
-    metaTitle: "Audi A6 Engine Rebuild, Repair & Replacement   Trusted Specialists in ",
-    metaDescription:
-      "Audi A6 engine specialists . Diagnostics, repairs, rebuilds and replacements for Saloon, Avant and Allroad across generations with UK-wide support and written warranty.",
+    metaTitle: "Audi A6 Engines | Reconditioned & Used | Vogue Technics",
+    metaDescription: "Shop quality reconditioned and used Audi A6 engines with expert fitting, warranty, and UK-wide delivery. Request a free quote today.",
     h1: "Audi A6 Engine Rebuild, Repair & Replacement   Trusted Specialists in ",
     intro: [
       "The Audi A6 is one of the most capable executive cars on the road. Whether you drive the Saloon, the Avant estate, or the go-anywhere Allroad, it's a vehicle built to cover serious miles in genuine comfort   and most owners plan to keep it running for a long time.",
@@ -1443,9 +1473,8 @@ const audiModelContent: Record<string, ModelPageContent> = {
     ],
   },
   "audi-a6-allroad-engines": {
-    metaTitle: "Audi A6 Allroad Engine Rebuild, Repair & Replacement   Specialists in ",
-    metaDescription:
-      "Audi A6 Allroad engine specialists . Repairs, rebuilds and replacements for 3.0 TDI, 2.0 TDI and other variants with UK-wide support and written warranty.",
+    metaTitle: "Audi A6 Allroad Engines | Vogue Technics",
+    metaDescription: "Reconditioned and used Audi A6 Allroad engines, expertly fitted at competitive prices with UK-wide delivery. Request your free quote today.",
     h1: "Audi A6 Allroad Engine Rebuild, Repair & Replacement   Specialists in ",
     intro: [
       "The Audi A6 Allroad occupies a unique space in the premium car market. It combines the practicality of a large estate with genuine off-road capability, quattro all-wheel drive, and a ride quality that long-distance drivers genuinely appreciate.",
@@ -1503,9 +1532,8 @@ const audiModelContent: Record<string, ModelPageContent> = {
     ],
   },
   "audi-a6-avant-engines": {
-    metaTitle: "Audi A6 Avant Engine Rebuild, Repair & Replacement   Expert Service in ",
-    metaDescription:
-      "Audi A6 Avant engine rebuild, repair and replacement specialists . We work across C6/C7/C8 and 2.0 TDI, 3.0 TDI, 2.0 TFSI and 3.0 TFSI variants with thorough diagnostics, honest pricing and written warranty.",
+    metaTitle: "Audi A6 Avant Engines | Vogue Technics",
+    metaDescription: "Reconditioned and used Audi A6 Avant engines at unbeatable prices. Expert fitting, UK-wide delivery, and warranty included. Request a quote now.",
     h1: "Audi A6 Avant Engine Rebuild, Repair & Replacement   Expert Service in ",
     intro: [
       "The Audi A6 Avant is a car built around real life. It carries families, covers motorway miles, tows trailers, and does it all with the kind of refinement that makes high-mileage ownership genuinely enjoyable. Avant owners tend to accumulate serious mileage   and they tend to keep their cars. So when the engine develops a significant fault, the calculation almost always comes out in favour of fixing it properly rather than starting again.",
@@ -1674,9 +1702,8 @@ const audiModelContent: Record<string, ModelPageContent> = {
     ],
   },
   "audi-a7-sportback-engines": {
-    metaTitle: "Audi A7 Sportback Engine Rebuild, Repair & Replacement   Specialists in ",
-    metaDescription:
-      "Audi A7 Sportback engine rebuild, repair and replacement specialists . We cover C7/C8 across 3.0 TDI, 3.0 TFSI, biturbo diesel and RS7 4.0 TFSI with diagnostic-led work, transparent pricing and written warranty.",
+    metaTitle: "Audi A7 Sportback Engines | Vogue Technics",
+    metaDescription: "Find reconditioned and used Audi A7 Sportback engines at competitive prices, expertly fitted with UK-wide delivery. Get your free quote now.",
     h1: "Audi A7 Sportback Engine Rebuild, Repair & Replacement   Specialists in ",
     intro: [
       "The Audi A7 Sportback is a genuinely distinctive car. It sits at the intersection of executive saloon and grand tourer   elegant enough to turn heads, practical enough to justify daily use, and engineered to a standard that makes ownership genuinely rewarding. Owners of the A7 Sportback don't take their vehicles to just any garage. They look for people who understand what the car is, what the engine demands, and what proper work actually looks like.",
@@ -1845,9 +1872,8 @@ const audiModelContent: Record<string, ModelPageContent> = {
     ],
   },
   "audi-a8-engines": {
-    metaTitle: "Audi A8 Engine Rebuild   Expert Repairs, Replacements & Rebuilds Across the UK",
-    metaDescription:
-      "Audi A8 engine rebuild, repair and replacement specialists . Expert diagnostics and warranty-backed work across 3.0 TDI, 4.2 V8 and W12 variants with UK-wide collection and delivery.",
+    metaTitle: "Audi A8 Engines | Reconditioned & Used | Vogue Technics",
+    metaDescription: "Buy dependable reconditioned and used Audi A8 engines with expert fitting, warranty, and UK-wide delivery. Request your quote today.",
     h1: "Audi A8 Engine Rebuild   Expert Repairs, Replacements & Rebuilds Across the UK",
     intro: [
       "If your Audi A8 is showing signs of engine trouble, you're in the right hands. At Vogue Technics, based in , we specialise in premium European engines   and the Audi A8 is a vehicle we know inside out. Whether you're dealing with a failing turbo, a worn timing chain, or you need a full engine rebuild, we deliver precision workmanship backed by over 25 years of hands-on experience.",
@@ -1979,9 +2005,8 @@ const audiModelContent: Record<string, ModelPageContent> = {
     ],
   },
   "audi-q2-engines": {
-    metaTitle: "Audi Q2 Engine Rebuild   Specialist Repairs, Replacements & Rebuilds Across the UK",
-    metaDescription:
-      "Audi Q2 engine rebuild, repair and replacement specialists . We cover 1.0 TFSI, 1.5 TFSI and 2.0 TDI variants with diagnostic-led work, transparent pricing and written warranty UK-wide.",
+    metaTitle: "Audi Q2 Engines | Reconditioned & Used | Vogue Technics",
+    metaDescription: "Find quality reconditioned and used Audi Q2 engines with expert fitting, warranty, and UK-wide delivery. Request your free quote today.",
     h1: "Audi Q2 Engine Rebuild   Specialist Repairs, Replacements & Rebuilds Across the UK",
     intro: [
       "Your Audi Q2 is a precision-engineered machine   compact, capable, and built to perform. When its engine starts letting you down, you need more than a general garage with a diagnostic tool and a hopeful attitude. You need specialists who understand exactly what's under the bonnet and how to fix it properly.",
@@ -2119,9 +2144,8 @@ const audiModelContent: Record<string, ModelPageContent> = {
     ],
   },
   "audi-q3-engines": {
-    metaTitle: "Audi Q3 Engine Rebuild   Specialist Repairs, Replacements & Rebuilds Across the UK",
-    metaDescription:
-      "Audi Q3 engine rebuild, repair and replacement specialists . We cover 8U and F3 generations across 1.0/1.4 TFSI and 2.0 TDI variants with accurate diagnosis, transparent pricing and written warranty.",
+    metaTitle: "Audi Q3 Engines | Reconditioned & Used | Vogue Technics",
+    metaDescription: "Buy quality reconditioned and used Audi Q3 engines with expert fitting, warranty, and UK-wide delivery. Get your free quote today.",
     h1: "Audi Q3 Engine Rebuild   Specialist Repairs, Replacements & Rebuilds Across the UK",
     intro: [
       "The Audi Q3 is a genuinely accomplished compact SUV   refined, practical, and engineered to a standard that most rivals simply don't match. But when the engine develops a problem, that same engineering sophistication means you can't afford to hand it to someone who'll guess their way through it.",
@@ -2259,9 +2283,8 @@ const audiModelContent: Record<string, ModelPageContent> = {
     ],
   },
   "audi-q5-engines": {
-    metaTitle: "Audi Q5 Engine Rebuild   Specialist Repairs, Replacements & Rebuilds Across the UK",
-    metaDescription:
-      "Audi Q5 engine rebuild, repair and replacement specialists . Expert engine services across 2.0 TDI, 3.0 TDI, 2.0 TFSI and SQ5 3.0 TFSI with diagnostic-led work, transparent pricing and written warranty.",
+    metaTitle: "Audi Q5 Engines | Reconditioned & Used | Vogue Technics",
+    metaDescription: "Buy dependable reconditioned and used Audi Q5 engines at great prices. Expert fitting and UK-wide delivery available. Request a free quote today.",
     h1: "Audi Q5 Engine Rebuild   Specialist Repairs, Replacements & Rebuilds Across the UK",
     intro: [
       "The Q5's engine range — 2.0 TDI, 3.0 TDI, 2.0 TFSI and SQ5 3.0 TFSI — demands specialist knowledge and proper tooling. At Vogue Technics, with 25+ years of hands-on engine expertise, we're the Audi Q5 rebuild specialist that owners across the UK trust.",
@@ -2404,9 +2427,8 @@ const audiModelContent: Record<string, ModelPageContent> = {
     ],
   },
   "audi-q7-engines": {
-    metaTitle: "Audi Q7 Engine Rebuild   Specialist Repairs, Reconditioning & Replacements Across the UK",
-    metaDescription:
-      "Audi Q7 engine rebuild, repair and replacement specialists . Expert diagnostics and warranty-backed work across 3.0 TDI, 4.2 TDI, 3.0 TFSI and V8 petrol variants with UK-wide collection and delivery.",
+    metaTitle: "Audi Q7 Engines | Reconditioned & Used | Vogue Technics",
+    metaDescription: "Find reliable reconditioned and used Audi Q7 engines at competitive prices, expertly fitted with UK-wide delivery. Request your free quote today.",
     h1: "Audi Q7 Engine Rebuild   Specialist Repairs, Reconditioning & Replacements Across the UK",
     intro: [
       "The Audi Q7 is a substantial machine in every sense   a large-format luxury SUV with engineering complexity to match. Its engine range, spanning the 3.0 TDI, 4.2 TDI, 3.0 TFSI, and the formidable 4.2 FSI and V8 petrol variants, represents some of the most technically demanding powerplants in the premium SUV segment. When one of these engines develops a serious problem, the stakes are high   and handing it to someone without the right experience is a decision most Q7 owners come to regret.",
@@ -2545,9 +2567,8 @@ const audiModelContent: Record<string, ModelPageContent> = {
     ],
   },
   "audi-r8-engines": {
-    metaTitle: "Audi R8 Engine Rebuild   High-Performance Engine Specialists Serving the Whole of the UK",
-    metaDescription:
-      "Audi R8 engine rebuild, repair and replacement specialists . High-performance expertise across 4.2 FSI V8 and 5.2 FSI V10 with precision diagnostics, transparent pricing and written warranty UK-wide.",
+    metaTitle: "Audi R8 Engines | Reconditioned & Used | Vogue Technics",
+    metaDescription: "Source a high-performance reconditioned or used Audi R8 engine, expertly fitted with warranty backing and UK-wide delivery. Get a quote today.",
     h1: "Audi R8 Engine Rebuild   High-Performance Engine Specialists Serving the Whole of the UK",
     intro: [
       "The Audi R8 is not simply a car. It's a statement   a mid-engined supercar built around one of the most extraordinary naturally aspirated engine lineups ever fitted to a road-going vehicle. The 4.2 FSI V8 and the 5.2 FSI V10 are mechanical masterpieces, and when either develops a serious problem, the response needs to match the car's calibre entirely.",
@@ -2679,9 +2700,8 @@ const audiModelContent: Record<string, ModelPageContent> = {
     ],
   },
   "audi-r8-spyder-engines": {
-    metaTitle: "Audi R8 Spyder Engine Rebuild   Open-Top Supercar Engine Specialists Across the UK",
-    metaDescription:
-      "Audi R8 Spyder engine rebuild, repair and replacement specialists . High-performance expertise across 4.2 FSI V8 and 5.2 FSI V10 with precision diagnostics, transparent pricing and written warranty UK-wide.",
+    metaTitle: "Audi R8 Spyder Engines | Vogue Technics",
+    metaDescription: "Source a high-performance reconditioned or used Audi R8 Spyder engine, expertly fitted with warranty backing. Get your free quote today.",
     h1: "Audi R8 Spyder Engine Rebuild   Open-Top Supercar Engine Specialists Across the UK",
     intro: [
       "There is nothing quite like the Audi R8 Spyder. Drop the roof, open the throttle, and the 4.2 FSI V8 or 5.2 FSI V10 behind you delivers a sound and sensation that very few cars on earth can match. It's a machine built around its engine   and when that engine develops a problem, the response needs to be worthy of the car itself.",
@@ -2955,9 +2975,8 @@ const audiModelContent: Record<string, ModelPageContent> = {
     ],
   },
   "audi-tt-roadster-engines": {
-    metaTitle: "Audi TT Roadster Engines Rebuild   Expert Engine Services Across the UK",
-    metaDescription:
-      "Audi TT Roadster engine rebuild, repair and replacement specialists . Head gasket, timing chain/belt, turbo and warranty-backed engine services with UK-wide support.",
+    metaTitle: "Audi TT Roadster Engines | Vogue Technics",
+    metaDescription: "Reconditioned and used Audi TT Roadster engines, expertly fitted with warranty backing and UK-wide delivery. Request your free quote today.",
     h1: "Audi TT Roadster Engines Rebuild   Expert Engine Services Across the UK",
     intro: [
       "If you own an Audi TT Roadster and you're staring down a failing engine, you've found the right people. At Vogue Technics, based in , we specialise in performance and prestige vehicle engines   and the Audi TT Roadster is a car we know inside out.",
@@ -3120,9 +3139,8 @@ const audiModelContent: Record<string, ModelPageContent> = {
     ],
   },
   "audi-a3-convertible-engines": {
-    metaTitle: "Audi A3 Convertible Engine Rebuild   Expert Repairs, Replacements & Reconditioning Across the UK",
-    metaDescription:
-      "Audi A3 Convertible (Cabriolet) engine specialists . Head gasket, timing chain/belt, turbo, rebuild and replacement services with written warranty and UK-wide support.",
+    metaTitle: "Audi A3 Convertible Engines | Vogue Technics",
+    metaDescription: "Shop reconditioned and used Audi A3 Convertible engines at competitive prices. Expert fitting and UK-wide delivery available. Get your quote now.",
     h1: "Audi A3 Convertible Engine Rebuild   Expert Repairs, Replacements & Reconditioning Across the UK",
     intro: [
       "Owning an Audi A3 Convertible is one of life's genuine pleasures   open-top driving combined with Audi's trademark build quality and refinement. But when the engine starts playing up, that pleasure disappears fast.",
@@ -3297,9 +3315,8 @@ const audiModelContent: Record<string, ModelPageContent> = {
     ],
   },
   "audi-a3-limousine-engines": {
-    metaTitle: "Audi A3 Limousine Engine Rebuild   Specialist Repairs, Replacements & Reconditioning Across the UK",
-    metaDescription:
-      "Audi A3 Limousine (Saloon) engine specialists . Head gasket, timing chain/belt, turbo, rebuild and replacement services with written warranty and UK-wide support.",
+    metaTitle: "Audi A3 Limousine Engines | Vogue Technics",
+    metaDescription: "Find quality reconditioned and used Audi A3 Limousine engines with expert fitting and UK-wide delivery. Get a free, no-obligation quote.",
     h1: "Audi A3 Limousine Engine Rebuild   Specialist Repairs, Replacements & Reconditioning Across the UK",
     intro: [
       "The Audi A3 Limousine   known in many markets as the A3 Saloon   is a refined, practical, and genuinely rewarding car to own. But when the engine develops a serious fault, that enjoyment stops immediately.",
@@ -3444,9 +3461,8 @@ const audiModelContent: Record<string, ModelPageContent> = {
     ],
   },
   "audi-a3-sportback-engines": {
-    metaTitle: "Audi A3 Sportback Engine Rebuild   Specialist Repairs, Replacements & Reconditioning Across the UK",
-    metaDescription:
-      "Audi A3 Sportback engine specialists . Head gasket, timing chain/belt, turbo, rebuild and replacement services with written warranty and UK-wide support.",
+    metaTitle: "Audi A3 Sportback Engines | Vogue Technics",
+    metaDescription: "Find quality reconditioned and used Audi A3 Sportback engines with expert fitting and UK-wide delivery. Request a free quote today.",
     h1: "Audi A3 Sportback Engine Rebuild   Specialist Repairs, Replacements & Reconditioning Across the UK",
     intro: [
       "The Audi A3 Sportback is one of the most popular and practical choices on British roads   versatile, refined, and genuinely enjoyable to drive.",
@@ -3572,9 +3588,8 @@ const audiModelContent: Record<string, ModelPageContent> = {
     ],
   },
   "audi-a4-avant-engines": {
-    metaTitle: "Audi A4 Avant Engine Rebuild   Specialist Repairs, Replacements & Reconditioning Across the UK",
-    metaDescription:
-      "Audi A4 Avant engine specialists . Head gasket, timing chain/belt, turbo, rebuild and replacement services for 2.0 TDI and 2.0 TFSI variants with written warranty and UK-wide support.",
+    metaTitle: "Audi A4 Avant Engines | Vogue Technics",
+    metaDescription: "Buy dependable reconditioned and used Audi A4 Avant engines at great prices. Expert fitting and UK-wide delivery available. Request a quote now.",
     h1: "Audi A4 Avant Engine Rebuild   Specialist Repairs, Replacements & Reconditioning Across the UK",
     intro: [
       "The Audi A4 Avant is a practical, capable, and genuinely well-built estate   one that earns real loyalty from its owners.",
@@ -3690,9 +3705,8 @@ const audiModelContent: Record<string, ModelPageContent> = {
     ],
   },
   "audi-a5-sportback-engines": {
-    metaTitle: "Audi A5 Sportback Engine Rebuild   Specialist Repairs, Replacements & Reconditioning Across the UK",
-    metaDescription:
-      "Audi A5 Sportback engine specialists . Head gasket, timing chain/belt, turbo, rebuild and replacement services for 2.0 TDI and 2.0 TFSI variants with written warranty and UK-wide support.",
+    metaTitle: "Audi A5 Sportback Engines | Vogue Technics",
+    metaDescription: "Reconditioned and used Audi A5 Sportback engines built to last. Competitive pricing, expert fitting, and UK-wide delivery. Request a free quote.",
     h1: "Audi A5 Sportback Engine Rebuild   Specialist Repairs, Replacements & Reconditioning Across the UK",
     intro: [
       "The Audi A5 Sportback is a genuinely accomplished car   sleek, sophisticated, and rewarding to drive.",
@@ -3824,6 +3838,21 @@ const ancillaryPartSlugs = new Set([
   "transmission",
 ]);
 
+// Explicit metadata for ancillary part pages that don't have hardcoded content
+// in audiModelContent and would otherwise fall back to the generic pattern.
+const ancillaryMetadataOverrides: Record<string, { title: string; description: string }> = {
+  "cylinder-heads": {
+    title: "Cylinder Heads | Reconditioned & Used | Vogue Technics",
+    description:
+      "Buy quality reconditioned and used cylinder heads with expert fitting and UK-wide delivery. Fast turnaround and warranty-backed work. Get a quote.",
+  },
+  "crankshaft-pulley": {
+    title: "Crankshaft Pulley | Reconditioned & Used | Vogue Technics",
+    description:
+      "Shop quality crankshaft pulleys with expert fitting and UK-wide delivery. Warranty-backed parts and fast turnaround. Get your free quote today.",
+  },
+};
+
 // Generic "-engines" pages linked from elsewhere on the site that don't have
 // hardcoded content in audiModelContent (e.g. BMW X2 trims,
 // Land Rover engine-size variants) — keep in sync with the linking pages.
@@ -3866,7 +3895,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
 
   if (!isDefinedSlug(slug)) {
-    return { title: "Page Not Found | Vogue Technics" };
+    return { title: { absolute: "Page Not Found | Vogue Technics" } };
   }
 
   const formattedTitle = formatTitle(slug);
@@ -3874,7 +3903,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const audiOverride = getAudiModelContent(slug);
   if (audiOverride) {
     return {
-      title: audiOverride.metaTitle,
+      title: { absolute: audiOverride.metaTitle },
       description: audiOverride.metaDescription,
       alternates: { canonical: `/${slug}` },
       openGraph: {
@@ -3884,10 +3913,24 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       },
     };
   }
-  
+
+  const ancillaryOverride = ancillaryMetadataOverrides[slug];
+  if (ancillaryOverride) {
+    return {
+      title: { absolute: ancillaryOverride.title },
+      description: ancillaryOverride.description,
+      alternates: { canonical: `/${slug}` },
+      openGraph: {
+        title: ancillaryOverride.title,
+        description: ancillaryOverride.description,
+        url: `https://www.voguetechnics.co.uk/${slug}`,
+      },
+    };
+  }
+
   // Pattern: [Model Name] engine for sale | reconditioned & used | Vogue Technics
   return {
-    title: `${formattedTitle} engine for sale | reconditioned & used | Vogue Technics`,
+    title: { absolute: `${formattedTitle} engine for sale | reconditioned & used | Vogue Technics` },
     description: `Buy top quality reconditioned & used engines for your ${formattedTitle}, lowest online rates, fitting or UK wide delivery offered, years of experience, get engine quotes today.`,
     alternates: {
       canonical: `/${slug}`,
@@ -4032,6 +4075,8 @@ export default async function DynamicServicePage({ params }: { params: Promise<{
                   </>
                 );
               })()}
+
+              <WarrantyPartsExcellence />
 
               {audiOverride.testimonials && audiOverride.testimonials.length > 0 ? (
                 <section className="rounded-[2rem] border border-slate-200 bg-slate-50 p-8">

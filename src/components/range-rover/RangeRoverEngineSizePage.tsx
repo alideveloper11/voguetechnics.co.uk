@@ -10,6 +10,7 @@ import EngineSizeContentSection from "@/components/common/EngineSizeContentSecti
 import ReviewsSection from "@/components/common/ReviewsSection";
 import WorkshopSection from "@/components/common/WorkshopSection";
 import FAQSection from "@/components/common/FAQSection";
+import WarrantyPartsExcellence from "@/components/common/WarrantyPartsExcellence";
 import PartnerLogos from "@/components/common/PartnerLogos";
 import type { RangeRoverEngineSizePageData } from "@/data/rangeRoverEngineSizePages";
 
@@ -130,6 +131,12 @@ export default function RangeRoverEngineSizePage({ data }: RangeRoverEngineSizeP
         </div>
       </section>
 
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4 lg:px-8">
+          <WarrantyPartsExcellence />
+        </div>
+      </section>
+
       <EngineSizeContentSection blocks={data.contentSections} />
 
       <NationwideSupportSection slug={data.slug} />
@@ -160,6 +167,7 @@ export default function RangeRoverEngineSizePage({ data }: RangeRoverEngineSizeP
         subtitle="Real engine work, clear communication, and warranty-backed results from Vogue Technics."
       />
       <WorkshopSection />
+
       <FAQSection title={<>Frequently Asked Questions - <span className="text-primary italic">{data.title}</span></>} items={data.faqs} />
       <PartnerLogos />
     </div>

@@ -11,6 +11,7 @@ import RegSearch from "@/components/common/RegSearch";
 import HeroTrustLabels from "@/components/common/HeroTrustLabels";
 import BrandSpecialismsSlider from "@/components/common/BrandSpecialismsSlider";
 import Reveal from "@/components/common/Reveal";
+import WarrantyPartsExcellence from "@/components/common/WarrantyPartsExcellence";
 
 export default function Home() {
   const features = [
@@ -358,6 +359,12 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 lg:px-8">
+          <WarrantyPartsExcellence />
         </div>
       </section>
 

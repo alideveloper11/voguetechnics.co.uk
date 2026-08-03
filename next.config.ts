@@ -29,7 +29,10 @@ const contentSecurityPolicy = [
   "font-src 'self' data:",
   // ws:/wss: is only needed in dev for Next.js's Fast Refresh HMR socket.
   `connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.doubleclick.net https://*.google.com https://*.clarity.ms${isDev ? " ws: wss:" : ""}`,
-  "frame-src 'self' https://www.youtube.com https://*.googletagmanager.com",
+  // google.com/maps.google.com are needed for the Google Maps embed on the
+  // area detail pages (AreasDetailMapSection) — the ?output=embed URL serves
+  // from www.google.com and redirects via maps.google.com.
+  "frame-src 'self' https://www.youtube.com https://*.googletagmanager.com https://www.google.com https://maps.google.com",
   "object-src 'none'",
   "base-uri 'self'",
   "form-action 'self'",

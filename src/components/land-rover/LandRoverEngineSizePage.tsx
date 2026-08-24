@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { CheckCircle2, Phone, ShieldCheck, Wrench } from "lucide-react";
+import { CheckCircle2, Phone } from "lucide-react";
 import Breadcrumbs from "@/components/common/Breadcrumbs";
 import RegSearch from "@/components/common/RegSearch";
 import HeroTrustLabels from "@/components/common/HeroTrustLabels";
@@ -13,12 +13,15 @@ import FAQSection from "@/components/common/FAQSection";
 import WarrantyPartsExcellence from "@/components/common/WarrantyPartsExcellence";
 import PartnerLogos from "@/components/common/PartnerLogos";
 import type { LandRoverEngineSizePageData } from "@/data/landRoverEngineSizePages";
+import FeatureCards from "../common/FeatureCards";
 
 type LandRoverEngineSizePageProps = {
   data: LandRoverEngineSizePageData;
 };
 
-export default function LandRoverEngineSizePage({ data }: LandRoverEngineSizePageProps) {
+export default function LandRoverEngineSizePage({
+  data,
+}: LandRoverEngineSizePageProps) {
   return (
     <div className="bg-white min-h-screen">
       <section className="relative overflow-hidden bg-slate-900 pt-32 pb-24">
@@ -67,49 +70,26 @@ export default function LandRoverEngineSizePage({ data }: LandRoverEngineSizePag
             </div>
 
             <RegSearch className="mt-8 w-full max-w-3xl" />
-            <HeroTrustLabels className="mt-4" />
+            <HeroTrustLabels className="mt-4" labels={data.labels} />
           </div>
         </div>
       </section>
 
-      <section className="py-16 md:py-20 bg-white">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            <div className="rounded-xl border border-slate-200 bg-slate-50 p-6">
-              <ShieldCheck className="h-8 w-8 text-primary" />
-              <h2 className="mt-4 text-xl font-bold text-slate-900">Specialist Diagnosis First</h2>
-              <p className="mt-3 text-sm leading-relaxed text-slate-700">
-                We identify the exact Land Rover engine code, failure pattern and repair route before recommending rebuild or replacement.
-              </p>
-            </div>
-            <div className="rounded-xl border border-slate-200 bg-slate-50 p-6">
-              <Wrench className="h-8 w-8 text-primary" />
-              <h3 className="mt-4 text-xl font-bold text-slate-900">Supply, Fit or Rebuild</h3>
-              <p className="mt-3 text-sm leading-relaxed text-slate-700">
-                Choose a used unit, reconditioned engine, targeted repair, or full measured rebuild depending on condition and budget.
-              </p>
-            </div>
-            <div className="rounded-xl border border-slate-200 bg-slate-50 p-6">
-              <CheckCircle2 className="h-8 w-8 text-primary" />
-              <h3 className="mt-4 text-xl font-bold text-slate-900">Written Warranty</h3>
-              <p className="mt-3 text-sm leading-relaxed text-slate-700">
-                Major engine work is backed by clear written warranty terms and itemised pricing before work starts.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <FeatureCards features={data.customFeatures} />
 
       <section className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2">
               <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900">
-                {data.title} We Commonly Support
+                {data.title} 
               </h2>
               <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {data.applications.map((item) => (
-                  <div key={item} className="rounded-md border border-slate-200 bg-slate-50 p-4 text-sm font-semibold text-slate-800">
+                  <div
+                    key={item}
+                    className="rounded-md border border-slate-200 bg-slate-50 p-4 text-sm font-semibold text-slate-800"
+                  >
                     {item}
                   </div>
                 ))}
@@ -120,7 +100,10 @@ export default function LandRoverEngineSizePage({ data }: LandRoverEngineSizePag
               <h3 className="text-xl font-bold">Common Issues</h3>
               <ul className="mt-5 space-y-3">
                 {data.commonIssues.map((issue) => (
-                  <li key={issue} className="flex gap-3 text-sm leading-relaxed text-slate-200">
+                  <li
+                    key={issue}
+                    className="flex gap-3 text-sm leading-relaxed text-slate-200"
+                  >
                     <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" />
                     {issue}
                   </li>
@@ -146,15 +129,20 @@ export default function LandRoverEngineSizePage({ data }: LandRoverEngineSizePag
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-3xl">
             <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900">
-              What We Can Do for Your {data.engineSize} Engine
+              What We Offer for {data.title} Owners
             </h2>
           </div>
           <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {data.serviceHighlights.map((service) => (
-              <div key={service} className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
-                <h3 className="text-base font-bold text-slate-900">{service}</h3>
+              <div
+                key={service.title}
+                className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm"
+              >
+                <h3 className="text-base font-bold text-slate-900">
+                  {service.title}
+                </h3>
                 <p className="mt-3 text-sm leading-relaxed text-slate-600">
-                  Our team handles this work in-house with proper inspection, clear quoting and warranty-backed completion.
+                  {service.description}
                 </p>
               </div>
             ))}
@@ -165,10 +153,19 @@ export default function LandRoverEngineSizePage({ data }: LandRoverEngineSizePag
       <ReviewsSection
         title={`Customer Feedback for ${data.title}`}
         subtitle="Specialist Land Rover engine work with clear communication and warranty-backed results."
+        reviews={data.reviewsData}
       />
       <WorkshopSection />
 
-      <FAQSection title={<>Frequently Asked Questions - <span className="text-primary italic">{data.title}</span></>} items={data.faqs} />
+      <FAQSection
+        title={
+          <>
+            Frequently Asked Questions -{" "}
+            <span className="text-primary italic">{data.title}</span>
+          </>
+        }
+        items={data.faqs}
+      />
       <PartnerLogos />
     </div>
   );

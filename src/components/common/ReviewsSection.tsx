@@ -5,7 +5,17 @@ import Reveal from "@/components/common/Reveal";
 import Link from "next/link";
 import { useState } from "react";
 
-const reviews = [
+// 1. Export the Review type so it can be reused across your codebase
+export type ReviewItem = {
+  id: number | string;
+  name: string;
+  rating: number;
+  text: string;
+  date: string;
+};
+
+
+const defaultReviews: ReviewItem[] = [
   {
     id: 1,
     name: "James Wilson",
@@ -29,7 +39,7 @@ const reviews = [
   },
 ];
 
-function ReviewCard({ review, idx }: { review: (typeof reviews)[0]; idx: number }) {
+function ReviewCard({ review, idx }: { review: ReviewItem; idx: number }) {
   const [expanded, setExpanded] = useState(false);
 
   return (
@@ -45,10 +55,13 @@ function ReviewCard({ review, idx }: { review: (typeof reviews)[0]; idx: number 
             <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
           ))}
         </div>
-        <p className={`text-slate-700 italic leading-relaxed font-medium text-sm ${expanded ? "" : "line-clamp-2"}`}>
+        <p
+          className={`text-slate-700 italic leading-relaxed font-medium text-sm ${expanded ? "" : "line-clamp-2"}`}
+        >
           &ldquo;{review.text}&rdquo;
         </p>
         <button
+          type="button"
           onClick={() => setExpanded(!expanded)}
           className="mt-2 text-primary text-xs font-bold uppercase tracking-wide hover:underline"
         >
@@ -57,7 +70,9 @@ function ReviewCard({ review, idx }: { review: (typeof reviews)[0]; idx: number 
       </div>
       <div className="flex items-center justify-between border-t border-slate-100 pt-4 mt-3">
         <div>
-          <h4 className="font-bold text-slate-900 text-base uppercase tracking-tight">{review.name}</h4>
+          <h4 className="font-bold text-slate-900 text-base uppercase tracking-tight">
+            {review.name}
+          </h4>
           <p className="text-xs text-slate-400 font-medium">{review.date}</p>
         </div>
         <div className="flex items-center gap-1.5 text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
@@ -72,14 +87,19 @@ function ReviewCard({ review, idx }: { review: (typeof reviews)[0]; idx: number 
 interface ReviewsSectionProps {
   title?: string;
   subtitle?: string;
+  reviews?: ReviewItem[]; 
 }
 
 export default function ReviewsSection({
   title = "What Our Customers Say",
   subtitle = "Hear from our satisfied customers who have experienced our professional engine services.",
+  reviews = defaultReviews, // Falls back to default reviews if none are passed
 }: ReviewsSectionProps) {
   return (
-    <section id="reviews" className="pt-24 pb-12 bg-slate-50 relative overflow-hidden">
+    <section
+      id="reviews"
+      className="pt-24 pb-12 bg-slate-50 relative overflow-hidden"
+    >
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <div className="mb-6">
@@ -104,7 +124,8 @@ export default function ReviewsSection({
             href="/reviews"
             className="inline-flex items-center gap-3 bg-white border-2 border-primary text-primary px-10 py-4 rounded-2xl font-black uppercase tracking-widest hover:bg-primary hover:text-white transition-all shadow-lg group"
           >
-            View All Testimonials <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
+            View All Testimonials{" "}
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
           </Link>
         </div>
       </div>

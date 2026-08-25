@@ -1,6 +1,6 @@
 import { CheckCircle2 } from "lucide-react";
 
-const heroTrustLabels = [
+const defaultHeroTrustLabels = [
   "Save Up to 40% when you enquire online",
   "24/7 Delivery or Collection Facility",
   "Low Priced Premium Quality Services",
@@ -10,14 +10,19 @@ const heroTrustLabels = [
 type HeroTrustLabelsProps = {
   className?: string;
   align?: "center" | "start";
+  labels?: string[];
 };
 
-export default function HeroTrustLabels({ className = "", align = "center" }: HeroTrustLabelsProps) {
+export default function HeroTrustLabels({
+  className = "",
+  align = "center",
+  labels = defaultHeroTrustLabels,
+}: HeroTrustLabelsProps) {
   const alignment = align === "start" ? "justify-start" : "justify-center";
 
   return (
     <div className={`flex max-w-5xl flex-wrap gap-2 ${alignment} ${className}`}>
-      {heroTrustLabels.map((label) => (
+      {labels.map((label) => (
         <div
           key={label}
           className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-2 text-base font-semibold leading-snug text-white shadow-sm backdrop-blur"

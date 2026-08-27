@@ -13,19 +13,21 @@ const TEXT_TOP = {
 
 export type PrecisionEngineSectionData = {
   heading: string;
-  eyebrow: string;
+  eyebrow?: string;
   intro: string;
-  steps: [string, string, string, string];
+  steps: string[];
   imageAlt?: string;
 };
 
 interface PrecisionEngineSectionProps {
-  data?: PrecisionEngineSectionData;
+  data?: PrecisionEngineSectionData | undefined;
 }
 
 const defaultPrecisionData: PrecisionEngineSectionData = {
-  heading: "Precision Engine Rebuilds & Repairs - Range Rover, Land Rover, Jaguar, Audi & BMW",
-  eyebrow: "Specialist Engine Rebuilds, Repairs & Replacements - VOGUE TECHNICS.",
+  heading:
+    "Precision Engine Rebuilds & Repairs - Range Rover, Land Rover, Jaguar, Audi & BMW",
+  eyebrow:
+    "Specialist Engine Rebuilds, Repairs & Replacements - VOGUE TECHNICS.",
   intro:
     "With over 20 years of hands-on experience, Vogue Technics delivers expert engine rebuilds, repairs, and replacements for Range Rover, Land Rover, Jaguar, Audi, and BMW - using OEM parts, transparent fixed pricing, and a warranty on every job.",
   steps: [
@@ -37,7 +39,9 @@ const defaultPrecisionData: PrecisionEngineSectionData = {
   imageAlt: "Engine specialist vehicle view",
 };
 
-export default function PrecisionEngineSection({ data = defaultPrecisionData }: PrecisionEngineSectionProps) {
+export default function PrecisionEngineSection({
+  data = defaultPrecisionData,
+}: PrecisionEngineSectionProps) {
   const leftSteps: Record<1 | 3, string> = {
     1: data.steps[0],
     3: data.steps[2],
@@ -62,8 +66,14 @@ export default function PrecisionEngineSection({ data = defaultPrecisionData }: 
 
         <div className="flex flex-col lg:flex-row items-start">
           <div className="w-full lg:w-[58%]">
-            <p className="text-base font-bold text-slate-900 mb-4">{data.eyebrow}</p>
-            <p className="text-slate-600 leading-relaxed max-w-[420px] mb-8 text-sm">{data.intro}</p>
+            {data.eyebrow && (
+              <p className="text-base font-bold text-slate-900 mb-4">
+                {data.eyebrow}
+              </p>
+            )}
+            <p className="text-slate-600 leading-relaxed max-w-[420px] mb-8 text-sm">
+              {data.intro}
+            </p>
 
             <div className="flex flex-col gap-5 lg:hidden mb-2">
               {allSteps.map(({ num, text }) => (
@@ -71,12 +81,17 @@ export default function PrecisionEngineSection({ data = defaultPrecisionData }: 
                   <div className="w-7 h-7 rounded-full bg-primary text-white text-xs font-black flex items-center justify-center flex-shrink-0 mt-0.5">
                     {num}
                   </div>
-                  <p className="text-sm text-slate-600 leading-relaxed">{text}</p>
+                  <p className="text-sm text-slate-600 leading-relaxed">
+                    {text}
+                  </p>
                 </div>
               ))}
             </div>
 
-            <div className="hidden lg:grid" style={{ gridTemplateColumns: "1fr 110px 1fr", height: TREE_H }}>
+            <div
+              className="hidden lg:grid"
+              style={{ gridTemplateColumns: "1fr 110px 1fr", height: TREE_H }}
+            >
               <div className="relative">
                 {([1, 3] as const).map((id) => (
                   <p
@@ -90,7 +105,12 @@ export default function PrecisionEngineSection({ data = defaultPrecisionData }: 
               </div>
 
               <div className="relative" style={{ height: TREE_H }}>
-                <Image src="/tree.svg" alt="4-step process tree" fill className="object-contain object-top" />
+                <Image
+                  src="/tree.svg"
+                  alt="4-step process tree"
+                  fill
+                  className="object-contain object-top"
+                />
               </div>
 
               <div className="relative">

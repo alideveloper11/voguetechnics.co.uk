@@ -10,6 +10,12 @@ import FAQSection from "@/components/common/FAQSection";
 import RegNumberInput from "@/components/common/RegNumberInput";
 import WarrantyPartsExcellence from "@/components/common/WarrantyPartsExcellence";
 import PrecisionEngineSection from "@/components/common/PrecisionEngineSection";
+import EnginesHero from "@/components/common/EnginesHero";
+import KeyBenefitsSection from "@/components/common/KeyBenefitsSection";
+import TrustSection from "@/components/common/TrustSection";
+import { getAudiEngineDataBySlug } from "@/lib/getAudiEngineSizeData";
+import EngineServicesSection from "@/components/common/EngineServicesGrid";
+import TestimonialsSection from "@/components/common/TestimonialsSection";
 
 type ModelPageContent = {
   metaTitle: string;
@@ -3930,10 +3936,6 @@ const audiModelContent: Record<string, ModelPageContent> = {
   },
 };
 
-function getAudiModelContent(slug: string): ModelPageContent | null {
-  return audiModelContent[slug] ?? null;
-}
-
 // Ancillary part pages linked from /ancillaries — keep in sync with src/app/ancillaries/page.tsx
 const ancillaryPartSlugs = new Set([
   "alternator",
@@ -4032,15 +4034,15 @@ export async function generateMetadata({
 
   const formattedTitle = formatTitle(slug);
 
-  const audiOverride = getAudiModelContent(slug);
-  if (audiOverride) {
+  const engineData = getAudiEngineDataBySlug(slug);
+  if (engineData?.metaTitle && engineData?.metaDescription) {
     return {
-      title: { absolute: audiOverride.metaTitle },
-      description: audiOverride.metaDescription,
+      title: { absolute: engineData.metaTitle },
+      description: engineData.metaDescription,
       alternates: { canonical: `/${slug}` },
       openGraph: {
-        title: audiOverride.metaTitle,
-        description: audiOverride.metaDescription,
+        title: engineData.metaTitle,
+        description: engineData.metaDescription,
         url: `https://www.voguetechnics.co.uk/${slug}`,
       },
     };
@@ -4060,7 +4062,6 @@ export async function generateMetadata({
     };
   }
 
-  // Pattern: [Model Name] engine for sale | reconditioned & used | Vogue Technics
   return {
     title: {
       absolute: `${formattedTitle} engine for sale | reconditioned & used | Vogue Technics`,
@@ -4097,241 +4098,48 @@ export default async function DynamicServicePage({
       ? formatTitle(slug.split("-").slice(-2, -1)[0])
       : "Part";
 
-  const audiOverride = getAudiModelContent(slug);
-  if (audiOverride) {
+  const engineData = getAudiEngineDataBySlug(slug);
+
+  if (engineData) {
     return (
       <div className="bg-white min-h-screen">
-        <div className="bg-slate-900 text-white pt-32 pb-20 px-4 relative overflow-hidden">
-          <div className="absolute inset-0 z-0 bg-[#146c43]/20">
-            <Image
-              src="/images/car_bgg.webp"
-              alt={audiOverride.h1}
-              fill
-              className="object-cover opacity-65 mix-blend-overlay"
-              priority
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/75 to-transparent" />
-          </div>
-          <div className="container mx-auto relative z-10 max-w-4xl text-center">
-            <Breadcrumbs
-              items={[
-                { name: "Audi Engines", href: "/audi-engines" },
-                { name: audiOverride.h1, href: `/${slug}` },
-              ]}
-            />
-            <h1 className="text-4xl md:text-5xl lg:text-5xl font-extrabold mb-6 tracking-tight leading-tight">
-              {audiOverride.h1}
-            </h1>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a
-                href="tel:01375 531355"
-                className="bg-primary hover:bg-primary-dark text-white font-bold py-4 px-8 rounded-xl shadow-[0_0_20px_rgba(25,135,84,0.4)] transition-all flex items-center gap-2 w-full sm:w-auto justify-center"
-              >
-                <Phone className="w-5 h-5" /> Call: 01375 531355
-              </a>
-              <Link
-                href="/contact-us"
-                className="bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl border border-white/20 transition-all w-full sm:w-auto justify-center flex items-center"
-              >
-                Request a Quote
-              </Link>
-            </div>
-          </div>
-        </div>
+        <EnginesHero h1={engineData.h1} slug={engineData.slug} />
 
         <div className="bg-slate-50/60 border-t border-slate-100">
           <div className="container mx-auto px-4 lg:px-8 pt-10 pb-16 max-w-7xl">
             <div className="space-y-10">
-              {(() => {
-                const keyBenefits = audiOverride.sections.slice(0, 4);
-                const mainSections = audiOverride.sections.slice(4);
-                const icons = [CheckCircle2, Shield, Search, CheckCircle2];
+              {engineData.keyBenefits && engineData.keyBenefits.length > 0 && (
+                <KeyBenefitsSection
+                  keyBenefits={engineData.keyBenefits}
+                  whyAudiHeading={engineData.whyAudiHeading}
+                />
+              )}
 
-                return (
-                  <>
-                    {keyBenefits.length > 0 ? (
-                      <section className="rounded-[2rem] border border-slate-200 bg-white p-8 md:p-10 shadow-sm relative overflow-hidden">
-                        <div className="pointer-events-none absolute -top-24 -right-24 h-64 w-64 rounded-full bg-primary/10 blur-[70px]" />
-                        <div className="flex items-end justify-between gap-6 flex-wrap">
-                          <div>
-                            <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-2 text-xs font-black tracking-[0.2em] uppercase text-primary">
-                              Built for Audi owners
-                            </div>
-                            <h2 className="mt-4 text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight">
-                              What makes Vogue Technics different
-                            </h2>
-                          </div>
-                          <Link
-                            href="/get-quote"
-                            className="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-bold text-slate-900 shadow-sm hover:border-primary/30 transition-colors"
-                          >
-                            Get a quote
-                          </Link>
-                        </div>
+              {engineData.services && engineData.services.length > 0 && (
+                <EngineServicesSection
+                  heading={engineData.servicesHeading}
+                  services={engineData.services}
+                />
+              )}
 
-                        <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
-                          {keyBenefits.map((s, idx) => {
-                            const Icon = icons[idx] ?? CheckCircle2;
-                            return (
-                              <div
-                                key={s.title}
-                                className="group rounded-xl border border-slate-200 bg-gradient-to-b from-white to-slate-50/60 p-4 shadow-sm hover:border-primary/30 transition-colors"
-                              >
-                                <div className="flex items-start gap-3">
-                                  <div className="rounded-xl border border-primary/20 bg-primary/10 p-2 text-primary shadow-sm shrink-0">
-                                    <Icon className="h-4 w-4" />
-                                  </div>
-                                  <div className="min-w-0">
-                                    <h3 className="text-sm font-extrabold text-slate-900 tracking-tight">
-                                      {s.title}
-                                    </h3>
-                                    <div className="mt-2 space-y-1.5 text-slate-700 leading-relaxed text-xs line-clamp-4">
-                                      {s.paragraphs.map((p) => (
-                                        <p key={p}>{p}</p>
-                                      ))}
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            );
-                          })}
-                        </div>
-                      </section>
-                    ) : null}
-
-                    {mainSections.length > 0 && (
-                      <div className="space-y-4">
-                        <h2 className="text-lg font-extrabold text-slate-900 px-1">
-                          Our Engine Services
-                        </h2>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                          {mainSections.map((s) => (
-                            <div
-                              key={s.title}
-                              className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm hover:border-primary/30 transition-colors"
-                            >
-                              <h3 className="text-sm font-bold text-slate-900 tracking-tight">
-                                {s.title}
-                              </h3>
-                              <div className="mt-2 text-xs text-slate-600 leading-relaxed line-clamp-4">
-                                {s.paragraphs.map((p) => (
-                                  <p key={p}>{p}</p>
-                                ))}
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-                  </>
-                );
-              })()}
-              <section className="py-16 bg-white relative overflow-hidden">
-                <div className="container mx-auto px-4 lg:px-8">
-                  {/* Header Block */}
-                  <div className="text-center max-w-full mx-auto mb-10">
-                    <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900 mb-4">
-                      Trusted by Customers Across the UK
-                    </h2>
-                    <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
-                  </div>
-
-                  {/* Full-width text wrapper changes max-w-3xl to max-w-full */}
-                  <div className="max-w-full mx-auto text-slate-600 text-[1.05rem] leading-relaxed space-y-6">
-                    <p>
-                      Vogue Technics has been building its pristine industry
-                      reputation one engine at a time since we established our
-                      engineering workshop over twenty years ago. Thousands of
-                      complex engine repairs, complete rebuilds, and vehicle
-                      replacements later, the vast majority of our new client
-                      base still arrives through direct personal recommendations
-                      and word of mouth. To us, a referral from a satisfied
-                      vehicle owner is the absolute highest and most meaningful
-                      endorsement available in our trade, and we work tirelessly
-                      to earn that trust every single day.
-                    </p>
-                    <p>
-                      We hold a consistently exceptional feedback score on
-                      Google Reviews and Trustpilot, acting as an independent
-                      benchmark of our transparent service standards. As an
-                      officially IGA-accredited workshop (Independent Garage
-                      Association), we operate to a strict professional code of
-                      practice that provides complete consumer protection and
-                      additional peace of mind. Our advanced facilities rival
-                      the infrastructure of main dealerships, yet we remain
-                      committed to offering local accountability and highly
-                      competitive, independent pricing models.
-                    </p>
-                    <p>
-                      Whether you discovered our workshop while searching online
-                      for a certified Range Rover engine specialist or were
-                      referred directly by an existing client in Thurrock,
-                      Dartford, Romford, or Basildon — you will receive the
-                      exact same honest, precision-guided technical care every
-                      time. From initial computerized diagnostics down to final
-                      multi-point quality testing, our dedication to your
-                      passenger safety and vehicle mechanical performance
-                      remains entirely unmatched throughout the UK.
-                    </p>
-                  </div>
-
-                  {/* Call to Actions Buttons */}
-                  <div className="max-w-full mx-auto mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-                    <a
-                      href="tel:01375531355"
-                      className="inline-flex items-center justify-center bg-primary text-white font-bold py-3 px-8 rounded-xl hover:bg-primary-dark transition-colors shadow-md transform hover:scale-[1.02]"
-                    >
-                      Call 01375 531355
-                    </a>
-                    <Link
-                      href="/get-quote"
-                      className="inline-flex items-center justify-center bg-white border-2 border-primary text-primary font-bold py-3 px-8 rounded-xl hover:bg-primary hover:text-white transition-colors shadow-sm transform hover:scale-[1.02]"
-                    >
-                      Get Quote
-                    </Link>
-                  </div>
-                </div>
-              </section>
-              <PrecisionEngineSection />
+              <TrustSection
+                title={engineData.trustData?.title}
+                paragraphs={engineData.trustData?.paragraphs}
+              />
+              <PrecisionEngineSection
+                data={engineData.precisionEngineSectionData}
+              />
               <WarrantyPartsExcellence />
 
-              {audiOverride.testimonials &&
-              audiOverride.testimonials.length > 0 ? (
-                <section className="rounded-[2rem] border border-slate-200 bg-slate-50 p-8">
-                  <h2 className="text-2xl md:text-3xl font-black text-slate-900 tracking-tight">
-                    What Our Customers Say
-                  </h2>
-                  <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {audiOverride.testimonials.map((t) => (
-                      <div
-                        key={t.by}
-                        className="rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm"
-                      >
-                        <div className="text-amber-500 font-black tracking-wide">
-                          ★★★★★
-                        </div>
-                        <p className="mt-4 text-slate-700 leading-relaxed italic">
-                          “{t.quote}”
-                        </p>
-                        <div className="mt-5 border-t border-slate-100 pt-5 text-sm font-bold text-slate-900">
-                          {t.by}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </section>
-              ) : null}
+              {engineData.testimonials &&
+                engineData.testimonials.length > 0 && (
+                  <TestimonialsSection testimonials={engineData.testimonials} />
+                )}
 
               <FAQSection
-                title={
-                  <>
-                    Frequently Asked Questions{" "}
-                    <span className="text-primary italic">
-                      {audiOverride.h1}
-                    </span>
-                  </>
-                }
-                items={audiOverride.faqs}
+                title={engineData.faqs.title}
+                subtitle={engineData.faqs.subtitle}
+                items={engineData.faqs.items}
               />
             </div>
           </div>
